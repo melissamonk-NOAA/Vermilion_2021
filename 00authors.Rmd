@@ -1,0 +1,17 @@
+---
+author:
+  - name: Melissa H. Monk
+    code: 1
+    first: M
+    middle: H
+    family: Monk
+author_list: Monk, M.H.
+affiliation:
+  - code: 1
+    address: Southwest Fisheries Science Center, U.S. Department of Commerce, National
+      Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110
+      McAllister Way, Santa Cruz, California 95060
+address: ^1^Southwest Fisheries Science Center, U.S. Department of Commerce, National
+  Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110 McAllister
+  Way, Santa Cruz, California 95060
+---
