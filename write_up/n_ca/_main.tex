@@ -80,31 +80,6 @@
 
 %Define cslreferences environment, required by pandoc 2.8
 %https://github.com/rstudio/rmarkdown/issues/1649
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-% for Pandoc 2.8 to 2.10.1
-\newenvironment{cslreferences}%
-  {}%
-  {\par}
-% For Pandoc 2.11+
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-  % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#2\baselineskip}
-  \fi
- }%
- {}
-\usepackage{calc}  % for \widthof, \maxof in minipage
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 
 \providecommand{\tightlist}{%
@@ -114,7 +89,7 @@
 \date{}
 \newcommand{\trTitle}{Status of Vermilion Rockfish (\emph{Sebastes miniatus}) along the US West Off California north of Pt. Conception coast in 2021}
 \newcommand{\trYear}{2021}
-\newcommand{\trMonth}{March}
+\newcommand{\trMonth}{April}
 \newcommand{\trAuthsLong}{true}
 \newcommand{\trAuthsBack}{Monk, M.H.}
 \newcommand{\trCitation}{
@@ -833,20 +808,17 @@ Here are all the mad props!
 \tagstructbegin{tag=BibEntry}\tagmcbegin{tag=BibEntry}
 
 \hypertarget{refs}{}
-\begin{CSLReferences}{1}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-bradburn_2003_2011}{}}%
-Bradburn, M. J., A. A Keller, and B. H. Horness. 2011. {``The 2003 to 2008 {US} {West} {Coast} Bottom Trawl Surveys of Groundfish Resources Off {Washington}, {Oregon}, and {California}: Estimates of Distribution, Abundance, Length, and Age Composition.''} US Department of Commerce, National Oceanic; Atmospheric Administration, National Marine Fisheries Service.
+\leavevmode\hypertarget{ref-bradburn_2003_2011}{}%
+Bradburn, M. J., A. A Keller, and B. H. Horness. 2011. ``The 2003 to 2008 US West Coast Bottom Trawl Surveys of Groundfish Resources Off Washington, Oregon, and California: Estimates of Distribution, Abundance, Length, and Age Composition.'' US Department of Commerce, National Oceanic; Atmospheric Administration, National Marine Fisheries Service.
 
-\leavevmode\vadjust pre{\hypertarget{ref-Starr2015}{}}%
-Starr, R. M., D. E. Wendt, C. L. Barnes, C. I. Marks, D. Malone, G. Waltz, K. T. Schmidt, et al. 2015. {``Variation in Responses of Fishes Across Multiple Reserves Within a Network of Marine Protected Areas in Temperate Waters.''} \emph{PLoS One2} 10 (3): p.e0118502.
+\leavevmode\hypertarget{ref-Starr2015}{}%
+Starr, R. M., D. E. Wendt, C. L. Barnes, C. I. Marks, D. Malone, G. Waltz, K. T. Schmidt, et al. 2015. ``Variation in Responses of Fishes Across Multiple Reserves Within a Network of Marine Protected Areas in Temperate Waters.'' \emph{PLoS One2} 10 (3): p.e0118502.
 
-\leavevmode\vadjust pre{\hypertarget{ref-weinberg_2001_2002}{}}%
-Weinberg, K. L., M. E. Wilkins, F. R. Shaw, and M. Zimmermann. 2002. {``The 2001 {Pacific} {West} {Coast} Bottom Trawl Survey of Groundfish Resources: Estimates of Distribution, Abundance and Length and Age Composition.''} \{NOAA\} \{Technical\} \{Memorandum\} NMFS-AFSC-128. U.S. Department of Commerce.
+\leavevmode\hypertarget{ref-weinberg_2001_2002}{}%
+Weinberg, K. L., M. E. Wilkins, F. R. Shaw, and M. Zimmermann. 2002. ``The 2001 Pacific West Coast Bottom Trawl Survey of Groundfish Resources: Estimates of Distribution, Abundance and Length and Age Composition.'' NOAA Technical Memorandum NMFS-AFSC-128. U.S. Department of Commerce.
 
-\leavevmode\vadjust pre{\hypertarget{ref-Wendt2009}{}}%
-Wendt, D. E., and R. M. Starr. 2009. {``Collaborative Research: An Effective Way to Collect Data for Stock Assessments and Evaluate Marine Protected Areas in {C}alifornia.''} \emph{Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science.} 1: 315--24.
-
-\end{CSLReferences}
+\leavevmode\hypertarget{ref-Wendt2009}{}%
+Wendt, D. E., and R. M. Starr. 2009. ``Collaborative Research: An Effective Way to Collect Data for Stock Assessments and Evaluate Marine Protected Areas in California.'' \emph{Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science.} 1: 315--24.
 
 \leavevmode\tagmcend\tagstructend
 
