@@ -5,8 +5,6 @@
 ## Life History
 TESTING to make sure edits get pushed
 
-## Ecosystem Considerations
-Replace text.
 
 ## Historical and Current Fishery Information
 Replace text.
@@ -16,3 +14,5 @@ Replace text.
 
 ## Foreign Fisheries
 Replace text.
+
+
