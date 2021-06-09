@@ -1,26 +1,18 @@
 ## Biological Data
 
-
-### Growth (Length-at-Age)
+### Natural Mortality
 
 
 ### Maturation and Fecundity
 
 
-### Natural Mortality
+### Sex Ratio
 
 
 ### Length-Weight Relationship
 
 
+### Growth (Length-at-Age)
 
 
-### Sex Ratio
-
-No information on the sex ratio at birth was available so it was assumed to be 50:50. 
-
-
-### Steepness
-
-
-### Ageing Precision and Bias - move
+### Ageing Precision and Bias

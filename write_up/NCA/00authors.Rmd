@@ -5,7 +5,22 @@ author:
     first: M
     middle: H
     family: Monk
-author_list: Monk, M.H.
+  - name: E. J. Dick
+    code: 1
+    first: E
+    middle: J
+    family: Dick
+  - name: John C. Field
+    code: 1
+    first: J
+    middle: C
+    family: Field
+  - name: Emma M. Saas
+    code: 1
+    first: E
+    middle: M
+    family: Saas
+author_list: Monk, M.H., E.J. Dick, J.C. Field, E.M. Saas
 affiliation:
   - code: 1
     address: Southwest Fisheries Science Center, U.S. Department of Commerce, National
