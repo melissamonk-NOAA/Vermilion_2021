@@ -1,0 +1,179 @@
+---
+geometry: margin=1in
+month: "`r format(Sys.Date(), '%B')`"
+year: "`r format(Sys.Date(), '%Y')`"
+preamble: |
+output:
+  sa4ss::techreport_pdf:
+    default
+  bookdown::pdf_document2:
+    keep_tex: true
+lang: en
+papersize: a4
+---
+
+```{r opts, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+knitr::knit_hooks$set(plot = function(x,options) {
+      base = knitr::opts_knit$get('base.url')
+      if (is.null(base)) base = ''
+      alt = ifelse (is.null(options$alt),"",options$alt)
+      cap = ifelse (is.null(options$caption),"",options$caption)
+      if (alt != ""){
+        sprintf('![%s](%s%s "%s")', cap, base, x, alt)
+      } else {
+        sprintf('![%s](%s%s)', cap, base, x)
+        }
+  })
+
+load("00opts.Rdata")
+
+
+spp = 'vermilion rockfish'
+Spp = 'Vermilion rockfish'
+data_fig_loc = "C:/Stock_Assessments/VRML_Assessment_2021/plots"
+data_loc = "C:/Stock_Assessments/VRML_Assessment_2021/data/"
+model_loc = "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/"
+
+
+
+if(file.exists("00mod.Rdata")){
+  load("00mod.Rdata")
+} else {
+  print("Model output not being read. Please run the read_model() function.")
+}
+
+```
+
+<!--chapter:end:00a.Rmd-->
+
+---
+author:
+  - name: Melissa H. Monk
+    code: 1
+    first: M
+    middle: H
+    family: Monk
+  - name: E. J. Dick
+    code: 1
+    first: E
+    middle: J
+    family: Dick
+  - name: John C. Field
+    code: 1
+    first: J
+    middle: C
+    family: Field
+  - name: Emma M. Saas
+    code: 1
+    first: E
+    middle: M
+    family: Saas
+author_list: Monk, M.H., E.J. Dick, J.C. Field, E.M. Saas
+affiliation:
+  - code: 1
+    address: Southwest Fisheries Science Center, U.S. Department of Commerce, National
+      Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110
+      McAllister Way, Santa Cruz, California 95060
+address: ^1^Southwest Fisheries Science Center, U.S. Department of Commerce, National
+  Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110 McAllister
+  Way, Santa Cruz, California 95060
+---
+
+<!--chapter:end:00authorsnorth.Rmd-->
+
+---
+bibliography:
+  - sa4ss.bib
+---
+
+<!--chapter:end:00bibliography.Rmd-->
+
+---
+title: The status of Vermilion Rockfish (_Sebastes miniatus_) and Sunset Rockfish 
+(_Sebastes crocotulus_) in U.S. waters off the coast of California south
+  of Pt. Conception in 2021
+---
+
+<!--chapter:end:00titlesouth.Rmd-->
+
+\pagebreak
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\renewcommand{\thetable}{\roman{table}}
+\renewcommand{\thefigure}{\roman{figure}}
+
+
+\setlength\parskip{0.5em plus 0.1em minus 0.2em}
+
+<!--chapter:end:01a.Rmd-->
+
+```{r executive, echo = FALSE}
+executive <- list()
+executive[["stock"]] <- paste0("This assessment reports the status of ",
+  spp, " (_", spp.sci, "_) off the ", coast, 
+  " coast using data through xxxx.")
+```
+# Executive Summary{-}
+## Stock{-}
+`r executive[["stock"]]`
+
+## Landings{-}
+Replace text.
+
+## Data and Assessment{-}
+Replace text.
+
+## Stock Biomass{-}
+Replace text.
+
+## Recruitment{-}
+Replace text.
+
+## Exploitation Status{-}
+Replace text.
+
+## Reference Points{-}
+Replace text.
+
+## Management Performance{-}
+Replace text.
+
+## Unresolved Problems and Major Uncertainties{-}
+Replace text.
+
+## Decision Table{-}
+Replace text.
+
+## Research and Data Needs{-}
+Replace text.
+
+<!--chapter:end:01executive.Rmd-->
+
+# Introduction
+## Basic Information
+`r executive[["stock"]]`
+
+## Life History
+TESTING to make sure edits get pushed
+
+
+## Historical and Current Fishery Information
+Replace text.
+
+## Summary of Management History and Performance
+Replace text.
+
+## Foreign Fisheries
+Replace text.
+
+
+
+<!--chapter:end:11introduction.Rmd-->
+
+# Data
+A description of each data source is provided below (Figure \ref{fig:data-plot}).
+
+<!--chapter:end:20data.Rmd-->
+

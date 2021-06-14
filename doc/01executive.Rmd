@@ -1,0 +1,39 @@
+```{r executive, echo = FALSE}
+executive <- list()
+executive[["stock"]] <- paste0("This assessment reports the status of the 
+Vermilion Rockfish (_Sebastes miniatus_) and Sunset Rockfish 
+(_Sebastes crocotulus_) in U.S. waters off the coast of California south
+  of Pt. Conception through 2020.")
+```
+# Executive Summary{-}
+## Stock{-}
+
+## Landings{-}
+Replace text.
+
+## Data and Assessment{-}
+Replace text.
+
+## Stock Biomass{-}
+Replace text.
+
+## Recruitment{-}
+Replace text.
+
+## Exploitation Status{-}
+Replace text.
+
+## Reference Points{-}
+Replace text.
+
+## Management Performance{-}
+Replace text.
+
+## Unresolved Problems and Major Uncertainties{-}
+Replace text.
+
+## Decision Table{-}
+Replace text.
+
+## Research and Data Needs{-}
+Replace text.

@@ -1,0 +1,5 @@
+delete_merged_file: true
+book_filename: 'south'
+rmd_files: ['00a.Rmd', 
+  '00authorsnorth.Rmd', '00bibliography.Rmd', '00titlesouth.Rmd', '01a.Rmd', '01executive.Rmd', 
+  '11introduction.Rmd', '20data.Rmd']
