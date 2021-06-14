@@ -2,6 +2,8 @@
 geometry: margin=1in
 month: "June"
 year: "2021"
+params:
+    model: 2
 preamble: |
 output:
   sa4ss::techreport_pdf:
