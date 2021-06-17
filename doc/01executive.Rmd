@@ -6,7 +6,15 @@ Vermilion Rockfish (_Sebastes miniatus_) and Sunset Rockfish
   of Pt. Conception through 2020.")
 ```
 # Executive Summary{-}
+To be completed after the STAR panel.
+
 ## Stock{-}
+This assessment reports the status of the vermlion rockfish (_Sebastes miniatus_) 
+and sunset rockfish (_Sebastes crocotulus_) complex (referred to as vermilion 
+throughout), resource in U.S. waters off the coast of California `r params$model` 
+of Point Conception ($34^\circ 27^\prime$ N. latitude) using data 
+through 2020.
+
 
 ## Landings{-}
 Replace text.

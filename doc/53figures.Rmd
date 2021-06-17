@@ -8,7 +8,7 @@
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-filein = file.path(mod_loc, "plots", "data_plot2.png"), 
+filein = file.path(base_loc, "plots", "data_plot2.png"), 
 caption = "Summary of data sources used in the base model",
 label = 'data-plot')
 ```	
@@ -41,14 +41,38 @@ label = 'data-plot')
 <!-- ====================================================================== -->
 
 
+```{r, results = 'asis'}
+sa4ss::add_figure(
+filein = file.path(fig_loc, "oldfish.jpg"), 
+caption = "Photograph of the *oldest* aged fish used in the assessment with annuli marked by B. Kamikawa (NWFSC).",
+label = 'fig-oldfish')
+```
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+filein = file.path(fig_loc, "Reader 1 vs Reader 2.png"), 
+caption = "Aging precision between initial and blind double reads for vermilion. 
+Numbers in the bubbles are the sample sizes of otoliths cross-read.",
+label = 'fig-reader1reader2')
+```	
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+filein = file.path(fig_loc, "True vs Reads (by reader).png"), 
+caption = "True versus predicted age for two current age readers at the NWFSC 
+from the ageing error software with unbiased reads for reader 1 and curvilinear 
+bias for reader 1 and curvilinear standard deviation for both readers.",
+label = 'fig-truereads')
+```	
+
 
 <!-- ====================================================================== -->
 <!-- *********************    Selectivity            ********************** --> 
 <!-- ====================================================================== -->
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "/plots"), "sel01_multiple_fleets_length1.png"), 
+sa4ss::add_figure(
+filein = file.path(paste0(base_loc, "/plots"), "sel01_multiple_fleets_length1.png"), 
 caption = "Selectivity at length by fleet",
 label = 'fig-selex')
 ```
@@ -86,19 +110,12 @@ label = 'fig-selex')
 
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "SPR2_minusSPRseries.png"), 
+sa4ss::add_figure(
+filein = file.path(base_loc, "plots", "SPR2_minusSPRseries.png"), 
 caption = "Estimated 1 - relative spawning ratio (SPR) by year",
 label = 'fig-1-spr')
 ```
 
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "yield2_yield_curve_with_refpoints.png"), 
-caption = "Equilibrium yield curve for the base case model. Values are based on the 2020
-fishery selectivity and with steepness fixed at 0.72",
-label = 'fig-yield')
-```
 
 
 

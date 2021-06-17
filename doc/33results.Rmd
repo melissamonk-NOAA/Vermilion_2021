@@ -1,7 +1,40 @@
 ## Base Model Results
 
+The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \ref{tab:likes}. Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \ref{tab:referenceES}. Estimates of stock size and status over time are shown in Table \ref{tab:timeseries}. 
 
 ### Parameter Estimates
+
+
+
+### Growth (Length-at-Age)
+```{r}
+# calculate Linf and t0 from Schnute vB parameterization
+unSchnute.fn <- function(Amin, Amax, Lmin, Lmax, k)
+{
+   Linf <- Lmin + (Lmax-Lmin)/(1-exp(-k*(Amax-Amin)))
+   t0   <- Amin + Amax - (1/k)*log((exp(k*Amax)*Lmax - exp(k*Amin)*Lmin)/(Lmax-Lmin))
+   out  <- c(Linf, t0)
+   names(out) <- c("Linf","t0")
+   return(out)
+}
+# vermilion example
+# females
+unSchnute.fn(0, 30, 8.3113, 53.6773, 0.1679070)
+# for males,  apply exponential offsets to the female values
+unSchnute.fn(0, 30, 8.3113*exp(-2.3422300), 53.6773*exp(-0.0667862), 0.1679070*exp(0.2930410))
+```
+
+\begin{centering}
+
+Females $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Fem_GP_1[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Fem_GP_1[1], 3)`; $t_0$ = `r round(model$Growth_Parameters[1,10], 2)`
+
+Males $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Mal_GP_1[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Mal_GP_1[1], 3)`; $t_0$ = `r round(model$Growth_Parameters[2,10], 2)`
+
+\end{centering}
+
+\vspace{0.5cm}
+
+
 
 ### Fits to the Data
 

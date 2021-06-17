@@ -1,0 +1,10 @@
+\clearpage
+
+# Appendix
+
+
+## Deb Wilson-Vandenberg Index of Abundance{#debwv}
+
+```{r, child = paste0("indices/vermilion_DebWV_onboard_writeup_", model.area,".md")}
+```
+

@@ -1,16 +1,12 @@
-# Introduction
-## Basic Information
-`r executive[["stock"]]`
-
-## Life History
-TESTING to make sure edits get pushed
-
-
 ## Historical and Current Fishery Information
 Replace text.
 
 ## Summary of Management History and Performance
 Replace text.
+
+
+
+##Management Performance
 
 ## Foreign Fisheries
 Replace text.

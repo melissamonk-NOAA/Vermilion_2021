@@ -2,8 +2,9 @@
 detach("package:sa4ss", unload = TRUE)
 remotes::install_github("nwfsc-assess/sa4ss")
 library(sa4ss)
-setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")
 source("code/dir_recent.R")
+#setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")
+
 
 
 
@@ -83,47 +84,29 @@ sa4ss::read_model(
 #-------------------------------------------------------------------------------
 #compile the documents 
 #1 is north and 2 is south
-model.dir <- dir_recent(dir = dir.path[1], pattern = "Verm")
-base_loc <- paste0(model.dir)
-setwd("doc")
-if(file.exists("north.Rmd")){
-  file.remove("north.Rmd")
-}
-
-setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021")
-setwd("doc")
+#model.dir <- dir_recent(dir = dir.path[1], pattern = "Verm")
+#base_loc <- paste0(model.dir)
+#setwd("doc")
+#if(file.exists("north.Rmd")){
+#  file.remove("north.Rmd")
+#}
+system("taskkill /f /im Acrobat.exe")
+set.model = "north"
+setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")
 #make northern model
 bookdown::render_book("00a.Rmd", output_dir = getwd(), clean = FALSE, 
                       config_file = "_bookdown_north.yml",
-                      params = list(model = base_loc))
+                      params = list(model = set.model))
 
+
+
+set.model = "south"
 #make southern model 
 bookdown::render_book("00a.Rmd", output_dir = getwd(), clean = FALSE, 
                       config_file = "_bookdown_south.yml"))
 setwd("..")
 
-
-
-
-# Create the needed items to generate the "right" template that would be based on the inputs here:
-# sa4ss::draft(authors = c("Melissa H. Monk", "E. J. Dick", 
-#            "John C. Field", "Emma M. Saas"),
-#              species = "Vermilion Rockfish",
-#              latin = "Sebastes caurinus",
-#              coast = "California North of Pt. Conception US West",
-#              type = c("sa"),
-#              create_dir = FALSE,
-#              edit = FALSE)
-
-#sa4ss::write_authors(authors = c("Melissa H. Monk", "E. J. Dick", 
-#                                  "John C. Field", "Emma M. Saas"))
-
-
-# dir.path <-  "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/"
-# model.dir <- dir_recent(dir = dir.path, pattern = "Verm")
-# base_loc <- paste0(model.dir)
-
-
+bookdown::preview_chapter("22biology.Rmd")
 
 
 

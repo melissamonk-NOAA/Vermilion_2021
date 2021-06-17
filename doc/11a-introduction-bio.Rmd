@@ -1,0 +1,31 @@
+# Introduction
+
+## Basic Information
+`r executive[["stock"]]`
+
+##Basic Information and Life History
+
+*Population Structure and Complex Assessment Considerations*
+
+Provided by John Harms (NWFSC)
+
+A group of researchers from the NWFSC and SWFSC is collaborating on a project to genotype tissue specimens collected from the vermilion and sunset rockfish cryptic pair captured during the West Coast Groundfish Bottom Trawl Survey and the Southern CA Shelf Rockfish Hook and Line Survey for the years 2004 - 2019.  Funding for this project was obtained through the Saltonstall-Kennedy program for FY 2020 through a proposal led by representatives from Pacific States Marine Fisheries Commission and the commercial passenger fishing vessel industry in southern California.  
+
+After combining with specimens obtained through other collection efforts along the West Coast, approximately 25,000 tissue specimens will be analyzed.  Some earlier efforts to separate this cryptic pair to species used mitochondrial DNA (mtDNA) markers.  However, due to a one-way mitochondrial introgression from the vermilion genome into the sunset genome, a portion of the sunset rockfish population contains mitochondrial DNA sequences consistent with vermilion rockfish resulting in incorrect species assignments for these introgressed individuals during the prior research project.  The current research has identified a robust suite of genetic markers within the nuclear genomes of the two species that definitively separates vermilion and sunset rockfish (including  introgressed sunset rockfish), canary rockfish, first generation vermilion-sunset hybrids, and identifies emerging patterns of intraspecific stock structure within the two sister species.
+
+Once the collected specimens have been genotyped, any species-specific differences in spatial and depth distribution, size composition, weight-length relationships, and other biological characteristics will be identified.  Using previously collected otoliths and ovaries, the demographics of the two species including age and growth and reproductive biology parameters such as length and age at 50\% maturity and the prevalence of skip spawning will be explored and compared.  These new genotyping results will be combined with data from the prior mtDNA work to  evaluate whether introgressed sunset rockfish represent a biologically intermediate subform of the species complex.  The effort also proposes to develop and test the efficacy of models to predict the relative proportion of the two species based upon explanatory variables including latitude, depth, species of co-occurrence, oceanographic parameters, habitat descriptors and/or other information.  The anticipated completion of the genotyping of all specimens is approximately December 2021 with provision of final results by the end of FY 2022.
+
+This research is aimed at providing information to support the successful stock assessment of this commercially and recreationally valuable cryptic species pair and is responsive to any data gaps identified by the assessment community.  If successful, this research, conducted in close communication with stock assessors, may also assist the PFMC in establishing best practices for the assessment and management of cryptic species complexes.  Though this project will only focus on nominal vermilion rockfish specimens collected through the 2019 survey field season, it may be advisable that tissue specimens collected aboard fishery-independent surveys as well as through fishery-dependent programs continue to be genotyped on an ongoing basis to support continued and timely monitoring of this economically and ecologically important species complex.
+
+
+## Early Life History
+
+
+##Map
+
+
+##Ecosystem Considerations
+
+
+
+
