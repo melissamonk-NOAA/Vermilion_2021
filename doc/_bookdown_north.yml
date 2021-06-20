@@ -1,0 +1,15 @@
+delete_merged_file: true
+book_filename: 'north'
+rmd_files: ['00a.Rmd',
+            '00authorsnorth.Rmd', 
+            '00bibliography.Rmd',  
+            '00titlenorth.Rmd', 
+            '01a.Rmd',
+            '01executive.Rmd', 
+            '10a.Rmd',
+            '11a-introduction-bio.Rmd', 
+            '11b-introduction-fishery.Rmd',
+            '20-data.Rmd', 
+            '22biology.Rmd',
+            '53figures.Rmd',
+            '54a-appendix-indices.Rmd']

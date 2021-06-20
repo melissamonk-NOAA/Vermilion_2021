@@ -1,0 +1,407 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={California Onboard CPFV Index, 1999-2019, for vermilion in 2021},
+  pdfauthor={Melissa H. Monk},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{placeins}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{California Onboard CPFV Index, 1999-2019, for vermilion in 2021}
+\author{Melissa H. Monk}
+\date{June 20, 2021}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\hypertarget{califronia-onboard-observer-survey-1999-2019}{%
+\subsubsection{Califronia Onboard Observer Survey, 1999-2019}\label{califronia-onboard-observer-survey-1999-2019}}
+
+The state of California implemented a statewide onboard observer sampling
+program in 1999 {[}@Monk2014{]}. California Polytechnic State University (Cal
+Poly) has conducted an independent onboard sampling
+program as of 2003 for boats in Port San Luis and Morro Bay, and follows
+the protocols established in Reilly et al. {[}-@Reilly1998{]}.
+
+During an onboard observer trip the sampler rides along on the CPFV and records
+location-specific catch and discard information to the species level for a subset
+of anglers onboard the vessel. The subset of observed anglers is usually a
+maximum of 15 people the observed anglers change during each fishing stop.\\
+The catch cannot be linked to an individual, but rather
+to a specific fishing location. The sampler also records the starting and
+ending time, number of anglers observed, starting and ending depth, and measures
+discarded fish. The fine-scale catch and effort data allow us to better filter
+the data for indices to fishing stops within suitable habitat for vermilion.
+Cal Poly has modified protocols reflect sampling changes that CDFW
+has also adopted, e.g., observing fish as they are encountered instead of at
+the level of a fisher's bag. Therefore, the Cal Poly data area incorporated in
+the same index as the CDFW data from 1999-2019. The only difference is that
+Cal Poly measures the length of both retained and discarded fish.
+
+Due to the COVID-19 pandemic, there are no onboard observer samples from either
+CDFW or Cal Poly in 2020.
+
+\textbf{California CPFV CPUE Index: Data Preparation, Filtering, and Sample Sizes}
+
+As described above the CDFW and Cal Poly onboard observer programs are identical
+in that the same protocols are followed. The only difference is that Cal Poly
+measures both retained and discarded fish from the observed anglers and CDFW
+measures only discarded fish from the observed anglers. CDFW measures retained
+fish as part of the angler interview at the bag and trip level. This index
+selectivity is mirrored to the recreational
+fleet in the stock assessment model, which represent only retained (dead)
+fish. Therefore, only retained fish were modeled in this index. The length
+from CDFW sampling are contained in the RecFIN database and indlucded in the
+length composition for the recreational fleet in the assessment model.
+
+A number of filters are applied to these data. All of the Cal Poly data were
+QA/QC-ed once key-punched, whereas a number of errors remain in the
+data from CDFW. Data sheets from CDFW are not available prior to 2012 and
+staff constraints have also prevented a quality control review of the data.
+
+Each drift was assigned to a reef (hard bottom). Hard bottom was extracted from
+the \href{http://seafloor.otterlabs.org/index.html}{California Seafloor Mapping Project},
+with bathymetric data from state waters available at a 2 m resolution. Reefs were
+developed based on a number of factors described in the supplemental material
+(``Reef Delineation''). Depth restrictions in the recreational fishery were fairly
+consistent from 2004-2016. Starting in 2017, depth restrictions eased in districts
+north of Pt. Conception and the recreational fleet targeted these depths
+(Figure \ref{fig:fig-depthfished-cpfvonboard}. The deeper waters (40-50 fm) are
+outside of the mapped hard bottom habitat, but could be assigend to the larger
+areas considered as a factor in the index.
+
+We retained 14218 drifts for index standardization, with
+5960 drifts encountering vermilion
+(Table \ref{tab:tab-data-filter-cpfvonboard}).
+
+Sample sizes by factors selected to model, excluding WAVE can be found in Tables
+\ref{tab:tab-region-cpfvonboard}, \ref{tab:tab-depth-cpfvonboard}, and \ref{tab:tab-year-cpfvonboard}.
+
+\textbf{California CPFV CPUE Index: Model Selection, Fits, and Diagnostics}
+
+We modeled retained catch per angler hour (CPUE; number of fish per angler hour)
+a Bayesian delta-GLM model. Indices with a year and area interaction were not
+considered in model selection; trends in the average CPUE by region were similar
+in the filtered data set (Figure \ref{fig:fig-areacpue-cpfvonboard}).
+
+A Lognormal model was
+selected for the positive observation GLM by
+a \(\Delta AIC\) of 919.67 over a Gamma model and supported by Q-Q plots of the positive observations fit to both distributions (Figure \ref{fig:fig-dist-fits-cpfvonboard}). The delta-GLM
+method allows the linear predictors to differ between the binomial and positive models.
+Based on AIC values from maximum likelihood fits Table \ref{tab:tab-model-select-cpfvonboard}),
+a main effects model including
+YEAR and WAVE and DEPTH bin
+was fit for the binomial model and a main
+effects model including
+YEAR and WAVE and DEPTH bin
+was fit for the Lognormal model.
+Models were fit using the ``rstanarm'' R package (version 2.21.1). Posterior predictive
+checks of the Bayesian model fit for the binomial model and the positive model
+were all reasonable (Figures \ref{fig:fig-posterior-mean-cpfvonboard} and
+\ref{fig:fig-posterior-sd-cpfvonboard}). The binomial model generated data sets with the
+proportion zeros similar to the 58\% zeroes in the observed data
+(Figure \ref{fig:fig-propzero-cpfvonboard}). The predicted marginal effects from
+both the binomial and Lognormal models can be found in (Figures \ref{fig:fig-Dbin-marginal-cpfvonboard} and \ref{fig:fig-Dpos-marginal-cpfvonboard}). The
+final index (Table \ref{tab:tab-index-cpfvonboard})
+represents a similar trend to the arithmetic mean of the annual CPUE (Figure \ref{fig:fig-cpue-cpfvonboard}).
+
+\newpage
+
+\begin{table}
+
+\caption{\label{tab:tab-data-filter-cpfvonboard}Data filtering steps CA CPFV onboard survey index for vermilion in the southern model .}
+\centering
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{10em}>{\raggedright\arraybackslash}p{15em}c>{\centering\arraybackslash}p{5em}>{\centering\arraybackslash}p{5em}}
+\toprule
+Filter & Desciption & Trip & Positive Trips & Percent drifts retained\\
+\midrule
+\cellcolor{gray!6}{All} & \cellcolor{gray!6}{Download from SQL; identifiable errors filtered} & \cellcolor{gray!6}{34151} & \cellcolor{gray!6}{6190} & \cellcolor{gray!6}{18\%}\\
+Fishery closed & Removed samples when target fish fishery closed & 29716 & 6187 & 21\%\\
+\cellcolor{gray!6}{Ocean only} & \cellcolor{gray!6}{Removed samples from major bays} & \cellcolor{gray!6}{29661} & \cellcolor{gray!6}{6187} & \cellcolor{gray!6}{21\%}\\
+Catch & Removed samples with zero catch of any species & 27181 & 6187 & 23\%\\
+\cellcolor{gray!6}{Depth} & \cellcolor{gray!6}{Removed samples in less than max depth of species} & \cellcolor{gray!6}{26489} & \cellcolor{gray!6}{6072} & \cellcolor{gray!6}{23\%}\\
+\addlinespace
+Time fished & Removed upper two percent of time fished & 25948 & 6015 & 23\%\\
+\cellcolor{gray!6}{Percent groundfish in samples} & \cellcolor{gray!6}{Removed samples with fewer groundfish than when the target observed} & \cellcolor{gray!6}{14221} & \cellcolor{gray!6}{5960} & \cellcolor{gray!6}{42\%}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+
+\caption{\label{tab:tab-depth-cpfvonboard}Positive samples of vermilion in the southern model by depth (fm).}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{(0,10]} & \cellcolor{gray!6}{51} & \cellcolor{gray!6}{665} & \cellcolor{gray!6}{8\%}\\
+(10,20] & 883 & 2460 & 36\%\\
+\cellcolor{gray!6}{(20,30]} & \cellcolor{gray!6}{1568} & \cellcolor{gray!6}{3313} & \cellcolor{gray!6}{47\%}\\
+(30,40] & 1153 & 2556 & 45\%\\
+\cellcolor{gray!6}{(40,50]} & \cellcolor{gray!6}{1816} & \cellcolor{gray!6}{4056} & \cellcolor{gray!6}{45\%}\\
+\addlinespace
+(50,60] & 489 & 1168 & 42\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{\label{tab:tab-region-cpfvonboard}Samples of vermilion in the southern model by subregion used in the index.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{Los Angeles} & \cellcolor{gray!6}{1865} & \cellcolor{gray!6}{4319} & \cellcolor{gray!6}{43\%}\\
+Orange & 490 & 1238 & 40\%\\
+\cellcolor{gray!6}{San Diego} & \cellcolor{gray!6}{1152} & \cellcolor{gray!6}{2408} & \cellcolor{gray!6}{48\%}\\
+Santa Barbara & 752 & 1581 & 48\%\\
+\cellcolor{gray!6}{Ventura} & \cellcolor{gray!6}{1701} & \cellcolor{gray!6}{4672} & \cellcolor{gray!6}{36\%}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+
+\caption{\label{tab:tab-year-cpfvonboard}Samples of vermilion in the southern model by year.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{1999} & \cellcolor{gray!6}{92} & \cellcolor{gray!6}{236} & \cellcolor{gray!6}{39\%}\\
+2000 & 73 & 174 & 42\%\\
+\cellcolor{gray!6}{2001} & \cellcolor{gray!6}{33} & \cellcolor{gray!6}{76} & \cellcolor{gray!6}{43\%}\\
+2002 & 81 & 182 & 45\%\\
+\cellcolor{gray!6}{2003} & \cellcolor{gray!6}{101} & \cellcolor{gray!6}{165} & \cellcolor{gray!6}{61\%}\\
+\addlinespace
+2004 & 191 & 346 & 55\%\\
+\cellcolor{gray!6}{2005} & \cellcolor{gray!6}{220} & \cellcolor{gray!6}{529} & \cellcolor{gray!6}{42\%}\\
+2006 & 211 & 568 & 37\%\\
+\cellcolor{gray!6}{2007} & \cellcolor{gray!6}{257} & \cellcolor{gray!6}{693} & \cellcolor{gray!6}{37\%}\\
+2008 & 227 & 778 & 29\%\\
+\addlinespace
+\cellcolor{gray!6}{2009} & \cellcolor{gray!6}{246} & \cellcolor{gray!6}{818} & \cellcolor{gray!6}{30\%}\\
+2010 & 380 & 920 & 41\%\\
+\cellcolor{gray!6}{2011} & \cellcolor{gray!6}{438} & \cellcolor{gray!6}{1046} & \cellcolor{gray!6}{42\%}\\
+2012 & 512 & 1191 & 43\%\\
+\cellcolor{gray!6}{2013} & \cellcolor{gray!6}{630} & \cellcolor{gray!6}{1410} & \cellcolor{gray!6}{45\%}\\
+\addlinespace
+2014 & 396 & 1020 & 39\%\\
+\cellcolor{gray!6}{2015} & \cellcolor{gray!6}{440} & \cellcolor{gray!6}{897} & \cellcolor{gray!6}{49\%}\\
+2016 & 406 & 809 & 50\%\\
+\cellcolor{gray!6}{2017} & \cellcolor{gray!6}{329} & \cellcolor{gray!6}{760} & \cellcolor{gray!6}{43\%}\\
+2018 & 300 & 797 & 38\%\\
+\addlinespace
+\cellcolor{gray!6}{2019} & \cellcolor{gray!6}{397} & \cellcolor{gray!6}{803} & \cellcolor{gray!6}{49\%}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{\label{tab:tab-model-select-cpfvonboard}Model selection for the CA CPFV onboard survey index for vermilion in the southern model .}
+\centering
+\begin{tabular}[t]{lrr}
+\toprule
+Model & Binomial $\Delta$AIC & Lognormal $\Delta$AIC\\
+\midrule
+\cellcolor{gray!6}{1} & \cellcolor{gray!6}{725.28} & \cellcolor{gray!6}{568.97}\\
+YEAR + DISTRICT & 494.00 & 124.13\\
+\cellcolor{gray!6}{YEAR + DISTRICT + WAVE} & \cellcolor{gray!6}{450.48} & \cellcolor{gray!6}{109.82}\\
+YEAR + DISTRICT + WAVE + DEPTH bin & 0.00 & 0.00\\
+\cellcolor{gray!6}{YEAR + WAVE + DEPTH bin} & \cellcolor{gray!6}{41.38} & \cellcolor{gray!6}{132.83}\\
+\addlinespace
+YEAR + DEPTH bin & 61.41 & 148.53\\
+\cellcolor{gray!6}{YEAR + DISTRICT + DEPTH bin} & \cellcolor{gray!6}{10.88} & \cellcolor{gray!6}{3.65}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{\label{tab:tab-index-cpfvonboard}Standardized index for the CA CPFV onboard survey index with log-scale standard errors and 95% highest
+       posterior density (HPD) intervals for vermilion in the southern model .}
+\centering
+\begin{tabular}[t]{rrrrr}
+\toprule
+Year & Mean & logSE & lower HPD & upper HPD\\
+\midrule
+\cellcolor{gray!6}{1999} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{0.25} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.04}\\
+2000 & 0.04 & 0.26 & 0.02 & 0.07\\
+\cellcolor{gray!6}{2001} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{0.32} & \cellcolor{gray!6}{0.01} & \cellcolor{gray!6}{0.05}\\
+2002 & 0.04 & 0.25 & 0.02 & 0.06\\
+\cellcolor{gray!6}{2003} & \cellcolor{gray!6}{0.10} & \cellcolor{gray!6}{0.24} & \cellcolor{gray!6}{0.06} & \cellcolor{gray!6}{0.16}\\
+\addlinespace
+2004 & 0.08 & 0.22 & 0.05 & 0.12\\
+\cellcolor{gray!6}{2005} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{0.21} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{0.06}\\
+2006 & 0.03 & 0.21 & 0.02 & 0.04\\
+\cellcolor{gray!6}{2007} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{0.21} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.05}\\
+2008 & 0.02 & 0.22 & 0.01 & 0.03\\
+\addlinespace
+\cellcolor{gray!6}{2009} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.21} & \cellcolor{gray!6}{0.01} & \cellcolor{gray!6}{0.03}\\
+2010 & 0.03 & 0.20 & 0.02 & 0.05\\
+\cellcolor{gray!6}{2011} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{0.07}\\
+2012 & 0.05 & 0.20 & 0.03 & 0.07\\
+\cellcolor{gray!6}{2013} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{0.07}\\
+\addlinespace
+2014 & 0.04 & 0.20 & 0.03 & 0.06\\
+\cellcolor{gray!6}{2015} & \cellcolor{gray!6}{0.07} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.11}\\
+2016 & 0.07 & 0.20 & 0.05 & 0.11\\
+\cellcolor{gray!6}{2017} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.21} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{0.07}\\
+2018 & 0.04 & 0.21 & 0.03 & 0.06\\
+\addlinespace
+\cellcolor{gray!6}{2019} & \cellcolor{gray!6}{0.07} & \cellcolor{gray!6}{0.21} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.11}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_SCA_files/figure-latex/fig-dist-fits-cpfvonboard-1.pdf}
+\caption{\label{fig:fig-dist-fits-cpfvonboard}Q-Q plot (top) of the positive observations lognormal gamma distributions and fitted values vs residuals for the Lognormal model (bottom).}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_SCA_files/figure-latex/fig-depthfished-cpfvonboard-1.pdf}
+\caption{\label{fig:fig-depthfished-cpfvonboard}Boxplots of depths fished by year in the filtered data.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_SCA_files/figure-latex/fig-areacpue-cpfvonboard-1.pdf}
+\caption{\label{fig:fig-areacpue-cpfvonboard}Arithmetic mean of CPUE by region for vermilion from the filtered data. The areas used are in the text.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_SCA_files/figure-latex/fig-propzero-cpfvonboard-1.pdf}
+\caption{\label{fig:fig-propzero-cpfvonboard}Posterior predictive distribution of the proportion of zero observations in replicate data sets generated by the delta model with a vertical line representing the observed average.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_SCA_files/figure-latex/fig-posterior-mean-cpfvonboard-1.pdf}
+\caption{\label{fig:fig-posterior-mean-cpfvonboard}Posterior predictive draws of the mean by year with a vertical line representing the observed average.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_SCA_files/figure-latex/fig-posterior-sd-cpfvonboard-1.pdf}
+\caption{\label{fig:fig-posterior-sd-cpfvonboard}Posterior predictive draws of the standard deviation by year with a vertical line representing the observed average.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_SCA_files/figure-latex/fig-cpue-cpfvonboard-1.pdf}
+\caption{\label{fig:fig-cpue-cpfvonboard}Standardized index and arithmetic mean of the CPUE from the filtered data. Each timeseries is scaled to its respective means.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_SCA_files/figure-latex/fig-Dbin-marginal-cpfvonboard-1.pdf}
+\caption{\label{fig:fig-Dbin-marginal-cpfvonboard}Binomial marginal effects from the final model.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_SCA_files/figure-latex/fig-Dpos-marginal-cpfvonboard-1.pdf}
+\caption{\label{fig:fig-Dpos-marginal-cpfvonboard}Positive model marginal effects from the final model.}
+\end{figure}
+
+\end{document}

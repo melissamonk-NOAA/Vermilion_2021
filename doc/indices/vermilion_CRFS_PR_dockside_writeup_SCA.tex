@@ -1,0 +1,332 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={CRFS PR Index for vermilion in 2021},
+  pdfauthor={Melissa H. Monk},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{placeins}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{CRFS PR Index for vermilion in 2021}
+\author{Melissa H. Monk}
+\date{June 20, 2021}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\hypertarget{crfs-dockside-private-boat-index}{%
+\subsubsection{CRFS Dockside Private Boat Index}\label{crfs-dockside-private-boat-index}}
+
+Catch and effort data from CRFS dockside sampling of private boats, 2004-2018,
+were provided by CDFW for use in this assessment. The data include catch (number
+of fish) by species, number of anglers (i.e.~effort units are angler trips),
+angler-reported distance from shore, (Area.X: inside/outside of 3 nm, county, port,
+interview site, year, month, and CRFS district. The sample size of the
+unfiltered private boat CPUE data is much larger than the crfspr CPFV data set,
+with 391,279 trips statewide, 120,655 in southern California (south
+of Point Conception), and 270,064 north of Point Conception.
+
+\emph{CRFS Private Boat Index: Data Preparation, Filtering, and Sample Sizes}
+Records were limited to ``PR1'' sites, and only the hook-and-line gear type
+(Table \ref{tab:tab-data-filter-crfspr}.
+Since this is a dockside index lacking precise fishing location information, we
+use the percent of groundfish within the catch from a trip as a proxy for retaining
+trips for index standardization. Similar to the crfspr index, we partitioned the
+data into areas north and south of Point Conception and applied the method
+separately to each data set.
+
+Since 2005, the recreational fishery for shelf rockfish north of Pt. Conception
+has been closed from January through part of April and May.Angler reported distance
+from shore had no samples in the ``outside 3 nm'' category (Area X = 2)
+from 2004-2011, but was retained in the index standardization due to the relaxation
+of depth restrictions beginning in 2017. We retained 12075 drifts for index standardization, with 6835 drifts encountering vermilion
+(Table \ref{tab:tab-data-filter-crfspr}).
+
+\emph{Northern California CRFS Private Boat Index: Model Selection, Fits, and Diagnostics}
+
+Sample sizes by factors selected to model, excluding WAVE can be found in Tables
+\ref{tab:tab-region-crfspr} and \ref{tab:tab-year-crfspr}.
+We modeled retained catch per angler hour (CPUE; number of fish per angler hour)
+a Bayesian delta-GLM model. Indices with a year and area interaction were not
+considered in model selection; trends in the average CPUE by region were similar
+in the filtered data set (Figure \ref{fig:fig-areacpue-crfspr}).
+
+A Lognormal model was
+selected for the positive observation GLM by
+a \(\Delta AIC\) of 902.24 over a Gamma model and supported by Q-Q plots of the positive observations fit to both distributions (Figure \ref{fig:fig-dist-fits-crfspr}). The delta-GLM
+method allows the linear predictors to differ between the binomial and positive models.
+Based on AIC values from maximum likelihood fits Table \ref{tab:tab-model-select-crfspr}),
+a main effects model including
+YEAR and WAVE and AREA X
+was fit for the binomial model and a main
+effects model including
+YEAR and WAVE and AREA X
+was fit for the Lognormal model.
+Models were fit using the ``rstanarm'' R package (version 2.21.1). Posterior predictive
+checks of the Bayesian model fit for the binomial model and the positive model
+were all reasonable (Figures \ref{fig:fig-posterior-mean-crfspr} and
+\ref{fig:fig-posterior-sd-crfspr}). The binomial model generated data sets with the
+proportion zeros similar to the 43\% zeroes in the observed data
+(Figure \ref{fig:fig-propzero-crfspr}). The predicted marginal effects from
+both the binomial and Lognormal models can be found in (Figures \ref{fig:fig-Dbin-marginal-crfspr} and \ref{fig:fig-Dpos-marginal-crfspr}). The
+final index (Table \ref{tab:tab-index-crfspr})
+represents a similar trend to the arithmetic mean of the annual CPUE (Figure \ref{fig:fig-cpue-crfspr}).
+
+\newpage
+
+\begin{table}
+
+\caption{\label{tab:tab-data-filter-crfspr}Data filtering steps CRFS PR dockside survey index for vermilion in the southern model .}
+\centering
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{15em}c>{\centering\arraybackslash}p{8em}>{\centering\arraybackslash}p{8em}}
+\toprule
+Filter & Desciption & Trip & Positive Trips & Percent drifts retained\\
+\midrule
+\cellcolor{gray!6}{All data} & \cellcolor{gray!6}{Pre-filtered for drifts with marked for exclusion} & \cellcolor{gray!6}{54051} & \cellcolor{gray!6}{8654} & \cellcolor{gray!6}{16\%}\\
+Groundfish & Removed trips with no observed groundfish & 18048 & 8654 & 48\%\\
+\cellcolor{gray!6}{HMS} & \cellcolor{gray!6}{Remove trips with more than half the catch composed of HMS species} & \cellcolor{gray!6}{18037} & \cellcolor{gray!6}{8653} & \cellcolor{gray!6}{48\%}\\
+Final trips & Retained trips with at least 0.5 groundfish. & 12075 & 6835 & 57\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+
+\caption{\label{tab:tab-region-crfspr}Samples of vermilion in the southern model by subregion used in the index.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{1} & \cellcolor{gray!6}{3541} & \cellcolor{gray!6}{6072} & \cellcolor{gray!6}{58\%}\\
+2 & 3294 & 6003 & 55\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+
+\caption{\label{tab:tab-year-crfspr}Samples of vermilion in the southern model by year.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{2004} & \cellcolor{gray!6}{593} & \cellcolor{gray!6}{857} & \cellcolor{gray!6}{69\%}\\
+2005 & 452 & 750 & 60\%\\
+\cellcolor{gray!6}{2006} & \cellcolor{gray!6}{505} & \cellcolor{gray!6}{884} & \cellcolor{gray!6}{57\%}\\
+2007 & 620 & 1015 & 61\%\\
+\cellcolor{gray!6}{2008} & \cellcolor{gray!6}{484} & \cellcolor{gray!6}{879} & \cellcolor{gray!6}{55\%}\\
+\addlinespace
+2009 & 374 & 768 & 49\%\\
+\cellcolor{gray!6}{2010} & \cellcolor{gray!6}{261} & \cellcolor{gray!6}{506} & \cellcolor{gray!6}{52\%}\\
+2011 & 270 & 541 & 50\%\\
+\cellcolor{gray!6}{2012} & \cellcolor{gray!6}{272} & \cellcolor{gray!6}{525} & \cellcolor{gray!6}{52\%}\\
+2013 & 546 & 976 & 56\%\\
+\addlinespace
+\cellcolor{gray!6}{2014} & \cellcolor{gray!6}{463} & \cellcolor{gray!6}{796} & \cellcolor{gray!6}{58\%}\\
+2015 & 414 & 731 & 57\%\\
+\cellcolor{gray!6}{2016} & \cellcolor{gray!6}{348} & \cellcolor{gray!6}{646} & \cellcolor{gray!6}{54\%}\\
+2017 & 375 & 703 & 53\%\\
+\cellcolor{gray!6}{2018} & \cellcolor{gray!6}{302} & \cellcolor{gray!6}{577} & \cellcolor{gray!6}{52\%}\\
+\addlinespace
+2019 & 505 & 812 & 62\%\\
+\cellcolor{gray!6}{2020} & \cellcolor{gray!6}{51} & \cellcolor{gray!6}{109} & \cellcolor{gray!6}{47\%}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{\label{tab:tab-model-select-crfspr}Model selection for the CRFS PR dockside survey index for vermilion in the southern model .}
+\centering
+\begin{tabular}[t]{lrr}
+\toprule
+Model & Binomial $\Delta$AIC & Lognormal $\Delta$AIC\\
+\midrule
+\cellcolor{gray!6}{1} & \cellcolor{gray!6}{326.78} & \cellcolor{gray!6}{166.57}\\
+YEAR + DISTRICT & 207.42 & 38.36\\
+\cellcolor{gray!6}{YEAR + DISTRICT + WAVE} & \cellcolor{gray!6}{64.81} & \cellcolor{gray!6}{29.23}\\
+YEAR + DISTRICT + WAVE + AREA X & 0.00 & 0.00\\
+\cellcolor{gray!6}{YEAR + WAVE + AREA X} & \cellcolor{gray!6}{3.30} & \cellcolor{gray!6}{5.14}\\
+\addlinespace
+YEAR + AREA X & 148.70 & 14.21\\
+\cellcolor{gray!6}{YEAR + DISTRICT + AREA X} & \cellcolor{gray!6}{143.81} & \cellcolor{gray!6}{9.35}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{\label{tab:tab-index-crfspr}Standardized index for the CRFS PR dockside survey index with log-scale standard errors and 95% highest
+       posterior density (HPD) intervals for vermilion in the southern model .}
+\centering
+\begin{tabular}[t]{rrrrr}
+\toprule
+Year & Mean & logSE & lower HPD & upper HPD\\
+\midrule
+\cellcolor{gray!6}{2004} & \cellcolor{gray!6}{0.99} & \cellcolor{gray!6}{0.14} & \cellcolor{gray!6}{0.74} & \cellcolor{gray!6}{1.27}\\
+2005 & 0.59 & 0.15 & 0.43 & 0.78\\
+\cellcolor{gray!6}{2006} & \cellcolor{gray!6}{0.55} & \cellcolor{gray!6}{0.15} & \cellcolor{gray!6}{0.41} & \cellcolor{gray!6}{0.74}\\
+2007 & 0.60 & 0.14 & 0.44 & 0.78\\
+\cellcolor{gray!6}{2008} & \cellcolor{gray!6}{0.46} & \cellcolor{gray!6}{0.15} & \cellcolor{gray!6}{0.34} & \cellcolor{gray!6}{0.61}\\
+\addlinespace
+2009 & 0.40 & 0.16 & 0.28 & 0.53\\
+\cellcolor{gray!6}{2010} & \cellcolor{gray!6}{0.41} & \cellcolor{gray!6}{0.16} & \cellcolor{gray!6}{0.29} & \cellcolor{gray!6}{0.56}\\
+2011 & 0.49 & 0.16 & 0.35 & 0.66\\
+\cellcolor{gray!6}{2012} & \cellcolor{gray!6}{0.47} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.33} & \cellcolor{gray!6}{0.64}\\
+2013 & 0.56 & 0.15 & 0.40 & 0.74\\
+\addlinespace
+\cellcolor{gray!6}{2014} & \cellcolor{gray!6}{0.59} & \cellcolor{gray!6}{0.15} & \cellcolor{gray!6}{0.43} & \cellcolor{gray!6}{0.79}\\
+2015 & 0.57 & 0.16 & 0.41 & 0.77\\
+\cellcolor{gray!6}{2016} & \cellcolor{gray!6}{0.50} & \cellcolor{gray!6}{0.16} & \cellcolor{gray!6}{0.35} & \cellcolor{gray!6}{0.67}\\
+2017 & 0.50 & 0.16 & 0.36 & 0.68\\
+\cellcolor{gray!6}{2018} & \cellcolor{gray!6}{0.44} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.31} & \cellcolor{gray!6}{0.60}\\
+\addlinespace
+2019 & 0.64 & 0.15 & 0.47 & 0.85\\
+\cellcolor{gray!6}{2020} & \cellcolor{gray!6}{0.51} & \cellcolor{gray!6}{0.24} & \cellcolor{gray!6}{0.31} & \cellcolor{gray!6}{0.78}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+\FloatBarrier
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_SCA_files/figure-latex/fig-dist-fits-crfspr-1.pdf}
+\caption{\label{fig:fig-dist-fits-crfspr}Q-Q plot (top) of the positive observations lognormal gamma distributions and fitted values vs residuals for the Lognormal model (bottom).}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_SCA_files/figure-latex/fig-areacpue-crfspr-1.pdf}
+\caption{\label{fig:fig-areacpue-crfspr}Arithmetic mean of CPUE by region for vermilion from the filtered data.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_SCA_files/figure-latex/fig-propzero-crfspr-1.pdf}
+\caption{\label{fig:fig-propzero-crfspr}Posterior predictive distribution of the proportion of zero observations in replicate data sets generated by the delta model with a vertical line representing the observed average.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_SCA_files/figure-latex/fig-posterior-mean-crfspr-1.pdf}
+\caption{\label{fig:fig-posterior-mean-crfspr}Posterior predictive draws of the mean by year with a vertical line of the raw data average.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_SCA_files/figure-latex/fig-posterior-sd-crfspr-1.pdf}
+\caption{\label{fig:fig-posterior-sd-crfspr}Posterior predictive draws of the standard deviation by year with a vertical line representing the observed average.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_SCA_files/figure-latex/fig-cpue-crfspr-1.pdf}
+\caption{\label{fig:fig-cpue-crfspr}Standardized index and arithmetic mean of the CPUE from the filtered data. Each timeseries is scaled to its respective means.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_SCA_files/figure-latex/fig-Dbin-marginal-crfspr-1.pdf}
+\caption{\label{fig:fig-Dbin-marginal-crfspr}Binomial marginal effects from the final model}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_SCA_files/figure-latex/fig-Dpos-marginal-crfspr-1.pdf}
+\caption{\label{fig:fig-Dpos-marginal-crfspr}Positive model marginal effects from the final model.}
+\end{figure}
+
+\end{document}
