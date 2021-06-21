@@ -4,6 +4,6 @@
 
 
 ```{r, results = "asis"}
-files_intro <- dir('./indices', pattern = get(paste0("'*", model.area,".*\\.md'")), full.names = TRUE)
+files_intro <- dir("./indices", pattern = paste0("*", model.area,".md$"), full.names = TRUE)
 ignore <- mapply(read_child, files_intro)
 ```

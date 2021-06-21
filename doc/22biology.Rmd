@@ -63,7 +63,7 @@ is the asymptotic length, were explore by species and sex.
 
 Uncertainty in ageing error was estimated using a collection of 357 `r spp` 
 otoliths with two age reads between the NWFSC (reader 1, B. Kamikawa) and the 
-SWFSC (reader 2, D. Watters) (Figure \@ref(fig:fig-reader1reader2)).
+SWFSC (reader 2, D. Watters) (Figure \@ref(fig:reader1reader2)).
 Age-composition data used in the model were from a number of sources described 
 above. The same readers aged otoliths for both `r spp` stock assessmetnt models. 
 Age reader 1 read all of the otoliths for the southern model and both readers read 
@@ -78,8 +78,8 @@ best fitting model selected curvilinear bias for reader 1 and curvilinear standa
 deviation for both readers.  
 An analysis of ageing error removing one fish aged at 88 by reader 1 and 78 by reader 2 
 selected the the model with reader 2 as unbiased and curvilinear standard deviation 
-(Figure \@ref(fig:fig-oldfish)). The reading of the oldest aged fish falls within the 95\% confidence 
-internal using this model (Figure \@ref(fig:fig-truereads)).  
+(Figure \@ref(fig:oldfish)). The reading of the oldest aged fish falls within the 95\% confidence 
+internal using this model (Figure \@ref(fig:truereads)).  
 The latter model was selected for use in the assessment. 
  
 

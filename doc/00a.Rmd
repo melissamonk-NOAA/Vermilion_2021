@@ -68,5 +68,36 @@ table_loc = paste0(getwd(), "/tables")
 
 model.area <- ifelse(params$model=="north", "NCA", "SCA")
 
+if(params$model=="north"){
+model$FleetNames_parsed <- c("commercial hook-and-line fishery",
+                           "commercial trawl fishery",
+                           "commercial net fishery",
+                           "recreational PC retained fishery",
+                           "recreational PC discard fishery",
+                           "recreational PR retained fishery",
+                           "recreational PR discard fishery",
+                           "Deb Wilson-Vandenberg onboard survey",
+                           "West coast groundfish bottomfish trawl survey",
+                           "recreational PC onboard survey",
+                           "Abrams thesis research survey",
+                           "SWFSC groundfish ecology survey",
+                           "California Collaborative Fisheries Research Project survey")
+} else {
+model$FleetNames_parsed <- c("commercial hook-and-line fishery",
+                           "commercial trawl fishery",
+                           "commercial net fishery",
+                           "recreational PC retained fishery",
+                           "recreational PC discard fishery",
+                           "recreational PR retained fishery",
+                           "recreational PR discard fishery",
+                           "NWFSC hook-and-line survey",
+                           "West Coast Groundfish Bottomfish Trawl Survey",
+                           "recreational PC onboard survey",
+                           "CDFW reserach (aka green binder)")
+}
+
+model$FleetNames_label <- stringr::str_replace_all(model$FleetNames, "_", "-")
+
+
 
 ```

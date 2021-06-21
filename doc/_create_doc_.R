@@ -1,7 +1,9 @@
 ##NORTHERN CA MODEL
-detach("package:sa4ss", unload = TRUE)
-remotes::install_github("nwfsc-assess/sa4ss")
+#detach("package:sa4ss", unload = TRUE)
+#remotes::install_github("nwfsc-assess/sa4ss")
 library(sa4ss)
+
+setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/")
 source("code/dir_recent.R")
 #setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")
 
@@ -68,6 +70,8 @@ sa4ss::read_model(
   save_loc = file.path(getwd(), "tex_tables"),
   verbose = TRUE)
 
+
+
 #South
 model.dir <- dir_recent(dir = dir.path[2], pattern = "Verm")
 base_loc <- paste0(model.dir)
@@ -91,6 +95,8 @@ sa4ss::read_model(
 #  file.remove("north.Rmd")
 #}
 system("taskkill /f /im Acrobat.exe")
+
+#NORTHERN MODEL
 set.model = "north"
 setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")
 #make northern model
@@ -100,10 +106,13 @@ bookdown::render_book("00a.Rmd", output_dir = getwd(), clean = FALSE,
 
 
 
+#SOUTHERN MODEL
 set.model = "south"
+setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")
 #make southern model 
 bookdown::render_book("00a.Rmd", output_dir = getwd(), clean = FALSE, 
-                      config_file = "_bookdown_south.yml"))
+                      config_file = "_bookdown_south.yml",
+                      params = list(model = set.model))
 setwd("..")
 
 bookdown::preview_chapter("22biology.Rmd")
