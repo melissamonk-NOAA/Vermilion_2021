@@ -1,0 +1,17 @@
+\clearpage
+# Figures
+
+
+
+
+```{r figurefiles, results = "asis"}
+files_figures <- dir('.', pattern = '^6[2-9][a-z]*\\.Rmd', full.names = TRUE)
+ignore <- mapply(sa4ss::read_child, files_figures)
+```
+
+
+
+
+\newpage
+
+

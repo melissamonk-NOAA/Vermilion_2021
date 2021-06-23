@@ -1,0 +1,23 @@
+<!-- ====================================================================== --> 
+<!-- ******************* Data Used in the Model *************************** --> 
+<!-- ====================================================================== --> 
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+filein = file.path(base_loc, "plots", "data_plot2.png"), 
+caption = "Summary of data sources used in the base model",
+label = 'data-plot')
+```	
+
+
+<!-- ====================================================================== -->  
+<!-- ****************** Catches Used in the Model ************************* --> 
+<!-- ====================================================================== -->  
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(base_loc, "plots", "catch2 landings stacked.png"), 
+caption = "Catches by fleet used in the base model",
+label = 'catch')
+```	

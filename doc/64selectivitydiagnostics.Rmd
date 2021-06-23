@@ -1,0 +1,75 @@
+
+
+
+<!-- ====================================================================== -->
+<!-- *********************    Selectivity            ********************** --> 
+<!-- ====================================================================== -->
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+filein = file.path(paste0(base_loc, "/plots"), "sel01_multiple_fleets_length1.png"), 
+caption = "Selectivity at length by fleet",
+label = 'selexlengthall')
+```
+
+
+
+```{r, results = 'asis}
+sa4ss::add_figure(
+  filein = file.path(fig_loc, "sel02_multiple_fleets_age2.png"),
+  caption = "Selectivity at age derived from selectivity at length for multiple fleets",
+  label = 'selexageall'
+)
+```
+
+<!--time varying selectivity-->
+```{r, results='asis'}
+plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
+len_fit = plot_info[which(plot_info$category == "Sel"), ]
+plot.vec = grep("timevary_surf", len_fit$label)
+filein = file.path(mod_loc, "plots")
+for (a in plot.vec){
+	cap = len_fit$caption[a]
+	lab = len_fit$label[a]
+	add_figure(filein = file.path(filein, len_fit$file[a]), 
+			   caption = cap, 
+			   label = lab)
+}
+```
+
+
+<!--selectivity for fleets that are not mirrored-->
+
+```{r, messages = FALSE, warnings = FALSE} 
+#get the fleet info for fleets that have estimated selectivity
+selex_params <- data.frame(model$parameters$Label[grep("DblN", model$parameters$Label)])
+colnames(selex_params) = "A"
+
+selex_params <- selex_params %>%
+  mutate(fleet_ID = substr(A, nchar(A)-2+1, nchar(A)-1)) %>%
+  dplyr::select(fleet_ID) %>%
+  unique
+selex_fleets = left_join(selex_params, fleet_info)
+selex_fleets$fleet_ID = as.numeric(selex_fleets$fleet_ID)
+```
+
+```{r, results='asis'}
+for (i in selex_fleets$fleet_ID) {
+  add_figure(
+    filein = dir(paste0(base_loc, "/plots"), 
+                 pattern = paste0("sel09_len_flt",selex_fleets$fleet_ID[i],"sex1.png$"), full.names = TRUE),
+    caption = paste0("Female ending year selectivity for the ", selex_fleets$FleetNames_parsed[i]),
+    label = paste0("endyr-selex-", selex_fleets$FleetNames_label[i]),
+    width = 50,
+    height = 50
+  )
+  
+}
+```
+
+
+
+
+<!-- ======================================================================= -->
+<!-- ********************* Model Diagnostics ******************************* --> 
+<!-- ======================================================================= -->

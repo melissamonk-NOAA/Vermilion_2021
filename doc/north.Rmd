@@ -437,15 +437,15 @@ label = 'catch')
 ```{r, results = 'asis'}
 #add in length comp plots with captions and labels
 #fleets with length
-#Fleet 7 rec_pc_discard doesn't have lengths in either model
-fleets_w_lencomp <- c(1:6, 8:9, 11:max(model$nfleets))
 
-for (i in fleets_w_lencomp) {
+for (i in unique(model$len_comp_fit_table$Fleet)) {
   add_figure(
     filein = dir(paste0(base_loc, "/plots"), 
                  pattern = paste0("comp_lendat_bubflt", i, "mkt0.*\\.png$"), full.names = TRUE),
     caption = paste0("Length composition data from the ", model$FleetNames_parsed[i]),
-    label = paste0("len-data-", model$FleetNames_label[i])
+    label = paste0("len-data-", model$FleetNames_label[i]),
+    width = 50,
+    height = 50
   )
 
    add_figure(
@@ -454,7 +454,9 @@ for (i in fleets_w_lencomp) {
                                   model$FleetNames[i], ".png$"), full.names = TRUE),
     caption = paste0("Mean length for the ", 
                      model$FleetNames_parsed[i], " with 95 percent confidence intervals"),
-    label = paste0('mean-com-len-data-', model$FleetNames_label[i])
+    label = paste0('mean-com-len-data-', model$FleetNames_label[i]),
+    width = 50,
+    height = 50
   )
 
 }
@@ -514,16 +516,18 @@ label = 'selex')
 #add in length comp plots with captions and labels
 #fleets with length
 #Fleet 7 rec_pc_discard doesn't have lengths in either model
-fleets_w_lencomp <- c(1:6, 8:9, 11:max(model$nfleets))
+unique(model$len_comp_fit_table$Fleet)
 
-for (i in fleets_w_lencomp) {
+for (i in unique(model$len_comp_fit_table$Fleet)) {
   add_figure(
     filein = dir(paste0(base_loc, "/plots"), 
                  pattern = paste0("comp_lenfit_residsflt", i, "mkt0.*\\.png$"), full.names = TRUE),
     caption = paste0("Pearson residuals for the ", model$FleetNames_parsed[i], ". Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
                      are negative residuals (observed < expected)"),
-    label = paste0("len-pearson-", model$FleetNames_label[i])
+    label = paste0("len-pearson-", model$FleetNames_label[i]),
+    width = 50,
+    height = 50
   )
 
    add_figure(
@@ -533,7 +537,9 @@ for (i in fleets_w_lencomp) {
     caption = paste0("Mean lengths for the ", 
                      model$FleetNames_parsed[i], " with 95 percent confidence 
                      intervals based on current samples sizes"),
-    label = paste0('mean-len-fit-', model$FleetNames_label[i])
+    label = paste0('mean-len-fit-', model$FleetNames_label[i]),
+    width = 50,
+    height = 50
   )
 
 }

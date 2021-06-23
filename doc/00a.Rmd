@@ -3,7 +3,7 @@ geometry: margin=1in
 month: "`r format(Sys.Date(), '%B')`"
 year: "`r format(Sys.Date(), '%Y')`"
 params:
-    model: 2
+    model: "south"
 preamble: |
 output:
   sa4ss::techreport_pdf:
@@ -97,6 +97,9 @@ model$FleetNames_parsed <- c("commercial hook-and-line fishery",
 }
 
 model$FleetNames_label <- stringr::str_replace_all(model$FleetNames, "_", "-")
+
+fleet_info = data.frame(cbind(model$fleet_ID, model$FleetNames, model$FleetNames_label, model$FleetNames_parsed))
+colnames(fleet_info) = c("fleet_ID", "FleetNames", "FleetNames_label", "FleetNames_parsed")
 
 
 

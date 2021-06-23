@@ -1,9 +1,9 @@
-# Introduction
 
-## Basic Information
-`r executive[["stock"]]`
 
 ##Basic Information and Life History
+
+
+
 
 *Population Structure and Complex Assessment Considerations*
 
@@ -22,6 +22,8 @@ This research is aimed at providing information to support the successful stock 
 
 
 ##Map
+
+
 
 
 ##Ecosystem Considerations

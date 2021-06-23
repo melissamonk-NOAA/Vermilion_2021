@@ -354,49 +354,49 @@ The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessmen
 
 
 
-![Length composition data from the commercial hook-and-line fishery.\label{fig:len-data-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt1mkt0.png){width=100% height=100% alt="Length composition data from the commercial hook-and-line fishery."}
+![Length composition data from the commercial hook-and-line fishery.\label{fig:len-data-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt1mkt0.png){width=50% height=50% alt="Length composition data from the commercial hook-and-line fishery."}
 
-![Mean length for the commercial hook-and-line fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_COM_HKL.png){width=100% height=100% alt="Mean length for the commercial hook-and-line fishery with 95 percent confidence intervals."}
+![Mean length for the commercial hook-and-line fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_COM_HKL.png){width=50% height=50% alt="Mean length for the commercial hook-and-line fishery with 95 percent confidence intervals."}
 
-![Length composition data from the commercial trawl fishery.\label{fig:len-data-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt2mkt0.png){width=100% height=100% alt="Length composition data from the commercial trawl fishery."}
+![Length composition data from the commercial trawl fishery.\label{fig:len-data-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt2mkt0.png){width=50% height=50% alt="Length composition data from the commercial trawl fishery."}
 
-![Mean length for the commercial trawl fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_COM_TWL.png){width=100% height=100% alt="Mean length for the commercial trawl fishery with 95 percent confidence intervals."}
+![Mean length for the commercial trawl fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_COM_TWL.png){width=50% height=50% alt="Mean length for the commercial trawl fishery with 95 percent confidence intervals."}
 
-![Length composition data from the commercial net fishery.\label{fig:len-data-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt3mkt0.png){width=100% height=100% alt="Length composition data from the commercial net fishery."}
+![Length composition data from the commercial net fishery.\label{fig:len-data-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt3mkt0.png){width=50% height=50% alt="Length composition data from the commercial net fishery."}
 
-![Mean length for the commercial net fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_COM_NET.png){width=100% height=100% alt="Mean length for the commercial net fishery with 95 percent confidence intervals."}
+![Mean length for the commercial net fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_COM_NET.png){width=50% height=50% alt="Mean length for the commercial net fishery with 95 percent confidence intervals."}
 
-![Length composition data from the recreational PC retained fishery.\label{fig:len-data-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt4mkt0_page2.png){width=100% height=100% alt="Length composition data from the recreational PC retained fishery."}
+![Length composition data from the recreational PC retained fishery.\label{fig:len-data-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt4mkt0_page2.png){width=50% height=50% alt="Length composition data from the recreational PC retained fishery."}
 
-![Mean length for the recreational PC retained fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_REC_PC.png){width=100% height=100% alt="Mean length for the recreational PC retained fishery with 95 percent confidence intervals."}
+![Mean length for the recreational PC retained fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_REC_PC.png){width=50% height=50% alt="Mean length for the recreational PC retained fishery with 95 percent confidence intervals."}
 
-![Length composition data from the recreational PC discard fishery.\label{fig:len-data-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt5mkt0.png){width=100% height=100% alt="Length composition data from the recreational PC discard fishery."}
+![Length composition data from the recreational PC discard fishery.\label{fig:len-data-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt5mkt0.png){width=50% height=50% alt="Length composition data from the recreational PC discard fishery."}
 
-![Mean length for the recreational PC discard fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_REC_PC_DIS.png){width=100% height=100% alt="Mean length for the recreational PC discard fishery with 95 percent confidence intervals."}
+![Mean length for the recreational PC discard fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_REC_PC_DIS.png){width=50% height=50% alt="Mean length for the recreational PC discard fishery with 95 percent confidence intervals."}
 
-![Length composition data from the recreational PR retained fishery.\label{fig:len-data-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt6mkt0_page2.png){width=100% height=100% alt="Length composition data from the recreational PR retained fishery."}
+![Length composition data from the recreational PR retained fishery.\label{fig:len-data-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt6mkt0_page2.png){width=50% height=50% alt="Length composition data from the recreational PR retained fishery."}
 
-![Mean length for the recreational PR retained fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_REC_PR.png){width=100% height=100% alt="Mean length for the recreational PR retained fishery with 95 percent confidence intervals."}
+![Mean length for the recreational PR retained fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_REC_PR.png){width=50% height=50% alt="Mean length for the recreational PR retained fishery with 95 percent confidence intervals."}
 
-![Length composition data from the Deb Wilson-Vandenberg onboard survey.\label{fig:len-data-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt8mkt0.png){width=100% height=100% alt="Length composition data from the Deb Wilson-Vandenberg onboard survey."}
+![Length composition data from the Deb Wilson-Vandenberg onboard survey.\label{fig:len-data-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt8mkt0.png){width=50% height=50% alt="Length composition data from the Deb Wilson-Vandenberg onboard survey."}
 
-![Mean length for the Deb Wilson-Vandenberg onboard survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_DWV_ONBOARD.png){width=100% height=100% alt="Mean length for the Deb Wilson-Vandenberg onboard survey with 95 percent confidence intervals."}
+![Mean length for the Deb Wilson-Vandenberg onboard survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_DWV_ONBOARD.png){width=50% height=50% alt="Mean length for the Deb Wilson-Vandenberg onboard survey with 95 percent confidence intervals."}
 
-![Length composition data from the West coast groundfish bottomfish trawl survey.\label{fig:len-data-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt9mkt0.png){width=100% height=100% alt="Length composition data from the West coast groundfish bottomfish trawl survey."}
+![Length composition data from the West coast groundfish bottomfish trawl survey.\label{fig:len-data-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt9mkt0.png){width=50% height=50% alt="Length composition data from the West coast groundfish bottomfish trawl survey."}
 
-![Mean length for the West coast groundfish bottomfish trawl survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_NWFSC_TWL.png){width=100% height=100% alt="Mean length for the West coast groundfish bottomfish trawl survey with 95 percent confidence intervals."}
+![Mean length for the West coast groundfish bottomfish trawl survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_NWFSC_TWL.png){width=50% height=50% alt="Mean length for the West coast groundfish bottomfish trawl survey with 95 percent confidence intervals."}
 
-![Length composition data from the Abrams thesis research survey.\label{fig:len-data-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt11mkt0.png){width=100% height=100% alt="Length composition data from the Abrams thesis research survey."}
+![Length composition data from the Abrams thesis research survey.\label{fig:len-data-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt11mkt0.png){width=50% height=50% alt="Length composition data from the Abrams thesis research survey."}
 
-![Mean length for the Abrams thesis research survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_ABRAMS_RESEARCH.png){width=100% height=100% alt="Mean length for the Abrams thesis research survey with 95 percent confidence intervals."}
+![Mean length for the Abrams thesis research survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_ABRAMS_RESEARCH.png){width=50% height=50% alt="Mean length for the Abrams thesis research survey with 95 percent confidence intervals."}
 
-![Length composition data from the SWFSC groundfish ecology survey.\label{fig:len-data-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt12mkt0.png){width=100% height=100% alt="Length composition data from the SWFSC groundfish ecology survey."}
+![Length composition data from the SWFSC groundfish ecology survey.\label{fig:len-data-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt12mkt0.png){width=50% height=50% alt="Length composition data from the SWFSC groundfish ecology survey."}
 
-![Mean length for the SWFSC groundfish ecology survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_SWFSC_GF_ECOL.png){width=100% height=100% alt="Mean length for the SWFSC groundfish ecology survey with 95 percent confidence intervals."}
+![Mean length for the SWFSC groundfish ecology survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_SWFSC_GF_ECOL.png){width=50% height=50% alt="Mean length for the SWFSC groundfish ecology survey with 95 percent confidence intervals."}
 
-![Length composition data from the California Collaborative Fisheries Research Project survey.\label{fig:len-data-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt13mkt0.png){width=100% height=100% alt="Length composition data from the California Collaborative Fisheries Research Project survey."}
+![Length composition data from the California Collaborative Fisheries Research Project survey.\label{fig:len-data-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_bubflt13mkt0.png){width=50% height=50% alt="Length composition data from the California Collaborative Fisheries Research Project survey."}
 
-![Mean length for the California Collaborative Fisheries Research Project survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_CCFRP.png){width=100% height=100% alt="Mean length for the California Collaborative Fisheries Research Project survey with 95 percent confidence intervals."}
+![Mean length for the California Collaborative Fisheries Research Project survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lendat_data_weighting_TA1.8_CCFRP.png){width=50% height=50% alt="Mean length for the California Collaborative Fisheries Research Project survey with 95 percent confidence intervals."}
 <!-- ======================================================================= -->
 <!-- *************************     Biology     ***************************** --> 
 <!-- ======================================================================= -->
@@ -435,115 +435,116 @@ bias for reader 1 and curvilinear standard deviation for both readers.."}
 <!-- ********************** Fit to the Length Data ************************* --> 
 <!-- ======================================================================= -->
 
+ [1]  1  2  3  4  5  6  8  9 11 12 13
 
 ![Pearson residuals for the commercial hook-and-line fishery. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
-                     are negative residuals (observed < expected).\label{fig:len-pearson-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt1mkt0.png){width=100% height=100% alt="Pearson residuals for the commercial hook-and-line fishery. Closed 
+                     are negative residuals (observed < expected).\label{fig:len-pearson-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt1mkt0.png){width=50% height=50% alt="Pearson residuals for the commercial hook-and-line fishery. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
                      are negative residuals (observed < expected)."}
 
 ![Mean lengths for the commercial hook-and-line fishery with 95 percent confidence 
-                     intervals based on current samples sizes.\label{fig:mean-len-fit-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_COM_HKL.png){width=100% height=100% alt="Mean lengths for the commercial hook-and-line fishery with 95 percent confidence 
+                     intervals based on current samples sizes.\label{fig:mean-len-fit-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_COM_HKL.png){width=50% height=50% alt="Mean lengths for the commercial hook-and-line fishery with 95 percent confidence 
                      intervals based on current samples sizes."}
 
 ![Pearson residuals for the commercial trawl fishery. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
-                     are negative residuals (observed < expected).\label{fig:len-pearson-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt2mkt0.png){width=100% height=100% alt="Pearson residuals for the commercial trawl fishery. Closed 
+                     are negative residuals (observed < expected).\label{fig:len-pearson-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt2mkt0.png){width=50% height=50% alt="Pearson residuals for the commercial trawl fishery. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
                      are negative residuals (observed < expected)."}
 
 ![Mean lengths for the commercial trawl fishery with 95 percent confidence 
-                     intervals based on current samples sizes.\label{fig:mean-len-fit-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_COM_TWL.png){width=100% height=100% alt="Mean lengths for the commercial trawl fishery with 95 percent confidence 
+                     intervals based on current samples sizes.\label{fig:mean-len-fit-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_COM_TWL.png){width=50% height=50% alt="Mean lengths for the commercial trawl fishery with 95 percent confidence 
                      intervals based on current samples sizes."}
 
 ![Pearson residuals for the commercial net fishery. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
-                     are negative residuals (observed < expected).\label{fig:len-pearson-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt3mkt0.png){width=100% height=100% alt="Pearson residuals for the commercial net fishery. Closed 
+                     are negative residuals (observed < expected).\label{fig:len-pearson-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt3mkt0.png){width=50% height=50% alt="Pearson residuals for the commercial net fishery. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
                      are negative residuals (observed < expected)."}
 
 ![Mean lengths for the commercial net fishery with 95 percent confidence 
-                     intervals based on current samples sizes.\label{fig:mean-len-fit-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_COM_NET.png){width=100% height=100% alt="Mean lengths for the commercial net fishery with 95 percent confidence 
+                     intervals based on current samples sizes.\label{fig:mean-len-fit-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_COM_NET.png){width=50% height=50% alt="Mean lengths for the commercial net fishery with 95 percent confidence 
                      intervals based on current samples sizes."}
 
 ![Pearson residuals for the recreational PC retained fishery. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
-                     are negative residuals (observed < expected).\label{fig:len-pearson-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt4mkt0_page2.png){width=100% height=100% alt="Pearson residuals for the recreational PC retained fishery. Closed 
+                     are negative residuals (observed < expected).\label{fig:len-pearson-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt4mkt0_page2.png){width=50% height=50% alt="Pearson residuals for the recreational PC retained fishery. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
                      are negative residuals (observed < expected)."}
 
 ![Mean lengths for the recreational PC retained fishery with 95 percent confidence 
-                     intervals based on current samples sizes.\label{fig:mean-len-fit-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_REC_PC.png){width=100% height=100% alt="Mean lengths for the recreational PC retained fishery with 95 percent confidence 
+                     intervals based on current samples sizes.\label{fig:mean-len-fit-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_REC_PC.png){width=50% height=50% alt="Mean lengths for the recreational PC retained fishery with 95 percent confidence 
                      intervals based on current samples sizes."}
 
 ![Pearson residuals for the recreational PC discard fishery. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
-                     are negative residuals (observed < expected).\label{fig:len-pearson-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt5mkt0.png){width=100% height=100% alt="Pearson residuals for the recreational PC discard fishery. Closed 
+                     are negative residuals (observed < expected).\label{fig:len-pearson-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt5mkt0.png){width=50% height=50% alt="Pearson residuals for the recreational PC discard fishery. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
                      are negative residuals (observed < expected)."}
 
 ![Mean lengths for the recreational PC discard fishery with 95 percent confidence 
-                     intervals based on current samples sizes.\label{fig:mean-len-fit-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_REC_PC_DIS.png){width=100% height=100% alt="Mean lengths for the recreational PC discard fishery with 95 percent confidence 
+                     intervals based on current samples sizes.\label{fig:mean-len-fit-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_REC_PC_DIS.png){width=50% height=50% alt="Mean lengths for the recreational PC discard fishery with 95 percent confidence 
                      intervals based on current samples sizes."}
 
 ![Pearson residuals for the recreational PR retained fishery. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
-                     are negative residuals (observed < expected).\label{fig:len-pearson-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt6mkt0_page2.png){width=100% height=100% alt="Pearson residuals for the recreational PR retained fishery. Closed 
+                     are negative residuals (observed < expected).\label{fig:len-pearson-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt6mkt0_page2.png){width=50% height=50% alt="Pearson residuals for the recreational PR retained fishery. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
                      are negative residuals (observed < expected)."}
 
 ![Mean lengths for the recreational PR retained fishery with 95 percent confidence 
-                     intervals based on current samples sizes.\label{fig:mean-len-fit-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_REC_PR.png){width=100% height=100% alt="Mean lengths for the recreational PR retained fishery with 95 percent confidence 
+                     intervals based on current samples sizes.\label{fig:mean-len-fit-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_REC_PR.png){width=50% height=50% alt="Mean lengths for the recreational PR retained fishery with 95 percent confidence 
                      intervals based on current samples sizes."}
 
 ![Pearson residuals for the Deb Wilson-Vandenberg onboard survey. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
-                     are negative residuals (observed < expected).\label{fig:len-pearson-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt8mkt0.png){width=100% height=100% alt="Pearson residuals for the Deb Wilson-Vandenberg onboard survey. Closed 
+                     are negative residuals (observed < expected).\label{fig:len-pearson-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt8mkt0.png){width=50% height=50% alt="Pearson residuals for the Deb Wilson-Vandenberg onboard survey. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
                      are negative residuals (observed < expected)."}
 
 ![Mean lengths for the Deb Wilson-Vandenberg onboard survey with 95 percent confidence 
-                     intervals based on current samples sizes.\label{fig:mean-len-fit-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_DWV_ONBOARD.png){width=100% height=100% alt="Mean lengths for the Deb Wilson-Vandenberg onboard survey with 95 percent confidence 
+                     intervals based on current samples sizes.\label{fig:mean-len-fit-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_DWV_ONBOARD.png){width=50% height=50% alt="Mean lengths for the Deb Wilson-Vandenberg onboard survey with 95 percent confidence 
                      intervals based on current samples sizes."}
 
 ![Pearson residuals for the West coast groundfish bottomfish trawl survey. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
-                     are negative residuals (observed < expected).\label{fig:len-pearson-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt9mkt0.png){width=100% height=100% alt="Pearson residuals for the West coast groundfish bottomfish trawl survey. Closed 
+                     are negative residuals (observed < expected).\label{fig:len-pearson-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt9mkt0.png){width=50% height=50% alt="Pearson residuals for the West coast groundfish bottomfish trawl survey. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
                      are negative residuals (observed < expected)."}
 
 ![Mean lengths for the West coast groundfish bottomfish trawl survey with 95 percent confidence 
-                     intervals based on current samples sizes.\label{fig:mean-len-fit-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_NWFSC_TWL.png){width=100% height=100% alt="Mean lengths for the West coast groundfish bottomfish trawl survey with 95 percent confidence 
+                     intervals based on current samples sizes.\label{fig:mean-len-fit-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_NWFSC_TWL.png){width=50% height=50% alt="Mean lengths for the West coast groundfish bottomfish trawl survey with 95 percent confidence 
                      intervals based on current samples sizes."}
 
 ![Pearson residuals for the Abrams thesis research survey. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
-                     are negative residuals (observed < expected).\label{fig:len-pearson-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt11mkt0.png){width=100% height=100% alt="Pearson residuals for the Abrams thesis research survey. Closed 
+                     are negative residuals (observed < expected).\label{fig:len-pearson-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt11mkt0.png){width=50% height=50% alt="Pearson residuals for the Abrams thesis research survey. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
                      are negative residuals (observed < expected)."}
 
 ![Mean lengths for the Abrams thesis research survey with 95 percent confidence 
-                     intervals based on current samples sizes.\label{fig:mean-len-fit-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_ABRAMS_RESEARCH.png){width=100% height=100% alt="Mean lengths for the Abrams thesis research survey with 95 percent confidence 
+                     intervals based on current samples sizes.\label{fig:mean-len-fit-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_ABRAMS_RESEARCH.png){width=50% height=50% alt="Mean lengths for the Abrams thesis research survey with 95 percent confidence 
                      intervals based on current samples sizes."}
 
 ![Pearson residuals for the SWFSC groundfish ecology survey. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
-                     are negative residuals (observed < expected).\label{fig:len-pearson-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt12mkt0.png){width=100% height=100% alt="Pearson residuals for the SWFSC groundfish ecology survey. Closed 
+                     are negative residuals (observed < expected).\label{fig:len-pearson-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt12mkt0.png){width=50% height=50% alt="Pearson residuals for the SWFSC groundfish ecology survey. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
                      are negative residuals (observed < expected)."}
 
 ![Mean lengths for the SWFSC groundfish ecology survey with 95 percent confidence 
-                     intervals based on current samples sizes.\label{fig:mean-len-fit-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_SWFSC_GF_ECOL.png){width=100% height=100% alt="Mean lengths for the SWFSC groundfish ecology survey with 95 percent confidence 
+                     intervals based on current samples sizes.\label{fig:mean-len-fit-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_SWFSC_GF_ECOL.png){width=50% height=50% alt="Mean lengths for the SWFSC groundfish ecology survey with 95 percent confidence 
                      intervals based on current samples sizes."}
 
 ![Pearson residuals for the California Collaborative Fisheries Research Project survey. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
-                     are negative residuals (observed < expected).\label{fig:len-pearson-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt13mkt0.png){width=100% height=100% alt="Pearson residuals for the California Collaborative Fisheries Research Project survey. Closed 
+                     are negative residuals (observed < expected).\label{fig:len-pearson-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_residsflt13mkt0.png){width=50% height=50% alt="Pearson residuals for the California Collaborative Fisheries Research Project survey. Closed 
                      bubbles are positive residuals (observed > expected) and open bubbles 
                      are negative residuals (observed < expected)."}
 
 ![Mean lengths for the California Collaborative Fisheries Research Project survey with 95 percent confidence 
-                     intervals based on current samples sizes.\label{fig:mean-len-fit-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_CCFRP.png){width=100% height=100% alt="Mean lengths for the California Collaborative Fisheries Research Project survey with 95 percent confidence 
+                     intervals based on current samples sizes.\label{fig:mean-len-fit-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_060_time-varying_PC_and_PR/plots/comp_lenfit_data_weighting_TA1.8_CCFRP.png){width=50% height=50% alt="Mean lengths for the California Collaborative Fisheries Research Project survey with 95 percent confidence 
                      intervals based on current samples sizes."}
 
 

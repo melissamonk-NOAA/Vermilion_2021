@@ -1,0 +1,82 @@
+
+<!-- ======================================================================= -->
+<!-- *************************     Biology     ***************************** --> 
+<!-- ======================================================================= -->
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+filein = file.path(fig_loc, "oldfish.jpg"), 
+caption = "Photograph of the *oldest* aged fish used in the assessment with annuli marked by B. Kamikawa (NWFSC).",
+label = 'oldfish')
+```
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+filein = file.path(fig_loc, "Reader 1 vs Reader 2.png"), 
+caption = "Aging precision between initial and blind double reads for vermilion. 
+Numbers in the bubbles are the sample sizes of otoliths cross-read.",
+label = 'reader1reader2')
+```	
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+filein = file.path(fig_loc, "True vs Reads (by reader).png"), 
+caption = "True versus predicted age for two current age readers at the NWFSC 
+from the ageing error software with unbiased reads for reader 1 and curvilinear 
+bias for reader 1 and curvilinear standard deviation for both readers.",
+label = 'truereads')
+```	
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+filein = file.path(fig_loc, "numbers10_ageerror_matrix_1.png"),
+caption = "Distribution of observed age at true age for ageing error type 1",
+label = 'ageerror')
+```
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = file.path(fig_loc ,"bio1_sizeatage.png"),
+  caption = "Length at age in the beginning of the year (or season) in the ending year of the model. Shaded area indicates 95% distribution of length at age around estimated growth curve"
+    label = 'fittedgrowth')
+```
+
+
+
+```{r, results = 'asis}
+sa4ss::add_figure(
+  filein = file.path(fig_loc, "bio5_weightatsize.png"),
+  caption = "Weight-length relationship",
+  label = 'weightlength'
+)
+```
+
+
+```{r, results = 'asis}
+sa4ss::add_figure(
+  filein = file.path(fig_loc, "bio6_maturity.png"),
+  caption = "Maturity at length",
+  label = 'maturity'
+)
+```
+
+
+```{r, results = 'asis}
+sa4ss::add_figure(
+  filein = file.path(fig_loc, "bio8_fecundity_wt.png"),
+  caption = "Fecundity as a function of weight",
+  label = 'fecundity'
+)
+```
+
+
+```{r, results = 'asis}
+sa4ss::add_figure(
+  filein = file.path(fig_loc, "bio11_spawningoutput_age.png"),
+  caption = "Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age",
+  label = 'spawningoutputage'
+)
+```

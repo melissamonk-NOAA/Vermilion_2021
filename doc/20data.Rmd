@@ -1,0 +1,24 @@
+# Data
+
+
+Descriptions of each data source included in the model (Figure \ref{fig:data-plot})
+and sources that were explored but not included
+are provided below.
+
+## Fishery-Dependent data
+
+
+
+
+
+
+
+## Fishery-Independent data
+
+
+
+
+
+
+
+### Data sources considered, but not used

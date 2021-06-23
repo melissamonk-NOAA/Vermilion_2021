@@ -1,0 +1,73 @@
+
+<!-- ======================================================================= -->
+<!-- ************************** Recruitment ******************************** --> 
+<!-- ======================================================================= -->
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(base_loc, "plots", "ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png"), 
+caption = "Age-0 recruits (1,000s) with ~95% asymptotic intervals",
+label = 'recruits')
+```
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(base_loc, "plots", "recdevs2_withbars.png"), 
+caption = "Estimated time series of recruitment deviations",
+label = 'rec-devs')
+```
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(base_loc, "plots", "SR_curve2.png"), 
+caption = "Stock-recruit curve with labels on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years",
+label = 'bh-curve')
+```
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(base_loc, "plots", "SR_resids.png"), 
+caption = "Deviations around the stock-recruit curve. Labels are on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years",
+label = 'bh-resids')
+```
+
+<!-- ======================================================================= -->
+<!-- *********************** Reference Points ****************************** --> 
+<!-- ======================================================================= -->
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+filein = file.path(base_loc, "plots", "SPR2_minusSPRseries.png"), 
+caption = "Estimated 1 - relative spawning ratio (SPR) by year",
+label = '1-spr')
+```
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(base_loc, "plots", "SPR4_phase.png"), 
+caption = "Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point show the 95 percent intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95 percent region which accounts for the estimated correlations between the biomass ratio and SPR ratio",
+label = 'phase')
+```
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(base_loc, "plots", "yield2_yield_curve_with_refpoints.png"), 
+caption = "Equilibrium yield curve for the base case model. Values are based on the 2020
+fishery selectivity and with steepness fixed at 0.72",
+label = 'yield')
+```
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(base_loc, "plots", "yield3_surplus_production.png"), 
+caption = "Surplus production vs. biomass plot",
+label = 'yield')
+```

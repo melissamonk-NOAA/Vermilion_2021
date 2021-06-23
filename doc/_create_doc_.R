@@ -43,13 +43,13 @@ source("code/dir_recent.R")
 # )
 
 #include files with
-```{r, child = "thisismyresultingfile.md"}
-```
-
-```{r, results = "asis"}
-files_intro <- dir('.', pattern = '2[1-9].*\\.[rR]md', full.names = TRUE)
-ignore <- mapply(read_child, files_intro)
-```
+# ```{r, child = "thisismyresultingfile.md"}
+# ```
+# 
+# ```{r, results = "asis"}
+# files_intro <- dir('.', pattern = '2[1-9].*\\.[rR]md', full.names = TRUE)
+# ignore <- mapply(read_child, files_intro)
+# ```
 
 #-------------------------------------------------------------------------------
 #Run each time the base model changes
@@ -66,7 +66,7 @@ setwd(base_loc)
 #Create a model Rdata object if it hasn't been done
 sa4ss::read_model(
   mod_loc = base_loc,
-  create_plots = FALSE, 
+  create_plots = TRUE, 
   save_loc = file.path(getwd(), "tex_tables"),
   verbose = TRUE)
 

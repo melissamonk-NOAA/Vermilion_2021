@@ -1,0 +1,20 @@
+<!-- ======================================================================= -->
+<!-- **************************** Time Series ****************************** --> 
+<!-- ======================================================================= -->
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(base_loc, "plots", "ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png"), 
+caption = "Estimated time series of spawning output",
+label = 'ssb')
+```
+
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(base_loc, "plots", "ts9_Relative_spawning_output_intervals.png"), 
+caption = "Estimated time series of relative spawning output",
+label = 'depl')
+```
+
