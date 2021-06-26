@@ -31,7 +31,7 @@ label = 'truereads')
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-filein = file.path(fig_loc, "numbers10_ageerror_matrix_1.png"),
+filein = file.path(base_loc,"plots", "numbers10_ageerror_matrix_1.png"),
 caption = "Distribution of observed age at true age for ageing error type 1",
 label = 'ageerror')
 ```
@@ -39,43 +39,43 @@ label = 'ageerror')
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = file.path(fig_loc ,"bio1_sizeatage.png"),
-  caption = "Length at age in the beginning of the year (or season) in the ending year of the model. Shaded area indicates 95% distribution of length at age around estimated growth curve"
+  filein = file.path(base_loc,"plots", "bio1_sizeatage.png"),
+  caption = "Length at age in the beginning of the year (or season) in the ending year of the model. Shaded area indicates 95% distribution of length at age around estimated growth curve",
     label = 'fittedgrowth')
 ```
 
 
 
-```{r, results = 'asis}
+```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = file.path(fig_loc, "bio5_weightatsize.png"),
+  filein = file.path(base_loc,"plots", "bio5_weightatsize.png"),
   caption = "Weight-length relationship",
   label = 'weightlength'
 )
 ```
 
 
-```{r, results = 'asis}
+```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = file.path(fig_loc, "bio6_maturity.png"),
+  filein = file.path(base_loc,"plots", "bio6_maturity.png"),
   caption = "Maturity at length",
   label = 'maturity'
 )
 ```
 
 
-```{r, results = 'asis}
+```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = file.path(fig_loc, "bio8_fecundity_wt.png"),
+  filein = file.path(base_loc,"plots", "bio8_fecundity_wt.png"),
   caption = "Fecundity as a function of weight",
   label = 'fecundity'
 )
 ```
 
 
-```{r, results = 'asis}
+```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = file.path(fig_loc, "bio11_spawningoutput_age.png"),
+  filein = file.path(base_loc,"plots", "bio11_spawningoutput_age.png"),
   caption = "Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age",
   label = 'spawningoutputage'
 )

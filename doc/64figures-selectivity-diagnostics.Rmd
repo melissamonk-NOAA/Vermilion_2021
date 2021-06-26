@@ -5,39 +5,45 @@
 <!-- *********************    Selectivity            ********************** --> 
 <!-- ====================================================================== -->
 
+
+\FloatBarrier 
+
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-filein = file.path(paste0(base_loc, "/plots"), "sel01_multiple_fleets_length1.png"), 
+filein = file.path(base_loc,"plots", "sel01_multiple_fleets_length1.png"), 
 caption = "Selectivity at length by fleet",
-label = 'selexlengthall')
+label = 'selex-length-all')
 ```
 
+\FloatBarrier 
 
-
-```{r, results = 'asis}
+```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = file.path(fig_loc, "sel02_multiple_fleets_age2.png"),
+  filein = file.path(base_loc,"plots", "sel02_multiple_fleets_age1.png"),
   caption = "Selectivity at age derived from selectivity at length for multiple fleets",
-  label = 'selexageall'
+  label = 'selex-age-all'
 )
 ```
 
 <!--time varying selectivity-->
-```{r, results='asis'}
-plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
-len_fit = plot_info[which(plot_info$category == "Sel"), ]
-plot.vec = grep("timevary_surf", len_fit$label)
-filein = file.path(mod_loc, "plots")
-for (a in plot.vec){
-	cap = len_fit$caption[a]
-	lab = len_fit$label[a]
-	add_figure(filein = file.path(filein, len_fit$file[a]), 
+```{r, results ='asis'}
+plot_info = read.csv(file.path(base_loc,"plots", "plotinfotable_for_doc.csv"))
+selex_time = plot_info %>%
+  filter(grepl("sel03_len_timevary_surf", label)) %>%
+  filter(grepl("sex1", label))
+#plot.vec = grep("timevary_surf", selex_time$label)
+filein = file.path(base_loc, "plots")
+for (a in 1:length(selex_time$label)){
+	cap = selex_time$caption[a]
+	lab = selex_time$label[a]
+	add_figure(filein = file.path(filein, selex_time$file[a]), 
 			   caption = cap, 
 			   label = lab)
+
 }
 ```
 
-
+\FloatBarrier 
 <!--selectivity for fleets that are not mirrored-->
 
 ```{r, messages = FALSE, warnings = FALSE} 
@@ -48,27 +54,32 @@ colnames(selex_params) = "A"
 selex_params <- selex_params %>%
   mutate(fleet_ID = substr(A, nchar(A)-2+1, nchar(A)-1)) %>%
   dplyr::select(fleet_ID) %>%
+  filter(fleet_ID>0) %>%
   unique
 selex_fleets = left_join(selex_params, fleet_info)
 selex_fleets$fleet_ID = as.numeric(selex_fleets$fleet_ID)
 ```
 
+
+\FloatBarrier 
+
 ```{r, results='asis'}
+j <- 1
 for (i in selex_fleets$fleet_ID) {
-  add_figure(
+    add_figure(
     filein = dir(paste0(base_loc, "/plots"), 
-                 pattern = paste0("sel09_len_flt",selex_fleets$fleet_ID[i],"sex1.png$"), full.names = TRUE),
-    caption = paste0("Female ending year selectivity for the ", selex_fleets$FleetNames_parsed[i]),
-    label = paste0("endyr-selex-", selex_fleets$FleetNames_label[i]),
+                 pattern = paste0("sel09_len_flt",i,"sex1.png$"), full.names = TRUE),
+    caption = paste0("Female ending year selectivity for the ", selex_fleets$FleetNames_parsed[j]),
+    label = paste0("endyr-selex-", selex_fleets$FleetNames_label[j]),
     width = 50,
     height = 50
   )
-  
+  j<- j + 1
 }
 ```
 
 
-
+\FloatBarrier 
 
 <!-- ======================================================================= -->
 <!-- ********************* Model Diagnostics ******************************* --> 

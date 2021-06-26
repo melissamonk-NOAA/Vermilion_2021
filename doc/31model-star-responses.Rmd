@@ -1,5 +1,3 @@
-# Assessment Model
-
 ## Summary of Previous Assessments and Reviews
 
 ### History of Modeling Approaches
@@ -19,35 +17,7 @@ assessment was prepared, but not reviewed.
 None.
 
 
-
-```{r render-31, results = "asis"}
-sa4ss::read_child("31platformsummary.Rmd")
-```
-
-
-```{r render-32, results = "asis"}
-sa4ss::read_child("32previousassess.Rmd")
-```
-
-
-```{r render-33, results = "asis"}
-sa4ss::read_child("33priors.Rmd")
-```
-
-
-```{r render-34, results = "asis"}
-sa4ss::read_child("34structure.Rmd")
-```
-
-
-```{r render-35, results = "asis"}
-sa4ss::read_child("35results.Rmd")
-```
-
-
-```{r render-36, results = "asis"}
-sa4ss::read_child("36diagnostics.Rmd")
-```
+### Response to STAR Panel Requests (not required in draft)
 
 
 

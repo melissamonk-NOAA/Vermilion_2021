@@ -3,11 +3,11 @@
 <!-- ********************** Fit to the Length Data ************************* --> 
 <!-- ======================================================================= -->
 
-```{r, results = 'asis}
+```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = file.path(fig_loc, "comp_lenfit__aggregated_across_time.png"),
+  filein = file.path(base_loc,'plots', "comp_lenfit__aggregated_across_time.png"),
   caption = "Length comps, aggregated across time by fleet.
-Labels 'retained' and 'discard' indicate discarded or retained sampled for each fleet. Panels without this designation represent the whole catch.",
+Labels 'retained' and 'discard' indicate discarded or retained sampled for each fleet. Panels without this designation represent the whole catch",
   label = 'lenfits-all'
 )
 ```
@@ -20,13 +20,16 @@ Labels 'retained' and 'discard' indicate discarded or retained sampled for each 
 #Fleet 7 rec_pc_discard doesn't have lengths in either model
 
 for (i in unique(model$len_comp_fit_table$Fleet)) {
-  add_figure(
-    filein = dir(paste0(base_loc, "/plots"), pattern = paste0("comp_lenfit_residsflt", i, "mkt0.png$"), full.names = TRUE),
+
+   add_figure(
+    filein = dir(paste0(base_loc, "/plots"), pattern = paste0("comp_lenfit_residsflt", i), full.names = TRUE)[1],
     caption = paste0("Pearson residuals for the ", model$FleetNames_parsed[i], ". Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)"),
     label = paste0("len-pearson-", model$FleetNames_label[i]),
     width = 50,
     height = 50
   )
+  
+
 
    add_figure(
     filein = dir(paste0(base_loc, "/plots"), 
@@ -50,15 +53,22 @@ for (i in unique(model$len_comp_fit_table$Fleet)) {
 <!-- ======================================================================= -->
 
 ```{r, results='asis'}
-plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
-len_fit = plot_info[which(plot_info$category == "CompDat"), ]
-plot.vec = grep("comp_lendat_flt", len_fit$label)
-filein = file.path(mod_loc, "plots")
-for (a in plot.vec){
-	cap = len_fit$caption[a]
-	lab = len_fit$label[a]
-	add_figure(filein = file.path(filein, len_fit$file[a]), 
-			   caption = cap, 
-			   label = lab)
+sex.ratio.filein = list.files(path = paste0(base_loc, "/plots"), 
+                  pattern = glob2rx("^sexratio_len_flt*mkt0.png$"), 
+                  full.names = TRUE)
+
+for (i in 1:length(sex.ratio.filein)) {
+
+   add_figure(
+      filein = sex.ratio.filein[i],
+      caption = paste0("Sex ratios for length comps, whole catch",
+      fleet_info$FleetNames_parsed[fleet_info$fleet_ID==gsub(".*[flt]([^m]+)[m].*", "\\1", sex.ratio.filein[i])],". Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line"),
+    label = paste0("sexratio-", fleet_info$FleetNames_label[fleet_info$fleet_ID==gsub(".*[flt]([^m]+)[m].*", "\\1", sex.ratio.filein[i])]),
+    width = 50,
+    height = 50
+  )
 }
+
+
+
 ```

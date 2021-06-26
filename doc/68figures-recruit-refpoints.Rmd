@@ -43,7 +43,7 @@ label = 'bh-resids')
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(base_loc, "plots", "SPR2_minusSPRseries.png"), 
-caption = "Estimated 1 - relative spawning ratio (SPR) by year",
+caption = "Timeseries of SPR ratio: (1-SPR)/(1-SPR_50%)",
 label = '1-spr')
 ```
 

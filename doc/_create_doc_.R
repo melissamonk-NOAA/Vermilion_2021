@@ -80,7 +80,7 @@ setwd(base_loc)
 #Create a model Rdata object if it hasn't been done
 sa4ss::read_model(
   mod_loc = base_loc,
-  create_plots = FALSE, 
+  create_plots = TRUE, 
   save_loc = file.path(getwd(), "tex_tables"),
   verbose = TRUE)
 
@@ -94,6 +94,10 @@ sa4ss::read_model(
 #if(file.exists("north.Rmd")){
 #  file.remove("north.Rmd")
 #}
+library(sa4ss)
+
+setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/")
+source("code/dir_recent.R")
 system("taskkill /f /im Acrobat.exe")
 
 #NORTHERN MODEL
@@ -106,6 +110,9 @@ bookdown::render_book("00a.Rmd", output_dir = getwd(), clean = FALSE,
 
 
 
+
+
+
 #SOUTHERN MODEL
 set.model = "south"
 setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")
@@ -115,7 +122,7 @@ bookdown::render_book("00a.Rmd", output_dir = getwd(), clean = FALSE,
                       params = list(model = set.model))
 setwd("..")
 
-bookdown::preview_chapter("22biology.Rmd")
+bookdown::render_book("11introduction.Rmd")
 
 
 

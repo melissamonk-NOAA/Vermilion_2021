@@ -1,14 +1,128 @@
 ## Historical and Current Fishery Information
-Replace text.
+The hook-and-line fishery off California developed in the late 19th century 
+[@Love2002]. The rockfish trawl fishery was established in the early 1940s, when 
+the United States became involved in World War II and wartime shortage of red 
+meat created an increased demand for other sources of protein [@Alverson1964; 
+@Harry1961]. 
 
-## Summary of Management History and Performance
-Replace text.
+
+Remainder from E.J.?
+
+## Summary of Management History
+
+Prior to the adoption of the Pacific Coast Groundfish Fishery Management Plan (FMP) 
+in 1982, `r spp` were managed through a regulatory process that included the 
+California Department of Fish and Wildlife (CDFW) along 
+with either the California State Legislature or the Fish and Game Commission (FGC) 
+depending on the sector (recreation or commercial) and fishery. With implementation 
+of the Pacific Coast Groundfish FMP, `r spp` came under the management 
+authority of the Pacific Fishery Management Council (PFMC), and were managed as part 
+of the *Sebastes* complex. Because neither species had undergone rigorous stock assessment 
+and did not compose a large fraction of the landings they were classified and 
+managed as part of "Remaining Rockfish" under the larger 
+heading of "Other Rockfish" (PFMC [-@PFMC2004; -@PFMC2002]).
+
+Since the early 1980s a number of federal regulatory measures have been used to 
+manage the commercial rockfish fishery including cumulative trip limits (generally 
+for two- month periods) and seasons. Starting in 1994 the commercial groundfish 
+fishery sector was divided into two components: limited entry and open access 
+with specific regulations designed for each component. Other regulatory actions 
+for the general rockfish categories have included area closures, gear restrictions, 
+and cumulative bimonthly trip limits set for the four different commercial sectors - 
+limited entry fixed gear, limited entry trawl, open access trawl, and open access non-trawl.
+Harvest guidelines are also used to regulate the annual harvest for both the recreational and 
+commercial sectors. 
+
+In 2000, changes in the PFMC’s rockfish management structure resulted in the discontinued 
+use of the \emph{Sebastes} complex, and was replaced with three species 
+groups: nearshore, shelf, and slope rockfishes (January 4, 2000; 65 FR 221), of which `r spp` are included in the minor shelf rockfish group. 
+
+During the late 1990s and early 2000s, major changes also occurred in the way 
+that California managed its nearshore fishery. The Marine Life Management Act 
+(MLMA), which was passed in 1998 by the California Legislature and enacted in 
+1999, required that the FGC adopt an FMP for nearshore finfish [@Vandenberg2014]. 
+
+Following adoption of the Nearshore FMP and accompanying regulations by the FGC in 
+fall of 2002, the FGC adopted regulations in November 2002 which established a set 
+of marine reserves around the Channel Islands in southern California (which became 
+effective April 2003).  The FGC also adopted a nearshore restricted access program in December 
+2002 (which included the establishment of a Deeper Nearshore Permit) to be effective 
+starting in the 2003 fishing year.
+
+Also, since the enactment of the MLMA, the Council and State in a coordinated 
+effort developed and adopted various management specifications to keep harvest 
+within the harvest targets, including seasonal and area closures (e.g. the CCAs; 
+a closure of Cordell Banks to specific fishing), depth restrictions, minimum 
+size limits, and bag limits to regulate the recreational fishery and license 
+and permit regulations, finfish trap permits, gear restrictions, seasonal 
+and area closures (e.g. the RCAs and CCAs; a closure of Cordell Banks to 
+specific fishing), depth restrictions, trip limits, and minimum size 
+limits to regulate the commercial fishery.
+
+The state of California has adopted regulatory measures to manage the minor seashore 
+shallow rockfish fishery 
+based on the harvest guidelines set forth by the PFMC.  The commercial open access 
+and limited entry fixed gear sectors have undergone 
+three different spatial management changes since 2000.  Since 2005, both 
+have managed the area south of \CapeM as one area. 
+The open access commercial fishery is managed based on bimonthly 
+allowable catches, that have ranged from 200 pounds to 1800 pounds per two months since 2000.
+From 2005 to 2018, the catch limits have doubled and are now set at 1200 pounds per two 
+months (for all months) with March and April remaining closed. The limited entry fixed gear 
+sector has followed the same pattern as the open access sector with bi-monthly limits 
+and a doubling of the catch since 2005. The limited entry trawl fleet is managed on 
+monthly limits on an annual basis. Since 2011, the limit has been 300 pounds per month for 
+non-IFQ species.  A history of California's commercial regulations from 2000-2018 can be 
+found in [Appendix A](#appendix-a.-californias-commercial-fishery-regulations). A 10-inch 
+total length minimum size limit was implemented in 1999 for both species in the commercial fleet.
 
 
+**Recreational Fisheries**
 
-##Management Performance
+In March 1984 a recreational bag limig of 10 fish went into effect in California 
+within the 20 fish aggregate. Significant regulatory changes in California's 
+recreational sector began with a change 
+from unlimited number of hooks and lines allowed prior to 2000 to no more than 
+three hooks and one line per angler in 2000.  Since 2001, the limit has been no more than 
+two hooks and one line per angler.  There is no size limit in the recreational fishery 
+for `r spp`. 
+
+California also began spatial management, including area closures, and depth restrictions for the recreational fleet in 2000.  In general, the recreational season north of Point Conception 
+extends from April to December, and south of Point Conception from March to December. 
+In the area that `r spp` are most commonly landed, from Monterey to Morro Bay, the 
+maximum depth open to recreational fishing has been between 30 and 40 
+fathoms until 2017.  In 2017 the depth restrictions were eased by 10 fathoms, opening up fishing depths along the central California coast that had not been open consistently since 2002.  In 
+both 2017 and 2018, the deepest 10 fathoms was closed prior to the prescribed season in December due to high by-catch rates of yelloweye rockfish, one of two rockfish species that are still overfished. A full history of the recreational regulations relating to the spatial management of the fleet can be found frog.   Beginning on January 1, 2021 CDFW implemented a five-fish sub-bag limit for `vermilion`r spp` rockfish that is not accounted for in this stock assessment.
+
+**Cowcod Conservation Areas (CCA)**
+In 2001, two area closures [“Cowcod Conservation Areas”](https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=36132&inline) were implemented to reduce fishing mortality of cowcod, originally prohibiting bottom-fishing deeper than 20 fm. Effective 2019, retention of nearshore and shelf rockfish (excluding cowcod) is allowed in depths shallower than 40 fm. The larger of the two areas (CCA West) is a 4200 square mile area west of Santa Catalina and San Clemente Islands. A smaller area (CCA East) is about 40 miles offshore of San Diego, and covers about 100 square miles.
+
+**Rockfish Conservation Areas (RCA)**
+In 2002 the PFMC established trawl- and non-trawl area closures known as the Rockfish Conservation Areas. These closed areas are gear-specific, and have seasonally changing boundaries to help reduce fishing mortality.
+
+
+## Management Performance
+The contribution of `r spp` to the shelf rockfish OFLs is currently derived from 
+the data-poor Depletion Corrected Average Catch model [@Dick2010].  A 2005 
+assessment was not accepted for management and a 2013 data-moderate assessment 
+was not reviewed by the STAR panel due to insufficient time.
+
+
+Total mortality for `r spp` was obtaid from the Groundfish Expanded Mortality 
+Multiyear [GEMM](https://www.nwfsc.noaa.gov/data/api/v1/source/observer.gemm_fact/selection.xlsx) report [@Somers2020]. The coastwide management of the shelf rockfish complex is split at Cape Mendocino (\CapeM).  Therefore, the  northern California `r spp` 
+model contains a portion of the management area from Cape Mendocino (\CapeM) 
+to the California-Oregon border (\CAOR).  The southern California `r spp` contains the 
+area within the southern management area (south of \CapeM) south of Pt. Conception (\PtC).
+
+The total mortality of the nearshore rockfish 
+south complex has been above the OFL in all years (2011-2019) north of \CapeM, and 
+above the OFL south of \CapeM from 2015-2019. Total mortality 
+estimates from the NMFS NWFSC are not yet available for 2020 (Table \ref{tab:management}). `r Spp` total 
+mortality was on average 63% (range 59%-69%) of the total shelf rockfish south of \CapeM total mortality from 2011-2016.  `r Spp` decreased from 28% to 4% of the total contribution to the shelf rockfish complex north of \CapeM from 2011-2019 with a 
+noticeable decline from 23% to 7% from 2016 to 2017.
+
+
 
 ## Foreign Fisheries
-Replace text.
 
-
+*Sebastes* spp. are not in the Fisheries National Chart (FNC, database containing species status) maintained by the Mexican Government, i.e., they are not commercially harvested in the northwest Mexican Pacific Ocean (E.M. Boj&oacute;rquez, Centro de Investigaciones Biol&oacute;gicas del Noroeste, S.C., perconal communication).  Dr. Boj&oacute;rque also reached out to colleagues at the [Fisheries National Institute](https://www.gob.mx/inapesca) who reported that rockfish are occasionally caught in the sport fishery in the Ensenada City.

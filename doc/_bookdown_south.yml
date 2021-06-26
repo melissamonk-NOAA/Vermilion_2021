@@ -11,5 +11,6 @@ rmd_files: ['00a.Rmd',
             '11b-introduction-fishery.Rmd',
             '20-data.Rmd', 
             '22biology.Rmd',
-            '53figures.Rmd',
-            '54a-appendix-indices.Rmd']
+            '40tables'
+            '50figures.Rmd',
+            '70a-appendix-indices.Rmd']

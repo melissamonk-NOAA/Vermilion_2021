@@ -11,7 +11,7 @@
 for (i in unique(model$len_comp_fit_table$Fleet)) {
   add_figure(
     filein = dir(paste0(base_loc, "/plots"), 
-                 pattern = paste0("comp_lendat_bubflt", i, "mkt0.*\\.png$"), full.names = TRUE),
+                 pattern = paste0("comp_lendat_bubflt", i), full.names = TRUE)[1],
     caption = paste0("Length composition data from the ", model$FleetNames_parsed[i]),
     label = paste0("len-data-", model$FleetNames_label[i]),
     width = 50,

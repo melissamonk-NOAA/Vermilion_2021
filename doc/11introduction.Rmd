@@ -1,11 +1,11 @@
 # Introduction
 
-## Basic Information
-`r executive[["stock"]]`
+```{r render-12, results = "asis"}
+sa4ss::read_child("12basicinfo.Rmd")
+```
 
 
-```{r introfiles, results = "asis"}
-files_intro <- dir('.', pattern = '^1[2-9][a-z]*\\.Rmd', full.names = TRUE)
-ignore <- mapply(sa4ss::read_child, files_intro)
+```{r render-13, results = "asis"}
+sa4ss::read_child("13fisheries.Rmd")
 ```
 

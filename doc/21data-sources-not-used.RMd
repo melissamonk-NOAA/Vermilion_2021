@@ -17,3 +17,10 @@ The surveys in 1980, 1983, and 1986 covered the US West Coast south to 36.8\text
 The surveys in 1989 and 1992 covered the same depth range but extended the southern range to 34.5\textdegree N (near Point Conception).
 From 1995 through 2004, the surveys covered the depth range 55-500 m and surveyed south to 34.5\textdegree N.
 In 2004, the final year of the \gls{s-tri} series, the \gls{nwfsc} \gls{fram} conducted the survey following similar protocols to earlier years.
+
+
+### \acrlong{s-aslope}
+
+The \gls{s-aslope} operated during the months of October to November aboard the R/V _Miller Freeman_.
+Partial survey coverage of the US west coast occurred during the years 1988-1996 and complete coverage (north of 34\textdegree 30\textquotesingle S) during the years 1997 and 1999-2001.
+Typically, only these four years that are seen as complete surveys are included in assessments.

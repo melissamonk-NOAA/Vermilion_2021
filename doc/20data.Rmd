@@ -1,24 +1,60 @@
 # Data
 
+The STAT presented proposed analyses and data sources for the 2021 `r spp` 
+assessment during the PFMC Pre-Assessment Workshop for 2021 Vermilion and 
+Lingcod Stock Assessments, hosted virtually on March 29, 2021. Topics addressed i
+ncluded progress on research priorities, data sources and types, stock structure, 
+fleet structure, key model parameters (e.g. natural mortality), and potential 
+challenges.Descriptions of each data source included in the model 
+(Figure \@ref(fig:data-plot)) and sources that were explored but not included
+are included within this section.
 
-Descriptions of each data source included in the model (Figure \ref{fig:data-plot})
-and sources that were explored but not included
-are provided below.
+## Fishery-Dependent Data
 
-## Fishery-Dependent data
-
-
-
+A complete summary of estimated `r spp` removals (commercial and recreational) 
+in this assessment model, by year and data source, is provided in Tables 
+(\@ref(tab:comm-catches)) and \@ref(tab:rec-catches), respectively. Data and 
+methods used to derive these estimates are described in this section.
 
 
+```{r render-21, results = "asis"}
+sa4ss::read_child("21commercial.Rmd")
+```
+
+```{r render-22, results = "asis"}
+sa4ss::read_child("22recreational.Rmd")
+```
 
 
 ## Fishery-Independent data
 
 
+```{r render-23, results = "asis"}
+sa4ss::read_child("23surveys.Rmd")
+```
 
+
+```{r render-21g, results = "asis"}
+sa4ss::read_child("21f-survey-wcgbts.Rmd")
+```
+
+
+```{r render-21h, results = "asis"}
+sa4ss::read_child("21h-survey-ccfrp.Rmd")
+```
 
 
 
 
 ### Data sources considered, but not used
+
+
+
+
+```{r render-21, results = "asis"}
+sa4ss::read_child("21commercial.Rmd")
+```
+
+```{r render-21, results = "asis"}
+sa4ss::read_child("21commercial.Rmd")
+```

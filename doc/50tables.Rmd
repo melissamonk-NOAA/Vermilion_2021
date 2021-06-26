@@ -1,3 +1,16 @@
-\clearpage
+\floatplacement{table}{H}
+
 # Tables
 
+```{r render-51, results = "asis"}
+sa4ss::read_child("51tables-catch.Rmd")
+```
+
+```{r render-52, results = "asis"}
+sa4ss::read_child("52tables-compsamplesize.Rmd")
+```
+
+
+```{r render-59, results = "asis"}
+sa4ss::read_child("59tables-execsummary.Rmd")
+```

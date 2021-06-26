@@ -1,8 +1,29 @@
-## Fishery-Dependent Data
-
-###Commercial Landings and Discards
+### Commercial Landings and Discards
 
 *Commercial Landings Prior to 1916*
 
 For landings estimates prior to 1916, we based our reconstruction on the total rockfish catches reported in a summary of early California fisheries landings by Sette and Fielder [-@Sette1928] for the years 1888, 1892, 1895, 1899, 1904, 1908 and 1915.  No rockfish were reported for 1888, thus we assumed no catches for that year and interpolated the catches between 0 and the 1892 catches (total of 834 tons) reported.  Similarly, catches between the reported years were interpolated assuming a straight linear trend between the years reported.  We used a ratio-estimator derived from the catch reconstruction fraction of vermillion rockfish in total rockfish landings for the 1916 to 1919 period (the ratio for a comparable five year period was nearly identical).  We apportioned the catches north and south of Point Conception based on ratio estimators that used the same assumptions used to apportion catches in the reconstruction time period (1916-1968).  The catch reconstruction estimates indicated that vermillion made up slightly under 1% of the total rockfish catches during the early (1916-1919) time period, although the estimates indicate a slightly larger fraction (1.5%) of total catches south of Conception relative to the fraction of total catches to the north (0.9%).  However, it is likely that the reconstruction is overestimating the fraction of smaller and/or more deeply distributed species relative to larger, shallower species as the reconstruction is based on the species composition data collected from market category samples in the late 1970s and early 1980s.  The fishery has been shown to have progressed over time from a shallower, more nearshore distribution of effort to one in which deeper and more offshore waters were targeted [@Miller2014].  The notion that vermillion catches may have been greater is also consistent with the recognition by Roedel [-@Roedel1948] that during the 1930s and 1940s vermillion were “One of the more important commercial species, it is one of three leading species in Southern California." However, by the time of that report, vermillion represented 5 to 8% of the southern California catch (based on Ralston et al. [-@Ralston2010]), much more than at the beginning of the time series.  Future efforts to improve historical catch reconstructions by accounting for the shift in effort over time to deeper waters should continue to be flagged as a research need. 
 
+
+*Commercial Landings, 1916-1968*
+
+
+
+
+
+*Commercial Landings, 1969-1983*
+
+
+*Commercial Landings, 1984-2000*
+
+
+*Commercial Discard, 1900-2000*
+
+*Commercial Landings and Discard, 2001-2020*
+
+
+*Commercial length composition data*
+
+
+
+*Commercial age composition data*

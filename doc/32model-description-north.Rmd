@@ -1,0 +1,21 @@
+## Model Structure and Assumptions
+
+
+### Transition to the Current Stock Assessment
+
+
+### Model Specifications
+
+### Modeling Platform and Structure
+General model specifications (e.g., executable version, model structure, definition of fleets and areas)
+
+
+
+### Summary of Data for Fleets and Areas
+
+### Other Specifications
+
+
+
+### Model Parameters
+Describe estimated vs. fixed parameters, priors

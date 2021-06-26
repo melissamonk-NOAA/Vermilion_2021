@@ -1,10 +1,3 @@
-\clearpage
-# Figures
-
-
-```{r render-61, results = "asis"}
-sa4ss::read_child("61figures-data-catches.Rmd")
-```
 
 
 ```{r render-62, results = "asis"}
@@ -16,39 +9,30 @@ sa4ss::read_child("62figures-lengths.Rmd")
 sa4ss::read_child("63figures-biology.Rmd")
 ```
 
-\FloatBarrier
-
-```{r render-64, results = "asis"}
+<!--
+  ```{r render-64, results = "asis"}
 sa4ss::read_child("64figures-selectivity-diagnostics.Rmd")
 ```
-
-\FloatBarrier
-
 
 ```{r render-65, results = "asis"}
 sa4ss::read_child("65figures-lenfits.Rmd")
 ```
 
-\FloatBarrier
-
 ```{r render-66, results = "asis"}
 sa4ss::read_child("66figures-timeseries.Rmd")
 ```
-
-\FloatBarrier
 
 ```{r render-67, results = "asis"}
 sa4ss::read_child("67figures-indices-age.Rmd")
 ```
 
-\FloatBarrier
-
 ```{r render-68, results = "asis"}
 sa4ss::read_child("68figures-recruit-refpoints.Rmd")
 ```
 
-\FloatBarrier
-
 ```{r render-69, results = "asis"}
 sa4ss::read_child("69figures-sens-likeli-retro.Rmd")
 ```
+
+-->
+  

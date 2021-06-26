@@ -1,11 +1,9 @@
-# Management 
+# Reference Points
 
-## Reference Points
+# Harvest Projections and Decision Tables
 
-## Unresolved Problems and Major Uncertainties
+# Regional Management COnsiderations
 
-## Harvest Projections and Decision Tables
+# Unresolved Problems and Major Uncertainties
 
-## Evaluation of Scientific Uncertainty
-
-## Research and Data Needs
+# Research and Data Needs

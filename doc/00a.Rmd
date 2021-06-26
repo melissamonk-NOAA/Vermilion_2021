@@ -30,6 +30,13 @@ lang: en
 papersize: a4
 ---
 
+<!-- Common lat/long 
+Cape Mendocino, Pt. Conception and OR boder -->
+\newcommand\CapeM{$40^\circ 10^\prime N$}
+\newcommand\PtC{$34^\circ 27^\prime N$}
+\newcommand\CAOR{$42^\circ 00^\prime N$}
+
+
 ```{r opts, include = FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 knitr::knit_hooks$set(plot = function(x,options) {
@@ -43,7 +50,9 @@ knitr::knit_hooks$set(plot = function(x,options) {
         sprintf('![%s](%s%s)', cap, base, x)
         }
   })
-
+options(knitr.duplicate.label = "allow")
+options(knitr.kable.NA = '')
+ 
 source("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/code/dir_recent.R")
 dir.path <- ifelse(params$model=="north",
              "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/",
@@ -101,6 +110,6 @@ model$FleetNames_label <- stringr::str_replace_all(model$FleetNames, "_", "-")
 fleet_info = data.frame(cbind(model$fleet_ID, model$FleetNames, model$FleetNames_label, model$FleetNames_parsed))
 colnames(fleet_info) = c("fleet_ID", "FleetNames", "FleetNames_label", "FleetNames_parsed")
 
-
+plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
 
 ```
