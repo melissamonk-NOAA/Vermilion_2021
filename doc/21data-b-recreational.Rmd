@@ -1,0 +1,146 @@
+### Recreational Landings and Discard
+
+
+*Recreational Landings, 1928-1980*
+
+[paragraph on Ralston et al. rec reconstruction pending -- use mode-specific values from JF]
+[also include paragraph about sensitivities to discard -- not included in Ralston reconstruction]
+
+*Marine Recreational Fishery Statistics Survey (MRFSS), 1980-2003*
+
+MRFSS estimates of California recreational landings from 1980-1989 and 1993-2003  
+were downloaded from the Recreational Fisheries Information Network 
+([RecFIN](https://www.recfin.org/)). The MRFSS survey design included stratification by 
+species (sunset rockfish were not recognized at the time), subregion (northern 
+and southern California), 2-month ‘wave’, water area (e.g. within or beyond 
+three miles from shore), and fishing mode (party/charter and private/rental boats,
+plus various shore modes).
+
+Some known issues with the MRFSS estimates include 1) missing estimates of catch 
+in weight for some strata that reported catch in numbers, 2) a change in the 
+spatial definition of California subregions after 1989, and 3) a hiatus in 
+sampling from 1990-1992 (all modes) and also 1993-1995 in the party/charter mode 
+north of Point Conception. The STAT attempted to address each of these issues, 
+as described below. CRFS estimates from 2004 were also included in the MRFSS 
+analysis, as they were not available on the current RecFIN website but are 
+included in the MRFSS catch estimate tables.
+
+The MRFSS estimated catch in numbers of fish and converted these to catch in 
+weight using estimates of average fish weight [kg] from the same stratum. When 
+a stratum contained an estimate of catch in numbers but was missing an average 
+weight, the estimate of catch in weight for that stratum was omitted (or sometimes 
+assigned a zero value) in the database. To correct these errors, the STAT first 
+identified strata with positive catch in numbers but missing or zero values for 
+catch in weight. Catch in weight for these strata was then estimated by imputing 
+a value of average weight based on the mean of the reported average weights in 
+the same year and subregion. These factors had a greater influence on average 
+weight than boat mode (Figure X). The effect of this correction was relatively 
+minor for vermilion rockfish overall (~1% increase in total catch by weight, 
+1980-2004). However, 70% of missing catch in weight occurred over the years 
+2001-2004, with differences in individual year/mode/subregion combinations sometimes exceeding 10-20%.
+
+MRFSS catch estimates for California were spatially stratified into two subregions, 
+“Southern California” (subregion 1) and “Northern California” (subregion 2). 
+During the 1990-1992 statewide hiatus in sampling, the definitions of these two 
+subregions changed. Specifically, San Luis Obispo (SLO) County was included in 
+the southern region prior to the hiatus (i.e. 1980-1989) [@Witzig1992; @Karpov1995], 
+but moved to the northern subregion starting in 1993 (). In order to create a 
+definition of spatial strata that is consistent and comparable over time, and 
+one that is consistently divided near Point Conception, the STAT examined catch 
+estimates from a separate study (Albin et al. 1993) that used a finer spatial 
+resolution in the northern subregion (including SLO County). Over the period 
+1981-1986, the amount of vermilion rockfish landed in SLO County was found to 
+be roughly equal to the amount of vermilion rockfish landed in all California 
+counties north of SLO County (Table X). Therefore, to approximate catches north
+and south of Point Conception from 1980-1989, the STAT reduced the ‘southern’ 
+subregion annual catch (which included SLO County) from 1980-1989 by an amount 
+equal to the northern subregion catch during the same period, and doubled the 
+northern subregion catch. On average, this ‘moves’ the estimated SLO County 
+catch from the southern region to the northern region from 1980-1989, creating 
+a spatially consistent time series of landings over the entire time series.
+
+
+As noted above, MRFSS sampling was halted from 1990-1992 due to funding issues. 
+The survey resumed in 1993 in all modes, except for the party/charter (PC) boat 
+mode which resumed in 1996 for counties north of Santa Barbara County.  To 
+produce catch estimates for the missing subregion/mode/year combinations, we 
+used linear interpolation. Shore modes were a minor component of the vermilion 
+catch and therefore combined with catches from the private (PR) boat mode into 
+a single fleet. Specifically, catches were aggregated by subregion (adjusted as 
+described above), year, and mode, and endpoints for the interpolations were 
+defined as 2-year averages to reduce the effects of interannual variability 
+in catch on interpolated estimates.
+
+MRFSS estimates of catch and discard after adjustment for missing average weights,
+changes in subregion definition, and sampling gaps are shown in Table X.
+
+*California Recreational Fisheries Survey (CRFS), 2004-2020*
+
+Estimates of recreational landings and discard since 2004 have been produced by 
+the CRFS. This survey improves upon the MRFSS sampling design, with higher 
+sampling rates and finer spatial and temporal resolution.
+
+
+
+*Discard mortality rates*
+
+The recreational discard mortality rates for vermilion that were endorsed by the 
+SSC and adopted by the 
+PFMC in March 2017 are 20% for 0-10 fm, 34% for 10-20 fm, 50% for 20-30 fm, and 
+100% for greater than 30 fm.
+
+
+Nearshore rates (jig and pole): 0-10 fm 20%; 10-20 fm 34%, >20 fm 100%
+
+
+
+*Recreational length composition data*
+
+Length compositions were provided from the following sources:
+
+frog: turn these into tables and add citations
+
+```{asis, echo = model.area == 'NCA'}
+There is no available recreational length composition available for 2020 north of Pt. Conception in RecFIN and sparse sampling was confirmed by J. Budrick (CDFW, pers. comm,).
+
+\begin{itemize}
+  \item Recreational party charter mode (PC)
+   \begin{itemize}
+     \item Miller and Gotshall dockside PC survey (1959-1960) 
+     \item Samples from commercial port samples (1978-1979)
+     \item MRFSS dockside PC survey (1980-2003)    
+     \item CRFS dockside PC survey (2003-2019)
+     \item CRFS onboard (discard only) and dockside (retained only surveys(2004-2019)
+     \item Deb Wilson-Vandenberg onboard CPFV survey (1988-1998)
+   \end{itemize}
+  \item Recreational private rental mode (PR)
+   \begin{itemize}
+     \item Miller and Gotshall dockside PR survey (1959) 
+     \item MRFSS dockside PR (1980-2003)
+     \item CRFS dockside PR (2004-2019)
+  \end{itemize}
+\end{itemize}
+```
+
+```{asis, echo = model.area=='SCA'}
+\begin{itemize}
+  \item Miller and Gotshall dockside survey (1959-1966)    
+  \item Ally  et al. CPFV onboard observer survey (1985-1987)
+  \item Collins and Crooke CPFV onboard observer survey (1975-1978)  
+  \item Racine (1982) PR samples (1978)
+  \item MRFSS dockside survey PC and PR (1980-2003)     
+  \item CRFS PC onboard (discard only) survey (2004-2019)
+  \item CRFS PC and PR dockside surveys (2004-2019)
+  \item 
+\end{itemize}
+```
+
+
+
+*Recreational age composition data*
+
+There are no recreational age composition data available for `r spp`.
+
+```{asis, echo = model.area=='NCA'}
+There are no recreational age composition data available for vermilion. Otoliths are available from collaborative with Cal Poly to investigate the precision of back-calculating whole fish lenght from filleted fish in the CPFV fleet. These otoliths were not aged for this assessment. 
+```

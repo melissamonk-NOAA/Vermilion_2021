@@ -1,0 +1,73 @@
+
+```{r, warning = FALSE, inclue = FALSE}
+landings <- readxl::read_xlsx("./tables/landings.xlsx", sheet = model.area) %>%
+  rename(fleet_ID = Fleet) %>%
+  mutate(fleet_ID = as.character(fleet_ID))
+landings <- inner_join(landings,fleet_info)
+landings <- landings %>% 
+  mutate(Fleet = paste0(FleetNames, "(",fleet_ID,")")) %>%
+  mutate(Fleet = gsub("\\_", " ",Fleet)) 
+landings_table <- landings %>%
+  dplyr::select(Year, Fleet, Catch) %>%
+  tidyr::pivot_wider(names_from = Fleet, values_from=Catch)  %>%
+   mutate(`Total commerical` = rowSums(dplyr::across(`COM HKL(1)`:`COM NET(3)`), na.rm=TRUE)) %>%
+   mutate(`Total recreational` = rowSums(dplyr::across(`REC PC(4)`:`REC PR DIS(7)`), na.rm=TRUE)) %>%
+  na_if(.,0)
+
+```
+
+
+```{r, catches, results = 'asis'}
+kableExtra::kbl(landings_table, longtable = TRUE, booktabs = TRUE, 
+  caption = "Landings of vermilion by fleet and year. A description of the sources of the landings are in the text and the next table.",
+  align  = 'r', linesep = ""
+) %>%
+  column_spec(1, width = "1cm") %>%
+  column_spec(2, width = "1cm", background = '#CCCCCC') %>%
+  column_spec(3, width = "1cm") %>%
+  column_spec(4, width = "1cm", background = '#CCCCCC') %>%
+  column_spec(5, width = "1cm") %>%
+  column_spec(6, width = "1cm", background = '#CCCCCC') %>%
+  column_spec(7, width = "1cm") %>%
+  column_spec(8, width = "1cm", background = '#CCCCCC') %>%
+  column_spec(9, width = "1cm") %>%
+  column_spec(10, width = "1cm") %>%
+  kableExtra::row_spec(0, angle = 45) %>%
+  kableExtra::kable_styling(latex_options = "repeat_header", font_size = 10) 
+#  footnote(alphabet = c("Cooperative Groundfish Survey", "MRFSS"))
+```
+
+
+```{r, warning = FALSE, inclue = FALSE}
+catch_source <- landings %>%
+  dplyr::select(Year, FleetNames, fleet_ID, Source) %>%
+  unique() %>%
+  group_by(Source, fleet_ID, FleetNames) %>%
+  summarise(minYr = min(Year),
+            maxYr = max(Year)) %>%
+  mutate(yrs = paste0(minYr,"-",maxYr)) %>%
+  dplyr::select(yrs, FleetNames, fleet_ID, Source) %>%
+  rename(Fleets = Source) %>%
+  tidyr::pivot_wider(names_from=Fleets, values_from = yrs)  %>%
+  mutate(Fleet = paste0(FleetNames,"_",fleet_ID)) %>%
+  ungroup() %>%
+    select(-FleetNames, -fleet_ID) 
+
+if(model.area == 'NCA'){
+ catch_source <- catch_source %>%
+   dplyr::select(Fleet, Interpolated, Reconstruction, `CALCOM ratio estimator`, `Coop Groundfish Survey`, CALCOM, MRFSS, CRFS)
+} else {
+  catch_source <- catch_source %>%
+   dplyr::select(Fleet, Interpolated, Reconstruction, `CALCOM ratio estimator`, CALCOM, MRFSS, CRFS)
+}
+```
+
+```{r catch-source, results = 'asis'}
+kableExtra::kbl(catch_source, booktabs = TRUE, 
+  caption = "Sources of landings for the commercial and recreational fleets.  The interpolated values were interpolated by J. Field (SWFSC). The reconstruction refers to the commercial and recreational catch recontructions in Ralston et al. (2010). Detailed descriptions of the sources are in the text.",
+  align  = 'l', linesep = ""
+) %>%
+  column_spec(1, width = "2cm") %>%
+  column_spec(2:length(catch_source$CALCOM), width = "2cm") %>%
+  kableExtra::kable_styling(latex_options = c("striped", "scale_down"))
+```

@@ -61,7 +61,7 @@ add_figure(
 filein = file.path(base_loc, "plots", "yield2_yield_curve_with_refpoints.png"), 
 caption = "Equilibrium yield curve for the base case model. Values are based on the 2020
 fishery selectivity and with steepness fixed at 0.72",
-label = 'yield')
+label = 'yield2')
 ```
 
 
@@ -69,5 +69,5 @@ label = 'yield')
 add_figure(
 filein = file.path(base_loc, "plots", "yield3_surplus_production.png"), 
 caption = "Surplus production vs. biomass plot",
-label = 'yield')
+label = 'yield3')
 ```

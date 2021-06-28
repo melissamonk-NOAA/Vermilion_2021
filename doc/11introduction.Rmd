@@ -1,5 +1,8 @@
 # Introduction
 
+Note to readers: Text in section is the same in both California `r spp` assessment 
+documents.
+
 ```{r render-12, results = "asis"}
 sa4ss::read_child("12basicinfo.Rmd")
 ```

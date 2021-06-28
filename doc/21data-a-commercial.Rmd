@@ -1,0 +1,92 @@
+### Commercial Landings and Discards
+
+*Commercial Landings Prior to 1916*
+
+For landings estimates prior to 1916, we based our reconstruction on the total 
+rockfish catches reported in a summary of early California fisheries landings by 
+Sette and Fielder [-@Sette1928] for the years 1888, 1892, 1895, 1899, 1904, 1908 
+and 1915.  No rockfish were reported for 1888, thus we assumed no catches for that
+year and interpolated the catches between 0 and the 1892 catches (total of 834 
+tons) reported.  Similarly, catches between the reported years were interpolated 
+assuming a straight linear trend between the years reported.  We used a 
+ratio-estimator derived from the catch reconstruction fraction of vermilion 
+rockfish in total rockfish landings for the 1916 to 1919 period (the ratio for
+a comparable five year period was nearly identical).  We apportioned the catches 
+north and south of Point Conception based on ratio estimators that used the same 
+assumptions used to apportion catches in the reconstruction time period (1916-1968).
+The catch reconstruction estimates indicated that vermilion made up slightly under 
+1% of the total rockfish catches during the early (1916-1919) time period, although 
+the estimates indicate a slightly larger fraction (1.5%) of total catches south of 
+Conception relative to the fraction of total catches to the north (0.9%).  However, 
+it is likely that the reconstruction is overestimating the fraction of smaller and/or 
+more deeply distributed species relative to larger, shallower species as the 
+reconstruction is based on the species composition data collected from market 
+category samples in the late 1970s and early 1980s.  The fishery has been shown
+to have progressed over time from a shallower, more nearshore distribution of 
+effort to one in which deeper and more offshore waters were targeted [@Miller2014]. 
+The notion that vermilion catches may have been greater is also consistent with 
+the recognition by Roedel [-@Roedel1948] that during the 1930s and 1940s vermilion 
+were “One of the more important commercial species, it is one of three leading 
+species in Southern California." However, by the time of that report, vermilion 
+represented five to eight percent of the southern California catch (based on 
+Ralston et al. [-@Ralston2010]), much more than at the beginning of the time 
+series.  Future efforts to improve historical catch reconstructions by accounting 
+for the shift in effort over time to deeper waters should continue to be flagged 
+as a research need. 
+
+
+*Commercial Landings, 1916-2020*
+
+For commercial landings prior to 1969, we queried the SWFSC catch reconstruction 
+database for estimates from the California Catch Reconstruction [@Ralston2010b]. 
+Landings in this database are divided into trawl, ‘non-trawl’, and ‘unknown’ gear 
+categories. Regions 7 and 8 as defined by Ralston et al. [-@Ralston2010] were 
+assigned to Southern California. Region 6 in Ralston et al. includes Santa 
+Barbara County (mainly south of Point Conception), plus some major ports in San 
+Luis Obispo County (north of Point Conception). To allocate catches from Region 
+6 to the areas north and south of Point Conception, we followed an approach used 
+by Dick et al. [-@Dick2007] for the assessment of cowcod. Specifically, 
+port-specific landings of total rockfish from the CDFW Fish Bulletin series were 
+used to determine the annual fraction of landings in Region 6 that was south of
+Point Conception (Table XXX). Rockfish landings at that time were not reported 
+at the species level. Although the use of total rockfish landings to partition 
+catch in Region 6 is not ideal, we see this as the best available option in the 
+absence of port-specific species composition data. 
+
+Years with no data were imputed 
+using ratio estimates from adjacent years. Annual catches from unknown locations 
+(Region 0) and unknown gear types were allocated proportional to the catches from 
+known regions and gears. Catches from known regions, but unknown gears, were 
+allocated proportional to catches by known gears within the same region. In this way, 
+total annual removals in California were kept consistent with those reported by 
+Ralston et al. [-@Ralston2010b], and assigned to the assessment areas north and 
+south of Point Conception, and either trawl or ‘non-trawl’ gear types. To 
+approximate California landings from 1900 to 1915, we used a linear interpolation 
+starting from zero metric tons in 1899 to the amount of ‘non-trawl’ catch, by 
+area, in 1916 (Table XXX). Since hook and line gears catch the majority of 
+commercially-caught vermilion rockfish, we assigned estimated catch in the 
+‘non-trawl’ category to the hook and line fleet in the assessment model.
+
+In September 2005, the California Cooperative Groundfish Survey (CCGS) 
+incorporated newly acquired commercial landings statistics from 1969-77 into 
+the CALCOM database. The data consisted of landing receipts (“fish tickets”), 
+including mixed species categories for rockfish. In order to assign rockfish 
+landings to individual species, the earliest available species composition 
+samples were applied to the fish ticket data by port, gear, and quarter. These 
+‘ratio estimator’ landings are coded (internally) as market category 977 in the 
+CALCOM database, and are used in this and past assessments as the best available
+landings for the time period 1969-1977 for all port complexes. Since commercial 
+port sampling south of Point Conception started later, ratio estimates were used 
+in some southern California port complexes through 1983. See Appendix A of Dick 
+et al. [-@Dick2007] and Pearson et al. [-@Pearson2008; pp. 8 and 15-16] for 
+further details.
+
+
+
+
+
+*Commercial length composition data*
+
+
+
+*Commercial age composition data*

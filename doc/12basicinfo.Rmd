@@ -1,5 +1,15 @@
 ## Basic Information and Life History
 
+Vermilion rockfish range from Prince William Sound, Alaska, to central Baja California at depths of 6 m to 436 m [@Love2002]. However, they are most commonly found from central Oregon to Punta Baja, Mexico [@Hyde2009] at depths of 50 m to 150 m [@Hyde2009].  Hyde and Vetter [-@Hyde2009] describe vermilion rockfish as residents of shallower depths (<100 m) than sunset rockfish. Adult fish tend to cluster on high relief rocky outcrops [@Love2002] and kelp forests [@Hyde2009]. North of Point Conception, some adults are shallower, living in caves and cracks [@Love2002]. Vermilion rockfish have shown high site fidelity [@Hannah2011 (only tagged 1 vermilion); @Lea1999], and low average larval dispersal distance [@Hyde2009]. Lowe et al. (2009) [Lowe2009] suggested vermilion rockfish to have a lower site fidelity than previously believed, but they acknowledged that their observations of movements to different depths may have been due to the reality of a shallower species and a deeper species. 
+Approximate lifespan for vermilion rockfish is 60 years, with females living longer and growing larger than their male counterparts. 50% are mature at 5 years and about 37 cm, with males probably maturing at shorter lengths than females [@Love2002].
+
+Vermilion rockfish are viviparous, and release 63,000 to 2,600,000 eggs per season. In southern California, vermilion rockfish larvae are released between July and March. In central and northern California, this release occurs in September, December, and April-June [@Love2002].  Larval release in fall and winter is not common among other rockfish species. Hyde and Vetter [-@Hyde2009] suggest that low larval dispersal may be due to weak poleward flow of nearshore waters corresponding with peak vermilion larval release. 
+
+Young-of-the-year vermilion rockfish settle out of the plankton during two recruitment periods per year, first from February to April and a second from August to October, and settlement has been observed in May off southern California [@Love2002]. Larvae measure about 4.3 mm. Both young-of-the-year vermilion and sunset rockfish are mottled brown with areas of black, and older juveniles turn a mottled orange or red color [@Love2012a]. 
+Juvenile fish are found individually from 6 m to 36 m, living near sand and structures. After two months, juveniles travel deeper and live on low relief rocky outcrops and other structures [@Love2002].
+
+Adult vermilion rockfish predominantly eat smaller fish, though sometimes they pursue euphausiids and other various macroplankton [@Phillips1964]. Love [-@Love2002] noted their diet to include octopus, salps, shrimps, and pelagic red crabs. 
+
 
 *Population Structure and Complex Assessment Considerations*
 
@@ -38,15 +48,11 @@ Once the collected specimens have been genotyped, any species-specific differenc
 This research is aimed at providing information to support the successful stock assessment of this commercially and recreationally valuable cryptic species pair and is responsive to any data gaps identified by the assessment community.  If successful, this research, conducted in close communication with stock assessors, may also assist the PFMC in establishing best practices for the assessment and management of cryptic species complexes.  Though this project will only focus on nominal vermilion rockfish specimens collected through the 2019 survey field season, it may be advisable that tissue specimens collected aboard fishery-independent surveys as well as through fishery-dependent programs continue to be genotyped on an ongoing basis to support continued and timely monitoring of this economically and ecologically important species complex.
 
 
-## Early Life History
-
-Get from Emma
-
-##Map
+## Map
 A map showing the scope of the two `r spp` assessments and depicting boundaries at Point Conception (\PtC) that separates the two assessments. THe northern model is bounded by the California/Oregon border and the southern model is bounded by the U.S./ Mexico border at the south (Figure \@ref(fig:assess-area)). Cape Mendocino (\CapeM) is also noted as it is a management boundary for the stock.
 
 
-##Ecosystem Considerations
+## Ecosystem Considerations
 
 John is writing
 

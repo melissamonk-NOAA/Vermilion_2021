@@ -1,22 +1,3 @@
-## Summary of Previous Assessments and Reviews
-
-### History of Modeling Approaches
-
-This is the first full assessment for vermilion rockfish. 
-Vermilon was assessed coastwide as a data poor species using 
-Depletion-Based Stock Reduction Analysis (DB-SRA) [@Dick2010]. The DB-SRA 
-model assigned a frog% probability that the then recent (2008-2009) catch 
-exceeded the 2010 OFL.
-
-A 2005 assessment was not accepted for management and a 2013 data moderate 
-assessment was prepared, but not reviewed.
-
-
-### Most Recent STAR Panel and SSC Recommendations 
-
-None.
-
-
 ### Response to STAR Panel Requests (not required in draft)
 
 

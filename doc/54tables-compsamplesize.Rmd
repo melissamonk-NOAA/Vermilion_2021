@@ -5,39 +5,48 @@ length.sample.size <- readxl::read_xlsx("./tables/sample sizes for vermilion com
   mutate(FLEET = paste0(FLEET,"(",FLEET_NO,")")) %>%
   dplyr::select(-FLEET_NO) %>%
   mutate(N_INIT_BASIS = gsub("\\_", " ",N_INIT_BASIS)) %>%
-  mutate(N_INIT_BASIS = tolower(N_INIT_BASIS))
+  mutate(N_INIT_BASIS = tolower(N_INIT_BASIS)) %>%
+  mutate_at(vars(N_TRIPS), as.numeric) %>%
+   mutate(N_TRIPS  = round(N_TRIPS, 2)) 
+#  mutate(N_TRIPS  = if_else(grepl("fish/trip", N_INIT_BASIS), round(N_TRIPS,2), round(N_TRIPS,0)))
+
+
+
 
 age.sample.size <- readxl::read_xlsx("./tables/sample sizes for vermilion composition data.xlsx", sheet = paste0(model.area, "_AGE")) %>%
    mutate(FLEET = paste0(FLEET,"(",FLEET_NO,")")) %>%
    dplyr::select(-FLEET_NO)
+
 ```
 
 
 ```{r,length-sample-size, results = 'asis'}
-kable(length.sample.size, longtable = TRUE, booktabs = TRUE, 
+kableExtra::kbl(length.sample.size, 
+                longtable = TRUE, booktabs = TRUE, 
   caption = "Samples sizes of length composition data by year.",
   col.names = c("Source", "Year", "Fleet(#)", "Number fish", "Sample size", "Trips", "Initial sample basis"),
-  align = 'cclrrrl'
+  align = 'cclrrrl', linesep = ""
 ) %>%
   column_spec(1, width = "1cm") %>%
   column_spec(2, width = "1cm") %>%
   column_spec(3, width = "2cm") %>%
   column_spec(4, width = "2cm") %>%
-  column_spec(5, width = "1.5cm") %>%
+  column_spec(5, width = "1cm") %>%
   column_spec(6, width = "1cm") %>%
-  column_spec(7, width = "6cm") %>%
-  kable_styling(latex_options = "repeat_header")#, full_width = FALSE)
+  column_spec(7, width = "4cm") %>%
+  kable_styling(latex_options = "repeat_header", font_size =8)
 ```
 
 
 ```{r, age-sample-size, results = 'asis'}
-kable(age.sample.size, longtable = TRUE, booktabs = TRUE, 
+kableExtra::kbl(age.sample.size, 
+                longtable = TRUE, booktabs = TRUE, 
   caption = "Samples sizes of conditional age-at-length data by year.",
   col.names = c("Source", "Year", "Fleet(#)", "Number of fish")
 ) %>%
   column_spec(1, width = "1cm") %>%
-  column_spec(2, width = "1.5cm") %>%
-  column_spec(3, width = "2cm") %>%
+  column_spec(2, width = "1cm") %>%
+  column_spec(3, width = "4cm") %>%
   column_spec(4, width = "3cm") %>%
   kable_styling(latex_options = "repeat_header")#, full_width = FALSE)
 ```

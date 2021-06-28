@@ -15,8 +15,15 @@ colnames(management)[1] = ""
 ```{r,management, results = 'asis'}
 kableExtra::kbl(management, booktabs = TRUE, 
   caption = "Annual estimates of total mortality, overfishing limit (OFL), acceptable biological catch (ABC), annual catch limit (ACL) for vermilion. The ABC is equal to the ACL.  Data were obtained from the GEMM reports.",
-  escape = FALSE) %>%
-kableExtra::pack_rows("North of $\\CapeM$", start_row = 1, end_row = 7) %>%
-kableExtra::pack_rows("South of $\\CapeM$", start_row = 8, end_row = 12) %>%
+escape = FALSE) %>%
+kableExtra::pack_rows(group_label = paste0("North of 40",intToUtf8(176),"10\' N"), start_row = 1, end_row = 7) %>%
+kableExtra::pack_rows(group_label = paste0("South of 40",intToUtf8(176),"10\' N"), start_row = 8, end_row = 12) %>%
   kable_styling(latex_options = "scale_down")
 ```
+
+
+
+\include{tex_tables/e_ReferencePoints_ES.tex}
+
+
+\include{tex_tables/TimeSeries.tex}

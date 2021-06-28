@@ -1,21 +1,102 @@
 ## Model Structure and Assumptions
 
+`r Spp` `r model.area` of Point Conception (\PtC) off the coast of California
+is assessed using a two-sex model with sex-specific life history parameters.  
+The model assumed seven fleets with removals beginning in `r startyr`: 
 
-### Transition to the Current Stock Assessment
+\begin{enumerate}
+  \item Commercial hook-and-line fishery
+  \item Commercial trawl fishery
+  \item Commercial net fishery
+  \item Recreational PC retained fishery
+  \item Recreational PC discard fishery
+  \item Recreational PR retained fishery
+  \item Recreational PR discard fishery
+\end{enumerate}
+
+
+```{r, echo = FALSE}
+time_blocks <- data.frame(model$SelSizeAdj) %>% filter(Change.==1, Yr>1875, Yr<2021) 
+```
+
+Selectivity was specified using the double normal parameterization within Stock Synthesis for all fleets. 
+The recreational PC and PR fleets applied three time blocks for selectivity:  `r startyr` - `r time_blocks$Yr[1]-1`, `r time_blocks$Yr[1]` - `r time_blocks$Yr[2]-1`, - `r time_blocks$Yr[2]` - `r endyr`. All commercial fleet selectivity was constant across model years `r startyr` - `r endyr`,
+
+<!--The commercial selectivity applied two time blocks for selectivity: `r startyr` - 2008 and 2009 - `r endyr`. The commercial selectivity block from `r startyr` - 2008  was fixed to be asymptotic, while the selectivity block from  2009 - `r endyr`was allowed to be dome-shaped.   The recreational fleet selectivity was constant across the model years, `r startyr` - `r endyr`, and fixed to be asymptotic, although dome-shape selectivity was explored during model development. Annual recruitment deviations started in `r `min(model$recruitpars$Yr)`.
+
+-->
+
+The model has the additional survey fleets:
+
+\begin{enumerate}
+ \item Deb Wilson-Vandenberg onboard survey,
+ \item West coast groundfish bottomfish trawl survey,
+ \item Recreational PC onboard survey,
+ \item Abrams thesis research survey,
+ \item SWFSC groundfish ecology survey,
+ \item California Collaborative Fisheries Research Project survey
+\end{enumerate}
+
 
 
 ### Model Specifications
 
+Electronic SS model files including the data, control, starter, and forecast files can be 
+found on the 
+[PFMC's website](https://www.pcouncil.org/groundfish/stock-assessments/).
+
+
 ### Modeling Platform and Structure
-General model specifications (e.g., executable version, model structure, definition of fleets and areas)
 
-
+The assessment was conducted used Stock Synthesis version 3.30.16 developed by 
+Dr. Richard Methot at the NOAA, NWFSC [@Methot2013]. This most recent 
+version was used because it included improvements and corrections to older 
+model versions. The R package [r4ss](https://github.com/r4ss/r4ss), version 
+1.38.0, along with R version 4.0.1 were used to investigate and plot model fits. 
 
 ### Summary of Data for Fleets and Areas
 
-### Other Specifications
 
 
 
-### Model Parameters
-Describe estimated vs. fixed parameters, priors
+
+### Priors
+
+Frog: natural mortality - Jason writing up
+
+The prior for steepness (*h*) assumes a beta distribution with parameters based on an 
+update for the Thorson-Dorn rockfish prior (Dorn, M. and Thorson, J., pers. comm.), 
+which was endorsed by the Science and Statistical Committee in 2019.  The prior is a 
+beta distribution with $mu$=0.72 and $sigma$=0.16. 
+
+###Data Weighting
+Length composition and conditional-age-at-length (CAAL) compositions sample sizes for 
+the base model were tuned by the "Francis method," based on equation TA1.8 in Francis 
+[-@Francis2011], and implemented in the r4ss package. This approach involves comparing 
+the residuals in the model’s expected mean length with respect to the observed mean 
+length and associated uncertainty derived from the composition vectors and their 
+associated input sample sizes. The sample sizes are then tuned so that the observed 
+and expected variability are consistent. After adjustment to the sample sizes, models 
+were not re-tuned if the bootstrap uncertainty value around the tuning factor overlapped 1.0. 
+
+As outlined in the Best Practices, a sensitivity run was conducted with length and 
+conditional-age-at-length (CAAL) compositions were re-weighted using the 
+Ianelli-McAllister harmonic mean method [@McAllister1997]. Additionally, weighting 
+using the Dirichlet-Multinomial likelihood, that includes and estimable parameter (theta) 
+that scales the input sample size, was explored. H
+
+<!--However, the model did not converge when 
+the Dirichlet-Multinomial likelihood was applied to a number of the fleets with composition 
+data. Given this, and the current challenges with this method described in the Stock Synthesis 
+manual [@Methot2019], the Francis weightings were applied in the pre-STAR and post-STAR 
+base models. The final post-STAR base model was re-weighted twice at which point the Francis 
+weights stabilized.
+-->
+
+A series of sensitivities were conducted to determine the need to estimate 
+extra variability parameters were estimated and added to the survey CPUE indices, and 
+described below in the Estimated Parameters section. 
+
+
+
+

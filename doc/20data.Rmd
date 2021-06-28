@@ -16,45 +16,35 @@ in this assessment model, by year and data source, is provided in Tables
 (\@ref(tab:comm-catches)) and \@ref(tab:rec-catches), respectively. Data and 
 methods used to derive these estimates are described in this section.
 
+## Commercial
 
 ```{r render-21, results = "asis"}
-sa4ss::read_child("21commercial.Rmd")
+sa4ss::read_child("21data-a-commercial.Rmd")
 ```
 
-```{r render-22, results = "asis"}
-sa4ss::read_child("22recreational.Rmd")
+```{r render-21b, results = "asis"}
+sa4ss::read_child("21data-b-recreational.Rmd")
 ```
 
 
 ## Fishery-Independent data
 
 
-```{r render-23, results = "asis"}
-sa4ss::read_child("23surveys.Rmd")
+```{r render-21c, results = "asis"}
+sa4ss::read_child("21data-c-fishery-independent.Rmd")
 ```
 
 
-```{r render-21g, results = "asis"}
-sa4ss::read_child("21f-survey-wcgbts.Rmd")
+## Data sources considered, but not used
+
+
+```{r render-21d, results = "asis"}
+sa4ss::read_child("21data-sources-not-used.Rmd")
 ```
 
+## Biology
 
-```{r render-21h, results = "asis"}
-sa4ss::read_child("21h-survey-ccfrp.Rmd")
+```{r render-2, results = "asis"}
+sa4ss::read_child("22biology.Rmd")
 ```
 
-
-
-
-### Data sources considered, but not used
-
-
-
-
-```{r render-21, results = "asis"}
-sa4ss::read_child("21commercial.Rmd")
-```
-
-```{r render-21, results = "asis"}
-sa4ss::read_child("21commercial.Rmd")
-```

@@ -4,6 +4,47 @@ The base model parameter estimates along with approximate asymptotic standard er
 
 ### Parameter Estimates
 
+```{r parameters, include = FALSE, eval = TRUE, cache = TRUE}
+# get parameter names from base model
+estimated_pars <- model$parameters %>%
+  dplyr::filter(!is.na(Active_Cnt)) %>%
+  rownames()
+```
+
+The base model has a total of `r length(estimated_pars)` estimated parameters
+(Figure \@ref(tab:params)) that can be grouped into the following
+categories and are described in more detail in the following sections:
+
+Biological parameters  
+- 2 natural mortality parameters (female and male $M$)
+- 10 growth parameters, where females and males each had
+- 3 Schnute growth parameters (length at age frog, length at age frog, and $k$)
+- 2 parameters controlling variability in growth, the CV in length at age 0.5
+  and the CV in length at age 14 with a linear ramp in length-at-age
+
+Stock-recruit parameters  
+- `r 2 + nrow(model$recruit)` recruitment parameters  
+- $log(R_0)$ controlling equilibrium recruitment  
+- `r nrow(model$recruit)` recruitment deviations parameters covering the range  
+  `r min(model$recruit$Yr)`-`r max(model$recruit$Yr)`, with 
+  `r min(model$recruit$Yr[model$recruit$era=="Main"])`-`r max(model$recruit$Yr[model$recruit$era=="Main"])`
+  representing the "main" period modeled as a zero-centered deviation vector  
+  
+Index parameters  
+- `r sum(sum(grepl("Q_extra", estimated_pars)))` extra standard deviation parameters
+for indices  
+
+Selectivity parameters  
+- `r sum(grepl("Size_DblN", estimated_pars))` selectivity parameters, of which
+`r sum(grepl("Size_DblN.*BLK", estimated_pars))` represented changes over time  
+
+### Fixed parameters
+
+
+- $h$ controlling the steepness of the stock-recruit relationship
+- $M$ for male
+
+
 
 
 ### Growth (Length-at-Age)
@@ -38,8 +79,32 @@ Males $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Mal_GP_1[1], 1)` cm; $k$
 
 ### Fits to the Data
 
+Model fits to the indices of abundance, fishery length composition, survey length 
+composition, and conditional age-at-length observations are all discussed below. 
+The full r4ss plotting output is available in the supplementary material.
+
 ### Population Trajectory
 
 ### Reference Points
+
+
+Figure \@ref(fig:bh-curve)
+Figure \@ref(fig:bh-resids)
+
+
+Reference points were calculated using the estimated selectivities and catch distribution among fleets in the most recent year of the model, `r endyr`. 
+Sustainable total yield (landings plus discards) was 
+`r round(model$derived_quants[model$derived_quants$Label == 'Dead_Catch_SPR', 'Value'], 2)` mt when using an $SPR_{50\%}$ 
+reference harvest rate. The spawning output equivalent to 40% of the unfished level ($SB_{40\%}$) was `r round(model$derived_quants[model$derived_quants$Label == 'SSB_SPR', 'Value'], 2)` 
+million eggs. 
+
+The predicted spawning output from the base model shows frogs (Figure \@ref(fig:ssb)).  The spawning output then frogs.
+
+The `r endyr`. spawning biomass relative to unfished equilibrium spawning biomass is above the target of 40% of unfished levels (Figure \@ref(fig:depl)). 
+The relative fishing intensity, $(1-SPR)/(1-SPR_{50\%})$, was above the management target frogs (Figure \@ref(fig:1-spr)). The relative fishing intensity has been frogs (Figure \@ref(fig:phase)).
+
+Table \ref{tab:ref-pts} shows the full suite of estimated reference points for the base model and Figures \@ref(fig:yield2) and \@ref(fig:yield3) show the equilibrium curve based on a steepness value fixed at `r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"], 2)`.
+
+
 
 

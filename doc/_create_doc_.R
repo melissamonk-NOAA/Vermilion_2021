@@ -57,7 +57,7 @@ source("code/dir_recent.R")
 dir.path = c("C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/",
              "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/")
 
-
+doc_dir <- "C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc"
 #North
 model.dir <- dir_recent(dir = dir.path[1], pattern = "Verm")
 base_loc <- paste0(model.dir)
@@ -67,7 +67,7 @@ setwd(base_loc)
 sa4ss::read_model(
   mod_loc = base_loc,
   create_plots = TRUE, 
-  save_loc = file.path(getwd(), "tex_tables"),
+  save_loc = file.path(doc_dir, "tex_tables/north"),
   verbose = TRUE)
 
 
@@ -81,7 +81,7 @@ setwd(base_loc)
 sa4ss::read_model(
   mod_loc = base_loc,
   create_plots = TRUE, 
-  save_loc = file.path(getwd(), "tex_tables"),
+  save_loc = file.path(file.path(doc_dir, "tex_tables/south")),
   verbose = TRUE)
 
 
@@ -108,18 +108,20 @@ bookdown::render_book("00a.Rmd", output_dir = getwd(), clean = FALSE,
                       config_file = "_bookdown_north.yml",
                       params = list(model = set.model))
 
-
-
+stop()
 
 
 
 #SOUTHERN MODEL
+system("taskkill /f /im Acrobat.exe")
 set.model = "south"
 setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")
 #make southern model 
 bookdown::render_book("00a.Rmd", output_dir = getwd(), clean = FALSE, 
                       config_file = "_bookdown_south.yml",
                       params = list(model = set.model))
+
+
 setwd("..")
 
 bookdown::render_book("11introduction.Rmd")

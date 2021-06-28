@@ -26,18 +26,20 @@ header-includes:
   - \usepackage{makecell}
   - \usepackage{xcolor}
   - \usepackage{placeins}
+  - \usepackage{enumerate}
 lang: en
 papersize: a4
 ---
 
 <!-- Common lat/long 
-Cape Mendocino, Pt. Conception and OR boder -->
+Cape Mendocino, Pt. Conception and OR border -->
 \newcommand\CapeM{$40^\circ 10^\prime N$}
 \newcommand\PtC{$34^\circ 27^\prime N$}
 \newcommand\CAOR{$42^\circ 00^\prime N$}
 
 
 ```{r opts, include = FALSE}
+library(kableExtra)
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 knitr::knit_hooks$set(plot = function(x,options) {
       base = knitr::opts_knit$get('base.url')
@@ -50,8 +52,9 @@ knitr::knit_hooks$set(plot = function(x,options) {
         sprintf('![%s](%s%s)', cap, base, x)
         }
   })
-options(knitr.duplicate.label = "allow")
-options(knitr.kable.NA = '')
+options(knitr.duplicate.label = "allow") #allow duplicate labels - needed for longtable
+options(knitr.kable.NA = '') #print blank cells in tables with NA
+
  
 source("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/code/dir_recent.R")
 dir.path <- ifelse(params$model=="north",
@@ -68,14 +71,25 @@ if (is.null(params$model) & file.exists("00mod.Rdata")) {
   load(dir(base_loc, pattern = "00mod.Rdata", full.names = TRUE))
 }
 
-
+model.area <- ifelse(params$model=="north", "NCA", "SCA")
 spp = 'vermilion rockfish'
 Spp = 'Vermilion rockfish'
 fig_loc = paste0(getwd(), "/figures")
 table_loc = paste0(getwd(), "/tables")
+tex_tables_loc = paste0(getwd(),"/tex_tables/", params$model)
+tex_parent_loc = paste0(getwd(),"/tex_tables/")
+#move the tex tables to the parent folder depending on which model you're working on 
+#best solution I have so far
+files <- list.files(path = tex_tables_loc, full.names = TRUE)
+files_new <- gsub(dirname(files[1]), tex_parent_loc, files)
+for (i in 1:length(files)){
+  file.copy(files[i], files_new[i])
+}
+
+
 # model_loc = "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/"
 
-model.area <- ifelse(params$model=="north", "NCA", "SCA")
+
 
 if(params$model=="north"){
 model$FleetNames_parsed <- c("commercial hook-and-line fishery",
@@ -102,7 +116,8 @@ model$FleetNames_parsed <- c("commercial hook-and-line fishery",
                            "NWFSC hook-and-line survey",
                            "West Coast Groundfish Bottomfish Trawl Survey",
                            "recreational PC onboard survey",
-                           "CDFW reserach (aka green binder)")
+                           "CDFW reserach (aka green binder)",
+                           "Dummy fleet")
 }
 
 model$FleetNames_label <- stringr::str_replace_all(model$FleetNames, "_", "-")

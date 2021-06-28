@@ -26,160 +26,22 @@ header-includes:
   - \usepackage{makecell}
   - \usepackage{xcolor}
   - \usepackage{placeins}
+  - \usepackage{enumerate}
 lang: en
 papersize: a4
 ---
 
-```{r opts, include = FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
-knitr::knit_hooks$set(plot = function(x,options) {
-      base = knitr::opts_knit$get('base.url')
-      if (is.null(base)) base = ''
-      alt = ifelse (is.null(options$alt),"",options$alt)
-      cap = ifelse (is.null(options$caption),"",options$caption)
-      if (alt != ""){
-        sprintf('![%s](%s%s "%s")', cap, base, x, alt)
-      } else {
-        sprintf('![%s](%s%s)', cap, base, x)
-        }
-  })
 
-source("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/code/dir_recent.R")
-dir.path <- ifelse(params$model=="north",
-             "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/",
-             "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/")
-model.dir <- dir_recent(dir = dir.path, pattern = "Verm")
-base_loc <- paste0(model.dir)
-
-
-if (is.null(params$model) & file.exists("00mod.Rdata")) {
-  stopifnot(file.exists("00mod.Rdata"))
-  load("00mod.Rdata")
-} else {
-  load(dir(base_loc, pattern = "00mod.Rdata", full.names = TRUE))
-}
-
-
-spp = 'vermilion rockfish'
-Spp = 'Vermilion rockfish'
-fig_loc = paste0(getwd(), "/figures")
-table_loc = paste0(getwd(), "/tables")
-# model_loc = "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/"
-
-model.area <- ifelse(params$model=="north", "NCA", "SCA")
-
-if(params$model=="north"){
-model$FleetNames_parsed <- c("commercial hook-and-line fishery",
-                           "commercial trawl fishery",
-                           "commercial net fishery",
-                           "recreational PC retained fishery",
-                           "recreational PC discard fishery",
-                           "recreational PR retained fishery",
-                           "recreational PR discard fishery",
-                           "Deb Wilson-Vandenberg onboard survey",
-                           "West coast groundfish bottomfish trawl survey",
-                           "recreational PC onboard survey",
-                           "Abrams thesis research survey",
-                           "SWFSC groundfish ecology survey",
-                           "California Collaborative Fisheries Research Project survey")
-} else {
-model$FleetNames_parsed <- c("commercial hook-and-line fishery",
-                           "commercial trawl fishery",
-                           "commercial net fishery",
-                           "recreational PC retained fishery",
-                           "recreational PC discard fishery",
-                           "recreational PR retained fishery",
-                           "recreational PR discard fishery",
-                           "NWFSC hook-and-line survey",
-                           "West Coast Groundfish Bottomfish Trawl Survey",
-                           "recreational PC onboard survey",
-                           "CDFW reserach (aka green binder)")
-}
-
-model$FleetNames_label <- stringr::str_replace_all(model$FleetNames, "_", "-")
-
-fleet_info = data.frame(cbind(model$fleet_ID, model$FleetNames, model$FleetNames_label, model$FleetNames_parsed))
-colnames(fleet_info) = c("fleet_ID", "FleetNames", "FleetNames_label", "FleetNames_parsed")
-
-plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
-
-
-```
 
 <!--chapter:end:00a.Rmd-->
 
----
-author:
-  - name: Melissa H. Monk
-    code: 1
-    first: M
-    middle: H
-    family: Monk
-  - name: E. J. Dick
-    code: 1
-    first: E
-    middle: J
-    family: Dick
-  - name: John C. Field
-    code: 1
-    first: J
-    middle: C
-    family: Field
-  - name: Emma M. Saas
-    code: 1
-    first: E
-    middle: M
-    family: Saas
-author_list: Monk, M.H., E.J. Dick, J.C. Field, E.M. Saas
-affiliation:
-  - code: 1
-    address: Southwest Fisheries Science Center, U.S. Department of Commerce, National
-      Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110
-      McAllister Way, Santa Cruz, California 95060
-address: ^1^Southwest Fisheries Science Center, U.S. Department of Commerce, National
-  Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110 McAllister
-  Way, Santa Cruz, California 95060
----
+
+
 
 <!--chapter:end:00authorsnorth.Rmd-->
 
----
-author:
-  - name: E. J. Dick
-    code: 1
-    first: E
-    middle: J
-    family: Dick
-  - name: Melissa H. Monk
-    code: 1
-    first: M
-    middle: H
-    family: Monk
-  - name: Tanya L. Rogers
-    code: 1
-    first: T
-    middle: L
-    family: Rogers
-  - name: John C. Field
-    code: 1
-    first: J
-    middle: C
-    family: Field
-  - name: Emma M. Saas
-    code: 1
-    first: E
-    middle: M
-    family: Saas
-author_list: Dick, E.J., M.H. Monk, T.L. Rogers, J.C. Field, E.M. Saas
-affiliation:
-  - code: 1
-    address: Southwest Fisheries Science Center, U.S. Department of Commerce, National
-      Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110
-      McAllister Way, Santa Cruz, California 95060
-address: ^1^Southwest Fisheries Science Center, U.S. Department of Commerce, National
-  Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110 McAllister
-  Way, Santa Cruz, California 95060
----
+
+
 
 <!--chapter:end:00authorssouth.Rmd-->
 
@@ -214,53 +76,23 @@ title: The status of Vermilion Rockfish (_Sebastes miniatus_) and Sunset Rockfis
 
 <!--chapter:end:01a.Rmd-->
 
-```{r executive, echo = FALSE}
-executive <- list()
-executive[["stock"]] <- paste0("This assessment reports the status of the 
-Vermilion Rockfish (_Sebastes miniatus_) and Sunset Rockfish 
-(_Sebastes crocotulus_) in U.S. waters off the coast of California south
-  of Pt. Conception through 2020.")
-```
+
 # Executive Summary{-}
-To be completed after the STAR panel.
+
+Placeholder
+
 
 ## Stock{-}
-This assessment reports the status of the vermlion rockfish (_Sebastes miniatus_) 
-and sunset rockfish (_Sebastes crocotulus_) complex (referred to as vermilion 
-throughout), resource in U.S. waters off the coast of California `r params$model` 
-of Point Conception ($34^\circ 27^\prime$ N. latitude) using data 
-through 2020.
-
-
 ## Landings{-}
-Replace text.
-
 ## Data and Assessment{-}
-Replace text.
-
 ## Stock Biomass{-}
-Replace text.
-
 ## Recruitment{-}
-Replace text.
-
 ## Exploitation Status{-}
-Replace text.
-
 ## Reference Points{-}
-Replace text.
-
 ## Management Performance{-}
-Replace text.
-
 ## Unresolved Problems and Major Uncertainties{-}
-Replace text.
-
 ## Decision Table{-}
-Replace text.
-
 ## Research and Data Needs{-}
-Replace text.
 
 <!--chapter:end:01executive.Rmd-->
 
@@ -277,13 +109,13 @@ Replace text.
 
 # Introduction
 
-## Basic Information
+```{r render-12, results = "asis"}
+sa4ss::read_child("12basicinfo.Rmd")
+```
 
 
-
-```{r introfiles, results = "asis"}
-files_intro <- dir('.', pattern = '^1[2-9][a-z]*\\.Rmd', full.names = TRUE)
-ignore <- mapply(sa4ss::read_child, files_intro)
+```{r render-13, results = "asis"}
+sa4ss::read_child("13fisheries.Rmd")
 ```
 
 
@@ -291,113 +123,77 @@ ignore <- mapply(sa4ss::read_child, files_intro)
 
 
 
-##Basic Information and Life History
-
-
-
-
-*Population Structure and Complex Assessment Considerations*
-
-Provided by John Harms (NWFSC)
-
-A group of researchers from the NWFSC and SWFSC is collaborating on a project to genotype tissue specimens collected from the vermilion and sunset rockfish cryptic pair captured during the West Coast Groundfish Bottom Trawl Survey and the Southern CA Shelf Rockfish Hook and Line Survey for the years 2004 - 2019.  Funding for this project was obtained through the Saltonstall-Kennedy program for FY 2020 through a proposal led by representatives from Pacific States Marine Fisheries Commission and the commercial passenger fishing vessel industry in southern California.  
-
-After combining with specimens obtained through other collection efforts along the West Coast, approximately 25,000 tissue specimens will be analyzed.  Some earlier efforts to separate this cryptic pair to species used mitochondrial DNA (mtDNA) markers.  However, due to a one-way mitochondrial introgression from the vermilion genome into the sunset genome, a portion of the sunset rockfish population contains mitochondrial DNA sequences consistent with vermilion rockfish resulting in incorrect species assignments for these introgressed individuals during the prior research project.  The current research has identified a robust suite of genetic markers within the nuclear genomes of the two species that definitively separates vermilion and sunset rockfish (including  introgressed sunset rockfish), canary rockfish, first generation vermilion-sunset hybrids, and identifies emerging patterns of intraspecific stock structure within the two sister species.
-
-Once the collected specimens have been genotyped, any species-specific differences in spatial and depth distribution, size composition, weight-length relationships, and other biological characteristics will be identified.  Using previously collected otoliths and ovaries, the demographics of the two species including age and growth and reproductive biology parameters such as length and age at 50\% maturity and the prevalence of skip spawning will be explored and compared.  These new genotyping results will be combined with data from the prior mtDNA work to  evaluate whether introgressed sunset rockfish represent a biologically intermediate subform of the species complex.  The effort also proposes to develop and test the efficacy of models to predict the relative proportion of the two species based upon explanatory variables including latitude, depth, species of co-occurrence, oceanographic parameters, habitat descriptors and/or other information.  The anticipated completion of the genotyping of all specimens is approximately December 2021 with provision of final results by the end of FY 2022.
-
-This research is aimed at providing information to support the successful stock assessment of this commercially and recreationally valuable cryptic species pair and is responsive to any data gaps identified by the assessment community.  If successful, this research, conducted in close communication with stock assessors, may also assist the PFMC in establishing best practices for the assessment and management of cryptic species complexes.  Though this project will only focus on nominal vermilion rockfish specimens collected through the 2019 survey field season, it may be advisable that tissue specimens collected aboard fishery-independent surveys as well as through fishery-dependent programs continue to be genotyped on an ongoing basis to support continued and timely monitoring of this economically and ecologically important species complex.
-
-
+## Basic Information and Life History
 ## Early Life History
-
-
-##Map
-
-
-
-
-##Ecosystem Considerations
-
-
-
-
 
 <!--chapter:end:12basicinfo.Rmd-->
 
+
+
 ## Historical and Current Fishery Information
-Replace text.
-
-## Summary of Management History and Performance
-Replace text.
-
-
-
-##Management Performance
-
+## Summary of Management History
+## Management Performance
 ## Foreign Fisheries
-Replace text.
-
-
 
 <!--chapter:end:13fisheries.Rmd-->
 
+
 # Data
 
-
-Descriptions of each data source included in the model (Figure \ref{fig:data-plot})
-and sources that were explored but not included
-are provided below.
-
-## Fishery-Dependent data
+Placeholder
 
 
-
-
-
-
-
+## Fishery-Dependent Data
 ## Fishery-Independent data
-
-
-
-
-
-
-
 ### Data sources considered, but not used
 
 <!--chapter:end:20data.Rmd-->
 
-## Fishery-Dependent Data
-
-###Commercial Landings and Discards
+### Commercial Landings and Discards
 
 *Commercial Landings Prior to 1916*
 
 For landings estimates prior to 1916, we based our reconstruction on the total rockfish catches reported in a summary of early California fisheries landings by Sette and Fielder [-@Sette1928] for the years 1888, 1892, 1895, 1899, 1904, 1908 and 1915.  No rockfish were reported for 1888, thus we assumed no catches for that year and interpolated the catches between 0 and the 1892 catches (total of 834 tons) reported.  Similarly, catches between the reported years were interpolated assuming a straight linear trend between the years reported.  We used a ratio-estimator derived from the catch reconstruction fraction of vermillion rockfish in total rockfish landings for the 1916 to 1919 period (the ratio for a comparable five year period was nearly identical).  We apportioned the catches north and south of Point Conception based on ratio estimators that used the same assumptions used to apportion catches in the reconstruction time period (1916-1968).  The catch reconstruction estimates indicated that vermillion made up slightly under 1% of the total rockfish catches during the early (1916-1919) time period, although the estimates indicate a slightly larger fraction (1.5%) of total catches south of Conception relative to the fraction of total catches to the north (0.9%).  However, it is likely that the reconstruction is overestimating the fraction of smaller and/or more deeply distributed species relative to larger, shallower species as the reconstruction is based on the species composition data collected from market category samples in the late 1970s and early 1980s.  The fishery has been shown to have progressed over time from a shallower, more nearshore distribution of effort to one in which deeper and more offshore waters were targeted [@Miller2014].  The notion that vermillion catches may have been greater is also consistent with the recognition by Roedel [-@Roedel1948] that during the 1930s and 1940s vermillion were “One of the more important commercial species, it is one of three leading species in Southern California." However, by the time of that report, vermillion represented 5 to 8% of the southern California catch (based on Ralston et al. [-@Ralston2010]), much more than at the beginning of the time series.  Future efforts to improve historical catch reconstructions by accounting for the shift in effort over time to deeper waters should continue to be flagged as a research need. 
 
 
-<!--chapter:end:21commercial.Rmd-->
+*Commercial Landings, 1916-1968*
+
+
+
+
+
+*Commercial Landings, 1969-1983*
+
+
+*Commercial Landings, 1984-2000*
+
+
+*Commercial Discard, 1900-2000*
+
+*Commercial Landings and Discard, 2001-2020*
+
+
+*Commercial length composition data*
+
+
+
+*Commercial age composition data*
+
+<!--chapter:end:21data-a-commercial.Rmd-->
+
+
+
+### Recreational Landings and Discard
+
+<!--chapter:end:21data-b-recreational.Rmd-->
+
+
 
 ## Fishery-Independent Data
-
-<!--chapter:end:21d-survey-mrfss.Rmd-->
-
-## Fishery-Independent Data
-
-<!--chapter:end:21e-survey-crfs.Rmd-->
-
+### \acrlong{s-ccfrp}
 ### \acrlong{s-wcgbt}
 
-The \Gls{s-wcgbt} is based on a random-grid design;
-covering the coastal waters from a depth of 55-1,280 m [@bradburn_2003_2011].
-This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two 'passes' of the coast.
-Two vessels fish from north to south during each pass between late May to early October.
-This design therefore incorporates both vessel-to-vessel differences in catchability,
-as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.
-
-<!--chapter:end:21f-survey-wcgbts.Rmd-->
+<!--chapter:end:21data-c-fishery-independent.Rmd-->
 
 ### \acrlong{s-tri}
 
@@ -419,30 +215,6 @@ The surveys in 1989 and 1992 covered the same depth range but extended the south
 From 1995 through 2004, the surveys covered the depth range 55-500 m and surveyed south to 34.5\textdegree N.
 In 2004, the final year of the \gls{s-tri} series, the \gls{nwfsc} \gls{fram} conducted the survey following similar protocols to earlier years.
 
-<!--chapter:end:21g-survey-nwfschl.RMd-->
-
-### \acrlong{s-ccfrp}
-
-Since 2007, the \Gls{s-ccfrp} has monitored several areas in California to evaluate the performance of \Gls{mpa}s
-and understand nearshore fish populations
-[@Wendt2009; @Starr2015].
-In 2017, the survey expanded beyond the four \Gls{mpa}s in central California
-(A&ntilde;o Nuevo, Point Lobos, Point Buchon, and Piedras Blancas)
-to include the entire California coast.
-Fish are collected by volunteer anglers aboard \Gls{cpfv}s guided by one of the following academic institutions based on proximity to fishing location:
-Humboldt State University;
-Bodega Marine Laboratories;
-Moss Landing Marine Laboratories;
-Cal Poly San Luis Obispo;
-University of California, Santa Barbara; and
-Scripps Institution of Oceanography.
-
-Surveys consist of fishing with hook-and-line gear for 30-45 minutes within randomly chosen 500 by 500 m grid cells within and outside \Gls{mpa}s.
-Prior to 2017, all fish were measured for length and release or descended to depth;
-since then, some were sampled for otoliths and fin clips.
-
-
-<!--chapter:end:21h-survey-ccfrp.Rmd-->
 
 ### \acrlong{s-aslope}
 
@@ -450,182 +222,100 @@ The \gls{s-aslope} operated during the months of October to November aboard the 
 Partial survey coverage of the US west coast occurred during the years 1988-1996 and complete coverage (north of 34\textdegree 30\textquotesingle S) during the years 1997 and 1999-2001.
 Typically, only these four years that are seen as complete surveys are included in assessments.
 
-<!--chapter:end:21s-aslope.Rmd-->
+<!--chapter:end:21data-sources-not-used.RMd-->
+
+
 
 ## Biological Data
-
-
 ### Length and Age Compositions
-
-Differences in length compositions and length-at-age were explored 
-north and south of Pt. Conception prior to any modelling. There are 
-currently no available data to separate sunset and vermilion rockfishes.
-
-
-Length compositions were provided from the following sources:
-
-*North of Pt. Conception*
-
-* Commercial sources
-  + CALCOM (1978-2020)
-* Recreational sources
-  + Miller and Gotshall dockside survey (1959-1960)
-  + CPFV samples from Commercial port samplers (1978-1979)
-  + Deb Wilson-Vandenberg's onboard observer survey (1988-1998)
-  + MRFSS dockside survey (1980-2003)
-  + CRFS onboard and dockside survey (2004-2019)
-* Fishery-independent surveys
-  + CCFRP hook-and-line survey (2007-2018)
-  + West Coast Groundfish Bottown Trawl Survey (2003-2019)
-
-
-
-*South of Pt. Conception*
-
-* Commercial sources
-  + CALCOM (1978-2020)
-* Recreational sources
-  + Ally et al. onboard observer survey (1986-1989)
-  + Collins and Crooke onboard observer survey (1975-1978)
-  + MRFSS dockside survey (1980-2003)
-  + CRFS onboard and dockside survey (2004-2018)
-* Fishery-independent surveys
-  + NWFSC Hook-and-Line Survey (2004-2019)
-  + West Coast Groundfish Bottown Trawl Survey (2003-2019)
-
-
-
-The length composition of all fisheries aggregated across time by fleet is in Figure
-\ref{fig:comp_lendat_aggregated_across_time} and Table xxx. 
-Descriptions and details of the length composition data are in the above section 
-for each fleet or survey.
-
 ### Age Structures
-
-
-**External Fits to Growth**
-
-
-Fits to the von Bertalanffy growth curve, 
-$L_i = L_{\infty}e^{(-k[t-t_0])}$, where $L_i$ is the length (cm) at age $i$, $t$ is age in 
-years, $k$ is rate of increase in growth, $t_0$ is the intercept, and $L_{\infty}$ 
-is the asymptotic length, were explore by species and sex. 
-
-
-
 ### Ageing Precision and Bias
-
-Uncertainty in ageing error was estimated using a collection of 357 `r spp` 
-otoliths with two age reads between the NWFSC (reader 1, B. Kamikawa) and the 
-SWFSC (reader 2, D. Watters) (Figure \@ref(fig:reader1reader2)).
-Age-composition data used in the model were from a number of sources described 
-above. The same readers aged otoliths for both `r spp` stock assessmetnt models. 
-Age reader 1 read all of the otoliths for the southern model and both readers read 
-otoliths for the northern California model. In addition to the otoliths from these 
-two regions, the same two readers aged fish for a Committee of Age Reading Experts 
-(CARE)exchange among four ageing labs, initiated by the SWFSC.
-
-Ageing error was estimated using publicly available software [@Thorson2012].
-The software setting for bias was set to unbiased for reader 1 who was more 
-experienced. The $\Delta AIC$ among the top three models was less than two. The 
-best fitting model selected curvilinear bias for reader 1 and curvilinear standard 
-deviation for both readers.  
-An analysis of ageing error removing one fish aged at 88 by reader 1 and 78 by reader 2 
-selected the the model with reader 2 as unbiased and curvilinear standard deviation 
-(Figure \@ref(fig:oldfish)). The reading of the oldest aged fish falls within the 95\% confidence 
-internal using this model (Figure \@ref(fig:truereads)).  
-The latter model was selected for use in the assessment. 
- 
-
-The resulting estimate indicated a standard deviation in age readings 
-increasing from 0.001 years at age 0 to a standard deviation of 2.37 years at age 70, 
-the first year of the plus group in the assessment model.
-
-
-
 ### Maturation and Fecundity
-
-
-
 ### Natural Mortality
-
-Natural mortality was not directly measured, so life-history based empirical relationships were used. The Natural Mortality Tool (NMT; https://github.com/shcaba/Natural-Mortality-Tool), a Shiny-based graphical user interface allowing for the application of a variety of natural mortality estimators based on measures such as longevity, size, age and growth, and maturity, was used to obtain estimates of natural mortality. The NMT currently provides 19 options, including the Hamel [-@Hamel2015] method, which is a corrected form of the Then et al. [-@Then2018] functional regression model and is a commomly applied method for west coast groundfish. The NMT also allows for the construction of a natural mortality prior weighted across methods by the user. 
-
-
-
-
 ### Sex Ratio
-
-No information on the sex ratio at birth was available so it was assumed to be 50:50. 
-
-
 ### Length-Weight Relationship
-
-The length(cm)-weight(kg) relationship for `r spp` was estimated outside the 
-model using California biological data available from fishery-independent 
-data sources. The estimated length-weight relationship for female fish was $W$=`r format(model$MGparmAdj$Wtlen_1_Fem[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Fem[1],2)`^ and males at $W$=`r format(model$MGparmAdj$Wtlen_1_Mal[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Mal[1], 2)`^ (Figure xx).
-
-
-
 ### Steepness
-
-The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) and reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017, has been a primary source of information on steepness for rockfishes. This approach, however, was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absence of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 prior for steepness ($h$; beta distribution with $\mu$=`r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"],2)` and $\sigma$=0.15) is retained.  
 
 <!--chapter:end:22biology.Rmd-->
 
-## Fishery-Dependent Data
-
-<!--chapter:end:22recreational.Rmd-->
-
-## Environmental and Ecosystem Data
-
-<!--chapter:end:23enviro.Rmd-->
-
-## Fishery-Dependent Data
-
-<!--chapter:end:23surveys.Rmd-->
-
-
-
-
-
-<!--chapter:end:30model-platform.Rmd-->
-
-
-
-
-
-<!--chapter:end:30model-previous-assess.Rmd-->
-
-
-
-
-
-<!--chapter:end:30model-priors.Rmd-->
 
 # Assessment Model
 
+Placeholder
 
 
-
-
-
-
+## Summary of Previous Assessments and Reviews
+### History of Modeling Approaches
+### Most Recent STAR Panel and SSC Recommendations 
 
 <!--chapter:end:30model.Rmd-->
 
 ## Summary of Previous Assessments and Reviews
 
+### History of Modeling Approaches
 
-### History of Modeling Approaches (not required for an update assessment)
+This is the first full assessment for vermilion rockfish. 
+Vermilon was assessed coastwide as a data poor species using 
+Depletion-Based Stock Reduction Analysis (DB-SRA) [@Dick2010]. The DB-SRA 
+model assigned a frog% probability that the then recent (2008-2009) catch 
+exceeded the 2010 OFL.
+
+A 2005 assessment was not accepted for management and a 2013 data moderate 
+assessment was prepared, but not reviewed.
 
 
-### Most Recent STAR Panel and SSC Recommendations (not required for an update assessment)
+### Most Recent STAR Panel and SSC Recommendations 
+
+None.
 
 
-### Response to Groundfish Subcommittee Requests (not required in draft)
+### Response to STAR Panel Requests (not required in draft)
 
-<!--chapter:end:31summary.Rmd-->
+
+
+
+<!--chapter:end:31model-star-responses.Rmd-->
+
+## Model Structure and Assumptions
+
+
+### Transition to the Current Stock Assessment
+
+
+### Model Specifications
+
+### Modeling Platform and Structure
+General model specifications (e.g., executable version, model structure, definition of fleets and areas)
+
+
+
+### Summary of Data for Fleets and Areas
+
+### Other Specifications
+
+
+
+### Model Parameters
+Describe estimated vs. fixed parameters, priors
+
+<!--chapter:end:32model-description-north.Rmd-->
+
+## Model Structure and Assumptions
+
+
+### Model Changes from the Last Assessment
+
+
+### Modeling Platform and Structure
+General model specifications (e.g., executable version, model structure, definition of fleets and areas)
+
+
+### Model Parameters
+Describe estimated vs. fixed parameters, priors
+
+### Key Assumptions and Structural Choices
+
+<!--chapter:end:32model-description-south.Rmd-->
 
 ## Model Structure and Assumptions
 
@@ -642,55 +332,18 @@ Describe estimated vs. fixed parameters, priors
 
 ### Key Assumptions and Structural Choices
 
-<!--chapter:end:32structure.Rmd-->
+<!--chapter:end:34model-prestar-base-selection.Rmd-->
 
-## Base Model Results
 
-The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \ref{tab:likes}. Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \ref{tab:referenceES}. Estimates of stock size and status over time are shown in Table \ref{tab:timeseries}. 
 
+## Pre-STAR Base Model Results
 ### Parameter Estimates
-
-
-
 ### Growth (Length-at-Age)
-```{r}
-# calculate Linf and t0 from Schnute vB parameterization
-unSchnute.fn <- function(Amin, Amax, Lmin, Lmax, k)
-{
-   Linf <- Lmin + (Lmax-Lmin)/(1-exp(-k*(Amax-Amin)))
-   t0   <- Amin + Amax - (1/k)*log((exp(k*Amax)*Lmax - exp(k*Amin)*Lmin)/(Lmax-Lmin))
-   out  <- c(Linf, t0)
-   names(out) <- c("Linf","t0")
-   return(out)
-}
-# vermilion example
-# females
-unSchnute.fn(0, 30, 8.3113, 53.6773, 0.1679070)
-# for males,  apply exponential offsets to the female values
-unSchnute.fn(0, 30, 8.3113*exp(-2.3422300), 53.6773*exp(-0.0667862), 0.1679070*exp(0.2930410))
-```
-
-\begin{centering}
-
-Females $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Fem_GP_1[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Fem_GP_1[1], 3)`; $t_0$ = `r round(model$Growth_Parameters[1,10], 2)`
-
-Males $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Mal_GP_1[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Mal_GP_1[1], 3)`; $t_0$ = `r round(model$Growth_Parameters[2,10], 2)`
-
-\end{centering}
-
-\vspace{0.5cm}
-
-
-
 ### Fits to the Data
-
 ### Population Trajectory
-
 ### Reference Points
 
-
-
-<!--chapter:end:33results.Rmd-->
+<!--chapter:end:35model-prestar-base-results.Rmd-->
 
 ## Model Diagnostics
 Describe all diagnostics
@@ -705,344 +358,134 @@ Describe all diagnostics
 
 ### Unresolved Problems and Major Uncertainties
 
-<!--chapter:end:34diagnostics.Rmd-->
+<!--chapter:end:36model-uncertainty.Rmd-->
 
-# Management 
+# Reference Points
 
-## Reference Points
+# Harvest Projections and Decision Tables
 
-## Unresolved Problems and Major Uncertainties
+# Regional Management COnsiderations
 
-## Harvest Projections and Decision Tables
+# Unresolved Problems and Major Uncertainties
 
-## Evaluation of Scientific Uncertainty
-
-## Research and Data Needs
+# Research and Data Needs
 
 <!--chapter:end:40management.Rmd-->
 
 # Acknowledgments
 Here are all the mad props!
 
-<!--chapter:end:41acknowledgments.Rmd-->
+<!--chapter:end:41acknowledgements.Rmd-->
 
-\clearpage
+\floatplacement{table}{H}
+
 # Tables
 
+```{r render-51, results = "asis"}
+sa4ss::read_child("51tables-catch.Rmd")
+```
 
-<!--chapter:end:50tables.Rmd-->
-
-\clearpage
-# Figures
-
-
-
-
-```{r figurefiles, results = "asis"}
-files_figures <- dir('.', pattern = '^6[2-9][a-z]*\\.Rmd', full.names = TRUE)
-ignore <- mapply(sa4ss::read_child, files_figures)
+```{r render-52, results = "asis"}
+sa4ss::read_child("52tables-compsamplesize.Rmd")
 ```
 
 
+```{r render-59, results = "asis"}
+sa4ss::read_child("59tables-execsummary.Rmd")
+```
+
+<!--chapter:end:50tables.Rmd-->
 
 
-\newpage
+```{r, warning = FALSE, inclue = FALSE}
+landings <- readxl::read_xlsx("./tables/landings.xlsx", sheet = model.area) %>%
+  rename(fleet_ID = Fleet) %>%
+  mutate(fleet_ID = as.character(fleet_ID))
+landings <- inner_join(landings,fleet_info)
+landings <- landings %>% 
+  mutate(Fleet = paste0(FleetNames, "(",fleet_ID,")")) %>%
+  dplyr::select(Year, Fleet, Catch) %>%
+  tidyr::pivot_wider(names_from = Fleet, values_from=Catch)  %>%
+   mutate(`Total commerical` = rowSums(dplyr::across(`COM_HKL(1)`:`COM_NET(3)`), na.rm=TRUE)) %>%
+   mutate(`Total recreational` = rowSums(dplyr::across(`REC_PC(4)`:`REC_PR_DIS(7)`), na.rm=TRUE))  %>%
+   mutate(`Total catch` = `Total commerical` + `Total recreational`)
+
+```
+
+
+```{r, catches, results = 'asis'}
+library(kableExtra)
+kableExtra::kbl(landings, longtable = TRUE, booktabs = TRUE, 
+  caption = "Landings of vermilion fleet and year.",
+) %>%
+  kableExtra::kable_styling(latex_options = "repeat_header")#, full_width = FALSE)
+```
+
+<!--chapter:end:51tables-catch.Rmd-->
+
+
+
+
+<!--chapter:end:52tables-compsamplesize.Rmd-->
+
+
+```{r, warning = FALSE, inclue = FALSE}
+management <- readxl::read_xlsx("./tables/VRML_management_history.xlsx", sheet = "Management")  %>%
+  mutate_at(2:12, funs(round(.,2)))
+management$Area_landings = c("OFL", "ABC", "Total landings", 
+                             "CA rec landings", "OR rec landings", 
+                             "WA rec landings","Commercial landings", 
+                             "OFL", "ABC", "Total Landings", 
+                             "CA rec landings", "Commercial landings")
+colnames(management)[1] = ""
+
+```
+
+
+```{r,management, results = 'asis'}
+kableExtra::kbl(management, booktabs = TRUE, 
+  caption = "Annual estimates of total mortality, overfishing limit (OFL), acceptable biological catch (ABC), annual catch limit (ACL) for vermilion. The ABC is equal to the ACL.  Data were obtained from the GEMM reports.",
+  escape = FALSE) %>%
+kableExtra::pack_rows("North of $\\CapeM$", start_row = 1, end_row = 7) %>%
+kableExtra::pack_rows("South of $\\CapeM$", start_row = 8, end_row = 12) %>%
+  kable_styling(latex_options = "scale_down")
+```
+
+<!--chapter:end:59tables-execsummary.Rmd-->
+
+
+# Figures
+
+Placeholder
 
 
 
 <!--chapter:end:60figures.Rmd-->
 
-<!-- ====================================================================== --> 
-<!-- ******************* Data Used in the Model *************************** --> 
-<!-- ====================================================================== --> 
-
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(base_loc, "plots", "data_plot2.png"), 
-caption = "Summary of data sources used in the base model",
-label = 'data-plot')
-```	
-
-
-<!-- ====================================================================== -->  
-<!-- ****************** Catches Used in the Model ************************* --> 
-<!-- ====================================================================== -->  
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "catch2 landings stacked.png"), 
-caption = "Catches by fleet used in the base model",
-label = 'catch')
-```	
-
-<!--chapter:end:61datacatches.Rmd-->
-
-
-<!-- ======================================================================= -->
-<!-- **********************  Length Samples ******************************** --> 
-<!-- ======================================================================= -->
-
-
-```{r, results = 'asis'}
-#add in length comp plots with captions and labels
-#fleets with length
-
-for (i in unique(model$len_comp_fit_table$Fleet)) {
-  add_figure(
-    filein = dir(paste0(base_loc, "/plots"), 
-                 pattern = paste0("comp_lendat_bubflt", i, "mkt0.*\\.png$"), full.names = TRUE),
-    caption = paste0("Length composition data from the ", model$FleetNames_parsed[i]),
-    label = paste0("len-data-", model$FleetNames_label[i]),
-    width = 50,
-    height = 50
-  )
-
-   add_figure(
-    filein = dir(paste0(base_loc, "/plots"), 
-                 pattern = paste0("comp_lendat_data_weighting_TA1.8_",
-                                  model$FleetNames[i], ".png$"), full.names = TRUE),
-    caption = paste0("Mean length for the ", 
-                     model$FleetNames_parsed[i], " with 95 percent confidence intervals"),
-    label = paste0('mean-com-len-data-', model$FleetNames_label[i]),
-    width = 50,
-    height = 50
-  )
 
-}
-```
-
-<!--chapter:end:62lengths.Rmd-->
-
 
-<!-- ======================================================================= -->
-<!-- *************************     Biology     ***************************** --> 
-<!-- ======================================================================= -->
 
+<!--chapter:end:61figures-data-catches.Rmd-->
 
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(fig_loc, "oldfish.jpg"), 
-caption = "Photograph of the *oldest* aged fish used in the assessment with annuli marked by B. Kamikawa (NWFSC).",
-label = 'oldfish')
-```
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(fig_loc, "Reader 1 vs Reader 2.png"), 
-caption = "Aging precision between initial and blind double reads for vermilion. 
-Numbers in the bubbles are the sample sizes of otoliths cross-read.",
-label = 'reader1reader2')
-```	
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(fig_loc, "True vs Reads (by reader).png"), 
-caption = "True versus predicted age for two current age readers at the NWFSC 
-from the ageing error software with unbiased reads for reader 1 and curvilinear 
-bias for reader 1 and curvilinear standard deviation for both readers.",
-label = 'truereads')
-```	
-
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(fig_loc, "numbers10_ageerror_matrix_1.png"),
-caption = "Distribution of observed age at true age for ageing error type 1",
-label = 'ageerror')
-```
-
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-  filein = file.path(fig_loc ,"bio1_sizeatage.png"),
-  caption = "Length at age in the beginning of the year (or season) in the ending year of the model. Shaded area indicates 95% distribution of length at age around estimated growth curve"
-    label = 'fittedgrowth')
-```
-
-
-
-```{r, results = 'asis}
-sa4ss::add_figure(
-  filein = file.path(fig_loc, "bio5_weightatsize.png"),
-  caption = "Weight-length relationship",
-  label = 'weightlength'
-)
-```
-
-
-```{r, results = 'asis}
-sa4ss::add_figure(
-  filein = file.path(fig_loc, "bio6_maturity.png"),
-  caption = "Maturity at length",
-  label = 'maturity'
-)
-```
 
 
-```{r, results = 'asis}
-sa4ss::add_figure(
-  filein = file.path(fig_loc, "bio8_fecundity_wt.png"),
-  caption = "Fecundity as a function of weight",
-  label = 'fecundity'
-)
-```
-
-
-```{r, results = 'asis}
-sa4ss::add_figure(
-  filein = file.path(fig_loc, "bio11_spawningoutput_age.png"),
-  caption = "Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age",
-  label = 'spawningoutputage'
-)
-```
 
-<!--chapter:end:63biology.Rmd-->
+<!--chapter:end:62figures-lengths.Rmd-->
 
 
 
-
-<!-- ====================================================================== -->
-<!-- *********************    Selectivity            ********************** --> 
-<!-- ====================================================================== -->
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(paste0(base_loc, "/plots"), "sel01_multiple_fleets_length1.png"), 
-caption = "Selectivity at length by fleet",
-label = 'selexlengthall')
-```
-
-
-
-```{r, results = 'asis}
-sa4ss::add_figure(
-  filein = file.path(fig_loc, "sel02_multiple_fleets_age2.png"),
-  caption = "Selectivity at age derived from selectivity at length for multiple fleets",
-  label = 'selexageall'
-)
-```
-
-<!--time varying selectivity-->
-```{r, results='asis'}
-plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
-selex_time = plot_info[which(plot_info$category == "Sel"), ]
-plot.vec = grep("timevary_surf", selex_time$label)
-filein = file.path(mod_loc, "plots")
-for (a in plot.vec){
-	cap = selex_time$caption[a]
-	lab = selex_time$label[a]
-	add_figure(filein = file.path(filein, selex_time$file[a]), 
-			   caption = cap, 
-			   label = lab)
-}
-```
-
-
-<!--selectivity for fleets that are not mirrored-->
-
-```{r, messages = FALSE, warnings = FALSE} 
-#get the fleet info for fleets that have estimated selectivity
-selex_params <- data.frame(model$parameters$Label[grep("DblN", model$parameters$Label)])
-colnames(selex_params) = "A"
-
-selex_params <- selex_params %>%
-  mutate(fleet_ID = substr(A, nchar(A)-2+1, nchar(A)-1)) %>%
-  dplyr::select(fleet_ID) %>%
-  unique
-selex_fleets = left_join(selex_params, fleet_info)
-selex_fleets$fleet_ID = as.numeric(selex_fleets$fleet_ID)
-```
-
-```{r, results='asis'}
-for (i in selex_fleets$fleet_ID) {
-  add_figure(
-    filein = dir(paste0(base_loc, "/plots"), 
-                 pattern = paste0("sel09_len_flt",selex_fleets$fleet_ID[i],"sex1.png$"), full.names = TRUE),
-    caption = paste0("Female ending year selectivity for the ", selex_fleets$FleetNames_parsed[i]),
-    label = paste0("endyr-selex-", selex_fleets$FleetNames_label[i]),
-    width = 50,
-    height = 50
-  )
-  
-}
-```
-
-
-
-
-<!-- ======================================================================= -->
-<!-- ********************* Model Diagnostics ******************************* --> 
-<!-- ======================================================================= -->
-
-<!--chapter:end:64selectivitydiagnostics.Rmd-->
-
-
-<!-- ======================================================================= -->
-<!-- ********************** Fit to the Length Data ************************* --> 
-<!-- ======================================================================= -->
-
-```{r, results = 'asis}
-sa4ss::add_figure(
-  filein = file.path(fig_loc, "comp_lenfit__aggregated_across_time.png"),
-  caption = "Length comps, aggregated across time by fleet.
-Labels 'retained' and 'discard' indicate discarded or retained sampled for each fleet. Panels without this designation represent the whole catch.",
-  label = 'lenfits-all'
-)
-```
-
-
-
-```{r, results = 'asis'}
-#add in length comp plots with captions and labels
-#fleets with length
-#Fleet 7 rec_pc_discard doesn't have lengths in either model
-
-for (i in unique(model$len_comp_fit_table$Fleet)) {
-  add_figure(
-    filein = dir(paste0(base_loc, "/plots"), pattern = paste0("comp_lenfit_residsflt", i, "mkt0.png$"), full.names = TRUE),
-    caption = paste0("Pearson residuals for the ", model$FleetNames_parsed[i], ". Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)"),
-    label = paste0("len-pearson-", model$FleetNames_label[i]),
-    width = 50,
-    height = 50
-  )
-
-   add_figure(
-    filein = dir(paste0(base_loc, "/plots"), 
-                 pattern = paste0("comp_lenfit_data_weighting_TA1.8_",
-                                  model$FleetNames[i], ".png$"), full.names = TRUE),
-    caption = paste0("Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the ",model$FleetNames_parsed[i]),
-    label = paste0('mean-len-fit-', model$FleetNames_label[i]),
-    width = 50,
-    height = 50
-  )
-
-}
-```
-
-
-
-
-
-<!-- ======================================================================= -->
-<!-- ***************************** Sex Ratios ****************************** --> 
-<!-- ======================================================================= -->
-
-```{r, results='asis'}
-plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
-len_fit = plot_info[which(plot_info$category == "CompDat"), ]
-plot.vec = grep("comp_lendat_flt", len_fit$label)
-filein = file.path(mod_loc, "plots")
-for (a in plot.vec){
-	cap = len_fit$caption[a]
-	lab = len_fit$label[a]
-	add_figure(filein = file.path(filein, len_fit$file[a]), 
-			   caption = cap, 
-			   label = lab)
-}
-```
-
-<!--chapter:end:65lenfits.Rmd-->
+
+<!--chapter:end:63figures-biology.Rmd-->
+
+
+
+
+<!--chapter:end:64figures-selectivity-diagnostics.Rmd-->
+
+
+
+
+<!--chapter:end:65figures-lenfits.Rmd-->
 
 <!-- ======================================================================= -->
 <!-- **************************** Time Series ****************************** --> 
@@ -1065,158 +508,17 @@ label = 'depl')
 ```
 
 
-<!--chapter:end:66timeseries.Rmd-->
-
-<!-- ======================================================================= -->
-<!-- *************************  Indices ************************************ --> 
-<!-- ======================================================================= -->
-```{r, results = 'asis'}
-add_figure(
-    filein = dir(paste0(base_loc, "/plots","index9_standcpueall.png")),
-    caption = "Standardized indices overlaid. Each index is rescaled to have mean observation = 1.0",
-    label = 'cpueall',
-    width = 50,
-    height = 50
-}
-```
-
-
-```{r, results = 'asis'}
-#add in length comp plots with captions and labels
-#fleets with length
-
-for (i in unique(model$cpue$Fleet_name)) {
-  add_figure(
-    filein = dir(paste0(base_loc, "/plots"), 
-                 pattern = paste0("*\\logcpuefit_", i , "*\\.png$"), full.names = TRUE),
-    caption = paste0("Fit to log index data on log scale for the ",model$cpue$Fleet_name[i] ,". Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter"),
-    label = paste0("log-cpue-", fleet_info$FleetNames_label[fleet_info$FleetNames==i]),
-    width = 50,
-    height = 50
-  )
-
-  add_figure(
-    filein = dir(paste0(base_loc, "/plots"), 
-                 pattern = paste0("*\\SE_total_", i , "*\\.png$"), full.names = TRUE),
-    caption = paste0("Residuals of fit to index for the ",model$cpue$Fleet_name[i] ,". Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty"),
-    label = paste0("cpue-resid-", fleet_info$FleetNames_label[fleet_info$FleetNames==i]),
-    width = 50,
-    height = 50
-  )
-  
-  
-  
-}
-```
+<!--chapter:end:66figures-timeseries.Rmd-->
 
 
 
 
-
-<!-- ======================================================================= -->
-<!-- *************************  Age Comps ********************************** --> 
-<!-- ======================================================================= -->
+<!--chapter:end:67figures-indices-age.Rmd-->
 
 
 
 
-
-<!-- ======================================================================= -->
-<!-- **********************  Age @ Length Comps **************************** --> 
-<!-- ======================================================================= -->
-
-
-
-```{r, results = "asis"}
-caal_fit <- plot_info[which(plot_info$category == "CompDat"), ]
-plot.vec <- grep("condAALfit", caal_fi$label)
-filein = file.path(mod_loc, "plots")
-for (a in plot.vec){
-	cap = len_fit$caption[a]
-	lab = len_fit$label[a]
-	add_figure(filein = file.path(filein, len_fit$file[a]), 
-			   caption = cap, 
-			   label = lab)
-}
-```
-
-<!--chapter:end:67indicesage.Rmd-->
-
-
-<!-- ======================================================================= -->
-<!-- ************************** Recruitment ******************************** --> 
-<!-- ======================================================================= -->
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png"), 
-caption = "Age-0 recruits (1,000s) with ~95% asymptotic intervals",
-label = 'recruits')
-```
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "recdevs2_withbars.png"), 
-caption = "Estimated time series of recruitment deviations",
-label = 'rec-devs')
-```
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "SR_curve2.png"), 
-caption = "Stock-recruit curve with labels on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years",
-label = 'bh-curve')
-```
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "SR_resids.png"), 
-caption = "Deviations around the stock-recruit curve. Labels are on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years",
-label = 'bh-resids')
-```
-
-<!-- ======================================================================= -->
-<!-- *********************** Reference Points ****************************** --> 
-<!-- ======================================================================= -->
-
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(base_loc, "plots", "SPR2_ratiointerval.png"), 
-caption = "Timeseries of SPR ratio: (1-SPR)/(1-SPR_50%)",
-label = '1-spr')
-```
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "SPR4_phase.png"), 
-caption = "Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point show the 95 percent intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95 percent region which accounts for the estimated correlations between the biomass ratio and SPR ratio",
-label = 'phase')
-```
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "yield2_yield_curve_with_refpoints.png"), 
-caption = "Equilibrium yield curve for the base case model. Values are based on the 2020
-fishery selectivity and with steepness fixed at 0.72",
-label = 'yield')
-```
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "yield3_surplus_production.png"), 
-caption = "Surplus production vs. biomass plot",
-label = 'yield')
-```
-
-<!--chapter:end:68recruitrefpoints.Rmd-->
+<!--chapter:end:68figures-recruit-refpoints.Rmd-->
 
 <!-- ======================================================================= -->
 <!-- **************************   Sensitivity  ***************************** --> 
@@ -1240,64 +542,18 @@ label = 'yield')
 <!-- ======================================================================= -->
 
 
-<!--chapter:end:69senslikeliretro.Rmd-->
+<!--chapter:end:69figures-sens-likeli-retro.Rmd-->
 
-\clearpage
 
 # Appendix
 
+Placeholder
+
 
 ## Annual Length Composition Data
-
-```{r, results='asis'}
-plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
-len_fit = plot_info[which(plot_info$category == "CompDat"), ]
-plot.vec = grep("comp_lendat_flt", len_fit$label)
-filein = file.path(mod_loc, "plots")
-for (a in plot.vec){
-	cap = len_fit$caption[a]
-	lab = len_fit$label[a]
-	add_figure(filein = file.path(filein, len_fit$file[a]), 
-			   caption = cap, 
-			   label = lab)
-}
-```
-
-\newpage
-
 ## Detailed Fit to Length Composition Data{#append-fit} 
 
-
-```{r, results='asis'}
-plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
-len_fit = plot_info[which(plot_info$category == "LenComp"), ]
-plot.vec = grep("comp_lenfit_flt", len_fit$label)
-filein = file.path(mod_loc, "plots")
-for (a in plot.vec){
-	cap = len_fit$caption[a]
-	lab = len_fit$label[a]
-	add_figure(filein = file.path(filein, len_fit$file[a]), 
-			   caption = cap, 
-			   label = lab)
-}
-```
-
-\newpage
-
-
-
-
-
-
-
-```{r, results = "asis"}
-files_intro <- dir("./indices", pattern = paste0("*", model.area,".md$"), full.names = TRUE)
-ignore <- mapply(read_child, files_intro)
-```
-
 <!--chapter:end:70appendices.Rmd-->
-
-\clearpage
 
 # Appendix
 
@@ -1308,689 +564,4 @@ ignore <- mapply(read_child, files_intro)
 ```
 
 <!--chapter:end:71indices.Rmd-->
-
----
-geometry: margin=1in
-month: "`r format(Sys.Date(), '%B')`"
-year: "`r format(Sys.Date(), '%Y')`"
-params:
-    model: 2
-preamble: |
-output:
-  sa4ss::techreport_pdf:
-    default
-  bookdown::pdf_document2:
-    keep_tex: true
-    keep_md: true
-header-includes:
-  - \usepackage{booktabs}
-  - \usepackage{longtable}
-  - \usepackage{array}
-  - \usepackage{multirow}
-  - \usepackage{wrapfig}
-  - \usepackage{float}
-  - \usepackage{colortbl}
-  - \usepackage{pdflscape}
-  - \usepackage{tabu}
-  - \usepackage{threeparttable}
-  - \usepackage[normalem]{ulem}
-  - \usepackage{makecell}
-  - \usepackage{xcolor}
-  - \usepackage{placeins}
-lang: en
-papersize: a4
----
-
-```{r opts, include = FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
-knitr::knit_hooks$set(plot = function(x,options) {
-      base = knitr::opts_knit$get('base.url')
-      if (is.null(base)) base = ''
-      alt = ifelse (is.null(options$alt),"",options$alt)
-      cap = ifelse (is.null(options$caption),"",options$caption)
-      if (alt != ""){
-        sprintf('![%s](%s%s "%s")', cap, base, x, alt)
-      } else {
-        sprintf('![%s](%s%s)', cap, base, x)
-        }
-  })
-
-source("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/code/dir_recent.R")
-dir.path <- ifelse(params$model=="north",
-             "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/",
-             "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/")
-model.dir <- dir_recent(dir = dir.path, pattern = "Verm")
-base_loc <- paste0(model.dir)
-
-
-if (is.null(params$model) & file.exists("00mod.Rdata")) {
-  stopifnot(file.exists("00mod.Rdata"))
-  load("00mod.Rdata")
-} else {
-  load(dir(base_loc, pattern = "00mod.Rdata", full.names = TRUE))
-}
-
-
-spp = 'vermilion rockfish'
-Spp = 'Vermilion rockfish'
-fig_loc = paste0(getwd(), "/figures")
-table_loc = paste0(getwd(), "/tables")
-# model_loc = "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/"
-
-model.area <- ifelse(params$model=="north", "NCA", "SCA")
-
-if(params$model=="north"){
-model$FleetNames_parsed <- c("commercial hook-and-line fishery",
-                           "commercial trawl fishery",
-                           "commercial net fishery",
-                           "recreational PC retained fishery",
-                           "recreational PC discard fishery",
-                           "recreational PR retained fishery",
-                           "recreational PR discard fishery",
-                           "Deb Wilson-Vandenberg onboard survey",
-                           "West coast groundfish bottomfish trawl survey",
-                           "recreational PC onboard survey",
-                           "Abrams thesis research survey",
-                           "SWFSC groundfish ecology survey",
-                           "California Collaborative Fisheries Research Project survey")
-} else {
-model$FleetNames_parsed <- c("commercial hook-and-line fishery",
-                           "commercial trawl fishery",
-                           "commercial net fishery",
-                           "recreational PC retained fishery",
-                           "recreational PC discard fishery",
-                           "recreational PR retained fishery",
-                           "recreational PR discard fishery",
-                           "NWFSC hook-and-line survey",
-                           "West Coast Groundfish Bottomfish Trawl Survey",
-                           "recreational PC onboard survey",
-                           "CDFW reserach (aka green binder)")
-}
-
-model$FleetNames_label <- stringr::str_replace_all(model$FleetNames, "_", "-")
-
-
-
-```
-
-<!--chapter:end:00a.Rmd-->
-
----
-author:
-  - name: Melissa H. Monk
-    code: 1
-    first: M
-    middle: H
-    family: Monk
-  - name: E. J. Dick
-    code: 1
-    first: E
-    middle: J
-    family: Dick
-  - name: John C. Field
-    code: 1
-    first: J
-    middle: C
-    family: Field
-  - name: Emma M. Saas
-    code: 1
-    first: E
-    middle: M
-    family: Saas
-author_list: Monk, M.H., E.J. Dick, J.C. Field, E.M. Saas
-affiliation:
-  - code: 1
-    address: Southwest Fisheries Science Center, U.S. Department of Commerce, National
-      Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110
-      McAllister Way, Santa Cruz, California 95060
-address: ^1^Southwest Fisheries Science Center, U.S. Department of Commerce, National
-  Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110 McAllister
-  Way, Santa Cruz, California 95060
----
-
-<!--chapter:end:00authorsnorth.Rmd-->
-
----
-bibliography:
-  - sa4ss.bib
----
-
-<!--chapter:end:00bibliography.Rmd-->
-
----
-title: The status of Vermilion Rockfish (_Sebastes miniatus_) and Sunset Rockfish (_Sebastes crocotulus_) in U.S. waters off the coast of California north of Pt. Conception in 2021
----
-
-<!--chapter:end:00titlenorth.Rmd-->
-
-\pagebreak
-\pagenumbering{roman}
-\setcounter{page}{1}
-
-\renewcommand{\thetable}{\roman{table}}
-\renewcommand{\thefigure}{\roman{figure}}
-
-
-\setlength\parskip{0.5em plus 0.1em minus 0.2em}
-
-<!--chapter:end:01a.Rmd-->
-
-```{r executive, echo = FALSE}
-executive <- list()
-executive[["stock"]] <- paste0("This assessment reports the status of the 
-Vermilion Rockfish (_Sebastes miniatus_) and Sunset Rockfish 
-(_Sebastes crocotulus_) in U.S. waters off the coast of California south
-  of Pt. Conception through 2020.")
-```
-# Executive Summary{-}
-To be completed after the STAR panel.
-
-## Stock{-}
-This assessment reports the status of the vermlion rockfish (_Sebastes miniatus_) 
-and sunset rockfish (_Sebastes crocotulus_) complex (referred to as vermilion 
-throughout), resource in U.S. waters off the coast of California `r params$model` 
-of Point Conception ($34^\circ 27^\prime$ N. latitude) using data 
-through 2020.
-
-
-## Landings{-}
-Replace text.
-
-## Data and Assessment{-}
-Replace text.
-
-## Stock Biomass{-}
-Replace text.
-
-## Recruitment{-}
-Replace text.
-
-## Exploitation Status{-}
-Replace text.
-
-## Reference Points{-}
-Replace text.
-
-## Management Performance{-}
-Replace text.
-
-## Unresolved Problems and Major Uncertainties{-}
-Replace text.
-
-## Decision Table{-}
-Replace text.
-
-## Research and Data Needs{-}
-Replace text.
-
-<!--chapter:end:01executive.Rmd-->
-
-\pagebreak
-\setlength{\parskip}{5mm plus1mm minus1mm}
-\pagenumbering{arabic}
-\setcounter{page}{1}
-\renewcommand{\thefigure}{\arabic{figure}}
-\renewcommand{\thetable}{\arabic{table}}
-\setcounter{table}{0}
-\setcounter{figure}{0}
-
-<!--chapter:end:10a.Rmd-->
-
-# Introduction
-
-## Basic Information
-`r executive[["stock"]]`
-
-##Basic Information and Life History
-
-*Population Structure and Complex Assessment Considerations*
-
-Provided by John Harms (NWFSC)
-
-A group of researchers from the NWFSC and SWFSC is collaborating on a project to genotype tissue specimens collected from the vermilion and sunset rockfish cryptic pair captured during the West Coast Groundfish Bottom Trawl Survey and the Southern CA Shelf Rockfish Hook and Line Survey for the years 2004 - 2019.  Funding for this project was obtained through the Saltonstall-Kennedy program for FY 2020 through a proposal led by representatives from Pacific States Marine Fisheries Commission and the commercial passenger fishing vessel industry in southern California.  
-
-After combining with specimens obtained through other collection efforts along the West Coast, approximately 25,000 tissue specimens will be analyzed.  Some earlier efforts to separate this cryptic pair to species used mitochondrial DNA (mtDNA) markers.  However, due to a one-way mitochondrial introgression from the vermilion genome into the sunset genome, a portion of the sunset rockfish population contains mitochondrial DNA sequences consistent with vermilion rockfish resulting in incorrect species assignments for these introgressed individuals during the prior research project.  The current research has identified a robust suite of genetic markers within the nuclear genomes of the two species that definitively separates vermilion and sunset rockfish (including  introgressed sunset rockfish), canary rockfish, first generation vermilion-sunset hybrids, and identifies emerging patterns of intraspecific stock structure within the two sister species.
-
-Once the collected specimens have been genotyped, any species-specific differences in spatial and depth distribution, size composition, weight-length relationships, and other biological characteristics will be identified.  Using previously collected otoliths and ovaries, the demographics of the two species including age and growth and reproductive biology parameters such as length and age at 50\% maturity and the prevalence of skip spawning will be explored and compared.  These new genotyping results will be combined with data from the prior mtDNA work to  evaluate whether introgressed sunset rockfish represent a biologically intermediate subform of the species complex.  The effort also proposes to develop and test the efficacy of models to predict the relative proportion of the two species based upon explanatory variables including latitude, depth, species of co-occurrence, oceanographic parameters, habitat descriptors and/or other information.  The anticipated completion of the genotyping of all specimens is approximately December 2021 with provision of final results by the end of FY 2022.
-
-This research is aimed at providing information to support the successful stock assessment of this commercially and recreationally valuable cryptic species pair and is responsive to any data gaps identified by the assessment community.  If successful, this research, conducted in close communication with stock assessors, may also assist the PFMC in establishing best practices for the assessment and management of cryptic species complexes.  Though this project will only focus on nominal vermilion rockfish specimens collected through the 2019 survey field season, it may be advisable that tissue specimens collected aboard fishery-independent surveys as well as through fishery-dependent programs continue to be genotyped on an ongoing basis to support continued and timely monitoring of this economically and ecologically important species complex.
-
-
-## Early Life History
-
-
-##Map
-
-
-##Ecosystem Considerations
-
-
-
-
-
-<!--chapter:end:11a-introduction-bio.Rmd-->
-
-## Historical and Current Fishery Information
-Replace text.
-
-## Summary of Management History and Performance
-Replace text.
-
-
-
-##Management Performance
-
-## Foreign Fisheries
-Replace text.
-
-
-
-<!--chapter:end:11b-introduction-fishery.Rmd-->
-
-# Data
-A description of each data source is provided below (Figure).
-
-<!--chapter:end:20-data.Rmd-->
-
-## Biological Data
-
-
-### Length and Age Compositions
-
-Differences in length compositions and length-at-age were explored 
-north and south of Pt. Conception prior to any modelling. There are 
-currently no available data to separate sunset and vermilion rockfishes.
-
-
-Length compositions were provided from the following sources:
-
-*North of Pt. Conception*
-
-* Commercial sources
-  + CALCOM (1978-2020)
-* Recreational sources
-  + Miller and Gotshall dockside survey (1959-1960)
-  + CPFV samples from Commercial port samplers (1978-1979)
-  + Deb Wilson-Vandenberg's onboard observer survey (1988-1998)
-  + MRFSS dockside survey (1980-2003)
-  + CRFS onboard and dockside survey (2004-2019)
-* Fishery-independent surveys
-  + CCFRP hook-and-line survey (2007-2018)
-  + West Coast Groundfish Bottown Trawl Survey (2003-2019)
-
-
-
-*South of Pt. Conception*
-
-* Commercial sources
-  + CALCOM (1978-2020)
-* Recreational sources
-  + Ally et al. onboard observer survey (1986-1989)
-  + Collins and Crooke onboard observer survey (1975-1978)
-  + MRFSS dockside survey (1980-2003)
-  + CRFS onboard and dockside survey (2004-2018)
-* Fishery-independent surveys
-  + NWFSC Hook-and-Line Survey (2004-2019)
-  + West Coast Groundfish Bottown Trawl Survey (2003-2019)
-
-
-
-The length composition of all fisheries aggregated across time by fleet is in Figure
-\ref{fig:comp_lendat_aggregated_across_time} and Table xxx. 
-Descriptions and details of the length composition data are in the above section 
-for each fleet or survey.
-
-### Age Structures
-
-
-**External Fits to Growth**
-
-
-Fits to the von Bertalanffy growth curve, 
-$L_i = L_{\infty}e^{(-k[t-t_0])}$, where $L_i$ is the length (cm) at age $i$, $t$ is age in 
-years, $k$ is rate of increase in growth, $t_0$ is the intercept, and $L_{\infty}$ 
-is the asymptotic length, were explore by species and sex. 
-
-
-
-### Ageing Precision and Bias
-
-Uncertainty in ageing error was estimated using a collection of 357 `r spp` 
-otoliths with two age reads between the NWFSC (reader 1, B. Kamikawa) and the 
-SWFSC (reader 2, D. Watters) (Figure \@ref(fig:reader1reader2)).
-Age-composition data used in the model were from a number of sources described 
-above. The same readers aged otoliths for both `r spp` stock assessmetnt models. 
-Age reader 1 read all of the otoliths for the southern model and both readers read 
-otoliths for the northern California model. In addition to the otoliths from these 
-two regions, the same two readers aged fish for a Committee of Age Reading Experts 
-(CARE)exchange among four ageing labs, initiated by the SWFSC.
-
-Ageing error was estimated using publicly available software [@Thorson2012].
-The software setting for bias was set to unbiased for reader 1 who was more 
-experienced. The $\Delta AIC$ among the top three models was less than two. The 
-best fitting model selected curvilinear bias for reader 1 and curvilinear standard 
-deviation for both readers.  
-An analysis of ageing error removing one fish aged at 88 by reader 1 and 78 by reader 2 
-selected the the model with reader 2 as unbiased and curvilinear standard deviation 
-(Figure \@ref(fig:oldfish)). The reading of the oldest aged fish falls within the 95\% confidence 
-internal using this model (Figure \@ref(fig:truereads)).  
-The latter model was selected for use in the assessment. 
- 
-
-The resulting estimate indicated a standard deviation in age readings 
-increasing from 0.001 years at age 0 to a standard deviation of 2.37 years at age 70, 
-the first year of the plus group in the assessment model.
-
-
-
-### Maturation and Fecundity
-
-
-
-### Natural Mortality
-
-Natural mortality was not directly measured, so life-history based empirical relationships were used. The Natural Mortality Tool (NMT; https://github.com/shcaba/Natural-Mortality-Tool), a Shiny-based graphical user interface allowing for the application of a variety of natural mortality estimators based on measures such as longevity, size, age and growth, and maturity, was used to obtain estimates of natural mortality. The NMT currently provides 19 options, including the Hamel [-@Hamel2015] method, which is a corrected form of the Then et al. [-@Then2018] functional regression model and is a commomly applied method for west coast groundfish. The NMT also allows for the construction of a natural mortality prior weighted across methods by the user. 
-
-
-
-
-### Sex Ratio
-
-No information on the sex ratio at birth was available so it was assumed to be 50:50. 
-
-
-### Length-Weight Relationship
-
-The length(cm)-weight(kg) relationship for `r spp` was estimated outside the 
-model using California biological data available from fishery-independent 
-data sources. The estimated length-weight relationship for female fish was $W$=`r format(model$MGparmAdj$Wtlen_1_Fem[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Fem[1],2)`^ and males at $W$=`r format(model$MGparmAdj$Wtlen_1_Mal[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Mal[1], 2)`^ (Figure xx).
-
-
-
-### Steepness
-
-The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) and reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017, has been a primary source of information on steepness for rockfishes. This approach, however, was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absence of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 prior for steepness ($h$; beta distribution with $\mu$=`r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"],2)` and $\sigma$=0.15) is retained.  
-
-<!--chapter:end:22biology.Rmd-->
-
-\clearpage
-# Figures
-
-<!-- ====================================================================== --> 
-<!-- ******************* Data Used in the Model *************************** --> 
-<!-- ====================================================================== --> 
-
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(base_loc, "plots", "data_plot2.png"), 
-caption = "Summary of data sources used in the base model",
-label = 'data-plot')
-```	
-
-
-<!-- ====================================================================== -->  
-<!-- ****************** Catches Used in the Model ************************* --> 
-<!-- ====================================================================== -->  
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "catch2 landings stacked.png"), 
-caption = "Catches by fleet used in the base model",
-label = 'catch')
-```	
-
-<!-- ======================================================================= -->
-<!-- **********************  Length Samples ******************************** --> 
-<!-- ======================================================================= -->
-
-
-```{r, results = 'asis'}
-#add in length comp plots with captions and labels
-#fleets with length
-
-for (i in unique(model$len_comp_fit_table$Fleet)) {
-  add_figure(
-    filein = dir(paste0(base_loc, "/plots"), 
-                 pattern = paste0("comp_lendat_bubflt", i, "mkt0.*\\.png$"), full.names = TRUE),
-    caption = paste0("Length composition data from the ", model$FleetNames_parsed[i]),
-    label = paste0("len-data-", model$FleetNames_label[i]),
-    width = 50,
-    height = 50
-  )
-
-   add_figure(
-    filein = dir(paste0(base_loc, "/plots"), 
-                 pattern = paste0("comp_lendat_data_weighting_TA1.8_",
-                                  model$FleetNames[i], ".png$"), full.names = TRUE),
-    caption = paste0("Mean length for the ", 
-                     model$FleetNames_parsed[i], " with 95 percent confidence intervals"),
-    label = paste0('mean-com-len-data-', model$FleetNames_label[i]),
-    width = 50,
-    height = 50
-  )
-
-}
-```
-<!-- ======================================================================= -->
-<!-- *************************     Biology     ***************************** --> 
-<!-- ======================================================================= -->
-
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(fig_loc, "oldfish.jpg"), 
-caption = "Photograph of the *oldest* aged fish used in the assessment with annuli marked by B. Kamikawa (NWFSC).",
-label = 'oldfish')
-```
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(fig_loc, "Reader 1 vs Reader 2.png"), 
-caption = "Aging precision between initial and blind double reads for vermilion. 
-Numbers in the bubbles are the sample sizes of otoliths cross-read.",
-label = 'reader1reader2')
-```	
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(fig_loc, "True vs Reads (by reader).png"), 
-caption = "True versus predicted age for two current age readers at the NWFSC 
-from the ageing error software with unbiased reads for reader 1 and curvilinear 
-bias for reader 1 and curvilinear standard deviation for both readers.",
-label = 'truereads')
-```	
-
-
-<!-- ====================================================================== -->
-<!-- *********************    Selectivity            ********************** --> 
-<!-- ====================================================================== -->
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(paste0(base_loc, "/plots"), "sel01_multiple_fleets_length1.png"), 
-caption = "Selectivity at length by fleet",
-label = 'selex')
-```
-
-
-<!-- ======================================================================= -->
-<!-- ********************* Model Diagnostics ******************************* --> 
-<!-- ======================================================================= -->
-
-
-<!-- ======================================================================= -->
-<!-- ********************** Fit to the Length Data ************************* --> 
-<!-- ======================================================================= -->
-
-```{r, results = 'asis'}
-#add in length comp plots with captions and labels
-#fleets with length
-#Fleet 7 rec_pc_discard doesn't have lengths in either model
-unique(model$len_comp_fit_table$Fleet)
-
-for (i in unique(model$len_comp_fit_table$Fleet)) {
-  add_figure(
-    filein = dir(paste0(base_loc, "/plots"), 
-                 pattern = paste0("comp_lenfit_residsflt", i, "mkt0.*\\.png$"), full.names = TRUE),
-    caption = paste0("Pearson residuals for the ", model$FleetNames_parsed[i], ". Closed 
-                     bubbles are positive residuals (observed > expected) and open bubbles 
-                     are negative residuals (observed < expected)"),
-    label = paste0("len-pearson-", model$FleetNames_label[i]),
-    width = 50,
-    height = 50
-  )
-
-   add_figure(
-    filein = dir(paste0(base_loc, "/plots"), 
-                 pattern = paste0("comp_lenfit_data_weighting_TA1.8_",
-                                  model$FleetNames[i], ".png$"), full.names = TRUE),
-    caption = paste0("Mean lengths for the ", 
-                     model$FleetNames_parsed[i], " with 95 percent confidence 
-                     intervals based on current samples sizes"),
-    label = paste0('mean-len-fit-', model$FleetNames_label[i]),
-    width = 50,
-    height = 50
-  )
-
-}
-```
-
-
-<!-- ======================================================================= -->
-<!-- **************************** Time Series ****************************** --> 
-<!-- ======================================================================= -->
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png"), 
-caption = "Estimated time series of spawning output",
-label = 'ssb')
-```
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "ts1_Total_biomass_(mt).png"), 
-caption = "Estimated time series of total biomass",
-label = 'tot-bio')
-```
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "ts9_Relative_spawning_output_intervals.png"), 
-caption = "Estimated time series of relative spawning output",
-label = 'depl')
-```
-
-
-
-
-<!-- ======================================================================= -->
-<!-- ************************** Recruitment ******************************** --> 
-<!-- ======================================================================= -->
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png"), 
-caption = "Estimated time series of age-0 recruits (1000s)",
-label = 'recruits')
-```
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "recdevs2_withbars.png"), 
-caption = "Estimated time series of recruitment deviations",
-label = 'rec-devs')
-```
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "SR_curve.png"), 
-caption = "Stock-recruit curve. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years",
-label = 'bh-curve')
-```
-
-<!-- ======================================================================= -->
-<!-- *********************** Reference Points ****************************** --> 
-<!-- ======================================================================= -->
-
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(base_loc, "plots", "SPR2_minusSPRseries.png"), 
-caption = "Estimated 1 - relative spawning ratio (SPR) by year",
-label = '1-spr')
-```
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "SPR4_phase.png"), 
-caption = "Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point show the 95 percent intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95 percent region which accounts for the estimated correlations between the biomass ratio and SPR ratio",
-label = 'phase')
-```
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(base_loc, "plots", "yield2_yield_curve_with_refpoints.png"), 
-caption = "Equilibrium yield curve for the base case model. Values are based on the 2020
-fishery selectivity and with steepness fixed at 0.72",
-label = 'yield')
-```
-
-
-
-<!-- ======================================================================= -->
-<!-- **************************   Sensitivity  ***************************** --> 
-<!-- ======================================================================= -->
-
-
-
-
-
-<!-- ======================================================================= -->
-<!-- ************************** Likelihood Profile ************************* --> 
-<!-- ======================================================================= -->
-
-
-
-
-
-
-<!-- ======================================================================= -->
-<!-- *******************     Retrospectives    ***************************** --> 
-<!-- ======================================================================= -->
-
-
-
-
-
-
-
-\newpage
-
-
-
-<!--chapter:end:53figures.Rmd-->
-
-\clearpage
-
-# Appendix
-
-
-```{r, results = "asis"}
-files_intro <- dir("./indices", pattern = paste0("*", model.area,".md$"), full.names = TRUE)
-ignore <- mapply(read_child, files_intro)
-```
-
-<!--chapter:end:54a-appendix-indices.Rmd-->
-
-
-<!--chapter:end:north.Rmd-->
 

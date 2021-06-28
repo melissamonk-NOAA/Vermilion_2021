@@ -3,14 +3,18 @@
 # Tables
 
 ```{r render-51, results = "asis"}
-sa4ss::read_child("51tables-catch.Rmd")
+sa4ss::read_child("51tables-execsummary.Rmd")
 ```
 
 ```{r render-52, results = "asis"}
-sa4ss::read_child("52tables-compsamplesize.Rmd")
+sa4ss::read_child("52tables-catch.Rmd")
 ```
 
 
-```{r render-59, results = "asis"}
-sa4ss::read_child("59tables-execsummary.Rmd")
+```{r render-54, results = "asis"}
+sa4ss::read_child("54tables-compsamplesize.Rmd")
+```
+
+```{r render-56, results = "asis"}
+sa4ss::read_child("56tables-results.Rmd")
 ```

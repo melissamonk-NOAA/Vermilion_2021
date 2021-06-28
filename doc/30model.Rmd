@@ -4,50 +4,77 @@
 
 ### History of Modeling Approaches
 
-This is the first full assessment for vermilion rockfish. 
 Vermilon was assessed coastwide as a data poor species using 
-Depletion-Based Stock Reduction Analysis (DB-SRA) [@Dick2010]. The DB-SRA 
-model assigned a frog% probability that the then recent (2008-2009) catch 
-exceeded the 2010 OFL.
+Depletion-Based Stock Reduction Analysis (DB-SRA) [@Dick2010]. Average catch 
+2008-2009 was 136.3 mt, and the median OFL in 2010 was 314.3 mt with a 28% 
+probability that recent catch exceeded the 2010 [@Dick2010].
 
-A 2005 assessment was not accepted for management and a 2013 data moderate 
-assessment was prepared, but not reviewed.
+A 2005 assessment was not accepted for management. 
+From the September 2005 [Briefing Book](https://www.pcouncil.org/documents/2005/09/f-groundfish-management-september-2005.pdf/): 
+"The SSC considers the assessment to be best available science, but at this  stage does not 
+endorse the results as being suitable for setting OYs." A 2013 data moderate 
+assessment was prepared, but not reviewed. From Pacific Coast Groundfish Stock 
+Assessment Review (STAR) Panel Report For Data-Moderate Assessments (2013): 
+"There was insufficient time during the review to evaluate all the assessments 
+originally requested by the Council. Assessments for vermilion/sunset rockfishes 
+(*Sebastes miniatus* and *Sebastes crocotulus*) and yellowtail rockfish 
+(south of \CapeM) were not presented by the Stock Assessment Team (STAT)."
 
 
 ### Most Recent STAR Panel and SSC Recommendations 
 
-None.
+The 2005 STAR panel report compiled recommendations specific to vermilion, and also 
+generic rockfish recommendations The generic rockfish recommendation are not 
+presented here.
+
+
+*Vermilion rockfish recommendations*
+
+Investigation into the species composition of nominal vermilion rockfish is needed.
+It is not clear that separate assessments for the northern and southern areas are warranted
+for vermilion rockfish. Although there were differences in the estimated magnitude and
+timing of recruitment events, the estimated stock trends were similar in both areas.
+Pooling of data from northern and southern areas may permit a more robust assessment
+model to be obtained.
+
+*2021 STAT response* 
+
+Since the 2005 assessment, vermilion rockfish were speciated 
+to vermilion and sunset rockfishes [@Hyde2009].  Sunset rockfish are more common south of 
+Pt. Conception (\PtC) and historical catches and length distributions between 
+the two areas are different. The STAT discussed this at the Pre-Assessment workshop 
+and all participants agreed that modeling the areas separately was an appropriate 
+decision.
 
 
 
 ```{r render-31, results = "asis"}
-sa4ss::read_child("31platformsummary.Rmd")
+sa4ss::read_child("31model-star-responses.Rmd")
 ```
 
 
 ```{r render-32, results = "asis"}
-sa4ss::read_child("32previousassess.Rmd")
+#if(model.area=='NCA'){
+sa4ss::read_child("32model-description-north.Rmd") 
+#} else {
+#sa4ss::read_child("32model-description-south.Rmd")
+#}
 ```
 
-
-```{r render-33, results = "asis"}
-sa4ss::read_child("33priors.Rmd")
-```
 
 
 ```{r render-34, results = "asis"}
-sa4ss::read_child("34structure.Rmd")
+sa4ss::read_child("34model-prestar-base-selection.Rmd")
 ```
 
 
 ```{r render-35, results = "asis"}
-sa4ss::read_child("35results.Rmd")
+sa4ss::read_child("35model-prestar-base-results.Rmd")
 ```
 
 
 ```{r render-36, results = "asis"}
-sa4ss::read_child("36diagnostics.Rmd")
+sa4ss::read_child("36model-uncertainty.Rmd")
 ```
-
 
 
