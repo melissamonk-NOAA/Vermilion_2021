@@ -1,4 +1,7 @@
-## Model Structure and Assumptions
+## Model Specificiations
+
+
+
 
 `r Spp` `r model.area` of Point Conception (\PtC) off the coast of California
 is assessed using a two-sex model with sex-specific life history parameters.  
@@ -39,11 +42,7 @@ The model has the additional survey fleets:
 
 
 
-### Model Specifications
 
-Electronic SS model files including the data, control, starter, and forecast files can be 
-found on the 
-[PFMC's website](https://www.pcouncil.org/groundfish/stock-assessments/).
 
 
 ### Modeling Platform and Structure
@@ -54,10 +53,12 @@ version was used because it included improvements and corrections to older
 model versions. The R package [r4ss](https://github.com/r4ss/r4ss), version 
 1.38.0, along with R version 4.0.1 were used to investigate and plot model fits. 
 
-### Summary of Data for Fleets and Areas
+Electronic SS model files including the data, control, starter, and forecast files can be 
+found on the 
+[PFMC's website](https://www.pcouncil.org/groundfish/stock-assessments/).
 
 
-
+### Model Parameters
 
 
 ### Priors
@@ -68,6 +69,11 @@ The prior for steepness (*h*) assumes a beta distribution with parameters based 
 update for the Thorson-Dorn rockfish prior (Dorn, M. and Thorson, J., pers. comm.), 
 which was endorsed by the Science and Statistical Committee in 2019.  The prior is a 
 beta distribution with $mu$=0.72 and $sigma$=0.16. 
+
+#### Steepness
+
+The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) and reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017, has been a primary source of information on steepness for rockfishes. This approach, however, was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absence of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 prior for steepness ($h$; beta distribution with $\mu$=`r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"],2)` and $\sigma$=0.15) is retained.  
+
 
 ###Data Weighting
 Length composition and conditional-age-at-length (CAAL) compositions sample sizes for 

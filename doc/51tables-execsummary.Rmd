@@ -22,6 +22,16 @@ kableExtra::pack_rows(group_label = paste0("South of 40",intToUtf8(176),"10\' N"
 ```
 
 
+```{r, results = 'asis'}
+timeseries_table <- readLines("./tex_tables/TimeSeries.tex")
+
+timeseries_table[1] <- gsub(pattern = "10", replace="8", x = timeseries_table[1])
+timeseries_table[2] <- gsub(pattern = "10", replace="8", x = timeseries_table[2])
+
+writeLines(timeseries_table,"./tex_tables/Timeseries.tex") 
+```
+
+
 
 \include{tex_tables/e_ReferencePoints_ES.tex}
 

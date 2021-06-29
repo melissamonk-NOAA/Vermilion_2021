@@ -22,6 +22,12 @@ randomly chosen 500 by 500 m grid cells within and outside \Gls{mpa}s.
 Prior to 2017, all fish were measured for length and release or descended to depth;
 since then, some have been retained for biological collections including otoliths and fin clips.
 
+**Available Data**
+
+- Lengths (used)
+- Ages (48 available, but not used due to low sample sizes)
+- Index of abundance (for a detailed description of the index see frog)
+
 
 ### NWFSC West Coast Groundfish Bottom Trawl Survey
 
@@ -34,6 +40,15 @@ May to early October. This design therefore incorporates both vessel-to-vessel
 differences in catchability, as well as variance associated with selecting a 
 relatively small number (approximately 700) of possible cells from a very large 
 set of possible cells spread from the Mexican to the Canadian borders.
+
+**Available Data**
+
+- Conditional Age-at-Length (xx fish)
+- Additional lengths of fish not aged
+- Index of abundance (for a detailed description of the index see frog)
+  + The index was considered, but not used in the pre-STAR base model. Sample 
+  sizes of vermilion rockfish were low.
+
 
 
 ### NWFSC Hook and Line Survey
@@ -52,3 +67,8 @@ each site for a maximum possible catch of 75 fish per site per year (3 anglers
 x 5 hooks x 5 drops). Further details regarding the sample frame, site 
 selection, and survey methodology are described by Harms et al. [-Harms2008]. 
 
+**Available Data**
+
+- Conditional Age-at-Length (xx fish)
+- Additional lengths of fish not aged
+- Index of abundance (for a detailed description of the index see frog)

@@ -1,3 +1,9 @@
+
+\includegraphics{cover_photo.png}
+Two color morphs of the vermilion/sunset cryptic species pair.  Confirmation of 
+species can only be determined via genetic analysis. The two fish were caught off Santa Barbara channel at approximately 250 ft. 
+Photo courtesy of Sabrina Beyer.
+
 \pagebreak
 \pagenumbering{roman}
 \setcounter{page}{1}
@@ -7,3 +13,7 @@
 
 
 \setlength\parskip{0.5em plus 0.1em minus 0.2em}
+
+\printnoidxglossary[sort=word]
+
+\newpage

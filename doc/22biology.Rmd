@@ -1,65 +1,20 @@
 ## Biological Data
 
 
-### Length and Age Compositions
-
-Differences in length compositions and length-at-age were explored 
-north and south of Pt. Conception prior to any modelling. There are 
-currently no available data to separate sunset and vermilion rockfishes.
-
-
-Length compositions were provided from the following sources:
-
-*North of Pt. Conception*
-
-* Commercial sources
-  + CALCOM (1978-2020)
-* Recreational sources
-  + Miller and Gotshall dockside survey (1959-1960)
-  + CPFV samples from Commercial port samplers (1978-1979)
-  + Deb Wilson-Vandenberg's onboard observer survey (1988-1998)
-  + MRFSS dockside survey (1980-2003)
-  + CRFS onboard and dockside survey (2004-2019)
-* Fishery-independent surveys
-  + CCFRP hook-and-line survey (2007-2018)
-  + West Coast Groundfish Bottown Trawl Survey (2003-2019)
-
-
-
-*South of Pt. Conception*
-
-* Commercial sources
-  + CALCOM (1978-2020)
-* Recreational sources
-  + Ally et al. onboard observer survey (1986-1989)
-  + Collins and Crooke onboard observer survey (1975-1978)
-  + MRFSS dockside survey (1980-2003)
-  + CRFS onboard and dockside survey (2004-2018)
-* Fishery-independent surveys
-  + NWFSC Hook-and-Line Survey (2004-2019)
-  + West Coast Groundfish Bottown Trawl Survey (2003-2019)
-
-
-
-The length composition of all fisheries aggregated across time by fleet is in Figure
-\ref{fig:comp_lendat_aggregated_across_time} and Table xxx. 
-Descriptions and details of the length composition data are in the above section 
-for each fleet or survey.
 
 ### Age Structures
 
-
+<!--
 **External Fits to Growth**
-
 
 Fits to the von Bertalanffy growth curve, 
 $L_i = L_{\infty}e^{(-k[t-t_0])}$, where $L_i$ is the length (cm) at age $i$, $t$ is age in 
 years, $k$ is rate of increase in growth, $t_0$ is the intercept, and $L_{\infty}$ 
 is the asymptotic length, were explore by species and sex. 
+-->
 
 
-
-### Ageing Precision and Bias
+#### Ageing Precision and Bias
 
 Uncertainty in ageing error was estimated using a collection of 357 `r spp` 
 otoliths with two age reads between the NWFSC (reader 1, B. Kamikawa) and the 
@@ -89,13 +44,25 @@ the first year of the plus group in the assessment model.
 
 
 
-### Maturation and Fecundity
+### Maturity
+
+For the current assessment, Melissa Head (NWFSC, pers. comm.) determined maturity for frog female `r spp` caught by recent fishery-independent surveys. Two types of maturity determinations were provided, ‘biological maturity’ and ‘functional maturity.’ The former category includes “juveniles exhibiting dummy runs (early vitellogenesis or yolk granules present in a small proportion of oocytes, some in early stages of cellular decay) and skip spawners (adults foregoing spawning in a given year)” (M. Head, pers. comm.), while the latter excludes such cases. Separate logistic regressions were fit to each type of maturity determination as a function of fork length (Figure frog), estimating LMAT at frog cm (biological maturity) and frog cm (functional maturity), with slopes of frog and frog, respectively.  The samples available from areas 
+north of Pt. Conception were smaller fish and did not allow for estimates of separate 
+maturity curves.  Both California vermilion assessments assum the same maturity ogive. 
+
+
+The proportion of females classified as mature may be sensitive to the month of capture. frog
+
+### Fecundity
 
 
 
 ### Natural Mortality
 
 Natural mortality was not directly measured, so life-history based empirical relationships were used. The Natural Mortality Tool (NMT; https://github.com/shcaba/Natural-Mortality-Tool), a Shiny-based graphical user interface allowing for the application of a variety of natural mortality estimators based on measures such as longevity, size, age and growth, and maturity, was used to obtain estimates of natural mortality. The NMT currently provides 19 options, including the Hamel [-@Hamel2015] method, which is a corrected form of the Then et al. [-@Then2018] functional regression model and is a commomly applied method for west coast groundfish. The NMT also allows for the construction of a natural mortality prior weighted across methods by the user. 
+
+We assumed the age of 54 years to represent the practical longevity (i.e., 90% of the commonly seen maximum age of 60) for both females and males, though the absolute oldest age in OR was >60 years. In the larger biomass, higher sampled area of California, ages 80+ were even encountered. Empirical $M$ estimators using the von Bertalanffy growth parameters were also considered, but they produced unreasonably high estimates (2-3 times higher than the longevity estimates). This is likely explained by the fact that while `r spp` have protracted longevity at $L_{\infty}$. Additionally, the FishLife [@Thorson2017] estimate was included, though, given the source of FishLife data is FishBase, there is a good chance the estimates of $M$ are also from methods using longevity, though the actual source of longevity in FishLife was unknown. 
+Both California vermilion assessments used the Hamel prior [-@Hamel2015], which is defined as a lognormal with mean $ln\frac{5.4}{A_{max}}$  and SE = 0.4384343. Using a maximum age of 54 the point estimate and median of the prior is 0.1, which is used as a prior on $M$ in the assessment model. We also explore sensitivity to these assumptions of natural mortality through likelihood profiling.
 
 
 
@@ -109,10 +76,8 @@ No information on the sex ratio at birth was available so it was assumed to be 5
 
 The length(cm)-weight(kg) relationship for `r spp` was estimated outside the 
 model using California biological data available from fishery-independent 
-data sources. The estimated length-weight relationship for female fish was $W$=`r format(model$MGparmAdj$Wtlen_1_Fem[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Fem[1],2)`^ and males at $W$=`r format(model$MGparmAdj$Wtlen_1_Mal[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Mal[1], 2)`^ (Figure xx).
+data sources including the NWFSC hook-and-line survey and the WCGBTS. The estimated length-weight relationship for female fish was $W$=`r format(model$MGparmAdj$Wtlen_1_Fem[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Fem[1],2)`^ and males at $W$=`r format(model$MGparmAdj$Wtlen_1_Mal[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Mal[1], 2)`^ (Figure \@ref(weightlength)). 
 
 
 
-### Steepness
 
-The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) and reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017, has been a primary source of information on steepness for rockfishes. This approach, however, was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absence of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 prior for steepness ($h$; beta distribution with $\mu$=`r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"],2)` and $\sigma$=0.15) is retained.  

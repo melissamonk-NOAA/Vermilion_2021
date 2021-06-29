@@ -86,24 +86,22 @@ sa4ss::read_model(
 
 
 #-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 #compile the documents 
 #1 is north and 2 is south
-#model.dir <- dir_recent(dir = dir.path[1], pattern = "Verm")
-#base_loc <- paste0(model.dir)
-#setwd("doc")
-#if(file.exists("north.Rmd")){
-#  file.remove("north.Rmd")
-#}
+
 library(sa4ss)
 
 setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/")
 source("code/dir_recent.R")
-system("taskkill /f /im Acrobat.exe")
+
 
 #NORTHERN MODEL
 set.model = "north"
 setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")
 #make northern model
+system("taskkill /f /im Acrobat.exe")
 bookdown::render_book("00a.Rmd", output_dir = getwd(), clean = FALSE, 
                       config_file = "_bookdown_north.yml",
                       params = list(model = set.model))
@@ -113,10 +111,10 @@ stop()
 
 
 #SOUTHERN MODEL
-system("taskkill /f /im Acrobat.exe")
 set.model = "south"
 setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")
 #make southern model 
+system("taskkill /f /im Acrobat.exe")
 bookdown::render_book("00a.Rmd", output_dir = getwd(), clean = FALSE, 
                       config_file = "_bookdown_south.yml",
                       params = list(model = set.model))

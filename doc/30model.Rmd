@@ -28,7 +28,7 @@ generic rockfish recommendations The generic rockfish recommendation are not
 presented here.
 
 
-*Vermilion rockfish recommendations*
+**Vermilion rockfish recommendations**
 
 Investigation into the species composition of nominal vermilion rockfish is needed.
 It is not clear that separate assessments for the northern and southern areas are warranted
@@ -37,14 +37,75 @@ timing of recruitment events, the estimated stock trends were similar in both ar
 Pooling of data from northern and southern areas may permit a more robust assessment
 model to be obtained.
 
-*2021 STAT response* 
-
-Since the 2005 assessment, vermilion rockfish were speciated 
-to vermilion and sunset rockfishes [@Hyde2009].  Sunset rockfish are more common south of 
+*2021 STAT response* Since the 2005 assessment, vermilion rockfish were speciated to vermilion and sunset rockfishes [@Hyde2009].  Sunset rockfish are more common south of 
 Pt. Conception (\PtC) and historical catches and length distributions between 
 the two areas are different. The STAT discussed this at the Pre-Assessment workshop 
 and all participants agreed that modeling the areas separately was an appropriate 
 decision.
+
+
+**General rockfish Recommendations**
+
+-The historical catch is an important input into any stock assessment. 
+Although efforts have been made to construct catch time series for California rockfish, a more sustained effort is needed to do this for all rockfish species. It should not be left to individual analysts to do this for a species as stock assessments arise. It should be done by a specialist team for all species simultaneously, so that consistent times series can beestablished.
+
+-Management changes affect fisher behaviour and alter the correct interpretation of CPUE
+time series. As for catch histories, it is important that a specialist team consider and
+document all management changes and how they may have impacted on catch rates for
+all species. Again, this should not be left to individual assessment authors as the issues
+are generic and patterns might not be obvious without a multi-species perspective.
+
+-Improved documentation of input data and output for GLM analyses of CPFV and
+RecFIN CPUE data is recommended. In general, GLM analyses should provide analysis
+of deviance tables, estimated coefficients, and their standard errors to document these
+calculations. Information on amount of RecFIN records filtered by species association
+also needs to be presented to show the effect of the species association analysis. Although this method is an objective approach to filtering records, it is unknown how well works in practice to reduce the potential biases of CPUE data. A paper describing a
+comprehensive application of GLM methods to CPFV and RecFIN CPUE data on
+California rockfish would be a important contribution to the assessment process and the
+primary literature.
+
+-Many rockfish assessments use CPUE data from the CPFV fishery as an index of
+population abundance. The CPFV fishery is focused primarily on marketing a successful
+“fishing experience” that is related to the desirability of the species caught, quantity,
+body size, and fighting characteristics. The default assumption of proportionality
+between CPUE and abundance has not been evaluated for a fishery with these
+characteristics. Simulation modeling of fleet dynamics in a multi-species context is one
+possible way to address these issues.
+
+-A more complete understanding of the multi-species aspects of rockfish population
+dynamics is needed. Although some rockfish stocks have declined in recent decades
+under heavy fishing pressure and environmental change, other rockfish species have
+apparently increased. Are these species adapted to different environmental conditions, or
+are these increases due to the indirect effects of reduced competition and/or predation?
+
+
+Conducting additional assessments of the many relatively uncommon rockfish in
+California is a difficult but worthwhile objective. To facilitate this process, 
+the Panel has a number suggestions:
+
+1. Keep the models simple.  
+2. Make reasonable assumptions based on life history and better studied species for
+parameters that cannot be reliably estimated, such as natural mortality, stock-recruit
+steepness, selectivity.  
+3. Think meta-analytically. For example, similar species that are often caught together
+are likely to have experienced similar fishing mortality rates and trends. There are also
+more rigorous methods for sharing information between related stocks that could be
+considered.  
+4. Make the most of CPUE data:  
+    + For several assessments, indices from GLM analyses of site-specific CPFV data
+apparently tracked population trends better than indices from RecFIN data, even
+when a subset of records had been selected using the Stevens and MacCall (2004)
+procedure. Greater priority should be given to collecting site-specific CPUE data.
+Given the ubiquity of GPS systems and hand-held data recorders, obstacles to
+collecting site-specific information from fisheries are now logistic rather than
+technological.  
+    + Location information for the historical groundfish catch data of all species is
+currently available, in hard copy form only, from the California Department of
+Fish and Game. Putting this information into electronic format would greatly
+improve the ability to assign catches of all species to specific stocks on a trip-bytrip basis.  
+5. Do not put too much trust in model results. Models are no better that their input data
+and assumptions, and for many rockfish species, the data are sparse and potentially
+misleading.  
 
 
 

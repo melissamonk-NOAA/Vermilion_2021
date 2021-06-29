@@ -4,7 +4,9 @@ rmd_files: ['00a.Rmd',
             '00authorsnorth.Rmd', 
             '00bibliography.Rmd',  
             '00titlenorth.Rmd', 
-            '01a.Rmd',
+#            'subtitle.Rmd',
+            '01a.Rmd'
+            ,
             '01executive.Rmd', 
             '10a.Rmd',
             '11introduction.Rmd',
@@ -17,6 +19,6 @@ rmd_files: ['00a.Rmd',
             '50tables.Rmd'
             ,
             '60figures.Rmd'
-            #,
-#            '70appendices.Rmd'
+          ,
+            '70appendices.Rmd'
 ]

@@ -79,7 +79,7 @@ changes in subregion definition, and sampling gaps are shown in Table X.
 Estimates of recreational landings and discard since 2004 have been produced by 
 the CRFS. This survey improves upon the MRFSS sampling design, with higher 
 sampling rates and finer spatial and temporal resolution.
-
+Mortality estimates for the period 2005-2018 were queried from [RecFIN](www.recfin.org). Reported estimates are for southern California, all modes, and filtered to exclude fish caught in Mexican waters. Total recreational mortality estimates provided to RecFIN are also adjusted using species- and depth-specific discard mortality rates.
 
 
 *Discard mortality rates*
@@ -98,7 +98,6 @@ Nearshore rates (jig and pole): 0-10 fm 20%; 10-20 fm 34%, >20 fm 100%
 
 Length compositions were provided from the following sources:
 
-frog: turn these into tables and add citations
 
 ```{asis, echo = model.area == 'NCA'}
 There is no available recreational length composition available for 2020 north of Pt. Conception in RecFIN and sparse sampling was confirmed by J. Budrick (CDFW, pers. comm,).
@@ -135,12 +134,14 @@ There is no available recreational length composition available for 2020 north o
 \end{itemize}
 ```
 
-
+THe number of available fish by year and fleet as well as the method we used to 
+calculate initial sample sizes are in Table \@ref(tab:length-sample-size).
 
 *Recreational age composition data*
 
 There are no recreational age composition data available for `r spp`.
 
 ```{asis, echo = model.area=='NCA'}
-There are no recreational age composition data available for vermilion. Otoliths are available from collaborative with Cal Poly to investigate the precision of back-calculating whole fish lenght from filleted fish in the CPFV fleet. These otoliths were not aged for this assessment. 
+There are no recreational age composition data available for vermilion from state 
+sampling programs. Otoliths are available from collaborative with Cal Poly to investigate the precision of back-calculating whole fish lenght from filleted fish in the CPFV fleet. These otoliths were not aged for this assessment. 
 ```

@@ -39,21 +39,115 @@ parameters between the two species as well as habitats.
 
 _Ongoing Research (Provided by John Harms, NWFSC)_
 
-A group of researchers from the NWFSC and SWFSC is collaborating on a project to genotype tissue specimens collected from the vermilion and sunset rockfish cryptic pair captured during the West Coast Groundfish Bottom Trawl Survey and the Southern CA Shelf Rockfish Hook and Line Survey for the years 2004 - 2019.  Funding for this project was obtained through the Saltonstall-Kennedy program for FY 2020 through a proposal led by representatives from Pacific States Marine Fisheries Commission and the commercial passenger fishing vessel industry in southern California.  
+A group of researchers from the NWFSC and SWFSC is collaborating on a project to 
+genotype tissue specimens collected from the vermilion and sunset rockfish cryptic 
+pair captured during the West Coast Groundfish Bottom Trawl Survey and the Southern 
+CA Shelf Rockfish Hook and Line Survey for the years 2004 - 2019.  Funding for this 
+project was obtained through the Saltonstall-Kennedy program for FY 2020 through a 
+proposal led by representatives from Pacific States Marine Fisheries Commission and 
+the commercial passenger fishing vessel industry in southern California.  
 
-After combining with specimens obtained through other collection efforts along the West Coast, approximately 25,000 tissue specimens will be analyzed.  Some earlier efforts to separate this cryptic pair to species used mitochondrial DNA (mtDNA) markers.  However, due to a one-way mitochondrial introgression from the vermilion genome into the sunset genome, a portion of the sunset rockfish population contains mitochondrial DNA sequences consistent with vermilion rockfish resulting in incorrect species assignments for these introgressed individuals during the prior research project.  The current research has identified a robust suite of genetic markers within the nuclear genomes of the two species that definitively separates vermilion and sunset rockfish (including  introgressed sunset rockfish), canary rockfish, first generation vermilion-sunset hybrids, and identifies emerging patterns of intraspecific stock structure within the two sister species.
+After combining with specimens obtained through other collection efforts along 
+the West Coast, approximately 25,000 tissue specimens will be analyzed.  Some 
+earlier efforts to separate this cryptic pair to species used mitochondrial DNA 
+(mtDNA) markers.  However, due to a one-way mitochondrial introgression from 
+the vermilion genome into the sunset genome, a portion of the sunset rockfish 
+population contains mitochondrial DNA sequences consistent with vermilion rockfish 
+resulting in incorrect species assignments for these introgressed individuals 
+during the prior research project.  The current research has identified a robust 
+suite of genetic markers within the nuclear genomes of the two species that 
+definitively separates vermilion and sunset rockfish (including  introgressed 
+sunset rockfish), canary rockfish, first generation vermilion-sunset hybrids, 
+and identifies emerging patterns of intraspecific stock structure within the 
+two sister species.
 
-Once the collected specimens have been genotyped, any species-specific differences in spatial and depth distribution, size composition, weight-length relationships, and other biological characteristics will be identified.  Using previously collected otoliths and ovaries, the demographics of the two species including age and growth and reproductive biology parameters such as length and age at 50% maturity and the prevalence of skip spawning will be explored and compared.  These new genotyping results will be combined with data from the prior mtDNA work to  evaluate whether introgressed sunset rockfish represent a biologically intermediate subform of the species complex.  The effort also proposes to develop and test the efficacy of models to predict the relative proportion of the two species based upon explanatory variables including latitude, depth, species of co-occurrence, oceanographic parameters, habitat descriptors and/or other information.  The anticipated completion of the genotyping of all specimens is approximately December 2021 with provision of final results by the end of FY 2022.
+Once the collected specimens have been genotyped, any species-specific differences 
+in spatial and depth distribution, size composition, weight-length relationships, 
+and other biological characteristics will be identified.  Using previously 
+collected otoliths and ovaries, the demographics of the two species including 
+age and growth and reproductive biology parameters such as length and age at 
+50% maturity and the prevalence of skip spawning will be explored and compared. 
+These new genotyping results will be combined with data from the prior mtDNA 
+work to  evaluate whether introgressed sunset rockfish represent a biologically
+intermediate subform of the species complex.  The effort also proposes to develop 
+and test the efficacy of models to predict the relative proportion of the two 
+species based upon explanatory variables including latitude, depth, species of 
+co-occurrence, oceanographic parameters, habitat descriptors and/or other 
+information.  The anticipated completion of the genotyping of all specimens 
+is approximately December 2021 with provision of final results by the end of FY 2022.
 
-This research is aimed at providing information to support the successful stock assessment of this commercially and recreationally valuable cryptic species pair and is responsive to any data gaps identified by the assessment community.  If successful, this research, conducted in close communication with stock assessors, may also assist the PFMC in establishing best practices for the assessment and management of cryptic species complexes.  Though this project will only focus on nominal vermilion rockfish specimens collected through the 2019 survey field season, it may be advisable that tissue specimens collected aboard fishery-independent surveys as well as through fishery-dependent programs continue to be genotyped on an ongoing basis to support continued and timely monitoring of this economically and ecologically important species complex.
+This research is aimed at providing information to support the successful stock
+assessment of this commercially and recreationally valuable cryptic species pair 
+and is responsive to any data gaps identified by the assessment community.  If 
+successful, this research, conducted in close communication with stock assessors, 
+may also assist the PFMC in establishing best practices for the assessment and 
+management of cryptic species complexes.  Though this project will only focus 
+on nominal vermilion rockfish specimens collected through the 2019 survey 
+field season, it may be advisable that tissue specimens collected aboard 
+fishery-independent surveys as well as through fishery-dependent programs 
+continue to be genotyped on an ongoing basis to support continued and timely 
+monitoring of this economically and ecologically important species complex.
 
 
 ## Map
-A map showing the scope of the two `r spp` assessments and depicting boundaries at Point Conception (\PtC) that separates the two assessments. THe northern model is bounded by the California/Oregon border and the southern model is bounded by the U.S./ Mexico border at the south (Figure \@ref(fig:assess-area)). Cape Mendocino (\CapeM) is also noted as it is a management boundary for the stock.
+A map showing the scope of the two `r spp` assessments and depicting boundaries 
+at Point Conception (\PtC) that separates the two assessments. THe northern 
+model is bounded by the California/Oregon border and the southern model is 
+bounded by the U.S./ Mexico border at the south (Figure \@ref(fig:assess-area)). 
+Cape Mendocino (\CapeM) is also noted as it is a management boundary for the stock.
 
 
 ## Ecosystem Considerations
 
-John is writing
+This stock assessment does not explicitly incorporate trophic interactions, 
+habitat factors (other than as inform relative abundance indices) or environmental 
+factors into the assessment model, but a brief description of likely or potential 
+ecosystem considerations are provided below. 
+
+vermilion/sunset rockfish are described as feeding on a wide range of both
+pelagic and benthic prey items, including forage fish species such as anchovies 
+and mesopelagic fishes, squid, krill and octopus, as well as sporadically abundant
+pelagic organisms such as pyrosomes, salps and pelagic red crabs 
+[@Phillips1964; @Love2002].  Interestingly, other rockfishes (either juvenile or 
+adult stages) have not been 
+documented as prey for vermilion, as they have been for other larger *Sebastes* 
+species such as cowcod, bocaccio and yelloweye rockfish.  For the latter species, 
+the idea of “cultivation effects,” in which adults crop down forage species that 
+are potential competitors/predators of their own juveniles [@Walters2001], 
+have been suggested by [@MacCall2002, @Baskett2006]. For example, [-@Baskett2006] 
+found that in such scenarios there could be alternative stable states in which 
+either the overfished species or the smaller prey species could dominate.  While 
+the sparse diet data for vermilion/sunset rockfish do not suggest such a process 
+for this species complex, food habits data for vermilion/sunset are not robust, 
+and the larger community processes on these rocky reef communities may also influence 
+productivity and community composition regardless of the direct predation interactions. 
+Pelagic and benthic juvenile vermilion and sunset rockfish are likely preyed upon by 
+the same wide range of predators that prey on juveniles and adults of other rockfish 
+species, including seabirds, piscivorous fishes, and marine mammals.  
+As with most other rockfish and groundfish in the California Current, recruitment, 
+or cohort (year-class) strength appears to be highly variable for the vermilion/sunset 
+rockfish complex, with only a modest apparent relationship to spawning output.  
+Oceanographic and ecosystem factors are widely recognized to be key drivers of
+recruitment variability for most species of groundfish, as well as most elements
+of California Current food webs.  Empirical estimates of recruitment from pelagic 
+juvenile rockfish surveys have been used to inform incoming year class strength for 
+some of these stocks, however vermilion and sunset rockfish are rarely encountered 
+in these surveys.  Specifically, only 47 of nearly 300,000 total juvenile *Sebastes* 
+encountered in juvenile surveys since 2001 were identified as vermilion or sunset 
+rockfish [@Field2021].  Despite this, the results here suggest that at least a
+reasonable fraction of recruitment variability for sunset and vermilion rockfish 
+is shared with other rockfish and groundfish stocks throughout the California Current, 
+many of which also had strong year classes in 1984, 1999 and 2015.  Previous studies 
+have demonstrated that large-scale oceanographic drivers, such as the relative transport 
+of subarctic waters (typically indicated by relative sea level) tend to relate to a 
+substantial fraction of overall groundfish recruitment trends and ecosystem 
+productivity [@Stachura2014, @Schroeder2019].  Although it is feasible that 
+ecosystem factors, the results of pre-recruit surveys for co-occurring species, 
+or the results of other groundfish assessments might ultimately be used to 
+forecast recruitment for more data-limited stocks such as vermilion/sunset,
+as suggested by [@Thorson2014], such approaches would require more 
+development and evaluation.  Consequently, environmental factors are not 
+explicitly considered in this assessment.
+
 
 

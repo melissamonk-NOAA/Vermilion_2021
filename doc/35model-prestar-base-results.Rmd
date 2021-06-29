@@ -85,6 +85,8 @@ The full r4ss plotting output is available in the supplementary material.
 
 ### Population Trajectory
 
+
+
 ### Reference Points
 
 

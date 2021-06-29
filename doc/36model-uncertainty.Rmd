@@ -1,20 +1,28 @@
 ## Model Diagnostics
+
 Describe all diagnostics
 
-### Convergence
 
-### Sensitivity Analyses
+### Sensitivity to Assumptions, Data and, Weighting
 
 
-### Retrospective Analysis
+
 
 
 ### Likelihood Profiles
 
-
-### Unresolved Problems and Major Uncertainties
 Likelihood profiles were conducted for $R_0$, steepness, and over natural mortality 
 values separately with the post-STAR base. These likelihood profiles were conducted by 
 fixing the parameter 
 at specific values and estimated the remaining parameters based on the fixed parameter 
 value (Tables frog).
+
+
+
+### Retrospective Analysis
+
+
+
+
+### Unresolved Problems and Major Uncertainties
+

@@ -5,12 +5,6 @@ year: "2021"
 params:
     model: "south"
 preamble: |
-output:
-  sa4ss::techreport_pdf:
-    default
-  bookdown::pdf_document2:
-    keep_tex: true
-    keep_md: true
 header-includes:
   - \usepackage{booktabs}
   - \usepackage{longtable}
@@ -27,6 +21,14 @@ header-includes:
   - \usepackage{xcolor}
   - \usepackage{placeins}
   - \usepackage{enumerate}
+  - \usepackage[inline]{showlabels}
+  - \usepackage{lineno} 
+output:
+  sa4ss::techreport_pdf:
+    default
+  bookdown::pdf_document2:
+    keep_tex: true
+    keep_md: true
 lang: en
 papersize: a4
 ---
@@ -90,6 +92,12 @@ title: The status of Vermilion Rockfish (_Sebastes miniatus_) and Sunset Rockfis
 
 <!--chapter:end:00titlenorth.Rmd-->
 
+
+\includegraphics{cover_photo.png}
+Two color morphs of the vermilion/sunset cryptic species pair.  Confirmation of 
+species can only be determined via genetic analysis. The two fish were caught off Santa Barbara channel at approximately 250 ft. 
+Photo courtesy of Sabrina Beyer.
+
 \pagebreak
 \pagenumbering{roman}
 \setcounter{page}{1}
@@ -99,6 +107,10 @@ title: The status of Vermilion Rockfish (_Sebastes miniatus_) and Sunset Rockfis
 
 
 \setlength\parskip{0.5em plus 0.1em minus 0.2em}
+
+\printnoidxglossary[sort=word]
+
+\newpage
 
 <!--chapter:end:01a.Rmd-->
 
@@ -204,22 +216,115 @@ parameters between the two species as well as habitats.
 
 _Ongoing Research (Provided by John Harms, NWFSC)_
 
-A group of researchers from the NWFSC and SWFSC is collaborating on a project to genotype tissue specimens collected from the vermilion and sunset rockfish cryptic pair captured during the West Coast Groundfish Bottom Trawl Survey and the Southern CA Shelf Rockfish Hook and Line Survey for the years 2004 - 2019.  Funding for this project was obtained through the Saltonstall-Kennedy program for FY 2020 through a proposal led by representatives from Pacific States Marine Fisheries Commission and the commercial passenger fishing vessel industry in southern California.  
+A group of researchers from the NWFSC and SWFSC is collaborating on a project to 
+genotype tissue specimens collected from the vermilion and sunset rockfish cryptic 
+pair captured during the West Coast Groundfish Bottom Trawl Survey and the Southern 
+CA Shelf Rockfish Hook and Line Survey for the years 2004 - 2019.  Funding for this 
+project was obtained through the Saltonstall-Kennedy program for FY 2020 through a 
+proposal led by representatives from Pacific States Marine Fisheries Commission and 
+the commercial passenger fishing vessel industry in southern California.  
 
-After combining with specimens obtained through other collection efforts along the West Coast, approximately 25,000 tissue specimens will be analyzed.  Some earlier efforts to separate this cryptic pair to species used mitochondrial DNA (mtDNA) markers.  However, due to a one-way mitochondrial introgression from the vermilion genome into the sunset genome, a portion of the sunset rockfish population contains mitochondrial DNA sequences consistent with vermilion rockfish resulting in incorrect species assignments for these introgressed individuals during the prior research project.  The current research has identified a robust suite of genetic markers within the nuclear genomes of the two species that definitively separates vermilion and sunset rockfish (including  introgressed sunset rockfish), canary rockfish, first generation vermilion-sunset hybrids, and identifies emerging patterns of intraspecific stock structure within the two sister species.
+After combining with specimens obtained through other collection efforts along 
+the West Coast, approximately 25,000 tissue specimens will be analyzed.  Some 
+earlier efforts to separate this cryptic pair to species used mitochondrial DNA 
+(mtDNA) markers.  However, due to a one-way mitochondrial introgression from 
+the vermilion genome into the sunset genome, a portion of the sunset rockfish 
+population contains mitochondrial DNA sequences consistent with vermilion rockfish 
+resulting in incorrect species assignments for these introgressed individuals 
+during the prior research project.  The current research has identified a robust 
+suite of genetic markers within the nuclear genomes of the two species that 
+definitively separates vermilion and sunset rockfish (including  introgressed 
+sunset rockfish), canary rockfish, first generation vermilion-sunset hybrids, 
+and identifies emerging patterns of intraspecific stock structure within the 
+two sister species.
 
-Once the collected specimens have been genotyped, any species-specific differences in spatial and depth distribution, size composition, weight-length relationships, and other biological characteristics will be identified.  Using previously collected otoliths and ovaries, the demographics of the two species including age and growth and reproductive biology parameters such as length and age at 50% maturity and the prevalence of skip spawning will be explored and compared.  These new genotyping results will be combined with data from the prior mtDNA work to  evaluate whether introgressed sunset rockfish represent a biologically intermediate subform of the species complex.  The effort also proposes to develop and test the efficacy of models to predict the relative proportion of the two species based upon explanatory variables including latitude, depth, species of co-occurrence, oceanographic parameters, habitat descriptors and/or other information.  The anticipated completion of the genotyping of all specimens is approximately December 2021 with provision of final results by the end of FY 2022.
+Once the collected specimens have been genotyped, any species-specific differences 
+in spatial and depth distribution, size composition, weight-length relationships, 
+and other biological characteristics will be identified.  Using previously 
+collected otoliths and ovaries, the demographics of the two species including 
+age and growth and reproductive biology parameters such as length and age at 
+50% maturity and the prevalence of skip spawning will be explored and compared. 
+These new genotyping results will be combined with data from the prior mtDNA 
+work to  evaluate whether introgressed sunset rockfish represent a biologically
+intermediate subform of the species complex.  The effort also proposes to develop 
+and test the efficacy of models to predict the relative proportion of the two 
+species based upon explanatory variables including latitude, depth, species of 
+co-occurrence, oceanographic parameters, habitat descriptors and/or other 
+information.  The anticipated completion of the genotyping of all specimens 
+is approximately December 2021 with provision of final results by the end of FY 2022.
 
-This research is aimed at providing information to support the successful stock assessment of this commercially and recreationally valuable cryptic species pair and is responsive to any data gaps identified by the assessment community.  If successful, this research, conducted in close communication with stock assessors, may also assist the PFMC in establishing best practices for the assessment and management of cryptic species complexes.  Though this project will only focus on nominal vermilion rockfish specimens collected through the 2019 survey field season, it may be advisable that tissue specimens collected aboard fishery-independent surveys as well as through fishery-dependent programs continue to be genotyped on an ongoing basis to support continued and timely monitoring of this economically and ecologically important species complex.
+This research is aimed at providing information to support the successful stock
+assessment of this commercially and recreationally valuable cryptic species pair 
+and is responsive to any data gaps identified by the assessment community.  If 
+successful, this research, conducted in close communication with stock assessors, 
+may also assist the PFMC in establishing best practices for the assessment and 
+management of cryptic species complexes.  Though this project will only focus 
+on nominal vermilion rockfish specimens collected through the 2019 survey 
+field season, it may be advisable that tissue specimens collected aboard 
+fishery-independent surveys as well as through fishery-dependent programs 
+continue to be genotyped on an ongoing basis to support continued and timely 
+monitoring of this economically and ecologically important species complex.
 
 
 ## Map
-A map showing the scope of the two vermilion rockfish assessments and depicting boundaries at Point Conception (\PtC) that separates the two assessments. THe northern model is bounded by the California/Oregon border and the southern model is bounded by the U.S./ Mexico border at the south (Figure \@ref(fig:assess-area)). Cape Mendocino (\CapeM) is also noted as it is a management boundary for the stock.
+A map showing the scope of the two vermilion rockfish assessments and depicting boundaries 
+at Point Conception (\PtC) that separates the two assessments. THe northern 
+model is bounded by the California/Oregon border and the southern model is 
+bounded by the U.S./ Mexico border at the south (Figure \@ref(fig:assess-area)). 
+Cape Mendocino (\CapeM) is also noted as it is a management boundary for the stock.
 
 
 ## Ecosystem Considerations
 
-John is writing
+This stock assessment does not explicitly incorporate trophic interactions, 
+habitat factors (other than as inform relative abundance indices) or environmental 
+factors into the assessment model, but a brief description of likely or potential 
+ecosystem considerations are provided below. 
+
+vermilion/sunset rockfish are described as feeding on a wide range of both
+pelagic and benthic prey items, including forage fish species such as anchovies 
+and mesopelagic fishes, squid, krill and octopus, as well as sporadically abundant
+pelagic organisms such as pyrosomes, salps and pelagic red crabs 
+[@Phillips1964; @Love2002].  Interestingly, other rockfishes (either juvenile or 
+adult stages) have not been 
+documented as prey for vermilion, as they have been for other larger *Sebastes* 
+species such as cowcod, bocaccio and yelloweye rockfish.  For the latter species, 
+the idea of “cultivation effects,” in which adults crop down forage species that 
+are potential competitors/predators of their own juveniles [@Walters2001], 
+have been suggested by [@MacCall2002, @Baskett2006]. For example, [-@Baskett2006] 
+found that in such scenarios there could be alternative stable states in which 
+either the overfished species or the smaller prey species could dominate.  While 
+the sparse diet data for vermilion/sunset rockfish do not suggest such a process 
+for this species complex, food habits data for vermilion/sunset are not robust, 
+and the larger community processes on these rocky reef communities may also influence 
+productivity and community composition regardless of the direct predation interactions. 
+Pelagic and benthic juvenile vermilion and sunset rockfish are likely preyed upon by 
+the same wide range of predators that prey on juveniles and adults of other rockfish 
+species, including seabirds, piscivorous fishes, and marine mammals.  
+As with most other rockfish and groundfish in the California Current, recruitment, 
+or cohort (year-class) strength appears to be highly variable for the vermilion/sunset 
+rockfish complex, with only a modest apparent relationship to spawning output.  
+Oceanographic and ecosystem factors are widely recognized to be key drivers of
+recruitment variability for most species of groundfish, as well as most elements
+of California Current food webs.  Empirical estimates of recruitment from pelagic 
+juvenile rockfish surveys have been used to inform incoming year class strength for 
+some of these stocks, however vermilion and sunset rockfish are rarely encountered 
+in these surveys.  Specifically, only 47 of nearly 300,000 total juvenile *Sebastes* 
+encountered in juvenile surveys since 2001 were identified as vermilion or sunset 
+rockfish [@Field2021].  Despite this, the results here suggest that at least a
+reasonable fraction of recruitment variability for sunset and vermilion rockfish 
+is shared with other rockfish and groundfish stocks throughout the California Current, 
+many of which also had strong year classes in 1984, 1999 and 2015.  Previous studies 
+have demonstrated that large-scale oceanographic drivers, such as the relative transport 
+of subarctic waters (typically indicated by relative sea level) tend to relate to a 
+substantial fraction of overall groundfish recruitment trends and ecosystem 
+productivity [@Stachura2014, @Schroeder2019].  Although it is feasible that 
+ecosystem factors, the results of pre-recruit surveys for co-occurring species, 
+or the results of other groundfish assessments might ultimately be used to 
+forecast recruitment for more data-limited stocks such as vermilion/sunset,
+as suggested by [@Thorson2014], such approaches would require more 
+development and evaluation.  Consequently, environmental factors are not 
+explicitly considered in this assessment.
 
 
 
@@ -459,15 +564,27 @@ in some southern California port complexes through 1983. See Appendix A of Dick
 et al. [-@Dick2007] and Pearson et al. [-@Pearson2008; pp. 8 and 15-16] for 
 further details.
 
+Include a few sentences on why we didn't use PacFIN
 
 
 
+*Commercial length and age composition data*
 
-*Commercial length composition data*
+Biological data from the commercial fisheries that landed vermilion rockfish were extracted 
+from CALCOM on frog. The CALCOM length composition data were catch-weighted 
+to "expanded" length the raw length composition data. The length composition of all fisheries aggregated across time by fleet is in 
+Figures \@ref(fig:len-data-COM_HKL)-\@ref(fig:len-data-COM_NET) and Table \@ref(tab:length-sample-size). 
+Descriptions and details of the length composition data are in the above section 
+for each fleet or survey.
 
+Commercial discard length compositions from \Gls{wcgop} were provided on 
+17 Nov 2020 by Andi Stephens (NWFSC).  Only 224 vermilion were measured from 
+2004-2018 and were not considered for use in the assessment.
 
-
-*Commercial age composition data*
+Input sample sizes for commercial length composition varied depending on the 
+available data source
+Otoliths collected from commercial fisheries north of Pt. Conception were provided 
+and aged, but not used in the assessment due to low annual sample sizes.
 
 
 ### Recreational Landings and Discard
@@ -551,7 +668,7 @@ changes in subregion definition, and sampling gaps are shown in Table X.
 Estimates of recreational landings and discard since 2004 have been produced by 
 the CRFS. This survey improves upon the MRFSS sampling design, with higher 
 sampling rates and finer spatial and temporal resolution.
-
+Mortality estimates for the period 2005-2018 were queried from [RecFIN](www.recfin.org). Reported estimates are for southern California, all modes, and filtered to exclude fish caught in Mexican waters. Total recreational mortality estimates provided to RecFIN are also adjusted using species- and depth-specific discard mortality rates.
 
 
 *Discard mortality rates*
@@ -570,7 +687,6 @@ Nearshore rates (jig and pole): 0-10 fm 20%; 10-20 fm 34%, >20 fm 100%
 
 Length compositions were provided from the following sources:
 
-frog: turn these into tables and add citations
 
 There is no available recreational length composition available for 2020 north of Pt. Conception in RecFIN and sparse sampling was confirmed by J. Budrick (CDFW, pers. comm,).
 
@@ -594,13 +710,15 @@ There is no available recreational length composition available for 2020 north o
 
 
 
-
+THe number of available fish by year and fleet as well as the method we used to 
+calculate initial sample sizes are in Table \@ref(tab:length-sample-size).
 
 *Recreational age composition data*
 
 There are no recreational age composition data available for vermilion rockfish.
 
-There are no recreational age composition data available for vermilion. Otoliths are available from collaborative with Cal Poly to investigate the precision of back-calculating whole fish lenght from filleted fish in the CPFV fleet. These otoliths were not aged for this assessment. 
+There are no recreational age composition data available for vermilion from state 
+sampling programs. Otoliths are available from collaborative with Cal Poly to investigate the precision of back-calculating whole fish lenght from filleted fish in the CPFV fleet. These otoliths were not aged for this assessment. 
 
 
 ## Fishery-Independent data
@@ -629,6 +747,12 @@ randomly chosen 500 by 500 m grid cells within and outside \Gls{mpa}s.
 Prior to 2017, all fish were measured for length and release or descended to depth;
 since then, some have been retained for biological collections including otoliths and fin clips.
 
+**Available Data**
+
+- Lengths (used)
+- Ages (48 available, but not used due to low sample sizes)
+- Index of abundance (for a detailed description of the index see frog)
+
 
 ### NWFSC West Coast Groundfish Bottom Trawl Survey
 
@@ -641,6 +765,15 @@ May to early October. This design therefore incorporates both vessel-to-vessel
 differences in catchability, as well as variance associated with selecting a 
 relatively small number (approximately 700) of possible cells from a very large 
 set of possible cells spread from the Mexican to the Canadian borders.
+
+**Available Data**
+
+- Conditional Age-at-Length (xx fish)
+- Additional lengths of fish not aged
+- Index of abundance (for a detailed description of the index see frog)
+  + The index was considered, but not used in the pre-STAR base model. Sample 
+  sizes of vermilion rockfish were low.
+
 
 
 ### NWFSC Hook and Line Survey
@@ -658,6 +791,12 @@ angler's discretion (e.g., to avoid losing fish). Five drops are attempted at
 each site for a maximum possible catch of 75 fish per site per year (3 anglers 
 x 5 hooks x 5 drops). Further details regarding the sample frame, site 
 selection, and survey methodology are described by Harms et al. [-Harms2008]. 
+
+**Available Data**
+
+- Conditional Age-at-Length (xx fish)
+- Additional lengths of fish not aged
+- Index of abundance (for a detailed description of the index see frog)
 
 
 ## Data sources considered, but not used
@@ -725,9 +864,15 @@ through the University of California Santa Barbara in southern California.
 
 *California Cooperative Oceanic Fisheries Investigations* 
 
-The he California Cooperative Oceanic Fisheries Investigations (CalCOFI) surveys...
+The California Cooperative Oceanic Fisheries Investigations (CalCOFI) surveys...
+Vermilion rockfish cannot be identified morphologically in the ichthyoplankton 
+samples. Thompson et al. identified nine vermilion rockfish from genetic samples.
 
-No vermilons.
+*Rockfish Recruitment and Ecosystem Survey*
+
+Since 1983, the SWFSC has conducted an annual midwater trawl survey for pelagic juvenile rockfish and other groundfish in the Central California region of the California Current ([-@Ralston2013] and references therein).  Due to concerns about mesoscale abundance patterns and a need for greater spatial representation in the data, including some apparent strong differences in spatial distribution patterns in the early 2000s [@Hastie2007; @Ralston2013b], this survey was expanded to a broader spatial scale in the 2001-2004 period, and since 2004 most years have coastwide data from a combination of SWFSC, NWFSC and Cooperative Research surveys (see[-@Field2017] for more complete details regarding coastwide pre-recruit data, and [-@Sakuma2016], [@Friedman2018] for additional details and alternative applications of survey data). 
+
+Vermilion frog..
 
 ## Biology
 
@@ -735,65 +880,20 @@ No vermilons.
 ## Biological Data
 
 
-### Length and Age Compositions
-
-Differences in length compositions and length-at-age were explored 
-north and south of Pt. Conception prior to any modelling. There are 
-currently no available data to separate sunset and vermilion rockfishes.
-
-
-Length compositions were provided from the following sources:
-
-*North of Pt. Conception*
-
-* Commercial sources
-  + CALCOM (1978-2020)
-* Recreational sources
-  + Miller and Gotshall dockside survey (1959-1960)
-  + CPFV samples from Commercial port samplers (1978-1979)
-  + Deb Wilson-Vandenberg's onboard observer survey (1988-1998)
-  + MRFSS dockside survey (1980-2003)
-  + CRFS onboard and dockside survey (2004-2019)
-* Fishery-independent surveys
-  + CCFRP hook-and-line survey (2007-2018)
-  + West Coast Groundfish Bottown Trawl Survey (2003-2019)
-
-
-
-*South of Pt. Conception*
-
-* Commercial sources
-  + CALCOM (1978-2020)
-* Recreational sources
-  + Ally et al. onboard observer survey (1986-1989)
-  + Collins and Crooke onboard observer survey (1975-1978)
-  + MRFSS dockside survey (1980-2003)
-  + CRFS onboard and dockside survey (2004-2018)
-* Fishery-independent surveys
-  + NWFSC Hook-and-Line Survey (2004-2019)
-  + West Coast Groundfish Bottown Trawl Survey (2003-2019)
-
-
-
-The length composition of all fisheries aggregated across time by fleet is in Figure
-\ref{fig:comp_lendat_aggregated_across_time} and Table xxx. 
-Descriptions and details of the length composition data are in the above section 
-for each fleet or survey.
 
 ### Age Structures
 
-
+<!--
 **External Fits to Growth**
-
 
 Fits to the von Bertalanffy growth curve, 
 $L_i = L_{\infty}e^{(-k[t-t_0])}$, where $L_i$ is the length (cm) at age $i$, $t$ is age in 
 years, $k$ is rate of increase in growth, $t_0$ is the intercept, and $L_{\infty}$ 
 is the asymptotic length, were explore by species and sex. 
+-->
 
 
-
-### Ageing Precision and Bias
+#### Ageing Precision and Bias
 
 Uncertainty in ageing error was estimated using a collection of 357 vermilion rockfish 
 otoliths with two age reads between the NWFSC (reader 1, B. Kamikawa) and the 
@@ -823,13 +923,25 @@ the first year of the plus group in the assessment model.
 
 
 
-### Maturation and Fecundity
+### Maturity
+
+For the current assessment, Melissa Head (NWFSC, pers. comm.) determined maturity for frog female vermilion rockfish caught by recent fishery-independent surveys. Two types of maturity determinations were provided, ‘biological maturity’ and ‘functional maturity.’ The former category includes “juveniles exhibiting dummy runs (early vitellogenesis or yolk granules present in a small proportion of oocytes, some in early stages of cellular decay) and skip spawners (adults foregoing spawning in a given year)” (M. Head, pers. comm.), while the latter excludes such cases. Separate logistic regressions were fit to each type of maturity determination as a function of fork length (Figure frog), estimating LMAT at frog cm (biological maturity) and frog cm (functional maturity), with slopes of frog and frog, respectively.  The samples available from areas 
+north of Pt. Conception were smaller fish and did not allow for estimates of separate 
+maturity curves.  Both California vermilion assessments assum the same maturity ogive. 
+
+
+The proportion of females classified as mature may be sensitive to the month of capture. frog
+
+### Fecundity
 
 
 
 ### Natural Mortality
 
 Natural mortality was not directly measured, so life-history based empirical relationships were used. The Natural Mortality Tool (NMT; https://github.com/shcaba/Natural-Mortality-Tool), a Shiny-based graphical user interface allowing for the application of a variety of natural mortality estimators based on measures such as longevity, size, age and growth, and maturity, was used to obtain estimates of natural mortality. The NMT currently provides 19 options, including the Hamel [-@Hamel2015] method, which is a corrected form of the Then et al. [-@Then2018] functional regression model and is a commomly applied method for west coast groundfish. The NMT also allows for the construction of a natural mortality prior weighted across methods by the user. 
+
+We assumed the age of 54 years to represent the practical longevity (i.e., 90% of the commonly seen maximum age of 60) for both females and males, though the absolute oldest age in OR was >60 years. In the larger biomass, higher sampled area of California, ages 80+ were even encountered. Empirical $M$ estimators using the von Bertalanffy growth parameters were also considered, but they produced unreasonably high estimates (2-3 times higher than the longevity estimates). This is likely explained by the fact that while vermilion rockfish have protracted longevity at $L_{\infty}$. Additionally, the FishLife [@Thorson2017] estimate was included, though, given the source of FishLife data is FishBase, there is a good chance the estimates of $M$ are also from methods using longevity, though the actual source of longevity in FishLife was unknown. 
+Both California vermilion assessments used the Hamel prior [-@Hamel2015], which is defined as a lognormal with mean $ln\frac{5.4}{A_{max}}$  and SE = 0.4384343. Using a maximum age of 54 the point estimate and median of the prior is 0.1, which is used as a prior on $M$ in the assessment model. We also explore sensitivity to these assumptions of natural mortality through likelihood profiling.
 
 
 
@@ -843,13 +955,7 @@ No information on the sex ratio at birth was available so it was assumed to be 5
 
 The length(cm)-weight(kg) relationship for vermilion rockfish was estimated outside the 
 model using California biological data available from fishery-independent 
-data sources. The estimated length-weight relationship for female fish was $W$=1.744e-05$L$^3^ and males at $W$=1.744e-05$L$^3^ (Figure xx).
-
-
-
-### Steepness
-
-The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) and reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017, has been a primary source of information on steepness for rockfishes. This approach, however, was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absence of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 prior for steepness ($h$; beta distribution with $\mu$=0.72 and $\sigma$=0.15) is retained.  
+data sources including the NWFSC hook-and-line survey and the WCGBTS. The estimated length-weight relationship for female fish was $W$=1.744e-05$L$^3^ and males at $W$=1.744e-05$L$^3^ (Figure \@ref(weightlength)). 
 
 
 <!--chapter:end:20data.Rmd-->
@@ -884,7 +990,7 @@ generic rockfish recommendations The generic rockfish recommendation are not
 presented here.
 
 
-*Vermilion rockfish recommendations*
+**Vermilion rockfish recommendations**
 
 Investigation into the species composition of nominal vermilion rockfish is needed.
 It is not clear that separate assessments for the northern and southern areas are warranted
@@ -893,14 +999,75 @@ timing of recruitment events, the estimated stock trends were similar in both ar
 Pooling of data from northern and southern areas may permit a more robust assessment
 model to be obtained.
 
-*2021 STAT response* 
-
-Since the 2005 assessment, vermilion rockfish were speciated 
-to vermilion and sunset rockfishes [@Hyde2009].  Sunset rockfish are more common south of 
+*2021 STAT response* Since the 2005 assessment, vermilion rockfish were speciated to vermilion and sunset rockfishes [@Hyde2009].  Sunset rockfish are more common south of 
 Pt. Conception (\PtC) and historical catches and length distributions between 
 the two areas are different. The STAT discussed this at the Pre-Assessment workshop 
 and all participants agreed that modeling the areas separately was an appropriate 
 decision.
+
+
+**General rockfish Recommendations**
+
+-The historical catch is an important input into any stock assessment. 
+Although efforts have been made to construct catch time series for California rockfish, a more sustained effort is needed to do this for all rockfish species. It should not be left to individual analysts to do this for a species as stock assessments arise. It should be done by a specialist team for all species simultaneously, so that consistent times series can beestablished.
+
+-Management changes affect fisher behaviour and alter the correct interpretation of CPUE
+time series. As for catch histories, it is important that a specialist team consider and
+document all management changes and how they may have impacted on catch rates for
+all species. Again, this should not be left to individual assessment authors as the issues
+are generic and patterns might not be obvious without a multi-species perspective.
+
+-Improved documentation of input data and output for GLM analyses of CPFV and
+RecFIN CPUE data is recommended. In general, GLM analyses should provide analysis
+of deviance tables, estimated coefficients, and their standard errors to document these
+calculations. Information on amount of RecFIN records filtered by species association
+also needs to be presented to show the effect of the species association analysis. Although this method is an objective approach to filtering records, it is unknown how well works in practice to reduce the potential biases of CPUE data. A paper describing a
+comprehensive application of GLM methods to CPFV and RecFIN CPUE data on
+California rockfish would be a important contribution to the assessment process and the
+primary literature.
+
+-Many rockfish assessments use CPUE data from the CPFV fishery as an index of
+population abundance. The CPFV fishery is focused primarily on marketing a successful
+“fishing experience” that is related to the desirability of the species caught, quantity,
+body size, and fighting characteristics. The default assumption of proportionality
+between CPUE and abundance has not been evaluated for a fishery with these
+characteristics. Simulation modeling of fleet dynamics in a multi-species context is one
+possible way to address these issues.
+
+-A more complete understanding of the multi-species aspects of rockfish population
+dynamics is needed. Although some rockfish stocks have declined in recent decades
+under heavy fishing pressure and environmental change, other rockfish species have
+apparently increased. Are these species adapted to different environmental conditions, or
+are these increases due to the indirect effects of reduced competition and/or predation?
+
+
+Conducting additional assessments of the many relatively uncommon rockfish in
+California is a difficult but worthwhile objective. To facilitate this process, 
+the Panel has a number suggestions:
+
+1. Keep the models simple.  
+2. Make reasonable assumptions based on life history and better studied species for
+parameters that cannot be reliably estimated, such as natural mortality, stock-recruit
+steepness, selectivity.  
+3. Think meta-analytically. For example, similar species that are often caught together
+are likely to have experienced similar fishing mortality rates and trends. There are also
+more rigorous methods for sharing information between related stocks that could be
+considered.  
+4. Make the most of CPUE data:  
+    + For several assessments, indices from GLM analyses of site-specific CPFV data
+apparently tracked population trends better than indices from RecFIN data, even
+when a subset of records had been selected using the Stevens and MacCall (2004)
+procedure. Greater priority should be given to collecting site-specific CPUE data.
+Given the ubiquity of GPS systems and hand-held data recorders, obstacles to
+collecting site-specific information from fisheries are now logistic rather than
+technological.  
+    + Location information for the historical groundfish catch data of all species is
+currently available, in hard copy form only, from the California Department of
+Fish and Game. Putting this information into electronic format would greatly
+improve the ability to assign catches of all species to specific stocks on a trip-bytrip basis.  
+5. Do not put too much trust in model results. Models are no better that their input data
+and assumptions, and for many rockfish species, the data are sparse and potentially
+misleading.  
 
 
 
@@ -909,7 +1076,10 @@ decision.
 
 
 
-## Model Structure and Assumptions
+## Model Specificiations
+
+
+
 
 Vermilion rockfish NCA of Point Conception (\PtC) off the coast of California
 is assessed using a two-sex model with sex-specific life history parameters.  
@@ -948,11 +1118,7 @@ The model has the additional survey fleets:
 
 
 
-### Model Specifications
 
-Electronic SS model files including the data, control, starter, and forecast files can be 
-found on the 
-[PFMC's website](https://www.pcouncil.org/groundfish/stock-assessments/).
 
 
 ### Modeling Platform and Structure
@@ -963,10 +1129,12 @@ version was used because it included improvements and corrections to older
 model versions. The R package [r4ss](https://github.com/r4ss/r4ss), version 
 1.38.0, along with R version 4.0.1 were used to investigate and plot model fits. 
 
-### Summary of Data for Fleets and Areas
+Electronic SS model files including the data, control, starter, and forecast files can be 
+found on the 
+[PFMC's website](https://www.pcouncil.org/groundfish/stock-assessments/).
 
 
-
+### Model Parameters
 
 
 ### Priors
@@ -977,6 +1145,11 @@ The prior for steepness (*h*) assumes a beta distribution with parameters based 
 update for the Thorson-Dorn rockfish prior (Dorn, M. and Thorson, J., pers. comm.), 
 which was endorsed by the Science and Statistical Committee in 2019.  The prior is a 
 beta distribution with $mu$=0.72 and $sigma$=0.16. 
+
+#### Steepness
+
+The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) and reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017, has been a primary source of information on steepness for rockfishes. This approach, however, was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absence of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 prior for steepness ($h$; beta distribution with $\mu$=0.72 and $\sigma$=0.15) is retained.  
+
 
 ###Data Weighting
 Length composition and conditional-age-at-length (CAAL) compositions sample sizes for 
@@ -1009,10 +1182,26 @@ described below in the Estimated Parameters section.
 
 
 
-### Model Parameters
-Describe estimated vs. fixed parameters, priors
-
 ### Key Assumptions and Structural Choices
+
+
+### Evaluation of Model Parameters
+
+
+
+
+### Convergence
+
+Model convergence was determined by starting the minimization process from dispersed 
+values of the maximum likelihood estimates to determine if the model found a better 
+minimum. Jitter is a SS option that generates random starting values from a normal 
+distribution logistically transformed into each parameter’s range [@Methot2019]. This 
+was repeated 300 times and the minimum was reached in 67% of the runs  (Table \ref{tab:jitter}).
+The model did not experience convergence issues, e.g., final gradient was below 0.0001,
+when reasonable starting values were used and there were no difficulties in inverting 
+the Hessian to obtain estimates of variability.  We did sensitivity runs for 
+convergence by changing the phases for key estimated parameters; neither the total 
+log-likelihood nor the parameter estimates changed.
 
 
 
@@ -1040,7 +1229,7 @@ Stock-recruit parameters
 - $log(R_0)$ controlling equilibrium recruitment  
 - 158 recruitment deviations parameters covering the range  
   1875-2032, with 
-  1980-2020
+  1970-2020
   representing the "main" period modeled as a zero-centered deviation vector  
   
 Index parameters  
@@ -1074,9 +1263,9 @@ Selectivity parameters
 
 \begin{centering}
 
-Females $L_{\infty}$ = 55.7 cm; $k$ = 0.144; $t_0$ = -0.53
+Females $L_{\infty}$ = 55.4 cm; $k$ = 0.145; $t_0$ = -0.53
 
-Males $L_{\infty}$ = -0.1 cm; $k$ = 0.34; $t_0$ = -0.11
+Males $L_{\infty}$ = 49.9 cm; $k$ = 0.199; $t_0$ = -0.15
 
 \end{centering}
 
@@ -1092,6 +1281,8 @@ The full r4ss plotting output is available in the supplementary material.
 
 ### Population Trajectory
 
+
+
 ### Reference Points
 
 
@@ -1101,8 +1292,8 @@ Figure \@ref(fig:bh-resids)
 
 Reference points were calculated using the estimated selectivities and catch distribution among fleets in the most recent year of the model, 2020. 
 Sustainable total yield (landings plus discards) was 
-146.74 mt when using an $SPR_{50\%}$ 
-reference harvest rate. The spawning output equivalent to 40% of the unfished level ($SB_{40\%}$) was 422.44 
+140.88 mt when using an $SPR_{50\%}$ 
+reference harvest rate. The spawning output equivalent to 40% of the unfished level ($SB_{40\%}$) was 497.31 
 million eggs. 
 
 The predicted spawning output from the base model shows frogs (Figure \@ref(fig:ssb)).  The spawning output then frogs.
@@ -1115,20 +1306,18 @@ Table \ref{tab:ref-pts} shows the full suite of estimated reference points for t
 
 
 ## Model Diagnostics
+
 Describe all diagnostics
 
-### Convergence
 
-### Sensitivity Analyses
+### Sensitivity to Assumptions, Data and, Weighting
 
 
-### Retrospective Analysis
+
 
 
 ### Likelihood Profiles
 
-
-### Unresolved Problems and Major Uncertainties
 Likelihood profiles were conducted for $R_0$, steepness, and over natural mortality 
 values separately with the post-STAR base. These likelihood profiles were conducted by 
 fixing the parameter 
@@ -1137,24 +1326,88 @@ value (Tables frog).
 
 
 
+### Retrospective Analysis
+
+
+
+
+### Unresolved Problems and Major Uncertainties
+
+
+
 <!--chapter:end:30model.Rmd-->
 
-# Reference Points
+
 
 # Harvest Projections and Decision Tables
 
+**This section will be completed after the STAR panel**
+<!--
 Projections of OFL (mt), ABC (mt), age 10+ biomass (mt), spawning output (billions of eggs), and depletion (% of unfished spawning output) are shown for the default harvest control rule in Table 62. Catch estimates for 2021 and 2022 are based on GMT recommendations (M. Mandrup, CDFW; pers. comm.), with frog mt for commercial and frog mt for recreational fleets. Projections assume a constant allocation among fleets equal to the recommended catch for 2021 and 2022 (frog% commercial, frog% commercial).
+-->
 
-
-# Regional Management COnsiderations
-
+# Regional Management Considerations
+The state of California implements regional management for the recreational fleet in 
+the form of five regions, referred to as management areas with differing depth and season 
+restrictions. Until there is additional information on the distribution, life history 
+differences between sunset and vermilion rockfishes, the current regional management 
+framework is appropriate. The results from the ongoing SK grant exploring vermilion and sunset rockfish genetics will provide a more appropriate. HOwever, given the difficulty of differentiating 
+the cryptic species pair without genetic identification, it is not feasible to separate landings 
+of the two species.
 
 
 # Unresolved Problems and Major Uncertainties
+We recommend the following research be conducted before the next assessment:
+
+\begin{enumerate}
+
+\item Investigate the structure of complex and contribution of each species to the 
+vermilion/sunset complex. Investigate possible spatial differences in biological parameters within 
+a single species and also between the two species.  Little biological data for south of 
+Point Conception or north of Point Arena were available for this assessment and is needed 
+to better under biological parameters. 
+    \begin{enumerate}
+     \item Conduct life history studies
+     \item Conduct research to identify the proportion of each species in population and in catches
+    \end{enumerate}
 
 
+\item Take a closer look at the Ralston historical catch reconstruction (\cite{Ralston2010}) and 
+all other historical data sources.
 
-# Research and Data Needs
+\item Refine CCFRP survey index to look at alternative possible model structures, including 
+a hierarchical structure and random effects. The CCFRP survey is the only 
+fishery-independent survey available for nearshore rockfish sampling the nearshore rocky 
+reef habitats. As of this assessment, only two years of coastwide data are available, 
+and the index was limited to the site in central California that have been monitored 
+since 2007.
+
+\item Continue to investigate the most appropriate model structure for the NWFSC HL survey index.
+The NWFSC HL survey is the only long-term fishery-independent survey in rocky (untrawlable) habitat 
+in the Southern California Bight. We also recommend evaluating how to structure the NWFSC Hook-and-Line survey index given its expansion into the CCA, also independent analysis of information content in NWFSC Hook-and-Line survey.Increased spatiotemporal sampling around Pt. Conception would aid in identifing stock boundaries.
+
+\item Utilize existing ROV survey data sources
+
+ \begin{enumerate}
+     \item SWFSC Submersible Survey of the Cowcod Conservation Areaa (\cite{Yok2007}). 
+    This was a line-transect survey designed to estimate cowcod abundance in 2002 conducted from a submersible inside the \gls{cca}.  Originally, only cowcod were enumerated from the video footage.  Over the last few years, the SWFSC has re-analyzed the video footage to enumerate other rockfish species. 
+     \item The SWFSC Fishery Resource Division (FRD) conducted a survey of potential cowcod habitat between Point Conception and the U.S. – Mexico border from October through December of 2012 (\cite{Stierhoff2013}).
+     \item SWFSC staff are submitting proposals to conduct an additional submirsible survey in the southern California Bight
+      \item CDFW ROV survey data
+    \end{enumerate}
+
+
+\item Collection of length and age data are recommended for both the commercial and 
+recreational fisheries.  Very little age data are available from either fishery for 
+vermilion and sunset rockfishes.
+
+\item Investigate possible environmental drivers/co-variates for biological parameters, 
+particularly for recruitment.
+
+\item Resolve differences between CalCOM and PacFIN expanded length composition data sets. 
+
+\end{enumerate}
+
 
 <!--chapter:end:40management.Rmd-->
 
@@ -1196,6 +1449,9 @@ Here are all the mad props!
 \bottomrule
 \end{tabular}}
 \end{table}
+
+
+
 
 
 
@@ -1686,145 +1942,154 @@ Parameter & Value & Phase & Bounds & Status & SD & Prior (Exp.Val, SD)\\
 \endfoot
 \bottomrule
 \endlastfoot
-NatM uniform Fem GP 1 & 0.108 & 2 & (0.001, 0.4) & OK & 0.0131850 & Log Norm (-2.3026, 0.438)\\
-L at Amin Fem GP 1 & 7.783 & 2 & (1, 15) & OK & 0.8076240 & None\\
-L at Amax Fem GP 1 & 55.694 & 2 & (45, 65) & OK & 0.6503720 & None\\
-VonBert K Fem GP 1 & 0.144 & 2 & (0.05, 0.25) & OK & 0.0084947 & None\\
-CV young Fem GP 1 & 0.119 & 2 & (0.01, 0.3) & OK & 0.0147710 & None\\
-CV old Fem GP 1 & 0.045 & 2 & (0.01, 0.3) & OK & 0.0080734 & None\\
+NatM uniform Fem GP 1 & 0.089 & 2 & (0.001, 0.4) & OK & 0.0088478 & Log Norm (-2.3026, 0.438)\\
+L at Amin Fem GP 1 & 7.786 & 2 & (1, 15) & OK & 0.6644790 & None\\
+L at Amax Fem GP 1 & 55.383 & 2 & (45, 65) & OK & 0.7288360 & None\\
+VonBert K Fem GP 1 & 0.145 & 2 & (0.05, 0.25) & OK & 0.0082560 & None\\
+CV young Fem GP 1 & 0.096 & 2 & (0.01, 0.3) & OK & 0.0101842 & None\\
+CV old Fem GP 1 & 0.075 & 2 & (0.01, 0.3) & OK & 0.0098088 & None\\
 Wtlen 1 Fem GP 1 & 0.000 & -2 & (1.744e-05, 1.744e-05) &  &  & None\\
 Wtlen 2 Fem GP 1 & 2.995 & -2 & (1, 3) &  &  & None\\
 Mat50\% Fem GP 1 & 38.400 & -2 & (38.4, 38.4) &  &  & None\\
 Mat slope Fem GP 1 & -0.312 & -2 & (-0.4, -0.2) &  &  & None\\
 Eggs scalar Fem GP 1 & 0.000 & -2 & (0, 1) &  &  & None\\
 Eggs exp len Fem GP 1 & 4.970 & -2 & (3, 6) &  &  & None\\
-NatM uniform Mal GP 1 & 0.000 & -2 & (-2, 2) &  &  & None\\
-L at Amin Mal GP 1 & -0.290 & 2 & (-2, 2) & OK & 0.1451450 & None\\
-L at Amax Mal GP 1 & -0.114 & 2 & (-0.4, 0.2) & OK & 0.0138683 & None\\
-VonBert K Mal GP 1 & 0.340 & 2 & (-1, 1) & OK & 0.0715408 & None\\
-CV young Mal GP 1 & -0.372 & 2 & (-1, 1) & OK & 0.1329280 & None\\
-CV old Mal GP 1 & 0.000 & -2 & (-1, 1) &  &  & None\\
+NatM uniform Mal GP 1 & 0.084 & 2 & (0.001, 0.4) & OK & 0.0095038 & Log Norm (-2.3026, 0.438)\\
+L at Amin Mal GP 1 & 6.025 & 2 & (1, 15) & OK & 0.5911340 & None\\
+L at Amax Mal GP 1 & 49.896 & 2 & (45, 65) & OK & 0.5353460 & None\\
+VonBert K Mal GP 1 & 0.199 & 2 & (0.05, 0.25) & OK & 0.0090420 & None\\
+CV young Mal GP 1 & 0.076 & 2 & (0.01, 0.3) & OK & 0.0055165 & None\\
+CV old Mal GP 1 & 0.070 & -2 & (0.01, 0.3) &  &  & None\\
 Wtlen 1 Mal GP 1 & 0.000 & -2 & (0, 1) &  &  & None\\
 Wtlen 2 Mal GP 1 & 2.995 & -2 & (1, 3) &  &  & None\\
 CohortGrowDev & 1.000 & -1 & (0.1, 10) &  &  & None\\
 FracFemale GP 1 & 0.500 & -1 & (1e-06, 0.999999) &  &  & None\\
-SR LN(R0) & 6.315 & 1 & (4, 9) & OK & 0.2648810 & None\\
+SR LN(R0) & 6.072 & 1 & (5, 8) & OK & 0.1500210 & None\\
 SR BH steep & 0.720 & -2 & (0.201, 0.999) &  &  & Full Beta (0.72, 0.16)\\
 SR sigmaR & 0.500 & -2 & (0, 2) &  &  & None\\
 SR regime & 0.000 & -2 & (-5, 5) &  &  & None\\
 SR autocorr & 0.000 & -2 & (0, 0) &  &  & None\\
-Main RecrDev 1980 & -0.698 & 4 & (-5, 5) & act & 0.3817840 & dev (NA, NA)\\
-Main RecrDev 1981 & -0.425 & 4 & (-5, 5) & act & 0.3880990 & dev (NA, NA)\\
-Main RecrDev 1982 & -0.118 & 4 & (-5, 5) & act & 0.3848890 & dev (NA, NA)\\
-Main RecrDev 1983 & -0.066 & 4 & (-5, 5) & act & 0.4311080 & dev (NA, NA)\\
-Main RecrDev 1984 & 0.525 & 4 & (-5, 5) & act & 0.4092780 & dev (NA, NA)\\
-Main RecrDev 1985 & 1.527 & 4 & (-5, 5) & act & 0.2110120 & dev (NA, NA)\\
-Main RecrDev 1986 & -0.168 & 4 & (-5, 5) & act & 0.4639080 & dev (NA, NA)\\
-Main RecrDev 1987 & -0.549 & 4 & (-5, 5) & act & 0.3999250 & dev (NA, NA)\\
-Main RecrDev 1988 & -0.499 & 4 & (-5, 5) & act & 0.3964770 & dev (NA, NA)\\
-Main RecrDev 1989 & -0.024 & 4 & (-5, 5) & act & 0.3535040 & dev (NA, NA)\\
-Main RecrDev 1990 & 0.195 & 4 & (-5, 5) & act & 0.3103460 & dev (NA, NA)\\
-Main RecrDev 1991 & -0.093 & 4 & (-5, 5) & act & 0.3530340 & dev (NA, NA)\\
-Main RecrDev 1992 & -0.089 & 4 & (-5, 5) & act & 0.3536070 & dev (NA, NA)\\
-Main RecrDev 1993 & 0.108 & 4 & (-5, 5) & act & 0.3534030 & dev (NA, NA)\\
-Main RecrDev 1994 & 0.843 & 4 & (-5, 5) & act & 0.2598570 & dev (NA, NA)\\
-Main RecrDev 1995 & 0.289 & 4 & (-5, 5) & act & 0.4129200 & dev (NA, NA)\\
-Main RecrDev 1996 & -0.036 & 4 & (-5, 5) & act & 0.4301850 & dev (NA, NA)\\
-Main RecrDev 1997 & 0.095 & 4 & (-5, 5) & act & 0.4343110 & dev (NA, NA)\\
-Main RecrDev 1998 & 0.346 & 4 & (-5, 5) & act & 0.4457400 & dev (NA, NA)\\
-Main RecrDev 1999 & 1.029 & 4 & (-5, 5) & act & 0.2804530 & dev (NA, NA)\\
-Main RecrDev 2000 & 0.336 & 4 & (-5, 5) & act & 0.3698260 & dev (NA, NA)\\
-Main RecrDev 2001 & 0.026 & 4 & (-5, 5) & act & 0.2902710 & dev (NA, NA)\\
-Main RecrDev 2002 & -0.784 & 4 & (-5, 5) & act & 0.2969530 & dev (NA, NA)\\
-Main RecrDev 2003 & -0.946 & 4 & (-5, 5) & act & 0.2870030 & dev (NA, NA)\\
-Main RecrDev 2004 & -0.749 & 4 & (-5, 5) & act & 0.2992790 & dev (NA, NA)\\
-Main RecrDev 2005 & -0.356 & 4 & (-5, 5) & act & 0.2948590 & dev (NA, NA)\\
-Main RecrDev 2006 & -0.236 & 4 & (-5, 5) & act & 0.2992720 & dev (NA, NA)\\
-Main RecrDev 2007 & 0.496 & 4 & (-5, 5) & act & 0.2010180 & dev (NA, NA)\\
-Main RecrDev 2008 & 0.241 & 4 & (-5, 5) & act & 0.2544180 & dev (NA, NA)\\
-Main RecrDev 2009 & 0.450 & 4 & (-5, 5) & act & 0.2205920 & dev (NA, NA)\\
-Main RecrDev 2010 & -0.539 & 4 & (-5, 5) & act & 0.3532040 & dev (NA, NA)\\
-Main RecrDev 2011 & -0.480 & 4 & (-5, 5) & act & 0.3180480 & dev (NA, NA)\\
-Main RecrDev 2012 & -0.051 & 4 & (-5, 5) & act & 0.3136340 & dev (NA, NA)\\
-Main RecrDev 2013 & 0.350 & 4 & (-5, 5) & act & 0.3371410 & dev (NA, NA)\\
-Main RecrDev 2014 & 0.538 & 4 & (-5, 5) & act & 0.3460870 & dev (NA, NA)\\
-Main RecrDev 2015 & -0.161 & 4 & (-5, 5) & act & 0.4180550 & dev (NA, NA)\\
-Main RecrDev 2016 & 1.414 & 4 & (-5, 5) & act & 0.2649780 & dev (NA, NA)\\
-Main RecrDev 2017 & -0.957 & 4 & (-5, 5) & act & 0.4563440 & dev (NA, NA)\\
-Main RecrDev 2018 & -0.254 & 4 & (-5, 5) & act & 0.4936820 & dev (NA, NA)\\
-Main RecrDev 2019 & -0.262 & 4 & (-5, 5) & act & 0.4940790 & dev (NA, NA)\\
-Main RecrDev 2020 & -0.269 & 4 & (-5, 5) & act & 0.4921110 & dev (NA, NA)\\
-LnQ base REC PC(4) & -9.871 & -1 & (-15, 0) &  &  & None\\
-LnQ base REC PR(6) & -7.859 & -1 & (-15, 0) &  &  & None\\
-Q extraSD REC PR(6) & 0.132 & 1 & (0, 0.5) & OK & 0.0344523 & None\\
-LnQ base DWV ONBOARD(8) & -11.098 & -1 & (-15, 0) &  &  & None\\
-LnQ base NWFSC TWL(9) & -10.106 & -1 & (-15, 0) &  &  & None\\
-LnQ base REC PC ONBOARD(10) & -10.736 & -1 & (-15, 0) &  &  & None\\
-LnQ base CCFRP(13) & -8.864 & -1 & (-15, 0) &  &  & None\\
-Size DblN peak COM HKL(1) & 45.803 & 2 & (30, 60) & OK & 1.7162500 & None\\
-Size DblN top logit COM HKL(1) & -9.000 & -3 & (-12, 0) &  &  & None\\
-Size DblN ascend se COM HKL(1) & 4.600 & 2 & (2, 8) & OK & 0.2381660 & None\\
-Size DblN descend se COM HKL(1) & 10.000 & -3 & (1, 10) &  &  & None\\
-Size DblN start logit COM HKL(1) & -10.000 & -3 & (-11, -9) &  &  & None\\
-Size DblN end logit COM HKL(1) & 10.000 & -3 & (-11, 11) &  &  & None\\
-Size DblN peak COM TWL(2) & 49.327 & 2 & (25, 65) & OK & 4.8880000 & None\\
-Size DblN top logit COM TWL(2) & -9.000 & -3 & (-12, 0) &  &  & None\\
-Size DblN ascend se COM TWL(2) & 4.313 & 2 & (0.05, 10) & OK & 0.7941530 & None\\
-Size DblN descend se COM TWL(2) & 10.000 & -3 & (0.05, 10) &  &  & None\\
-Size DblN start logit COM TWL(2) & -10.000 & -3 & (-11, -9) &  &  & None\\
-Size DblN end logit COM TWL(2) & 10.000 & -3 & (-10, 10) &  &  & None\\
-Size DblN peak COM NET(3) & 42.629 & 2 & (25, 65) & OK & 2.6914300 & None\\
-Size DblN top logit COM NET(3) & -9.000 & -3 & (-12, 0) &  &  & None\\
-Size DblN ascend se COM NET(3) & 3.288 & 2 & (0.05, 10) & OK & 0.8246160 & None\\
-Size DblN descend se COM NET(3) & 0.247 & 3 & (0.05, 10) & OK & 4.8300400 & None\\
-Size DblN start logit COM NET(3) & -10.000 & -3 & (-11, -9) &  &  & None\\
-Size DblN end logit COM NET(3) & 0.178 & 3 & (-10, 10) & OK & 1.4663800 & None\\
-Size DblN peak REC PC(4) & 46.263 & 2 & (20, 60) & OK & 2.9125000 & None\\
-Size DblN top logit REC PC(4) & -9.000 & -3 & (-12, 0) &  &  & None\\
-Size DblN ascend se REC PC(4) & 5.022 & 2 & (0.5, 8) & OK & 0.3978860 & None\\
-Size DblN descend se REC PC(4) & 4.316 & 3 & (1, 10) & OK & 1.2075500 & None\\
-Size DblN start logit REC PC(4) & -10.000 & -3 & (-11, -9) &  &  & None\\
-Size DblN end logit REC PC(4) & -10.000 & -3 & (-11, 11) &  &  & None\\
-Size DblN peak REC PC DIS(5) & 19.027 & 2 & (10, 50) & OK & 1.4235500 & None\\
-Size DblN top logit REC PC DIS(5) & -9.000 & -3 & (-10, 10) &  &  & None\\
-Size DblN ascend se REC PC DIS(5) & 1.889 & 2 & (1, 10) & OK & 0.8333360 & None\\
-Size DblN descend se REC PC DIS(5) & 4.441 & 3 & (2, 8) & OK & 0.2742700 & None\\
-Size DblN start logit REC PC DIS(5) & -10.000 & -3 & (-11, -9) &  &  & None\\
-Size DblN end logit REC PC DIS(5) & -10.000 & -3 & (-11, -9) &  &  & None\\
-Size DblN peak REC PR(6) & 42.355 & 2 & (10, 50) & OK & 2.0614800 & None\\
-Size DblN top logit REC PR(6) & -9.000 & -3 & (-12, 0) &  &  & None\\
-Size DblN ascend se REC PR(6) & 4.586 & 2 & (1, 10) & OK & 0.2838640 & None\\
-Size DblN descend se REC PR(6) & 5.065 & 3 & (1, 10) & OK & 0.5366090 & None\\
-Size DblN start logit REC PR(6) & -10.000 & -3 & (-11, -9) &  &  & None\\
-Size DblN end logit REC PR(6) & -10.000 & -3 & (-11, 11) &  &  & None\\
-Size DblN peak NWFSC TWL(9) & 16.230 & 2 & (10, 60) & OK & 1.0253900 & None\\
-Size DblN top logit NWFSC TWL(9) & -9.000 & -3 & (-12, 0) &  &  & None\\
-Size DblN ascend se NWFSC TWL(9) & 1.046 & 2 & (0.05, 10) & OK & 1.1730800 & None\\
-Size DblN descend se NWFSC TWL(9) & 0.070 & -3 & (0.05, 10) &  &  & None\\
-Size DblN start logit NWFSC TWL(9) & -10.000 & -3 & (-11, -9) &  &  & None\\
-Size DblN end logit NWFSC TWL(9) & -0.006 & 3 & (-10, 10) & OK & 1.2430100 & None\\
-Size DblN peak CCFRP(13) & 37.296 & 2 & (20, 60) & OK & 3.1021900 & None\\
-Size DblN top logit CCFRP(13) & -9.000 & -3 & (-12, 0) &  &  & None\\
-Size DblN ascend se CCFRP(13) & 4.893 & 2 & (1, 8) & OK & 0.5551510 & None\\
-Size DblN descend se CCFRP(13) & 4.335 & 3 & (1, 8) & OK & 0.6802280 & None\\
-Size DblN start logit CCFRP(13) & -10.000 & -3 & (-11, -9) &  &  & None\\
-Size DblN end logit CCFRP(13) & -10.000 & -3 & (-10, 10) &  &  & None\\
-Size DblN peak REC PC(4) BLK1repl 1875 & 34.901 & 2 & (20, 50) & OK & 1.5210200 & None\\
-Size DblN peak REC PC(4) BLK1repl 2002 & 34.573 & 2 & (20, 50) & OK & 1.7906500 & None\\
-Size DblN ascend se REC PC(4) BLK1repl 1875 & 4.232 & 2 & (1, 8) & OK & 0.2762200 & None\\
-Size DblN ascend se REC PC(4) BLK1repl 2002 & 4.255 & 2 & (1, 8) & OK & 0.3440390 & None\\
-Size DblN descend se REC PC(4) BLK1repl 1875 & 4.126 & 3 & (0.05, 10) & OK & 0.6472440 & None\\
-Size DblN descend se REC PC(4) BLK1repl 2002 & 5.275 & 3 & (0.05, 10) & OK & 0.5662160 & None\\
-Size DblN end logit REC PC(4) BLK1repl 1875 & -0.457 & 3 & (-8, 9) & OK & 0.3899990 & None\\
-Size DblN end logit REC PC(4) BLK1repl 2002 & -2.072 & 3 & (-8, 9) & OK & 1.4948400 & None\\
-Size DblN peak REC PR(6) BLK1repl 1875 & 34.202 & 2 & (20, 50) & OK & 1.4082700 & None\\
-Size DblN peak REC PR(6) BLK1repl 2002 & 36.753 & 2 & (20, 50) & OK & 0.8940150 & None\\
-Size DblN ascend se REC PR(6) BLK1repl 1875 & 4.255 & 2 & (0.05, 9) & OK & 0.2691590 & None\\
-Size DblN ascend se REC PR(6) BLK1repl 2002 & 4.116 & 2 & (0.05, 9) & OK & 0.1707310 & None\\
-Size DblN descend se REC PR(6) BLK1repl 1875 & 2.352 & 3 & (0.05, 10) & OK & 1.2855400 & None\\
-Size DblN descend se REC PR(6) BLK1repl 2002 & 5.105 & 3 & (0.05, 10) & OK & 0.3527310 & None\\
-Size DblN end logit REC PR(6) BLK1repl 1875 & -0.174 & 3 & (-8, 9) & OK & 0.3609360 & None\\
-Size DblN end logit REC PR(6) BLK1repl 2002 & -1.668 & 3 & (-8, 9) & OK & 0.7616800 & None\\*
+Main RecrDev 1970 & -0.110 & 4 & (-5, 5) & act & 0.4550460 & dev (NA, NA)\\
+Main RecrDev 1971 & -0.197 & 4 & (-5, 5) & act & 0.4366880 & dev (NA, NA)\\
+Main RecrDev 1972 & -0.316 & 4 & (-5, 5) & act & 0.4156940 & dev (NA, NA)\\
+Main RecrDev 1973 & -0.472 & 4 & (-5, 5) & act & 0.3931630 & dev (NA, NA)\\
+Main RecrDev 1974 & -0.651 & 4 & (-5, 5) & act & 0.3720990 & dev (NA, NA)\\
+Main RecrDev 1975 & -0.801 & 4 & (-5, 5) & act & 0.3553840 & dev (NA, NA)\\
+Main RecrDev 1976 & -0.853 & 4 & (-5, 5) & act & 0.3450380 & dev (NA, NA)\\
+Main RecrDev 1977 & -0.796 & 4 & (-5, 5) & act & 0.3445280 & dev (NA, NA)\\
+Main RecrDev 1978 & -0.598 & 4 & (-5, 5) & act & 0.3399300 & dev (NA, NA)\\
+Main RecrDev 1979 & -0.534 & 4 & (-5, 5) & act & 0.3425070 & dev (NA, NA)\\
+Main RecrDev 1980 & -0.485 & 4 & (-5, 5) & act & 0.3436710 & dev (NA, NA)\\
+Main RecrDev 1981 & -0.324 & 4 & (-5, 5) & act & 0.3436570 & dev (NA, NA)\\
+Main RecrDev 1982 & -0.060 & 4 & (-5, 5) & act & 0.3321990 & dev (NA, NA)\\
+Main RecrDev 1983 & -0.019 & 4 & (-5, 5) & act & 0.3704820 & dev (NA, NA)\\
+Main RecrDev 1984 & 0.666 & 4 & (-5, 5) & act & 0.3190480 & dev (NA, NA)\\
+Main RecrDev 1985 & 1.404 & 4 & (-5, 5) & act & 0.2043550 & dev (NA, NA)\\
+Main RecrDev 1986 & -0.018 & 4 & (-5, 5) & act & 0.4086650 & dev (NA, NA)\\
+Main RecrDev 1987 & -0.443 & 4 & (-5, 5) & act & 0.3680230 & dev (NA, NA)\\
+Main RecrDev 1988 & -0.387 & 4 & (-5, 5) & act & 0.3631070 & dev (NA, NA)\\
+Main RecrDev 1989 & 0.073 & 4 & (-5, 5) & act & 0.3061300 & dev (NA, NA)\\
+Main RecrDev 1990 & 0.214 & 4 & (-5, 5) & act & 0.2720250 & dev (NA, NA)\\
+Main RecrDev 1991 & -0.030 & 4 & (-5, 5) & act & 0.3028020 & dev (NA, NA)\\
+Main RecrDev 1992 & -0.028 & 4 & (-5, 5) & act & 0.3068590 & dev (NA, NA)\\
+Main RecrDev 1993 & 0.199 & 4 & (-5, 5) & act & 0.2979770 & dev (NA, NA)\\
+Main RecrDev 1994 & 0.887 & 4 & (-5, 5) & act & 0.2261930 & dev (NA, NA)\\
+Main RecrDev 1995 & 0.392 & 4 & (-5, 5) & act & 0.3473690 & dev (NA, NA)\\
+Main RecrDev 1996 & 0.094 & 4 & (-5, 5) & act & 0.3719160 & dev (NA, NA)\\
+Main RecrDev 1997 & 0.180 & 4 & (-5, 5) & act & 0.3824500 & dev (NA, NA)\\
+Main RecrDev 1998 & 0.540 & 4 & (-5, 5) & act & 0.3486030 & dev (NA, NA)\\
+Main RecrDev 1999 & 1.042 & 4 & (-5, 5) & act & 0.2392880 & dev (NA, NA)\\
+Main RecrDev 2000 & 0.444 & 4 & (-5, 5) & act & 0.2973690 & dev (NA, NA)\\
+Main RecrDev 2001 & 0.154 & 4 & (-5, 5) & act & 0.2463780 & dev (NA, NA)\\
+Main RecrDev 2002 & -0.672 & 4 & (-5, 5) & act & 0.2725410 & dev (NA, NA)\\
+Main RecrDev 2003 & -0.797 & 4 & (-5, 5) & act & 0.2622140 & dev (NA, NA)\\
+Main RecrDev 2004 & -0.639 & 4 & (-5, 5) & act & 0.2781550 & dev (NA, NA)\\
+Main RecrDev 2005 & -0.235 & 4 & (-5, 5) & act & 0.2679360 & dev (NA, NA)\\
+Main RecrDev 2006 & -0.037 & 4 & (-5, 5) & act & 0.2596420 & dev (NA, NA)\\
+Main RecrDev 2007 & 0.629 & 4 & (-5, 5) & act & 0.1815710 & dev (NA, NA)\\
+Main RecrDev 2008 & 0.407 & 4 & (-5, 5) & act & 0.2249920 & dev (NA, NA)\\
+Main RecrDev 2009 & 0.618 & 4 & (-5, 5) & act & 0.1981680 & dev (NA, NA)\\
+Main RecrDev 2010 & -0.416 & 4 & (-5, 5) & act & 0.3231210 & dev (NA, NA)\\
+Main RecrDev 2011 & -0.375 & 4 & (-5, 5) & act & 0.2963410 & dev (NA, NA)\\
+Main RecrDev 2012 & 0.098 & 4 & (-5, 5) & act & 0.2851320 & dev (NA, NA)\\
+Main RecrDev 2013 & 0.592 & 4 & (-5, 5) & act & 0.2887500 & dev (NA, NA)\\
+Main RecrDev 2014 & 0.686 & 4 & (-5, 5) & act & 0.3148390 & dev (NA, NA)\\
+Main RecrDev 2015 & 0.080 & 4 & (-5, 5) & act & 0.3981990 & dev (NA, NA)\\
+Main RecrDev 2016 & 1.604 & 4 & (-5, 5) & act & 0.2666840 & dev (NA, NA)\\
+Main RecrDev 2017 & -0.796 & 4 & (-5, 5) & act & 0.4605960 & dev (NA, NA)\\
+Main RecrDev 2018 & 0.046 & 4 & (-5, 5) & act & 0.4972310 & dev (NA, NA)\\
+Main RecrDev 2019 & 0.023 & 4 & (-5, 5) & act & 0.4961730 & dev (NA, NA)\\
+Main RecrDev 2020 & 0.017 & 4 & (-5, 5) & act & 0.4946140 & dev (NA, NA)\\
+LnQ base REC PC(4) & -9.515 & -1 & (-15, 0) &  &  & None\\
+LnQ base REC PR(6) & -7.755 & -1 & (-15, 0) &  &  & None\\
+Q extraSD REC PR(6) & 0.184 & 1 & (0, 0.5) & OK & 0.0465271 & None\\
+LnQ base DWV ONBOARD(8) & -10.794 & -1 & (-15, 0) &  &  & None\\
+LnQ base REC PC ONBOARD(10) & -10.584 & -1 & (-15, 0) &  &  & None\\
+LnQ base CCFRP(13) & -8.680 & -1 & (-15, 0) &  &  & None\\
+Size DblN peak COM HKL(1) & 46.553 & 2 & (30, 60) & OK & 1.5162100 & None\\
+Size DblN top logit COM HKL(1) & -9.000 & -2 & (-12, 0) &  &  & None\\
+Size DblN ascend se COM HKL(1) & 4.698 & 2 & (2, 8) & OK & 0.2057510 & None\\
+Size DblN descend se COM HKL(1) & 10.000 & -2 & (1, 10) &  &  & None\\
+Size DblN start logit COM HKL(1) & -10.000 & -2 & (-11, -9) &  &  & None\\
+Size DblN end logit COM HKL(1) & 10.000 & -2 & (-11, 11) &  &  & None\\
+Size DblN peak COM TWL(2) & 48.494 & 2 & (25, 65) & OK & 3.3493400 & None\\
+Size DblN top logit COM TWL(2) & -9.000 & -2 & (-12, 0) &  &  & None\\
+Size DblN ascend se COM TWL(2) & 4.212 & 2 & (0.05, 10) & OK & 0.5670560 & None\\
+Size DblN descend se COM TWL(2) & 10.000 & -2 & (0.05, 10) &  &  & None\\
+Size DblN start logit COM TWL(2) & -10.000 & -2 & (-11, -9) &  &  & None\\
+Size DblN end logit COM TWL(2) & 10.000 & -2 & (-10, 10) &  &  & None\\
+Size DblN peak COM NET(3) & 42.689 & 2 & (25, 65) & OK & 2.6347500 & None\\
+Size DblN top logit COM NET(3) & -9.000 & -2 & (-12, 0) &  &  & None\\
+Size DblN ascend se COM NET(3) & 3.292 & 2 & (0.05, 10) & OK & 0.8141490 & None\\
+Size DblN descend se COM NET(3) & 0.201 & 2 & (0.05, 10) & OK & 4.1674700 & None\\
+Size DblN start logit COM NET(3) & -10.000 & -2 & (-11, -9) &  &  & None\\
+Size DblN end logit COM NET(3) & 0.490 & 2 & (-10, 10) & OK & 1.7627100 & None\\
+Size DblN peak REC PC(4) & 47.122 & 2 & (20, 60) & OK & 2.4610300 & None\\
+Size DblN top logit REC PC(4) & -9.000 & -2 & (-12, 0) &  &  & None\\
+Size DblN ascend se REC PC(4) & 5.046 & 2 & (0.5, 8) & OK & 0.3197100 & None\\
+Size DblN descend se REC PC(4) & 3.982 & 2 & (1, 10) & OK & 0.9655140 & None\\
+Size DblN start logit REC PC(4) & -10.000 & -2 & (-11, -9) &  &  & None\\
+Size DblN end logit REC PC(4) & -10.000 & -2 & (-11, 11) &  &  & None\\
+Size DblN peak REC PC DIS(5) & 18.668 & 2 & (10, 50) & OK & 1.5005400 & None\\
+Size DblN top logit REC PC DIS(5) & -9.000 & -2 & (-10, 10) &  &  & None\\
+Size DblN ascend se REC PC DIS(5) & 1.709 & 2 & (1, 10) & OK & 0.9296140 & None\\
+Size DblN descend se REC PC DIS(5) & 4.497 & 2 & (2, 8) & OK & 0.2711400 & None\\
+Size DblN start logit REC PC DIS(5) & -10.000 & -2 & (-11, -9) &  &  & None\\
+Size DblN end logit REC PC DIS(5) & -10.000 & -2 & (-11, -9) &  &  & None\\
+Size DblN peak REC PR(6) & 42.704 & 2 & (10, 50) & OK & 2.2949100 & None\\
+Size DblN top logit REC PR(6) & -9.000 & -2 & (-12, 0) &  &  & None\\
+Size DblN ascend se REC PR(6) & 4.635 & 2 & (1, 10) & OK & 0.2975650 & None\\
+Size DblN descend se REC PR(6) & 5.095 & 2 & (1, 10) & OK & 0.5919430 & None\\
+Size DblN start logit REC PR(6) & -10.000 & -2 & (-11, -9) &  &  & None\\
+Size DblN end logit REC PR(6) & -10.000 & -2 & (-11, 11) &  &  & None\\
+Size DblN peak NWFSC TWL(9) & 16.339 & 2 & (10, 60) & OK & 0.8962930 & None\\
+Size DblN top logit NWFSC TWL(9) & -9.000 & -2 & (-12, 0) &  &  & None\\
+Size DblN ascend se NWFSC TWL(9) & 1.004 & 2 & (0.05, 10) & OK & 1.0740600 & None\\
+Size DblN descend se NWFSC TWL(9) & 0.070 & -2 & (0.05, 10) &  &  & None\\
+Size DblN start logit NWFSC TWL(9) & -10.000 & -2 & (-11, -9) &  &  & None\\
+Size DblN end logit NWFSC TWL(9) & -0.185 & 2 & (-10, 10) & OK & 1.2045500 & None\\
+Size DblN peak CCFRP(13) & 39.457 & 2 & (20, 60) & OK & 2.7486900 & None\\
+Size DblN top logit CCFRP(13) & -9.000 & -2 & (-12, 0) &  &  & None\\
+Size DblN ascend se CCFRP(13) & 5.168 & 2 & (1, 8) & OK & 0.4721950 & None\\
+Size DblN descend se CCFRP(13) & 4.039 & 2 & (1, 8) & OK & 0.7157660 & None\\
+Size DblN start logit CCFRP(13) & -10.000 & -2 & (-11, -9) &  &  & None\\
+Size DblN end logit CCFRP(13) & -8.000 & -2 & (-10, 10) &  &  & None\\
+Size DblN peak REC PC(4) BLK1repl 1875 & 34.934 & 3 & (20, 50) & OK & 1.4516800 & None\\
+Size DblN peak REC PC(4) BLK1repl 2002 & 34.344 & 3 & (20, 50) & OK & 1.5382400 & None\\
+Size DblN ascend se REC PC(4) BLK1repl 1875 & 4.242 & 3 & (1, 8) & OK & 0.2577110 & None\\
+Size DblN ascend se REC PC(4) BLK1repl 2002 & 4.220 & 3 & (1, 8) & OK & 0.2960790 & None\\
+Size DblN descend se REC PC(4) BLK1repl 1875 & 4.400 & 3 & (0.05, 10) & OK & 0.6916160 & None\\
+Size DblN descend se REC PC(4) BLK1repl 2002 & 5.455 & 3 & (0.05, 10) & OK & 0.4978590 & None\\
+Size DblN end logit REC PC(4) BLK1repl 1875 & -0.427 & 3 & (-8, 9) & OK & 0.4541540 & None\\
+Size DblN end logit REC PC(4) BLK1repl 2002 & -2.018 & 3 & (-8, 9) & OK & 1.3796900 & None\\
+Size DblN peak REC PR(6) BLK1repl 1875 & 34.433 & 3 & (20, 50) & OK & 1.2256000 & None\\
+Size DblN peak REC PR(6) BLK1repl 2002 & 36.586 & 3 & (20, 50) & OK & 0.8279610 & None\\
+Size DblN ascend se REC PR(6) BLK1repl 1875 & 4.265 & 3 & (0.05, 9) & OK & 0.2317390 & None\\
+Size DblN ascend se REC PR(6) BLK1repl 2002 & 4.096 & 3 & (0.05, 9) & OK & 0.1554680 & None\\
+Size DblN descend se REC PR(6) BLK1repl 1875 & 2.653 & 3 & (0.05, 10) & OK & 0.9450030 & None\\
+Size DblN descend se REC PR(6) BLK1repl 2002 & 5.376 & 3 & (0.05, 10) & OK & 0.3309710 & None\\
+Size DblN end logit REC PR(6) BLK1repl 1875 & -0.290 & 3 & (-8, 9) & OK & 0.3284290 & None\\
+Size DblN end logit REC PR(6) BLK1repl 2002 & -1.746 & 3 & (-8, 9) & OK & 0.8373460 & None\\*
 \end{longtable}
 \endgroup{}
 \end{landscape}
@@ -1843,7 +2108,7 @@ Size DblN end logit REC PR(6) BLK1repl 2002 & -1.668 & 3 & (-8, 9) & OK & 0.7616
 
 
 
-![Summary of data sources used in the base model.\label{fig:data-plot}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/data_plot2.png){width=100% height=100% alt="Summary of data sources used in the base model."}
+![Summary of data sources used in the base model.\label{fig:data-plot}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/data_plot2.png){width=100% height=100% alt="Summary of data sources used in the base model."}
 
 
 
@@ -1856,7 +2121,7 @@ Size DblN end logit REC PR(6) BLK1repl 2002 & -1.668 & 3 & (-8, 9) & OK & 0.7616
 <!-- ====================================================================== -->  
 
 
-![Catches by fleet used in the base model.\label{fig:catch}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/catch2 landings stacked.png){width=100% height=100% alt="Catches by fleet used in the base model."}
+![Catches by fleet used in the base model.\label{fig:catch}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/catch2 landings stacked.png){width=100% height=100% alt="Catches by fleet used in the base model."}
 
 
 
@@ -1866,49 +2131,49 @@ Size DblN end logit REC PR(6) BLK1repl 2002 & -1.668 & 3 & (-8, 9) & OK & 0.7616
 
 
 
-![Length composition data from the commercial hook-and-line fishery.\label{fig:len-data-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_bubflt11mkt0.png){width=50% height=50% alt="Length composition data from the commercial hook-and-line fishery."}
+![Length composition data from the commercial hook-and-line fishery.\label{fig:len-data-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt11mkt0.png){width=50% height=50% alt="Length composition data from the commercial hook-and-line fishery."}
 
-![Mean length for the commercial hook-and-line fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_data_weighting_TA1.8_COM_HKL.png){width=50% height=50% alt="Mean length for the commercial hook-and-line fishery with 95 percent confidence intervals."}
+![Mean length for the commercial hook-and-line fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_data_weighting_TA1.8_COM_HKL.png){width=50% height=50% alt="Mean length for the commercial hook-and-line fishery with 95 percent confidence intervals."}
 
-![Length composition data from the commercial trawl fishery.\label{fig:len-data-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_bubflt2mkt0.png){width=50% height=50% alt="Length composition data from the commercial trawl fishery."}
+![Length composition data from the commercial trawl fishery.\label{fig:len-data-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt2mkt0.png){width=50% height=50% alt="Length composition data from the commercial trawl fishery."}
 
-![Mean length for the commercial trawl fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_data_weighting_TA1.8_COM_TWL.png){width=50% height=50% alt="Mean length for the commercial trawl fishery with 95 percent confidence intervals."}
+![Mean length for the commercial trawl fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_data_weighting_TA1.8_COM_TWL.png){width=50% height=50% alt="Mean length for the commercial trawl fishery with 95 percent confidence intervals."}
 
-![Length composition data from the commercial net fishery.\label{fig:len-data-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_bubflt3mkt0.png){width=50% height=50% alt="Length composition data from the commercial net fishery."}
+![Length composition data from the commercial net fishery.\label{fig:len-data-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt3mkt0.png){width=50% height=50% alt="Length composition data from the commercial net fishery."}
 
-![Mean length for the commercial net fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_data_weighting_TA1.8_COM_NET.png){width=50% height=50% alt="Mean length for the commercial net fishery with 95 percent confidence intervals."}
+![Mean length for the commercial net fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_data_weighting_TA1.8_COM_NET.png){width=50% height=50% alt="Mean length for the commercial net fishery with 95 percent confidence intervals."}
 
-![Length composition data from the recreational PC retained fishery.\label{fig:len-data-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_bubflt4mkt0_page2.png){width=50% height=50% alt="Length composition data from the recreational PC retained fishery."}
+![Length composition data from the recreational PC retained fishery.\label{fig:len-data-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt4mkt0_page2.png){width=50% height=50% alt="Length composition data from the recreational PC retained fishery."}
 
-![Mean length for the recreational PC retained fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_data_weighting_TA1.8_REC_PC.png){width=50% height=50% alt="Mean length for the recreational PC retained fishery with 95 percent confidence intervals."}
+![Mean length for the recreational PC retained fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_data_weighting_TA1.8_REC_PC.png){width=50% height=50% alt="Mean length for the recreational PC retained fishery with 95 percent confidence intervals."}
 
-![Length composition data from the recreational PC discard fishery.\label{fig:len-data-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_bubflt5mkt0.png){width=50% height=50% alt="Length composition data from the recreational PC discard fishery."}
+![Length composition data from the recreational PC discard fishery.\label{fig:len-data-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt5mkt0.png){width=50% height=50% alt="Length composition data from the recreational PC discard fishery."}
 
-![Mean length for the recreational PC discard fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_data_weighting_TA1.8_REC_PC_DIS.png){width=50% height=50% alt="Mean length for the recreational PC discard fishery with 95 percent confidence intervals."}
+![Mean length for the recreational PC discard fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_data_weighting_TA1.8_REC_PC_DIS.png){width=50% height=50% alt="Mean length for the recreational PC discard fishery with 95 percent confidence intervals."}
 
-![Length composition data from the recreational PR retained fishery.\label{fig:len-data-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_bubflt6mkt0_page2.png){width=50% height=50% alt="Length composition data from the recreational PR retained fishery."}
+![Length composition data from the recreational PR retained fishery.\label{fig:len-data-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt6mkt0_page2.png){width=50% height=50% alt="Length composition data from the recreational PR retained fishery."}
 
-![Mean length for the recreational PR retained fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_data_weighting_TA1.8_REC_PR.png){width=50% height=50% alt="Mean length for the recreational PR retained fishery with 95 percent confidence intervals."}
+![Mean length for the recreational PR retained fishery with 95 percent confidence intervals.\label{fig:mean-com-len-data-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_data_weighting_TA1.8_REC_PR.png){width=50% height=50% alt="Mean length for the recreational PR retained fishery with 95 percent confidence intervals."}
 
-![Length composition data from the Deb Wilson-Vandenberg onboard survey.\label{fig:len-data-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_bubflt8mkt0.png){width=50% height=50% alt="Length composition data from the Deb Wilson-Vandenberg onboard survey."}
+![Length composition data from the Deb Wilson-Vandenberg onboard survey.\label{fig:len-data-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt8mkt0.png){width=50% height=50% alt="Length composition data from the Deb Wilson-Vandenberg onboard survey."}
 
-![Mean length for the Deb Wilson-Vandenberg onboard survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_data_weighting_TA1.8_DWV_ONBOARD.png){width=50% height=50% alt="Mean length for the Deb Wilson-Vandenberg onboard survey with 95 percent confidence intervals."}
+![Mean length for the Deb Wilson-Vandenberg onboard survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_data_weighting_TA1.8_DWV_ONBOARD.png){width=50% height=50% alt="Mean length for the Deb Wilson-Vandenberg onboard survey with 95 percent confidence intervals."}
 
-![Length composition data from the West coast groundfish bottomfish trawl survey.\label{fig:len-data-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_bubflt9mkt0.png){width=50% height=50% alt="Length composition data from the West coast groundfish bottomfish trawl survey."}
+![Length composition data from the West coast groundfish bottomfish trawl survey.\label{fig:len-data-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt9mkt0.png){width=50% height=50% alt="Length composition data from the West coast groundfish bottomfish trawl survey."}
 
-![Mean length for the West coast groundfish bottomfish trawl survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_data_weighting_TA1.8_NWFSC_TWL.png){width=50% height=50% alt="Mean length for the West coast groundfish bottomfish trawl survey with 95 percent confidence intervals."}
+![Mean length for the West coast groundfish bottomfish trawl survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_data_weighting_TA1.8_NWFSC_TWL.png){width=50% height=50% alt="Mean length for the West coast groundfish bottomfish trawl survey with 95 percent confidence intervals."}
 
-![Length composition data from the Abrams thesis research survey.\label{fig:len-data-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_bubflt11mkt0.png){width=50% height=50% alt="Length composition data from the Abrams thesis research survey."}
+![Length composition data from the Abrams thesis research survey.\label{fig:len-data-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt11mkt0.png){width=50% height=50% alt="Length composition data from the Abrams thesis research survey."}
 
-![Mean length for the Abrams thesis research survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_data_weighting_TA1.8_ABRAMS_RESEARCH.png){width=50% height=50% alt="Mean length for the Abrams thesis research survey with 95 percent confidence intervals."}
+![Mean length for the Abrams thesis research survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_data_weighting_TA1.8_ABRAMS_RESEARCH.png){width=50% height=50% alt="Mean length for the Abrams thesis research survey with 95 percent confidence intervals."}
 
-![Length composition data from the SWFSC groundfish ecology survey.\label{fig:len-data-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_bubflt12mkt0.png){width=50% height=50% alt="Length composition data from the SWFSC groundfish ecology survey."}
+![Length composition data from the SWFSC groundfish ecology survey.\label{fig:len-data-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt12mkt0.png){width=50% height=50% alt="Length composition data from the SWFSC groundfish ecology survey."}
 
-![Mean length for the SWFSC groundfish ecology survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_data_weighting_TA1.8_SWFSC_GF_ECOL.png){width=50% height=50% alt="Mean length for the SWFSC groundfish ecology survey with 95 percent confidence intervals."}
+![Mean length for the SWFSC groundfish ecology survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_data_weighting_TA1.8_SWFSC_GF_ECOL.png){width=50% height=50% alt="Mean length for the SWFSC groundfish ecology survey with 95 percent confidence intervals."}
 
-![Length composition data from the California Collaborative Fisheries Research Project survey.\label{fig:len-data-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_bubflt13mkt0.png){width=50% height=50% alt="Length composition data from the California Collaborative Fisheries Research Project survey."}
+![Length composition data from the California Collaborative Fisheries Research Project survey.\label{fig:len-data-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt13mkt0.png){width=50% height=50% alt="Length composition data from the California Collaborative Fisheries Research Project survey."}
 
-![Mean length for the California Collaborative Fisheries Research Project survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lendat_data_weighting_TA1.8_CCFRP.png){width=50% height=50% alt="Mean length for the California Collaborative Fisheries Research Project survey with 95 percent confidence intervals."}
+![Mean length for the California Collaborative Fisheries Research Project survey with 95 percent confidence intervals.\label{fig:mean-com-len-data-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_data_weighting_TA1.8_CCFRP.png){width=50% height=50% alt="Mean length for the California Collaborative Fisheries Research Project survey with 95 percent confidence intervals."}
 
 
 
@@ -1934,28 +2199,28 @@ bias for reader 1 and curvilinear standard deviation for both readers.."}
 
 
 
-![Distribution of observed age at true age for ageing error type 1.\label{fig:ageerror}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/numbers10_ageerror_matrix_1.png){width=100% height=100% alt="Distribution of observed age at true age for ageing error type 1."}
+![Distribution of observed age at true age for ageing error type 1.\label{fig:ageerror}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/numbers10_ageerror_matrix_1.png){width=100% height=100% alt="Distribution of observed age at true age for ageing error type 1."}
 
 
 
-![Length at age in the beginning of the year (or season) in the ending year of the model. Shaded area indicates 95% distribution of length at age around estimated growth curve.\label{fig:fittedgrowth}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/bio1_sizeatage.png){width=100% height=100% alt="Length at age in the beginning of the year (or season) in the ending year of the model. Shaded area indicates 95% distribution of length at age around estimated growth curve."}
+![Length at age in the beginning of the year (or season) in the ending year of the model. Shaded area indicates 95% distribution of length at age around estimated growth curve.\label{fig:fittedgrowth}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/bio1_sizeatage.png){width=100% height=100% alt="Length at age in the beginning of the year (or season) in the ending year of the model. Shaded area indicates 95% distribution of length at age around estimated growth curve."}
 
 
 
 
-![Weight-length relationship.\label{fig:weightlength}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/bio5_weightatsize.png){width=100% height=100% alt="Weight-length relationship."}
+![Weight-length relationship.\label{fig:weightlength}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/bio5_weightatsize.png){width=100% height=100% alt="Weight-length relationship."}
 
 
 
-![Maturity at length.\label{fig:maturity}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/bio6_maturity.png){width=100% height=100% alt="Maturity at length."}
+![Maturity at length.\label{fig:maturity}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/bio6_maturity.png){width=100% height=100% alt="Maturity at length."}
 
 
 
-![Fecundity as a function of weight.\label{fig:fecundity}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/bio8_fecundity_wt.png){width=100% height=100% alt="Fecundity as a function of weight."}
+![Fecundity as a function of weight.\label{fig:fecundity}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/bio8_fecundity_wt.png){width=100% height=100% alt="Fecundity as a function of weight."}
 
 
 
-![Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age.\label{fig:spawningoutputage}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/bio11_spawningoutput_age.png){width=100% height=100% alt="Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age."}
+![Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age.\label{fig:spawningoutputage}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/bio11_spawningoutput_age.png){width=100% height=100% alt="Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age."}
 
 \FloatBarrier
 
@@ -1968,22 +2233,22 @@ bias for reader 1 and curvilinear standard deviation for both readers.."}
 \FloatBarrier 
 
 
-![Selectivity at length by fleet.\label{fig:selex-length-all}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sel01_multiple_fleets_length1.png){width=100% height=100% alt="Selectivity at length by fleet."}
+![Selectivity at length by fleet.\label{fig:selex-length-all}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sel01_multiple_fleets_length1.png){width=100% height=100% alt="Selectivity at length by fleet."}
 
 \FloatBarrier 
 
 
-![Selectivity at age derived from selectivity at length for multiple fleets.\label{fig:selex-age-all}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sel02_multiple_fleets_age1.png){width=100% height=100% alt="Selectivity at age derived from selectivity at length for multiple fleets."}
+![Selectivity at age derived from selectivity at length for multiple fleets.\label{fig:selex-age-all}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sel02_multiple_fleets_age1.png){width=100% height=100% alt="Selectivity at age derived from selectivity at length for multiple fleets."}
 
 <!--time varying selectivity-->
 
-![Surface plot of Female time-varying selectivity for REC_PC.\label{fig:sel03_len_timevary_surf_flt4sex1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sel03_len_timevary_surf_flt4sex1.png){width=100% height=100% alt="Surface plot of Female time-varying selectivity for REC_PC."}
+![Surface plot of Female time-varying selectivity for REC_PC.\label{fig:sel03_len_timevary_surf_flt4sex1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sel03_len_timevary_surf_flt4sex1.png){width=100% height=100% alt="Surface plot of Female time-varying selectivity for REC_PC."}
 
-![Surface plot of Female time-varying selectivity for REC_PR.\label{fig:sel03_len_timevary_surf_flt6sex1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sel03_len_timevary_surf_flt6sex1.png){width=100% height=100% alt="Surface plot of Female time-varying selectivity for REC_PR."}
+![Surface plot of Female time-varying selectivity for REC_PR.\label{fig:sel03_len_timevary_surf_flt6sex1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sel03_len_timevary_surf_flt6sex1.png){width=100% height=100% alt="Surface plot of Female time-varying selectivity for REC_PR."}
 
-![Surface plot of Female time-varying selectivity for DWV_ONBOARD.\label{fig:sel03_len_timevary_surf_flt8sex1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sel03_len_timevary_surf_flt8sex1.png){width=100% height=100% alt="Surface plot of Female time-varying selectivity for DWV_ONBOARD."}
+![Surface plot of Female time-varying selectivity for DWV_ONBOARD.\label{fig:sel03_len_timevary_surf_flt8sex1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sel03_len_timevary_surf_flt8sex1.png){width=100% height=100% alt="Surface plot of Female time-varying selectivity for DWV_ONBOARD."}
 
-![Surface plot of Female time-varying selectivity for REC_PC_ONBOARD.\label{fig:sel03_len_timevary_surf_flt10sex1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sel03_len_timevary_surf_flt10sex1.png){width=100% height=100% alt="Surface plot of Female time-varying selectivity for REC_PC_ONBOARD."}
+![Surface plot of Female time-varying selectivity for REC_PC_ONBOARD.\label{fig:sel03_len_timevary_surf_flt10sex1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sel03_len_timevary_surf_flt10sex1.png){width=100% height=100% alt="Surface plot of Female time-varying selectivity for REC_PC_ONBOARD."}
 
 \FloatBarrier 
 <!--selectivity for fleets that are not mirrored-->
@@ -1994,21 +2259,21 @@ bias for reader 1 and curvilinear standard deviation for both readers.."}
 \FloatBarrier 
 
 
-![Female ending year selectivity for the commercial hook-and-line fishery.\label{fig:endyr-selex-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sel09_len_flt1sex1.png){width=50% height=50% alt="Female ending year selectivity for the commercial hook-and-line fishery."}
+![Female ending year selectivity for the commercial hook-and-line fishery.\label{fig:endyr-selex-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sel09_len_flt1sex1.png){width=50% height=50% alt="Female ending year selectivity for the commercial hook-and-line fishery."}
 
-![Female ending year selectivity for the commercial trawl fishery.\label{fig:endyr-selex-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sel09_len_flt2sex1.png){width=50% height=50% alt="Female ending year selectivity for the commercial trawl fishery."}
+![Female ending year selectivity for the commercial trawl fishery.\label{fig:endyr-selex-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sel09_len_flt2sex1.png){width=50% height=50% alt="Female ending year selectivity for the commercial trawl fishery."}
 
-![Female ending year selectivity for the commercial net fishery.\label{fig:endyr-selex-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sel09_len_flt3sex1.png){width=50% height=50% alt="Female ending year selectivity for the commercial net fishery."}
+![Female ending year selectivity for the commercial net fishery.\label{fig:endyr-selex-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sel09_len_flt3sex1.png){width=50% height=50% alt="Female ending year selectivity for the commercial net fishery."}
 
-![Female ending year selectivity for the recreational PC retained fishery.\label{fig:endyr-selex-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sel09_len_flt4sex1.png){width=50% height=50% alt="Female ending year selectivity for the recreational PC retained fishery."}
+![Female ending year selectivity for the recreational PC retained fishery.\label{fig:endyr-selex-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sel09_len_flt4sex1.png){width=50% height=50% alt="Female ending year selectivity for the recreational PC retained fishery."}
 
-![Female ending year selectivity for the recreational PC discard fishery.\label{fig:endyr-selex-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sel09_len_flt5sex1.png){width=50% height=50% alt="Female ending year selectivity for the recreational PC discard fishery."}
+![Female ending year selectivity for the recreational PC discard fishery.\label{fig:endyr-selex-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sel09_len_flt5sex1.png){width=50% height=50% alt="Female ending year selectivity for the recreational PC discard fishery."}
 
-![Female ending year selectivity for the recreational PR retained fishery.\label{fig:endyr-selex-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sel09_len_flt6sex1.png){width=50% height=50% alt="Female ending year selectivity for the recreational PR retained fishery."}
+![Female ending year selectivity for the recreational PR retained fishery.\label{fig:endyr-selex-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sel09_len_flt6sex1.png){width=50% height=50% alt="Female ending year selectivity for the recreational PR retained fishery."}
 
-![Female ending year selectivity for the West coast groundfish bottomfish trawl survey.\label{fig:endyr-selex-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sel09_len_flt9sex1.png){width=50% height=50% alt="Female ending year selectivity for the West coast groundfish bottomfish trawl survey."}
+![Female ending year selectivity for the West coast groundfish bottomfish trawl survey.\label{fig:endyr-selex-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sel09_len_flt9sex1.png){width=50% height=50% alt="Female ending year selectivity for the West coast groundfish bottomfish trawl survey."}
 
-![Female ending year selectivity for the recreational PR discard fishery.\label{fig:endyr-selex-REC-PR-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sel09_len_flt7sex1.png){width=50% height=50% alt="Female ending year selectivity for the recreational PR discard fishery."}
+![Female ending year selectivity for the recreational PR discard fishery.\label{fig:endyr-selex-REC-PR-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sel09_len_flt7sex1.png){width=50% height=50% alt="Female ending year selectivity for the recreational PR discard fishery."}
 
 
 \FloatBarrier 
@@ -2027,55 +2292,55 @@ bias for reader 1 and curvilinear standard deviation for both readers.."}
 
 
 ![Length comps, aggregated across time by fleet.
-Labels 'retained' and 'discard' indicate discarded or retained sampled for each fleet. Panels without this designation represent the whole catch.\label{fig:lenfits-all}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit__aggregated_across_time.png){width=100% height=100% alt="Length comps, aggregated across time by fleet.
+Labels 'retained' and 'discard' indicate discarded or retained sampled for each fleet. Panels without this designation represent the whole catch.\label{fig:lenfits-all}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit__aggregated_across_time.png){width=100% height=100% alt="Length comps, aggregated across time by fleet.
 Labels 'retained' and 'discard' indicate discarded or retained sampled for each fleet. Panels without this designation represent the whole catch."}
 
 
 
 
-![Pearson residuals for the commercial hook-and-line fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_residsflt11mkt0.png){width=50% height=50% alt="Pearson residuals for the commercial hook-and-line fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
+![Pearson residuals for the commercial hook-and-line fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_residsflt11mkt0.png){width=50% height=50% alt="Pearson residuals for the commercial hook-and-line fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
 
-![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial hook-and-line fishery.\label{fig:mean-len-fit-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_data_weighting_TA1.8_COM_HKL.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial hook-and-line fishery."}
+![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial hook-and-line fishery.\label{fig:mean-len-fit-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_data_weighting_TA1.8_COM_HKL.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial hook-and-line fishery."}
 
-![Pearson residuals for the commercial trawl fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_residsflt2mkt0.png){width=50% height=50% alt="Pearson residuals for the commercial trawl fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
+![Pearson residuals for the commercial trawl fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_residsflt2mkt0.png){width=50% height=50% alt="Pearson residuals for the commercial trawl fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
 
-![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial trawl fishery.\label{fig:mean-len-fit-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_data_weighting_TA1.8_COM_TWL.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial trawl fishery."}
+![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial trawl fishery.\label{fig:mean-len-fit-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_data_weighting_TA1.8_COM_TWL.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial trawl fishery."}
 
-![Pearson residuals for the commercial net fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_residsflt3mkt0.png){width=50% height=50% alt="Pearson residuals for the commercial net fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
+![Pearson residuals for the commercial net fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_residsflt3mkt0.png){width=50% height=50% alt="Pearson residuals for the commercial net fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
 
-![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial net fishery.\label{fig:mean-len-fit-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_data_weighting_TA1.8_COM_NET.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial net fishery."}
+![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial net fishery.\label{fig:mean-len-fit-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_data_weighting_TA1.8_COM_NET.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial net fishery."}
 
-![Pearson residuals for the recreational PC retained fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_residsflt4mkt0_page2.png){width=50% height=50% alt="Pearson residuals for the recreational PC retained fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
+![Pearson residuals for the recreational PC retained fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_residsflt4mkt0_page2.png){width=50% height=50% alt="Pearson residuals for the recreational PC retained fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
 
-![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PC retained fishery.\label{fig:mean-len-fit-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_data_weighting_TA1.8_REC_PC.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PC retained fishery."}
+![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PC retained fishery.\label{fig:mean-len-fit-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_data_weighting_TA1.8_REC_PC.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PC retained fishery."}
 
-![Pearson residuals for the recreational PC discard fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_residsflt5mkt0.png){width=50% height=50% alt="Pearson residuals for the recreational PC discard fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
+![Pearson residuals for the recreational PC discard fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_residsflt5mkt0.png){width=50% height=50% alt="Pearson residuals for the recreational PC discard fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
 
-![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PC discard fishery.\label{fig:mean-len-fit-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_data_weighting_TA1.8_REC_PC_DIS.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PC discard fishery."}
+![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PC discard fishery.\label{fig:mean-len-fit-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_data_weighting_TA1.8_REC_PC_DIS.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PC discard fishery."}
 
-![Pearson residuals for the recreational PR retained fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_residsflt6mkt0_page2.png){width=50% height=50% alt="Pearson residuals for the recreational PR retained fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
+![Pearson residuals for the recreational PR retained fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_residsflt6mkt0_page2.png){width=50% height=50% alt="Pearson residuals for the recreational PR retained fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
 
-![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PR retained fishery.\label{fig:mean-len-fit-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_data_weighting_TA1.8_REC_PR.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PR retained fishery."}
+![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PR retained fishery.\label{fig:mean-len-fit-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_data_weighting_TA1.8_REC_PR.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PR retained fishery."}
 
-![Pearson residuals for the Deb Wilson-Vandenberg onboard survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_residsflt8mkt0.png){width=50% height=50% alt="Pearson residuals for the Deb Wilson-Vandenberg onboard survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
+![Pearson residuals for the Deb Wilson-Vandenberg onboard survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_residsflt8mkt0.png){width=50% height=50% alt="Pearson residuals for the Deb Wilson-Vandenberg onboard survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
 
-![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the Deb Wilson-Vandenberg onboard survey.\label{fig:mean-len-fit-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_data_weighting_TA1.8_DWV_ONBOARD.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the Deb Wilson-Vandenberg onboard survey."}
+![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the Deb Wilson-Vandenberg onboard survey.\label{fig:mean-len-fit-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_data_weighting_TA1.8_DWV_ONBOARD.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the Deb Wilson-Vandenberg onboard survey."}
 
-![Pearson residuals for the West coast groundfish bottomfish trawl survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_residsflt9mkt0.png){width=50% height=50% alt="Pearson residuals for the West coast groundfish bottomfish trawl survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
+![Pearson residuals for the West coast groundfish bottomfish trawl survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_residsflt9mkt0.png){width=50% height=50% alt="Pearson residuals for the West coast groundfish bottomfish trawl survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
 
-![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the West coast groundfish bottomfish trawl survey.\label{fig:mean-len-fit-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_data_weighting_TA1.8_NWFSC_TWL.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the West coast groundfish bottomfish trawl survey."}
+![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the West coast groundfish bottomfish trawl survey.\label{fig:mean-len-fit-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_data_weighting_TA1.8_NWFSC_TWL.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the West coast groundfish bottomfish trawl survey."}
 
-![Pearson residuals for the Abrams thesis research survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_residsflt11mkt0.png){width=50% height=50% alt="Pearson residuals for the Abrams thesis research survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
+![Pearson residuals for the Abrams thesis research survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_residsflt11mkt0.png){width=50% height=50% alt="Pearson residuals for the Abrams thesis research survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
 
-![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the Abrams thesis research survey.\label{fig:mean-len-fit-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_data_weighting_TA1.8_ABRAMS_RESEARCH.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the Abrams thesis research survey."}
+![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the Abrams thesis research survey.\label{fig:mean-len-fit-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_data_weighting_TA1.8_ABRAMS_RESEARCH.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the Abrams thesis research survey."}
 
-![Pearson residuals for the SWFSC groundfish ecology survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_residsflt12mkt0.png){width=50% height=50% alt="Pearson residuals for the SWFSC groundfish ecology survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
+![Pearson residuals for the SWFSC groundfish ecology survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_residsflt12mkt0.png){width=50% height=50% alt="Pearson residuals for the SWFSC groundfish ecology survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
 
-![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the SWFSC groundfish ecology survey.\label{fig:mean-len-fit-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_data_weighting_TA1.8_SWFSC_GF_ECOL.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the SWFSC groundfish ecology survey."}
+![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the SWFSC groundfish ecology survey.\label{fig:mean-len-fit-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_data_weighting_TA1.8_SWFSC_GF_ECOL.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the SWFSC groundfish ecology survey."}
 
-![Pearson residuals for the California Collaborative Fisheries Research Project survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_residsflt13mkt0.png){width=50% height=50% alt="Pearson residuals for the California Collaborative Fisheries Research Project survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
+![Pearson residuals for the California Collaborative Fisheries Research Project survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_residsflt13mkt0.png){width=50% height=50% alt="Pearson residuals for the California Collaborative Fisheries Research Project survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."}
 
-![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the California Collaborative Fisheries Research Project survey.\label{fig:mean-len-fit-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_lenfit_data_weighting_TA1.8_CCFRP.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the California Collaborative Fisheries Research Project survey."}
+![Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the California Collaborative Fisheries Research Project survey.\label{fig:mean-len-fit-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_data_weighting_TA1.8_CCFRP.png){width=50% height=50% alt="Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the California Collaborative Fisheries Research Project survey."}
 
 
 
@@ -2086,11 +2351,11 @@ Labels 'retained' and 'discard' indicate discarded or retained sampled for each 
 <!-- ======================================================================= -->
 
 
-![Sex ratios for length comps, whole catchAbrams thesis research survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sexratio_len_flt11mkt0.png){width=50% height=50% alt="Sex ratios for length comps, whole catchAbrams thesis research survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line."}
+![Sex ratios for length comps, whole catchAbrams thesis research survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sexratio_len_flt11mkt0.png){width=50% height=50% alt="Sex ratios for length comps, whole catchAbrams thesis research survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line."}
 
-![Sex ratios for length comps, whole catchSWFSC groundfish ecology survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sexratio_len_flt12mkt0.png){width=50% height=50% alt="Sex ratios for length comps, whole catchSWFSC groundfish ecology survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line."}
+![Sex ratios for length comps, whole catchSWFSC groundfish ecology survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sexratio_len_flt12mkt0.png){width=50% height=50% alt="Sex ratios for length comps, whole catchSWFSC groundfish ecology survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line."}
 
-![Sex ratios for length comps, whole catchWest coast groundfish bottomfish trawl survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/sexratio_len_flt9mkt0.png){width=50% height=50% alt="Sex ratios for length comps, whole catchWest coast groundfish bottomfish trawl survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line."}
+![Sex ratios for length comps, whole catchWest coast groundfish bottomfish trawl survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/sexratio_len_flt9mkt0.png){width=50% height=50% alt="Sex ratios for length comps, whole catchWest coast groundfish bottomfish trawl survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line."}
 
 \FloatBarrier
 
@@ -2100,12 +2365,12 @@ Labels 'retained' and 'discard' indicate discarded or retained sampled for each 
 <!-- ======================================================================= -->
 
 
-![Estimated time series of spawning output.\label{fig:ssb}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png){width=100% height=100% alt="Estimated time series of spawning output."}
+![Estimated time series of spawning output.\label{fig:ssb}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png){width=100% height=100% alt="Estimated time series of spawning output."}
 
 
 
 
-![Estimated time series of relative spawning output.\label{fig:depl}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/ts9_Relative_spawning_output_intervals.png){width=100% height=100% alt="Estimated time series of relative spawning output."}
+![Estimated time series of relative spawning output.\label{fig:depl}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/ts9_Relative_spawning_output_intervals.png){width=100% height=100% alt="Estimated time series of relative spawning output."}
 
 \FloatBarrier
 
@@ -2114,33 +2379,29 @@ Labels 'retained' and 'discard' indicate discarded or retained sampled for each 
 <!-- *************************  Indices ************************************ --> 
 <!-- ======================================================================= -->
 
-![Standardized indices overlaid. Each index is rescaled to have mean observation = 1.0.\label{fig:cpueall}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/index9_standcpueall.png){width=50% height=50% alt="Standardized indices overlaid. Each index is rescaled to have mean observation = 1.0."}
+![Standardized indices overlaid. Each index is rescaled to have mean observation = 1.0.\label{fig:cpueall}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/index9_standcpueall.png){width=50% height=50% alt="Standardized indices overlaid. Each index is rescaled to have mean observation = 1.0."}
 
 
 
-![Fit to log index data on log scale for the recreational PC retained fishery. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/index5_logcpuefit_REC_PC.png){width=50% height=50% alt="Fit to log index data on log scale for the recreational PC retained fishery. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter."}
+![Fit to log index data on log scale for the recreational PC retained fishery. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/index5_logcpuefit_REC_PC.png){width=50% height=50% alt="Fit to log index data on log scale for the recreational PC retained fishery. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter."}
 
-![Residuals of fit to index for the REC_PC. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/index10_resids_SE_total_REC_PC.png){width=50% height=50% alt="Residuals of fit to index for the REC_PC. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty."}
+![Residuals of fit to index for the REC_PC. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/index10_resids_SE_total_REC_PC.png){width=50% height=50% alt="Residuals of fit to index for the REC_PC. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty."}
 
-![Fit to log index data on log scale for the recreational PR retained fishery. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/index5_logcpuefit_REC_PR.png){width=50% height=50% alt="Fit to log index data on log scale for the recreational PR retained fishery. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter."}
+![Fit to log index data on log scale for the recreational PR retained fishery. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/index5_logcpuefit_REC_PR.png){width=50% height=50% alt="Fit to log index data on log scale for the recreational PR retained fishery. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter."}
 
-![Residuals of fit to index for the REC_PR. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/index10_resids_SE_total_REC_PR.png){width=50% height=50% alt="Residuals of fit to index for the REC_PR. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty."}
+![Residuals of fit to index for the REC_PR. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/index10_resids_SE_total_REC_PR.png){width=50% height=50% alt="Residuals of fit to index for the REC_PR. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty."}
 
-![Fit to log index data on log scale for the Deb Wilson-Vandenberg onboard survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/index5_logcpuefit_DWV_ONBOARD.png){width=50% height=50% alt="Fit to log index data on log scale for the Deb Wilson-Vandenberg onboard survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter."}
+![Fit to log index data on log scale for the Deb Wilson-Vandenberg onboard survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/index5_logcpuefit_DWV_ONBOARD.png){width=50% height=50% alt="Fit to log index data on log scale for the Deb Wilson-Vandenberg onboard survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter."}
 
-![Residuals of fit to index for the DWV_ONBOARD. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/index10_resids_SE_total_DWV_ONBOARD.png){width=50% height=50% alt="Residuals of fit to index for the DWV_ONBOARD. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty."}
+![Residuals of fit to index for the DWV_ONBOARD. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/index10_resids_SE_total_DWV_ONBOARD.png){width=50% height=50% alt="Residuals of fit to index for the DWV_ONBOARD. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty."}
 
-![Fit to log index data on log scale for the West coast groundfish bottomfish trawl survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/index5_logcpuefit_NWFSC_TWL.png){width=50% height=50% alt="Fit to log index data on log scale for the West coast groundfish bottomfish trawl survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter."}
+![Fit to log index data on log scale for the recreational PC onboard survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-REC-PC-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/index5_logcpuefit_REC_PC_ONBOARD.png){width=50% height=50% alt="Fit to log index data on log scale for the recreational PC onboard survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter."}
 
-![Residuals of fit to index for the NWFSC_TWL. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/index10_resids_SE_total_NWFSC_TWL.png){width=50% height=50% alt="Residuals of fit to index for the NWFSC_TWL. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty."}
+![Residuals of fit to index for the REC_PC_ONBOARD. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-REC-PC-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/index10_resids_SE_total_REC_PC_ONBOARD.png){width=50% height=50% alt="Residuals of fit to index for the REC_PC_ONBOARD. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty."}
 
-![Fit to log index data on log scale for the recreational PC onboard survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-REC-PC-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/index5_logcpuefit_REC_PC_ONBOARD.png){width=50% height=50% alt="Fit to log index data on log scale for the recreational PC onboard survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter."}
+![Fit to log index data on log scale for the California Collaborative Fisheries Research Project survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/index5_logcpuefit_CCFRP.png){width=50% height=50% alt="Fit to log index data on log scale for the California Collaborative Fisheries Research Project survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter."}
 
-![Residuals of fit to index for the REC_PC_ONBOARD. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-REC-PC-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/index10_resids_SE_total_REC_PC_ONBOARD.png){width=50% height=50% alt="Residuals of fit to index for the REC_PC_ONBOARD. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty."}
-
-![Fit to log index data on log scale for the California Collaborative Fisheries Research Project survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/index5_logcpuefit_CCFRP.png){width=50% height=50% alt="Fit to log index data on log scale for the California Collaborative Fisheries Research Project survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter."}
-
-![Residuals of fit to index for the CCFRP. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/index10_resids_SE_total_CCFRP.png){width=50% height=50% alt="Residuals of fit to index for the CCFRP. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty."}
+![Residuals of fit to index for the CCFRP. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/index10_resids_SE_total_CCFRP.png){width=50% height=50% alt="Residuals of fit to index for the CCFRP. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty."}
 
 
 
@@ -2160,23 +2421,23 @@ Labels 'retained' and 'discard' indicate discarded or retained sampled for each 
 
 
 
-![Pearson residuals, whole catch, NWFSC_TWL (max=46.84) (plot 1 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_condAALfit_residsflt9mkt0_page1.png){width=100% height=100% alt="Pearson residuals, whole catch, NWFSC_TWL (max=46.84) (plot 1 of 3)."}
+![Pearson residuals, whole catch, NWFSC_TWL (max=45.75) (plot 1 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_residsflt9mkt0_page1.png){width=100% height=100% alt="Pearson residuals, whole catch, NWFSC_TWL (max=45.75) (plot 1 of 3)."}
 
-![Pearson residuals, whole catch, NWFSC_TWL (max=46.84) (plot 1 of 3) (plot 2 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_condAALfit_residsflt9mkt0_page2.png){width=100% height=100% alt="Pearson residuals, whole catch, NWFSC_TWL (max=46.84) (plot 1 of 3) (plot 2 of 3)."}
+![Pearson residuals, whole catch, NWFSC_TWL (max=45.75) (plot 1 of 3) (plot 2 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_residsflt9mkt0_page2.png){width=100% height=100% alt="Pearson residuals, whole catch, NWFSC_TWL (max=45.75) (plot 1 of 3) (plot 2 of 3)."}
 
-![Pearson residuals, whole catch, NWFSC_TWL (max=46.84) (plot 1 of 3) (plot 2 of 3) (plot 3 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_condAALfit_residsflt9mkt0_page3.png){width=100% height=100% alt="Pearson residuals, whole catch, NWFSC_TWL (max=46.84) (plot 1 of 3) (plot 2 of 3) (plot 3 of 3)."}
+![Pearson residuals, whole catch, NWFSC_TWL (max=45.75) (plot 1 of 3) (plot 2 of 3) (plot 3 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_residsflt9mkt0_page3.png){width=100% height=100% alt="Pearson residuals, whole catch, NWFSC_TWL (max=45.75) (plot 1 of 3) (plot 2 of 3) (plot 3 of 3)."}
 
-![Pearson residuals, whole catch, ABRAMS_RESEARCH (max=10.34).\label{fig:comp_condAALfit_residsflt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_condAALfit_residsflt11mkt0.png){width=100% height=100% alt="Pearson residuals, whole catch, ABRAMS_RESEARCH (max=10.34)."}
+![Pearson residuals, whole catch, ABRAMS_RESEARCH (max=12.18).\label{fig:comp_condAALfit_residsflt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_residsflt11mkt0.png){width=100% height=100% alt="Pearson residuals, whole catch, ABRAMS_RESEARCH (max=12.18)."}
 
-![Pearson residuals, whole catch, SWFSC_GF_ECOL (max=42.2).\label{fig:comp_condAALfit_residsflt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_condAALfit_residsflt12mkt0.png){width=100% height=100% alt="Pearson residuals, whole catch, SWFSC_GF_ECOL (max=42.2)."}
+![Pearson residuals, whole catch, SWFSC_GF_ECOL (max=25.11).\label{fig:comp_condAALfit_residsflt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_residsflt12mkt0.png){width=100% height=100% alt="Pearson residuals, whole catch, SWFSC_GF_ECOL (max=25.11)."}
 
-![Mean age from conditional data (aggregated across length bins) for NWFSC_TWL with 95% confidence intervals  based on current samples sizes.<br>Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from NWFSC_TWL:<br>0.9906 (0.5346-4.2938) <br><br>For more info, see<br> <blockquote>Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock assessment models. <i>Can. J. Fish. Aquat. Sci.</i> 68: 1124-1138.</blockquote>.\label{fig:comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_TWL.png){width=100% height=100% alt="Mean age from conditional data (aggregated across length bins) for NWFSC_TWL with 95% confidence intervals  based on current samples sizes.<br>Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from NWFSC_TWL:<br>0.9906 (0.5346-4.2938) <br><br>For more info, see<br> <blockquote>Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock assessment models. <i>Can. J. Fish. Aquat. Sci.</i> 68: 1124-1138.</blockquote>."}
+![Mean age from conditional data (aggregated across length bins) for NWFSC_TWL with 95% confidence intervals  based on current samples sizes.<br>Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from NWFSC_TWL:<br>0.9949 (0.553-3.7699) <br><br>For more info, see<br> <blockquote>Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock assessment models. <i>Can. J. Fish. Aquat. Sci.</i> 68: 1124-1138.</blockquote>.\label{fig:comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_TWL.png){width=100% height=100% alt="Mean age from conditional data (aggregated across length bins) for NWFSC_TWL with 95% confidence intervals  based on current samples sizes.<br>Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from NWFSC_TWL:<br>0.9949 (0.553-3.7699) <br><br>For more info, see<br> <blockquote>Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock assessment models. <i>Can. J. Fish. Aquat. Sci.</i> 68: 1124-1138.</blockquote>."}
 
 ![Conditional AAL plot, whole catch, NWFSC_TWL (plot 1 of 4)
-These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and exp.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and exp.) with 90% CIs based on the chi-square distribution..\label{fig:comp_condAALfit_Andre_plotsflt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_condAALfit_Andre_plotsflt9mkt0_page1.png){width=100% height=100% alt="Conditional AAL plot, whole catch, NWFSC_TWL (plot 1 of 4)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and exp.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and exp.) with 90% CIs based on the chi-square distribution..\label{fig:comp_condAALfit_Andre_plotsflt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_Andre_plotsflt9mkt0_page1.png){width=100% height=100% alt="Conditional AAL plot, whole catch, NWFSC_TWL (plot 1 of 4)
 These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and exp.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and exp.) with 90% CIs based on the chi-square distribution.."}
 
-![Conditional AAL plot, whole catch, NWFSC_TWL (plot 2 of 4).\label{fig:comp_condAALfit_Andre_plotsflt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/comp_condAALfit_Andre_plotsflt9mkt0_page2.png){width=100% height=100% alt="Conditional AAL plot, whole catch, NWFSC_TWL (plot 2 of 4)."}
+![Conditional AAL plot, whole catch, NWFSC_TWL (plot 2 of 4).\label{fig:comp_condAALfit_Andre_plotsflt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_Andre_plotsflt9mkt0_page2.png){width=100% height=100% alt="Conditional AAL plot, whole catch, NWFSC_TWL (plot 2 of 4)."}
 
 \FloatBarrier
 
@@ -2187,19 +2448,19 @@ These plots show mean age and std. dev. in conditional A@L.<br>Left plots are me
 
 
 
-![Age-0 recruits (1,000s) with ~95% asymptotic intervals.\label{fig:recruits}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png){width=100% height=100% alt="Age-0 recruits (1,000s) with ~95% asymptotic intervals."}
+![Age-0 recruits (1,000s) with ~95% asymptotic intervals.\label{fig:recruits}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png){width=100% height=100% alt="Age-0 recruits (1,000s) with ~95% asymptotic intervals."}
 
 
 
-![Estimated time series of recruitment deviations.\label{fig:rec-devs}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/recdevs2_withbars.png){width=100% height=100% alt="Estimated time series of recruitment deviations."}
+![Estimated time series of recruitment deviations.\label{fig:rec-devs}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/recdevs2_withbars.png){width=100% height=100% alt="Estimated time series of recruitment deviations."}
 
 
 
-![Stock-recruit curve with labels on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years.\label{fig:bh-curve}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/SR_curve2.png){width=100% height=100% alt="Stock-recruit curve with labels on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years."}
+![Stock-recruit curve with labels on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years.\label{fig:bh-curve}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/SR_curve2.png){width=100% height=100% alt="Stock-recruit curve with labels on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years."}
 
 
 
-![Deviations around the stock-recruit curve. Labels are on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years.\label{fig:bh-resids}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/SR_resids.png){width=100% height=100% alt="Deviations around the stock-recruit curve. Labels are on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years."}
+![Deviations around the stock-recruit curve. Labels are on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years.\label{fig:bh-resids}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/SR_resids.png){width=100% height=100% alt="Deviations around the stock-recruit curve. Labels are on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years."}
 
 <!-- ======================================================================= -->
 <!-- *********************** Reference Points ****************************** --> 
@@ -2207,21 +2468,21 @@ These plots show mean age and std. dev. in conditional A@L.<br>Left plots are me
 
 
 
-![Timeseries of SPR ratio: (1-SPR)/(1-SPR_50%).\label{fig:1-spr}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/SPR2_minusSPRseries.png){width=100% height=100% alt="Timeseries of SPR ratio: (1-SPR)/(1-SPR_50%)."}
+![Timeseries of SPR ratio: (1-SPR)/(1-SPR_50%).\label{fig:1-spr}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/SPR2_minusSPRseries.png){width=100% height=100% alt="Timeseries of SPR ratio: (1-SPR)/(1-SPR_50%)."}
 
 
 
-![Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point show the 95 percent intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95 percent region which accounts for the estimated correlations between the biomass ratio and SPR ratio.\label{fig:phase}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/SPR4_phase.png){width=100% height=100% alt="Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point show the 95 percent intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95 percent region which accounts for the estimated correlations between the biomass ratio and SPR ratio."}
+![Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point show the 95 percent intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95 percent region which accounts for the estimated correlations between the biomass ratio and SPR ratio.\label{fig:phase}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/SPR4_phase.png){width=100% height=100% alt="Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point show the 95 percent intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95 percent region which accounts for the estimated correlations between the biomass ratio and SPR ratio."}
 
 
 
 ![Equilibrium yield curve for the base case model. Values are based on the 2020
-fishery selectivity and with steepness fixed at 0.72.\label{fig:yield2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/yield2_yield_curve_with_refpoints.png){width=100% height=100% alt="Equilibrium yield curve for the base case model. Values are based on the 2020
+fishery selectivity and with steepness fixed at 0.72.\label{fig:yield2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/yield2_yield_curve_with_refpoints.png){width=100% height=100% alt="Equilibrium yield curve for the base case model. Values are based on the 2020
 fishery selectivity and with steepness fixed at 0.72."}
 
 
 
-![Surplus production vs. biomass plot.\label{fig:yield3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_066_no_Don_P_rec_comps/plots/yield3_surplus_production.png){width=100% height=100% alt="Surplus production vs. biomass plot."}
+![Surplus production vs. biomass plot.\label{fig:yield3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/yield3_surplus_production.png){width=100% height=100% alt="Surplus production vs. biomass plot."}
 
 \FloatBarrier
 
@@ -2248,4 +2509,1547 @@ fishery selectivity and with steepness fixed at 0.72."}
 <!-- ======================================================================= -->
 
 <!--chapter:end:60figures.Rmd-->
+
+\clearpage
+
+# Appendix
+
+
+## Annual Length Composition Data
+
+
+![Length comp data, whole catch, COM_HKL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lendat_flt1mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt1mkt0.png){width=100% height=100% alt="Length comp data, whole catch, COM_HKL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comp data, whole catch, NWFSC_TWL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lendat_flt9mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt9mkt0.png){width=100% height=100% alt="Length comp data, whole catch, NWFSC_TWL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comp data, whole catch, COM_HKL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lendat_flt1mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt1mkt0_page1.png){width=100% height=100% alt="Length comp data, whole catch, COM_HKL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comp data, whole catch, COM_HKL (plot 2 of 2).\label{fig:comp_lendat_flt1mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt1mkt0_page2.png){width=100% height=100% alt="Length comp data, whole catch, COM_HKL (plot 2 of 2)."}
+
+![Length comp data, whole catch, COM_TWL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lendat_flt2mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt2mkt0.png){width=100% height=100% alt="Length comp data, whole catch, COM_TWL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comp data, whole catch, COM_NET.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lendat_flt3mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt3mkt0.png){width=100% height=100% alt="Length comp data, whole catch, COM_NET.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comp data, whole catch, REC_PC (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lendat_flt4mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt4mkt0_page1.png){width=100% height=100% alt="Length comp data, whole catch, REC_PC (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comp data, whole catch, REC_PC (plot 2 of 3).\label{fig:comp_lendat_flt4mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt4mkt0_page2.png){width=100% height=100% alt="Length comp data, whole catch, REC_PC (plot 2 of 3)."}
+
+![Length comp data, whole catch, REC_PC (plot 3 of 3).\label{fig:comp_lendat_flt4mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt4mkt0_page3.png){width=100% height=100% alt="Length comp data, whole catch, REC_PC (plot 3 of 3)."}
+
+![Length comp data, whole catch, REC_PC_DIS.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lendat_flt5mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt5mkt0.png){width=100% height=100% alt="Length comp data, whole catch, REC_PC_DIS.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comp data, whole catch, REC_PR (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lendat_flt6mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt6mkt0_page1.png){width=100% height=100% alt="Length comp data, whole catch, REC_PR (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comp data, whole catch, REC_PR (plot 2 of 3).\label{fig:comp_lendat_flt6mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt6mkt0_page2.png){width=100% height=100% alt="Length comp data, whole catch, REC_PR (plot 2 of 3)."}
+
+![Length comp data, whole catch, REC_PR (plot 3 of 3).\label{fig:comp_lendat_flt6mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt6mkt0_page3.png){width=100% height=100% alt="Length comp data, whole catch, REC_PR (plot 3 of 3)."}
+
+![Length comp data, whole catch, DWV_ONBOARD.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lendat_flt8mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt8mkt0.png){width=100% height=100% alt="Length comp data, whole catch, DWV_ONBOARD.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comp data, whole catch, NWFSC_TWL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lendat_flt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt9mkt0_page1.png){width=100% height=100% alt="Length comp data, whole catch, NWFSC_TWL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comp data, whole catch, NWFSC_TWL (plot 2 of 2).\label{fig:comp_lendat_flt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt9mkt0_page2.png){width=100% height=100% alt="Length comp data, whole catch, NWFSC_TWL (plot 2 of 2)."}
+
+![Length comp data, whole catch, ABRAMS_RESEARCH.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lendat_flt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt11mkt0.png){width=100% height=100% alt="Length comp data, whole catch, ABRAMS_RESEARCH.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comp data, whole catch, SWFSC_GF_ECOL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lendat_flt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt12mkt0.png){width=100% height=100% alt="Length comp data, whole catch, SWFSC_GF_ECOL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comp data, whole catch, CCFRP.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lendat_flt13mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_flt13mkt0.png){width=100% height=100% alt="Length comp data, whole catch, CCFRP.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+\newpage
+
+## Detailed Fit to Length Composition Data{#append-fit} 
+
+
+
+![Length comps, whole catch, COM_HKL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lenfit_flt1mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt1mkt0.png){width=100% height=100% alt="Length comps, whole catch, COM_HKL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comps, whole catch, NWFSC_TWL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lenfit_flt9mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt9mkt0.png){width=100% height=100% alt="Length comps, whole catch, NWFSC_TWL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comps, whole catch, COM_HKL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lenfit_flt1mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt1mkt0_page1.png){width=100% height=100% alt="Length comps, whole catch, COM_HKL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comps, whole catch, COM_HKL (plot 2 of 2).\label{fig:comp_lenfit_flt1mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt1mkt0_page2.png){width=100% height=100% alt="Length comps, whole catch, COM_HKL (plot 2 of 2)."}
+
+![Length comps, whole catch, COM_TWL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lenfit_flt2mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt2mkt0.png){width=100% height=100% alt="Length comps, whole catch, COM_TWL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comps, whole catch, COM_NET.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lenfit_flt3mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt3mkt0.png){width=100% height=100% alt="Length comps, whole catch, COM_NET.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comps, whole catch, REC_PC (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lenfit_flt4mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt4mkt0_page1.png){width=100% height=100% alt="Length comps, whole catch, REC_PC (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comps, whole catch, REC_PC (plot 2 of 3).\label{fig:comp_lenfit_flt4mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt4mkt0_page2.png){width=100% height=100% alt="Length comps, whole catch, REC_PC (plot 2 of 3)."}
+
+![Length comps, whole catch, REC_PC (plot 3 of 3).\label{fig:comp_lenfit_flt4mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt4mkt0_page3.png){width=100% height=100% alt="Length comps, whole catch, REC_PC (plot 3 of 3)."}
+
+![Length comps, whole catch, REC_PC_DIS.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lenfit_flt5mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt5mkt0.png){width=100% height=100% alt="Length comps, whole catch, REC_PC_DIS.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comps, whole catch, REC_PR (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lenfit_flt6mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt6mkt0_page1.png){width=100% height=100% alt="Length comps, whole catch, REC_PR (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comps, whole catch, REC_PR (plot 2 of 3).\label{fig:comp_lenfit_flt6mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt6mkt0_page2.png){width=100% height=100% alt="Length comps, whole catch, REC_PR (plot 2 of 3)."}
+
+![Length comps, whole catch, REC_PR (plot 3 of 3).\label{fig:comp_lenfit_flt6mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt6mkt0_page3.png){width=100% height=100% alt="Length comps, whole catch, REC_PR (plot 3 of 3)."}
+
+![Length comps, whole catch, DWV_ONBOARD.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lenfit_flt8mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt8mkt0.png){width=100% height=100% alt="Length comps, whole catch, DWV_ONBOARD.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comps, whole catch, NWFSC_TWL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lenfit_flt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt9mkt0_page1.png){width=100% height=100% alt="Length comps, whole catch, NWFSC_TWL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comps, whole catch, NWFSC_TWL (plot 2 of 2).\label{fig:comp_lenfit_flt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt9mkt0_page2.png){width=100% height=100% alt="Length comps, whole catch, NWFSC_TWL (plot 2 of 2)."}
+
+![Length comps, whole catch, ABRAMS_RESEARCH.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lenfit_flt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt11mkt0.png){width=100% height=100% alt="Length comps, whole catch, ABRAMS_RESEARCH.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comps, whole catch, SWFSC_GF_ECOL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lenfit_flt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt12mkt0.png){width=100% height=100% alt="Length comps, whole catch, SWFSC_GF_ECOL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+![Length comps, whole catch, CCFRP.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method..\label{fig:comp_lenfit_flt13mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lenfit_flt13mkt0.png){width=100% height=100% alt="Length comps, whole catch, CCFRP.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.."}
+
+\newpage
+
+
+
+### Califronia Onboard Observer Survey, 1999-2019
+
+The state of California implemented a statewide onboard observer sampling 
+program in 1999 [@Monk2014].  California Polytechnic State University (Cal 
+Poly) has conducted an independent onboard sampling 
+program as of 2003 for boats in Port San Luis and Morro Bay, and follows 
+the protocols established in Reilly et al. [-@Reilly1998]. 
+
+During an onboard observer trip the sampler rides along on the CPFV and records 
+location-specific catch and discard information to the species level for a subset 
+of anglers onboard the vessel. The subset of observed anglers is usually a 
+maximum of 15 people the observed anglers change during each fishing stop.  
+The catch cannot be linked to an individual, but rather 
+to a specific fishing location.  The sampler also records the starting and 
+ending time, number of anglers observed, starting and ending depth, and measures 
+discarded fish. The fine-scale catch and effort data allow us to better filter 
+the data for indices to fishing stops within suitable habitat for vermilion. 
+Cal Poly has modified protocols  reflect sampling changes that CDFW 
+has also adopted, e.g., observing fish as they are encountered instead of at 
+the level of a fisher’s bag. Therefore, the Cal Poly data area incorporated in 
+the same index as the CDFW data from 1999-2019.  The only difference is that 
+Cal Poly measures the length of both retained and discarded fish.  
+
+Due to the COVID-19 pandemic, there are no onboard observer samples from either 
+CDFW or Cal Poly in 2020.
+
+**California CPFV CPUE Index: Data Preparation, Filtering, and Sample Sizes**
+
+As described above the CDFW and Cal Poly onboard observer programs are identical 
+in that the same protocols are followed.  The only difference is that Cal Poly
+measures both retained and discarded fish from the observed anglers and CDFW
+measures only discarded fish from the observed anglers. CDFW measures retained 
+fish as part of the angler interview at the bag and trip level. This index 
+selectivity is mirrored to the recreational 
+fleet in the stock assessment model, which represent only retained (dead) 
+fish.  Therefore, only retained fish were modeled in this index. The length 
+from CDFW sampling are contained in the RecFIN database and indlucded in the 
+length composition for the recreational fleet in the assessment model. 
+
+A number of filters are applied to these data.  All of the Cal Poly data were 
+QA/QC-ed once key-punched, whereas a number of errors remain in the 
+data from CDFW.  Data sheets from CDFW are not available prior to 2012 and 
+staff constraints have also prevented a quality control review of the data. 
+
+Each drift was assigned to a reef (hard bottom). Hard bottom was extracted from 
+the [California Seafloor Mapping Project](http://seafloor.otterlabs.org/index.html), 
+with bathymetric data from state waters available at a 2 m resolution.  Reefs were 
+developed based on a number of factors described in the supplemental material 
+("Reef Delineation"). Depth restrictions in the recreational fishery were fairly 
+consistent from 2004-2016. Starting in 2017, depth restrictions eased in districts 
+north of Pt. Conception and the recreational fleet targeted these depths 
+(Figure \@ref(fig:fig-depthfished-cpfvonboard). The deeper waters (40-50 fm) are 
+outside of the mapped hard bottom habitat, but could be assigend to the larger 
+areas considered as a factor in the index.
+
+We retained 4481 drifts for index standardization, with 
+1706 drifts encountering vermilion 
+(Table \@ref(tab:tab-data-filter-cpfvonboard)).  
+
+Sample sizes by factors selected to model, excluding WAVE can be found in Tables 
+\@ref(tab:tab-region-cpfvonboard), \@ref(tab:tab-depth-cpfvonboard), and \@ref(tab:tab-year-cpfvonboard).
+
+**California CPFV CPUE Index: Model Selection, Fits, and Diagnostics**
+
+We modeled retained catch per angler hour (CPUE; number of fish per angler hour) 
+a Bayesian delta-GLM model.  Indices with a year and area interaction were not 
+considered in model selection; trends in the average CPUE by region were similar 
+in the filtered data set (Figure \@ref(fig:fig-areacpue-cpfvonboard)). 
+
+A Lognormal model  was 
+selected for the positive observation GLM by 
+a $\Delta AIC$ of 122.41 over a Gamma model and supported by Q-Q plots of the positive observations fit to both distributions (Figure \@ref(fig:fig-dist-fits-cpfvonboard)). The delta-GLM
+method allows the linear predictors to differ between the binomial and positive models.
+Based on AIC values from maximum likelihood fits Table \@ref(tab:tab-model-select-cpfvonboard)), 
+a main effects model including 
+YEAR and WAVE and DEPTH bin 
+was fit for the binomial model and a main 
+effects model including 
+YEAR and WAVE and DEPTH bin 
+was fit for the  Lognormal model.
+Models were fit using the “rstanarm” R package (version 2.21.1). Posterior predictive 
+checks of the Bayesian model fit for the binomial model and the positive model 
+were all reasonable (Figures \@ref(fig:fig-posterior-mean-cpfvonboard)  and 
+ \@ref(fig:fig-posterior-sd-cpfvonboard)). The binomial model generated data sets with the 
+ proportion zeros similar to the 62%  zeroes in the observed data 
+(Figure \@ref(fig:fig-propzero-cpfvonboard)). The predicted marginal effects from 
+both the binomial and Lognormal models can be found in (Figures \@ref(fig:fig-Dbin-marginal-cpfvonboard) and \@ref(fig:fig-Dpos-marginal-cpfvonboard)). The 
+final index (Table \@ref(tab:tab-index-cpfvonboard)) 
+represents a similar trend to the arithmetic mean of the annual CPUE (Figure \@ref(fig:fig-cpue-cpfvonboard)).
+
+
+ 
+
+
+<!-- ******************************* TABLES ******************************** --> 
+
+\newpage
+
+\begin{table}
+
+\caption{(\#tab:tab-data-filter-cpfvonboard)Data filtering steps CA CPFV onboard survey index for vermilion in the northern model .}
+\centering
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{10em}>{\raggedright\arraybackslash}p{15em}c>{\centering\arraybackslash}p{5em}>{\centering\arraybackslash}p{5em}}
+\toprule
+Filter & Desciption & Trip & Positive Trips & Percent drifts retained\\
+\midrule
+\cellcolor{gray!6}{All} & \cellcolor{gray!6}{Download from SQL; identifiable errors filtered} & \cellcolor{gray!6}{6901} & \cellcolor{gray!6}{1755} & \cellcolor{gray!6}{25\%}\\
+Fishery closed & Removed samples when target fish fishery closed & 5922 & 1736 & 29\%\\
+\cellcolor{gray!6}{Ocean only} & \cellcolor{gray!6}{Removed samples from major bays} & \cellcolor{gray!6}{5780} & \cellcolor{gray!6}{1736} & \cellcolor{gray!6}{30\%}\\
+Catch & Removed samples with zero catch of any species & 5335 & 1736 & 33\%\\
+\cellcolor{gray!6}{Depth} & \cellcolor{gray!6}{Removed samples in less than max depth of species} & \cellcolor{gray!6}{5287} & \cellcolor{gray!6}{1736} & \cellcolor{gray!6}{33\%}\\
+\addlinespace
+Time fished & Removed upper two percent of time fished & 5180 & 1722 & 33\%\\
+\cellcolor{gray!6}{Percent groundfish in samples} & \cellcolor{gray!6}{Removed samples with fewer groundfish than when the target observed} & \cellcolor{gray!6}{4481} & \cellcolor{gray!6}{1706} & \cellcolor{gray!6}{38\%}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}
+
+\caption{(\#tab:tab-depth-cpfvonboard)Positive samples of vermilion in the northern model by depth (fm).}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{(0,10]} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{346} & \cellcolor{gray!6}{12\%}\\
+(10,15] & 139 & 559 & 25\%\\
+\cellcolor{gray!6}{(15,20]} & \cellcolor{gray!6}{279} & \cellcolor{gray!6}{808} & \cellcolor{gray!6}{35\%}\\
+(20,25] & 226 & 588 & 38\%\\
+\cellcolor{gray!6}{(25,30]} & \cellcolor{gray!6}{219} & \cellcolor{gray!6}{601} & \cellcolor{gray!6}{36\%}\\
+\addlinespace
+(30,35] & 159 & 373 & 43\%\\
+\cellcolor{gray!6}{(35,40]} & \cellcolor{gray!6}{216} & \cellcolor{gray!6}{450} & \cellcolor{gray!6}{48\%}\\
+(40,65] & 428 & 756 & 57\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{(\#tab:tab-region-cpfvonboard)Samples of vermilion in the northern model by subregion used in the index.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{CA/OR border to Santa Cruz (V1)} & \cellcolor{gray!6}{238} & \cellcolor{gray!6}{1213} & \cellcolor{gray!6}{20\%}\\
+Moss Landing to Big Sur (V2) & 146 & 511 & 29\%\\
+\cellcolor{gray!6}{San Luis Obsipso to Morro Bay (V3)} & \cellcolor{gray!6}{591} & \cellcolor{gray!6}{1044} & \cellcolor{gray!6}{57\%}\\
+South Morro Bay to Point Conception (V4) & 643 & 1180 & 54\%\\
+\cellcolor{gray!6}{Offshore (V5)} & \cellcolor{gray!6}{88} & \cellcolor{gray!6}{533} & \cellcolor{gray!6}{17\%}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}
+
+\caption{(\#tab:tab-year-cpfvonboard)Samples of vermilion in the northern model by year.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{1999} & \cellcolor{gray!6}{13} & \cellcolor{gray!6}{60} & \cellcolor{gray!6}{22\%}\\
+2000 & 6 & 38 & 16\%\\
+\cellcolor{gray!6}{2001} & \cellcolor{gray!6}{11} & \cellcolor{gray!6}{71} & \cellcolor{gray!6}{15\%}\\
+2002 & 17 & 60 & 28\%\\
+\cellcolor{gray!6}{2003} & \cellcolor{gray!6}{117} & \cellcolor{gray!6}{276} & \cellcolor{gray!6}{42\%}\\
+\addlinespace
+2004 & 192 & 400 & 48\%\\
+\cellcolor{gray!6}{2005} & \cellcolor{gray!6}{67} & \cellcolor{gray!6}{153} & \cellcolor{gray!6}{44\%}\\
+2006 & 121 & 265 & 46\%\\
+\cellcolor{gray!6}{2007} & \cellcolor{gray!6}{126} & \cellcolor{gray!6}{268} & \cellcolor{gray!6}{47\%}\\
+2008 & 47 & 155 & 30\%\\
+\addlinespace
+\cellcolor{gray!6}{2009} & \cellcolor{gray!6}{54} & \cellcolor{gray!6}{198} & \cellcolor{gray!6}{27\%}\\
+2010 & 79 & 193 & 41\%\\
+\cellcolor{gray!6}{2011} & \cellcolor{gray!6}{62} & \cellcolor{gray!6}{182} & \cellcolor{gray!6}{34\%}\\
+2012 & 66 & 220 & 30\%\\
+\cellcolor{gray!6}{2013} & \cellcolor{gray!6}{29} & \cellcolor{gray!6}{160} & \cellcolor{gray!6}{18\%}\\
+\addlinespace
+2014 & 47 & 221 & 21\%\\
+\cellcolor{gray!6}{2015} & \cellcolor{gray!6}{75} & \cellcolor{gray!6}{219} & \cellcolor{gray!6}{34\%}\\
+2016 & 79 & 321 & 25\%\\
+\cellcolor{gray!6}{2017} & \cellcolor{gray!6}{226} & \cellcolor{gray!6}{426} & \cellcolor{gray!6}{53\%}\\
+2018 & 146 & 295 & 49\%\\
+\addlinespace
+\cellcolor{gray!6}{2019} & \cellcolor{gray!6}{126} & \cellcolor{gray!6}{300} & \cellcolor{gray!6}{42\%}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{(\#tab:tab-model-select-cpfvonboard)Model selection for the CA CPFV onboard survey index for vermilion in the northern model .}
+\centering
+\begin{tabular}[t]{lrr}
+\toprule
+Model & Binomial $\Delta$AIC & Lognormal $\Delta$AIC\\
+\midrule
+\cellcolor{gray!6}{1} & \cellcolor{gray!6}{797.52} & \cellcolor{gray!6}{436.25}\\
+YEAR + SubRegion & 129.05 & 60.03\\
+\cellcolor{gray!6}{YEAR + SubRegion + WAVE} & \cellcolor{gray!6}{120.54} & \cellcolor{gray!6}{58.72}\\
+YEAR + SubRegion + WAVE + DEPTH bin & 0.00 & 0.00\\
+\cellcolor{gray!6}{YEAR + WAVE + DEPTH bin} & \cellcolor{gray!6}{285.69} & \cellcolor{gray!6}{66.16}\\
+\addlinespace
+YEAR + DEPTH bin & 316.83 & 74.00\\
+\cellcolor{gray!6}{YEAR + SubRegion + DEPTH bin} & \cellcolor{gray!6}{10.87} & \cellcolor{gray!6}{6.06}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{(\#tab:tab-index-cpfvonboard)Standardized index for the CA CPFV onboard survey index with log-scale standard errors and 95% highest
+       posterior density (HPD) intervals for vermilion in the northern model .}
+\centering
+\begin{tabular}[t]{rrrrr}
+\toprule
+Year & Mean & logSE & lower HPD & upper HPD\\
+\midrule
+\cellcolor{gray!6}{1999} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.53} & \cellcolor{gray!6}{0.01} & \cellcolor{gray!6}{0.05}\\
+2000 & 0.02 & 0.65 & 0.00 & 0.04\\
+\cellcolor{gray!6}{2001} & \cellcolor{gray!6}{0.01} & \cellcolor{gray!6}{0.53} & \cellcolor{gray!6}{0.00} & \cellcolor{gray!6}{0.02}\\
+2002 & 0.02 & 0.42 & 0.01 & 0.05\\
+\cellcolor{gray!6}{2003} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.33} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.09}\\
+\addlinespace
+2004 & 0.07 & 0.28 & 0.04 & 0.11\\
+\cellcolor{gray!6}{2005} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{0.38} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.08}\\
+2006 & 0.05 & 0.36 & 0.02 & 0.09\\
+\cellcolor{gray!6}{2007} & \cellcolor{gray!6}{0.06} & \cellcolor{gray!6}{0.35} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{0.11}\\
+2008 & 0.03 & 0.38 & 0.01 & 0.05\\
+\addlinespace
+\cellcolor{gray!6}{2009} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{0.37} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.07}\\
+2010 & 0.05 & 0.37 & 0.02 & 0.09\\
+\cellcolor{gray!6}{2011} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{0.37} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.08}\\
+2012 & 0.03 & 0.38 & 0.01 & 0.06\\
+\cellcolor{gray!6}{2013} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.42} & \cellcolor{gray!6}{0.01} & \cellcolor{gray!6}{0.04}\\
+\addlinespace
+2014 & 0.02 & 0.38 & 0.01 & 0.04\\
+\cellcolor{gray!6}{2015} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{0.37} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.07}\\
+2016 & 0.03 & 0.37 & 0.01 & 0.06\\
+\cellcolor{gray!6}{2017} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{0.36} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.08}\\
+2018 & 0.05 & 0.37 & 0.02 & 0.09\\
+\addlinespace
+\cellcolor{gray!6}{2019} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{0.37} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.08}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+<!-- ****************************** FIGURES ******************************** --> 
+
+
+![(\#fig:fig-dist-fits-cpfvonboard)Q-Q plot (top) of the positive observations lognormal gamma distributions and fitted values vs residuals for the Lognormal model (bottom).](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_NCA_files/figure-latex/fig-dist-fits-cpfvonboard-1.pdf) 
+
+
+![(\#fig:fig-depthfished-cpfvonboard)Boxplots of depths fished by year in the filtered data.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_NCA_files/figure-latex/fig-depthfished-cpfvonboard-1.pdf) 
+
+
+![(\#fig:fig-areacpue-cpfvonboard)Arithmetic mean of CPUE by region for  vermilion from the filtered data. The areas used are in the text.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_NCA_files/figure-latex/fig-areacpue-cpfvonboard-1.pdf) 
+  
+  
+![(\#fig:fig-propzero-cpfvonboard)Posterior predictive distribution of the proportion of zero observations in replicate data sets generated by the delta model with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_NCA_files/figure-latex/fig-propzero-cpfvonboard-1.pdf) 
+
+
+![(\#fig:fig-posterior-mean-cpfvonboard)Posterior predictive draws of the mean by year with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_NCA_files/figure-latex/fig-posterior-mean-cpfvonboard-1.pdf) 
+
+
+![(\#fig:fig-posterior-sd-cpfvonboard)Posterior predictive draws of the standard deviation by year with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_NCA_files/figure-latex/fig-posterior-sd-cpfvonboard-1.pdf) 
+
+
+![(\#fig:fig-cpue-cpfvonboard)Standardized index and arithmetic mean of the CPUE from the filtered data. Each timeseries is scaled to its respective means.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_NCA_files/figure-latex/fig-cpue-cpfvonboard-1.pdf) 
+
+
+![(\#fig:fig-Dbin-marginal-cpfvonboard)Binomial marginal effects from the final model](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_NCA_files/figure-latex/fig-Dbin-marginal-cpfvonboard-1.pdf) 
+
+
+![(\#fig:fig-Dpos-marginal-cpfvonboard)Positive model marginal effects from the final model.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_NCA_files/figure-latex/fig-Dpos-marginal-cpfvonboard-1.pdf) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### California Collaborative Fisheries Research Project Index
+
+The California Collaborative Fisheries Research Project, [CCFRP](https://www.mlml.calstate.edu/ccfrp/), 
+is a fishery-independent 
+hook-and-line survey designed to monitor nearshore fish populations at a series of sampling 
+locations both inside and adjacent to MPAs along the central California coast 
+[@Wendt2009; @Starr2015].  The CCFRP survey began in 2007 and was originally
+designed as a statewide program in collaboration with NMFS scientists and fishermen. 
+From 2007-2016 the CCFRP project was focused on the central California coast, and has monitored 
+four MPAs consistently.  In 2017, 
+the program was expanded coastwide within California.  The index of abundance was 
+developed from the four MPAs sampled consistently (A&ntilde;o Nuevo and Point Lobos 
+by Moss Landing Marine Labs; Point Buchon and Piedras Blancas by Cal Poly).
+
+The survey design for CCFRP consists a number 500 x 500 m cells both within and 
+outside each MPA. On any given survey day site cells are randomly 
+selected within a stratum (MPA and/or reference cells).  CPFVs are chartered 
+for the survey and the fishing captain is allowed to search within the cell for 
+a fishing location.  During a sampling event, each cell is fished for a total of 
+30-45 minutes by volunteer anglers. Each fish encountered is recorded, measured, 
+and can be linked back to a particular angler, and released (or descended to depth). 
+Starting in 2017, a subset of fish have been retained to collect otoliths and fin 
+clips that provide needed biological information for nearshore species. For the index of abundance, CPUE was modeled at the level of the drift, similar to the 
+fishery-dependent onboard observer survey described above.
+
+
+*CCFRP Index: Data Preparation, Filtering, and Sample Sizes*
+
+The CCFRP data are quality controlled at the time they are key punched and little 
+filtering was needed for the index. 
+Cells not consistently sampled over time were excluded as well as cells that never encountered vermilion. CCFRP samples shallower 
+depths to avoid barotrauma-induced mortality.  We retained 6532 drifts for index standardization, with 2250 drifts encountering vermilion.
+  
+
+
+
+
+
+
+*CCFRP Index: Model Selection, Fits, and Diagnostics*
+
+Sample sizes by factors selected to model, excluding WAVE can be found in Tables 
+\@ref(tab:tab-region-ccfrp) and \@ref(tab:tab-year-ccfrp).
+We modeled retained catch per angler hour (CPUE; number of fish per angler hour) 
+a Bayesian delta-GLM model.  Indices with a year and area interaction were not 
+considered in model selection; trends in the average CPUE by region were similar 
+in the filtered data set (Figure \@ref(fig:fig-areacpue-ccfrp)). Plots of the arithmetic 
+mean by inside (MPA) and outside (REF) MPAs over time is in Figure \@ref(fig:fig-sitecpue-ccfrp).
+
+A Lognormal model  was 
+selected for the positive observation GLM by 
+a $\Delta AIC$ of 362.81 over a Gamma model and supported by Q-Q plots of the positive observations fit to both distributions (Figure \@ref(fig:fig-dist-fits-ccfrp)). The delta-GLM
+method allows the linear predictors to differ between the binomial and positive models.
+Based on AIC values from maximum likelihood fits Table \@ref(tab:tab-model-select-ccfrp)), 
+a main effects model including 
+YEAR and SITE and DEPTH bin 
+was fit for the binomial model and a main 
+effects model including 
+YEAR and SITE and DEPTH bin 
+was fit for the  Lognormal model.
+Models were fit using the “rstanarm” R package (version 2.21.1). Posterior predictive 
+checks of the Bayesian model fit for the binomial model and the positive model 
+were all reasonable (Figures \@ref(fig:fig-posterior-mean-ccfrp)  and 
+ \@ref(fig:fig-posterior-sd-ccfrp)). The binomial model generated data sets with the 
+ proportion zeros similar to the 66%  zeroes in the observed data 
+(Figure \@ref(fig:fig-propzero-ccfrp)). The predicted marginal effects from 
+both the binomial and Lognormal models can be found in (Figures \@ref(fig:fig-Dbin-marginal-ccfrp) and \@ref(fig:fig-Dpos-marginal-ccfrp)). The 
+final index (Table \@ref(tab:tab-index-ccfrp)) 
+represents a similar trend to the arithmetic mean of the annual CPUE (Figure \@ref(fig:fig-cpue-ccfrp)).
+
+
+ 
+
+<!-- ******************************* TABLES ******************************** -->
+
+\newpage
+
+\begin{table}
+
+\caption{(\#tab:tab-region-ccfrp)Samples of vermilion in the northern model by subregion used in the index.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{South Cape Mendocino} & \cellcolor{gray!6}{84} & \cellcolor{gray!6}{277} & \cellcolor{gray!6}{30\%}\\
+Ten Mile & 45 & 224 & 20\%\\
+\cellcolor{gray!6}{Stewarts Point} & \cellcolor{gray!6}{111} & \cellcolor{gray!6}{279} & \cellcolor{gray!6}{40\%}\\
+Bodega Head & 43 & 214 & 20\%\\
+\cellcolor{gray!6}{Ano Nuevo} & \cellcolor{gray!6}{484} & \cellcolor{gray!6}{1879} & \cellcolor{gray!6}{26\%}\\
+\addlinespace
+Point Lobos & 375 & 1369 & 27\%\\
+\cellcolor{gray!6}{Piedras Blancas} & \cellcolor{gray!6}{614} & \cellcolor{gray!6}{966} & \cellcolor{gray!6}{64\%}\\
+Point Buchon & 494 & 1324 & 37\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}
+
+\caption{(\#tab:tab-depth-ccfrp)Positive samples of vermilion in the northern model by depth (fm).}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{(0,10]} & \cellcolor{gray!6}{385} & \cellcolor{gray!6}{1712} & \cellcolor{gray!6}{22\%}\\
+(10,15] & 1019 & 2780 & 37\%\\
+\cellcolor{gray!6}{(15,20]} & \cellcolor{gray!6}{741} & \cellcolor{gray!6}{1713} & \cellcolor{gray!6}{43\%}\\
+(20,30] & 105 & 327 & 32\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}
+
+\caption{(\#tab:tab-year-ccfrp)Samples of vermilion in the northern model by year.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{2007} & \cellcolor{gray!6}{96} & \cellcolor{gray!6}{552} & \cellcolor{gray!6}{17\%}\\
+2008 & 123 & 564 & 22\%\\
+\cellcolor{gray!6}{2009} & \cellcolor{gray!6}{115} & \cellcolor{gray!6}{371} & \cellcolor{gray!6}{31\%}\\
+2010 & 171 & 427 & 40\%\\
+\cellcolor{gray!6}{2011} & \cellcolor{gray!6}{142} & \cellcolor{gray!6}{374} & \cellcolor{gray!6}{38\%}\\
+\addlinespace
+2012 & 163 & 397 & 41\%\\
+\cellcolor{gray!6}{2013} & \cellcolor{gray!6}{110} & \cellcolor{gray!6}{430} & \cellcolor{gray!6}{26\%}\\
+2014 & 162 & 449 & 36\%\\
+\cellcolor{gray!6}{2015} & \cellcolor{gray!6}{98} & \cellcolor{gray!6}{224} & \cellcolor{gray!6}{44\%}\\
+2016 & 174 & 429 & 41\%\\
+\addlinespace
+\cellcolor{gray!6}{2017} & \cellcolor{gray!6}{190} & \cellcolor{gray!6}{516} & \cellcolor{gray!6}{37\%}\\
+2018 & 228 & 582 & 39\%\\
+\cellcolor{gray!6}{2019} & \cellcolor{gray!6}{260} & \cellcolor{gray!6}{622} & \cellcolor{gray!6}{42\%}\\
+2020 & 218 & 595 & 37\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{(\#tab:tab-model-select-ccfrp)Model selection for the CCFRP survey index for vermilion in the northern model .}
+\centering
+\begin{tabular}[t]{lrr}
+\toprule
+Model & Binomial $\Delta$AIC & Lognormal $\Delta$AIC\\
+\midrule
+\cellcolor{gray!6}{1} & \cellcolor{gray!6}{1071.49} & \cellcolor{gray!6}{485.95}\\
+YEAR + AREA & 423.29 & 163.14\\
+\cellcolor{gray!6}{YEAR + AREA + SITE} & \cellcolor{gray!6}{79.34} & \cellcolor{gray!6}{40.23}\\
+YEAR + AREA + SITE + DEPTH bin & 0.00 & 0.00\\
+\cellcolor{gray!6}{YEAR + SITE + DEPTH bin} & \cellcolor{gray!6}{470.88} & \cellcolor{gray!6}{88.31}\\
+\addlinespace
+YEAR + DEPTH bin & 727.53 & 185.13\\
+\cellcolor{gray!6}{YEAR + AREA + DEPTH bin} & \cellcolor{gray!6}{292.96} & \cellcolor{gray!6}{113.84}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{(\#tab:tab-index-ccfrp)Standardized index for the CCFRP survey index with log-scale standard errors and 95% highest
+       posterior density (HPD) intervals for vermilion in the northern model .}
+\centering
+\begin{tabular}[t]{rrrrr}
+\toprule
+Year & Mean & logSE & lower HPD & upper HPD\\
+\midrule
+\cellcolor{gray!6}{2007} & \cellcolor{gray!6}{0.12} & \cellcolor{gray!6}{0.22} & \cellcolor{gray!6}{0.08} & \cellcolor{gray!6}{0.19}\\
+2008 & 0.10 & 0.21 & 0.06 & 0.14\\
+\cellcolor{gray!6}{2009} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.21} & \cellcolor{gray!6}{0.11} & \cellcolor{gray!6}{0.24}\\
+2010 & 0.24 & 0.19 & 0.16 & 0.33\\
+\cellcolor{gray!6}{2011} & \cellcolor{gray!6}{0.19} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.13} & \cellcolor{gray!6}{0.28}\\
+\addlinespace
+2012 & 0.20 & 0.19 & 0.13 & 0.28\\
+\cellcolor{gray!6}{2013} & \cellcolor{gray!6}{0.10} & \cellcolor{gray!6}{0.22} & \cellcolor{gray!6}{0.06} & \cellcolor{gray!6}{0.15}\\
+2014 & 0.18 & 0.19 & 0.12 & 0.26\\
+\cellcolor{gray!6}{2015} & \cellcolor{gray!6}{0.26} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.38}\\
+2016 & 0.19 & 0.19 & 0.13 & 0.28\\
+\addlinespace
+\cellcolor{gray!6}{2017} & \cellcolor{gray!6}{0.22} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.16} & \cellcolor{gray!6}{0.30}\\
+2018 & 0.31 & 0.16 & 0.22 & 0.42\\
+\cellcolor{gray!6}{2019} & \cellcolor{gray!6}{0.36} & \cellcolor{gray!6}{0.16} & \cellcolor{gray!6}{0.26} & \cellcolor{gray!6}{0.48}\\
+2020 & 0.48 & 0.16 & 0.34 & 0.65\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+
+
+<!-- ****************************** FIGURES ******************************** --> 
+
+![(\#fig:fig-dist-fits-ccfrp)Q-Q plot (top) of the positive observations lognormal gamma distributions and fitted values vs residuals for the Lognormal model (bottom).](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-dist-fits-ccfrp-1.pdf) 
+
+
+
+![(\#fig:fig-areacpue-ccfrp)Arithmetic mean of CPUE by region for  vermilion from the filtered data. The areas used are in the text.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-areacpue-ccfrp-1.pdf) 
+
+![(\#fig:fig-sitecpue-ccfrp)Arithmetic mean of CPUE by inside/outside MPAs for  vermilion from the filtered data. The areas used are in the text.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-sitecpue-ccfrp-1.pdf) 
+
+
+![(\#fig:fig-propzero-ccfrp)Posterior predictive distribution of the proportion of zero observations in replicate data sets generated by the delta model with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-propzero-ccfrp-1.pdf) 
+
+
+![(\#fig:fig-posterior-mean-ccfrp)Posterior predictive draws of the mean by year with a vertical line of the raw data average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-posterior-mean-ccfrp-1.pdf) 
+
+
+![(\#fig:fig-posterior-sd-ccfrp)Posterior predictive draws of the standard deviation by year with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-posterior-sd-ccfrp-1.pdf) 
+
+
+![(\#fig:fig-cpue-ccfrp)Standardized index and arithmetic mean of the CPUE from the filtered data. Each timeseries is scaled to its respective means.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-cpue-ccfrp-1.pdf) 
+
+
+![(\#fig:fig-Dbin-marginal-ccfrp)Binomial marginal effects from the final model](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-Dbin-marginal-ccfrp-1.pdf) 
+
+
+![(\#fig:fig-Dpos-marginal-ccfrp)Positive model marginal effects from the final model.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-Dpos-marginal-ccfrp-1.pdf) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### CRFS Dockside Private Boat Index
+
+Catch and effort data from CRFS dockside sampling of private boats, 2004-2018, 
+were provided by CDFW for use in this assessment. The data include catch (number 
+of fish) by species, number of anglers (i.e. effort units are angler trips), 
+angler-reported distance from shore, (Area.X: inside/outside of 3 nm, county, port, 
+interview site, year, month, and CRFS district. The sample size of the 
+unfiltered private boat CPUE data is much larger than the crfspr CPFV data set, 
+with 391,279 trips statewide, 120,655 in southern California (south 
+of Point Conception), and 270,064 north of Point Conception. 
+
+*CRFS Private Boat Index: Data Preparation, Filtering, and Sample Sizes*
+Records were limited to “PR1” sites, and only the hook-and-line gear type 
+(Table \@ref(tab:tab-data-filter-crfspr). 
+Since this is a dockside index lacking precise fishing location information, we 
+use the percent of groundfish within the catch from a trip as a proxy for retaining 
+trips for index standardization. Similar to the crfspr index, we partitioned the 
+data into areas north and south of Point Conception and applied the method 
+separately to each data set.
+
+Since 2005, the recreational fishery for shelf rockfish north of Pt. Conception 
+has been closed from January through part of April and May.Angler reported distance 
+from shore had no samples in the “outside 3 nm” category (Area X = 2) 
+from 2004-2011, but was retained in the index standardization due to the relaxation 
+of depth restrictions beginning in 2017. We retained 59837 drifts for index standardization, with 21971 drifts encountering vermilion 
+(Table \@ref(tab:tab-data-filter-crfspr)).  
+
+
+*Northern California CRFS Private Boat Index: Model Selection, Fits, and Diagnostics*
+
+Sample sizes by factors selected to model, excluding WAVE can be found in Tables 
+\@ref(tab:tab-region-crfspr) and \@ref(tab:tab-year-crfspr).
+We modeled retained catch per angler hour (CPUE; number of fish per angler hour) 
+a Bayesian delta-GLM model.  Indices with a year and area interaction were not 
+considered in model selection; trends in the average CPUE by region were similar 
+in the filtered data set (Figure \@ref(fig:fig-areacpue-crfspr)). 
+
+A Lognormal model  was 
+selected for the positive observation GLM by 
+a $\Delta AIC$ of 3718.2 over a Gamma model and supported by Q-Q plots of the positive observations fit to both distributions (Figure \@ref(fig:fig-dist-fits-crfspr)). The delta-GLM
+method allows the linear predictors to differ between the binomial and positive models.
+Based on AIC values from maximum likelihood fits Table \@ref(tab:tab-model-select-crfspr)), 
+a main effects model including 
+YEAR and WAVE and AREA X 
+was fit for the binomial model and a main 
+effects model including 
+YEAR and WAVE and AREA X 
+was fit for the  Lognormal model.
+Models were fit using the “rstanarm” R package (version 2.21.1). Posterior predictive 
+checks of the Bayesian model fit for the binomial model and the positive model 
+were all reasonable (Figures \@ref(fig:fig-posterior-mean-crfspr)  and 
+ \@ref(fig:fig-posterior-sd-crfspr)). The binomial model generated data sets with the 
+ proportion zeros similar to the 63%  zeroes in the observed data 
+(Figure \@ref(fig:fig-propzero-crfspr)). The predicted marginal effects from 
+both the binomial and Lognormal models can be found in (Figures \@ref(fig:fig-Dbin-marginal-crfspr) and \@ref(fig:fig-Dpos-marginal-crfspr)). The 
+final index (Table \@ref(tab:tab-index-crfspr)) 
+represents a similar trend to the arithmetic mean of the annual CPUE (Figure \@ref(fig:fig-cpue-crfspr)).
+
+
+ 
+
+
+ 
+<!-- ******************************* TABLES ******************************** -->
+
+ \newpage
+ 
+\begin{table}
+
+\caption{(\#tab:tab-data-filter-crfspr)Data filtering steps CRFS PR dockside survey index for vermilion in the northern model .}
+\centering
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{15em}c>{\centering\arraybackslash}p{8em}>{\centering\arraybackslash}p{8em}}
+\toprule
+Filter & Desciption & Trip & Positive Trips & Percent drifts retained\\
+\midrule
+\cellcolor{gray!6}{All data} & \cellcolor{gray!6}{Pre-filtered for drifts with marked for exclusion} & \cellcolor{gray!6}{72238} & \cellcolor{gray!6}{22351} & \cellcolor{gray!6}{\vphantom{1} 31\%}\\
+All data & Pre-filtered for drifts with marked for exclusion & 72238 & 22351 & 31\%\\
+\cellcolor{gray!6}{Groundfish} & \cellcolor{gray!6}{Removed trips with no observed groundfish} & \cellcolor{gray!6}{62264} & \cellcolor{gray!6}{22351} & \cellcolor{gray!6}{36\%}\\
+All data & Pre-filtered for drifts with marked for exclusion & 59837 & 21971 & 37\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}
+
+\caption{(\#tab:tab-region-crfspr)Samples of vermilion in the northern model by subregion used in the index.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{3} & \cellcolor{gray!6}{12600} & \cellcolor{gray!6}{25604} & \cellcolor{gray!6}{49\%}\\
+4 & 4637 & 12855 & 36\%\\
+\cellcolor{gray!6}{5} & \cellcolor{gray!6}{1737} & \cellcolor{gray!6}{4649} & \cellcolor{gray!6}{37\%}\\
+6 & 2997 & 16729 & 18\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}
+
+\caption{(\#tab:tab-year-crfspr)Samples of vermilion in the northern model by year.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{2004} & \cellcolor{gray!6}{1236} & \cellcolor{gray!6}{2833} & \cellcolor{gray!6}{44\%}\\
+2005 & 1542 & 3872 & 40\%\\
+\cellcolor{gray!6}{2006} & \cellcolor{gray!6}{2109} & \cellcolor{gray!6}{4932} & \cellcolor{gray!6}{43\%}\\
+2007 & 1442 & 3548 & 41\%\\
+\cellcolor{gray!6}{2008} & \cellcolor{gray!6}{1104} & \cellcolor{gray!6}{3691} & \cellcolor{gray!6}{30\%}\\
+\addlinespace
+2009 & 1121 & 4082 & 27\%\\
+\cellcolor{gray!6}{2010} & \cellcolor{gray!6}{969} & \cellcolor{gray!6}{2682} & \cellcolor{gray!6}{36\%}\\
+2011 & 1168 & 3178 & 37\%\\
+\cellcolor{gray!6}{2012} & \cellcolor{gray!6}{1023} & \cellcolor{gray!6}{3126} & \cellcolor{gray!6}{33\%}\\
+2013 & 1300 & 3823 & 34\%\\
+\addlinespace
+\cellcolor{gray!6}{2014} & \cellcolor{gray!6}{1434} & \cellcolor{gray!6}{4570} & \cellcolor{gray!6}{31\%}\\
+2015 & 2073 & 5635 & 37\%\\
+\cellcolor{gray!6}{2016} & \cellcolor{gray!6}{1810} & \cellcolor{gray!6}{4812} & \cellcolor{gray!6}{38\%}\\
+2017 & 1775 & 4611 & 38\%\\
+\cellcolor{gray!6}{2018} & \cellcolor{gray!6}{1865} & \cellcolor{gray!6}{4442} & \cellcolor{gray!6}{42\%}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{(\#tab:tab-model-select-crfspr)Model selection for the CRFS PR dockside survey index for vermilion in the northern model .}
+\centering
+\begin{tabular}[t]{lrr}
+\toprule
+Model & Binomial $\Delta$AIC & Lognormal $\Delta$AIC\\
+\midrule
+\cellcolor{gray!6}{1} & \cellcolor{gray!6}{5449.55} & \cellcolor{gray!6}{1685.78}\\
+YEAR + DISTRICT & 354.57 & 66.49\\
+\cellcolor{gray!6}{YEAR + DISTRICT + WAVE} & \cellcolor{gray!6}{327.23} & \cellcolor{gray!6}{24.39}\\
+YEAR + DISTRICT + WAVE + AREA X & 0.00 & 0.00\\
+\cellcolor{gray!6}{YEAR + WAVE + AREA X} & \cellcolor{gray!6}{4546.50} & \cellcolor{gray!6}{1301.84}\\
+\addlinespace
+YEAR + AREA X & 4823.58 & 1383.54\\
+\cellcolor{gray!6}{YEAR + DISTRICT + AREA X} & \cellcolor{gray!6}{26.81} & \cellcolor{gray!6}{40.90}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{(\#tab:tab-index-crfspr)Standardized index for the CRFS PR dockside survey index with log-scale standard errors and 95% highest
+       posterior density (HPD) intervals for vermilion in the northern model .}
+\centering
+\begin{tabular}[t]{rrrrr}
+\toprule
+Year & Mean & logSE & lower HPD & upper HPD\\
+\midrule
+\cellcolor{gray!6}{2004} & \cellcolor{gray!6}{0.49} & \cellcolor{gray!6}{0.14} & \cellcolor{gray!6}{0.37} & \cellcolor{gray!6}{0.63}\\
+2005 & 0.48 & 0.15 & 0.35 & 0.63\\
+\cellcolor{gray!6}{2006} & \cellcolor{gray!6}{0.53} & \cellcolor{gray!6}{0.15} & \cellcolor{gray!6}{0.39} & \cellcolor{gray!6}{0.69}\\
+2007 & 0.49 & 0.15 & 0.36 & 0.64\\
+\cellcolor{gray!6}{2008} & \cellcolor{gray!6}{0.32} & \cellcolor{gray!6}{0.16} & \cellcolor{gray!6}{0.23} & \cellcolor{gray!6}{0.44}\\
+\addlinespace
+2009 & 0.29 & 0.16 & 0.20 & 0.38\\
+\cellcolor{gray!6}{2010} & \cellcolor{gray!6}{0.36} & \cellcolor{gray!6}{0.16} & \cellcolor{gray!6}{0.26} & \cellcolor{gray!6}{0.47}\\
+2011 & 0.36 & 0.16 & 0.26 & 0.49\\
+\cellcolor{gray!6}{2012} & \cellcolor{gray!6}{0.28} & \cellcolor{gray!6}{0.16} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.38}\\
+2013 & 0.25 & 0.17 & 0.18 & 0.34\\
+\addlinespace
+\cellcolor{gray!6}{2014} & \cellcolor{gray!6}{0.26} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.19} & \cellcolor{gray!6}{0.36}\\
+2015 & 0.31 & 0.16 & 0.22 & 0.41\\
+\cellcolor{gray!6}{2016} & \cellcolor{gray!6}{0.33} & \cellcolor{gray!6}{0.16} & \cellcolor{gray!6}{0.24} & \cellcolor{gray!6}{0.44}\\
+2017 & 0.31 & 0.16 & 0.22 & 0.42\\
+\cellcolor{gray!6}{2018} & \cellcolor{gray!6}{0.38} & \cellcolor{gray!6}{0.15} & \cellcolor{gray!6}{0.28} & \cellcolor{gray!6}{0.50}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+
+\FloatBarrier
+
+<!-- ****************************** FIGURES ******************************** --> 
+
+![(\#fig:fig-dist-fits-crfspr)Q-Q plot (top) of the positive observations lognormal gamma distributions and fitted values vs residuals for the Lognormal model (bottom).](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_NCA_files/figure-latex/fig-dist-fits-crfspr-1.pdf) 
+
+
+![(\#fig:fig-areacpue-crfspr)Arithmetic mean of CPUE by region for  vermilion from the filtered data.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_NCA_files/figure-latex/fig-areacpue-crfspr-1.pdf) 
+
+
+![(\#fig:fig-propzero-crfspr)Posterior predictive distribution of the proportion of zero observations in replicate data sets generated by the delta model with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_NCA_files/figure-latex/fig-propzero-crfspr-1.pdf) 
+
+
+![(\#fig:fig-posterior-mean-crfspr)Posterior predictive draws of the mean by year with a vertical line of the raw data average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_NCA_files/figure-latex/fig-posterior-mean-crfspr-1.pdf) 
+
+
+![(\#fig:fig-posterior-sd-crfspr)Posterior predictive draws of the standard deviation by year with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_NCA_files/figure-latex/fig-posterior-sd-crfspr-1.pdf) 
+
+
+![(\#fig:fig-cpue-crfspr)Standardized index and arithmetic mean of the CPUE from the filtered data. Each timeseries is scaled to its respective means.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_NCA_files/figure-latex/fig-cpue-crfspr-1.pdf) 
+
+
+![(\#fig:fig-Dbin-marginal-crfspr)Binomial marginal effects from the final model](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_NCA_files/figure-latex/fig-Dbin-marginal-crfspr-1.pdf) 
+
+
+![(\#fig:fig-Dpos-marginal-crfspr)Positive model marginal effects from the final model.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_NCA_files/figure-latex/fig-Dpos-marginal-crfspr-1.pdf) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Deb Wilson-Vandenberg Index
+
+The Deb Wilson-Vanedenberg data set is an onboard observer survey data conducted 
+by CDFW survey in central California from 1987-1998 and referred to as the Deb 
+Wilson-Vandenberg onboard observer survey, [@Reilly1998]). During an onboard 
+observer trip the sampler rides along on the CPFV and records location-specific 
+catch and discard information to the species level for a subset of anglers 
+onboard the vessel. The subset of observed anglers is usually a maximum of 15 
+people the observed anglers change during each fishing stop.  The catch cannot be 
+linked to an individual, but rather to a specific fishing location.  The sampler 
+also records the starting and ending time, number of anglers observed, starting 
+and ending depth, and measures discarded fish. The fine-scale catch and effort 
+data allow us to better filter the data for indices 
+to fishing stops within suitable habitat for the target species.
+
+
+**Deb Wilson-Vandenberg Index: Data Preparation, Filtering, and Sample Sizes**
+
+A large effort was made by the SWFSC to recover data from the original data 
+sheets for this survey and developed into a relational database [@Monk2016]. 
+The specific fishing locations at each fishing stop  were recorded at a finer 
+scale than the catch data for this survey. We aggregated the relevant location 
+information (time and number of observed anglers) to match the available catch 
+information.  Between April 1987 and July 1992 the number of observed anglers 
+was not recorded for each fishing stop, but the number of anglers aboard the 
+vessel is available.  We imputed the number of observed anglers using the number 
+of anglers aboard the vessel and the number of observed anglers at each fishing 
+stop from the August 1992-December 1998 data (see Supplemental materials for 
+details). In 1987, trips were only observed in Monterey, CA and were therefore 
+excluded from the analysis (Table \@ref(tab:tab-data-filter-debwv)). Sampling 
+targeted areas of central California.  Of the 2,256 trips observed, only 12 of 
+those launched from port in District 6, which was removed from the analysis.
+
+
+Each fishing location was assigned to a reef based on the on the bathymetric maps 
+and interpretation of hard bottom was extracted from 
+the [California Seafloor Mapping Project](http://seafloor.otterlabs.org/index.html).
+Reefs were aggregated to four regions produce adequate sample sizes; 
+Ft. Bragg to Santa Cruz (V1), Moss Landing to Big Sur (V2), San Luis Obispo to 
+Pt. Conception (V3), and Offshore (deeper) locations including the Farallon 
+Islands and reefs of Half Moon Bay and Monterey Bay (V4).  The ports in San 
+Luis Obispo county were sampled more frequently than other regions and the arithmetic 
+mean of CPUE by year was higher also higher in this area (Figure \@ref(fig:fig-areacpue-debwv))
+ 
+We retained 6597 drifts for index standardization, with 
+2016 fishing location encountering vermilion.  
+Tables of the number of samples and positive observervations by factor can be 
+found in Tables (\@ref(tab:tab-depth-debwv), \@ref(tab:tab-region-debwv), and 
+\@ref(tab:tab-year-debwv)).
+
+
+**Deb Wilson-Vandenberg Index: Model Selection, Fits, and Diagnostics**
+
+A Lognormal model  was 
+selected for the positive observation GLM by 
+a $\Delta AIC$ of 313.12 over a Gamma model and supported by Q-Q plots of the positive observations fit to both distributions (Figure \@ref(fig:fig-dist-fits-debwv)). The delta-GLM
+method allows the linear predictors to differ between the binomial and positive models.
+Based on AIC values from maximum likelihood fits Table \@ref(tab:tab-model-select-debwv)), 
+a main effects model including 
+YEAR and WAVE and DEPTH bin 
+was fit for the binomial model and a main 
+effects model including 
+YEAR and WAVE and DEPTH bin 
+was fit for the  Lognormal model.
+Models were fit using the “rstanarm” R package (version 2.21.1). Posterior predictive 
+checks of the Bayesian model fit for the binomial model and the positive model 
+were all reasonable (Figures \@ref(fig:fig-posterior-mean-debwv)  and 
+ \@ref(fig:fig-posterior-sd-debwv)). The binomial model generated data sets with the 
+ proportion zeros similar to the 69%  zeroes in the observed data 
+(Figure \@ref(fig:fig-propzero-debwv)). The predicted marginal effects from 
+both the binomial and Lognormal models can be found in (Figures \@ref(fig:fig-Dbin-marginal-debwv) and \@ref(fig:fig-Dpos-marginal-debwv)). The 
+final index (Table \@ref(tab:tab-index-debwv)) 
+represents a similar trend to the arithmetic mean of the annual CPUE (Figure \@ref(fig:fig-cpue-debwv)).
+
+<!-- ******************************* TABLES ******************************** -->
+
+
+
+\newpage
+
+\begin{table}
+
+\caption{(\#tab:tab-data-filter-debwv)Data filtering steps DebWV onboard survey index for vermilion in the northern model .}
+\centering
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{15em}c>{\centering\arraybackslash}p{8em}>{\centering\arraybackslash}p{8em}}
+\toprule
+Filter & Desciption & Trip & Positive Trips & Percent drifts retained\\
+\midrule
+\cellcolor{gray!6}{All} & \cellcolor{gray!6}{None} & \cellcolor{gray!6}{7566} & \cellcolor{gray!6}{2593} & \cellcolor{gray!6}{34\%}\\
+No catch & Remove no catch trips & 7041 & 2068 & 29\%\\
+\cellcolor{gray!6}{Sparse data} & \cellcolor{gray!6}{Remove District 6 and 1987} & \cellcolor{gray!6}{6697} & \cellcolor{gray!6}{2022} & \cellcolor{gray!6}{30\%}\\
+Time fished & Remove drifts fished less than 6 minutes & 6597 & 2016 & 31\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}
+
+\caption{(\#tab:tab-depth-debwv)Positive samples of vermilion in the northern model by depth (fm).}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{(0,10]} & \cellcolor{gray!6}{113} & \cellcolor{gray!6}{478} & \cellcolor{gray!6}{24\%}\\
+(10,20] & 455 & 1344 & 34\%\\
+\cellcolor{gray!6}{(20,30]} & \cellcolor{gray!6}{410} & \cellcolor{gray!6}{1198} & \cellcolor{gray!6}{34\%}\\
+(30,40] & 465 & 1331 & 35\%\\
+\cellcolor{gray!6}{(40,50]} & \cellcolor{gray!6}{347} & \cellcolor{gray!6}{1067} & \cellcolor{gray!6}{33\%}\\
+\addlinespace
+(50,60] & 172 & 617 & 28\%\\
+\cellcolor{gray!6}{(60,70]} & \cellcolor{gray!6}{36} & \cellcolor{gray!6}{263} & \cellcolor{gray!6}{14\%}\\
+(70,118] & 18 & 299 & 6\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+            
+\begin{table}
+
+\caption{(\#tab:tab-region-debwv)Samples of vermilion in the northern model by subregion used in the index.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{V1} & \cellcolor{gray!6}{362} & \cellcolor{gray!6}{1317} & \cellcolor{gray!6}{27\%}\\
+V2 & 322 & 1448 & 22\%\\
+\cellcolor{gray!6}{V3} & \cellcolor{gray!6}{924} & \cellcolor{gray!6}{1668} & \cellcolor{gray!6}{55\%}\\
+V4 & 408 & 2164 & 19\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}
+
+\caption{(\#tab:tab-year-debwv)Samples of vermilion in the northern model by year.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{1988} & \cellcolor{gray!6}{136} & \cellcolor{gray!6}{422} & \cellcolor{gray!6}{32\%}\\
+1989 & 170 & 446 & 38\%\\
+\cellcolor{gray!6}{1990} & \cellcolor{gray!6}{65} & \cellcolor{gray!6}{122} & \cellcolor{gray!6}{53\%}\\
+1991 & 73 & 135 & 54\%\\
+\cellcolor{gray!6}{1992} & \cellcolor{gray!6}{168} & \cellcolor{gray!6}{467} & \cellcolor{gray!6}{36\%}\\
+\addlinespace
+1993 & 196 & 485 & 40\%\\
+\cellcolor{gray!6}{1994} & \cellcolor{gray!6}{189} & \cellcolor{gray!6}{555} & \cellcolor{gray!6}{34\%}\\
+1995 & 247 & 791 & 31\%\\
+\cellcolor{gray!6}{1996} & \cellcolor{gray!6}{238} & \cellcolor{gray!6}{963} & \cellcolor{gray!6}{25\%}\\
+1997 & 323 & 1312 & 25\%\\
+\addlinespace
+\cellcolor{gray!6}{1998} & \cellcolor{gray!6}{211} & \cellcolor{gray!6}{899} & \cellcolor{gray!6}{23\%}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+ \FloatBarrier
+
+\begin{table}
+
+\caption{(\#tab:tab-model-select-debwv)Model selection for the DebWV onboard survey index for vermilion in the northern model .}
+\centering
+\begin{tabular}[t]{lrr}
+\toprule
+Model & Binomial $\Delta$AIC & Lognormal $\Delta$AIC\\
+\midrule
+\cellcolor{gray!6}{1} & \cellcolor{gray!6}{1011.38} & \cellcolor{gray!6}{422.42}\\
+YEAR + MegaReef & 169.08 & 52.50\\
+\cellcolor{gray!6}{YEAR + MegaReef + WAVE} & \cellcolor{gray!6}{120.32} & \cellcolor{gray!6}{42.13}\\
+YEAR + MegaReef + WAVE + DEPTH bin & 0.00 & 0.00\\
+\cellcolor{gray!6}{YEAR + WAVE + DEPTH bin} & \cellcolor{gray!6}{611.73} & \cellcolor{gray!6}{260.44}\\
+\addlinespace
+YEAR + DEPTH bin & 642.50 & 272.83\\
+\cellcolor{gray!6}{YEAR + MegaReef + DEPTH bin} & \cellcolor{gray!6}{55.30} & \cellcolor{gray!6}{7.28}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{(\#tab:tab-index-debwv)Standardized index for the DebWV onboard survey index with log-scale standard errors and 95% highest
+       posterior density (HPD) intervals for vermilion in the northern model .}
+\centering
+\begin{tabular}[t]{rrrrr}
+\toprule
+Year & Mean & logSE & lower HPD & upper HPD\\
+\midrule
+\cellcolor{gray!6}{1988} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.22} & \cellcolor{gray!6}{0.01} & \cellcolor{gray!6}{0.03}\\
+1989 & 0.03 & 0.20 & 0.02 & 0.04\\
+\cellcolor{gray!6}{1990} & \cellcolor{gray!6}{0.06} & \cellcolor{gray!6}{0.23} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{0.10}\\
+1991 & 0.03 & 0.25 & 0.02 & 0.05\\
+\cellcolor{gray!6}{1992} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.01} & \cellcolor{gray!6}{0.03}\\
+\addlinespace
+1993 & 0.03 & 0.20 & 0.02 & 0.04\\
+\cellcolor{gray!6}{1994} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.01} & \cellcolor{gray!6}{0.03}\\
+1995 & 0.02 & 0.20 & 0.01 & 0.03\\
+\cellcolor{gray!6}{1996} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.01} & \cellcolor{gray!6}{0.02}\\
+1997 & 0.02 & 0.20 & 0.01 & 0.03\\
+\addlinespace
+\cellcolor{gray!6}{1998} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.01} & \cellcolor{gray!6}{0.03}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+
+<!-- ****************************** FIGURES ******************************** --> 
+![(\#fig:fig-dist-fits-debwv)Q-Q plot (top) of the positive observations lognormal gamma distributions and fitted values vs residuals for the Lognormal model (bottom).](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_DebWV_onboard_writeup_NCA_files/figure-latex/fig-dist-fits-debwv-1.pdf) 
+
+
+![(\#fig:fig-areacpue-debwv)Arithmetic mean of CPUE by region for  vermilion from the filtered data.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_DebWV_onboard_writeup_NCA_files/figure-latex/fig-areacpue-debwv-1.pdf) 
+
+
+
+![(\#fig:fig-propzero-debwv)Posterior predictive distribution of the proportion of zero observations in replicate data sets generated by the delta model with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_DebWV_onboard_writeup_NCA_files/figure-latex/fig-propzero-debwv-1.pdf) 
+
+
+![(\#fig:fig-posterior-mean-debwv)Posterior predictive draws of the mean by year with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_DebWV_onboard_writeup_NCA_files/figure-latex/fig-posterior-mean-debwv-1.pdf) 
+
+
+![(\#fig:fig-posterior-sd-debwv)Posterior predictive draws of the standard deviation by year with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_DebWV_onboard_writeup_NCA_files/figure-latex/fig-posterior-sd-debwv-1.pdf) 
+
+
+![(\#fig:fig-cpue-debwv)Standardized index and arithmetic mean of the CPUE from the filtered data. Each timeseries is scaled to its respective means.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_DebWV_onboard_writeup_NCA_files/figure-latex/fig-cpue-debwv-1.pdf) 
+
+
+![(\#fig:fig-Dbin-marginal-debwv)Binomial marginal effects from the final model](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_DebWV_onboard_writeup_NCA_files/figure-latex/fig-Dbin-marginal-debwv-1.pdf) 
+
+
+![(\#fig:fig-Dpos-marginal-debwv)Positive model marginal effects from the final model.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_DebWV_onboard_writeup_NCA_files/figure-latex/fig-Dpos-marginal-debwv-1.pdf) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### MRFSS Dockside CPFV Index, 1980-1999
+
+From 1980 to 2003 the MRFSS program conducted dockside intercept surveys of 
+recreational CPFV fishing fleet. No MRFSS CPUE data are available for the years 
+1990-1992, due to a hiatus in sampling related to funding issues. Sampling of 
+California CPFVs north of Point Conception was further delayed, and CPFV samples 
+n 1993 and 1994 are limited to San Luis Obispo County. 
+For purposes of this assessment, the MRFSS time series was truncated at 1999 due 
+to sampling overlap with the 
+onboard observer program (i.e., the same observer samples the catch while 
+onboard the vessel and also conducts the dockside intercept survey for 
+the same vessel). 
+
+Each entry in the RecFIN Type 3 database corresponds to a 
+single fish examined by a sampler at a particular survey site. Since only a 
+subset of the catch may be sampled, each record also 
+identifies the total number of that species possessed by the group of anglers 
+being interviewed.  The number of anglers and the hours fished are also recorded. 
+The data, as they exist in RecFIN, do not indicate which records 
+belong to the same boat trip. A description of the algorithms and process used to 
+aggregate the RecFIN records to the trip level is outlined in the Supplemental Materials 
+(“Identifying Trips in RecFIN”).
+
+
+**MRFSS CPUE Index: Data Preparation, Filtering, and Sample Sizes**
+
+Trips recorded as having the primary area fished in Mexico or occurring in bays, e.g., 
+San Francisco Bay, were excluded before any filtering on species composition.
+For indices representing only north of Pt. Conception, the years 1993-1994 were 
+excluded due to limited spatial coverage.
+
+The Stephens-MacCall [-@Stephens2004] filtering approach was used to predict the 
+probability of of catching vermilion, based 
+on the species composition of the sampler observed catch in a given trip. Prior 
+to applying the Stephens-MacCall filter, we identified potentially informative 
+predictor species, i.e., species with sufficient sample sizes and temporal coverage 
+(at least 5\% of all trips) to inform the binomial model.  The remaining 
+25 all co-occurred with vermilion in at least one trip 
+and were retained for the Stephens-MacCall logistic regression. Coefficients 
+from the Stephens-MacCall analysis (a binomial GLM) are positive 
+for species that are more likely to co-occur with vermilion, 
+and negative for species that are less likely to be caught with vermilion 
+(Figure \@ref(fig:fig-sm-mrfss)).
+The top five species with high probability of co-occurrence with vermilion include
+Gopher, Flag, Copper, Canary, and Starry rockfishes, all of which are associated with rocky reef and kelp 
+habitats. The five species with the lowest probability of co-occurrence were 
+Chinook salmon, Widow and Greenspotted rockfishes, Chub mackerel and Rosy rockfish.
+
+While the filter is useful in identifying co-occurring or non-occurring species 
+assuming all effort was exerted in pursuit of a single target, the targeting of 
+more than one species or species complex ("mixed trips") can result in co-occurrence of species in the catch 
+that do not truly co-occur in terms of habitat
+associations informative for an index of abundance. Stephens and MacCall 
+[-@Stephens2004] recommended including all trips above a threshold where the 
+false negatives and false positives are equally balanced.  However, this does 
+not have any biological relevance and for this data set, we assume that if a 
+vermilion was landed, the anglers had to have fished in appropriate habitat, 
+especially given vermilion is strongly associated with rocky habitat.
+
+
+The Stephens-MacCall filtering method identified the probability of occurrence 
+at which the rate of "false 
+positives" equals "false negatives" of 0.35. The 
+trips selected using this criteria were compared to an alternative method 
+including all the "false positive" trips, regardless of the probability of 
+encountering vermilion. 
+This assumes that if vermilion were caught, the anglers must have fished in 
+appropriate habitat during the trip. The catch included in this index is 
+"sampler-examined" and the samplers are well trained in species identification.
+
+Stephens and MacCall proposed filtering (excluding) trips from the index 
+standardization based on a criterion of balancing the number of false positives 
+and false negatives. False positives (FP) are trips that are predicted to catch 
+a vermilion based on the species composition of the catch, but did not. False 
+negatives (FN) are trips that were not predicted to catch a vermilion, given the 
+catch composition, but caught at least one. The threshold probability that 
+balances FP and FN excludes 
+1182 
+trips that did not catch a vermilion (52% 
+of the trips), and 188 
+trips (8% of the data) that 
+caught a vermilion. We retained the latter set of trips (FN), assuming that 
+catching a vermilion indicates that a non-negligible fraction of the fishing 
+effort occurred in habitat where vermilion occur. Only “true negatives” 
+(the 1182 
+trips that neither caught vermilion, nor were predicted to catch them by the model) 
+were excluded from the index standardization. The final dataset selected included 
+1083 trips, 70% 
+of which encountered vermilion.  Sample sizes by the factors selected to model are in Tables 
+\@ref(tab:tab-region-mrfss) and \@ref(tab:tab-year-mrfss).
+
+
+
+**MRFSS CPUE Index: Model Selection, Fits, and Diagnostics**
+
+Initial exploration of negative binomial models for this dataset proved to be 
+ill-fitting and the proportion of zeroes predicted by the Bayesian negative binomial 
+models were different enough from the fraction of zeroes in the raw data, that 
+a negative binomial model was not considered for model selection. We modeled catch 
+per angler hour (CPUE; number of fish per angler hour) a Bayesian delta-GLM model. 
+Models incorporating temporal (year, 2-month waves) 
+and geographic (region and primary area fished (inshore <3 nm, offshore >3 nm) 
+factors were evaluated. Two regions were defined based on counties, 1) Del Norte 
+to Santa Cruz ("N") and 2) Monterey to San Luis Obispo ("C") north of Pt. Conception. 
+For models that span counties north and south of Pt. Conception, Santa Barbara to 
+San Diego counties compose a third region ("S"). For models tha exclusively south 
+of Pt. Conception, the region represent individual counties. Indices with a year 
+and area interaction were not considered in model selection; trends in the average 
+CPUE by region were similar in the filtered data set (Figure \@ref(fig:fig-areacpue-mrfss)). 
+
+A Lognormal model  was 
+selected for the positive observation GLM by 
+a $\Delta AIC$ of 62.35 over a Gamma model and supported by Q-Q plots of the positive observations fit to both distributions (Figure \@ref(fig:fig-dist-fits-mrfss)).  The delta-GLM
+method allows the linear predictors to differ between the binomial and positive models.
+Based on AIC values from maximum likelihood fits Table \@ref(tab:tab-model-select-mrfss)), 
+a main effects model including 
+YEAR and SubRegion 
+was fit for the binomial model and a main 
+effects model including 
+NA 
+was fit for the  Lognormal model.
+Models were fit using the “rstanarm” R package (version 2.21.1). Posterior predictive 
+checks of the Bayesian model fit for the binomial model and the positive model 
+were all reasonable (Figures \@ref(fig:fig-posterior-mean-mrfss)  and 
+\@ref(fig:fig-posterior-sd-mrfss)). The binomial model generated data sets with the 
+proportion zeros similar to the 
+30% 
+zeroes in the observed data (Figure \@ref(fig:fig-propzero-mrfss)). 
+The predicted marginal effects from both the binomial and Lognormal models 
+can be found in (Figures \@ref(fig:fig-Dbin-marginal-mrfss) and 
+\@ref(fig:fig-Dpos-marginal-mrfss)). The final index (Table \@ref(tab:tab-index-mrfss)) 
+represents a similar trend to the arithmetic mean of the annual CPUE (Figure \@ref(fig:fig-cpue-mrfss)).
+
+\newpage
+
+\begin{table}
+
+\caption{(\#tab:tab-region-mrfss)Samples of vermilion in the northern model by subregion used in the index.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{C} & \cellcolor{gray!6}{442} & \cellcolor{gray!6}{585} & \cellcolor{gray!6}{76\%}\\
+N & 320 & 498 & 64\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}
+
+\caption{(\#tab:tab-year-mrfss)Samples of vermilion in the northern model by year.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Year & Samples & Positive Samples & Percent Positive\\
+\midrule
+\cellcolor{gray!6}{1980} & \cellcolor{gray!6}{31} & \cellcolor{gray!6}{57} & \cellcolor{gray!6}{54\%}\\
+1981 & 14 & 32 & 44\%\\
+\cellcolor{gray!6}{1982} & \cellcolor{gray!6}{24} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{59\%}\\
+1983 & 19 & 33 & 58\%\\
+\cellcolor{gray!6}{1984} & \cellcolor{gray!6}{34} & \cellcolor{gray!6}{59} & \cellcolor{gray!6}{58\%}\\
+\addlinespace
+1985 & 54 & 98 & 55\%\\
+\cellcolor{gray!6}{1986} & \cellcolor{gray!6}{50} & \cellcolor{gray!6}{87} & \cellcolor{gray!6}{57\%}\\
+1987 & 27 & 36 & 75\%\\
+\cellcolor{gray!6}{1988} & \cellcolor{gray!6}{38} & \cellcolor{gray!6}{48} & \cellcolor{gray!6}{79\%}\\
+1989 & 29 & 42 & 69\%\\
+\addlinespace
+\cellcolor{gray!6}{1995} & \cellcolor{gray!6}{31} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{76\%}\\
+1996 & 104 & 129 & 81\%\\
+\cellcolor{gray!6}{1997} & \cellcolor{gray!6}{127} & \cellcolor{gray!6}{162} & \cellcolor{gray!6}{78\%}\\
+1998 & 98 & 119 & 82\%\\
+\cellcolor{gray!6}{1999} & \cellcolor{gray!6}{82} & \cellcolor{gray!6}{99} & \cellcolor{gray!6}{83\%}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{(\#tab:tab-model-select-mrfss)Model selection for the MRFSS dockside survey index for vermilion in the northern model .}
+\centering
+\begin{tabular}[t]{lrr}
+\toprule
+Model & Binomial $\Delta$AIC & Lognormal $\Delta$AIC\\
+\midrule
+\cellcolor{gray!6}{1} & \cellcolor{gray!6}{65.99} & \cellcolor{gray!6}{106.17}\\
+YEAR + SubRegion & 0.00 & 0.89\\
+\cellcolor{gray!6}{YEAR + SubRegion + WAVE} & \cellcolor{gray!6}{1.77} & \cellcolor{gray!6}{3.03}\\
+YEAR + SubRegion + WAVE + AREA X & 3.76 & 1.85\\
+\cellcolor{gray!6}{YEAR + WAVE + AREA X} & \cellcolor{gray!6}{22.67} & \cellcolor{gray!6}{16.13}\\
+\addlinespace
+YEAR + AREA X & 20.13 & 14.44\\
+\cellcolor{gray!6}{YEAR + SubRegion + AREA X} & \cellcolor{gray!6}{2.00} & \cellcolor{gray!6}{0.00}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+\begin{table}
+
+\caption{(\#tab:tab-index-mrfss)Standardized index for the MRFSS dockside survey index with log-scale standard errors and 95% highest
+       posterior density (HPD) intervals for vermilion in the northern model .}
+\centering
+\begin{tabular}[t]{rrrrr}
+\toprule
+Year & Mean & logSE & lower HPD & upper HPD\\
+\midrule
+\cellcolor{gray!6}{1980} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.21} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{0.08}\\
+1981 & 0.04 & 0.32 & 0.02 & 0.07\\
+\cellcolor{gray!6}{1982} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.23} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{0.07}\\
+1983 & 0.07 & 0.26 & 0.04 & 0.11\\
+\cellcolor{gray!6}{1984} & \cellcolor{gray!6}{0.09} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.06} & \cellcolor{gray!6}{0.13}\\
+\addlinespace
+1985 & 0.06 & 0.16 & 0.04 & 0.08\\
+\cellcolor{gray!6}{1986} & \cellcolor{gray!6}{0.07} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.10}\\
+1987 & 0.08 & 0.21 & 0.05 & 0.12\\
+\cellcolor{gray!6}{1988} & \cellcolor{gray!6}{0.11} & \cellcolor{gray!6}{0.18} & \cellcolor{gray!6}{0.08} & \cellcolor{gray!6}{0.15}\\
+1989 & 0.09 & 0.20 & 0.06 & 0.13\\
+\addlinespace
+\cellcolor{gray!6}{1995} & \cellcolor{gray!6}{0.08} & \cellcolor{gray!6}{0.19} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.12}\\
+1996 & 0.09 & 0.11 & 0.07 & 0.11\\
+\cellcolor{gray!6}{1997} & \cellcolor{gray!6}{0.23} & \cellcolor{gray!6}{0.11} & \cellcolor{gray!6}{0.18} & \cellcolor{gray!6}{0.29}\\
+1998 & 0.17 & 0.12 & 0.13 & 0.21\\
+\cellcolor{gray!6}{1999} & \cellcolor{gray!6}{0.09} & \cellcolor{gray!6}{0.12} & \cellcolor{gray!6}{0.07} & \cellcolor{gray!6}{0.11}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+
+
+\FloatBarrier
+
+
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{C:/Stock_Assessments/VRML_Assessment_2021/Indices_of_Abundance/MRFSS_dockside/NCA/2021-05-28/MRFSS_dockside_SM_species} \caption{Species coefficients (blue bars) from the binomial GLM for presence/absence of vermilion rockfish in the CRFS private boat data. Horizontal black bars are $95\%$ confidence intervals.}(\#fig:fig-sm-mrfss)
+\end{figure}
+
+
+![(\#fig:fig-dist-fits-mrfss)Q-Q plot of the positive observations lognormal gamma distributions and fitted values vs residuals for the Lognormal .](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_MRFSS_dockside_writeup_NCA_files/figure-latex/fig-dist-fits-mrfss-1.pdf) 
+
+
+\FloatBarrier
+
+![(\#fig:fig-areacpue-mrfss)Arithmetic mean of CPUE by region for  vermilion from the filtered data.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_MRFSS_dockside_writeup_NCA_files/figure-latex/fig-areacpue-mrfss-1.pdf) 
+
+
+![(\#fig:fig-propzero-mrfss)Posterior predictive distribution of the proportion of zero observations in replicate data sets generated by the delta model with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_MRFSS_dockside_writeup_NCA_files/figure-latex/fig-propzero-mrfss-1.pdf) 
+
+![(\#fig:fig-posterior-mean-mrfss)Posterior predictive draws of the mean by year with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_MRFSS_dockside_writeup_NCA_files/figure-latex/fig-posterior-mean-mrfss-1.pdf) 
+
+![(\#fig:fig-posterior-sd-mrfss)Posterior predictive draws of the standard deviation by year with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_MRFSS_dockside_writeup_NCA_files/figure-latex/fig-posterior-sd-mrfss-1.pdf) 
+
+![(\#fig:fig-cpue-mrfss)Standardized index and arithmetic mean of the CPUE from the filtered data. Each timeseries is scaled to its respective means.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_MRFSS_dockside_writeup_NCA_files/figure-latex/fig-cpue-mrfss-1.pdf) 
+
+![(\#fig:fig-Dbin-marginal-mrfss)Binomial marginal effects from the final model](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_MRFSS_dockside_writeup_NCA_files/figure-latex/fig-Dbin-marginal-mrfss-1.pdf) 
+
+![(\#fig:fig-Dpos-marginal-mrfss)Positive model marginal effects from the final model.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_MRFSS_dockside_writeup_NCA_files/figure-latex/fig-Dpos-marginal-mrfss-1.pdf) 
+
+
+
+<!--chapter:end:70appendices.Rmd-->
 

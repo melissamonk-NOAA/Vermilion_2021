@@ -81,12 +81,24 @@ in some southern California port complexes through 1983. See Appendix A of Dick
 et al. [-@Dick2007] and Pearson et al. [-@Pearson2008; pp. 8 and 15-16] for 
 further details.
 
+Include a few sentences on why we didn't use PacFIN
 
 
 
+*Commercial length and age composition data*
 
-*Commercial length composition data*
+Biological data from the commercial fisheries that landed `r spp` were extracted 
+from CALCOM on frog. The CALCOM length composition data were catch-weighted 
+to "expanded" length the raw length composition data. The length composition of all fisheries aggregated across time by fleet is in 
+Figures \@ref(fig:len-data-COM_HKL)-\@ref(fig:len-data-COM_NET) and Table \@ref(tab:length-sample-size). 
+Descriptions and details of the length composition data are in the above section 
+for each fleet or survey.
 
+Commercial discard length compositions from \Gls{wcgop} were provided on 
+17 Nov 2020 by Andi Stephens (NWFSC).  Only 224 vermilion were measured from 
+2004-2018 and were not considered for use in the assessment.
 
-
-*Commercial age composition data*
+Input sample sizes for commercial length composition varied depending on the 
+available data source
+Otoliths collected from commercial fisheries north of Pt. Conception were provided 
+and aged, but not used in the assessment due to low annual sample sizes.
