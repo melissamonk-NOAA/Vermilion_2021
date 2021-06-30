@@ -5,8 +5,47 @@ the United States became involved in World War II and wartime shortage of red
 meat created an increased demand for other sources of protein [@Alverson1964; 
 @Harry1961]. 
 
+Vermilion are landed in the live-fish fishery that developed off the coast of 
+California in the 1990s, but have not been a target of that fishery due to their to barotrauma.  
+The fraction of the total catch 
+from the live fish fleet is small and included in the commercial hook-and-line 
+fleet in the California assessment models.  The STAT also learned that vermilion 
+targeted for the live fish fishery, but landed 
+dead due to barotrauma may still be sold.
 
-Remainder from E.J.?
+
+The commercial net fishery...\
+The commercial trawl fishery...
+
+Miller et al. [-@Miller2014 described the spatial and temporal development of the 
+California groundfish fishery. They analyzed a spatially-explicit database of 
+landings in California dating back to 1933, finding that groundfish fishing effort 
+has shifted from shallow, coastal areas to deeper depths and greater distances from 
+port over time. Sampling of commercial species compositions in Southern California 
+began in 1983, a time when the groundfish fleet was already fishing in deeper depths.
+Both historical reconstructions used these data to represent species compositions of 
+total rockfish catch during earlier periods of the fishery, and as a result may 
+overestimate the percentage of cowcod in earlier fisheries that operated closer 
+to port and in shallower depths. Sensitivities to the magnitude of historical catch 
+reconstructions are presented as model sensitivities in the pre-STAR base model.
+
+The Commercial Passenger Fishing Vessel (CPFV; aka ‘party’ and ‘charter’ boat) 
+fleet began ca. 1919 in California, although recreational fishing effort for 
+fishes other than Tunas, other gamefish and salmon was minimal until about 1930. T
+he CPFV fleet numbered about 200 vessels in 1939 [@Croker1939, cited in Young [-@Young1969]). 
+After a hiatus in most operations during WWII, the fleet increased to about 590 vessels 
+by 1953, then declined to approximately 256 vessels around 1963. 
+
+Vermilion rockfish are a targeted species in California's recreational fishery
+and have always been a large fraction of the recreational fishery, xxxxfrog.
+North of Point Conception, the majority of vermilion rockfish landings have been 
+from ports in San Luis Obispo county.  
+
+
+
+
+
+
 
 ## Summary of Management History
 
@@ -35,7 +74,8 @@ commercial sectors.
 
 In 2000, changes in the PFMC’s rockfish management structure resulted in the discontinued 
 use of the \emph{Sebastes} complex, and was replaced with three species 
-groups: nearshore, shelf, and slope rockfishes (January 4, 2000; 65 FR 221), of which `r spp` are included in the minor shelf rockfish group. 
+groups: nearshore, shelf, and slope rockfishes (January 4, 2000; 65 FR 221), of 
+which `r spp` are included in the minor shelf rockfish group. 
 
 During the late 1990s and early 2000s, major changes also occurred in the way 
 that California managed its nearshore fishery. The Marine Life Management Act 
@@ -87,12 +127,22 @@ three hooks and one line per angler in 2000.  Since 2001, the limit has been no 
 two hooks and one line per angler.  There is no size limit in the recreational fishery 
 for `r spp`. 
 
-California also began spatial management, including area closures, and depth restrictions for the recreational fleet in 2000.  In general, the recreational season north of Point Conception 
+California also began spatial management, including area closures, and depth 
+restrictions for the recreational fleet in 2000.  In general, the recreational 
+season north of Point Conception 
 extends from April to December, and south of Point Conception from March to December. 
 In the area that `r spp` are most commonly landed, from Monterey to Morro Bay, the 
 maximum depth open to recreational fishing has been between 30 and 40 
-fathoms until 2017.  In 2017 the depth restrictions were eased by 10 fathoms, opening up fishing depths along the central California coast that had not been open consistently since 2002.  In 
-both 2017 and 2018, the deepest 10 fathoms was closed prior to the prescribed season in December due to high by-catch rates of yelloweye rockfish, one of two rockfish species that are still overfished. A full history of the recreational regulations relating to the spatial management of the fleet can be found frog.   Beginning on January 1, 2021 CDFW implemented a five-fish sub-bag limit for `vermilion`r spp` rockfish that is not accounted for in this stock assessment.
+fathoms until 2017.  In 2017 the depth restrictions were eased by 10 fathoms, 
+opening up fishing depths along the central California coast that had not been 
+open consistently since 2002.  In 
+both 2017 and 2018, the deepest 10 fathoms was closed prior to the prescribed 
+season in December due to high by-catch rates of yelloweye rockfish, which is still 
+overfished. A full history of the recreational 
+regulations relating to the spatial management of the fleet can be found frog.   
+
+Beginning on January 1, 2021 CDFW implemented a five-fish sub-bag limit for 
+`vermilion`r spp` rockfish that is not accounted for in this stock assessment.
 
 **Cowcod Conservation Areas (CCA)**
 In 2001, two area closures [“Cowcod Conservation Areas”](https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=36132&inline) were implemented to reduce fishing mortality of cowcod, originally prohibiting bottom-fishing deeper than 20 fm. Effective 2019, retention of nearshore and shelf rockfish (excluding cowcod) is allowed in depths shallower than 40 fm. The larger of the two areas (CCA West) is a 4200 square mile area west of Santa Catalina and San Clemente Islands. A smaller area (CCA East) is about 40 miles offshore of San Diego, and covers about 100 square miles.
@@ -100,6 +150,7 @@ In 2001, two area closures [“Cowcod Conservation Areas”](https://nrm.dfg.ca.
 **Rockfish Conservation Areas (RCA)**
 In 2002 the PFMC established trawl- and non-trawl area closures known as the Rockfish Conservation Areas. These closed areas are gear-specific, and have seasonally changing boundaries to help reduce fishing mortality.
 
+**Marine Protected Areas (MPA)**
 
 ## Management Performance
 The contribution of `r spp` to the shelf rockfish OFLs is currently derived from 
@@ -109,20 +160,30 @@ was not reviewed by the STAR panel due to insufficient time.
 
 
 Total mortality for `r spp` was obtaid from the Groundfish Expanded Mortality 
-Multiyear [GEMM](https://www.nwfsc.noaa.gov/data/api/v1/source/observer.gemm_fact/selection.xlsx) report [@Somers2020]. The coastwide management of the shelf rockfish complex is split at Cape Mendocino (\CapeM).  Therefore, the  northern California `r spp` 
+Multiyear [GEMM](https://www.nwfsc.noaa.gov/data/api/v1/source/observer.gemm_fact/selection.xlsx) 
+report [@Somers2020]. The coastwide management of the shelf rockfish complex is split at Cape 
+Mendocino (\CapeM).  Therefore, the  northern California `r spp` 
 model contains a portion of the management area from Cape Mendocino (\CapeM) 
 to the California-Oregon border (\CAOR).  The southern California `r spp` contains the 
-area within the southern management area (south of \CapeM) south of Pt. Conception (\PtC).
+area within the southern management area (south of \CapeM) south of Point Conception (\PtC).
 
 The total mortality of the nearshore rockfish 
 south complex has been above the OFL in all years (2011-2019) north of \CapeM, and 
 above the OFL south of \CapeM from 2015-2019. Total mortality 
-estimates from the NMFS NWFSC are not yet available for 2020 (Table \ref{tab:management}). `r Spp` total 
-mortality was on average 63% (range 59%-69%) of the total shelf rockfish south of \CapeM total mortality from 2011-2016.  `r Spp` decreased from 28% to 4% of the total contribution to the shelf rockfish complex north of \CapeM from 2011-2019 with a 
-noticeable decline from 23% to 7% from 2016 to 2017.
+estimates from the NMFS NWFSC are not yet available for 2020 (Table \@ref(tab:management). `r Spp` total 
+mortality was on average 59% (range 55%-66%) of the total shelf rockfish south 
+of \CapeM total mortality from 2011-2016.  `r Spp` decreased from 21% to 4% of 
+the total contribution to the shelf rockfish complex north of \CapeM from 2011-2019 with a 
+noticeable decline from 16% to 6% from 2016 to 2017.
 
 
 
 ## Foreign Fisheries
 
-*Sebastes* spp. are not in the Fisheries National Chart (FNC, database containing species status) maintained by the Mexican Government, i.e., they are not commercially harvested in the northwest Mexican Pacific Ocean (E.M. Boj&oacute;rquez, Centro de Investigaciones Biol&oacute;gicas del Noroeste, S.C., perconal communication).  Dr. Boj&oacute;rquez also reached out to colleagues at the [Fisheries National Institute](https://www.gob.mx/inapesca) who reported that rockfish are occasionally caught in the sport fishery in the Ensenada City.
+*Sebastes* spp. are not in the Fisheries National Chart (FNC, database containing 
+species status) maintained by the Mexican Government, i.e., they are not commercially 
+harvested in the northwest Mexican Pacific Ocean (E.M. Boj&oacute;rquez, Centro de 
+Investigaciones Biol&oacute;gicas del Noroeste, S.C., perconal communication).  Dr. 
+Boj&oacute;rquez also reached out to colleagues at the 
+[Fisheries National Institute](https://www.gob.mx/inapesca) who reported that rockfish 
+are occasionally caught in the sport fishery in the Ensenada City.

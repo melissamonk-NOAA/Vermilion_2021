@@ -1,8 +1,115 @@
 
+### NWFSC West Coast Groundfish Bottom Trawl Survey
+
+The \Gls{s-wcgbt} is based on a random-grid design;
+covering the coastal waters from a depth of 55-1,280 m [@Keller2017].
+This design generally uses four industry-chartered vessels per year assigned to 
+a roughly equal number of randomly selected grid cells and divided into two 'passes'
+of the coast. Two vessels fish from north to south during each pass between late 
+May to early October. This design therefore incorporates both vessel-to-vessel 
+differences in catchability, as well as variance associated with selecting a 
+relatively small number (approximately 700) of possible cells from a very large 
+set of possible cells spread from the Mexican to the Canadian borders.
+
+The WCGBTS encounters a   .... Vermilion rockfish are strongly associated with rocky 
+habitat, e.g., untrawlable habitat, but can be found over soft bottom, especially as 
+juveniles.  xxx  Vermilion rockfish were rare north of San Francisco Bay, which is 
+consistant with the southern distribution of the species.
+ 
+**Available Data**
+
+*Age and Length Data.* The assessment north of Point Conception includes xx ages 
+from the survey and the assessment south of Point Conception includes xx ages from the survey. 
+There were an additional xx fish lengths in the north and xx in the south.
+Additional lengths of fish without ages xxx.
+The length composition and mean lengths of vermilion from the WCGBT survey are in 
+Figures \@ref(fig:len-data-REC-PC-NWFSC-TWL) and \@ref(fig:mean-com-len-data-NWFSC-TWL).
+
+*Maturity samples.* Maturity samples were analyzed by by Melissa Head, NWFSC and a 
+description of the results is in the section on biological data.
+
+*Index of abundance.* The index was considered, but not used in the pre-STAR base model. Sample 
+sizes of vermilion rockfish were low. A VAST model was attempted and did not converge 
+for either the northern or southern California data and a VAST model that modeled the 
+entire California coast assumed the same trends  in both areas.  The STAT also developed 
+a delta-glm model for each area (north and south of Point Conception). Full details on the 
+sample sizes of the observed data, the delta-generalized linear model explored and 
+diagnostics, are in the appendix.
+  
+
+
+### SWFSC Groundfish Ecology Cruises
+D. Pearson (SWFSC, retired) conducted a series of groundfish surveys (hook-and-line and 
+trawl) from 2003 - 2005. 
+
+**Available Data**
+
+*Age and Length Data.*
+Ages...
+The length composition and mean length by year of vermilion from these surveys are 
+in Figures \@ref(fig:len-data-REC-SWFSC-GF-ECOL) and \@ref(fig:mean-com-len-data-SWFSC-GF-ECOL). 
+
+
+### J. Abrams thesis data
+
+For his master's thesis work at Humboldt State University, Jeff Abrams conducted fishery-independent
+hook-and-line surveys in 2010 and 2011 off the coast of California's North Coast. Sites were randomly sampled from 
+areas of known rocky habitat within six depth by distance-from-port strata out of three ports:
+Crescent City Harbor, Trinidad Bay and Noyo River Harbor.  The otoliths collected as part of this 
+study are valuable for nearshore groundfish stock assessments that are lacking biological samples, 
+especially from the North Coast. This collection resides at the SWFSC Santa Cruz lab. 
+
+**Available Data**
+
+*Age and Length Data.* The available length composition and mean size are in Figures 
+\@ref(fig:len-data-REC-ABRAMS-RESEARCH) and \@ref(fig:mean-com-len-data-ABRAMS-RESEARCH). 
+
+
+### NWFSC Hook and Line Survey
+
+Since 2004, the NWFSC has conducted an annual hook and line survey targeting shelf 
+rockfish in the genus *Sebastes* at fixed stations in the Southern California 
+Bight. Key species of rockfish 
+targeted by the survey are bocaccio (*S. paucispinis*), cowcod (*S. levis*), 
+greenspotted (*S. chlorostictus*), and vermilion/sunset (*S. miniatus* and 
+*S. crocotulus*) rockfishes, although a wide range of rockfish species have 
+been observed by this survey. During each site visit, three deckhands simultaneously 
+deploy 5-hook sampling rigs (this is referred to as a single drop) for a maximum 
+of 5 minutes per line, but individual lines may be retrieved sooner at the 
+angler's discretion (e.g., to avoid losing fish). Five drops are attempted at 
+each site for a maximum possible catch of 75 fish per site per year (3 anglers 
+x 5 hooks x 5 drops). Further details regarding the sample frame, site 
+selection, and survey methodology are described by Harms et al. [-@Harms2008]. 
+
+**Available Data**
+
+*Age and Length Data.* This survey is the source of the
+\@ref(fig:len-data-NWFSC-HKL) and \@ref(fig:mean-com-len-data-NWFSC-HKL) 
+
+*Index of Abundance.*
+For a detailed description of the index see frog)
+
+
+### California Department of Fish and Wildlife CPFV Survey
+
+The CDFW conducted a fishery-independent survey in the Southern California Bight 
+from 1976-1989 aboard chartered CPFVs. This survey is also referred to as the 
+"green binder" survey, as green binders were discovered containing data from these surveys. 
+The SWFSC keypunched the available data and also houses the otolith collection from this study.
+
+**Available Data**
+
+*Age and Length Data.*
+A total of xx vermilion otoliths were available for ageing, xx of which were matched to available 
+data and contained information on sex.  An additional xx lengths were also included.
+The available length composition and mean lengths are in Figures 
+\@ref(fig:len-data-CDFW-RESEARCH) and \@ref(fig:mean-com-len-data-CDFW-RESEARCH). 
+
 
 ### California Collaborative Fisheries Research Project
 
-Since 2007, the \Gls{s-ccfrp} has monitored several areas in California to 
+Since 2007, the California Collaborative Fisheries Research Project (CCFRP)
+has monitored several areas in California to 
 evaluate the performance of \Gls{mpa}s and understand nearshore fish populations
 [@Wendt2009; @Starr2015]. In 2017, the survey expanded beyond the four 
 \Gls{mpa}s in central California
@@ -24,51 +131,17 @@ since then, some have been retained for biological collections including otolith
 
 **Available Data**
 
-- Lengths (used)
-- Ages (48 available, but not used due to low sample sizes)
-- Index of abundance (for a detailed description of the index see frog)
+*Age and Length Data.* A total of 48 otoliths were available, but not used due to low 
+annual sample sizes. Length data from te CCFRP program 
+are included with length compositions and mean lengths in Figures
+\@ref(fig:len_data_REC-CCFRP) and \@ref(fig:mean-com-len-data-CCFRP) .
 
-
-### NWFSC West Coast Groundfish Bottom Trawl Survey
-
-The \Gls{s-wcgbt} is based on a random-grid design;
-covering the coastal waters from a depth of 55-1,280 m [@Keller2017].
-This design generally uses four industry-chartered vessels per year assigned to 
-a roughly equal number of randomly selected grid cells and divided into two 'passes'
-of the coast. Two vessels fish from north to south during each pass between late 
-May to early October. This design therefore incorporates both vessel-to-vessel 
-differences in catchability, as well as variance associated with selecting a 
-relatively small number (approximately 700) of possible cells from a very large 
-set of possible cells spread from the Mexican to the Canadian borders.
-
-**Available Data**
-
-- Conditional Age-at-Length (xx fish)
-- Additional lengths of fish not aged
-- Index of abundance (for a detailed description of the index see frog)
-  + The index was considered, but not used in the pre-STAR base model. Sample 
-  sizes of vermilion rockfish were low.
-
-
-
-### NWFSC Hook and Line Survey
-
-Since 2004, the NWFSC has conducted an annual hook and line survey targeting shelf 
-rockfish in the genus *Sebastes* at fixed stations in the Southern California 
-Bight. Key species of rockfish 
-targeted by the survey are bocaccio (*S. paucispinis*), cowcod (*S. levis*), 
-greenspotted (*S. chlorostictus*), and vermilion/sunset (*S. miniatus* and 
-*S. crocotulus*) rockfishes, although a wide range of rockfish species have 
-been observed by this survey. During each site visit, three deckhands simultaneously 
-deploy 5-hook sampling rigs (this is referred to as a single drop) for a maximum 
-of 5 minutes per line, but individual lines may be retrieved sooner at the 
-angler's discretion (e.g., to avoid losing fish). Five drops are attempted at 
-each site for a maximum possible catch of 75 fish per site per year (3 anglers 
-x 5 hooks x 5 drops). Further details regarding the sample frame, site 
-selection, and survey methodology are described by Harms et al. [-Harms2008]. 
-
-**Available Data**
-
-- Conditional Age-at-Length (xx fish)
-- Additional lengths of fish not aged
-- Index of abundance (for a detailed description of the index see frog)
+*Index of Abundance*
+The index of abundance in the pre-STAR base model is a weighted index, assuming that 
+20% of the available habitat within California state waters (0-3 nm) is within MPAs. 
+The SWFSC has worked extensively on quantifying rocky habitat from high resolution
+bahtymetric data collected as part of the Seafloor Mapping Program.  The quantification 
+of habitat has been used in a number of stock assessments to weight indices of abundance 
+since 2013.  This is the first time the habitat data are utilized to weight an inside/outside 
+MPA effet within an index.  Full details on the observed data, model selection and modeling 
+methods can be found in the Appendix.

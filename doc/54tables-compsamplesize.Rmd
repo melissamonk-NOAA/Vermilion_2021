@@ -27,16 +27,17 @@ kableExtra::kbl(length.sample.size,
   col.names = c("Source", "Year", "Fleet(#)", "Number fish", "Sample size", "Trips", "Initial sample basis"),
   align = 'cclrrrl', linesep = ""
 ) %>%
-  column_spec(1, width = "1cm") %>%
+  column_spec(1, width = "2cm") %>%
   column_spec(2, width = "1cm") %>%
-  column_spec(3, width = "2cm") %>%
-  column_spec(4, width = "2cm") %>%
+  column_spec(3, width = "4cm") %>%
+  column_spec(4, width = "1cm") %>%
   column_spec(5, width = "1cm") %>%
   column_spec(6, width = "1cm") %>%
   column_spec(7, width = "4cm") %>%
   kable_styling(latex_options = "repeat_header", font_size =8)
 ```
 
+\newpage
 
 ```{r, age-sample-size, results = 'asis'}
 kableExtra::kbl(age.sample.size, 
@@ -44,7 +45,7 @@ kableExtra::kbl(age.sample.size,
   caption = "Samples sizes of conditional age-at-length data by year.",
   col.names = c("Source", "Year", "Fleet(#)", "Number of fish")
 ) %>%
-  column_spec(1, width = "1cm") %>%
+  column_spec(1, width = "3cm") %>%
   column_spec(2, width = "1cm") %>%
   column_spec(3, width = "4cm") %>%
   column_spec(4, width = "3cm") %>%

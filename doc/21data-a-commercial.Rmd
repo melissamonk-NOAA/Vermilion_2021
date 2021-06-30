@@ -63,7 +63,7 @@ Ralston et al. [-@Ralston2010b], and assigned to the assessment areas north and
 south of Point Conception, and either trawl or ‘non-trawl’ gear types. To 
 approximate California landings from 1900 to 1915, we used a linear interpolation 
 starting from zero metric tons in 1899 to the amount of ‘non-trawl’ catch, by 
-area, in 1916 (Table XXX). Since hook and line gears catch the majority of 
+area, in 1916 (Table frog-EJ?). Since hook and line gears catch the majority of 
 commercially-caught vermilion rockfish, we assigned estimated catch in the 
 ‘non-trawl’ category to the hook and line fleet in the assessment model.
 
@@ -78,10 +78,10 @@ CALCOM database, and are used in this and past assessments as the best available
 landings for the time period 1969-1977 for all port complexes. Since commercial 
 port sampling south of Point Conception started later, ratio estimates were used 
 in some southern California port complexes through 1983. See Appendix A of Dick 
-et al. [-@Dick2007] and Pearson et al. [-@Pearson2008; pp. 8 and 15-16] for 
+et al. [-@Dick2007] and Pearson et al. [-@Pearson2008]; pp. 8 and 15-16] for 
 further details.
 
-Include a few sentences on why we didn't use PacFIN
+frog: Include a few sentences on why we didn't use PacFIN
 
 
 
@@ -89,16 +89,20 @@ Include a few sentences on why we didn't use PacFIN
 
 Biological data from the commercial fisheries that landed `r spp` were extracted 
 from CALCOM on frog. The CALCOM length composition data were catch-weighted 
-to "expanded" length the raw length composition data. The length composition of all fisheries aggregated across time by fleet is in 
-Figures \@ref(fig:len-data-COM_HKL)-\@ref(fig:len-data-COM_NET) and Table \@ref(tab:length-sample-size). 
-Descriptions and details of the length composition data are in the above section 
-for each fleet or survey.
-
-Commercial discard length compositions from \Gls{wcgop} were provided on 
-17 Nov 2020 by Andi Stephens (NWFSC).  Only 224 vermilion were measured from 
-2004-2018 and were not considered for use in the assessment.
-
+to "expanded" length the raw length composition data. The length composition and mean 
+size by year are available in Figures \@ref(fig:len-data-COM-HKL) and \@ref(fig:mean-com-len-data-COM-HKL) 
+for the commercial hook-and-line fleet, 
+\@ref(fig:len-data-COM-TWL) and \@ref(fig:mean-com-len-data-COM-TWL) for the commercial trawl fleet, 
+and \@ref(fig:len-data-COM-NET and \@ref(fig:mean-com-len-data-COM-NET) for the commercial net fleet.
 Input sample sizes for commercial length composition varied depending on the 
-available data source
-Otoliths collected from commercial fisheries north of Pt. Conception were provided 
-and aged, but not used in the assessment due to low annual sample sizes.
+available data source and are in Table \@ref(tab:length-sample-size). 
+
+
+Commercial discard length compositions from \gls{wcgop} were provided on 
+17 Nov 2020 by Andi Stephens (NWFSC).  Only 224 vermilion were measured statewide from 
+2004-2018.  The sparse discard length composition data were not considered for use in the 
+model as discarded catch is a small fraction of the overall commercial landings.
+
+Otoliths collected from commercial fisheries north of Point Conception were provided by 
+the Pacific States Fisheries Commission and aged, but not used in the assessment due 
+to low annual sample sizes.

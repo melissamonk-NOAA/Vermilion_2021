@@ -7,7 +7,7 @@
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(fig_loc, "oldfish.jpg"), 
-caption = "Photograph of the *oldest* aged fish used in the assessment with annuli marked by B. Kamikawa (NWFSC).",
+caption = "Photograph of the *oldest* aged fish used in the assessment with annuli marked by B. Kamikawa (NWFSC)",
 label = 'oldfish')
 ```
 
@@ -15,7 +15,7 @@ label = 'oldfish')
 sa4ss::add_figure(
 filein = file.path(fig_loc, "Reader 1 vs Reader 2.png"), 
 caption = "Aging precision between initial and blind double reads for vermilion. 
-Numbers in the bubbles are the sample sizes of otoliths cross-read.",
+Numbers in the bubbles are the sample sizes of otoliths cross-read",
 label = 'reader1reader2')
 ```	
 
@@ -24,7 +24,7 @@ sa4ss::add_figure(
 filein = file.path(fig_loc, "True vs Reads (by reader).png"), 
 caption = "True versus predicted age for two current age readers at the NWFSC 
 from the ageing error software with unbiased reads for reader 1 and curvilinear 
-bias for reader 1 and curvilinear standard deviation for both readers.",
+bias for reader 1 and curvilinear standard deviation for both readers",
 label = 'truereads')
 ```	
 
@@ -34,14 +34,6 @@ sa4ss::add_figure(
 filein = file.path(base_loc,"plots", "numbers10_ageerror_matrix_1.png"),
 caption = "Distribution of observed age at true age for ageing error type 1",
 label = 'ageerror')
-```
-
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-  filein = file.path(base_loc,"plots", "bio1_sizeatage.png"),
-  caption = "Length at age in the beginning of the year (or season) in the ending year of the model. Shaded area indicates 95% distribution of length at age around estimated growth curve",
-    label = 'fittedgrowth')
 ```
 
 

@@ -60,15 +60,48 @@ through the University of California Santa Barbara in southern California.
 
 *California Cooperative Oceanic Fisheries Investigations* 
 
-The \gls(calcofi) in 1951 and conducts quarterly cruises off southern & central California, collecting a suite of hydrographic and biological data on station and underway.  
-Ichthyoplankon sampling with a paired bongo started in 1978. Data on larval abundance from the CalCOFI Ichthyoplankton survey have been used in stock assessments of several species, including bocaccio, cowcod and shortbelly rockfish.  Although the long-term dataset is limited to a small subset of species for which morphological identification of larvae has been possible, recent research has been successful at identifying a broader range of species based on genetic identification of larvae [@Thompson2016]. 
+The \Gls{calcofi} surveys began in 1951 and conducts quarterly cruises off southern & 
+central California, collecting a suite of hydrographic and biological data on 
+station and underway. Ichthyoplankon sampling with a paired bongo started in 1978. 
+Data on larval abundance from the CalCOFI Ichthyoplankton survey have been used in 
+stock assessments of several species, including bocaccio, cowcod and shortbelly 
+rockfish.  Although the long-term dataset is limited to a small subset of species 
+for which morphological identification of larvae has been possible, recent research 
+has been successful at identifying a broader range of species based on genetic 
+identification of larvae [@Thompson2016]. 
 Vermilion rockfish cannot be identified morphologically in the ichthyoplankton 
-samples. Of over 20,000 larvae identified in the 1998-2013 time period, only 9 were vermilion rockfish, encountered in only about 1% of the hauls.  Consequently, the data are insufficient at this time to use to inform relative abundance, although [@Thompson2017] do provide several relative abundance time series for other taxa, and future efforts may lead to better taxonomic resolution of historical or future collections.
+samples. Of over 20,000 larvae identified in the 1998-2013 time period, only nine 
+were vermilion rockfish, encountered in only about 1% of the hauls. Consequently, 
+the data are insufficient at this time to use to inform relative abundance, although Thompson et al. 
+[-@Thompson2017] do provide several relative abundance time series for other taxa, and 
+future efforts may lead to better taxonomic resolution of historical or future collections.
 
 *Rockfish Recruitment and Ecosystem Survey*
 
-Since 1983, the SWFSC has conducted an annual midwater trawl survey for pelagic juvenile rockfish and other groundfish in the Central California region of the California Current ([-@Ralston2013] and references therein).  Due to concerns about mesoscale abundance patterns and a need for greater spatial representation in the data, including some apparent strong differences in spatial distribution patterns in the early 2000s [@Hastie2007; @Ralston2013b], this survey was expanded to a broader spatial scale in the 2001-2004 period, and since 2004 most years have coastwide data from a combination of SWFSC, NWFSC and Cooperative Research surveys (see[-@Field2017] for more complete details regarding coastwide pre-recruit data, and [-@Sakuma2016], [@Friedman2018] for additional details and alternative applications of survey data). 
+Since 1983, the SWFSC has conducted an annual midwater trawl survey for pelagic 
+juvenile rockfish and other groundfish in the Central California region of the 
+California Current ([-@Ralston2013] and references therein).  Due to concerns 
+about mesoscale abundance patterns and a need for greater spatial representation 
+in the data, including some apparent strong differences in spatial distribution 
+patterns in the early 2000s [@Hastie2007; @Ralston2013], this survey was expanded 
+to a broader spatial scale in the 2001-2004 period, and since 2004 most years have 
+coastwide data from a combination of SWFSC, NWFSC and Cooperative Research surveys 
+(see Field et al. [-@Field2021] for more complete details regarding coastwide 
+pre-recruit data, and Sakmua et al. [-@Sakuma2016] and Friedman et al. [-@Friedman2018] 
+for additional details and 
+alternative applications of survey data). 
 
 Vermilion frog..
 
 
+*California Collaborative Research Project*
+
+In 2017 the California Collaborative Research Project (CCFRP) expanded state-wide 
+and samples four MPAs and associated references sites in southern California.  
+Vermilion rockfish have been encountered at two of the MPAs (Carrington Point off 
+Santa Rosa Island and South La Jolla) and observed in 27% of all drifts at these 
+two locations. The STAT determined that the was too constrained spatially and 
+temportally to be considered 
+for an index of abundance. There are currently 262 lengths of vermilion available.
+With additional years of data, this data set can be considered for inclusion in a 
+future vermilion assessment.

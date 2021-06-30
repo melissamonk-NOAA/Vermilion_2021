@@ -1,21 +1,13 @@
-## Biological Data
-
-
-
-### Age Structures
-
 <!--
+### Age Structures
 **External Fits to Growth**
-
 Fits to the von Bertalanffy growth curve, 
 $L_i = L_{\infty}e^{(-k[t-t_0])}$, where $L_i$ is the length (cm) at age $i$, $t$ is age in 
 years, $k$ is rate of increase in growth, $t_0$ is the intercept, and $L_{\infty}$ 
 is the asymptotic length, were explore by species and sex. 
 -->
 
-
-#### Ageing Precision and Bias
-
+### Ageing Precision and Bias
 Uncertainty in ageing error was estimated using a collection of 357 `r spp` 
 otoliths with two age reads between the NWFSC (reader 1, B. Kamikawa) and the 
 SWFSC (reader 2, D. Watters) (Figure \@ref(fig:reader1reader2)).
@@ -33,10 +25,10 @@ best fitting model selected curvilinear bias for reader 1 and curvilinear standa
 deviation for both readers.  
 An analysis of ageing error removing one fish aged at 88 by reader 1 and 78 by reader 2 
 selected the the model with reader 2 as unbiased and curvilinear standard deviation 
-(Figure \@ref(fig:oldfish)). The reading of the oldest aged fish falls within the 95\% confidence 
-internal using this model (Figure \@ref(fig:truereads)).  
-The latter model was selected for use in the assessment. 
- 
+(Figure \@ref(fig:oldfish)). The reading of the oldest aged fish falls within the 95% confidence 
+internal using this model (Figure \@ref(fig:truereads)).The latter model was selected 
+for use in the assessment and the distribution of true age and observed 
+age is in Figure \@ref(fig:ageerror). 
 
 The resulting estimate indicated a standard deviation in age readings 
 increasing from 0.001 years at age 0 to a standard deviation of 2.37 years at age 70, 
@@ -45,39 +37,68 @@ the first year of the plus group in the assessment model.
 
 
 ### Maturity
-
-For the current assessment, Melissa Head (NWFSC, pers. comm.) determined maturity for frog female `r spp` caught by recent fishery-independent surveys. Two types of maturity determinations were provided, ‘biological maturity’ and ‘functional maturity.’ The former category includes “juveniles exhibiting dummy runs (early vitellogenesis or yolk granules present in a small proportion of oocytes, some in early stages of cellular decay) and skip spawners (adults foregoing spawning in a given year)” (M. Head, pers. comm.), while the latter excludes such cases. Separate logistic regressions were fit to each type of maturity determination as a function of fork length (Figure frog), estimating LMAT at frog cm (biological maturity) and frog cm (functional maturity), with slopes of frog and frog, respectively.  The samples available from areas 
+For the current assessment, Melissa Head (NWFSC, pers. comm.) determined maturity 
+for frog female `r spp` caught by recent fishery-independent surveys. Two types 
+of maturity determinations were provided, ‘biological maturity’ and ‘functional 
+maturity.’ The former category includes “juveniles exhibiting dummy runs (early 
+vitellogenesis or yolk granules present in a small proportion of oocytes, some 
+in early stages of cellular decay) and skip spawners (adults foregoing spawning 
+in a given year)” (M. Head, pers. comm.), while the latter excludes such cases. 
+Separate logistic regressions were fit to each type of maturity determination as 
+a function of fork length (Figure frog), estimating LMAT at frog cm (biological 
+maturity) and frog cm (functional maturity), with slopes of frog and frog, 
+respectively.  The samples available from areas 
 north of Pt. Conception were smaller fish and did not allow for estimates of separate 
-maturity curves.  Both California vermilion assessments assum the same maturity ogive. 
+maturity curves.  Both California vermilion assessments assumed the same maturity 
+ogive (Figure \@ref(fig:maturity)). 
 
 
-The proportion of females classified as mature may be sensitive to the month of capture. frog
 
 ### Fecundity
 
+Fecundity by female weight (kg) is in Figure \@ref(fig:fecundity).
+Spawning output at age is in Figure \@ref(fig:spawningoutpuage).
 
 
 ### Natural Mortality
 
-Natural mortality was not directly measured, so life-history based empirical relationships were used. The Natural Mortality Tool (NMT; https://github.com/shcaba/Natural-Mortality-Tool), a Shiny-based graphical user interface allowing for the application of a variety of natural mortality estimators based on measures such as longevity, size, age and growth, and maturity, was used to obtain estimates of natural mortality. The NMT currently provides 19 options, including the Hamel [-@Hamel2015] method, which is a corrected form of the Then et al. [-@Then2018] functional regression model and is a commomly applied method for west coast groundfish. The NMT also allows for the construction of a natural mortality prior weighted across methods by the user. 
+Natural mortality was not directly measured, so life-history based empirical 
+relationships were used. The Natural Mortality Tool 
+[NMT](https://github.com/shcaba/Natural-Mortality-Tool), a Shiny-based 
+graphical user interface allowing for the application of a variety of natural 
+mortality estimators based on measures such as longevity, size, age and growth, 
+and maturity, was used to obtain estimates of natural mortality. The NMT currently 
+provides 19 options, including the Hamel [-@Hamel2015] method, which is a corrected 
+form of the Then et al. [-@Then2018] functional regression model and is a commomly 
+applied method for west coast groundfish. The NMT also allows for the construction 
+of a natural mortality prior weighted across methods by the user. 
 
-We assumed the age of 54 years to represent the practical longevity (i.e., 90% of the commonly seen maximum age of 60) for both females and males, though the absolute oldest age in OR was >60 years. In the larger biomass, higher sampled area of California, ages 80+ were even encountered. Empirical $M$ estimators using the von Bertalanffy growth parameters were also considered, but they produced unreasonably high estimates (2-3 times higher than the longevity estimates). This is likely explained by the fact that while `r spp` have protracted longevity at $L_{\infty}$. Additionally, the FishLife [@Thorson2017] estimate was included, though, given the source of FishLife data is FishBase, there is a good chance the estimates of $M$ are also from methods using longevity, though the actual source of longevity in FishLife was unknown. 
-Both California vermilion assessments used the Hamel prior [-@Hamel2015], which is defined as a lognormal with mean $ln\frac{5.4}{A_{max}}$  and SE = 0.4384343. Using a maximum age of 54 the point estimate and median of the prior is 0.1, which is used as a prior on $M$ in the assessment model. We also explore sensitivity to these assumptions of natural mortality through likelihood profiling.
-
-
+We assumed the age of 54 years to represent the practical longevity (i.e., 90% of 
+the commonly seen maximum age of 60) for both females and males, though the absolute 
+oldest age in Oregon was >60 years. In the larger biomass, higher sampled area of 
+California, ages 80+ were even encountered. Empirical $M$ estimators using the von 
+Bertalanffy growth parameters were also considered, but they produced unreasonably 
+high estimates (2-3 times higher than the longevity estimates). This is likely 
+explained by the fact that while `r spp` have protracted longevity at $L_{\infty}$. 
+Additionally, the FishLife [@Thorson2017] estimate was included, though, given 
+the source of FishLife data is FishBase, there is a good chance the estimates of 
+$M$ are also from methods using longevity, though the actual source of longevity 
+in FishLife was unknown. 
+Both California vermilion assessments used the Hamel prior [-@Hamel2015], which 
+is defined as a lognormal with mean $ln\frac{5.4}{A_{max}}$  and SE = 0.4384343.
+Using a maximum age of 54 the point estimate and median of the prior is 0.1, which 
+is used as a prior on $M$ in the assessment model. We also explore sensitivity to 
+these assumptions of natural mortality through likelihood profiling.
 
 
 ### Sex Ratio
-
 No information on the sex ratio at birth was available so it was assumed to be 50:50. 
 
 
-### Length-Weight Relationship
-
-The length(cm)-weight(kg) relationship for `r spp` was estimated outside the 
+### Weight-Length Relationship
+The weight(kg)-length(cm) relationship for `r spp` was estimated external the 
 model using California biological data available from fishery-independent 
-data sources including the NWFSC hook-and-line survey and the WCGBTS. The estimated length-weight relationship for female fish was $W$=`r format(model$MGparmAdj$Wtlen_1_Fem[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Fem[1],2)`^ and males at $W$=`r format(model$MGparmAdj$Wtlen_1_Mal[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Mal[1], 2)`^ (Figure \@ref(weightlength)). 
-
-
-
-
+data sources including the NWFSC hook-and-line survey and the WCGBTS. The estimated 
+weight-length was assumed the same for males and females: 
+$W$=`r format(model$MGparmAdj$Wtlen_1_Fem[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Fem[1],2)`^ 
+(Figure \@ref(fig:weightlength)). 

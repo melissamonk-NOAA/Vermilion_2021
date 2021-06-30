@@ -17,9 +17,9 @@ landings_table <- landings %>%
 ```
 
 
-```{r, catches, results = 'asis'}
+```{r, landings, results = 'asis'}
 kableExtra::kbl(landings_table, longtable = TRUE, booktabs = TRUE, 
-  caption = "Landings of vermilion by fleet and year. A description of the sources of the landings are in the text and the next table.",
+  caption = "Landings of vermilion by fleet and year. All recreational fleet landings are in numbers (thousands of fish) and commercial fleets in biomass (mt)A description of the sources of the landings data are in the text and the next table.",
   align  = 'r', linesep = ""
 ) %>%
   column_spec(1, width = "1cm") %>%
@@ -62,7 +62,7 @@ if(model.area == 'NCA'){
 }
 ```
 
-```{r catch-source, results = 'asis'}
+```{r, catch-source, results = 'asis'}
 kableExtra::kbl(catch_source, booktabs = TRUE, 
   caption = "Sources of landings for the commercial and recreational fleets.  The interpolated values were interpolated by J. Field (SWFSC). The reconstruction refers to the commercial and recreational catch recontructions in Ralston et al. (2010). Detailed descriptions of the sources are in the text.",
   align  = 'l', linesep = ""

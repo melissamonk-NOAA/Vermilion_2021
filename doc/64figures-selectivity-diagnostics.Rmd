@@ -1,9 +1,21 @@
 
+<!-- ======================================================================= -->
+<!-- ************************    Growth   ********************************** --> 
+<!-- ======================================================================= -->
 
 
-<!-- ====================================================================== -->
-<!-- *********************    Selectivity            ********************** --> 
-<!-- ====================================================================== -->
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = file.path(base_loc,"plots", "bio1_sizeatage.png"),
+  caption = "Length at age in the beginning of the year (or season) in the ending year of the model. Shaded area indicates 95% distribution of length at age around estimated growth curve",
+    label = 'fittedgrowth')
+```
+
+
+<!-- ======================================================================= -->
+<!-- ************************    Selectivity     *************************** --> 
+<!-- ======================================================================= -->
 
 
 \FloatBarrier 
@@ -33,7 +45,7 @@ selex_time = plot_info %>%
   filter(grepl("sex1", label))
 #plot.vec = grep("timevary_surf", selex_time$label)
 filein = file.path(base_loc, "plots")
-for (a in 1:length(selex_time$label)){
+for (a in 1:2){
 	cap = selex_time$caption[a]
 	lab = selex_time$label[a]
 	add_figure(filein = file.path(filein, selex_time$file[a]), 
@@ -84,3 +96,21 @@ for (i in selex_fleets$fleet_ID) {
 <!-- ======================================================================= -->
 <!-- ********************* Model Diagnostics ******************************* --> 
 <!-- ======================================================================= -->
+
+```{r, results = 'asis'}
+
+if(model.area=='NCA'){
+  add_figure(
+    filein = file.path(paste0(fig_loc,"/jitter_NCA.png")),
+    caption = "Results from 50 jittered runs of the pre-STAR base model.  Missing values indicate the run did not converge",
+    label = "jitter"
+  )
+} else {
+  add_figure(
+    filein = file.path(paste0(fig_loc,"/jitter_SCA.png")),
+    caption = "Results from 50 jittered runs of the pre-STAR base model",
+    label = "jitter"
+  )
+}
+```
+

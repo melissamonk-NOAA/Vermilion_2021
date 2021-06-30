@@ -2,15 +2,12 @@
 <!-- ******************* Data Used in the Model *************************** --> 
 <!-- ====================================================================== --> 
 
-
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-filein = file.path(base_loc, "plots", "data_plot2.png"), 
+filein = file.path(base_loc_plots, "data_plot2.png"), 
 caption = "Summary of data sources used in the base model",
 label = 'data-plot')
-```	
-
-
+```
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(fig_loc, "assess_area.png"), 
@@ -18,15 +15,12 @@ caption = "Map of the assssment area with the 3 nm California stat water boundar
 label = 'assess-area')
 ```	
 
-
-
 <!-- ====================================================================== -->  
 <!-- ****************** Catches Used in the Model ************************* --> 
 <!-- ====================================================================== -->  
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(base_loc, "plots", "catch2 landings stacked.png"), 
+filein = file.path(base_loc_plots, "catch2 landings stacked.png"), 
 caption = "Catches by fleet used in the base model",
 label = 'catch')
-```	

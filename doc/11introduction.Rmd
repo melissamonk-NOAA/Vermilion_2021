@@ -1,5 +1,4 @@
 # Introduction
-
 Note to readers: Text in section is the same in both California `r spp` assessment 
 documents.
 

@@ -59,8 +59,12 @@ caal_fit <- plot_info %>%
   filter(grepl("condAALfit", label))
 filein = file.path(mod_loc, "plots")
 for (a in 1:length(caal_fit)){
-	cap = caal_fit$caption[a]
+  
+  cat("\\FloatBarrier")
+	
+  cap = caal_fit$caption[a]
 	lab = caal_fit$label[a]
+	
 	add_figure(filein = file.path(filein, caal_fit$file[a]), 
 			   caption = cap, 
 			   label = lab)

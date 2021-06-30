@@ -13,8 +13,9 @@ were downloaded from the Recreational Fisheries Information Network
 ([RecFIN](https://www.recfin.org/)). The MRFSS survey design included stratification by 
 species (sunset rockfish were not recognized at the time), subregion (northern 
 and southern California), 2-month ‘wave’, water area (e.g. within or beyond 
-three miles from shore), and fishing mode (party/charter and private/rental boats,
-plus various shore modes).
+three miles from shore), and fishing mode (party/charter (PC) and private/rental (PR) boats,
+plus various shore modes).  The PC mode includes the Commercial Passenger Fishing Vessel 
+fleet (CPFV).
 
 Some known issues with the MRFSS estimates include 1) missing estimates of catch 
 in weight for some strata that reported catch in numbers, 2) a change in the 
@@ -34,7 +35,7 @@ identified strata with positive catch in numbers but missing or zero values for
 catch in weight. Catch in weight for these strata was then estimated by imputing 
 a value of average weight based on the mean of the reported average weights in 
 the same year and subregion. These factors had a greater influence on average 
-weight than boat mode (Figure X). The effect of this correction was relatively 
+weight than boat mode (Figure  frog EJ). The effect of this correction was relatively 
 minor for vermilion rockfish overall (~1% increase in total catch by weight, 
 1980-2004). However, 70% of missing catch in weight occurred over the years 
 2001-2004, with differences in individual year/mode/subregion combinations sometimes exceeding 10-20%.
@@ -44,14 +45,14 @@ MRFSS catch estimates for California were spatially stratified into two subregio
 During the 1990-1992 statewide hiatus in sampling, the definitions of these two 
 subregions changed. Specifically, San Luis Obispo (SLO) County was included in 
 the southern region prior to the hiatus (i.e. 1980-1989) [@Witzig1992; @Karpov1995], 
-but moved to the northern subregion starting in 1993 (). In order to create a 
+but moved to the northern subregion starting in 1993. In order to create a 
 definition of spatial strata that is consistent and comparable over time, and 
 one that is consistently divided near Point Conception, the STAT examined catch 
-estimates from a separate study (Albin et al. 1993) that used a finer spatial 
+estimates from a separate study [@Albin1993] that used a finer spatial 
 resolution in the northern subregion (including SLO County). Over the period 
 1981-1986, the amount of vermilion rockfish landed in SLO County was found to 
 be roughly equal to the amount of vermilion rockfish landed in all California 
-counties north of SLO County (Table X). Therefore, to approximate catches north
+counties north of SLO County (Table frog EJ). Therefore, to approximate catches north
 and south of Point Conception from 1980-1989, the STAT reduced the ‘southern’ 
 subregion annual catch (which included SLO County) from 1980-1989 by an amount 
 equal to the northern subregion catch during the same period, and doubled the 
@@ -61,7 +62,7 @@ a spatially consistent time series of landings over the entire time series.
 
 
 As noted above, MRFSS sampling was halted from 1990-1992 due to funding issues. 
-The survey resumed in 1993 in all modes, except for the party/charter (PC) boat 
+The survey resumed in 1993 in all modes, except for the PC boat 
 mode which resumed in 1996 for counties north of Santa Barbara County.  To 
 produce catch estimates for the missing subregion/mode/year combinations, we 
 used linear interpolation. Shore modes were a minor component of the vermilion 
@@ -72,16 +73,20 @@ defined as 2-year averages to reduce the effects of interannual variability
 in catch on interpolated estimates.
 
 MRFSS estimates of catch and discard after adjustment for missing average weights,
-changes in subregion definition, and sampling gaps are shown in Table X.
+changes in subregion definition, and sampling gaps are shown in Table (@ref(tab:landings).
 
 *California Recreational Fisheries Survey (CRFS), 2004-2020*
 
 Estimates of recreational landings and discard since 2004 have been produced by 
 the CRFS. This survey improves upon the MRFSS sampling design, with higher 
 sampling rates and finer spatial and temporal resolution.
-Mortality estimates for the period 2005-2018 were queried from [RecFIN](www.recfin.org). Reported estimates are for southern California, all modes, and filtered to exclude fish caught in Mexican waters. Total recreational mortality estimates provided to RecFIN are also adjusted using species- and depth-specific discard mortality rates.
+Mortality estimates for the period 2005-2018 were queried from [RecFIN](www.recfin.org). 
+Reported estimates are for southern California, all modes, and filtered to exclude fish 
+caught in Mexican waters. Total recreational mortality estimates provided to RecFIN are 
+also adjusted using species- and depth-specific discard mortality rates.
 
 
+<!--
 *Discard mortality rates*
 
 The recreational discard mortality rates for vermilion that were endorsed by the 
@@ -89,9 +94,8 @@ SSC and adopted by the
 PFMC in March 2017 are 20% for 0-10 fm, 34% for 10-20 fm, 50% for 20-30 fm, and 
 100% for greater than 30 fm.
 
-
 Nearshore rates (jig and pole): 0-10 fm 20%; 10-20 fm 34%, >20 fm 100%
-
+-->
 
 
 *Recreational length composition data*
@@ -100,10 +104,11 @@ Length compositions were provided from the following sources:
 
 
 ```{asis, echo = model.area == 'NCA'}
-There is no available recreational length composition available for 2020 north of Pt. Conception in RecFIN and sparse sampling was confirmed by J. Budrick (CDFW, pers. comm,).
+There is no available recreational length composition available for 2020 north 
+of Pt. Conception in RecFIN and sparse sampling was confirmed by J. Budrick (CDFW, pers. comm,).
 
 \begin{itemize}
-  \item Recreational party charter mode (PC)
+  \item Recreational party/charter mode (PC)
    \begin{itemize}
      \item Miller and Gotshall dockside PC survey (1959-1960) 
      \item Samples from commercial port samples (1978-1979)
@@ -112,7 +117,7 @@ There is no available recreational length composition available for 2020 north o
      \item CRFS onboard (discard only) and dockside (retained only surveys(2004-2019)
      \item Deb Wilson-Vandenberg onboard CPFV survey (1988-1998)
    \end{itemize}
-  \item Recreational private rental mode (PR)
+  \item Recreational private/rental mode (PR)
    \begin{itemize}
      \item Miller and Gotshall dockside PR survey (1959) 
      \item MRFSS dockside PR (1980-2003)
@@ -120,6 +125,7 @@ There is no available recreational length composition available for 2020 north o
   \end{itemize}
 \end{itemize}
 ```
+
 
 ```{asis, echo = model.area=='SCA'}
 \begin{itemize}
@@ -134,14 +140,28 @@ There is no available recreational length composition available for 2020 north o
 \end{itemize}
 ```
 
-THe number of available fish by year and fleet as well as the method we used to 
-calculate initial sample sizes are in Table \@ref(tab:length-sample-size).
+Te number of available fish by year and fleet as well as the method we used to 
+calculate initial sample sizes are in Table \@ref(tab:length-sample-size). 
+Length composition data and mean length by year can be found in Figures 
+\@ref(fig:len-data-REC-PC) and \@ref(fig:mean-com-len-data-REC-PC) for the 
+recreational PC retained fleet,
+\@ref(fig:len-data-REC-PC-DIS) and \@ref(fig:mean-com-len-data-REC-PC-DIS)  
+for the recreational discard PC fleet,
+\@ref(fig:len-data-REC-PR) and \@ref(fig:mean-com-len-data-REC-PR) for the 
+recreational PR fleet, and
+\@ref(fig:len-data-DWV-ONBOARD) and \@ref(fig:mean-com-len-data-DWV-ONBOARD) 
+for the Deb Wilson-Vandenberg CPFV onboard survey.
 
 *Recreational age composition data*
 
-There are no recreational age composition data available for `r spp`.
-
+There are no recreational age composition data available for `r spp` from state sampling 
+programs.
 ```{asis, echo = model.area=='NCA'}
-There are no recreational age composition data available for vermilion from state 
-sampling programs. Otoliths are available from collaborative with Cal Poly to investigate the precision of back-calculating whole fish lenght from filleted fish in the CPFV fleet. These otoliths were not aged for this assessment. 
+Otoliths are available from collaborative with Cal Poly to investigate 
+the precision of back-calculating whole fish lenght from filleted fish in the CPFV fleet. 
+These otoliths were not aged for this assessment. 
 ```
+
+*Recreational indices of abundance*
+
+There are several available datasets 

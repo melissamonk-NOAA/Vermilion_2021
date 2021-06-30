@@ -12,7 +12,7 @@ Model convergence was determined by starting the minimization process from dispe
 values of the maximum likelihood estimates to determine if the model found a better 
 minimum. Jitter is a SS option that generates random starting values from a normal 
 distribution logistically transformed into each parameter’s range [@Methot2019]. This 
-was repeated 300 times and the minimum was reached in 67% of the runs  (Table \ref{tab:jitter}).
+was repeated 300 times and the minimum was reached in 67% of the runs  (Figure \@ref(fig:jitter)).
 The model did not experience convergence issues, e.g., final gradient was below 0.0001,
 when reasonable starting values were used and there were no difficulties in inverting 
 the Hessian to obtain estimates of variability.  We did sensitivity runs for 

@@ -2,6 +2,74 @@
 
 The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \ref{tab:likes}. Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \ref{tab:referenceES}. Estimates of stock size and status over time are shown in Table \ref{tab:timeseries}. 
 
+
+Current figures to site
+
+Figure \@ref(fig:selex-length-all)  
+Figure \@ref(fig:selex-age-all)  
+Figure \@ref(fig:sel03_len_timevary_surf_flt4sex1)    #
+Figure \@ref(fig:sel03_len_timevary_surf_flt6sex1)   #
+Figure \@ref(fig:endyr-selex-COM-HKL)  
+Figure \@ref(fig:endyr-selex-COM-TWL)  
+Figure \@ref(fig:endyr-selex-COM-NET)  
+Figure \@ref(fig:endyr-selex-REC-PC)  
+Figure \@ref(fig:endyr-selex-REC-PC-DIS)  
+Figure \@ref(fig:endyr-selex-REC-PR)  
+Figure \@ref(fig:endyr-selex-REC-PR-DIS)  
+Figure \@ref(fig:endyr-selex-NWFSC-TWL)  
+Figure \@ref(fig:lenfits-all)  
+Figure \@ref(fig:len-pearson-COM-HKL)  
+Figure \@ref(fig:mean-len-fit-COM-HKL)  
+Figure \@ref(fig:len-pearson-COM-TWL)  
+Figure \@ref(fig:mean-len-fit-COM-TWL)  
+Figure \@ref(fig:len-pearson-COM-NET)  
+Figure \@ref(fig:mean-len-fit-COM-NET)  
+Figure \@ref(fig:len-pearson-REC-PC)  
+Figure \@ref(fig:mean-len-fit-REC-PC)  
+Figure \@ref(fig:len-pearson-REC-PC-DIS)  
+Figure \@ref(fig:mean-len-fit-REC-PC-DIS)  
+Figure \@ref(fig:len-pearson-DWV-ONBOARD)  
+Figure \@ref(fig:mean-len-fit-DWV-ONBOARD)  
+Figure \@ref(fig:len-pearson-NWFSC-TWL)  
+Figure \@ref(fig:mean-len-fit-NWFSC-TWL)  
+Figure \@ref(fig:len-pearson-ABRAMS-RESEARCH)  
+Figure \@ref(fig:mean-len-fit-ABRAMS-RESEARCH)  
+Figure \@ref(fig:len-pearson-SWFSC-GF-ECOL)  
+Figure \@ref(fig:mean-len-fit-SWFSC-GF-ECOL)  
+Figure \@ref(fig:len-pearson-CCFRP)    
+Figure \@ref(fig:mean-len-fit-CCFRP)  
+Figure \@ref(fig:sexratio-ABRAMS-RESEARCH )  
+Figure \@ref(fig:sexratio-SWFSC-GF-ECOL)  
+Figure \@ref(fig:sexratio-NWFSC-TWL)  
+Figure \@ref(fig:ssb)  
+Figure \@ref(fig:depl)  
+Figure \@ref(fig:cpueall)  
+Figure \@ref(fig:log-cpue-REC-PC)    
+Figure \@ref(fig:cpue-resid-REC-PC)
+Figure \@ref(fig:log-cpue-REC-PR)  
+Figure \@ref(fig:cpue-resid-REC-PR)  
+Figure \@ref(fig:log-cpue-DWV-ONBOARD)  
+Figure \@ref(fig:cpue-resid-DWV-ONBOARD)  
+Figure \@ref(fig:log-cpue-REC-PC-ONBOARD)  
+Figure \@ref(fig:cpue-resid-REC-PC-ONBOARD)  
+Figure \@ref(fig:log-cpue-CCFRP)  
+Figure \@ref(fig:cpue-resid-CCFRP)  
+Figure \@ref(fig:comp_condAALfit_residsflt9mkt0_page1)   #
+Figure \@ref(fig:comp_condAALfit_residsflt9mkt0_page3)   #
+Figure \@ref(fig:comp_condAALfit_residsflt11mkt0)   #
+Figure \@ref(fig:comp_condAALfit_residsflt12mkt0)   #
+Figure \@ref(fig:comp_condAALfit_Andre_plotsflt9mkt0_page1)   #
+Figure \@ref(fig:comp_condAALfit_Andre_plotsflt9mkt0_page4)   #
+Figure \@ref(fig:recruits)  
+Figure \@ref(fig:rec-devs)  
+
+
+
+
+
+
+
+
 ### Parameter Estimates
 
 ```{r parameters, include = FALSE, eval = TRUE, cache = TRUE}
@@ -40,12 +108,8 @@ Selectivity parameters
 
 ### Fixed parameters
 
-
 - $h$ controlling the steepness of the stock-recruit relationship
-- $M$ for male
-
-
-
+- $M$ for males
 
 ### Growth (Length-at-Age)
 ```{r}
@@ -64,6 +128,9 @@ unSchnute.fn(0, 30, 8.3113, 53.6773, 0.1679070)
 # for males,  apply exponential offsets to the female values
 unSchnute.fn(0, 30, 8.3113*exp(-2.3422300), 53.6773*exp(-0.0667862), 0.1679070*exp(0.2930410))
 ```
+
+\@ref(fig:fittedgrowth)
+
 
 \begin{centering}
 
@@ -86,14 +153,10 @@ The full r4ss plotting output is available in the supplementary material.
 ### Population Trajectory
 
 
-
-### Reference Points
-
-
 Figure \@ref(fig:bh-curve)
 Figure \@ref(fig:bh-resids)
 
-
+### Reference Points
 Reference points were calculated using the estimated selectivities and catch distribution among fleets in the most recent year of the model, `r endyr`. 
 Sustainable total yield (landings plus discards) was 
 `r round(model$derived_quants[model$derived_quants$Label == 'Dead_Catch_SPR', 'Value'], 2)` mt when using an $SPR_{50\%}$ 

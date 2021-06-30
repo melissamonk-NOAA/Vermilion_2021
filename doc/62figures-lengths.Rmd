@@ -14,8 +14,8 @@ for (i in unique(model$len_comp_fit_table$Fleet)) {
                  pattern = paste0("comp_lendat_bubflt", i), full.names = TRUE)[1],
     caption = paste0("Length composition data from the ", model$FleetNames_parsed[i]),
     label = paste0("len-data-", model$FleetNames_label[i]),
-    width = 50,
-    height = 50
+    width = 60,
+    height = 60
   )
 
    add_figure(
@@ -25,8 +25,8 @@ for (i in unique(model$len_comp_fit_table$Fleet)) {
     caption = paste0("Mean length for the ", 
                      model$FleetNames_parsed[i], " with 95 percent confidence intervals"),
     label = paste0('mean-com-len-data-', model$FleetNames_label[i]),
-    width = 50,
-    height = 50
+    width = 60,
+    height = 60
   )
 
 }
