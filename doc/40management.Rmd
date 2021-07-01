@@ -1,5 +1,3 @@
-
-
 # Harvest Projections and Decision Tables
 
 **This section will be completed after the STAR panel**
@@ -20,52 +18,45 @@ of the two species.
 # Unresolved Problems and Major Uncertainties
 We recommend the following research be conducted before the next assessment:
 
-\begin{enumerate}
-
-\item Investigate the structure of complex and contribution of each species to the 
+- Investigate the structure of complex and contribution of each species to the 
 vermilion/sunset complex. Investigate possible spatial differences in biological parameters within 
 a single species and also between the two species.  Little biological data for south of 
 Point Conception or north of Point Arena were available for this assessment and is needed 
 to better under biological parameters. 
-    \begin{enumerate}
-     \item Conduct life history studies
-     \item Conduct research to identify the proportion of each species in population and in catches
-    \end{enumerate}
+  + Conduct life history studies
+  + Conduct research to identify the proportion of each species in population and in catches
 
-
-\item Take a closer look at the Ralston historical catch reconstruction (\cite{Ralston2010}) and 
+- Take a closer look at the Ralston historical catch reconstruction (\cite{Ralston2010}) and 
 all other historical data sources.
 
-\item Refine CCFRP survey index to look at alternative possible model structures, including 
+- Refine CCFRP survey index to look at alternative possible model structures, including 
 a hierarchical structure and random effects. The CCFRP survey is the only 
 fishery-independent survey available for nearshore rockfish sampling the nearshore rocky 
 reef habitats. As of this assessment, only two years of coastwide data are available, 
 and the index was limited to the site in central California that have been monitored 
 since 2007.
 
-\item Continue to investigate the most appropriate model structure for the NWFSC HL survey index.
+- Continue to investigate the most appropriate model structure for the NWFSC HL survey index.
 The NWFSC HL survey is the only long-term fishery-independent survey in rocky (untrawlable) habitat 
 in the Southern California Bight. We also recommend evaluating how to structure the NWFSC Hook-and-Line survey index given its expansion into the CCA, also independent analysis of information content in NWFSC Hook-and-Line survey.Increased spatiotemporal sampling around Pt. Conception would aid in identifing stock boundaries.
 
-\item Utilize existing ROV survey data sources
-
- \begin{enumerate}
-     \item SWFSC Submersible Survey of the Cowcod Conservation Areaa (\cite{Yok2007}). 
-    This was a line-transect survey designed to estimate cowcod abundance in 2002 conducted from a submersible inside the \gls{cca}.  Originally, only cowcod were enumerated from the video footage.  Over the last few years, the SWFSC has re-analyzed the video footage to enumerate other rockfish species. 
-     \item The SWFSC Fishery Resource Division (FRD) conducted a survey of potential cowcod habitat between Point Conception and the U.S. – Mexico border from October through December of 2012 (\cite{Stierhoff2013}).
-     \item SWFSC staff are submitting proposals to conduct an additional submirsible survey in the southern California Bight
-      \item CDFW ROV survey data
-    \end{enumerate}
+- Utilize existing ROV survey data sources
+  + SWFSC Submersible Survey of the Cowcod Conservation Areas [@Yoklavich2007]. 
+  +  This was a line-transect survey designed to estimate cowcod abundance in 2002 
+  conducted from a submersible inside the \gls{cca}.  Originally, only cowcod were enumerated from the video footage.  Over the last few years, the SWFSC has re-analyzed the video footage to enumerate other rockfish species. 
+    + The SWFSC Fishery Resource Division (FRD) conducted a survey of potential cowcod habitat between Point Conception and the U.S. – Mexico border from October through December of 2012 [@Stierhoff2013].
+    +  SWFSC staff are submitting proposals to conduct an additional submirsible survey in the southern California Bight
+    + CDFW ROV survey data
 
 
-\item Collection of length and age data are recommended for both the commercial and 
+- Collection of length and age data are recommended for both the commercial and 
 recreational fisheries.  Very little age data are available from either fishery for 
 vermilion and sunset rockfishes.
 
-\item Investigate possible environmental drivers/co-variates for biological parameters, 
+- Investigate possible environmental drivers/co-variates for biological parameters, 
 particularly for recruitment.
 
-\item Resolve differences between CalCOM and PacFIN expanded length composition data sets. 
+- Resolve differences between CalCOM and PacFIN expanded length composition data sets. 
 
-\end{enumerate}
+
 

@@ -18,3 +18,8 @@ sa4ss::read_child("54tables-compsamplesize.Rmd")
 ```{r render-56, results = "asis"}
 sa4ss::read_child("56tables-results.Rmd")
 ```
+
+
+```{r render-57, results = "asis"}
+sa4ss::read_child("57tables-uncertainty.Rmd")
+```

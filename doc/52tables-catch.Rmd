@@ -1,5 +1,24 @@
 
-```{r, warning = FALSE, inclue = FALSE}
+
+
+```{r, albin, reasults = 'asis'}
+albin <- kableExtra::kbl(
+  readxl::read_xlsx("./tables/Allocate_MRFSS_1980-1989.xlsx", sheet = 2),
+  booktabs = TRUE,
+  caption = "Estimated ratio of SLO catch (in numbers) to catch in California 
+  counties north of SLO from Albin et al. (1993) Table 1.  Notes: 1) there is a Table 
+  1 for every year in Albein et al. (1993), 2) due to rounding error, the total may not 
+  equal the sum of the counties") %>%
+  kableExtra::kable_styling(latex_options = "repeat_header", font_size = 10) 
+```
+
+
+
+
+
+
+
+```{r, warning = FALSE, inclue = FALSE, messages = FALSE}
 landings <- readxl::read_xlsx("./tables/landings.xlsx", sheet = model.area) %>%
   rename(fleet_ID = Fleet) %>%
   mutate(fleet_ID = as.character(fleet_ID))
@@ -67,7 +86,7 @@ kableExtra::kbl(catch_source, booktabs = TRUE,
   caption = "Sources of landings for the commercial and recreational fleets.  The interpolated values were interpolated by J. Field (SWFSC). The reconstruction refers to the commercial and recreational catch recontructions in Ralston et al. (2010). Detailed descriptions of the sources are in the text.",
   align  = 'l', linesep = ""
 ) %>%
-  column_spec(1, width = "2cm") %>%
-  column_spec(2:length(catch_source$CALCOM), width = "2cm") %>%
+  column_spec(1, width = "3cm") %>%
+ # column_spec(2:length(catch_source$CALCOM), width = "2cm") %>%
   kableExtra::kable_styling(latex_options = c("striped", "scale_down"))
 ```

@@ -96,7 +96,6 @@ library(sa4ss)
 setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/")
 source("code/dir_recent.R")
 
-
 #NORTHERN MODEL
 set.model = "north"
 setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")

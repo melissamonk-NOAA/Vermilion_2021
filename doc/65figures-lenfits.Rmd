@@ -3,6 +3,8 @@
 <!-- ********************** Fit to the Length Data ************************* --> 
 <!-- ======================================================================= -->
 
+\FloatBarrier 
+
 ```{r, results = 'asis'}
 sa4ss::add_figure(
   filein = file.path(base_loc,'plots', "comp_lenfit__aggregated_across_time.png"),
@@ -12,7 +14,7 @@ Labels 'retained' and 'discard' indicate discarded or retained sampled for each 
 )
 ```
 
-
+\FloatBarrier
 
 ```{r, results = 'asis'}
 #add in length comp plots with captions and labels
@@ -24,9 +26,10 @@ for (i in unique(model$len_comp_fit_table$Fleet)) {
    add_figure(
     filein = dir(paste0(base_loc, "/plots"), pattern = paste0("comp_lenfit_residsflt", i), full.names = TRUE)[1],
     caption = paste0("Pearson residuals for the ", model$FleetNames_parsed[i], ". Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)"),
-    label = paste0("len-pearson-", model$FleetNames_label[i]),
-    width = 50,
-    height = 50
+    label = paste0("len-pearson-", model$FleetNames_label[i])
+    #,
+    #width = 50,
+    #height = 50
   )
   
 
@@ -36,9 +39,10 @@ for (i in unique(model$len_comp_fit_table$Fleet)) {
                  pattern = paste0("comp_lenfit_data_weighting_TA1.8_",
                                   model$FleetNames[i], ".png$"), full.names = TRUE),
     caption = paste0("Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the ",model$FleetNames_parsed[i]),
-    label = paste0('mean-len-fit-', model$FleetNames_label[i]),
-    width = 50,
-    height = 50
+    label = paste0('mean-len-fit-', model$FleetNames_label[i])
+    #,
+    #width = 50,
+    #height = 50
   )
 
 }
@@ -46,7 +50,7 @@ for (i in unique(model$len_comp_fit_table$Fleet)) {
 
 
 
-
+\FloatBarrier
 
 <!-- ======================================================================= -->
 <!-- ***************************** Sex Ratios ****************************** --> 
@@ -63,9 +67,10 @@ for (i in 1:length(sex.ratio.filein)) {
       filein = sex.ratio.filein[i],
       caption = paste0("Sex ratios for length comps, whole catch",
       fleet_info$FleetNames_parsed[fleet_info$fleet_ID==gsub(".*[flt]([^m]+)[m].*", "\\1", sex.ratio.filein[i])],". Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line"),
-    label = paste0("sexratio-", fleet_info$FleetNames_label[fleet_info$fleet_ID==gsub(".*[flt]([^m]+)[m].*", "\\1", sex.ratio.filein[i])]),
-    width = 50,
-    height = 50
+    label = paste0("sexratio-", fleet_info$FleetNames_label[fleet_info$fleet_ID==gsub(".*[flt]([^m]+)[m].*", "\\1", sex.ratio.filein[i])])
+    #,
+  #  width = 50,
+  #  height = 50
   )
 }
 

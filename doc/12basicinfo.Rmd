@@ -175,6 +175,3 @@ forecast recruitment for more data-limited stocks such as vermilion/sunset,
 as suggested by [@Thorson2014], such approaches would require more 
 development and evaluation.  Consequently, environmental factors are not 
 explicitly considered in this assessment.
-
-
-

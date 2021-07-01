@@ -13,9 +13,12 @@ fleet in the California assessment models.  The STAT also learned that vermilion
 targeted for the live fish fishery, but landed 
 dead due to barotrauma may still be sold.
 
-
-The commercial net fishery...\
-The commercial trawl fishery...
+The commercial setnet fishery has never been a large component of the landings of vermilion rockfish 
+and has has essentially been non-existent for vermilion since 2002 
+when the state of California prohibited set net gera in 60 fm or less. The largest net 
+landings for vermilion were in the 1980s.
+The commercial trawl fishery has also not been a major component of the landings 
+for vermilion with the highest reported landings in the 1970s.
 
 Miller et al. [-@Miller2014 described the spatial and temporal development of the 
 California groundfish fishery. They analyzed a spatially-explicit database of 
@@ -32,19 +35,15 @@ reconstructions are presented as model sensitivities in the pre-STAR base model.
 The Commercial Passenger Fishing Vessel (CPFV; aka ‘party’ and ‘charter’ boat) 
 fleet began ca. 1919 in California, although recreational fishing effort for 
 fishes other than Tunas, other gamefish and salmon was minimal until about 1930. T
-he CPFV fleet numbered about 200 vessels in 1939 [@Croker1939, cited in Young [-@Young1969]). 
+he CPFV fleet numbered about 200 vessels in 1939 [@Croker1940, cited in Young [-@Young1969]). 
 After a hiatus in most operations during WWII, the fleet increased to about 590 vessels 
 by 1953, then declined to approximately 256 vessels around 1963. 
 
 Vermilion rockfish are a targeted species in California's recreational fishery
-and have always been a large fraction of the recreational fishery, xxxxfrog.
-North of Point Conception, the majority of vermilion rockfish landings have been 
+and have always been a large fraction of the recreational fishery, both in the party/charter 
+boat and private/rental sectors.  Vermilion are ubiquitous in the Southern California 
+Bight and north of Point Conception, the majority of vermilion rockfish landings have been 
 from ports in San Luis Obispo county.  
-
-
-
-
-
 
 
 ## Summary of Management History
@@ -112,9 +111,7 @@ months (for all months) with March and April remaining closed. The limited entry
 sector has followed the same pattern as the open access sector with bi-monthly limits 
 and a doubling of the catch since 2005. The limited entry trawl fleet is managed on 
 monthly limits on an annual basis. Since 2011, the limit has been 300 pounds per month for 
-non-IFQ species.  A history of California's commercial regulations from 2000-2018 can be 
-found in [Appendix A](#appendix-a.-californias-commercial-fishery-regulations). A 10-inch 
-total length minimum size limit was implemented in 1999 for both species in the commercial fleet.
+non-IFQ species.
 
 
 **Recreational Fisheries**
@@ -145,12 +142,12 @@ Beginning on January 1, 2021 CDFW implemented a five-fish sub-bag limit for
 `vermilion`r spp` rockfish that is not accounted for in this stock assessment.
 
 **Cowcod Conservation Areas (CCA)**
-In 2001, two area closures [“Cowcod Conservation Areas”](https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=36132&inline) were implemented to reduce fishing mortality of cowcod, originally prohibiting bottom-fishing deeper than 20 fm. Effective 2019, retention of nearshore and shelf rockfish (excluding cowcod) is allowed in depths shallower than 40 fm. The larger of the two areas (CCA West) is a 4200 square mile area west of Santa Catalina and San Clemente Islands. A smaller area (CCA East) is about 40 miles offshore of San Diego, and covers about 100 square miles.
+In 2001, two area closures [Cowcod Conservation Areas](https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=36132&inline) were implemented to reduce fishing mortality of cowcod, originally prohibiting bottom-fishing deeper than 20 fm. Effective 2019, retention of nearshore and shelf rockfish (excluding cowcod) is allowed in depths shallower than 40 fm. The larger of the two areas (CCA West) is a 4200 square mile area west of Santa Catalina and San Clemente Islands. A smaller area (CCA East) is about 40 miles offshore of San Diego, and covers about 100 square miles.
 
 **Rockfish Conservation Areas (RCA)**
 In 2002 the PFMC established trawl- and non-trawl area closures known as the Rockfish Conservation Areas. These closed areas are gear-specific, and have seasonally changing boundaries to help reduce fishing mortality.
 
-**Marine Protected Areas (MPA)**
+
 
 ## Management Performance
 The contribution of `r spp` to the shelf rockfish OFLs is currently derived from 
@@ -159,7 +156,7 @@ assessment was not accepted for management and a 2013 data-moderate assessment
 was not reviewed by the STAR panel due to insufficient time.
 
 
-Total mortality for `r spp` was obtaid from the Groundfish Expanded Mortality 
+Total mortality for `r spp` was obtained from the Groundfish Expanded Mortality 
 Multiyear [GEMM](https://www.nwfsc.noaa.gov/data/api/v1/source/observer.gemm_fact/selection.xlsx) 
 report [@Somers2020]. The coastwide management of the shelf rockfish complex is split at Cape 
 Mendocino (\CapeM).  Therefore, the  northern California `r spp` 
@@ -176,14 +173,12 @@ of \CapeM total mortality from 2011-2016.  `r Spp` decreased from 21% to 4% of
 the total contribution to the shelf rockfish complex north of \CapeM from 2011-2019 with a 
 noticeable decline from 16% to 6% from 2016 to 2017.
 
-
-
 ## Foreign Fisheries
 
 *Sebastes* spp. are not in the Fisheries National Chart (FNC, database containing 
 species status) maintained by the Mexican Government, i.e., they are not commercially 
 harvested in the northwest Mexican Pacific Ocean (E.M. Boj&oacute;rquez, Centro de 
-Investigaciones Biol&oacute;gicas del Noroeste, S.C., perconal communication).  Dr. 
+Investigaciones Biol&oacute;gicas del Noroeste, S.C., personal communication).  Dr. 
 Boj&oacute;rquez also reached out to colleagues at the 
 [Fisheries National Institute](https://www.gob.mx/inapesca) who reported that rockfish 
 are occasionally caught in the sport fishery in the Ensenada City.

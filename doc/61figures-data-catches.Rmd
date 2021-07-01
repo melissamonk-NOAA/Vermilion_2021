@@ -11,7 +11,7 @@ label = 'data-plot')
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(fig_loc, "assess_area.png"), 
-caption = "Map of the assssment area with the 3 nm California stat water boundary.  The northern California model includes areas from Pt. Conception to the California-Oregon border and the southern California assessment includes areas from Pt. Concpetion to the USA-Mexico border",
+caption = "Map of the assssment area with the 3 nm California stat water boundary.  The northern California model includes areas from Point Conception to the California-Oregon border and the southern California assessment includes areas from Point Concpetion to the USA-Mexico border",
 label = 'assess-area')
 ```	
 

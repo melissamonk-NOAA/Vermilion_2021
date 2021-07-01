@@ -43,9 +43,9 @@ plot_info = read.csv(file.path(base_loc,"plots", "plotinfotable_for_doc.csv"))
 selex_time = plot_info %>%
   filter(grepl("sel03_len_timevary_surf", label)) %>%
   filter(grepl("sex1", label))
-#plot.vec = grep("timevary_surf", selex_time$label)
+n_fleets_blocks = ifelse(model.area=="NCA",2,3)
 filein = file.path(base_loc, "plots")
-for (a in 1:2){
+for (a in 1:n_fleets_blocks){
 	cap = selex_time$caption[a]
 	lab = selex_time$label[a]
 	add_figure(filein = file.path(filein, selex_time$file[a]), 
@@ -82,9 +82,10 @@ for (i in selex_fleets$fleet_ID) {
     filein = dir(paste0(base_loc, "/plots"), 
                  pattern = paste0("sel09_len_flt",i,"sex1.png$"), full.names = TRUE),
     caption = paste0("Female ending year selectivity for the ", selex_fleets$FleetNames_parsed[j]),
-    label = paste0("endyr-selex-", selex_fleets$FleetNames_label[j]),
-    width = 50,
-    height = 50
+    label = paste0("endyr-selex-", selex_fleets$FleetNames_label[j])
+#    ,
+#    width = 50,
+#    height = 50
   )
   j<- j + 1
 }

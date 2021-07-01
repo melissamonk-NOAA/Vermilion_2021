@@ -5,10 +5,9 @@
 add_figure(
     filein = file.path(base_loc, "plots", "index9_standcpueall.png"),
     caption = "Standardized indices overlaid. Each index is rescaled to have mean observation = 1.0",
-    label = 'cpueall',
-    width = 50,
-    height = 50)
+    label = 'cpueall')
 ```
+
 
 
 ```{r, results = 'asis'}
@@ -20,22 +19,23 @@ for (i in unique(model$cpue$Fleet_name)) {
     filein = dir(paste0(base_loc, "/plots"), 
                  pattern = paste0("index5_logcpuefit_", i , "*\\.png$"), full.names = TRUE),
     caption = paste0("Fit to log index data on log scale for the ",fleet_info$FleetNames_parsed[fleet_info$FleetNames==i] ,". Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter"),
-    label = paste0("log-cpue-", fleet_info$FleetNames_label[fleet_info$FleetNames==i]),
-    width = 50,
-    height = 50
+    label = paste0("log-cpue-", fleet_info$FleetNames_label[fleet_info$FleetNames==i])
+    #,
+    #width = 50,
+    #height = 50
   )
 
   add_figure(
     filein = dir(paste0(base_loc, "/plots"), 
                  pattern = paste0("index10_resids_SE_total_", i , "*\\.png$"), full.names = TRUE),
     caption = paste0("Residuals of fit to index for the ", i ,". Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty"),
-    label = paste0("cpue-resid-", fleet_info$FleetNames_label[fleet_info$FleetNames==i]),
-    width = 50,
-    height = 50
+    label = paste0("cpue-resid-", fleet_info$FleetNames_label[fleet_info$FleetNames==i])
+    #,
+    #width = 50,
+    #height = 50
   )
 }
 ```
-
 
 
 
@@ -56,16 +56,33 @@ for (i in unique(model$cpue$Fleet_name)) {
 ```{r, results = 'asis'}
 caal_fit <- plot_info %>%
   filter(category == "A@LComp") %>%
-  filter(grepl("condAALfit", label))
+  filter(grepl("condAALfit_data_weighting", label))
 filein = file.path(mod_loc, "plots")
-for (a in 1:length(caal_fit)){
+for (a in 1:length(caal_fit$label)){
   
-  cat("\\FloatBarrier")
 	
-  cap = caal_fit$caption[a]
+  cap =  gsub("<br>","",stringr::str_extract(caal_fit$caption[a],".+?(?=For)"))
 	lab = caal_fit$label[a]
 	
 	add_figure(filein = file.path(filein, caal_fit$file[a]), 
+			   caption = cap, 
+			   label = lab)
+}
+```
+
+```{r, results = 'asis'}
+caal_fit_andre <- plot_info %>%
+  filter(category == "A@LComp") %>%
+  filter(grepl("condAALfit_Andre", label))
+filein = file.path(mod_loc, "plots")
+for (a in 1:length(caal_fit_andre$label)){
+  
+  cat("\\FloatBarrier")
+	
+  cap = caal_fit_andre$caption[a]
+	lab = caal_fit_andre$label[a]
+	
+	add_figure(filein = file.path(filein, caal_fit_andre$file[a]), 
 			   caption = cap, 
 			   label = lab)
 }

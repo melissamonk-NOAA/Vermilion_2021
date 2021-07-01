@@ -1,4 +1,4 @@
-## Pre-STAR Base Model Results
+# Assessment Results
 
 The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \ref{tab:likes}. Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \ref{tab:referenceES}. Estimates of stock size and status over time are shown in Table \ref{tab:timeseries}. 
 
@@ -65,12 +65,7 @@ Figure \@ref(fig:rec-devs)
 
 
 
-
-
-
-
-
-### Parameter Estimates
+## Parameter Estimates
 
 ```{r parameters, include = FALSE, eval = TRUE, cache = TRUE}
 # get parameter names from base model
@@ -83,12 +78,14 @@ The base model has a total of `r length(estimated_pars)` estimated parameters
 (Figure \@ref(tab:params)) that can be grouped into the following
 categories and are described in more detail in the following sections:
 
+
+```{asis, echo = model.area=='NCA'}
 Biological parameters  
-- 2 natural mortality parameters (female and male $M$)
-- 10 growth parameters, where females and males each had
-- 3 Schnute growth parameters (length at age frog, length at age frog, and $k$)
-- 2 parameters controlling variability in growth, the CV in length at age 0.5
-  and the CV in length at age 14 with a linear ramp in length-at-age
+- 2 natural mortality parameters (female and male $M$)  
+- 10 growth parameters, where females and males each had  
+- 3 Schnute growth parameters (length at age 0, length at age 30, and $k$)   
+- 2 parameters controlling variability in growth, the CV in length at age 0.5  
+  and the CV in length at age 14 with a linear ramp in length-at-age  
 
 Stock-recruit parameters  
 - `r 2 + nrow(model$recruit)` recruitment parameters  
@@ -106,12 +103,15 @@ Selectivity parameters
 - `r sum(grepl("Size_DblN", estimated_pars))` selectivity parameters, of which
 `r sum(grepl("Size_DblN.*BLK", estimated_pars))` represented changes over time  
 
-### Fixed parameters
-
+## Fixed parameters
 - $h$ controlling the steepness of the stock-recruit relationship
 - $M$ for males
 
-### Growth (Length-at-Age)
+```
+
+
+
+## Growth (Length-at-Age)
 ```{r}
 # calculate Linf and t0 from Schnute vB parameterization
 unSchnute.fn <- function(Amin, Amax, Lmin, Lmax, k)
@@ -142,19 +142,47 @@ Males $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Mal_GP_1[1], 1)` cm; $k$
 
 \vspace{0.5cm}
 
+## Selectivity
 
 
-### Fits to the Data
 
+## Recruitment Deviations
+
+
+
+
+
+
+## Fits to the Data
 Model fits to the indices of abundance, fishery length composition, survey length 
 composition, and conditional age-at-length observations are all discussed below. 
 The full r4ss plotting output is available in the supplementary material.
 
-### Population Trajectory
+
+### Data weighting
+
+
+
+*Indices*
+
+
+*Length and Ages*
+
+
+
+
+
 
 
 Figure \@ref(fig:bh-curve)
 Figure \@ref(fig:bh-resids)
+
+
+*Stock recruitment curve*
+
+
+## Population Trajectory
+
 
 ### Reference Points
 Reference points were calculated using the estimated selectivities and catch distribution among fleets in the most recent year of the model, `r endyr`. 

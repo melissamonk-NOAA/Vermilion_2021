@@ -1,38 +1,35 @@
 
+## Annual Length Composition Data
 
-```{r render-62, results = "asis"}
-sa4ss::read_child("62figures-lengths.Rmd")
+```{r, results='asis'}
+plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
+len_fit = plot_info[which(plot_info$category == "CompDat"), ]
+plot.vec = grep("comp_lendat_flt", len_fit$label)
+filein = file.path(mod_loc, "plots")
+for (a in plot.vec){
+  cap = len_fit$caption[a]
+  lab = len_fit$label[a]
+  add_figure(filein = file.path(filein, len_fit$file[a]), 
+             caption = cap, 
+             label = lab)
+}
 ```
 
+\newpage
 
-```{r render-63, results = "asis"}
-sa4ss::read_child("63figures-biology.Rmd")
+## Detailed Fit to Length Composition Data{#append-fit} 
+
+
+```{r, results='asis'}
+plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
+len_fit = plot_info[which(plot_info$category == "LenComp"), ]
+plot.vec = grep("comp_lenfit_flt", len_fit$label)
+filein = file.path(mod_loc, "plots")
+for (a in plot.vec){
+  cap = len_fit$caption[a]
+  lab = len_fit$label[a]
+  add_figure(filein = file.path(filein, len_fit$file[a]), 
+             caption = cap, 
+             label = lab)
+}
 ```
-
-<!--
-  ```{r render-64, results = "asis"}
-sa4ss::read_child("64figures-selectivity-diagnostics.Rmd")
-```
-
-```{r render-65, results = "asis"}
-sa4ss::read_child("65figures-lenfits.Rmd")
-```
-
-```{r render-66, results = "asis"}
-sa4ss::read_child("66figures-timeseries.Rmd")
-```
-
-```{r render-67, results = "asis"}
-sa4ss::read_child("67figures-indices-age.Rmd")
-```
-
-```{r render-68, results = "asis"}
-sa4ss::read_child("68figures-recruit-refpoints.Rmd")
-```
-
-```{r render-69, results = "asis"}
-sa4ss::read_child("69figures-sens-likeli-retro.Rmd")
-```
-
--->
-  

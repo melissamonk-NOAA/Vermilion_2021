@@ -1,0 +1,105 @@
+<!-- ======================================================================= -->
+<!-- **************************   Sensitivity  ***************************** --> 
+<!-- ======================================================================= -->
+
+<!-- drop 1-->
+
+```{r, warning = FALSE, inclue = FALSE}
+dropone.fig.filein = list.files(path = fig_loc,  
+                  pattern = glob2rx(paste0("drop1_*",model.area, ".png")), 
+                  full.names = TRUE)
+```
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = dropone.fig.filein[1] ,
+  caption = "Change in the fraction of unfished biomass when a single fleet is removed from the model",
+  label = 'drop-bratio'
+)
+```
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = dropone.fig.filein[2] ,
+  caption = "Change in the recruitment deviations when a single fleet is removed from the model",
+  label = 'drop-recdev'
+)
+```
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = dropone.fig.filein[3] ,
+  caption = "Change in the spawning output when a single fleet is removed from the model",
+  label = 'drop-spawnbio'
+)
+```
+
+
+
+
+<!-- ======================================================================= -->
+<!-- ************************** Likelihood Profile ************************* --> 
+<!-- ======================================================================= -->
+
+
+```{r, warning = FALSE, inclue = FALSE}
+profile.fig.filein = list.files(path = fig_loc,  
+                  pattern = glob2rx(paste0("profile_*",model.area, ".png")), 
+                  full.names = TRUE)
+```
+
+
+
+
+<!-- ======================================================================= -->
+<!-- *******************     Retrospectives    ***************************** --> 
+<!-- ======================================================================= -->
+```{r, echo = TRUE, outwidth = "50%"}
+retro.fig.filein = list.files(path = fig_loc,  
+                  pattern = glob2rx(paste0("retro_*",model.area, ".png")), 
+                  full.names = TRUE)
+```
+
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = retro.fig.filein[1] ,
+  caption =  "Change in the fraction of unfished biomass when the most recent 5 years of data area removed sequentially",
+  label = 'retro-bratio'
+)
+```
+
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = retro.fig.filein[2] ,
+  caption = "Change in the fits to the index of abundance from the xx when the most recent 5 years of data area removed sequentially",
+  label = 'retro-index'
+)
+```
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = retro.fig.filein[3] ,
+  caption = "Change in the recruitment deviations when the most recent 5 years of data area removed sequentially",
+  label = 'retro-recdev'
+)
+```
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = retro.fig.filein[4] ,
+  caption = "Change in the spawning biomass when the most recent 5 years of data area removed sequentially",
+  label = 'retro-spawnb'
+)
+```
+
+
+

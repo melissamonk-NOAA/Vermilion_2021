@@ -1,3 +1,8 @@
+<!-- ======================================================================= -->
+<!-- ****************************** Parameter ****************************** --> 
+<!-- ======================================================================= -->
+
+
 
 ```{r, params,  results = 'asis'}
 mod_params = model$parameters[-c(grep('Impl',model$parameters$Label),
@@ -44,4 +49,37 @@ table_format(x = mod_params,
              col_to_adjust = c(1,7), 
              width = c("8.5cm", "4cm"))                         
 ```
+
+<!-- ======================================================================= -->
+<!-- ****************** Convergence Data Weighting ************************* --> 
+<!-- ======================================================================= -->
+
+
+
+```{r, warning = FALSE, inclue = FALSE}
+dataweight.filein = list.files(path = table_loc, 
+               #   pattern = glob2rx(print(paste0("drop1_table_",model.area, ".xlsx"))), 
+                  pattern = glob2rx(paste0("Convergence_Francis_and_MI_",model.area, ".xlsx")), 
+                  full.names = TRUE)
+dataweight <- readxl::read_xlsx(dataweight.filein) %>%
+  mutate(across(where(is.numeric), round, 3)) 
+```
+
+
+```{r,drop-one, results = 'asis'}
+kableExtra::kbl(dataweight, booktabs = TRUE, 
+  caption = "Suggested data-weighting for length and age composition data using the McAllister-Ianelli and Francis approaches, after five tuning iterations to the pre-STAR base model.",
+  linesep = ""
+) %>%
+ # column_spec(1, width = "2cm") %>%
+
+  kable_styling(latex_options = c("repeat_header","scale_down")) %>%
+  kableExtra::landscape()
+```
+
+
+
+
+
+
 

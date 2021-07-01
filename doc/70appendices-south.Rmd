@@ -1,0 +1,38 @@
+\clearpage
+
+# Appendix
+
+
+```{r mrfss-index, results = 'asis'}
+ sa4ss::read_child("./indices/vermilion_MRFSS_dockside_writeup_SCA.md") 
+```
+  
+\newpage 
+ 
+```{r ca-cpfv-onboard-index, results = 'asis'}
+ sa4ss::read_child("./indices/vermilion_CA_CPFV_onboard_writeup_SCA.md") 
+``` 
+
+\newpage 
+
+
+```{r crfs-pr-index, results = 'asis'}
+sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_SCA.md")
+``` 
+
+\newpage
+
+```{r nwfschl-index, results = 'asis'}
+  sa4ss::read_child("./indices/vermilion_NWFSC_HL_writeup_SCA.md")
+``` 
+
+
+```{r wcgbts-index, results = 'asis'}
+  sa4ss::read_child("./indices/vermilion_WCGBTS_writeup_SCA.md")
+``` 
+
+
+
+       
+
+

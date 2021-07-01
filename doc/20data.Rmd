@@ -19,18 +19,17 @@ Of note is that the commercial landings are in metric tons (mt) and the recreati
 are in numbers of fish (thousands of fish). Data and 
 methods used to derive these estimates are described in this section.
 
-## Commercial
+
 
 ```{r render-21, results = "asis"}
 sa4ss::read_child("21data-a-commercial.Rmd")
 ```
 
+
 ```{r render-21b, results = "asis"}
 sa4ss::read_child("21data-b-recreational.Rmd")
 ```
 
-
-## Fishery-Independent data
 
 
 ```{r render-21c, results = "asis"}
@@ -38,14 +37,11 @@ sa4ss::read_child("21data-c-fishery-independent.Rmd")
 ```
 
 
-## Data sources considered, but not used
-
-
 ```{r render-21d, results = "asis"}
 sa4ss::read_child("21data-sources-not-used.Rmd")
 ```
 
-## Biology
+
 
 ```{r render-2, results = "asis"}
 sa4ss::read_child("22biology.Rmd")

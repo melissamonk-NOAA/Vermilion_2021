@@ -88,12 +88,11 @@ frog: Include a few sentences on why we didn't use PacFIN
 *Commercial length and age composition data*
 
 Biological data from the commercial fisheries that landed `r spp` were extracted 
-from CALCOM on frog. The CALCOM length composition data were catch-weighted 
-to "expanded" length the raw length composition data. The length composition and mean 
-size by year are available in Figures \@ref(fig:len-data-COM-HKL) and \@ref(fig:mean-com-len-data-COM-HKL) 
-for the commercial hook-and-line fleet, 
-\@ref(fig:len-data-COM-TWL) and \@ref(fig:mean-com-len-data-COM-TWL) for the commercial trawl fleet, 
-and \@ref(fig:len-data-COM-NET and \@ref(fig:mean-com-len-data-COM-NET) for the commercial net fleet.
+from CALCOM. The CALCOM length composition data were catch-weighted 
+to "expanded" length the raw length composition data. The length composition 
+size by year are available in Figure \@ref(fig:len-data-COM-HKL) for the commercial hook-and-line fleet,
+`r ifelse(model.area=='NCA', noquote("Figure\ref{fig:len-data-COM-TWL} for the commercial trawl fleet"),"")`
+and Figure \@ref(fig:len-data-COM-NET) for the commercial net fleet.
 Input sample sizes for commercial length composition varied depending on the 
 available data source and are in Table \@ref(tab:length-sample-size). 
 

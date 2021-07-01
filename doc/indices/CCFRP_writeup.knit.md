@@ -1,12 +1,12 @@
 ---
 title: "CCFRP Index for vermilion in 2021"
 author: "Melissa H. Monk"
-date: "June 20, 2021"
+date: "July 01, 2021"
 params:
     Model.number: 1
-    species.name: "lingcod"
+    species.name: "vermilion"
     survey.name: "CCFRP"
-    assess.folder: "LCOD"
+    assess.folder: "VRML"
     index.subfolder: "CCFRP"
 output:
   bookdown::pdf_document2: 
@@ -29,6 +29,8 @@ header-includes:
   - \usepackage{placeins}
 always_allow_html: true
 ---
+
+
 
 
 
@@ -75,10 +77,6 @@ depths to avoid barotrauma-induced mortality.  We retained 6532 drifts for index
   
 
 
-
-
-
-
 *CCFRP Index: Model Selection, Fits, and Diagnostics*
 
 Sample sizes by factors selected to model, excluding WAVE can be found in Tables 
@@ -89,29 +87,31 @@ considered in model selection; trends in the average CPUE by region were similar
 in the filtered data set (Figure \@ref(fig:fig-areacpue-ccfrp)). Plots of the arithmetic 
 mean by inside (MPA) and outside (REF) MPAs over time is in Figure \@ref(fig:fig-sitecpue-ccfrp).
 
-A Lognormal model  was 
-selected for the positive observation GLM by 
-a $\Delta AIC$ of 362.81 over a Gamma model and supported by Q-Q plots of the positive observations fit to both distributions (Figure \@ref(fig:fig-dist-fits-ccfrp)). The delta-GLM
-method allows the linear predictors to differ between the binomial and positive models.
-Based on AIC values from maximum likelihood fits Table \@ref(tab:tab-model-select-ccfrp)), 
-a main effects model including 
-YEAR and SITE and DEPTH bin 
-was fit for the binomial model and a main 
-effects model including 
-YEAR and SITE and DEPTH bin 
-was fit for the  Lognormal model.
-Models were fit using the “rstanarm” R package (version 2.21.1). Posterior predictive 
+A negative binomial model was fit to the drift-level data (catch with a log offset for angler 
+hours). Because the averaged observed CPUE inside MPAs and in the reference sites exhibited 
+differing trends, we explored a YEAR:SITE interaction, which was selected as the best 
+fit model by AIC Table \@ref(tab:tab-model-select-ccfrp)), The final model included
+YEAR and AREA and SITE and DEPTH_bin and YEAR:SITE and log(Effort).
+The model was fit using the “rstanarm” R package (version 2.21.1). Posterior predictive 
 checks of the Bayesian model fit for the binomial model and the positive model 
 were all reasonable (Figures \@ref(fig:fig-posterior-mean-ccfrp)  and 
- \@ref(fig:fig-posterior-sd-ccfrp)). The binomial model generated data sets with the 
+ \@ref(fig:fig-posterior-sd-ccfrp)). The negative binomial model generated data sets with the 
  proportion zeros similar to the 66%  zeroes in the observed data 
-(Figure \@ref(fig:fig-propzero-ccfrp)). The predicted marginal effects from 
-both the binomial and Lognormal models can be found in (Figures \@ref(fig:fig-Dbin-marginal-ccfrp) and \@ref(fig:fig-Dpos-marginal-ccfrp)). The 
-final index (Table \@ref(tab:tab-index-ccfrp)) 
+(Figure \@ref(fig:fig-propzero-ccfrp)). The predicted marginal effects from the model can be found in (Figures \@ref(fig:fig-Dnbin-marginal-ccfrp)). 
+
+Based on work completed at the SWFSC, we estimate that the percent of rocky reef habitat from Point Conception to the California border within California state waters is 892 $km^2$, of which approximately 23% is in MPAs that prohibit the harvest of groundfish (pers comm. Rebecca Miller, UCSC). There is recreational fishing outside of state waters, but habitat maps are not available at the same 2-m resolution and do not allow for direct comparisons. High-resolution habitat maps are not available for the state waters south of Point Conception.
+
+The final index was weighted, giving 20% of the model weight to MPAs and 80% of model 
+weight to the "open" areas within the state. The CCFRP index includes all of the 
+MPAs currently sampled from 2017-2020 and the core central California sampling sites 
+from 2007-2016.  Trends among all of the MPAs sampled increased along the entire coast 
+from 2017-2020.  The final index (Table \@ref(tab:tab-index-ccfrp)) 
 represents a similar trend to the arithmetic mean of the annual CPUE (Figure \@ref(fig:fig-cpue-ccfrp)).
 
+To visualize the affect of weighting on the index, Figure (\@ref(fig:fig-weighted-cpue-ccfrp)) 
+shows the unweighted index and the index with 10-60% of the weight given to MPAs versus 
+open areas.  Each of these indices are scaled to their means to allow for direct comparison.
 
- 
 
 <!-- ******************************* TABLES ******************************** -->
 
@@ -194,18 +194,20 @@ Year & Samples & Positive Samples & Percent Positive\\
 
 \caption{(\#tab:tab-model-select-ccfrp)Model selection for the CCFRP survey index for vermilion in the northern model .}
 \centering
-\begin{tabular}[t]{lrr}
+\begin{tabular}[t]{lr}
 \toprule
-Model & Binomial $\Delta$AIC & Lognormal $\Delta$AIC\\
+Model & $\Delta$AIC\\
 \midrule
-\cellcolor{gray!6}{1} & \cellcolor{gray!6}{1071.49} & \cellcolor{gray!6}{485.95}\\
-YEAR + AREA & 423.29 & 163.14\\
-\cellcolor{gray!6}{YEAR + AREA + SITE} & \cellcolor{gray!6}{79.34} & \cellcolor{gray!6}{40.23}\\
-YEAR + AREA + SITE + DEPTH bin & 0.00 & 0.00\\
-\cellcolor{gray!6}{YEAR + SITE + DEPTH bin} & \cellcolor{gray!6}{470.88} & \cellcolor{gray!6}{88.31}\\
+\cellcolor{gray!6}{1 + log(Effort)} & \cellcolor{gray!6}{1241.97}\\
+YEAR + AREA + log(Effort) & 640.50\\
+\cellcolor{gray!6}{YEAR + AREA + SITE + log(Effort)} & \cellcolor{gray!6}{157.27}\\
+YEAR + AREA + SITE + DEPTH bin + log(Effort) & 28.87\\
+\cellcolor{gray!6}{YEAR + SITE + log(Effort)} & \cellcolor{gray!6}{620.91}\\
 \addlinespace
-YEAR + DEPTH bin & 727.53 & 185.13\\
-\cellcolor{gray!6}{YEAR + AREA + DEPTH bin} & \cellcolor{gray!6}{292.96} & \cellcolor{gray!6}{113.84}\\
+YEAR + DEPTH bin + log(Effort) & 838.03\\
+\cellcolor{gray!6}{YEAR + SITE + DEPTH bin + log(Effort)} & \cellcolor{gray!6}{450.84}\\
+YEAR + AREA + DEPTH bin + log(Effort) & 459.90\\
+\cellcolor{gray!6}{YEAR + AREA + SITE + DEPTH bin + YEAR:SITE + log(Effort)} & \cellcolor{gray!6}{0.00}\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -221,24 +223,24 @@ YEAR + DEPTH bin & 727.53 & 185.13\\
 \centering
 \begin{tabular}[t]{rrrrr}
 \toprule
-Year & Mean & logSE & lower HPD & upper HPD\\
+Year & Index & logSE & lower HPD & upper HPD\\
 \midrule
-\cellcolor{gray!6}{2007} & \cellcolor{gray!6}{0.12} & \cellcolor{gray!6}{0.22} & \cellcolor{gray!6}{0.08} & \cellcolor{gray!6}{0.19}\\
-2008 & 0.10 & 0.21 & 0.06 & 0.14\\
-\cellcolor{gray!6}{2009} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.21} & \cellcolor{gray!6}{0.11} & \cellcolor{gray!6}{0.24}\\
-2010 & 0.24 & 0.19 & 0.16 & 0.33\\
-\cellcolor{gray!6}{2011} & \cellcolor{gray!6}{0.19} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.13} & \cellcolor{gray!6}{0.28}\\
+\cellcolor{gray!6}{2007} & \cellcolor{gray!6}{0.09} & \cellcolor{gray!6}{0.18} & \cellcolor{gray!6}{0.06} & \cellcolor{gray!6}{0.13}\\
+2008 & 0.08 & 0.17 & 0.06 & 0.11\\
+\cellcolor{gray!6}{2009} & \cellcolor{gray!6}{0.14} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.09} & \cellcolor{gray!6}{0.18}\\
+2010 & 0.16 & 0.17 & 0.11 & 0.22\\
+\cellcolor{gray!6}{2011} & \cellcolor{gray!6}{0.14} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.10} & \cellcolor{gray!6}{0.19}\\
 \addlinespace
-2012 & 0.20 & 0.19 & 0.13 & 0.28\\
-\cellcolor{gray!6}{2013} & \cellcolor{gray!6}{0.10} & \cellcolor{gray!6}{0.22} & \cellcolor{gray!6}{0.06} & \cellcolor{gray!6}{0.15}\\
-2014 & 0.18 & 0.19 & 0.12 & 0.26\\
-\cellcolor{gray!6}{2015} & \cellcolor{gray!6}{0.26} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.38}\\
-2016 & 0.19 & 0.19 & 0.13 & 0.28\\
+2012 & 0.15 & 0.17 & 0.10 & 0.19\\
+\cellcolor{gray!6}{2013} & \cellcolor{gray!6}{0.07} & \cellcolor{gray!6}{0.18} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.10}\\
+2014 & 0.13 & 0.17 & 0.09 & 0.17\\
+\cellcolor{gray!6}{2015} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.18} & \cellcolor{gray!6}{0.11} & \cellcolor{gray!6}{0.23}\\
+2016 & 0.13 & 0.16 & 0.09 & 0.16\\
 \addlinespace
-\cellcolor{gray!6}{2017} & \cellcolor{gray!6}{0.22} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.16} & \cellcolor{gray!6}{0.30}\\
-2018 & 0.31 & 0.16 & 0.22 & 0.42\\
-\cellcolor{gray!6}{2019} & \cellcolor{gray!6}{0.36} & \cellcolor{gray!6}{0.16} & \cellcolor{gray!6}{0.26} & \cellcolor{gray!6}{0.48}\\
-2020 & 0.48 & 0.16 & 0.34 & 0.65\\
+\cellcolor{gray!6}{2017} & \cellcolor{gray!6}{0.13} & \cellcolor{gray!6}{0.15} & \cellcolor{gray!6}{0.09} & \cellcolor{gray!6}{0.17}\\
+2018 & 0.16 & 0.15 & 0.12 & 0.21\\
+\cellcolor{gray!6}{2019} & \cellcolor{gray!6}{0.19} & \cellcolor{gray!6}{0.15} & \cellcolor{gray!6}{0.14} & \cellcolor{gray!6}{0.25}\\
+2020 & 0.23 & 0.15 & 0.16 & 0.30\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -251,8 +253,11 @@ Year & Mean & logSE & lower HPD & upper HPD\\
 
 <!-- ****************************** FIGURES ******************************** --> 
 
-![(\#fig:fig-dist-fits-ccfrp)Q-Q plot (top) of the positive observations lognormal gamma distributions and fitted values vs residuals for the Lognormal model (bottom).](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-dist-fits-ccfrp-1.pdf) 
+<!--
+r, fig-dist-fits-ccfrp, warning = FALSE, message =FALSE, fig.cap = paste("Q-Q plot (top) of the positive observations lognormal gamma distributions and fitted values vs residuals for the", pos.mod.dist, "model (bottom).")}
+ggpubr::ggarrange(pos.qq, pos.resid, ncol = 1)
 
+-->
 
 
 ![(\#fig:fig-areacpue-ccfrp)Arithmetic mean of CPUE by region for  vermilion from the filtered data. The areas used are in the text.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-areacpue-ccfrp-1.pdf) 
@@ -269,10 +274,19 @@ Year & Mean & logSE & lower HPD & upper HPD\\
 ![(\#fig:fig-posterior-sd-ccfrp)Posterior predictive draws of the standard deviation by year with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-posterior-sd-ccfrp-1.pdf) 
 
 
+![(\#fig:fig-Dnbin-marginal-ccfrp)Negative ninomial marginal effects from the unweighted model.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-Dnbin-marginal-ccfrp-1.pdf) 
+
+
+
 ![(\#fig:fig-cpue-ccfrp)Standardized index and arithmetic mean of the CPUE from the filtered data. Each timeseries is scaled to its respective means.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-cpue-ccfrp-1.pdf) 
 
 
-![(\#fig:fig-Dbin-marginal-ccfrp)Binomial marginal effects from the final model](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-Dbin-marginal-ccfrp-1.pdf) 
 
 
-![(\#fig:fig-Dpos-marginal-ccfrp)Positive model marginal effects from the final model.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-Dpos-marginal-ccfrp-1.pdf) 
+<!--{r, fig-Dpos-marginal-ccfrp, echo = FALSE,  fig.cap = "Positive model marginal effects from the final model."}
+# positive model marginal components
+sjPlot::plot_grid(figure.Dpos.list, tags = TRUE, margin = c(.1, .1, .1, .1)) 
+-->
+
+
+![(\#fig:fig-weighted-cpue-ccfrp)Standardized index with differing weighting to the MPAs from 10% to 60%. Each index is scaled to its respective means.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CCFRP_writeup_NCA_files/figure-latex/fig-weighted-cpue-ccfrp-1.pdf) 

@@ -1,3 +1,5 @@
+## Biology
+
 <!--
 ### Age Structures
 **External Fits to Growth**
@@ -12,7 +14,7 @@ Uncertainty in ageing error was estimated using a collection of 357 `r spp`
 otoliths with two age reads between the NWFSC (reader 1, B. Kamikawa) and the 
 SWFSC (reader 2, D. Watters) (Figure \@ref(fig:reader1reader2)).
 Age-composition data used in the model were from a number of sources described 
-above. The same readers aged otoliths for both `r spp` stock assessmetnt models. 
+above. The same readers aged otoliths for both `r spp` stock assessment models. 
 Age reader 1 read all of the otoliths for the southern model and both readers read 
 otoliths for the northern California model. In addition to the otoliths from these 
 two regions, the same two readers aged fish for a Committee of Age Reading Experts 

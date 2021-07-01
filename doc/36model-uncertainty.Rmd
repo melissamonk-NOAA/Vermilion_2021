@@ -1,15 +1,15 @@
-## Model Diagnostics
+# Assessment Model Diagnostics
 
 Describe all diagnostics
 
 
-### Sensitivity to Assumptions, Data and, Weighting
+## Sensitivity to Assumptions, Data and, Weighting
 
 
 
 
 
-### Likelihood Profiles
+## Likelihood Profiles
 
 Likelihood profiles were conducted for $R_0$, steepness, and over natural mortality 
 values separately with the post-STAR base. These likelihood profiles were conducted by 
@@ -19,10 +19,10 @@ value (Tables frog).
 
 
 
-### Retrospective Analysis
+## Retrospective Analysis
 
 
 
 
-### Unresolved Problems and Major Uncertainties
+## Unresolved Problems and Major Uncertainties
 

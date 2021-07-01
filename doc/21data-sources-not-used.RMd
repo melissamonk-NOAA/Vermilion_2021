@@ -1,4 +1,6 @@
 
+## Data sources considered, but not used
+
 `r Spp` are not well sampled by the following studies we considered as possible 
 data sources.
 
@@ -101,7 +103,15 @@ and samples four MPAs and associated references sites in southern California.
 Vermilion rockfish have been encountered at two of the MPAs (Carrington Point off 
 Santa Rosa Island and South La Jolla) and observed in 27% of all drifts at these 
 two locations. The STAT determined that the was too constrained spatially and 
-temportally to be considered 
+temporally to be considered 
 for an index of abundance. There are currently 262 lengths of vermilion available.
 With additional years of data, this data set can be considered for inclusion in a 
 future vermilion assessment.
+
+
+
+
+*Southern California Bight Publicly Owned Treatment Works*
+
+In the Southern California Bight, a number of monitoring programs exist to evaluate the potential consequences of effluent discharges from wastewater treatment facilities on the coastal marine environment.  As over 20 million people live within an hour’s drive of the ocean in this region, a major impact to this ecosystem includes a cumulative total of 1.5 billion liters of treated effluent each day to the ocean, originating from 17 major wastewater treatment plants [@Schiff2016].  Most of these publicly owned treatment works support monitoring programs to evaluate the impacts on water and sediment quality, and associated ecological communities.  For several, this includes bottom trawl surveys of coastal habitats, and data from the longest running trawl surveys, despite being limited spatially to waters closer to population centers, have previously been used in stock assessments of cowcod (*Sebastes levis*) and California scorpionfish (*Scorpaena guttata*)[@Dick2019; @Monk2017].  Cowcod were rarely encountered in these surveys, occurring in 139 of the 1896 trawls conducted by the most rigorous of the surveys, and the development of a relative abundance index required pooling data into five year “blocks” in order to provide plausible estimates of year effects.  The resulting index was not highly influential in the final assessment model [@Dick2019], and indeed the lumping of years was only acceptable in that model as recruitments were not estimated.  By contrast, California scorpionfish were frequently encountered in several of these surveys, with over 10,000 fish being observed (and measured) over the history of those surveys, and the resulting relative abundance index and length frequently data were very influential in the California scorpionfish assessment with respect to both trends and recruitment [@Monk2017].  As preliminary investigations suggested that vermilion rockfish are even more rare than cowcod in this survey, and because grouping years of data would be inappropriate where recruitments are being estimated, a more rigorous evaluation of these datasets was not developed for this assessment.  However, it could be feasible to consider such an evaluation in future stock assessments.
+

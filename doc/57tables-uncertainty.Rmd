@@ -1,0 +1,94 @@
+<!-- ======================================================================= -->
+<!-- **************************   Sensitivity  ***************************** --> 
+<!-- ======================================================================= -->
+
+<!-- drop 1 -->
+
+```{r, warning = FALSE, inclue = FALSE}
+dropone.filein = list.files(path = table_loc, 
+               #   pattern = glob2rx(print(paste0("drop1_table_",model.area, ".xlsx"))), 
+                  pattern = glob2rx(paste0("drop1_table_",model.area, ".xlsx")), 
+                  full.names = TRUE)
+dropone <- readxl::read_xlsx(dropone.filein) %>%
+  mutate(across(where(is.numeric), round, 3)) %>%
+  filter(!grepl("Size", Label))
+```
+
+
+```{r,drop-one, results = 'asis'}
+kableExtra::kbl(dropone, booktabs = TRUE, 
+  caption = "Likelihood components from the leave one out analysis of the pre-STAR base model.",
+  linesep = ""
+) %>%
+ # column_spec(1, width = "2cm") %>%
+  kable_styling(latex_options = c("scale_down")) #%>%
+ # kableExtra::landscape()
+```
+
+
+<!-- ======================================================================= -->
+<!-- **************************   Sensitivity2  ***************************** --> 
+<!-- ======================================================================= -->
+
+```{r, warning = FALSE, inclue = FALSE}
+sens2.filein = list.files(path = table_loc, 
+               #   pattern = glob2rx(print(paste0("drop1_table_",model.area, ".xlsx"))), 
+                  pattern = glob2rx(paste0("sensitivities_h_dev_MI_selex_",model.area, ".xlsx")), 
+                  full.names = TRUE)
+sens2 <- readxl::read_xlsx(sens2.filein) %>%
+  mutate(across(where(is.numeric), round, 3)) %>%
+  filter(!grepl("Size", Label))
+```
+
+
+```{r sens2, results = 'asis'}
+kableExtra::kbl(sens2, booktabs = TRUE, 
+  caption = "Likelihood components from additional sensitivity runs to estimating steepness, starting recruitment deviations in 1965 or 1975, McAllister-Ianelli data weighting and estimating discard selecitity for the pre-STAR base model.",
+  linesep = ""
+) %>%
+ # column_spec(1, width = "2cm") %>%
+  kable_styling(latex_options = c("scale_down")) #%>%
+ # kableExtra::landscape()
+```
+
+
+
+
+
+
+<!-- ======================================================================= -->
+<!-- ************************** Likelihood Profile ************************* --> 
+<!-- ======================================================================= -->
+
+
+
+
+
+
+<!-- ======================================================================= -->
+<!-- *******************     Retrospectives    ***************************** --> 
+<!-- ======================================================================= -->
+
+```{r, warning = FALSE, inclue = FALSE}
+retro.filein = list.files(path = table_loc, 
+               #   pattern = glob2rx(print(paste0("drop1_table_",model.area, ".xlsx"))), 
+                  pattern = glob2rx(paste0("retro_",model.area, ".xlsx")), 
+                  full.names = TRUE)
+retro <- readxl::read_xlsx(retro.filein) %>%
+  mutate(across(where(is.numeric), round, 3)) %>%
+  filter(!grepl("Size", Label))
+```
+
+
+```{r retro, results = 'asis'}
+kableExtra::kbl(retro, booktabs = TRUE, 
+  caption = "Likelihood components from the retrospective analysis removing one to five years of data of the pre-STAR base model.",
+  linesep = ""
+) %>%
+ # column_spec(1, width = "2cm") %>%
+
+  kable_styling(latex_options = c("scale_down")) %>%
+  kableExtra::landscape()
+```
+
+

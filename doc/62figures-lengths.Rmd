@@ -18,16 +18,16 @@ for (i in unique(model$len_comp_fit_table$Fleet)) {
     height = 60
   )
 
-   add_figure(
-    filein = dir(paste0(base_loc, "/plots"), 
-                 pattern = paste0("comp_lendat_data_weighting_TA1.8_",
-                                  model$FleetNames[i], ".png$"), full.names = TRUE),
-    caption = paste0("Mean length for the ", 
-                     model$FleetNames_parsed[i], " with 95 percent confidence intervals"),
-    label = paste0('mean-com-len-data-', model$FleetNames_label[i]),
-    width = 60,
-    height = 60
-  )
+#   add_figure(
+#    filein = dir(paste0(base_loc, "/plots"), 
+    #              pattern = paste0("comp_lendat_data_weighting_TA1.8_",
+    #                               model$FleetNames[i], ".png$"), full.names = TRUE),
+    # caption = paste0("Mean length for the ", 
+    #                  model$FleetNames_parsed[i], " with 95 percent confidence intervals"),
+    # label = paste0('mean-com-len-data-', model$FleetNames_label[i]),
+    # width = 60,
+    # height = 60
+  # )
 
 }
 ```

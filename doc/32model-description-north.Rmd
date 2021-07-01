@@ -22,14 +22,16 @@ and one from the Deb Wilson-Vandenberg CPFV onboard observer survey.
 one for the NWFSC WCGBT survey data and one for the SWFSC groundfish ecology survey data.
 
 
-###Additional Specifications
+### Additional Specifications
 
 ```{r, echo = FALSE}
-time_blocks <- data.frame(model$SelSizeAdj) %>% filter(Change.==1, Yr>1875, Yr<2021) 
+time_blocks <- data.frame(model$SelSizeAdj)
+colnames(time_blocks)[3] = "Change"
+time_blocks <- time_blocks %>% dplyr::filter(Change==1, Yr>1875, Yr<2021) 
 ```
 
 Selectivity was specified using the double normal parameterization within Stock Synthesis for all fleets. 
-The recreational PC and PR fleets applied three time blocks for selectivity:  `r startyr` - `r time_blocks$Yr[1]-1`, `r time_blocks$Yr[1]` - `r time_blocks$Yr[2]-1`, - `r time_blocks$Yr[2]` - `r endyr`. All commercial fleet selectivity was constant across model years `r startyr` - `r endyr`,
+The recreational PC and PR fleets applied three time blocks for selectivity:  `r startyr` - `r time_blocks$Yr[1]-1`, `r time_blocks$Yr[1]` - `r time_blocks$Yr[2]-1`, - `r time_blocks$Yr[2]` - `r endyr`. All commercial fleet selectivity was constant across model years `r startyr` - `r endyr`.
 
 <!--The commercial selectivity applied two time blocks for selectivity: `r startyr` - 2008 and 2009 - `r endyr`. The commercial selectivity block from `r startyr` - 2008  was fixed to be asymptotic, while the selectivity block from  2009 - `r endyr`was allowed to be dome-shaped.   The recreational fleet selectivity was constant across the model years, `r startyr` - `r endyr`, and fixed to be asymptotic, although dome-shape selectivity was explored during model development. Annual recruitment deviations started in `r `min(model$recruitpars$Yr)`.
 
