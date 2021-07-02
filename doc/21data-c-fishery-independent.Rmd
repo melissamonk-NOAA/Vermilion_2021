@@ -20,7 +20,7 @@ and southern California assessments.
 **Available Data**
 
 *Age and Length Data.* Vermilion rockfish are not found in high abundance in this survey, and in most 
-cases lengths for the entire catch were availalbe, i.e., few enough individiuals were caught that 
+cases lengths for the entire catch were available, i.e., few enough individuals were caught that 
 all were measured. The assessment north of Point Conception includes 467 ages, which 
 is almost of the vermilion rockfish with length (587 total) observed in this survey.
 For south of Point Conception 1,283 of the 1,962 vermilion observed  and measured were also aged. 
@@ -93,7 +93,7 @@ Scripps Institution of Oceanography.
 
 Surveys consist of fishing with hook-and-line gear for 30-45 minutes within 
 randomly chosen 500 by 500 m grid cells within and outside \Gls{mpa}s.
-Prior to 2017, all fish were measured for length and release or descended to depth;
+Prior to 2017, all fish were measured for length and released or descended to depth;
 since then, some have been retained for biological collections including otoliths and fin clips. 
 This is the only long term fisheries-independent data series that spans the entire California 
 coast and provides data on fish stocks within California's network of MPAs.

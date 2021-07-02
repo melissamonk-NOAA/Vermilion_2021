@@ -50,11 +50,7 @@ sa4ss::read_child("31model-star-responses.Rmd")
 
 
 ```{r render-32, results = "asis"}
-if(model.area=='NCA'){
-sa4ss::read_child("32model-description-north.Rmd") 
-} else {
-sa4ss::read_child("32model-description-south.Rmd")
-}
+sa4ss::read_child("32model-description.Rmd") 
 ```
 
 

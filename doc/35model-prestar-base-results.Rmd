@@ -1,6 +1,6 @@
 # Assessment Results
 
-The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \ref{tab:likes}. Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \ref{tab:referenceES}. Estimates of stock size and status over time are shown in Table \ref{tab:timeseries}. 
+The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \@ref(tab:parms). Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \@ref(tab:referenceES). Estimates of stock size and status over time are shown in Table \@ref(tab:timeseries). 
 
 
 Current figures to site
@@ -81,11 +81,12 @@ categories and are described in more detail in the following sections:
 
 ```{asis, echo = model.area=='NCA'}
 Biological parameters  
-- 2 natural mortality parameters (female and male $M$)  
-- 10 growth parameters, where females and males each had  
+- 1 natural mortality parameter (female and male assumed the same)  
+- 8 growth parameters, where the Age at Lmin and CV for old ma
 - 3 Schnute growth parameters (length at age 0, length at age 30, and $k$)   
-- 2 parameters controlling variability in growth, the CV in length at age 0.5  
-  and the CV in length at age 14 with a linear ramp in length-at-age  
+- 3 parameters controlling variability in growth, the CV in length at age 0  
+  and the CV in length at age 30 with a linear ramp in length-at-age  (CV for young males was not estimated)
+                                                                    
 
 Stock-recruit parameters  
 - `r 2 + nrow(model$recruit)` recruitment parameters  
@@ -106,9 +107,44 @@ Selectivity parameters
 ## Fixed parameters
 - $h$ controlling the steepness of the stock-recruit relationship
 - $M$ for males
+- Selectiviy parameters that were estimated at the bounds and fixed in the pre-STAR model
 
 ```
 
+
+
+
+```{asis, echo = model.area=='SCA'}
+Biological parameters  
+- 1 natural mortality parameter (female and male assumed the same)  
+- 9 growth parameters, where the Age at Lmin and CV for old ma
+- 3 Schnute growth parameters (length at age 0, length at age 30 for both sexes, and $k$)   
+- 4 parameters controlling variability in growth, the CV in length at age 0  
+  and the CV in length at age 30 with a linear ramp in length-at-age  (CV for young males was not estimated)
+                                                                    
+
+Stock-recruit parameters  
+- `r 2 + nrow(model$recruit)` recruitment parameters  
+- $log(R_0)$ controlling equilibrium recruitment  
+- `r nrow(model$recruit)` recruitment deviations parameters covering the range  
+  `r min(model$recruit$Yr)`-`r max(model$recruit$Yr)`, with 
+  `r min(model$recruit$Yr[model$recruit$era=="Main"])`-`r max(model$recruit$Yr[model$recruit$era=="Main"])`
+  representing the "main" period modeled as a zero-centered deviation vector  
+  
+Index parameters  
+- `r sum(sum(grepl("Q_extra", estimated_pars)))` extra standard deviation parameters
+for indices  
+
+Selectivity parameters  
+- `r sum(grepl("Size_DblN", estimated_pars))` selectivity parameters, of which
+`r sum(grepl("Size_DblN.*BLK", estimated_pars))` represented changes over time  
+
+## Fixed parameters
+- $h$ controlling the steepness of the stock-recruit relationship
+- $M$ for males
+- Selectiviy parameters that were estimated at the bounds and fixed in the pre-STAR model
+
+```
 
 
 ## Growth (Length-at-Age)

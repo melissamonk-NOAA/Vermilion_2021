@@ -1,0 +1,133 @@
+## Model Specificiations
+
+The specification of the California models north and south of Point Conception 
+are very similar.  The major differences between the to models are the availability 
+of fishery-independent data sources that are region specific. 
+
+The `r Spp` assessment `r params$model` of Point Conception (\PtC) off the coast of California
+is assessed using a two-sex model with sex-specific life history parameters.  
+The model assumed seven fleets with removals beginning in `r startyr`: 
+
+*Commercial*: There are three commercial fleets; hook-and-line, trawl, and net. 
+All of the commercial fleets represented landed dead catch and assumed dead discards.
+
+*Recreational*: There are four recreational fleets.  Each of the PC and PR modes have 
+separate fleets for retained and discarded catch.  This decision was driven by the 
+length compositions between retained 
+and discarded fish (with discarded fish on average smaller than retained fish).
+
+
+```{asis, echo = model.area=='NCA'}
+*Fishery-Dependent Surveys*:  There are four fishery-dependent survey fleets north 
+of Point Conception; 1) the MRFSS CPFV dockside survey, 2) Deb Wilson-Vandenberg CPFV onboard observer survey, 3)CDFW/Cal Poly onboard observer survey, and 4) CRFS PR1 dockside survey.
+
+
+*Research*: There are three research fleets; 1) Abrams conditional-length-at-age data, 
+2) NWFSC WCGBT survey data, and 3) SWFSC groundfish ecology survey data.
+```
+
+
+```{asis, echo = model.area=='SCA'}
+*Fishery-Dependent Surveys*:  There are three fishery-dependent survey fleets south of Point 
+Conception; 1) MRFSS CPFV dockside survey, 2) CDFW onboard observer survey, and 3) CRFS PR1 dockside survey.
+
+*Research*: There are four research fleets; 1) CDFW "green binder" research ,
+2) NWFSC WCGBT survey, and 3) NWFSC hook-and-line survey.
+```
+
+### Additional Specifications
+
+
+
+```{asis, echo = model.area=='NCA'}
+Selectivity was specified using the double normal parameterization within Stock Synthesis for all fleets. Selectivities were estimated for the commercial hook-and-line fleet, commercial trawl fleet, and the commercial net fleet.  Selectivity was estimated for the recreational PC fleet, recreational PC discard fleet and the Recreational PR fleet.  There were no length data available for the recreational PR fleet, and it mirrors the selectivity of the recreational PC discard fleet.
+Selectivity for the recreational PC onboard index of abundance is mirrored to the recreational 
+PC fleet as they share the same length composition.  The Abrams research selectivity mirrors the 
+commercial hook-and-line fleet. The STAT explore mirroring this data set to the recreational PC fleet, but the length composition was more representative of the commercial fleet. The Abrams dataset was too sparse and only collected over a two year period.  Hook-and-line gear was the 
+dominant collection method for teh SWFSC groundfish ecology survey and is mirrored to the commercial hook-and-line fleet.
+
+Selectivity parameters were estimated for all fishery-indepdendent data sources.
+
+
+The recreational PC and PR fleets applied three time blocks for selectivity:  `r startyr` - `r time_blocks$Yr[1]-1`, `r time_blocks$Yr[1]` - `r time_blocks$Yr[2]-1`, - `r time_blocks$Yr[2]` - `r endyr`. All commercial fleet selectivity was constant across model years `r startyr` - `r endyr`.
+```
+
+```{asis, echo = model.area=='SCA'}
+Selectivity was specified using the double normal parameterization within Stock Synthesis for all fleets. Selectivities were estimated for the commercial hook-and-line fleet and the commercial net fleet. The commercial trawl fleet is mirrored to the commercial hook-and-line fleet. Selectivity was estimated for the recreational PC fleet, recreational PC discard fleet and the Recreational PR fleet.  There were no length data available for the recreational PR fleet, and it mirrors the selectivity of th recreational PC discard fleet.
+Selectivity for the recreational PC onboard index of abundance is mirrored to the recreational 
+PC fleett as they share the same length composition.
+
+Selectivities were estimated for all fishery-indepdendent data sources.
+
+
+The commercial selectivity applied two time blocks for selectivity: `r startyr` - 2008 and 2009 - `r endyr`. The commercial selectivity block from `r startyr` - 2008  was fixed to be asymptotic, while the selectivity block from  2009 - `r endyr`was allowed to be dome-shaped.   The recreational fleet selectivity was constant across the model years, `r startyr` - `r endyr`, and fixed to be asymptotic, although dome-shape selectivity was explored during model development. Annual recruitment deviations started in `r `min(model$recruitpars$Yr)`.
+```
+
+The length composition data for some years and fleets was small, and may not be 
+representative of the total catch. Length composition data were removed from the 
+model if fewer than 10 fish were measured in a given 
+year and fleet. Initial input sample sizes were also capped at x00 for each set of length composition data.
+
+The time-series of landings begins in 1875 for the commercial fleet and in 1916 for 
+the recreational fleet.  This captures the inception of the fishery, so the stock is 
+assumed to be in equilibrium at the beginning of the modeled period.
+
+The internal population dynamics model tracks ages 0-70, where age 70 is the ‘plus-group.’ 
+There are relatively few observations in the age compositions that are greater than age 28. 
+The population length bins and the length composition length bins are set at 2-cm bins from 
+fish 10-70 cm fork length.
+
+The first year of recruitment deviations begins in 1970, with 1963 as the last year 
+of early recruitment deviations with no bias adjustment and 1980 as the first year 
+with full bias adjustment.  
+
+### Modeling Platform and Structure
+
+The assessment was conducted used Stock Synthesis version 3.30.16.00 developed by 
+Dr. Richard Methot at the NOAA, NWFSC [@Methot2013]. This most recent 
+version was used because it included improvements and corrections to older 
+model versions. The R package [r4ss](https://github.com/r4ss/r4ss), version 
+1.38.0, along with R version 4.0.1 were used to investigate and plot model fits. 
+
+Electronic SS model files including the data, control, starter, and forecast files can be 
+found on the 
+[PFMC's website](https://www.pcouncil.org/groundfish/stock-assessments/).
+
+
+### Model Parameters
+
+
+### Priors
+
+The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) and reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017, has been a primary source of information on steepness for rockfishes. This approach, however, was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absence of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 prior for steepness ($h$; beta distribution with $\mu$=`r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"],2)` and $\sigma$=0.15) is retained.  
+
+
+### Data Weighting
+Length composition and conditional-age-at-length (CAAL) compositions sample sizes for 
+the base model were tuned by the "Francis method," based on equation TA1.8 in Francis 
+[-@Francis2011], and implemented in the r4ss package. This approach involves comparing 
+the residuals in the model’s expected mean length with respect to the observed mean 
+length and associated uncertainty derived from the composition vectors and their 
+associated input sample sizes. The sample sizes are then tuned so that the observed 
+and expected variability are consistent. After adjustment to the sample sizes, models 
+were not re-tuned if the bootstrap uncertainty value around the tuning factor overlapped 1.0. 
+
+As outlined in the Best Practices, a sensitivity run was conducted with length and 
+conditional-age-at-length (CAAL) compositions were re-weighted using the 
+Ianelli-McAllister harmonic mean method [@McAllister1997]. Additionally, weighting 
+using the Dirichlet-Multinomial likelihood, that includes and estimable parameter (theta) 
+that scales the input sample size, was explored. However, all estimates of the ratio of 
+$\theta/(1+\theta)$ were greater than 0.99, which indicates the models is trying to tune 
+the sample size as high as possible.  Given this result, the STAT chose not to further explore 
+the Dirichlet-Multinomial data weighting. As a note, there is a bug in SS Version 3.30.16.00 that 
+prevents the number of estimated weights from being larger than the number of fleets.  This was 
+fixed in SS Version 3.30.16.01 and this version was only used for exploration of the Dirichlet-Multinomialdata weighting.
+
+The STAT explored both McAllister-Ianelli and Francis data weighting methods with the 
+pre-STAR base model.  Francis weighting was selected and provided better fits to the indices 
+and was re-tuned for five iterations to determine if the method serially downweighted any 
+one data source.
+
+
+
+

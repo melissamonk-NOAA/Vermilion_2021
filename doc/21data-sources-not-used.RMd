@@ -9,7 +9,7 @@ data sources.
 The \gls{s-tri} was first conducted by the \gls{afsc} in 1977, and the survey 
 continued until 2004 [@Dark1994].
 Its basic design was a series of equally-spaced east-to-west transects across 
-the continential shelf from which searches for tows in a specific depth range were initiated.
+the continental shelf from which searches for tows in a specific depth range were initiated.
 The survey design changed slightly over time.
 In general, all of the surveys were conducted in the mid summer through early fall.
 The 1977 survey was conducted from early July through late September.
@@ -82,14 +82,14 @@ future efforts may lead to better taxonomic resolution of historical or future c
 
 Since 1983, the SWFSC has conducted an annual midwater trawl survey for pelagic 
 juvenile rockfish and other groundfish in the Central California region of the 
-California Current ([-@Ralston2013] and references therein).  Due to concerns 
+California Current (Ralston et al. [-@Ralston2013] and references therein).  Due to concerns 
 about mesoscale abundance patterns and a need for greater spatial representation 
 in the data, including some apparent strong differences in spatial distribution 
 patterns in the early 2000s [@Hastie2007; @Ralston2013], this survey was expanded 
 to a broader spatial scale in the 2001-2004 period, and since 2004 most years have 
 coastwide data from a combination of SWFSC, NWFSC and Cooperative Research surveys 
 (see Field et al. [-@Field2021] for more complete details regarding coastwide 
-pre-recruit data, and Sakmua et al. [-@Sakuma2016] and Friedman et al. [-@Friedman2018] 
+pre-recruit data, and Sakuma et al. [-@Sakuma2016] and Friedman et al. [-@Friedman2018] 
 for additional details and 
 alternative applications of survey data). 
 

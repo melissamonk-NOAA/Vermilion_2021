@@ -71,7 +71,7 @@ graphical user interface allowing for the application of a variety of natural
 mortality estimators based on measures such as longevity, size, age and growth, 
 and maturity, was used to obtain estimates of natural mortality. The NMT currently 
 provides 19 options, including the Hamel [-@Hamel2015] method, which is a corrected 
-form of the Then et al. [-@Then2018] functional regression model and is a commomly 
+form of the Then et al. [-@Then2018] functional regression model and is a commonly 
 applied method for west coast groundfish. The NMT also allows for the construction 
 of a natural mortality prior weighted across methods by the user. 
 
