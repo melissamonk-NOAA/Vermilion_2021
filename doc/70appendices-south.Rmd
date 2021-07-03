@@ -49,6 +49,8 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_SCA.md")
   sa4ss::read_child("./indices/vermilion_WCGBTS_writeup_SCA.md")
 ``` 
 
+\clearpage 
+
 
 # References
        

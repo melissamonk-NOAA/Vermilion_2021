@@ -17,7 +17,7 @@ dropone <- readxl::read_xlsx(dropone.filein) %>%
 dropone2 <- readxl::read_xlsx(dropone.filein) %>%
   mutate(across(where(is.numeric), round, 3)) %>%
   filter(!grepl("Size", Label)) %>%
-  select(c(1,8:13))
+  select(c(1,8:ncol(.)))
 ```
 
 

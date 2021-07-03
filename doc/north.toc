@@ -33,10 +33,9 @@
 \contentsline {subsubsection}{\numberline {2.4.1}Ageing Precision and Bias}{14}{subsubsection.2.4.1}%
 \contentsline {subsubsection}{\numberline {2.4.2}Maturity}{14}{subsubsection.2.4.2}%
 \contentsline {subsubsection}{\numberline {2.4.3}Fecundity}{14}{subsubsection.2.4.3}%
-\contentsline {subsubsection}{\numberline {2.4.4}Fecundity}{15}{subsubsection.2.4.4}%
-\contentsline {subsubsection}{\numberline {2.4.5}Natural Mortality}{15}{subsubsection.2.4.5}%
-\contentsline {subsubsection}{\numberline {2.4.6}Sex Ratio}{15}{subsubsection.2.4.6}%
-\contentsline {subsubsection}{\numberline {2.4.7}Weight-Length Relationship}{15}{subsubsection.2.4.7}%
+\contentsline {subsubsection}{\numberline {2.4.4}Natural Mortality}{15}{subsubsection.2.4.4}%
+\contentsline {subsubsection}{\numberline {2.4.5}Sex Ratio}{15}{subsubsection.2.4.5}%
+\contentsline {subsubsection}{\numberline {2.4.6}Weight-Length Relationship}{15}{subsubsection.2.4.6}%
 \contentsline {section}{\numberline {3}Assessment Model Description}{16}{section.3}%
 \contentsline {subsection}{\numberline {3.1}History of Modeling Approaches}{16}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Most Recent STAR Panel and SSC Recommendations}{16}{subsubsection.3.1.1}%
@@ -70,22 +69,22 @@
 \contentsline {section}{\numberline {6}Harvest Projections and Decision Tables}{23}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Regional Management and Spatial Management Considerations}{23}{subsection.6.1}%
 \contentsline {section}{\numberline {7}Unresolved Problems and Major Uncertainties}{24}{section.7}%
-\contentsline {section}{\numberline {8}Acknowledgments (not required for draft assessments)}{26}{section.8}%
-\contentsline {section}{\numberline {9}Tables}{27}{section.9}%
-\contentsline {section}{\numberline {10}Figures}{53}{section.10}%
-\contentsline {section}{\numberline {11}Appendix}{141}{section.11}%
-\contentsline {subsection}{\numberline {11.1}MRFSS Dockside Index of Abundance}{141}{subsection.11.1}%
-\contentsline {subsubsection}{\numberline {11.1.1}MRFSS Dockside CPFV Index, 1980-1999}{141}{subsubsection.11.1.1}%
-\contentsline {subsection}{\numberline {11.2}California Onboard CPFV Index of Abundance}{153}{subsection.11.2}%
-\contentsline {subsubsection}{\numberline {11.2.1}Califronia Onboard Observer Survey, 1999-2019}{153}{subsubsection.11.2.1}%
-\contentsline {subsection}{\numberline {11.3}Deb Wilson-Vandenberg Onboard CPFV Index of Abundance}{167}{subsection.11.3}%
-\contentsline {subsubsection}{\numberline {11.3.1}Deb Wilson-Vandenberg Index}{167}{subsubsection.11.3.1}%
-\contentsline {subsection}{\numberline {11.4}CRFS PR Dockside Index of Abundance}{178}{subsection.11.4}%
-\contentsline {subsubsection}{\numberline {11.4.1}CRFS Dockside Private Boat Index}{178}{subsubsection.11.4.1}%
-\contentsline {subsection}{\numberline {11.5}CCFRP Index of Abundance}{189}{subsection.11.5}%
-\contentsline {subsubsection}{\numberline {11.5.1}California Collaborative Fisheries Research Project Index}{189}{subsubsection.11.5.1}%
-\contentsline {subsection}{\numberline {11.6}WCGBTS Index of Abundance}{201}{subsection.11.6}%
-\contentsline {subsubsection}{\numberline {11.6.1}Northwest Fisheries Science Center West Coast Groundfish Bottom Trawl Survey}{201}{subsubsection.11.6.1}%
-\contentsline {subsection}{\numberline {11.7}Recreational Regulations}{209}{subsection.11.7}%
-\contentsline {subsection}{\numberline {11.8}Graphic of California recreational regulations over time.}{210}{subsection.11.8}%
-\contentsline {section}{\numberline {12}References}{212}{section.12}%
+\contentsline {section}{\numberline {8}Acknowledgments (not required for draft assessments)}{25}{section.8}%
+\contentsline {section}{\numberline {9}Tables}{26}{section.9}%
+\contentsline {section}{\numberline {10}Figures}{52}{section.10}%
+\contentsline {section}{\numberline {11}Appendix}{145}{section.11}%
+\contentsline {subsection}{\numberline {11.1}MRFSS Dockside Index of Abundance}{145}{subsection.11.1}%
+\contentsline {subsubsection}{\numberline {11.1.1}MRFSS Dockside CPFV Index, 1980-1999}{145}{subsubsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.2}California Onboard CPFV Index of Abundance}{157}{subsection.11.2}%
+\contentsline {subsubsection}{\numberline {11.2.1}Califronia Onboard Observer Survey, 1999-2019}{157}{subsubsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.3}Deb Wilson-Vandenberg Onboard CPFV Index of Abundance}{171}{subsection.11.3}%
+\contentsline {subsubsection}{\numberline {11.3.1}Deb Wilson-Vandenberg Index}{171}{subsubsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.4}CRFS PR Dockside Index of Abundance}{182}{subsection.11.4}%
+\contentsline {subsubsection}{\numberline {11.4.1}CRFS Dockside Private Boat Index}{182}{subsubsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.5}CCFRP Index of Abundance}{193}{subsection.11.5}%
+\contentsline {subsubsection}{\numberline {11.5.1}California Collaborative Fisheries Research Project Index}{193}{subsubsection.11.5.1}%
+\contentsline {subsection}{\numberline {11.6}WCGBTS Index of Abundance}{205}{subsection.11.6}%
+\contentsline {subsubsection}{\numberline {11.6.1}Northwest Fisheries Science Center West Coast Groundfish Bottom Trawl Survey}{205}{subsubsection.11.6.1}%
+\contentsline {subsection}{\numberline {11.7}Recreational Regulations}{213}{subsection.11.7}%
+\contentsline {subsection}{\numberline {11.8}Graphic of California recreational regulations over time.}{214}{subsection.11.8}%
+\contentsline {section}{\numberline {12}References}{216}{section.12}%

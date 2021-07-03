@@ -80,7 +80,7 @@ in some southern California port complexes through 1983. See Appendix A of Dick
 et al. [-@Dick2007] and Pearson et al. [-@Pearson2008]; pp. 8 and 15-16] for 
 further details.
 
-Commercial catches from 1978-present were pulled from the CALCOM database, which is stratified using an identical design as the pre-1978 data described above and ensured consistency of the port complex and gear groupings over the entire time series (1969-2020). Although available strata definitions within PacFIN do not match the design of the California commercial catch expansion [@Pearson19xx], the STAT was able to manually aggregate data from PacFIN to almost exactly match the CALCOM estimates (Figure \ref(fig:calcom-pacfin)). The STAT recommends that port complex and gear group definitions used to expand California commercial catch estimates be incorporated into PacFIN lookup tables to facilitate future comparisons, ensure consistency between the two systems, and help identify potential errors.
+Commercial catches from 1978-present were pulled from the CALCOM database, which is stratified using an identical design as the pre-1978 data described above and ensured consistency of the port complex and gear groupings over the entire time series (1969-2020). Although available strata definitions within PacFIN do not match the design of the California commercial catch expansion [@Pearson19xx], the STAT was able to manually aggregate data from PacFIN to almost exactly match the CALCOM estimates (Figure \@ref(fig:calcom-pacfin)). The STAT recommends that port complex and gear group definitions used to expand California commercial catch estimates be incorporated into PacFIN lookup tables to facilitate future comparisons, ensure consistency between the two systems, and help identify potential errors.
 
 
 
@@ -88,12 +88,10 @@ Commercial catches from 1978-present were pulled from the CALCOM database, which
 *Commercial length and age composition data*
 
 Biological data (lengths) from the commercial fisheries that landed `r spp` were extracted 
-from CALCOM. The CALCOM length composition data were “expanded” (catch-weighted by stratum, then aggregated by region, gear group, and year) to better represent the size composition of the landed catch.
-. The length composition and mean 
-lengthby year are available in Figures \@ref(fig:len-data-COM-HKL) and \@ref(fig:mean-com-len-data-COM-HKL) 
+from CALCOM. The CALCOM length composition data were “expanded” (catch-weighted by stratum, then aggregated by region, gear group, and year) to better represent the size composition of the landed catch. The length composition is available in Figure \@ref(fig:len-data-COM-HKL) 
 for the commercial hook-and-line fleet, 
-\@ref(fig:len-data-COM-TWL) and \@ref(fig:mean-com-len-data-COM-TWL) for the commercial trawl fleet, 
-and \@ref(fig:len-data-COM-NET and \@ref(fig:mean-com-len-data-COM-NET) for the commercial net fleet.
+`r ifelse(model.area=='NCA', noquote("\\ref{fig:len-data-COM-TWL} for the commercial trawl fleet"), "")` 
+and \@ref(fig:len-data-COM-NET) for the commercial net fleet.
 Input sample sizes for commercial length composition were based on the number of port samples and are in Table \@ref(tab:length-sample-size). Length compositions with fewer than 30 measured fish in a region/gear/year combination were not included in the model likelihood.
 
 

@@ -78,6 +78,18 @@ sa4ss::add_figure(
 )
 ```
 
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = file.path(base_loc_plots, "bio11_spawningoutput_age.png"),
+  caption = "Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age",
+  label = 'spawnage'
+)
+```
+
+\FloatBarrier
+
 <!-- ======================================================================= -->
 <!-- ***************************** Sex Ratios ****************************** --> 
 <!-- ======================================================================= -->
@@ -104,11 +116,3 @@ for (i in 1:length(sex.ratio.filein)) {
 
 ```
 
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-  filein = file.path(base_loc,"plots", "bio11_spawningoutput_age.png"),
-  caption = "Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age",
-  label = 'spawningoutputage'
-)
-```

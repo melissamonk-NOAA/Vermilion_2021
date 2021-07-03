@@ -617,7 +617,7 @@ in some southern California port complexes through 1983. See Appendix A of Dick
 et al. [-@Dick2007] and Pearson et al. [-@Pearson2008]; pp. 8 and 15-16] for 
 further details.
 
-Commercial catches from 1978-present were pulled from the CALCOM database, which is stratified using an identical design as the pre-1978 data described above and ensured consistency of the port complex and gear groupings over the entire time series (1969-2020). Although available strata definitions within PacFIN do not match the design of the California commercial catch expansion [@Pearson19xx], the STAT was able to manually aggregate data from PacFIN to almost exactly match the CALCOM estimates (Figure \ref(fig:calcom-pacfin)). The STAT recommends that port complex and gear group definitions used to expand California commercial catch estimates be incorporated into PacFIN lookup tables to facilitate future comparisons, ensure consistency between the two systems, and help identify potential errors.
+Commercial catches from 1978-present were pulled from the CALCOM database, which is stratified using an identical design as the pre-1978 data described above and ensured consistency of the port complex and gear groupings over the entire time series (1969-2020). Although available strata definitions within PacFIN do not match the design of the California commercial catch expansion [@Pearson19xx], the STAT was able to manually aggregate data from PacFIN to almost exactly match the CALCOM estimates (Figure \@ref(fig:calcom-pacfin)). The STAT recommends that port complex and gear group definitions used to expand California commercial catch estimates be incorporated into PacFIN lookup tables to facilitate future comparisons, ensure consistency between the two systems, and help identify potential errors.
 
 
 
@@ -625,12 +625,10 @@ Commercial catches from 1978-present were pulled from the CALCOM database, which
 *Commercial length and age composition data*
 
 Biological data (lengths) from the commercial fisheries that landed vermilion rockfish were extracted 
-from CALCOM. The CALCOM length composition data were “expanded” (catch-weighted by stratum, then aggregated by region, gear group, and year) to better represent the size composition of the landed catch.
-. The length composition and mean 
-lengthby year are available in Figures \@ref(fig:len-data-COM-HKL) and \@ref(fig:mean-com-len-data-COM-HKL) 
+from CALCOM. The CALCOM length composition data were “expanded” (catch-weighted by stratum, then aggregated by region, gear group, and year) to better represent the size composition of the landed catch. The length composition is available in Figure \@ref(fig:len-data-COM-HKL) 
 for the commercial hook-and-line fleet, 
-\@ref(fig:len-data-COM-TWL) and \@ref(fig:mean-com-len-data-COM-TWL) for the commercial trawl fleet, 
-and \@ref(fig:len-data-COM-NET and \@ref(fig:mean-com-len-data-COM-NET) for the commercial net fleet.
+`r ifelse(model.area=='NCA', noquote("\@ref(fig:len-data-COM-TWL) for the commercial trawl fleet",,"") 
+and \@ref(fig:len-data-COM-NET) for the commercial net fleet.
 Input sample sizes for commercial length composition were based on the number of port samples and are in Table \@ref(tab:length-sample-size). Length compositions with fewer than 30 measured fish in a region/gear/year combination were not included in the model likelihood.
 
 
@@ -709,7 +707,7 @@ catch from the southern region to the northern region from 1980-1989, creating
 a spatially consistent time series of landings over the entire time series.
 
 
-Ultimately, the STAT chose to use recreational catch in numbers rather than catch in weight for the California assessment models. Since data from [@Albin1993] were only available as catch in numbers, the ratios used to partition SLO County catch may not be consistent if applied to catch in weight due to differences in average weight between regions (Figure \@ref(fig:rec-avg-weight)). Also, because missing weight estimates were concentrated over the period 2001-2004 rather than being spread over the entire time series, the method used to impute weights could have a greater influence on short-term stock dynamics.
+Ultimately, the STAT chose to use recreational catch in numbers rather than catch in weight for the California assessment models. Since data from [@Albin1993] were only available as catch in numbers, the ratios used to partition SLO County catch may not be consistent if applied to catch in weight due to differences in average weight between regions (Figure \@ref(fig:rec-avg-weights)). Also, because missing weight estimates were concentrated over the period 2001-2004 rather than being spread over the entire time series, the method used to impute weights could have a greater influence on short-term stock dynamics.
 
 
 As noted above, MRFSS sampling was halted from 1990-1992 due to funding issues. 
@@ -1095,16 +1093,12 @@ ogive (Figure \@ref(fig:maturity)).
 ### Fecundity
 Phillips (1964) [-@Phillips1964] reported fecundity for nominal “vermilion” rockfish collected in waters off California. Based on a sample of 12 fish ranging in size from 315-550 mm total length, he reported the maximum and minimum number of eggs as 1,625,600 and 63,300 per female, respectively. Love et al. [-@Love1990b] estimated fecundity of fish in southern California, and reported a allometric fecundity - length relationship (eggs vs. total length, cm) with an exponent of 5.02, suggesting a significant increase in weight-specific fecundity with female size given a roughly cubic weight-length relationship. Dick et al. [-@Dick2017] conducted a meta-analysis of Sebastes fecundity-length relationships. Insufficient data were available to model the subgenus *Rosicola*, but the predictive distribution of the fecundity-length exponent for the genus as whole centered around a value of 4, supporting a general pattern of increasing weight-specific fecundity among the Sebastes. Analyses to date have not examined size-dependent changes in brood frequency for vermilion or sunset rockfishes, i.e. fecundity estimates represent brood fecundity.
 
-For this assessment, new observations of fecundity at length were supplied by S. Beyer (UCSC / SWFSC, pers. comm.). These data were combined with digitized historical data sets mentioned above to estimate a new fecundity-length relationship (Figure here). The relationship between fecundity (millions of eggs) and fork length (cm) estimated from these data and used in the assessment was
+For this assessment, new observations of fecundity at length were supplied by S. Beyer (UCSC / SWFSC, pers. comm.). These data were combined with digitized historical data sets mentioned above to estimate a new fecundity-length relationship (Figure \@ref(fig:fitted-fecundity)). The relationship between fecundity (millions of eggs) and fork length (cm) estimated from these data and used in the assessment was
  $F = 2.8e^{-9}L^{4.97}$
 
-The resulting relationship between fecundity by female weight (kg) is in Figure \@ref(fig:fecundity), with spawning output at age is in Figure \@ref(fig:spawningoutpuage).
+The resulting relationship between fecundity by female weight (kg) is in Figure \@ref(fig:fecundity), with spawning output at age is in Figure \@ref(fig:spawnage)).
 
 
-### Fecundity
-
-Fecundity by female weight (kg) is in Figure \@ref(fig:fecundity).
-Spawning output at age is in Figure \@ref(fig:spawningoutpuage).
 
 
 ### Natural Mortality
@@ -1369,7 +1363,7 @@ log-likelihood nor the parameter estimates changed.
 
 # Assessment Results
 
-The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \@ref(tab:parms). Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \@ref(tab:referenceES). Estimates of stock size and status over time are shown in Table \@ref(tab:timeseries). 
+The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \@ref(tab:params). Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \@ref(tab:referenceES). Estimates of stock size and status over time are shown in Table \@ref(tab:timeseries). 
 
 
 ## Parameter Estimates
@@ -1571,7 +1565,7 @@ The predicted spawning output from the base model shows frogs (Figure \@ref(fig:
 The 2020. spawning biomass relative to unfished equilibrium spawning biomass is above the target of 40% of unfished levels (Figure \@ref(fig:depl)). 
 The relative fishing intensity, $(1-SPR)/(1-SPR_{50\%})$, was above the management target frogs (Figure \@ref(fig:1-spr)). The relative fishing intensity has been frogs (Figure \@ref(fig:phase)).
 
-Table \ref{tab:ref-pts} shows the full suite of estimated reference points for the base model and Figures \@ref(fig:yield2) and \@ref(fig:yield3) show the equilibrium curve based on a steepness value fixed at 0.72.
+Table \@ref(tab:referenceES) shows the full suite of estimated reference points for the base model and Figures \@ref(fig:yield2) and \@ref(fig:yield3) show the equilibrium curve based on a steepness value fixed at 0.72.
 
 
 
@@ -1587,7 +1581,7 @@ To better understand how data from individual fishery sectors or scientific surv
 
 
 
-Drop-one analysis of the northern California assessment revealed slightly larger variability in spawning output trends relative to the south, but all runs were still within the range of uncertainty estimated by the base model (Figure \@ref(fig:drop-spawnbio)). Removal of most fleets had little effect on terminal stock status, with best estimates in the vicinity of target biomass levels (Figure \@ref(fig:drop-bratio)). An exception was removal of the REC_PC fleet, which caused the best estimate of terminal depletion to drop just above the minimum stock size threshold. This suggests that the REC_PC data sets, together, favor a less-depleted stock relative to data from the other fleets. The strength of the 2016 year class is sensitive to the removal of fleet-specific data sets (Figure \@ref(fig:recdev)). Removal of the REC_PR fleet produces the largest estimates of 2016 cohort size, and removal of the NWFSC_TWL fleet estimates a 2016 deviation that is less than half as large (but still positive). Uncertainty in the strength of this recent year class should be taken into consideration for short term forecasts of stock abundance and yield. Changes in likelihoods, parameter estimates and derived quantities are recorded in Table \@ref(tab:drop-one). Comparison of likelihoods among drop-one scenarios should be treated with caution due to changes in the data sets that were fit in each model run.
+Drop-one analysis of the northern California assessment revealed slightly larger variability in spawning output trends relative to the south, but all runs were still within the range of uncertainty estimated by the base model (Figure \@ref(fig:drop-spawnbio)). Removal of most fleets had little effect on terminal stock status, with best estimates in the vicinity of target biomass levels (Figure \@ref(fig:drop-bratio)). An exception was removal of the REC_PC fleet, which caused the best estimate of terminal depletion to drop just above the minimum stock size threshold. This suggests that the REC_PC data sets, together, favor a less-depleted stock relative to data from the other fleets. The strength of the 2016 year class is sensitive to the removal of fleet-specific data sets (Figure \@ref(fig:drop-recdev)). Removal of the REC_PR fleet produces the largest estimates of 2016 cohort size, and removal of the NWFSC_TWL fleet estimates a 2016 deviation that is less than half as large (but still positive). Uncertainty in the strength of this recent year class should be taken into consideration for short term forecasts of stock abundance and yield. Changes in likelihoods, parameter estimates and derived quantities are recorded in Table \@ref(tab:drop-one). Comparison of likelihoods among drop-one scenarios should be treated with caution due to changes in the data sets that were fit in each model run.
 
 
 
@@ -1618,10 +1612,10 @@ Results from the pre-STAR base model were compared to several alternative model 
 - Mirror the recreational discard fleets’ selectivity curves to the corresponding retained fleets (PC or PR) rather than fitting to discard length comps as in the base model.
 
 
-Trends in spawning output for the northern California assessment model were generally robust to this set of sensitivities (Figure \@ref(fig:sens1-spawnbio)). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness was estimated at a higher value than the prior mean (estimated at 0.94 vs. fixed at 0.72). Similarly, stock status did not vary greatly among this set of sensitivity runs, with only a minor increase in 2021 relative spawning output when using McAllister-Ianelli weights and a slight decrease when estimating steepness (Figure \@ref(fig:sens1-bratio)). The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method significantly reduced the magnitude of the 2016 year class, and generally increased the variance of the estimated deviations. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table \@ref(tab:sense1)), and resulted in lower estimates of the male and female natural mortality rates (Table \@ref(tab:data-weight)).
+Trends in spawning output for the northern California assessment model were generally robust to this set of sensitivities (Figure \@ref(fig:sens1-spawnb)). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness was estimated at a higher value than the prior mean (estimated at 0.94 vs. fixed at 0.72). Similarly, stock status did not vary greatly among this set of sensitivity runs, with only a minor increase in 2021 relative spawning output when using McAllister-Ianelli weights and a slight decrease when estimating steepness (Figure \@ref(fig:sens1-bratio)). The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method significantly reduced the magnitude of the 2016 year class, and generally increased the variance of the estimated deviations. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table \@ref(tab:sens1)), and resulted in lower estimates of the male and female natural mortality rates (Table \@ref(tab:data-weights)).
 
 
-Trends in spawning output for the southern California assessment model were generally robust to this set of sensitivities, with the exception of recent estimates of spawning output which were much lower when using McAllister-Ianelli data weights, relative to the Francis method used in the base model (Figure \@ref(fig:sens1-spawnbio)). The model tuned to McAllister-Ianelli weights was below target biomass, while the other models that used Francis weights showed similar trends in depletion and were above target biomass (Figure \@ref(fig:sens1-bratio)). The McAllister-Ianelli approach estimated a natural mortality rate that was about 20% lower than the Francis method (Table \@ref(tab:drop-one)). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness in the southern region was estimated at a similar value than the prior mean (estimated at 0.77 vs. fixed at 0.72), and estimation of this parameter did not have a large effect on uncertainty in spawning output or recruitment deviations. The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method increased the variance of the estimated deviations as well as the estimated strength of the 1999 year class, relative to the models using the Francis approach. Changing the start date of the recruitment deviations had almost no effect. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table \@ref(tab:sens1)).
+
 
 ## Unresolved Problems and Major Uncertainties
 
@@ -1987,7 +1981,7 @@ REC\_PR\_6 &  & 1928-1980 &  &  &  & 1981-2004 & 2005-2020\\
 
 \begingroup\fontsize{10}{12}\selectfont
 
-\begin{longtable}[t]{>{\raggedleft\arraybackslash}p{3cm}>{\raggedleft\arraybackslash}p{3cm}>{\raggedleft\arraybackslash}p{3cm}>{\raggedleft\arraybackslash}p{3cm}>{\raggedleft\arraybackslash}p{3cm}>{\raggedleft\arraybackslash}p{3cm}>{\raggedleft\arraybackslash}p{3cm}>{\raggedleft\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{3cm}>{\raggedleft\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{3cm}>{\raggedleft\arraybackslash}p{3cm}}
+\begin{longtable}[t]{rrrrrrrrlrlr}
 \caption{(\#tab:com-allocate)Re-apportionment of the Ralson et al. (2010) commercial catch reconstruction to north and south of Point Conception. San Luis Obispo county landings were assigned to southern California.}\\
 \toprule
 \multicolumn{1}{c}{ } & \multicolumn{1}{c}{FB 105} & \multicolumn{3}{c}{NMFS ERD live-access server} & \multicolumn{1}{c}{ } & \multicolumn{2}{c}{Major SLO Ports} & \multicolumn{4}{c}{ } \\
@@ -2671,36 +2665,36 @@ OFLCatch\_2023 & 168.686 & 184.428 & 171.247 & 166.356 & 127.785 & 170.296\\
 \caption{(\#tab:drop-one2)Likelihood components from the leave one out analysis of the pre-STAR base model.}
 \centering
 \resizebox{\linewidth}{!}{
-\begin{tabular}[t]{lrrrrrr}
+\begin{tabular}[t]{lrrrrrrr}
 \toprule
-Label & no\_REC\_PR & DWV\_ONBOARD & no\_NWFSC\_TWL & no\_REC\_ONBOARD & no\_ABRAMS\_RESEARCH & no\_SWFSC\_GF\_ECOL\\
+Label & no\_REC\_PR & DWV\_ONBOARD & no\_NWFSC\_TWL & no\_REC\_ONBOARD & no\_ABRAMS\_RESEARCH & no\_SWFSC\_GF\_ECOL & no\_CCFRP\\
 \midrule
-N.Parms & 103.000 & 115.000 & 112.000 & 115.000 & 115.000 & 115.000\\
-TOTAL & 842.732 & 901.725 & 453.806 & 915.877 & 723.727 & 815.093\\
-Survey & -41.896 & -45.539 & -53.087 & -49.159 & -55.803 & -55.071\\
-Length\_comp & 296.000 & 355.090 & 317.016 & 370.117 & 298.109 & 352.340\\
-Age\_comp & 573.202 & 582.738 & 185.839 & 581.878 & 468.925 & 504.841\\
-Recruitment & 15.378 & 9.408 & 3.887 & 12.928 & 12.300 & 12.815\\
-Parm\_priors & 0.041 & 0.020 & 0.146 & 0.105 & 0.189 & 0.160\\
-NatM\_uniform\_Fem\_GP\_1 & 0.094 & 0.096 & 0.082 & 0.089 & 0.090 & 0.087\\
-L\_at\_Amin\_Fem\_GP\_1 & 7.873 & 7.894 & 2.665 & 7.858 & 7.907 & 8.042\\
-L\_at\_Amax\_Fem\_GP\_1 & 55.398 & 55.461 & 54.476 & 55.475 & 55.895 & 55.465\\
-VonBert\_K\_Fem\_GP\_1 & 0.143 & 0.144 & 0.177 & 0.144 & 0.142 & 0.141\\
-CV\_young\_Fem\_GP\_1 & 0.103 & 0.097 & 0.054 & 0.097 & 0.103 & 0.094\\
-CV\_old\_Fem\_GP\_1 & 0.058 & 0.074 & 0.091 & 0.075 & 0.085 & 0.075\\
-NatM\_uniform\_Mal\_GP\_1 & 0.090 & 0.092 & 0.087 & 0.085 & 0.078 & 0.082\\
-L\_at\_Amin\_Mal\_GP\_1 & 6.125 & 5.987 & 5.661 & 6.075 & 6.293 & 6.198\\
-L\_at\_Amax\_Mal\_GP\_1 & 49.932 & 49.806 & 48.895 & 49.911 & 51.341 & 49.814\\
-VonBert\_K\_Mal\_GP\_1 & 0.197 & 0.200 & 0.223 & 0.198 & 0.186 & 0.196\\
-CV\_young\_Mal\_GP\_1 & 0.076 & 0.076 & 0.050 & 0.076 & 0.082 & 0.076\\
-SR\_LN(R0) & 6.167 & 6.261 & 6.054 & 6.065 & 6.022 & 6.048\\
-Q\_extraSD\_REC\_PR(6) &  & 0.183 & 0.190 & 0.186 & 0.184 & 0.189\\
-Bratio\_2021 & 0.461 & 0.475 & 0.350 & 0.367 & 0.387 & 0.374\\
-SSB\_unfished & 1062.550 & 1138.850 & 1258.060 & 1097.050 & 1075.040 & 1116.830\\
-Totbio\_unfished & 6200.400 & 6546.320 & 6381.090 & 6147.110 & 6464.640 & 6307.160\\
-Recr\_unfished & 476.663 & 523.510 & 425.995 & 430.385 & 412.280 & 423.416\\
-Dead\_Catch\_SPR & 146.545 & 156.489 & 141.986 & 139.694 & 140.130 & 139.100\\
-OFLCatch\_2023 & 210.223 & 212.608 & 144.434 & 160.312 & 168.305 & 161.547\\
+N.Parms & 103.000 & 115.000 & 112.000 & 115.000 & 115.000 & 115.000 & 112.000\\
+TOTAL & 842.732 & 901.725 & 453.806 & 915.877 & 723.727 & 815.093 & 903.442\\
+Survey & -41.896 & -45.539 & -53.087 & -49.159 & -55.803 & -55.071 & -47.274\\
+Length\_comp & 296.000 & 355.090 & 317.016 & 370.117 & 298.109 & 352.340 & 357.127\\
+Age\_comp & 573.202 & 582.738 & 185.839 & 581.878 & 468.925 & 504.841 & 584.196\\
+Recruitment & 15.378 & 9.408 & 3.887 & 12.928 & 12.300 & 12.815 & 9.221\\
+Parm\_priors & 0.041 & 0.020 & 0.146 & 0.105 & 0.189 & 0.160 & 0.165\\
+NatM\_uniform\_Fem\_GP\_1 & 0.094 & 0.096 & 0.082 & 0.089 & 0.090 & 0.087 & 0.086\\
+L\_at\_Amin\_Fem\_GP\_1 & 7.873 & 7.894 & 2.665 & 7.858 & 7.907 & 8.042 & 7.682\\
+L\_at\_Amax\_Fem\_GP\_1 & 55.398 & 55.461 & 54.476 & 55.475 & 55.895 & 55.465 & 55.360\\
+VonBert\_K\_Fem\_GP\_1 & 0.143 & 0.144 & 0.177 & 0.144 & 0.142 & 0.141 & 0.147\\
+CV\_young\_Fem\_GP\_1 & 0.103 & 0.097 & 0.054 & 0.097 & 0.103 & 0.094 & 0.095\\
+CV\_old\_Fem\_GP\_1 & 0.058 & 0.074 & 0.091 & 0.075 & 0.085 & 0.075 & 0.075\\
+NatM\_uniform\_Mal\_GP\_1 & 0.090 & 0.092 & 0.087 & 0.085 & 0.078 & 0.082 & 0.082\\
+L\_at\_Amin\_Mal\_GP\_1 & 6.125 & 5.987 & 5.661 & 6.075 & 6.293 & 6.198 & 6.015\\
+L\_at\_Amax\_Mal\_GP\_1 & 49.932 & 49.806 & 48.895 & 49.911 & 51.341 & 49.814 & 49.986\\
+VonBert\_K\_Mal\_GP\_1 & 0.197 & 0.200 & 0.223 & 0.198 & 0.186 & 0.196 & 0.198\\
+CV\_young\_Mal\_GP\_1 & 0.076 & 0.076 & 0.050 & 0.076 & 0.082 & 0.076 & 0.075\\
+SR\_LN(R0) & 6.167 & 6.261 & 6.054 & 6.065 & 6.022 & 6.048 & 5.998\\
+Q\_extraSD\_REC\_PR(6) &  & 0.183 & 0.190 & 0.186 & 0.184 & 0.189 & 0.156\\
+Bratio\_2021 & 0.461 & 0.475 & 0.350 & 0.367 & 0.387 & 0.374 & 0.381\\
+SSB\_unfished & 1062.550 & 1138.850 & 1258.060 & 1097.050 & 1075.040 & 1116.830 & 1105.680\\
+Totbio\_unfished & 6200.400 & 6546.320 & 6381.090 & 6147.110 & 6464.640 & 6307.160 & 6117.130\\
+Recr\_unfished & 476.663 & 523.510 & 425.995 & 430.385 & 412.280 & 423.416 & 402.527\\
+Dead\_Catch\_SPR & 146.545 & 156.489 & 141.986 & 139.694 & 140.130 & 139.100 & 130.307\\
+OFLCatch\_2023 & 210.223 & 212.608 & 144.434 & 160.312 & 168.305 & 161.547 & 122.502\\
 \bottomrule
 \end{tabular}}
 \end{table}
@@ -2849,27 +2843,29 @@ OFLCatch\_2023 & 168.686 & 134.232 & 169.016 & 166.763 & 122.969 & 172.726\\
 
 
 
-![Length composition data from the commercial hook-and-line fishery.\label{fig:len-data-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/comp_lendat_bubflt11mkt0.png){width=60% height=60% alt="Length composition data from the commercial hook-and-line fishery."}
 
-![Length composition data from the commercial trawl fishery.\label{fig:len-data-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/comp_lendat_bubflt2mkt0.png){width=60% height=60% alt="Length composition data from the commercial trawl fishery."}
 
-![Length composition data from the commercial net fishery.\label{fig:len-data-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/comp_lendat_bubflt3mkt0.png){width=60% height=60% alt="Length composition data from the commercial net fishery."}
+![Length composition data from the commercial hook-and-line fishery.\label{fig:len-data-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt1mkt0.png){width=100% height=100% alt="Length composition data from the commercial hook-and-line fishery."}
 
-![Length composition data from the recreational PC retained fishery.\label{fig:len-data-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/comp_lendat_bubflt4mkt0_page2.png){width=60% height=60% alt="Length composition data from the recreational PC retained fishery."}
+![Length composition data from the commercial trawl fishery.\label{fig:len-data-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt2mkt0.png){width=100% height=100% alt="Length composition data from the commercial trawl fishery."}
 
-![Length composition data from the recreational PC discard fishery.\label{fig:len-data-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/comp_lendat_bubflt5mkt0.png){width=60% height=60% alt="Length composition data from the recreational PC discard fishery."}
+![Length composition data from the commercial net fishery.\label{fig:len-data-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt3mkt0.png){width=100% height=100% alt="Length composition data from the commercial net fishery."}
 
-![Length composition data from the recreational PR retained fishery.\label{fig:len-data-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/comp_lendat_bubflt6mkt0_page2.png){width=60% height=60% alt="Length composition data from the recreational PR retained fishery."}
+![Length composition data from the recreational PC retained fishery.\label{fig:len-data-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt4mkt0_page2.png){width=100% height=100% alt="Length composition data from the recreational PC retained fishery."}
 
-![Length composition data from the Deb Wilson-Vandenberg onboard survey.\label{fig:len-data-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/comp_lendat_bubflt8mkt0.png){width=60% height=60% alt="Length composition data from the Deb Wilson-Vandenberg onboard survey."}
+![Length composition data from the recreational PC discard fishery.\label{fig:len-data-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt5mkt0.png){width=100% height=100% alt="Length composition data from the recreational PC discard fishery."}
 
-![Length composition data from the West coast groundfish bottomfish trawl survey.\label{fig:len-data-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/comp_lendat_bubflt9mkt0.png){width=60% height=60% alt="Length composition data from the West coast groundfish bottomfish trawl survey."}
+![Length composition data from the recreational PR retained fishery.\label{fig:len-data-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt6mkt0_page2.png){width=100% height=100% alt="Length composition data from the recreational PR retained fishery."}
 
-![Length composition data from the Abrams thesis research survey.\label{fig:len-data-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/comp_lendat_bubflt11mkt0.png){width=60% height=60% alt="Length composition data from the Abrams thesis research survey."}
+![Length composition data from the Deb Wilson-Vandenberg onboard survey.\label{fig:len-data-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt8mkt0.png){width=100% height=100% alt="Length composition data from the Deb Wilson-Vandenberg onboard survey."}
 
-![Length composition data from the SWFSC groundfish ecology survey.\label{fig:len-data-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/comp_lendat_bubflt12mkt0.png){width=60% height=60% alt="Length composition data from the SWFSC groundfish ecology survey."}
+![Length composition data from the West coast groundfish bottomfish trawl survey.\label{fig:len-data-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt9mkt0.png){width=100% height=100% alt="Length composition data from the West coast groundfish bottomfish trawl survey."}
 
-![Length composition data from the California Collaborative Fisheries Research Project survey.\label{fig:len-data-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/comp_lendat_bubflt13mkt0.png){width=60% height=60% alt="Length composition data from the California Collaborative Fisheries Research Project survey."}
+![Length composition data from the Abrams thesis research survey.\label{fig:len-data-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt11mkt0.png){width=100% height=100% alt="Length composition data from the Abrams thesis research survey."}
+
+![Length composition data from the SWFSC groundfish ecology survey.\label{fig:len-data-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt12mkt0.png){width=100% height=100% alt="Length composition data from the SWFSC groundfish ecology survey."}
+
+![Length composition data from the California Collaborative Fisheries Research Project survey.\label{fig:len-data-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_lendat_bubflt13mkt0.png){width=100% height=100% alt="Length composition data from the California Collaborative Fisheries Research Project survey."}
 
 
 
@@ -2919,6 +2915,13 @@ bias for reader 1 and curvilinear standard deviation for both readers."}
 
 ![Fecundity as a function of weight.\label{fig:fecundity}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/bio8_fecundity_wt.png){width=100% height=100% alt="Fecundity as a function of weight."}
 
+
+
+
+![Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age.\label{fig:spawnage}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/bio11_spawningoutput_age.png){width=100% height=100% alt="Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age."}
+
+\FloatBarrier
+
 <!-- ======================================================================= -->
 <!-- ***************************** Sex Ratios ****************************** --> 
 <!-- ======================================================================= -->
@@ -2929,10 +2932,6 @@ bias for reader 1 and curvilinear standard deviation for both readers."}
 ![Sex ratios for length comps, whole catchSWFSC groundfish ecology survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/sexratio_len_flt12mkt0.png){width=100% height=100% alt="Sex ratios for length comps, whole catchSWFSC groundfish ecology survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line."}
 
 ![Sex ratios for length comps, whole catchWest coast groundfish bottomfish trawl survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/sexratio_len_flt9mkt0.png){width=100% height=100% alt="Sex ratios for length comps, whole catchWest coast groundfish bottomfish trawl survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line."}
-
-
-
-![Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age.\label{fig:spawningoutputage}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/bio11_spawningoutput_age.png){width=100% height=100% alt="Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age."}
 
 \FloatBarrier
 

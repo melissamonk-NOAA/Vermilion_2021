@@ -1,6 +1,6 @@
 # Assessment Results
 
-The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \@ref(tab:parms). Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \@ref(tab:referenceES). Estimates of stock size and status over time are shown in Table \@ref(tab:timeseries). 
+The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \@ref(tab:params). Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \@ref(tab:referenceES). Estimates of stock size and status over time are shown in Table \@ref(tab:timeseries). 
 
 
 ## Parameter Estimates
@@ -300,7 +300,7 @@ The predicted spawning output from the base model shows frogs (Figure \@ref(fig:
 The `r endyr`. spawning biomass relative to unfished equilibrium spawning biomass is above the target of 40% of unfished levels (Figure \@ref(fig:depl)). 
 The relative fishing intensity, $(1-SPR)/(1-SPR_{50\%})$, was above the management target frogs (Figure \@ref(fig:1-spr)). The relative fishing intensity has been frogs (Figure \@ref(fig:phase)).
 
-Table \ref{tab:ref-pts} shows the full suite of estimated reference points for the base model and Figures \@ref(fig:yield2) and \@ref(fig:yield3) show the equilibrium curve based on a steepness value fixed at `r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"], 2)`.
+Table \@ref(tab:referenceES) shows the full suite of estimated reference points for the base model and Figures \@ref(fig:yield2) and \@ref(fig:yield3) show the equilibrium curve based on a steepness value fixed at `r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"], 2)`.
 
 
 

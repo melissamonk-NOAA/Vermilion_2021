@@ -61,7 +61,7 @@ catch from the southern region to the northern region from 1980-1989, creating
 a spatially consistent time series of landings over the entire time series.
 
 
-Ultimately, the STAT chose to use recreational catch in numbers rather than catch in weight for the California assessment models. Since data from [@Albin1993] were only available as catch in numbers, the ratios used to partition SLO County catch may not be consistent if applied to catch in weight due to differences in average weight between regions (Figure \@ref(fig:rec-avg-weight)). Also, because missing weight estimates were concentrated over the period 2001-2004 rather than being spread over the entire time series, the method used to impute weights could have a greater influence on short-term stock dynamics.
+Ultimately, the STAT chose to use recreational catch in numbers rather than catch in weight for the California assessment models. Since data from [@Albin1993] were only available as catch in numbers, the ratios used to partition SLO County catch may not be consistent if applied to catch in weight due to differences in average weight between regions (Figure \@ref(fig:rec-avg-weights)). Also, because missing weight estimates were concentrated over the period 2001-2004 rather than being spread over the entire time series, the method used to impute weights could have a greater influence on short-term stock dynamics.
 
 
 As noted above, MRFSS sampling was halted from 1990-1992 due to funding issues. 

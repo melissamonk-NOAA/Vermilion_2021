@@ -111,8 +111,8 @@ kableExtra::kbl(
   caption = "Re-apportionment of the Ralson et al. (2010) commercial catch reconstruction to north and south of Point Conception. San Luis Obispo county landings were assigned to southern California.") %>%
  add_header_above(c(" "=1, "FB 105" = 1, "NMFS ERD live-access server" = 3,
                     " " = 1, "Major SLO Ports" = 2, " " =4)) %>%
-    column_spec(1:12, width = "3cm")  %>%
-  kableExtra::kable_styling(latex_options = "repeat_header", font_size = 10) 
+ #   column_spec(1:12, width = "2cm")  %>%
+    kableExtra::kable_styling(latex_options = "repeat_header", font_size = 10) 
 
 ```
 

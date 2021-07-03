@@ -102,7 +102,7 @@ setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")
 #make northern model
 system("taskkill /f /im Acrobat.exe")
 bookdown::render_book("00a.Rmd",
-                     # output_format ="bookdown::pdf_document2",
+                      output_format ="bookdown::pdf_document2",
                       output_dir = getwd(), clean = FALSE, 
                       config_file = "_bookdown_north.yml",
                       params = list(model = set.model))
@@ -116,13 +116,13 @@ set.model = "south"
 setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")
 #make southern model 
 system("taskkill /f /im Acrobat.exe")
-bookdown::render_book("00a.Rmd", output_format ="bookdown::pdf_document2",
-                    #  output_dir = getwd(), clean = FALSE, 
+bookdown::render_book("00a.Rmd", 
+                      output_format ="bookdown::pdf_document2",
+                     output_dir = getwd(), clean = FALSE, 
                       config_file = "_bookdown_south.yml",
-                      file.rename = paste0(params$model.region,"_", Sys.time),
                       params = list(model = set.model))
 
-file.rename("sorth.pdf",paste0(set.model,"_", format(Sys.time(), "%d-%b-%Y %H.%M"),".pdf"))
+file.rename("south.pdf",paste0(set.model,"_", format(Sys.time(), "%d-%b-%Y %H.%M"),".pdf"))
 
 setwd("..")
 
