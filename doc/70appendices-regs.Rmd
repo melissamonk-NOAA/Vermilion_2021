@@ -1,0 +1,4 @@
+
+
+
+![Recreational depth closures for the northern California management area.\label{fig:rec-reg-n}](figures/Regs_Northern.png)

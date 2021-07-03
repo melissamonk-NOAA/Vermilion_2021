@@ -2,7 +2,7 @@
 
 
 ```{r, albin, reasults = 'asis'}
-albin <- kableExtra::kbl(
+kableExtra::kbl(
   readxl::read_xlsx("./tables/Allocate_MRFSS_1980-1989.xlsx", sheet = 2),
   booktabs = TRUE,
   caption = "Estimated ratio of SLO catch (in numbers) to catch in California 
@@ -90,3 +90,29 @@ kableExtra::kbl(catch_source, booktabs = TRUE,
  # column_spec(2:length(catch_source$CALCOM), width = "2cm") %>%
   kableExtra::kable_styling(latex_options = c("striped", "scale_down"))
 ```
+
+
+
+```{r, warning = FALSE, inclue = FALSE}
+area6 <- readxl::read_xlsx("./tables/Area_6_Adjustment_to_Ralston.xlsx", sheet = 1) %>%
+  mutate_at(c(2:8,10), round,3)
+
+
+```
+
+
+
+
+
+```{r, com-allocate, results = 'asis'}
+kableExtra::kbl(
+  area6,
+  booktabs = TRUE, longtable=TRUE,
+  caption = "Re-apportionment of the Ralson et al. (2010) commercial catch reconstruction to north and south of Point Conception. San Luis Obispo county landings were assigned to southern California.") %>%
+ add_header_above(c(" "=1, "FB 105" = 1, "NMFS ERD live-access server" = 3,
+                    " " = 1, "Major SLO Ports" = 2, " " =4)) %>%
+    column_spec(1:12, width = "3cm")  %>%
+  kableExtra::kable_styling(latex_options = "repeat_header", font_size = 10) 
+
+```
+

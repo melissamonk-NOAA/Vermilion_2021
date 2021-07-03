@@ -1,10 +1,16 @@
 ### Key Assumptions and Structural Choices
 
+A key assumption made by this assessment model is that the biological parameters between the cryptic species pair vermilion and sunset rockfish are the same. The catch histories are inseparable at this time, especially for 
+the early commercial landings. Ongoing research may shed light on this issue.
+
 
 
 
 ### Evaluation of Model Parameters
 
+A number of models were explored to look the the first year of estimated recruitment deviations.  
+
+Models estimating steepness were also considered.
 
 
 

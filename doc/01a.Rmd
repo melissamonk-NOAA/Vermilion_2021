@@ -7,5 +7,3 @@
 
 
 \setlength\parskip{0.5em plus 0.1em minus 0.2em}
-
-\newpage

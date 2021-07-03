@@ -52,28 +52,3 @@ for (i in unique(model$len_comp_fit_table$Fleet)) {
 
 \FloatBarrier
 
-<!-- ======================================================================= -->
-<!-- ***************************** Sex Ratios ****************************** --> 
-<!-- ======================================================================= -->
-
-```{r, results='asis'}
-sex.ratio.filein = list.files(path = paste0(base_loc, "/plots"), 
-                  pattern = glob2rx("^sexratio_len_flt*mkt0.png$"), 
-                  full.names = TRUE)
-
-for (i in 1:length(sex.ratio.filein)) {
-
-   add_figure(
-      filein = sex.ratio.filein[i],
-      caption = paste0("Sex ratios for length comps, whole catch",
-      fleet_info$FleetNames_parsed[fleet_info$fleet_ID==gsub(".*[flt]([^m]+)[m].*", "\\1", sex.ratio.filein[i])],". Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line"),
-    label = paste0("sexratio-", fleet_info$FleetNames_label[fleet_info$fleet_ID==gsub(".*[flt]([^m]+)[m].*", "\\1", sex.ratio.filein[i])])
-    #,
-  #  width = 50,
-  #  height = 50
-  )
-}
-
-
-
-```

@@ -5,9 +5,9 @@
 For landings estimates prior to 1916, we based our reconstruction on the total 
 rockfish catches reported in a summary of early California fisheries landings by 
 Sette and Fielder [-@Sette1928] for the years 1888, 1892, 1895, 1899, 1904, 1908 
-and 1915.  No rockfish were reported for 1888, thus we assumed no catches for that
-year and interpolated the catches between 0 and the 1892 catches (total of 834 
-tons) reported.  Similarly, catches between the reported years were interpolated 
+and 1915.  No rockfish were reported for 1888. We assumed no catches prior to 1875
+ and interpolated the catches between 0 and the 1892 catches (total of 834 
+tons) reported. Similarly, catches between the reported years were interpolated 
 assuming a straight linear trend between the years reported.  We used a 
 ratio-estimator derived from the catch reconstruction fraction of vermilion 
 rockfish in total rockfish landings for the 1916 to 1919 period (the ratio for
@@ -30,9 +30,10 @@ were “One of the more important commercial species, it is one of three leading
 species in Southern California." However, by the time of that report, vermilion 
 represented five to eight percent of the southern California catch (based on 
 Ralston et al. [-@Ralston2010]), much more than at the beginning of the time 
-series.  Future efforts to improve historical catch reconstructions by accounting 
+series. This uncertainty is investigated more deeply in the model uncertainty and sensitivity section. Future efforts to improve historical catch reconstructions by accounting 
 for the shift in effort over time to deeper waters should continue to be flagged 
 as a research need. 
+
 
 
 *Commercial Landings, 1916-2020*
@@ -48,7 +49,7 @@ Luis Obispo County (north of Point Conception). To allocate catches from Region
 by Dick et al. [-@Dick2007] for the assessment of cowcod. Specifically, 
 port-specific landings of total rockfish from the CDFW Fish Bulletin series were 
 used to determine the annual fraction of landings in Region 6 that was south of
-Point Conception (Table XXX). Rockfish landings at that time were not reported 
+Point Conception (Table \@ref(tab:com-allocate)). Rockfish landings at that time were not reported 
 at the species level. Although the use of total rockfish landings to partition 
 catch in Region 6 is not ideal, we see this as the best available option in the 
 absence of port-specific species composition data. 
@@ -60,12 +61,10 @@ known regions and gears. Catches from known regions, but unknown gears, were
 allocated proportional to catches by known gears within the same region. In this way, 
 total annual removals in California were kept consistent with those reported by 
 Ralston et al. [-@Ralston2010b], and assigned to the assessment areas north and 
-south of Point Conception, and either trawl or ‘non-trawl’ gear types. To 
-approximate California landings from 1900 to 1915, we used a linear interpolation 
-starting from zero metric tons in 1899 to the amount of ‘non-trawl’ catch, by 
-area, in 1916 (Table frog-EJ?). Since hook and line gears catch the majority of 
+south of Point Conception, and either trawl or ‘non-trawl’ gear types.Since hook and line gears catch the majority of 
 commercially-caught vermilion rockfish, we assigned estimated catch in the 
 ‘non-trawl’ category to the hook and line fleet in the assessment model.
+
 
 In September 2005, the California Cooperative Groundfish Survey (CCGS) 
 incorporated newly acquired commercial landings statistics from 1969-77 into 
@@ -81,23 +80,25 @@ in some southern California port complexes through 1983. See Appendix A of Dick
 et al. [-@Dick2007] and Pearson et al. [-@Pearson2008]; pp. 8 and 15-16] for 
 further details.
 
-frog: Include a few sentences on why we didn't use PacFIN
+Commercial catches from 1978-present were pulled from the CALCOM database, which is stratified using an identical design as the pre-1978 data described above and ensured consistency of the port complex and gear groupings over the entire time series (1969-2020). Although available strata definitions within PacFIN do not match the design of the California commercial catch expansion [@Pearson19xx], the STAT was able to manually aggregate data from PacFIN to almost exactly match the CALCOM estimates (Figure \ref(fig:calcom-pacfin)). The STAT recommends that port complex and gear group definitions used to expand California commercial catch estimates be incorporated into PacFIN lookup tables to facilitate future comparisons, ensure consistency between the two systems, and help identify potential errors.
+
 
 
 
 *Commercial length and age composition data*
 
-Biological data from the commercial fisheries that landed `r spp` were extracted 
-from CALCOM. The CALCOM length composition data were catch-weighted 
-to "expanded" length the raw length composition data. The length composition 
-size by year are available in Figure \@ref(fig:len-data-COM-HKL) for the commercial hook-and-line fleet,
-`r ifelse(model.area=='NCA', noquote("Figure\ref{fig:len-data-COM-TWL} for the commercial trawl fleet"),"")`
-and Figure \@ref(fig:len-data-COM-NET) for the commercial net fleet.
-Input sample sizes for commercial length composition varied depending on the 
-available data source and are in Table \@ref(tab:length-sample-size). 
+Biological data (lengths) from the commercial fisheries that landed `r spp` were extracted 
+from CALCOM. The CALCOM length composition data were “expanded” (catch-weighted by stratum, then aggregated by region, gear group, and year) to better represent the size composition of the landed catch.
+. The length composition and mean 
+lengthby year are available in Figures \@ref(fig:len-data-COM-HKL) and \@ref(fig:mean-com-len-data-COM-HKL) 
+for the commercial hook-and-line fleet, 
+\@ref(fig:len-data-COM-TWL) and \@ref(fig:mean-com-len-data-COM-TWL) for the commercial trawl fleet, 
+and \@ref(fig:len-data-COM-NET and \@ref(fig:mean-com-len-data-COM-NET) for the commercial net fleet.
+Input sample sizes for commercial length composition were based on the number of port samples and are in Table \@ref(tab:length-sample-size). Length compositions with fewer than 30 measured fish in a region/gear/year combination were not included in the model likelihood.
 
 
-Commercial discard length compositions from \gls{wcgop} were provided on 
+
+Commercial discard length compositions from WCGOP were provided on 
 17 Nov 2020 by Andi Stephens (NWFSC).  Only 224 vermilion were measured statewide from 
 2004-2018.  The sparse discard length composition data were not considered for use in the 
 model as discarded catch is a small fraction of the overall commercial landings.

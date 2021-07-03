@@ -11,6 +11,7 @@ caption = "Photograph of the *oldest* aged fish used in the assessment with annu
 label = 'oldfish')
 ```
 
+
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(fig_loc, "Reader 1 vs Reader 2.png"), 
@@ -18,6 +19,7 @@ caption = "Aging precision between initial and blind double reads for vermilion.
 Numbers in the bubbles are the sample sizes of otoliths cross-read",
 label = 'reader1reader2')
 ```	
+
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
@@ -29,12 +31,14 @@ label = 'truereads')
 ```	
 
 
+
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(base_loc,"plots", "numbers10_ageerror_matrix_1.png"),
 caption = "Distribution of observed age at true age for ageing error type 1",
 label = 'ageerror')
 ```
+
 
 
 
@@ -45,6 +49,7 @@ sa4ss::add_figure(
   label = 'weightlength'
 )
 ```
+
 
 
 ```{r, results = 'asis'}
@@ -58,10 +63,45 @@ sa4ss::add_figure(
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
+  filein = file.path(fig_loc, "fitted_fec_len.png"),
+  caption = "Fitted fecundity as a function of weight from samples of vermilion rockfish",
+  label = 'fitted-fecundity'
+)
+```
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
   filein = file.path(base_loc,"plots", "bio8_fecundity_wt.png"),
   caption = "Fecundity as a function of weight",
   label = 'fecundity'
 )
+```
+
+<!-- ======================================================================= -->
+<!-- ***************************** Sex Ratios ****************************** --> 
+<!-- ======================================================================= -->
+
+```{r, results='asis'}
+sex.ratio.filein = list.files(path = paste0(base_loc, "/plots"), 
+                  pattern = glob2rx("^sexratio_len_flt*mkt0.png$"), 
+                  full.names = TRUE)
+
+for (i in 1:length(sex.ratio.filein)) {
+
+   add_figure(
+      filein = sex.ratio.filein[i],
+      caption = paste0("Sex ratios for length comps, whole catch",
+      fleet_info$FleetNames_parsed[fleet_info$fleet_ID==gsub(".*[flt]([^m]+)[m].*", "\\1", sex.ratio.filein[i])],". Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line"),
+    label = paste0("sexratio-", fleet_info$FleetNames_label[fleet_info$fleet_ID==gsub(".*[flt]([^m]+)[m].*", "\\1", sex.ratio.filein[i])])
+    #,
+  #  width = 50,
+  #  height = 50
+  )
+}
+
+
+
 ```
 
 

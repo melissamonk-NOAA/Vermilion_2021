@@ -53,9 +53,9 @@ sa4ss::read_child("68a-figures-recruit-refpoints.Rmd")
 \FloatBarrier
 
 ```{r render-69, results = "asis"}
-if(model.area=="NCA"){
-sa4ss::read_child("69figures-sens-likeli-retro-north.Rmd")
-} else {
-  sa4ss::read_child("69figures-sens-likeli-retro-south.Rmd")
-}
+#if(model.area=="NCA"){
+sa4ss::read_child("69figures-sens-likeli-retro.Rmd")
+# } else {
+#   sa4ss::read_child("69figures-sens-likeli-retro-south.Rmd")
+# }
 ```

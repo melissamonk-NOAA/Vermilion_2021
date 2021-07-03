@@ -20,6 +20,7 @@ header-includes:
   - \usepackage{makecell}
   - \usepackage{xcolor}
   - \usepackage{placeins}
+  - \usepackage[inner]{showlabels}
 output:
   sa4ss::techreport_pdf:
     default
@@ -37,7 +38,13 @@ Cape Mendocino, Pt. Conception and OR border -->
 \newcommand\CAOR{$42^\circ 00^\prime N$}
 
 
+```{r, setup, include=FALSE}
+rmarkdown::find_pandoc(version = "2.14.0.3")
+```
+
+
 ```{r opts, include = FALSE}
+
 library(kableExtra)
 library(dplyr)
 library(ggplot2)

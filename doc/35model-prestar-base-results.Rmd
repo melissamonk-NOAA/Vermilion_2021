@@ -3,68 +3,6 @@
 The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \@ref(tab:parms). Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \@ref(tab:referenceES). Estimates of stock size and status over time are shown in Table \@ref(tab:timeseries). 
 
 
-Current figures to site
-
-Figure \@ref(fig:selex-length-all)  
-Figure \@ref(fig:selex-age-all)  
-Figure \@ref(fig:sel03_len_timevary_surf_flt4sex1)    #
-Figure \@ref(fig:sel03_len_timevary_surf_flt6sex1)   #
-Figure \@ref(fig:endyr-selex-COM-HKL)  
-Figure \@ref(fig:endyr-selex-COM-TWL)  
-Figure \@ref(fig:endyr-selex-COM-NET)  
-Figure \@ref(fig:endyr-selex-REC-PC)  
-Figure \@ref(fig:endyr-selex-REC-PC-DIS)  
-Figure \@ref(fig:endyr-selex-REC-PR)  
-Figure \@ref(fig:endyr-selex-REC-PR-DIS)  
-Figure \@ref(fig:endyr-selex-NWFSC-TWL)  
-Figure \@ref(fig:lenfits-all)  
-Figure \@ref(fig:len-pearson-COM-HKL)  
-Figure \@ref(fig:mean-len-fit-COM-HKL)  
-Figure \@ref(fig:len-pearson-COM-TWL)  
-Figure \@ref(fig:mean-len-fit-COM-TWL)  
-Figure \@ref(fig:len-pearson-COM-NET)  
-Figure \@ref(fig:mean-len-fit-COM-NET)  
-Figure \@ref(fig:len-pearson-REC-PC)  
-Figure \@ref(fig:mean-len-fit-REC-PC)  
-Figure \@ref(fig:len-pearson-REC-PC-DIS)  
-Figure \@ref(fig:mean-len-fit-REC-PC-DIS)  
-Figure \@ref(fig:len-pearson-DWV-ONBOARD)  
-Figure \@ref(fig:mean-len-fit-DWV-ONBOARD)  
-Figure \@ref(fig:len-pearson-NWFSC-TWL)  
-Figure \@ref(fig:mean-len-fit-NWFSC-TWL)  
-Figure \@ref(fig:len-pearson-ABRAMS-RESEARCH)  
-Figure \@ref(fig:mean-len-fit-ABRAMS-RESEARCH)  
-Figure \@ref(fig:len-pearson-SWFSC-GF-ECOL)  
-Figure \@ref(fig:mean-len-fit-SWFSC-GF-ECOL)  
-Figure \@ref(fig:len-pearson-CCFRP)    
-Figure \@ref(fig:mean-len-fit-CCFRP)  
-Figure \@ref(fig:sexratio-ABRAMS-RESEARCH )  
-Figure \@ref(fig:sexratio-SWFSC-GF-ECOL)  
-Figure \@ref(fig:sexratio-NWFSC-TWL)  
-Figure \@ref(fig:ssb)  
-Figure \@ref(fig:depl)  
-Figure \@ref(fig:cpueall)  
-Figure \@ref(fig:log-cpue-REC-PC)    
-Figure \@ref(fig:cpue-resid-REC-PC)
-Figure \@ref(fig:log-cpue-REC-PR)  
-Figure \@ref(fig:cpue-resid-REC-PR)  
-Figure \@ref(fig:log-cpue-DWV-ONBOARD)  
-Figure \@ref(fig:cpue-resid-DWV-ONBOARD)  
-Figure \@ref(fig:log-cpue-REC-PC-ONBOARD)  
-Figure \@ref(fig:cpue-resid-REC-PC-ONBOARD)  
-Figure \@ref(fig:log-cpue-CCFRP)  
-Figure \@ref(fig:cpue-resid-CCFRP)  
-Figure \@ref(fig:comp_condAALfit_residsflt9mkt0_page1)   #
-Figure \@ref(fig:comp_condAALfit_residsflt9mkt0_page3)   #
-Figure \@ref(fig:comp_condAALfit_residsflt11mkt0)   #
-Figure \@ref(fig:comp_condAALfit_residsflt12mkt0)   #
-Figure \@ref(fig:comp_condAALfit_Andre_plotsflt9mkt0_page1)   #
-Figure \@ref(fig:comp_condAALfit_Andre_plotsflt9mkt0_page4)   #
-Figure \@ref(fig:recruits)  
-Figure \@ref(fig:rec-devs)  
-
-
-
 ## Parameter Estimates
 
 ```{r parameters, include = FALSE, eval = TRUE, cache = TRUE}
@@ -142,13 +80,26 @@ Selectivity parameters
 ## Fixed parameters
 - $h$ controlling the steepness of the stock-recruit relationship
 - $M$ for males
-- Selectiviy parameters that were estimated at the bounds and fixed in the pre-STAR model
+- Selectivity parameters that were estimated at the bounds and fixed in the pre-STAR model
 
 ```
 
 
+## Natural Mortality
+
+```{asis, echo = model.area=='NCA'}
+Female natural mortality was estimated at 0.09 and male natural mortality was fixed at the female-estimated value. 
+
+```
+
+
+```{asis, echo = model.area=='SCA'}
+Female natural mortality was estimated at 1.12 and male natural mortality was fixed at the female-estimated value, using an offset of 0.
+
+```
+
 ## Growth (Length-at-Age)
-```{r}
+```{r, include=FALSE}
 # calculate Linf and t0 from Schnute vB parameterization
 unSchnute.fn <- function(Amin, Amax, Lmin, Lmax, k)
 {
@@ -165,7 +116,24 @@ unSchnute.fn(0, 30, 8.3113, 53.6773, 0.1679070)
 unSchnute.fn(0, 30, 8.3113*exp(-2.3422300), 53.6773*exp(-0.0667862), 0.1679070*exp(0.2930410))
 ```
 
-\@ref(fig:fittedgrowth)
+
+
+
+
+```{asis, echo = model.area=='NCA'}
+Internal estimates of growth were estimated directly for males, and not as an offset. An offset for male growth was explored, but the CV of length at $L_{age=30}$ was estimated around 2-3%.  When the male CV was fixed to female CV, the assessment model shrunk the CV of females at $L_{age=30}$, which the STAT did not find reasonable.  Therefore, the male CV at $L_{age=30}$ was fixed at the CV estimated for females of 0.07 (Figure \@ref(fig:fittedgrowth)).
+
+The direct estimation of male  $L_{age=0}=6.02$ was reasonable compared to female  $L_{age=0}=7.8$.  While $k$ was estimated  larger for males (0.19) than females (0.15), female size at t $L_{age=30}$  of 55 cm was larger than males at 79 cm.  These results are consistent with other studies that have looked at sex-specific growth in vermilion rockfish.
+
+
+```
+
+
+```{asis, echo = model.area=='SCA'}
+The male growth parameters were estimated as offsets to female growth, with the male  $L_{age=0}$ and associated CV fixed to the same estimates as females (7.7 cm and a CV of 0.9). Female $k$ was estimated at 0.16, slightly higher than the estimates for males of $k$ of 0.13.  Females reached a larger size at $L_{age=30}$ of 55 cm than males, which reached an estimated $L_{age=30}$ of 52 cm (Figure \@ref(fig:fittedgrowth)).  The CV’s of the $L_{age=30}$ for males and females were 0.07 and 0.6, respectively
+
+
+```
 
 
 \begin{centering}
@@ -178,13 +146,63 @@ Males $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Mal_GP_1[1], 1)` cm; $k$
 
 \vspace{0.5cm}
 
+
+
+
 ## Selectivity
 
+
+```{asis, echo = model.area=='NCA'}
+Figure \@ref(fig:selex-length-all)  
+Figure \@ref(fig:selex-age-all)  
+Figure \@ref(fig:sel03_len_timevary_surf_flt4sex1)    #
+Figure \@ref(fig:sel03_len_timevary_surf_flt6sex1)   #
+Figure \@ref(fig:endyr-selex-COM-HKL)  
+Figure \@ref(fig:endyr-selex-COM-TWL)  
+Figure \@ref(fig:endyr-selex-COM-NET)  
+Figure \@ref(fig:endyr-selex-REC-PC)  
+Figure \@ref(fig:endyr-selex-REC-PC-DIS)  
+Figure \@ref(fig:endyr-selex-REC-PR)  
+Figure \@ref(fig:endyr-selex-REC-PR-DIS)  
+Figure \@ref(fig:endyr-selex-NWFSC-TWL)  
+
+```
+
+
+```{asis, echo = model.area=='SCA'}
+Figure \@ref(fig:selex-length-all)  
+Figure \@ref(fig:selex-age-all)  
+Figure \@ref(fig:sel03_len_timevary_surf_flt4sex1)    #
+Figure \@ref(fig:sel03_len_timevary_surf_flt6sex1)   #
+Figure \@ref(fig:endyr-selex-COM-HKL)  
+Figure \@ref(fig:endyr-selex-COM-TWL)  
+Figure \@ref(fig:endyr-selex-COM-NET)  
+Figure \@ref(fig:endyr-selex-REC-PC)  
+Figure \@ref(fig:endyr-selex-REC-PC-DIS)  
+Figure \@ref(fig:endyr-selex-REC-PR)  
+Figure \@ref(fig:endyr-selex-REC-PR-DIS)  
+Figure \@ref(fig:endyr-selex-NWFSC-TWL)  
+
+```
 
 
 ## Recruitment Deviations
 
 
+```{asis, echo = model.area=='NCA'}
+
+Figure \@ref(fig:recruits)  
+Figure \@ref(fig:rec-devs)  
+
+```
+
+
+```{asis, echo = model.area=='SCA'}
+
+Figure \@ref(fig:recruits)  
+Figure \@ref(fig:rec-devs)  
+
+```
 
 
 
@@ -197,27 +215,102 @@ The full r4ss plotting output is available in the supplementary material.
 
 ### Data weighting
 
+Francis weighting was selected and provided better fits to the indices 
+and was re-tuned for five iterations to determine if the method serially downweighted any 
+one data source.
 
 
 *Indices*
 
 
-*Length and Ages*
+```{asis, echo = model.area=='NCA'}
+
+Figure \@ref(fig:cpueall)  
+Figure \@ref(fig:log-cpue-REC-PC)    
+Figure \@ref(fig:cpue-resid-REC-PC)
+Figure \@ref(fig:log-cpue-REC-PR)  
+Figure \@ref(fig:cpue-resid-REC-PR)  
+Figure \@ref(fig:log-cpue-DWV-ONBOARD)  
+Figure \@ref(fig:cpue-resid-DWV-ONBOARD)  
+Figure \@ref(fig:log-cpue-REC-PC-ONBOARD)  
+Figure \@ref(fig:cpue-resid-REC-PC-ONBOARD)  
+Figure \@ref(fig:log-cpue-CCFRP)  
+Figure \@ref(fig:cpue-resid-CCFRP)  
+
+
+```
+
+
+```{asis, echo = model.area=='SCA'}
+
+```
+
+
+*Length Composition*
+
+
+```{asis, echo = model.area=='NCA'}
+Figure \@ref(fig:lenfits-all)  
+Figure \@ref(fig:len-pearson-COM-HKL)  and Figure \@ref(fig:mean-len-fit-COM-HKL)  
+Figure \@ref(fig:len-pearson-COM-TWL)  and Figure \@ref(fig:mean-len-fit-COM-TWL)  
+Figure \@ref(fig:len-pearson-COM-NET)  and Figure \@ref(fig:mean-len-fit-COM-NET)  
+Figure \@ref(fig:len-pearson-REC-PC)  and Figure \@ref(fig:mean-len-fit-REC-PC)  
+Figure \@ref(fig:len-pearson-REC-PC-DIS)  and Figure \@ref(fig:mean-len-fit-REC-PC-DIS)  
+Figure \@ref(fig:len-pearson-DWV-ONBOARD)  and Figure \@ref(fig:mean-len-fit-DWV-ONBOARD)  
+Figure \@ref(fig:len-pearson-NWFSC-TWL)  and Figure \@ref(fig:mean-len-fit-NWFSC-TWL)  
+Figure \@ref(fig:len-pearson-ABRAMS-RESEARCH)  and Figure \@ref(fig:mean-len-fit-ABRAMS-RESEARCH)  
+Figure \@ref(fig:len-pearson-SWFSC-GF-ECOL)  and Figure \@ref(fig:mean-len-fit-SWFSC-GF-ECOL)  
+Figure \@ref(fig:len-pearson-CCFRP)    and Figure \@ref(fig:mean-len-fit-CCFRP)  
+
+
+```
+
+
+```{asis, echo = model.area=='SCA'}
+
+```
+
+*Conditional Age at Length*
+
+
+```{asis, echo = model.area=='NCA'}
+
+Figure \@ref(fig:ssb)  
+Figure \@ref(fig:depl)  
+Figure \@ref(fig:comp_condAALfit_residsflt9mkt0_page1)   #
+Figure \@ref(fig:comp_condAALfit_residsflt9mkt0_page3)   #
+Figure \@ref(fig:comp_condAALfit_residsflt11mkt0)   #
+Figure \@ref(fig:comp_condAALfit_residsflt12mkt0)   #
+Figure \@ref(fig:comp_condAALfit_Andre_plotsflt9mkt0_page1)   #
+Figure \@ref(fig:comp_condAALfit_Andre_plotsflt9mkt0_page4)   #
+
+```
+
+
+```{asis, echo = model.area=='SCA'}
+
+```
 
 
 
-
-
-
-
+*Stock recruitment curve*
 Figure \@ref(fig:bh-curve)
 Figure \@ref(fig:bh-resids)
 
 
-*Stock recruitment curve*
 
 
 ## Population Trajectory
+
+
+```{asis, echo = model.area=='NCA'}
+
+```
+
+
+```{asis, echo = model.area=='SCA'}
+
+```
 
 
 ### Reference Points

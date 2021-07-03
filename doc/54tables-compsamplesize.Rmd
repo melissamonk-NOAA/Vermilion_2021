@@ -7,10 +7,23 @@ length.sample.size <- readxl::read_xlsx("./tables/sample sizes for vermilion com
   mutate(N_INIT_BASIS = gsub("\\_", " ",N_INIT_BASIS)) %>%
   mutate(N_INIT_BASIS = tolower(N_INIT_BASIS)) %>%
   mutate_at(vars(N_TRIPS), as.numeric) %>%
-   mutate(N_TRIPS  = round(N_TRIPS, 2)) 
+   mutate(N_TRIPS  = round(N_TRIPS, 2)) %>%
+  select(-N_INIT_BASIS)
 #  mutate(N_TRIPS  = if_else(grepl("fish/trip", N_INIT_BASIS), round(N_TRIPS,2), round(N_TRIPS,0)))
 
 
+
+#sample size methods
+inputN <- readxl::read_xlsx("./tables/sample sizes for vermilion composition data.xlsx", sheet = paste0(model.area, "_LEN")) %>%
+  dplyr::select(YEAR, SOURCE, FLEET, FLEET_NO, N_INIT_BASIS) %>% 
+  unique() %>%
+  group_by(FLEET_NO, SOURCE, N_INIT_BASIS) %>%
+    summarise(minYr = min(YEAR),
+              maxYr = max(YEAR)) %>%
+  mutate(yrs = paste0(minYr,"-",maxYr)) %>%
+  dplyr::select(SOURCE, FLEET_NO, N_INIT_BASIS, yrs) %>%
+  unique() %>%
+  rename(`Initial Sample Size Basis` = N_INIT_BASIS)
 
 
 age.sample.size <- readxl::read_xlsx("./tables/sample sizes for vermilion composition data.xlsx", sheet = paste0(model.area, "_AGE")) %>%
@@ -24,8 +37,8 @@ age.sample.size <- readxl::read_xlsx("./tables/sample sizes for vermilion compos
 kableExtra::kbl(length.sample.size, 
                 longtable = TRUE, booktabs = TRUE, 
   caption = "Samples sizes of length composition data by year.",
-  col.names = c("Source", "Year", "Fleet(#)", "Number fish", "Sample size", "Trips", "Initial sample basis"),
-  align = 'cclrrrl', linesep = ""
+  col.names = c("Source", "Year", "Fleet(#)", "Number fish", "Sample size", "Trips"),
+ align = 'lllrrr', linesep = ""
 ) %>%
   column_spec(1, width = "2cm") %>%
   column_spec(2, width = "1cm") %>%
@@ -33,9 +46,19 @@ kableExtra::kbl(length.sample.size,
   column_spec(4, width = "1cm") %>%
   column_spec(5, width = "1cm") %>%
   column_spec(6, width = "1cm") %>%
-  column_spec(7, width = "4cm") %>%
-  kable_styling(latex_options = "repeat_header", font_size =8)
+  kable_styling(latex_options = "repeat_header", font_size = 10)
 ```
+
+
+```{r,length-inputN, results = 'asis'}
+kableExtra::kbl(inputN, 
+                booktabs = TRUE, 
+  caption = "Initial input samples sizes by fleet and year for length composition data.", align = 'lllrrr',
+linesep = ""
+) %>%
+  kable_styling(latex_options = "striped", font_size = 10)
+```
+
 
 \newpage
 

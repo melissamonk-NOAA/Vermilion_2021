@@ -2,40 +2,42 @@
 
 ### NWFSC West Coast Groundfish Bottom Trawl Survey
 
-The \Gls{s-wcgbt} is based on a random-grid design;
+The West Coast Groundfish Bottom Trawl Survey (WCGBTS) is based on a random-grid design;
 covering the coastal waters from a depth of 55-1,280 m [@Keller2017].
 This design generally uses four industry-chartered vessels per year assigned to 
 a roughly equal number of randomly selected grid cells and divided into two 'passes'
-of the coast. Two vessels fish from north to south during each pass between late 
+off the coast of Washington, Oregon, and California. Two vessels fish from north to south during each pass between late 
 May to early October. This design therefore incorporates both vessel-to-vessel 
 differences in catchability, as well as variance associated with selecting a 
 relatively small number (approximately 700) of possible cells from a very large 
 set of possible cells spread from the Mexican to the Canadian borders.
 
 Vermilion rockfish are strongly associated with rocky 
-habitat, e.g., untrawlable habitat, but can be found over soft bottom, especially as 
+habitat,i.e., untrawlable habitat, but can be found over soft bottom, especially as 
 juveniles.  This survey spans the entire West Coast and provided data for both the northern 
-and southern California assessments.
+and southern California assessments. However, this survey does not sample most rocky habitats, nor does the survey conduct sampling within the Cowcod Conservation Areas (CCAs) or the California state MPA network.
+
  
 **Available Data**
 
 *Age and Length Data.* Vermilion rockfish are not found in high abundance in this survey, and in most 
 cases lengths for the entire catch were available, i.e., few enough individuals were caught that 
 all were measured. The assessment north of Point Conception includes 467 ages, which 
-is almost of the vermilion rockfish with length (587 total) observed in this survey.
-For south of Point Conception 1,283 of the 1,962 vermilion observed  and measured were also aged. 
-The length composition and of vermilion from the WCGBT survey are in  Figure \@ref(fig:len-data-NWFSC-TWL). 
+is the majority of the vermilion rockfish with available length information (587 total).
+South of Point Conception, 1,283 of the 1,962 vermilion observed and measured were also aged. 
+The length compositions by year of vermilion from the WCGBT survey are shown in  Figure \@ref(fig:len-data-NWFSC-TWL). 
 
-*Maturity samples.* Maturity samples were analyzed by by Melissa Head, NWFSC and a 
+
+*Maturity samples.* Maturity samples were analyzed by by Melissa Head (NWFSC) and a 
 description of the results is in the section on biological data.
 
 *Index of abundance.* The index was considered, but not used in the pre-STAR base model. Sample 
 sizes of vermilion rockfish were low. A VAST model was attempted and did not converge 
-for either the northern or southern California data and a VAST model that modeled the 
-entire California coast assumed the same trends  in both areas.  The STAT also developed 
-a delta-glm model for each area (north and south of Point Conception). Full details on the 
-sample sizes of the observed data, the delta-generalized linear model explored and 
-diagnostics, are in the Appendix.  
+for either the northern or southern California data.  The STAT also developed 
+a delta-glm model for each area (north and south of Point Conception). Full details 
+of the final index are in the Appendix, including 
+sample sizes, model selection criteria, and model diagnostics.  
+
 
 
 
@@ -43,7 +45,7 @@ diagnostics, are in the Appendix.
 ### SWFSC Groundfish Ecology Cruises
 D. Pearson (SWFSC, retired) conducted a series of groundfish surveys (hook-and-line and 
 trawl) from 2003 - 2005 along the coast of California.  Surveys were conducted onboard 
-chartered vessels and NOAA research vessels.
+chartered commercial vessels and NOAA research vessels.
 
 Even though samples were collected via multiple gear types, they were combined for use 
 in the assessment.
@@ -59,7 +61,7 @@ The length composition includes 355 vermilion from these surveys
 ### J. Abrams thesis data
 
 For his master's thesis work at Humboldt State University, Jeff Abrams conducted fishery-independent
-hook-and-line surveys in 2010 and 2011 off of California's North Coast. Sites were randomly sampled from 
+hook-and-line surveys in 2010 and 2011 off of California's North Coast [@Abrams2014]. Sites were randomly sampled from 
 areas of known rocky habitat within six depth by distance-from-port strata out of three ports:
 Crescent City Harbor, Trinidad Bay and Noyo River Harbor.  The otoliths collected as part of this 
 study are valuable for nearshore groundfish stock assessments that are often lacking biological samples, 
@@ -77,12 +79,12 @@ samples in this model. The available length composition in Figure
 
 Since 2007, the California Collaborative Fisheries Research Project (CCFRP)
 has monitored several areas in California to 
-evaluate the performance of \Gls{mpa}s and understand nearshore fish populations
+evaluate the performance of MPAs and understand nearshore fish populations
 [@Wendt2009; @Starr2015]. In 2017, the survey expanded beyond the four 
-\Gls{mpa}s in central California
+MPAs in central California
 (A&ntilde;o Nuevo, Point Lobos, Point Buchon, and Piedras Blancas)
 to include the entire California coast.
-Fish are collected by volunteer anglers aboard \Gls{cpfv}s guided by one of 
+Fish are collected by volunteer anglers aboard Commercial Passenger Fishing Vessels (CPFV)s guided by one of 
 the following academic institutions based on proximity to fishing location:
 Humboldt State University;
 Bodega Marine Laboratories;
@@ -92,25 +94,26 @@ University of California, Santa Barbara; and
 Scripps Institution of Oceanography.
 
 Surveys consist of fishing with hook-and-line gear for 30-45 minutes within 
-randomly chosen 500 by 500 m grid cells within and outside \Gls{mpa}s.
+randomly chosen 500 by 500 m grid cells within and outside MPAs.
 Prior to 2017, all fish were measured for length and released or descended to depth;
 since then, some have been retained for biological collections including otoliths and fin clips. 
 This is the only long term fisheries-independent data series that spans the entire California 
-coast and provides data on fish stocks within California's network of MPAs.
+coast (although coastwide coverage is limited to recent years) and provides relative abundance and demographic data on fish stocks within California's network of MPAs.
+
 
 **Available Data**
 
-*Age and Length Data.* A total of 48 otoliths were available, but not included in the 
+*Age and Length Data.* A total of 48 otolithsfrom the CCFRP survey were available, but not included in the 
 assessment model due to low 
 annual sample sizes. The composition of length data from 4,344 vermilion encountered 
 in the CCFRP survey is in Figure \@ref(fig:len_data_REC-CCFRP).
 
 *Index of Abundance*
-The index of abundance in the pre-STAR base model is a Bayesian negative binomial 
+The index of abundance in the pre-STAR base model is based on a Bayesian negative binomial 
 model, and the posterior predictions were weighted with the assumption that 20% of 
 the available habitat within California state waters (0-3 nm) is within MPAs. 
 The SWFSC has worked extensively on quantifying rocky habitat from high resolution
-bahtymetric data collected as part of the Seafloor Mapping Program.  The quantification 
+bathymetric data collected as part of the Seafloor Mapping Program.  The quantification 
 of habitat has been used in a number of stock assessments to weight indices of abundance 
 since 2013.  This is the first time the habitat data are utilized to weight an inside/outside 
 MPA effet within an index.  Full details on the observed data, model selection and modeling 
@@ -145,31 +148,31 @@ The length composition can be found in \@ref(fig:len-data-NWFSC-HKL).
 
 *Index of Abundance.*
 The NWFSC hook-and-line survey has been used in a number of stock assessments.  Vermilion 
-is one of the most common species encountered in the survey and also provides information 
-on the stock inside the CCAs, which have been closed to fishing since 2002.  Detail on the 
-index of abundance, samples sizes and model selection can be found in the Appendix.
+is one of the most common species encountered in the survey and is one of the only sources of information 
+about the stock inside the CCAs, which have been closed to fishing since 2001.  Details regarding the 
+index of abundance, sample sizes and model selection can be found in the Appendix.
+
 
 
 ### California Department of Fish and Wildlife CPFV Survey
 
 The CDFW conducted a fishery-independent survey in the Southern California Bight 
-from 1976-1989 aboard research vessels. The purpose of the survey related to groundifhs 
-was to capture *Sebastes* specieds to determine composition (species, size and age) of 
-fish and maturity in the Southern California Bight.  The whereabouts of the majority of the 
+from 1976-1989 aboard research vessels. The purpose of the survey 
+was to capture *Sebastes* species and determine composition (species, size and age) of 
+fish and to estimate size at maturity.  The whereabouts of the majority of the 
 data from these cruises is unknown.  Bottom trawling in nearshore waters for juvenile 
 rockfish was conducted, but those data are unavailable. 
-This survey is also referred to as the 
-"green binder" survey, as green binders were discovered containing data from these surveys. 
-The SWFSC keypunched the available data and also houses the otolith collection from this study. 
-It may be possible in the future to recover additional data from available cruise reports.
+This collection of survey data is also referred to as the 
+"green binder" survey, as the data were discovered in green binders. 
+The SWFSC keypunched the available data and also houses some unknown fraction of the otolith collection from this study. It may be possible in the future to recover additional data from available cruise reports.
+
 
 **Available Data**
 
 *Age and Length Data.*
 A total of 389 vermilion otoliths that were matched to available 
-data from 1876-1977 and contained information on sex were aged for the assessment. 
-A total of 1,442 lebths spanning 1976-1979 were also included (Figure 
+data from 1976-1977 and contained information on sex were aged for the assessment. 
+A total of 1,442 lengths spanning 1976-1979 were also included (Figure 
 \@ref(fig:len-data-CDFW-RESEARCH)).
-
 
 ```

@@ -1,12 +1,21 @@
-## Model Specificiations
+## Model Specifications
+
+A decision was made by the STAT after discussions with the Pacific Fishery Management Council’s Groundfish Management Team and Groundfish Advisory Panel to model the areas north and south of Point Conception independently for a number of reasons. This included a discussion of the assumed higher densities of sunset rockfish south of Point Conception and the general decline in vermilion rockfish density as latitude increases.  The preliminary exploration of length data also suggested that the size composition of landed fish north and south of Point Conception differed in a number of fleets. The STAT did maintain consistency across the two models when the data supported the decisions, i.e., maintaining the same recreational and commercial fleet structures and sharing biological data from the more data-rich southern assessment.
+
+The commercial fleet catches includes dead discards, which were a small percent of the overall landings in both areas (averaging 7.4 mt coastwide since 2015, although increasing since 2017). In addition, there were very little data available from WCGOP. There are four recreational fleets representing retained and assumed-dead discard catches for the PC and PR fleets.  This follows the same practice as a number of other recent rockfish stock assessments in recent years, where the ability to accurately estimate a retention curve is masked by depth-dependent mortality rates. Vermilion rockfish is a desirable species in the recreational fleet and the majority of available lengths from discarded fish from the CDFW and Cal Poly observer programs were regulatory discards from trips when the groundfish fishery was closed and were not representative of discards in the recreational fleet.
+
+The specifications of the California models north and south of Point Conception are very similar.  The major differences between the two models are the availability of fishery-independent data sources that are region specific. 
+
+The fishery-independent data used to estimate the weight-length relationship and the maturity ogive were mainly derived from data collected south of Point Conception, and the parameters were shared across both models.
+
 
 The specification of the California models north and south of Point Conception 
 are very similar.  The major differences between the to models are the availability 
 of fishery-independent data sources that are region specific. 
 
-The `r Spp` assessment `r params$model` of Point Conception (\PtC) off the coast of California
-is assessed using a two-sex model with sex-specific life history parameters.  
-The model assumed seven fleets with removals beginning in `r startyr`: 
+The `r Spp` assessment `r params$model` of Point Conception (\PtC) off the coast of California is assessed using a two-sex model with sex-specific growth.
+
+The model assumed seven fishing fleets with removals beginning in `r startyr`: 
 
 *Commercial*: There are three commercial fleets; hook-and-line, trawl, and net. 
 All of the commercial fleets represented landed dead catch and assumed dead discards.
@@ -32,35 +41,30 @@ of Point Conception; 1) the MRFSS CPFV dockside survey, 2) Deb Wilson-Vandenberg
 Conception; 1) MRFSS CPFV dockside survey, 2) CDFW onboard observer survey, and 3) CRFS PR1 dockside survey.
 
 *Research*: There are four research fleets; 1) CDFW "green binder" research ,
-2) NWFSC WCGBT survey, and 3) NWFSC hook-and-line survey.
+2) NWFSC WCGBT survey, and 3) two fleets for the NWFSC hook-and-line survey.
 ```
 
 ### Additional Specifications
-
-
 
 ```{asis, echo = model.area=='NCA'}
 Selectivity was specified using the double normal parameterization within Stock Synthesis for all fleets. Selectivities were estimated for the commercial hook-and-line fleet, commercial trawl fleet, and the commercial net fleet.  Selectivity was estimated for the recreational PC fleet, recreational PC discard fleet and the Recreational PR fleet.  There were no length data available for the recreational PR fleet, and it mirrors the selectivity of the recreational PC discard fleet.
 Selectivity for the recreational PC onboard index of abundance is mirrored to the recreational 
 PC fleet as they share the same length composition.  The Abrams research selectivity mirrors the 
-commercial hook-and-line fleet. The STAT explore mirroring this data set to the recreational PC fleet, but the length composition was more representative of the commercial fleet. The Abrams dataset was too sparse and only collected over a two year period.  Hook-and-line gear was the 
+commercial hook-and-line fleet. The STAT explored mirroring this data set to the recreational PC fleet, but the length composition was more representative of the commercial fleet. The Abrams dataset was too sparse and only collected over a two year period.  Hook-and-line gear was the 
 dominant collection method for teh SWFSC groundfish ecology survey and is mirrored to the commercial hook-and-line fleet.
 
-Selectivity parameters were estimated for all fishery-indepdendent data sources.
+Selectivity parameters were estimated for all fishery-independent data sources.
 
 
 The recreational PC and PR fleets applied three time blocks for selectivity:  `r startyr` - `r time_blocks$Yr[1]-1`, `r time_blocks$Yr[1]` - `r time_blocks$Yr[2]-1`, - `r time_blocks$Yr[2]` - `r endyr`. All commercial fleet selectivity was constant across model years `r startyr` - `r endyr`.
 ```
 
 ```{asis, echo = model.area=='SCA'}
-Selectivity was specified using the double normal parameterization within Stock Synthesis for all fleets. Selectivities were estimated for the commercial hook-and-line fleet and the commercial net fleet. The commercial trawl fleet is mirrored to the commercial hook-and-line fleet. Selectivity was estimated for the recreational PC fleet, recreational PC discard fleet and the Recreational PR fleet.  There were no length data available for the recreational PR fleet, and it mirrors the selectivity of th recreational PC discard fleet.
-Selectivity for the recreational PC onboard index of abundance is mirrored to the recreational 
-PC fleett as they share the same length composition.
+Selectivity was specified using the double normal parameterization within Stock Synthesis for all fleets. Selectivities were estimated for the commercial hook-and-line fleet and the commercial net fleet. The commercial trawl fleet is mirrored to the commercial hook-and-line fleet. Selectivity was estimated for the recreational PC fleet, recreational PC discard fleet and the Recreational PR fleet.  There were no length data available for the recreational PR fleet, and it mirrors the selectivity of the recreational PC discard fleet. Selectivity for the recreational PC onboard index of abundance is mirrored to the recreational PC fleet as they share the same length composition.
 
-Selectivities were estimated for all fishery-indepdendent data sources.
+Selectivities were estimated for all fishery-independent data sources.
 
-
-The commercial selectivity applied two time blocks for selectivity: `r startyr` - 2008 and 2009 - `r endyr`. The commercial selectivity block from `r startyr` - 2008  was fixed to be asymptotic, while the selectivity block from  2009 - `r endyr`was allowed to be dome-shaped.   The recreational fleet selectivity was constant across the model years, `r startyr` - `r endyr`, and fixed to be asymptotic, although dome-shape selectivity was explored during model development. Annual recruitment deviations started in `r `min(model$recruitpars$Yr)`.
+The commercial fleet selectivity applied three time blocks: 1975-1988, 1990-2001, and 2002-2020. The commercial selectivity blocks for the hook-and-line fleet were fixed to be asymptotic, while the dome-shaped selectivity was explored for the commercial net fishery. The recreational fleet selectivity applied two time blocks 1975-2000 and 2001-2020, and selectivities were allowed to be dome-shaped.  A number of regulatory changes occurred around 1999-2002, including depth closures, changes to the number of hooks, and the implementation of the CCAs. 
 ```
 
 The length composition data for some years and fleets was small, and may not be 
@@ -77,7 +81,7 @@ There are relatively few observations in the age compositions that are greater t
 The population length bins and the length composition length bins are set at 2-cm bins from 
 fish 10-70 cm fork length.
 
-The first year of recruitment deviations begins in 1970, with 1963 as the last year 
+The first year of recruitment deviations begins in `r `min(model$recruitpars$Yr)`, with 1963 as the last year 
 of early recruitment deviations with no bias adjustment and 1980 as the first year 
 with full bias adjustment.  
 
@@ -121,13 +125,10 @@ $\theta/(1+\theta)$ were greater than 0.99, which indicates the models is trying
 the sample size as high as possible.  Given this result, the STAT chose not to further explore 
 the Dirichlet-Multinomial data weighting. As a note, there is a bug in SS Version 3.30.16.00 that 
 prevents the number of estimated weights from being larger than the number of fleets.  This was 
-fixed in SS Version 3.30.16.01 and this version was only used for exploration of the Dirichlet-Multinomialdata weighting.
+fixed in SS Version 3.30.16.01 and this version was only used for exploration of the Dirichlet-Multinomial data weighting.
 
 The STAT explored both McAllister-Ianelli and Francis data weighting methods with the 
-pre-STAR base model.  Francis weighting was selected and provided better fits to the indices 
-and was re-tuned for five iterations to determine if the method serially downweighted any 
-one data source.
-
+pre-STAR base model.  
 
 
 

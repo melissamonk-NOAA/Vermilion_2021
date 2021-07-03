@@ -77,8 +77,7 @@ caal_fit_andre <- plot_info %>%
 filein = file.path(mod_loc, "plots")
 for (a in 1:length(caal_fit_andre$label)){
   
-  cat("\\FloatBarrier")
-	
+
   cap = caal_fit_andre$caption[a]
 	lab = caal_fit_andre$label[a]
 	
