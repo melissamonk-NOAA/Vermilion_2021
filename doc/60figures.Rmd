@@ -22,6 +22,7 @@ sa4ss::read_child("63figures-biology.Rmd")
 sa4ss::read_child("64figures-selectivity-diagnostics.Rmd")
 ```
 
+\clearpage
 \FloatBarrier
 
 

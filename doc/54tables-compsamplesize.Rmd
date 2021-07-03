@@ -6,7 +6,7 @@ length.sample.size <- readxl::read_xlsx("./tables/sample sizes for vermilion com
   dplyr::select(-FLEET_NO) %>%
   mutate(N_INIT_BASIS = gsub("\\_", " ",N_INIT_BASIS)) %>%
   mutate(N_INIT_BASIS = tolower(N_INIT_BASIS)) %>%
-  mutate_at(vars(N_TRIPS), as.numeric) %>%
+  mutate_at(vars(c(N_TRIPS, N_SAMPLES)), as.numeric) %>%
    mutate(N_TRIPS  = round(N_TRIPS, 2)) %>%
   select(-N_INIT_BASIS)
 #  mutate(N_TRIPS  = if_else(grepl("fish/trip", N_INIT_BASIS), round(N_TRIPS,2), round(N_TRIPS,0)))

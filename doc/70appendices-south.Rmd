@@ -2,6 +2,7 @@
 
 # Appendix
 
+## MRFSS Dockside Index of Abundance {#mrfss-index}
 
 ```{r mrfss-index, results = 'asis'}
  sa4ss::read_child("./indices/vermilion_MRFSS_dockside_writeup_SCA.md") 
@@ -9,12 +10,15 @@
   
 \clearpage
  
+## California CPFV Onboard Index of Abundance {#cpfv-index}
+
 ```{r ca-cpfv-onboard-index, results = 'asis'}
  sa4ss::read_child("./indices/vermilion_CA_CPFV_onboard_writeup_SCA.md") 
 ``` 
 
 \clearpage
 
+## CRFS PR Dockside Index of Abundance {#pr-index}
 
 ```{r crfs-pr-index, results = 'asis'}
 sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_SCA.md")
@@ -22,19 +26,31 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_SCA.md")
 
 \clearpage
 
+## NWFSC Hook-and-Line Survey Index of Abundance {#nwfschl-index}
+
 ```{r nwfschl-index, results = 'asis'}
   sa4ss::read_child("./indices/vermilion_NWFSC_HL_writeup_SCA.md")
 ``` 
 
+
 \clearpage
 
+## WCGBTS Index of Abundance {#wcgbts-index}
+
+```{r wcgbts-index, results = 'asis'}
+  sa4ss::read_child("./indices/vermilion_WCGBTS_writeup_SCA.md")
+``` 
+
+\clearpage
+
+## Recreational Regulations {#regs-graphic}
 
 ```{r wcgbts-index, results = 'asis'}
   sa4ss::read_child("./indices/vermilion_WCGBTS_writeup_SCA.md")
 ``` 
 
 
-
+# References
        
 
 

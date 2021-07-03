@@ -62,18 +62,20 @@ dataweight.filein = list.files(path = table_loc,
                   pattern = glob2rx(paste0("Convergence_Francis_and_MI_",model.area, ".xlsx")), 
                   full.names = TRUE)
 dataweight <- readxl::read_xlsx(dataweight.filein) %>%
+  na_if(.,"NA") %>%
+  mutate_at(vars(base), as.numeric) %>%
   mutate(across(where(is.numeric), round, 3)) 
 ```
 
 
-```{r,drop-one, results = 'asis'}
-kableExtra::kbl(dataweight, booktabs = TRUE, 
+```{r,data-weights, results = 'asis'}
+kableExtra::kbl(dataweight, booktabs = TRUE, longtable = TRUE,
   caption = "Suggested data-weighting for length and age composition data using the McAllister-Ianelli and Francis approaches, after five tuning iterations to the pre-STAR base model.",
   linesep = ""
 ) %>%
  # column_spec(1, width = "2cm") %>%
 
-  kable_styling(latex_options = c("repeat_header","scale_down")) %>%
+  kable_styling(latex_options = c("scale_down", "repeat_header"), font_size = 8) %>%
   kableExtra::landscape()
 ```
 

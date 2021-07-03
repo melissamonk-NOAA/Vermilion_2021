@@ -62,7 +62,7 @@ M.fig.filein = list.files(path = fig_loc,
 ```{r, results = 'asis'}
 sa4ss::add_figure(
   filein = h.fig.filein[1] ,
-  caption =  "Likelihood profile across steepness values for each data type.",
+  caption =  "Likelihood profile across steepness values for each data type",
   label = 'h-profile'
 )
 
@@ -116,13 +116,12 @@ retro.fig.filein = list.files(path = fig_loc,
                   pattern = glob2rx(paste0("retro_*",model.area, ".png")), 
                   full.names = TRUE)
 
-knitr::include_graphics(retro.fig.filein)
 ```
 
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = retro.fig.filein[4] ,
+  filein = retro.fig.filein[2] ,
   caption = "Change in the spawning biomass when the most recent 5 years of data area removed sequentially",
   label = 'retro-spawnb'
 )
@@ -156,7 +155,7 @@ sens1.fig.filein = list.files(path = fig_loc,
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = sens1.fig.filein[4] ,
+  filein = sens1.fig.filein[3] ,
   caption = "Change in the spawning biomass to a series of model sensitivity runs",
   label = 'sens1-spawnb'
 )
@@ -169,7 +168,7 @@ sa4ss::add_figure(
 )
 
 sa4ss::add_figure(
-  filein = sens1.fig.filein[3] ,
+  filein = sens1.fig.filein[2] ,
   caption = "Change in the recruitment deviations to a series of model sensitivity runs",
   label = 'sens1-recdev'
 )

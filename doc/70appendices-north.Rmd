@@ -4,7 +4,7 @@
 
 
 
-## MRFSS Dockside Index of Abundance
+## MRFSS Dockside Index of Abundance {#mrfss-index}
 
 ```{r mrfss-index, results = 'asis'}
  sa4ss::read_child("./indices/vermilion_MRFSS_dockside_writeup_NCA.md") 
@@ -12,7 +12,7 @@
   
 \clearpage
 
-## California Onboard CPFV Index of Abundance
+## California Onboard CPFV Index of Abundance {#cpfv-index}
  
 ```{r ca-cpfv-onboard-index, results = 'asis'}
  sa4ss::read_child("./indices/vermilion_CA_CPFV_onboard_writeup_NCA.md") 
@@ -20,7 +20,7 @@
 
 \clearpage 
 
-## Deb Wilson-Vandenberg Onboard CPFV Index of Abundance
+## Deb Wilson-Vandenberg Onboard CPFV Index of Abundance {#debwv-index}
 
 ```{r devwv-index, results = 'asis'}
  sa4ss::read_child("./indices/vermilion_DebWV_onboard_writeup_NCA.md") 
@@ -29,7 +29,7 @@
 \clearpage
 
 
-## CRFS PR Dockside  Index of Abundance
+## CRFS PR Dockside Index of Abundance {#pr-index}
 
 ```{r crfs-pr-index, results = 'asis'}
 sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_NCA.md")
@@ -37,7 +37,7 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_NCA.md")
 
 \clearpage
 
-## CCFRP Index of Abundance
+## CCFRP Index of Abundance {#ccfrp-index}
 
 ```{r ccfrp-index, results = 'asis'}
  sa4ss::read_child("./indices/vermilion_CCFRP_writeup_NCA.md") 
@@ -45,7 +45,7 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_NCA.md")
 
 \clearpage
 
-## WCGBTS Index of Abundance
+## WCGBTS Index of Abundance {#wcgbts-index}
 
 ```{r wcgbts-index, results = 'asis'}
   sa4ss::read_child("./indices/vermilion_WCGBTS_writeup_NCA.md")
@@ -53,9 +53,13 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_NCA.md")
 
 \clearpage
 
-## Graphic representing California's recreational regulations over time
+## Recreational Regulations {#regs-graphic}
 
 ```{r rec-regs, results = 'asis'}
   sa4ss::read_child("70appendices-regs.Rmd")
 ``` 
+
+\clearpage 
+
+# References
 

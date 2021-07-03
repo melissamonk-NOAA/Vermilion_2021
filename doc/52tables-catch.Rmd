@@ -31,7 +31,7 @@ landings_table <- landings %>%
   tidyr::pivot_wider(names_from = Fleet, values_from=Catch)  %>%
    mutate(`Total commerical` = rowSums(dplyr::across(`COM HKL(1)`:`COM NET(3)`), na.rm=TRUE)) %>%
    mutate(`Total recreational` = rowSums(dplyr::across(`REC PC(4)`:`REC PR DIS(7)`), na.rm=TRUE)) %>%
-  na_if(.,0)
+  na_if(.,0) 
 
 ```
 

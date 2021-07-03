@@ -181,7 +181,7 @@ address: ^1^Southwest Fisheries Science Center, U.S. Department of Commerce, Nat
 <!--chapter:end:00authorsnorth.Rmd-->
 
 ---
-bibliography:
+bibliography: 
   - sa4ss.bib
 ---
 
@@ -432,33 +432,7 @@ Biological parameters
 - 3 Schnute growth parameters (length at age 0, length at age 30, and $k$)   
 - 3 parameters controlling variability in growth, the CV in length at age 0  
   and the CV in length at age 30 with a linear ramp in length-at-age  (CV for young males was not estimated)
-                                                                    
-
-Stock-recruit parameters  
-- `r 2 + nrow(model$recruit)` recruitment parameters  
-- $log(R_0)$ controlling equilibrium recruitment  
-- `r nrow(model$recruit)` recruitment deviations parameters covering the range  
-  `r min(model$recruit$Yr)`-`r max(model$recruit$Yr)`, with 
-  `r min(model$recruit$Yr[model$recruit$era=="Main"])`-`r max(model$recruit$Yr[model$recruit$era=="Main"])`
-  representing the "main" period modeled as a zero-centered deviation vector  
-  
-Index parameters  
-- `r sum(sum(grepl("Q_extra", estimated_pars)))` extra standard deviation parameters
-for indices  
-
-Selectivity parameters  
-- `r sum(grepl("Size_DblN", estimated_pars))` selectivity parameters, of which
-`r sum(grepl("Size_DblN.*BLK", estimated_pars))` represented changes over time  
-
-## Fixed parameters
-- $h$ controlling the steepness of the stock-recruit relationship
-- $M$ for males
-- Selectiviy parameters that were estimated at the bounds and fixed in the pre-STAR model
-
-```
-
-
-
+```                                                                   
 
 ```{asis, echo = model.area=='SCA'}
 Biological parameters  
@@ -467,7 +441,7 @@ Biological parameters
 - 3 Schnute growth parameters (length at age 0, length at age 30 for both sexes, and $k$)   
 - 4 parameters controlling variability in growth, the CV in length at age 0  
   and the CV in length at age 30 with a linear ramp in length-at-age  (CV for young males was not estimated)
-                                                                    
+```
 
 Stock-recruit parameters  
 - `r 2 + nrow(model$recruit)` recruitment parameters  
@@ -490,9 +464,6 @@ Selectivity parameters
 - $M$ for males
 - Selectivity parameters that were estimated at the bounds and fixed in the pre-STAR model
 
-```
-
-
 ## Natural Mortality
 
 ```{asis, echo = model.area=='NCA'}
@@ -507,7 +478,7 @@ Female natural mortality was estimated at 1.12 and male natural mortality was fi
 ```
 
 ## Growth (Length-at-Age)
-```{r, include=FALSE}
+```{r, include=FALSE, echo = FALSE}
 # calculate Linf and t0 from Schnute vB parameterization
 unSchnute.fn <- function(Amin, Amax, Lmin, Lmax, k)
 {
@@ -518,24 +489,29 @@ unSchnute.fn <- function(Amin, Amax, Lmin, Lmax, k)
    return(out)
 }
 # vermilion example
-# females
-unSchnute.fn(0, 30, 8.3113, 53.6773, 0.1679070)
+# females 
+female_growth <- unSchnute.fn(0, 30, model$MGparmAdj$L_at_Amin_Fem_GP_1[1], model$MGparmAdj$L_at_Amax_Fem_GP_1[1], model$MGparmAdj$VonBert_K_Fem_GP_1[1])
+
+if(model.area=="SCA"){
 # for males,  apply exponential offsets to the female values
-unSchnute.fn(0, 30, 8.3113*exp(-2.3422300), 53.6773*exp(-0.0667862), 0.1679070*exp(0.2930410))
+male_growth <- unSchnute.fn(0, 30,  
+   model$MGparmAdj$L_at_Amin_Fem_GP_1[1]*exp(model$MGparmAdj$L_at_Amin_Mal_GP_1[1]),     model$MGparmAdj$L_at_Amax_Fem_GP_1[1]*exp(model$MGparmAdj$L_at_Amax_Max_GP_1[1]), model$MGparmAdj$VonBert_K_Fem_GP_1[1]*exp(model$MGparmAdj$VonBert_K_Mal_GP_1[1]))
+} else {
+
+male_growth <- unSchnute.fn(0, 30, 
+                            model$MGparmAdj$L_at_Amin_Mal_GP_1[1],
+                            model$MGparmAdj$L_at_Amax_Mal_GP_1[1],
+                            model$MGparmAdj$VonBert_K_Mal_GP_1[1])
+
+}
 ```
-
-
-
 
 
 ```{asis, echo = model.area=='NCA'}
 Internal estimates of growth were estimated directly for males, and not as an offset. An offset for male growth was explored, but the CV of length at $L_{age=30}$ was estimated around 2-3%.  When the male CV was fixed to female CV, the assessment model shrunk the CV of females at $L_{age=30}$, which the STAT did not find reasonable.  Therefore, the male CV at $L_{age=30}$ was fixed at the CV estimated for females of 0.07 (Figure \@ref(fig:fittedgrowth)).
 
-The direct estimation of male  $L_{age=0}=6.02$ was reasonable compared to female  $L_{age=0}=7.8$.  While $k$ was estimated  larger for males (0.19) than females (0.15), female size at t $L_{age=30}$  of 55 cm was larger than males at 79 cm.  These results are consistent with other studies that have looked at sex-specific growth in vermilion rockfish.
-
-
+The direct estimation of male  $L_{age=0}=6.02$ cm was reasonable compared to female  $L_{age=0}=7.8$.  While $k$ was estimated  larger for males (0.19) than females (0.15), female size at t $L_{age=30}$  of 55 cm was larger than males at 79 cm.  These results are consistent with other studies that have looked at sex-specific growth in vermilion rockfish.
 ```
-
 
 ```{asis, echo = model.area=='SCA'}
 The male growth parameters were estimated as offsets to female growth, with the male  $L_{age=0}$ and associated CV fixed to the same estimates as females (7.7 cm and a CV of 0.9). Female $k$ was estimated at 0.16, slightly higher than the estimates for males of $k$ of 0.13.  Females reached a larger size at $L_{age=30}$ of 55 cm than males, which reached an estimated $L_{age=30}$ of 52 cm (Figure \@ref(fig:fittedgrowth)).  The CV’s of the $L_{age=30}$ for males and females were 0.07 and 0.6, respectively
@@ -543,26 +519,25 @@ The male growth parameters were estimated as offsets to female growth, with the 
 
 ```
 
-
+Estimates of the traditional vonBertallanffy parameters transformed from the Schnute parameterization used by SS are below.  In both parameterizations, the $k$ parameter is the same.
 \begin{centering}
 
-Females $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Fem_GP_1[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Fem_GP_1[1], 3)`; $t_0$ = `r round(model$Growth_Parameters[1,10], 2)`
+Females $L_{\infty}$ = `r round(female_growth[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Fem_GP_1[1], 3)`; $t_0$ = `r round(female_growth[2], 2)`
 
-Males $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Mal_GP_1[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Mal_GP_1[1], 3)`; $t_0$ = `r round(model$Growth_Parameters[2,10], 2)`
+Males $L_{\infty}$ = `r round(male_growth[1])` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Mal_GP_1[1], 3)`; $t_0$ = `r round(male_growth[2], 2)`
 
 \end{centering}
 
 \vspace{0.5cm}
 
-
-
-
 ## Selectivity
+
+The estimated length sensitivities by fleets are shown in Figure \@ref(fig:selex-length-all) 
+and by age in Figure \@ref(fig:selex-age-all)  
 
 
 ```{asis, echo = model.area=='NCA'}
-Figure \@ref(fig:selex-length-all)  
-Figure \@ref(fig:selex-age-all)  
+Time varying selectivititues for the recreational PC fishery
 Figure \@ref(fig:sel03_len_timevary_surf_flt4sex1)    #
 Figure \@ref(fig:sel03_len_timevary_surf_flt6sex1)   #
 Figure \@ref(fig:endyr-selex-COM-HKL)  
@@ -743,19 +718,16 @@ Table \ref{tab:ref-pts} shows the full suite of estimated reference points for t
 
 # Assessment Model Diagnostics
 
-Describe all diagnostics
-
-
 ## Sensitivity to Assumptions, Data and, Weighting
 
 To better understand how data from individual fishery sectors or scientific surveys affected assessment results, we excluded data sets from the likelihood, one fleet at a time (referred to here as a “drop-one” analysis). “Fleet” in this sense refers to either a fishing fleet or a survey “fleet.” To do this, we set “lambdas” (multipliers for each likelihood component) equal to zero. This is equivalent to removing the data from the model. When composition data were excluded, the selectivity parameters for that fleet were fixed at the base model estimates to standardize the size and age composition of harvested fish. When abundance indices were excluded, relevant catchability and ‘extraSE’ parameters associated with the index were not estimated. Composition data weights for the remaining fleets were kept consistent with the base model values. Results from all the ‘drop-one’ runs were compared to the base model using time series plots and tables containing likelihood components, parameter estimates and derived quantities.
 
 ```{asis, echo = model.area=='SCA'}
-For the southern California model, the NWFSC hook-and-line (HKL) survey is divided across two fleets (8 and 12; see survey description in section XXX). For consistency with other ‘drop-one’ runs, fleets 8 and 12 were excluded at the same time to remove all data associated with the hook-and-line survey. Removal of the HKL survey fleet (index, length comps, and age comps) resulted in larger estimates of unfished spawning output (Figure \@ref(drop-spawnbio)), and affected the trend in spawning biomass in recent years. Only removal of the REC_PC fleet had a noticeable effect on spawning output in the terminal year, but the difference was well within the estimated range of uncertainty from the base model. Relative spawning output (‘depletion’) estimates showed little change relative to the range of plausible outcomes predicted by the base model (Figure \@ref(drop-bratio)). Removal of the REC_PC fleet reduced the magnitude of negative recruitment deviations estimated in the 1970s, as well as the strength of the 1999 year class (Figure \@ref(drop-recdev)), but most general patterns in recruitment were consistent across the set of drop-one sensitivity tests. Changes in likelihoods, parameter estimates and derived quantities are recorded in Table \@ref(tab:drop-one). Comparison of likelihoods among drop-one scenarios should be treated with caution due to changes in the data sets that were fit in each model run.
+For the southern California model, the NWFSC hook-and-line (HKL) survey is divided across two fleets (8 and 12; see survey description in section XXX). For consistency with other ‘drop-one’ runs, fleets 8 and 12 were excluded at the same time to remove all data associated with the hook-and-line survey. Removal of the HKL survey fleet (index, length comps, and age comps) resulted in larger estimates of unfished spawning output (Figure \@ref(fig:drop-spawnbio)), and affected the trend in spawning biomass in recent years. Only removal of the REC_PC fleet had a noticeable effect on spawning output in the terminal year, but the difference was well within the estimated range of uncertainty from the base model. Relative spawning output (‘depletion’) estimates showed little change relative to the range of plausible outcomes predicted by the base model (Figure \@ref(fig:drop-bratio)). Removal of the REC_PC fleet reduced the magnitude of negative recruitment deviations estimated in the 1970s, as well as the strength of the 1999 year class (Figure \@ref(fig:drop-recdev)), but most general patterns in recruitment were consistent across the set of drop-one sensitivity tests. Changes in likelihoods, parameter estimates and derived quantities are recorded in Table \@ref(tab:drop-one). Comparison of likelihoods among drop-one scenarios should be treated with caution due to changes in the data sets that were fit in each model run.
 ```
 
 ```{asis, echo = model.area=='NCA'}
-Drop-one analysis of the northern California assessment revealed slightly larger variability in spawning output trends relative to the south, but all runs were still within the range of uncertainty estimated by the base model (Figure \@ref(drop-spawnbio)). Removal of most fleets had little effect on terminal stock status, with best estimates in the vicinity of target biomass levels (Figure \@ref(drop-bratio)). An exception was removal of the REC_PC fleet, which caused the best estimate of terminal depletion to drop just above the minimum stock size threshold. This suggests that the REC_PC data sets, together, favor a less-depleted stock relative to data from the other fleets. The strength of the 2016 year class is sensitive to the removal of fleet-specific data sets (Figure \@ref(fig:recdev)). Removal of the REC_PR fleet produces the largest estimates of 2016 cohort size, and removal of the NWFSC_TWL fleet estimates a 2016 deviation that is less than half as large (but still positive). Uncertainty in the strength of this recent year class should be taken into consideration for short term forecasts of stock abundance and yield. Changes in likelihoods, parameter estimates and derived quantities are recorded in Table \@ref(tab:drop-one). Comparison of likelihoods among drop-one scenarios should be treated with caution due to changes in the data sets that were fit in each model run.
+Drop-one analysis of the northern California assessment revealed slightly larger variability in spawning output trends relative to the south, but all runs were still within the range of uncertainty estimated by the base model (Figure \@ref(fig:drop-spawnbio)). Removal of most fleets had little effect on terminal stock status, with best estimates in the vicinity of target biomass levels (Figure \@ref(fig:drop-bratio)). An exception was removal of the REC_PC fleet, which caused the best estimate of terminal depletion to drop just above the minimum stock size threshold. This suggests that the REC_PC data sets, together, favor a less-depleted stock relative to data from the other fleets. The strength of the 2016 year class is sensitive to the removal of fleet-specific data sets (Figure \@ref(fig:recdev)). Removal of the REC_PR fleet produces the largest estimates of 2016 cohort size, and removal of the NWFSC_TWL fleet estimates a 2016 deviation that is less than half as large (but still positive). Uncertainty in the strength of this recent year class should be taken into consideration for short term forecasts of stock abundance and yield. Changes in likelihoods, parameter estimates and derived quantities are recorded in Table \@ref(tab:drop-one). Comparison of likelihoods among drop-one scenarios should be treated with caution due to changes in the data sets that were fit in each model run.
 ```
 
 
@@ -794,7 +766,6 @@ A five year retrospective analysis was conducted on the northern base model by s
 
 
 ## Other Model Sensitivities
-[This paragraph can go in both docs]
 Results from the pre-STAR base model were compared to several alternative model specifications, as described below.
 
 - Estimate the Beverton-Holt steepness parameter (*h*) rather than fixing it at the prior mean (*h*=0.72); estimate uncertainty intervals for comparison to base
@@ -805,12 +776,12 @@ Results from the pre-STAR base model were compared to several alternative model 
 
 
 ```{asis, echo = model.area=='NCA'}
-Trends in spawning output for the northern California assessment model were generally robust to this set of sensitivities (Figure \@ref(fig:sens1-spawnbio)). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness was estimated at a higher value than the prior mean (estimated at 0.94 vs. fixed at 0.72). Similarly, stock status did not vary greatly among this set of sensitivity runs, with only a minor increase in 2021 relative spawning output when using McAllister-Ianelli weights and a slight decrease when estimating steepness (Figure \@ref(fig:sens1-bratio)). The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method significantly reduced the magnitude of the 2016 year class, and generally increased the variance of the estimated deviations. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table YYY), and resulted in lower estimates of the male and female natural mortality rates (Table \@ref(tab:sens1)).
+Trends in spawning output for the northern California assessment model were generally robust to this set of sensitivities (Figure \@ref(fig:sens1-spawnbio)). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness was estimated at a higher value than the prior mean (estimated at 0.94 vs. fixed at 0.72). Similarly, stock status did not vary greatly among this set of sensitivity runs, with only a minor increase in 2021 relative spawning output when using McAllister-Ianelli weights and a slight decrease when estimating steepness (Figure \@ref(fig:sens1-bratio)). The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method significantly reduced the magnitude of the 2016 year class, and generally increased the variance of the estimated deviations. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table \@ref(tab:sense1)), and resulted in lower estimates of the male and female natural mortality rates (Table \@ref(tab:data-weight)).
 ```
 
 
 ```{asis, echo = model.area=='NCA'}
-Trends in spawning output for the southern California assessment model were generally robust to this set of sensitivities, with the exception of recent estimates of spawning output which were much lower when using McAllister-Ianelli data weights, relative to the Francis method used in the base model (Figure \@ref(fig:sens1-spawnbio)). The model tuned to McAllister-Ianelli weights was below target biomass, while the other models that used Francis weights showed similar trends in depletion and were above target biomass (Figure \@ref(fig:sens1-bratio)). The McAllister-Ianelli approach estimated a natural mortality rate that was about 20% lower than the Francis method (Table ZZZ). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness in the southern region was estimated at a similar value than the prior mean (estimated at 0.77 vs. fixed at 0.72), and estimation of this parameter did not have a large effect on uncertainty in spawning output or recruitment deviations. The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method increased the variance of the estimated deviations as well as the estimated strength of the 1999 year class, relative to the models using the Francis approach. Changing the start date of the recruitment deviations had almost no effect. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table \@ref(tab:sens1)).
+Trends in spawning output for the southern California assessment model were generally robust to this set of sensitivities, with the exception of recent estimates of spawning output which were much lower when using McAllister-Ianelli data weights, relative to the Francis method used in the base model (Figure \@ref(fig:sens1-spawnbio)). The model tuned to McAllister-Ianelli weights was below target biomass, while the other models that used Francis weights showed similar trends in depletion and were above target biomass (Figure \@ref(fig:sens1-bratio)). The McAllister-Ianelli approach estimated a natural mortality rate that was about 20% lower than the Francis method (Table \@ref(tab:drop-one)). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness in the southern region was estimated at a similar value than the prior mean (estimated at 0.77 vs. fixed at 0.72), and estimation of this parameter did not have a large effect on uncertainty in spawning output or recruitment deviations. The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method increased the variance of the estimated deviations as well as the estimated strength of the 1999 year class, relative to the models using the Francis approach. Changing the start date of the recruitment deviations had almost no effect. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table \@ref(tab:sens1)).
 ```
 
 ## Unresolved Problems and Major Uncertainties
@@ -829,7 +800,7 @@ Projections of OFL (mt), ABC (mt), age 10+ biomass (mt), spawning output (billio
 
 Over the last several decades, spatially explicit management measures at both the state and federal/management council level have been implemented to achieve a wide range of marine resource and fishery management objectives. Depth restrictions to commercial and recreational fisheries in the Rockfish Conservation Areas (RCAs) and the Cowcod Conservation Areas (CCAs) are key among those, as are the suite of total and partial exclusion of commercial and recreational fishing activities in the California statewide network of Marine Protected Areas (MPAs). While the former are associated with explicit fisheries management objectives, the latter have a suite of ecological and economic objectives, most of which are not specific to, nor integrated across, the fisheries management arena. Despite this, both types of spatial management measures are expected to result in various biological, ecological, and socioeconomic effects within and adjacent to their boundaries.  All of these effects have the potential to influence the nature and quality of the data used to inform stock assessments of species that reside in these areas, including vermilion rockfish.
 
-Regardless of the management objective, spatial closures are expected to increase the spatial heterogeneity in abundance and size or age structure of fished stocks. This greater spatial variability can complicate the assumptions made in stock assessment models, particularly the assumption that the densities and demographic structure of assessed populations are relatively homogenous, at least across predictable habitat types such as bathymetric gradients or substrate types [@Punt2004; @Field2007; @Berger2017].  Although a wide range of factors above and beyond spatial management measures can also lead to violations of those assumptions, and the challenge is intuitively less problematic for populations with high movement rates and/or high population turnover, the challenge can be particularly important for longer lived populations with lower movement rates.  The challenge can best be summarized by the result that the more effective MPAs or other closed areas are at protecting populations within them, the more likely it is that traditional assessment approaches will be biased or more uncertain.  
+Regardless of the management objective, spatial closures are expected to increase the spatial heterogeneity in abundance and size or age structure of fished stocks. This greater spatial variability can complicate the assumptions made in stock assessment models, particularly the assumption that the densities and demographic structure of assessed populations are relatively homogeneous, at least across predictable habitat types such as bathymetric gradients or substrate types [@Punt2004; @Field2007; @Berger2017].  Although a wide range of factors above and beyond spatial management measures can also lead to violations of those assumptions, and the challenge is intuitively less problematic for populations with high movement rates and/or high population turnover, the challenge can be particularly important for longer lived populations with lower movement rates.  The challenge can best be summarized by the result that the more effective MPAs or other closed areas are at protecting populations within them, the more likely it is that traditional assessment approaches will be biased or more uncertain.  
 
 If the spatial closures also prevent fisheries independent surveys from evaluating the relative abundance and demographic structure of managed populations, the challenges in developing robust population models, and thus robust management advice, become even more severe.  While spatially explicit assessment models provide a means of more explicitly addressing these challenges, such models are computationally intensive, require robust data from the specific areas being modeled, and may also require detailed information regarding movement and dispersal rates [@McGilliard2015; @Berger2017; @Puntet2020; @Cadrin2020].  Moreover, the complexity of these spatial models increases substantially if the size and location of closed areas changes over time, as many of the more “fisheries management based” closures (e.g., RCAs) have in California groundfish fisheries.  Thus, such approaches may be less feasible for more data limited stocks, such as northern and southern vermilion rockfish, at least in the near term.  However, the fact that both the northern and southern assessment models are informed by fishery-independent surveys that include habitats both inside and outside area closures provides some hope for greater recognition of spatial factors in future assessments.  
 
@@ -865,7 +836,7 @@ in the Southern California Bight. We also recommend evaluating how to structure 
   +  This was a line-transect survey designed to estimate cowcod abundance in 2002 
   conducted from a submersible inside the CCAs.  Originally, only cowcod were enumerated from the video footage.  Over the last few years, the SWFSC has re-analyzed the video footage to enumerate other rockfish species. 
     + The SWFSC Fishery Resource Division (FRD) conducted a survey of potential cowcod habitat between Point Conception and the U.S. – Mexico border from October through December of 2012 [@Stierhoff2013].
-    +  SWFSC staff are submitting proposals to conduct an additional submirsible survey in the southern California Bight
+    +  SWFSC staff are submitting proposals to conduct an additional submersible survey in the southern California Bight
     + CDFW ROV survey data
 
 
@@ -883,10 +854,13 @@ particularly for recruitment.
 
 <!--chapter:end:40management.Rmd-->
 
+\clearpage
+
 # Acknowledgments (not required for draft assessments)
 
 <!--chapter:end:41acknowledgements.Rmd-->
 
+\clearpage
 \floatplacement{table}{H}
 
 # Tables
@@ -939,6 +913,7 @@ sa4ss::read_child("63figures-biology.Rmd")
 sa4ss::read_child("64figures-selectivity-diagnostics.Rmd")
 ```
 
+\clearpage
 \FloatBarrier
 
 
@@ -985,7 +960,7 @@ sa4ss::read_child("69figures-sens-likeli-retro.Rmd")
 
 
 
-## MRFSS Dockside Index of Abundance
+## MRFSS Dockside Index of Abundance {#mrfss-index}
 
 ```{r mrfss-index, results = 'asis'}
  sa4ss::read_child("./indices/vermilion_MRFSS_dockside_writeup_NCA.md") 
@@ -993,7 +968,7 @@ sa4ss::read_child("69figures-sens-likeli-retro.Rmd")
   
 \clearpage
 
-## California Onboard CPFV Index of Abundance
+## California Onboard CPFV Index of Abundance {#cpfv-index}
  
 ```{r ca-cpfv-onboard-index, results = 'asis'}
  sa4ss::read_child("./indices/vermilion_CA_CPFV_onboard_writeup_NCA.md") 
@@ -1001,7 +976,7 @@ sa4ss::read_child("69figures-sens-likeli-retro.Rmd")
 
 \clearpage 
 
-## Deb Wilson-Vandenberg Onboard CPFV Index of Abundance
+## Deb Wilson-Vandenberg Onboard CPFV Index of Abundance {#debwv-index}
 
 ```{r devwv-index, results = 'asis'}
  sa4ss::read_child("./indices/vermilion_DebWV_onboard_writeup_NCA.md") 
@@ -1010,7 +985,7 @@ sa4ss::read_child("69figures-sens-likeli-retro.Rmd")
 \clearpage
 
 
-## CRFS PR Dockside  Index of Abundance
+## CRFS PR Dockside Index of Abundance {#pr-index}
 
 ```{r crfs-pr-index, results = 'asis'}
 sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_NCA.md")
@@ -1018,7 +993,7 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_NCA.md")
 
 \clearpage
 
-## CCFRP Index of Abundance
+## CCFRP Index of Abundance {#ccfrp-index}
 
 ```{r ccfrp-index, results = 'asis'}
  sa4ss::read_child("./indices/vermilion_CCFRP_writeup_NCA.md") 
@@ -1026,7 +1001,7 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_NCA.md")
 
 \clearpage
 
-## WCGBTS Index of Abundance
+## WCGBTS Index of Abundance {#wcgbts-index}
 
 ```{r wcgbts-index, results = 'asis'}
   sa4ss::read_child("./indices/vermilion_WCGBTS_writeup_NCA.md")
@@ -1034,11 +1009,15 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_NCA.md")
 
 \clearpage
 
-## Graphic representing California's recreational regulations over time
+## Recreational Regulations {#regs-graphic}
 
 ```{r rec-regs, results = 'asis'}
   sa4ss::read_child("70appendices-regs.Rmd")
 ``` 
+
+\clearpage 
+
+# References
 
 
 <!--chapter:end:70appendices-north.Rmd-->

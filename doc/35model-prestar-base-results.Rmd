@@ -24,33 +24,7 @@ Biological parameters
 - 3 Schnute growth parameters (length at age 0, length at age 30, and $k$)   
 - 3 parameters controlling variability in growth, the CV in length at age 0  
   and the CV in length at age 30 with a linear ramp in length-at-age  (CV for young males was not estimated)
-                                                                    
-
-Stock-recruit parameters  
-- `r 2 + nrow(model$recruit)` recruitment parameters  
-- $log(R_0)$ controlling equilibrium recruitment  
-- `r nrow(model$recruit)` recruitment deviations parameters covering the range  
-  `r min(model$recruit$Yr)`-`r max(model$recruit$Yr)`, with 
-  `r min(model$recruit$Yr[model$recruit$era=="Main"])`-`r max(model$recruit$Yr[model$recruit$era=="Main"])`
-  representing the "main" period modeled as a zero-centered deviation vector  
-  
-Index parameters  
-- `r sum(sum(grepl("Q_extra", estimated_pars)))` extra standard deviation parameters
-for indices  
-
-Selectivity parameters  
-- `r sum(grepl("Size_DblN", estimated_pars))` selectivity parameters, of which
-`r sum(grepl("Size_DblN.*BLK", estimated_pars))` represented changes over time  
-
-## Fixed parameters
-- $h$ controlling the steepness of the stock-recruit relationship
-- $M$ for males
-- Selectiviy parameters that were estimated at the bounds and fixed in the pre-STAR model
-
-```
-
-
-
+```                                                                   
 
 ```{asis, echo = model.area=='SCA'}
 Biological parameters  
@@ -59,7 +33,7 @@ Biological parameters
 - 3 Schnute growth parameters (length at age 0, length at age 30 for both sexes, and $k$)   
 - 4 parameters controlling variability in growth, the CV in length at age 0  
   and the CV in length at age 30 with a linear ramp in length-at-age  (CV for young males was not estimated)
-                                                                    
+```
 
 Stock-recruit parameters  
 - `r 2 + nrow(model$recruit)` recruitment parameters  
@@ -82,9 +56,6 @@ Selectivity parameters
 - $M$ for males
 - Selectivity parameters that were estimated at the bounds and fixed in the pre-STAR model
 
-```
-
-
 ## Natural Mortality
 
 ```{asis, echo = model.area=='NCA'}
@@ -99,7 +70,7 @@ Female natural mortality was estimated at 1.12 and male natural mortality was fi
 ```
 
 ## Growth (Length-at-Age)
-```{r, include=FALSE}
+```{r, include=FALSE, echo = FALSE}
 # calculate Linf and t0 from Schnute vB parameterization
 unSchnute.fn <- function(Amin, Amax, Lmin, Lmax, k)
 {
@@ -110,24 +81,29 @@ unSchnute.fn <- function(Amin, Amax, Lmin, Lmax, k)
    return(out)
 }
 # vermilion example
-# females
-unSchnute.fn(0, 30, 8.3113, 53.6773, 0.1679070)
+# females 
+female_growth <- unSchnute.fn(0, 30, model$MGparmAdj$L_at_Amin_Fem_GP_1[1], model$MGparmAdj$L_at_Amax_Fem_GP_1[1], model$MGparmAdj$VonBert_K_Fem_GP_1[1])
+
+if(model.area=="SCA"){
 # for males,  apply exponential offsets to the female values
-unSchnute.fn(0, 30, 8.3113*exp(-2.3422300), 53.6773*exp(-0.0667862), 0.1679070*exp(0.2930410))
+male_growth <- unSchnute.fn(0, 30,  
+   model$MGparmAdj$L_at_Amin_Fem_GP_1[1]*exp(model$MGparmAdj$L_at_Amin_Mal_GP_1[1]),     model$MGparmAdj$L_at_Amax_Fem_GP_1[1]*exp(model$MGparmAdj$L_at_Amax_Max_GP_1[1]), model$MGparmAdj$VonBert_K_Fem_GP_1[1]*exp(model$MGparmAdj$VonBert_K_Mal_GP_1[1]))
+} else {
+
+male_growth <- unSchnute.fn(0, 30, 
+                            model$MGparmAdj$L_at_Amin_Mal_GP_1[1],
+                            model$MGparmAdj$L_at_Amax_Mal_GP_1[1],
+                            model$MGparmAdj$VonBert_K_Mal_GP_1[1])
+
+}
 ```
-
-
-
 
 
 ```{asis, echo = model.area=='NCA'}
 Internal estimates of growth were estimated directly for males, and not as an offset. An offset for male growth was explored, but the CV of length at $L_{age=30}$ was estimated around 2-3%.  When the male CV was fixed to female CV, the assessment model shrunk the CV of females at $L_{age=30}$, which the STAT did not find reasonable.  Therefore, the male CV at $L_{age=30}$ was fixed at the CV estimated for females of 0.07 (Figure \@ref(fig:fittedgrowth)).
 
-The direct estimation of male  $L_{age=0}=6.02$ was reasonable compared to female  $L_{age=0}=7.8$.  While $k$ was estimated  larger for males (0.19) than females (0.15), female size at t $L_{age=30}$  of 55 cm was larger than males at 79 cm.  These results are consistent with other studies that have looked at sex-specific growth in vermilion rockfish.
-
-
+The direct estimation of male  $L_{age=0}=6.02$ cm was reasonable compared to female  $L_{age=0}=7.8$.  While $k$ was estimated  larger for males (0.19) than females (0.15), female size at t $L_{age=30}$  of 55 cm was larger than males at 79 cm.  These results are consistent with other studies that have looked at sex-specific growth in vermilion rockfish.
 ```
-
 
 ```{asis, echo = model.area=='SCA'}
 The male growth parameters were estimated as offsets to female growth, with the male  $L_{age=0}$ and associated CV fixed to the same estimates as females (7.7 cm and a CV of 0.9). Female $k$ was estimated at 0.16, slightly higher than the estimates for males of $k$ of 0.13.  Females reached a larger size at $L_{age=30}$ of 55 cm than males, which reached an estimated $L_{age=30}$ of 52 cm (Figure \@ref(fig:fittedgrowth)).  The CV’s of the $L_{age=30}$ for males and females were 0.07 and 0.6, respectively
@@ -135,26 +111,25 @@ The male growth parameters were estimated as offsets to female growth, with the 
 
 ```
 
-
+Estimates of the traditional vonBertallanffy parameters transformed from the Schnute parameterization used by SS are below.  In both parameterizations, the $k$ parameter is the same.
 \begin{centering}
 
-Females $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Fem_GP_1[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Fem_GP_1[1], 3)`; $t_0$ = `r round(model$Growth_Parameters[1,10], 2)`
+Females $L_{\infty}$ = `r round(female_growth[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Fem_GP_1[1], 3)`; $t_0$ = `r round(female_growth[2], 2)`
 
-Males $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Mal_GP_1[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Mal_GP_1[1], 3)`; $t_0$ = `r round(model$Growth_Parameters[2,10], 2)`
+Males $L_{\infty}$ = `r round(male_growth[1])` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Mal_GP_1[1], 3)`; $t_0$ = `r round(male_growth[2], 2)`
 
 \end{centering}
 
 \vspace{0.5cm}
 
-
-
-
 ## Selectivity
+
+The estimated length sensitivities by fleets are shown in Figure \@ref(fig:selex-length-all) 
+and by age in Figure \@ref(fig:selex-age-all)  
 
 
 ```{asis, echo = model.area=='NCA'}
-Figure \@ref(fig:selex-length-all)  
-Figure \@ref(fig:selex-age-all)  
+Time varying selectivititues for the recreational PC fishery
 Figure \@ref(fig:sel03_len_timevary_surf_flt4sex1)    #
 Figure \@ref(fig:sel03_len_timevary_surf_flt6sex1)   #
 Figure \@ref(fig:endyr-selex-COM-HKL)  

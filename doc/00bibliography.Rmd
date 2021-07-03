@@ -1,4 +1,4 @@
 ---
-bibliography:
+bibliography: 
   - sa4ss.bib
 ---

@@ -81,7 +81,7 @@ address: ^1^Southwest Fisheries Science Center, U.S. Department of Commerce, Nat
 <!--chapter:end:00authorsnorth.Rmd-->
 
 ---
-bibliography:
+bibliography: 
   - sa4ss.bib
 ---
 
@@ -1387,34 +1387,29 @@ Biological parameters
 - 3 Schnute growth parameters (length at age 0, length at age 30, and $k$)   
 - 3 parameters controlling variability in growth, the CV in length at age 0  
   and the CV in length at age 30 with a linear ramp in length-at-age  (CV for young males was not estimated)
-                                                                    
+
+
 
 Stock-recruit parameters  
-- `r 2 + nrow(model$recruit)` recruitment parameters  
+- 160 recruitment parameters  
 - $log(R_0)$ controlling equilibrium recruitment  
-- `r nrow(model$recruit)` recruitment deviations parameters covering the range  
-  `r min(model$recruit$Yr)`-`r max(model$recruit$Yr)`, with 
-  `r min(model$recruit$Yr[model$recruit$era=="Main"])`-`r max(model$recruit$Yr[model$recruit$era=="Main"])`
+- 158 recruitment deviations parameters covering the range  
+  1875-2032, with 
+  1970-2020
   representing the "main" period modeled as a zero-centered deviation vector  
   
 Index parameters  
-- `r sum(sum(grepl("Q_extra", estimated_pars)))` extra standard deviation parameters
+- 1 extra standard deviation parameters
 for indices  
 
 Selectivity parameters  
-- `r sum(grepl("Size_DblN", estimated_pars))` selectivity parameters, of which
-`r sum(grepl("Size_DblN.*BLK", estimated_pars))` represented changes over time  
+- 39 selectivity parameters, of which
+16 represented changes over time  
 
 ## Fixed parameters
 - $h$ controlling the steepness of the stock-recruit relationship
 - $M$ for males
-- Selectiviy parameters that were estimated at the bounds and fixed in the pre-STAR model
-
-
-
-
-
-
+- Selectivity parameters that were estimated at the bounds and fixed in the pre-STAR model
 
 ## Natural Mortality
 
@@ -1427,35 +1422,30 @@ Female natural mortality was estimated at 0.09 and male natural mortality was fi
 
 
 
-
-
-
 Internal estimates of growth were estimated directly for males, and not as an offset. An offset for male growth was explored, but the CV of length at $L_{age=30}$ was estimated around 2-3%.  When the male CV was fixed to female CV, the assessment model shrunk the CV of females at $L_{age=30}$, which the STAT did not find reasonable.  Therefore, the male CV at $L_{age=30}$ was fixed at the CV estimated for females of 0.07 (Figure \@ref(fig:fittedgrowth)).
 
-The direct estimation of male  $L_{age=0}=6.02$ was reasonable compared to female  $L_{age=0}=7.8$.  While $k$ was estimated  larger for males (0.19) than females (0.15), female size at t $L_{age=30}$  of 55 cm was larger than males at 79 cm.  These results are consistent with other studies that have looked at sex-specific growth in vermilion rockfish.
+The direct estimation of male  $L_{age=0}=6.02$ cm was reasonable compared to female  $L_{age=0}=7.8$.  While $k$ was estimated  larger for males (0.19) than females (0.15), female size at t $L_{age=30}$  of 55 cm was larger than males at 79 cm.  These results are consistent with other studies that have looked at sex-specific growth in vermilion rockfish.
 
 
 
-
-
+Estimates of the traditional vonBertallanffy parameters transformed from the Schnute parameterization used by SS are below.  In both parameterizations, the $k$ parameter is the same.
 \begin{centering}
 
-Females $L_{\infty}$ = 55.4 cm; $k$ = 0.145; $t_0$ = -0.53
+Females $L_{\infty}$ = 56 cm; $k$ = 0.145; $t_0$ = -1.03
 
-Males $L_{\infty}$ = 49.9 cm; $k$ = 0.199; $t_0$ = -0.15
+Males $L_{\infty}$ = 50 cm; $k$ = 0.199; $t_0$ = -0.65
 
 \end{centering}
 
 \vspace{0.5cm}
 
-
-
-
 ## Selectivity
 
+The estimated length sensitivities by fleets are shown in Figure \@ref(fig:selex-length-all) 
+and by age in Figure \@ref(fig:selex-age-all)  
 
-Figure \@ref(fig:selex-length-all)  
-Figure \@ref(fig:selex-age-all)  
+
+Time varying selectivititues for the recreational PC fishery
 Figure \@ref(fig:sel03_len_timevary_surf_flt4sex1)    #
 Figure \@ref(fig:sel03_len_timevary_surf_flt6sex1)   #
 Figure \@ref(fig:endyr-selex-COM-HKL)  
@@ -1591,16 +1581,13 @@ Table \ref{tab:ref-pts} shows the full suite of estimated reference points for t
 
 # Assessment Model Diagnostics
 
-Describe all diagnostics
-
-
 ## Sensitivity to Assumptions, Data and, Weighting
 
 To better understand how data from individual fishery sectors or scientific surveys affected assessment results, we excluded data sets from the likelihood, one fleet at a time (referred to here as a “drop-one” analysis). “Fleet” in this sense refers to either a fishing fleet or a survey “fleet.” To do this, we set “lambdas” (multipliers for each likelihood component) equal to zero. This is equivalent to removing the data from the model. When composition data were excluded, the selectivity parameters for that fleet were fixed at the base model estimates to standardize the size and age composition of harvested fish. When abundance indices were excluded, relevant catchability and ‘extraSE’ parameters associated with the index were not estimated. Composition data weights for the remaining fleets were kept consistent with the base model values. Results from all the ‘drop-one’ runs were compared to the base model using time series plots and tables containing likelihood components, parameter estimates and derived quantities.
 
 
 
-Drop-one analysis of the northern California assessment revealed slightly larger variability in spawning output trends relative to the south, but all runs were still within the range of uncertainty estimated by the base model (Figure \@ref(drop-spawnbio)). Removal of most fleets had little effect on terminal stock status, with best estimates in the vicinity of target biomass levels (Figure \@ref(drop-bratio)). An exception was removal of the REC_PC fleet, which caused the best estimate of terminal depletion to drop just above the minimum stock size threshold. This suggests that the REC_PC data sets, together, favor a less-depleted stock relative to data from the other fleets. The strength of the 2016 year class is sensitive to the removal of fleet-specific data sets (Figure \@ref(fig:recdev)). Removal of the REC_PR fleet produces the largest estimates of 2016 cohort size, and removal of the NWFSC_TWL fleet estimates a 2016 deviation that is less than half as large (but still positive). Uncertainty in the strength of this recent year class should be taken into consideration for short term forecasts of stock abundance and yield. Changes in likelihoods, parameter estimates and derived quantities are recorded in Table \@ref(tab:drop-one). Comparison of likelihoods among drop-one scenarios should be treated with caution due to changes in the data sets that were fit in each model run.
+Drop-one analysis of the northern California assessment revealed slightly larger variability in spawning output trends relative to the south, but all runs were still within the range of uncertainty estimated by the base model (Figure \@ref(fig:drop-spawnbio)). Removal of most fleets had little effect on terminal stock status, with best estimates in the vicinity of target biomass levels (Figure \@ref(fig:drop-bratio)). An exception was removal of the REC_PC fleet, which caused the best estimate of terminal depletion to drop just above the minimum stock size threshold. This suggests that the REC_PC data sets, together, favor a less-depleted stock relative to data from the other fleets. The strength of the 2016 year class is sensitive to the removal of fleet-specific data sets (Figure \@ref(fig:recdev)). Removal of the REC_PR fleet produces the largest estimates of 2016 cohort size, and removal of the NWFSC_TWL fleet estimates a 2016 deviation that is less than half as large (but still positive). Uncertainty in the strength of this recent year class should be taken into consideration for short term forecasts of stock abundance and yield. Changes in likelihoods, parameter estimates and derived quantities are recorded in Table \@ref(tab:drop-one). Comparison of likelihoods among drop-one scenarios should be treated with caution due to changes in the data sets that were fit in each model run.
 
 
 
@@ -1622,7 +1609,6 @@ A five year retrospective analysis was conducted on the northern base model by s
 
 
 ## Other Model Sensitivities
-[This paragraph can go in both docs]
 Results from the pre-STAR base model were compared to several alternative model specifications, as described below.
 
 - Estimate the Beverton-Holt steepness parameter (*h*) rather than fixing it at the prior mean (*h*=0.72); estimate uncertainty intervals for comparison to base
@@ -1632,10 +1618,10 @@ Results from the pre-STAR base model were compared to several alternative model 
 - Mirror the recreational discard fleets’ selectivity curves to the corresponding retained fleets (PC or PR) rather than fitting to discard length comps as in the base model.
 
 
-Trends in spawning output for the northern California assessment model were generally robust to this set of sensitivities (Figure \@ref(fig:sens1-spawnbio)). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness was estimated at a higher value than the prior mean (estimated at 0.94 vs. fixed at 0.72). Similarly, stock status did not vary greatly among this set of sensitivity runs, with only a minor increase in 2021 relative spawning output when using McAllister-Ianelli weights and a slight decrease when estimating steepness (Figure \@ref(fig:sens1-bratio)). The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method significantly reduced the magnitude of the 2016 year class, and generally increased the variance of the estimated deviations. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table YYY), and resulted in lower estimates of the male and female natural mortality rates (Table \@ref(tab:sens1)).
+Trends in spawning output for the northern California assessment model were generally robust to this set of sensitivities (Figure \@ref(fig:sens1-spawnbio)). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness was estimated at a higher value than the prior mean (estimated at 0.94 vs. fixed at 0.72). Similarly, stock status did not vary greatly among this set of sensitivity runs, with only a minor increase in 2021 relative spawning output when using McAllister-Ianelli weights and a slight decrease when estimating steepness (Figure \@ref(fig:sens1-bratio)). The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method significantly reduced the magnitude of the 2016 year class, and generally increased the variance of the estimated deviations. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table \@ref(tab:sense1)), and resulted in lower estimates of the male and female natural mortality rates (Table \@ref(tab:data-weight)).
 
 
-Trends in spawning output for the southern California assessment model were generally robust to this set of sensitivities, with the exception of recent estimates of spawning output which were much lower when using McAllister-Ianelli data weights, relative to the Francis method used in the base model (Figure \@ref(fig:sens1-spawnbio)). The model tuned to McAllister-Ianelli weights was below target biomass, while the other models that used Francis weights showed similar trends in depletion and were above target biomass (Figure \@ref(fig:sens1-bratio)). The McAllister-Ianelli approach estimated a natural mortality rate that was about 20% lower than the Francis method (Table ZZZ). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness in the southern region was estimated at a similar value than the prior mean (estimated at 0.77 vs. fixed at 0.72), and estimation of this parameter did not have a large effect on uncertainty in spawning output or recruitment deviations. The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method increased the variance of the estimated deviations as well as the estimated strength of the 1999 year class, relative to the models using the Francis approach. Changing the start date of the recruitment deviations had almost no effect. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table \@ref(tab:sens1)).
+Trends in spawning output for the southern California assessment model were generally robust to this set of sensitivities, with the exception of recent estimates of spawning output which were much lower when using McAllister-Ianelli data weights, relative to the Francis method used in the base model (Figure \@ref(fig:sens1-spawnbio)). The model tuned to McAllister-Ianelli weights was below target biomass, while the other models that used Francis weights showed similar trends in depletion and were above target biomass (Figure \@ref(fig:sens1-bratio)). The McAllister-Ianelli approach estimated a natural mortality rate that was about 20% lower than the Francis method (Table \@ref(tab:drop-one)). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness in the southern region was estimated at a similar value than the prior mean (estimated at 0.77 vs. fixed at 0.72), and estimation of this parameter did not have a large effect on uncertainty in spawning output or recruitment deviations. The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method increased the variance of the estimated deviations as well as the estimated strength of the 1999 year class, relative to the models using the Francis approach. Changing the start date of the recruitment deviations had almost no effect. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table \@ref(tab:sens1)).
 
 ## Unresolved Problems and Major Uncertainties
 
@@ -1653,7 +1639,7 @@ Projections of OFL (mt), ABC (mt), age 10+ biomass (mt), spawning output (billio
 
 Over the last several decades, spatially explicit management measures at both the state and federal/management council level have been implemented to achieve a wide range of marine resource and fishery management objectives. Depth restrictions to commercial and recreational fisheries in the Rockfish Conservation Areas (RCAs) and the Cowcod Conservation Areas (CCAs) are key among those, as are the suite of total and partial exclusion of commercial and recreational fishing activities in the California statewide network of Marine Protected Areas (MPAs). While the former are associated with explicit fisheries management objectives, the latter have a suite of ecological and economic objectives, most of which are not specific to, nor integrated across, the fisheries management arena. Despite this, both types of spatial management measures are expected to result in various biological, ecological, and socioeconomic effects within and adjacent to their boundaries.  All of these effects have the potential to influence the nature and quality of the data used to inform stock assessments of species that reside in these areas, including vermilion rockfish.
 
-Regardless of the management objective, spatial closures are expected to increase the spatial heterogeneity in abundance and size or age structure of fished stocks. This greater spatial variability can complicate the assumptions made in stock assessment models, particularly the assumption that the densities and demographic structure of assessed populations are relatively homogenous, at least across predictable habitat types such as bathymetric gradients or substrate types [@Punt2004; @Field2007; @Berger2017].  Although a wide range of factors above and beyond spatial management measures can also lead to violations of those assumptions, and the challenge is intuitively less problematic for populations with high movement rates and/or high population turnover, the challenge can be particularly important for longer lived populations with lower movement rates.  The challenge can best be summarized by the result that the more effective MPAs or other closed areas are at protecting populations within them, the more likely it is that traditional assessment approaches will be biased or more uncertain.  
+Regardless of the management objective, spatial closures are expected to increase the spatial heterogeneity in abundance and size or age structure of fished stocks. This greater spatial variability can complicate the assumptions made in stock assessment models, particularly the assumption that the densities and demographic structure of assessed populations are relatively homogeneous, at least across predictable habitat types such as bathymetric gradients or substrate types [@Punt2004; @Field2007; @Berger2017].  Although a wide range of factors above and beyond spatial management measures can also lead to violations of those assumptions, and the challenge is intuitively less problematic for populations with high movement rates and/or high population turnover, the challenge can be particularly important for longer lived populations with lower movement rates.  The challenge can best be summarized by the result that the more effective MPAs or other closed areas are at protecting populations within them, the more likely it is that traditional assessment approaches will be biased or more uncertain.  
 
 If the spatial closures also prevent fisheries independent surveys from evaluating the relative abundance and demographic structure of managed populations, the challenges in developing robust population models, and thus robust management advice, become even more severe.  While spatially explicit assessment models provide a means of more explicitly addressing these challenges, such models are computationally intensive, require robust data from the specific areas being modeled, and may also require detailed information regarding movement and dispersal rates [@McGilliard2015; @Berger2017; @Puntet2020; @Cadrin2020].  Moreover, the complexity of these spatial models increases substantially if the size and location of closed areas changes over time, as many of the more “fisheries management based” closures (e.g., RCAs) have in California groundfish fisheries.  Thus, such approaches may be less feasible for more data limited stocks, such as northern and southern vermilion rockfish, at least in the near term.  However, the fact that both the northern and southern assessment models are informed by fishery-independent surveys that include habitats both inside and outside area closures provides some hope for greater recognition of spatial factors in future assessments.  
 
@@ -1689,7 +1675,7 @@ in the Southern California Bight. We also recommend evaluating how to structure 
   +  This was a line-transect survey designed to estimate cowcod abundance in 2002 
   conducted from a submersible inside the CCAs.  Originally, only cowcod were enumerated from the video footage.  Over the last few years, the SWFSC has re-analyzed the video footage to enumerate other rockfish species. 
     + The SWFSC Fishery Resource Division (FRD) conducted a survey of potential cowcod habitat between Point Conception and the U.S. – Mexico border from October through December of 2012 [@Stierhoff2013].
-    +  SWFSC staff are submitting proposals to conduct an additional submirsible survey in the southern California Bight
+    +  SWFSC staff are submitting proposals to conduct an additional submersible survey in the southern California Bight
     + CDFW ROV survey data
 
 
@@ -1707,10 +1693,13 @@ particularly for recruitment.
 
 <!--chapter:end:40management.Rmd-->
 
+\clearpage
+
 # Acknowledgments (not required for draft assessments)
 
 <!--chapter:end:41acknowledgements.Rmd-->
 
+\clearpage
 \floatplacement{table}{H}
 
 # Tables
@@ -1785,7 +1774,7 @@ Vermilion & 1985 & Total & 36 & 10 & 27 & \\
 Vermilion & 1986 & San\_Luis\_Obispo & 23 & 13 & 56 & 1.0454545\\
 Vermilion & 1986 & Total & 45 & 14 & 30 & \\
  &  &  &  &  & Average & 1.0623098\\
- &  &  &  &  & Total Catch-Weighted Average & 1.0360910\\
+ &  &  &  &  & Catch-weighted Avg. & 1.0360910\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -2161,113 +2150,113 @@ CALCOM & 1995 & COM\_NET(3) & 80 & 6 & 6.00\\
 CALCOM & 1996 & COM\_NET(3) & 36 & 2 & 2.00\\
 CALCOM & 1997 & COM\_NET(3) & 34 & 2 & 2.00\\
 CALCOM & 1998 & COM\_NET(3) & 70 & 3 & 3.00\\
-KARPOV & 1959 & REC\_PC(4) & 506 & NA & \\
-KARPOV & 1960 & REC\_PC(4) & 1042 & NA & \\
+KARPOV & 1959 & REC\_PC(4) & 506 &  & \\
+KARPOV & 1960 & REC\_PC(4) & 1042 &  & \\
 SWFSC & 1978 & REC\_PC(4) & 30 & 26 & \\
 SWFSC & 1979 & REC\_PC(4) & 82 & 31 & \\
-MRFSS & 1980 & REC\_PC(4) & 73 & NA & 51.00\\
-MRFSS & 1981 & REC\_PC(4) & 33 & NA & 27.00\\
-MRFSS & 1982 & REC\_PC(4) & 37 & NA & 34.00\\
-MRFSS & 1983 & REC\_PC(4) & 37 & NA & 30.00\\
-MRFSS & 1984 & REC\_PC(4) & 86 & NA & 62.00\\
-MRFSS & 1985 & REC\_PC(4) & 139 & NA & 93.00\\
-MRFSS & 1986 & REC\_PC(4) & 127 & NA & 84.00\\
-MRFSS & 1987 & REC\_PC(4) & 223 & NA & 73.00\\
-MRFSS & 1988 & REC\_PC(4) & 154 & NA & 89.00\\
-MRFSS & 1989 & REC\_PC(4) & 234 & NA & 94.00\\
-MRFSS & 1993 & REC\_PC(4) & 59 & NA & 40.00\\
-MRFSS & 1994 & REC\_PC(4) & 81 & NA & 45.00\\
-MRFSS & 1995 & REC\_PC(4) & 88 & NA & 65.00\\
-MRFSS & 1996 & REC\_PC(4) & 315 & NA & 208.00\\
-MRFSS & 1997 & REC\_PC(4) & 1209 & NA & 156.00\\
-MRFSS & 1998 & REC\_PC(4) & 210 & NA & 91.00\\
-MRFSS & 1999 & REC\_PC(4) & 571 & NA & 295.00\\
-MRFSS & 2000 & REC\_PC(4) & 129 & NA & 81.00\\
-MRFSS & 2001 & REC\_PC(4) & 200 & NA & 134.00\\
-MRFSS & 2002 & REC\_PC(4) & 378 & NA & 235.00\\
-MRFSS & 2003 & REC\_PC(4) & 577 & NA & 361.00\\
-CRFS & 2004 & REC\_PC(4) & 995 & NA & 176.00\\
-CRFS & 2005 & REC\_PC(4) & 1627 & NA & 288.00\\
-CRFS & 2006 & REC\_PC(4) & 1444 & NA & 256.00\\
-CRFS & 2007 & REC\_PC(4) & 1805 & NA & 319.00\\
-CRFS & 2008 & REC\_PC(4) & 690 & NA & 122.00\\
-CRFS & 2009 & REC\_PC(4) & 884 & NA & 156.00\\
-CRFS & 2010 & REC\_PC(4) & 1630 & NA & 288.00\\
-CRFS & 2011 & REC\_PC(4) & 1426 & NA & 252.00\\
-CRFS & 2012 & REC\_PC(4) & 1234 & NA & 218.00\\
-CRFS & 2013 & REC\_PC(4) & 917 & NA & 162.00\\
-CRFS & 2014 & REC\_PC(4) & 563 & NA & 159.00\\
-CRFS & 2015 & REC\_PC(4) & 734 & NA & 190.00\\
-CRFS & 2016 & REC\_PC(4) & 742 & NA & 166.00\\
-CRFS & 2017 & REC\_PC(4) & 1082 & NA & 175.00\\
-CRFS & 2018 & REC\_PC(4) & 1190 & NA & 150.00\\
-CRFS & 2019 & REC\_PC(4) & 1357 & NA & 163.00\\
-CRFS & 2003 & REC\_PC\_DIS(5) & 38 & NA & \\
-CRFS & 2004 & REC\_PC\_DIS(5) & 78 & NA & \\
-CRFS & 2005 & REC\_PC\_DIS(5) & 67 & NA & \\
-CRFS & 2006 & REC\_PC\_DIS(5) & 49 & NA & \\
-CRFS & 2007 & REC\_PC\_DIS(5) & 9 & NA & \\
-CRFS & 2008 & REC\_PC\_DIS(5) & 9 & NA & \\
-CRFS & 2009 & REC\_PC\_DIS(5) & 40 & NA & \\
-CRFS & 2010 & REC\_PC\_DIS(5) & 70 & NA & \\
-CRFS & 2011 & REC\_PC\_DIS(5) & 13 & NA & \\
-CRFS & 2012 & REC\_PC\_DIS(5) & 6 & NA & \\
-CRFS & 2013 & REC\_PC\_DIS(5) & 6 & NA & \\
-CRFS & 2014 & REC\_PC\_DIS(5) & 7 & NA & \\
-CRFS & 2015 & REC\_PC\_DIS(5) & 6 & NA & \\
-CRFS & 2016 & REC\_PC\_DIS(5) & 5 & NA & \\
-CRFS & 2017 & REC\_PC\_DIS(5) & 6 & NA & \\
-CRFS & 2018 & REC\_PC\_DIS(5) & 2 & NA & \\
-CRFS & 2019 & REC\_PC\_DIS(5) & 13 & NA & \\
-KARPOV & 1959 & REC\_PR(6) & 499 & NA & \\
-MRFSS & 1980 & REC\_PR(6) & 89 & NA & 62.00\\
-MRFSS & 1981 & REC\_PR(6) & 55 & NA & 36.00\\
-MRFSS & 1982 & REC\_PR(6) & 109 & NA & 65.00\\
-MRFSS & 1983 & REC\_PR(6) & 83 & NA & 60.00\\
-MRFSS & 1984 & REC\_PR(6) & 176 & NA & 117.00\\
-MRFSS & 1985 & REC\_PR(6) & 137 & NA & 93.00\\
-MRFSS & 1986 & REC\_PR(6) & 158 & NA & 102.00\\
-MRFSS & 1987 & REC\_PR(6) & 97 & NA & 45.00\\
-MRFSS & 1988 & REC\_PR(6) & 79 & NA & 46.00\\
-MRFSS & 1989 & REC\_PR(6) & 94 & NA & 51.00\\
-MRFSS & 1993 & REC\_PR(6) & 510 & NA & 269.00\\
-MRFSS & 1994 & REC\_PR(6) & 285 & NA & 147.00\\
-MRFSS & 1995 & REC\_PR(6) & 152 & NA & 85.00\\
-MRFSS & 1996 & REC\_PR(6) & 119 & NA & 73.00\\
-MRFSS & 1997 & REC\_PR(6) & 92 & NA & 50.00\\
-MRFSS & 1998 & REC\_PR(6) & 124 & NA & 79.00\\
-MRFSS & 1999 & REC\_PR(6) & 255 & NA & 135.00\\
-MRFSS & 2000 & REC\_PR(6) & 197 & NA & 101.00\\
-MRFSS & 2001 & REC\_PR(6) & 71 & NA & 45.00\\
-MRFSS & 2002 & REC\_PR(6) & 240 & NA & 126.00\\
-MRFSS & 2003 & REC\_PR(6) & 494 & NA & 187.00\\
-CRFS & 2004 & REC\_PR(6) & 2098 & NA & 371.00\\
-CRFS & 2005 & REC\_PR(6) & 4068 & NA & 1784.21\\
-CRFS & 2006 & REC\_PR(6) & 5036 & NA & 2208.77\\
-CRFS & 2007 & REC\_PR(6) & 3889 & NA & 1705.70\\
-CRFS & 2008 & REC\_PR(6) & 2600 & NA & 1140.35\\
-CRFS & 2009 & REC\_PR(6) & 1994 & NA & 874.56\\
-CRFS & 2010 & REC\_PR(6) & 1938 & NA & 850.00\\
-CRFS & 2011 & REC\_PR(6) & 2210 & NA & 969.30\\
-CRFS & 2012 & REC\_PR(6) & 1917 & NA & 840.79\\
-CRFS & 2013 & REC\_PR(6) & 2409 & NA & 1056.58\\
-CRFS & 2014 & REC\_PR(6) & 2117 & NA & 1058.00\\
-CRFS & 2015 & REC\_PR(6) & 3492 & NA & 1620.00\\
-CRFS & 2016 & REC\_PR(6) & 3315 & NA & 1406.00\\
-CRFS & 2017 & REC\_PR(6) & 2963 & NA & 1384.00\\
-CRFS & 2018 & REC\_PR(6) & 3225 & NA & 1350.00\\
-CRFS & 2019 & REC\_PR(6) & 3426 & NA & 1329.00\\
-CDFW & 1988 & DWV\_ONBOARD(8) & 674 & NA & 100.00\\
-CDFW & 1989 & DWV\_ONBOARD(8) & 1274 & NA & 134.00\\
-CDFW & 1990 & DWV\_ONBOARD(8) & 583 & NA & 48.00\\
-CDFW & 1991 & DWV\_ONBOARD(8) & 388 & NA & 62.00\\
-CDFW & 1992 & DWV\_ONBOARD(8) & 1173 & NA & 145.00\\
-CDFW & 1993 & DWV\_ONBOARD(8) & 1079 & NA & 162.00\\
-CDFW & 1994 & DWV\_ONBOARD(8) & 753 & NA & 112.00\\
-CDFW & 1995 & DWV\_ONBOARD(8) & 964 & NA & 147.00\\
-CDFW & 1996 & DWV\_ONBOARD(8) & 582 & NA & 137.00\\
-CDFW & 1997 & DWV\_ONBOARD(8) & 1278 & NA & 177.00\\
-CDFW & 1998 & DWV\_ONBOARD(8) & 662 & NA & 118.00\\
+MRFSS & 1980 & REC\_PC(4) & 73 &  & 51.00\\
+MRFSS & 1981 & REC\_PC(4) & 33 &  & 27.00\\
+MRFSS & 1982 & REC\_PC(4) & 37 &  & 34.00\\
+MRFSS & 1983 & REC\_PC(4) & 37 &  & 30.00\\
+MRFSS & 1984 & REC\_PC(4) & 86 &  & 62.00\\
+MRFSS & 1985 & REC\_PC(4) & 139 &  & 93.00\\
+MRFSS & 1986 & REC\_PC(4) & 127 &  & 84.00\\
+MRFSS & 1987 & REC\_PC(4) & 223 &  & 73.00\\
+MRFSS & 1988 & REC\_PC(4) & 154 &  & 89.00\\
+MRFSS & 1989 & REC\_PC(4) & 234 &  & 94.00\\
+MRFSS & 1993 & REC\_PC(4) & 59 &  & 40.00\\
+MRFSS & 1994 & REC\_PC(4) & 81 &  & 45.00\\
+MRFSS & 1995 & REC\_PC(4) & 88 &  & 65.00\\
+MRFSS & 1996 & REC\_PC(4) & 315 &  & 208.00\\
+MRFSS & 1997 & REC\_PC(4) & 1209 &  & 156.00\\
+MRFSS & 1998 & REC\_PC(4) & 210 &  & 91.00\\
+MRFSS & 1999 & REC\_PC(4) & 571 &  & 295.00\\
+MRFSS & 2000 & REC\_PC(4) & 129 &  & 81.00\\
+MRFSS & 2001 & REC\_PC(4) & 200 &  & 134.00\\
+MRFSS & 2002 & REC\_PC(4) & 378 &  & 235.00\\
+MRFSS & 2003 & REC\_PC(4) & 577 &  & 361.00\\
+CRFS & 2004 & REC\_PC(4) & 995 &  & 176.00\\
+CRFS & 2005 & REC\_PC(4) & 1627 &  & 288.00\\
+CRFS & 2006 & REC\_PC(4) & 1444 &  & 256.00\\
+CRFS & 2007 & REC\_PC(4) & 1805 &  & 319.00\\
+CRFS & 2008 & REC\_PC(4) & 690 &  & 122.00\\
+CRFS & 2009 & REC\_PC(4) & 884 &  & 156.00\\
+CRFS & 2010 & REC\_PC(4) & 1630 &  & 288.00\\
+CRFS & 2011 & REC\_PC(4) & 1426 &  & 252.00\\
+CRFS & 2012 & REC\_PC(4) & 1234 &  & 218.00\\
+CRFS & 2013 & REC\_PC(4) & 917 &  & 162.00\\
+CRFS & 2014 & REC\_PC(4) & 563 &  & 159.00\\
+CRFS & 2015 & REC\_PC(4) & 734 &  & 190.00\\
+CRFS & 2016 & REC\_PC(4) & 742 &  & 166.00\\
+CRFS & 2017 & REC\_PC(4) & 1082 &  & 175.00\\
+CRFS & 2018 & REC\_PC(4) & 1190 &  & 150.00\\
+CRFS & 2019 & REC\_PC(4) & 1357 &  & 163.00\\
+CRFS & 2003 & REC\_PC\_DIS(5) & 38 &  & \\
+CRFS & 2004 & REC\_PC\_DIS(5) & 78 &  & \\
+CRFS & 2005 & REC\_PC\_DIS(5) & 67 &  & \\
+CRFS & 2006 & REC\_PC\_DIS(5) & 49 &  & \\
+CRFS & 2007 & REC\_PC\_DIS(5) & 9 &  & \\
+CRFS & 2008 & REC\_PC\_DIS(5) & 9 &  & \\
+CRFS & 2009 & REC\_PC\_DIS(5) & 40 &  & \\
+CRFS & 2010 & REC\_PC\_DIS(5) & 70 &  & \\
+CRFS & 2011 & REC\_PC\_DIS(5) & 13 &  & \\
+CRFS & 2012 & REC\_PC\_DIS(5) & 6 &  & \\
+CRFS & 2013 & REC\_PC\_DIS(5) & 6 &  & \\
+CRFS & 2014 & REC\_PC\_DIS(5) & 7 &  & \\
+CRFS & 2015 & REC\_PC\_DIS(5) & 6 &  & \\
+CRFS & 2016 & REC\_PC\_DIS(5) & 5 &  & \\
+CRFS & 2017 & REC\_PC\_DIS(5) & 6 &  & \\
+CRFS & 2018 & REC\_PC\_DIS(5) & 2 &  & \\
+CRFS & 2019 & REC\_PC\_DIS(5) & 13 &  & \\
+KARPOV & 1959 & REC\_PR(6) & 499 &  & \\
+MRFSS & 1980 & REC\_PR(6) & 89 &  & 62.00\\
+MRFSS & 1981 & REC\_PR(6) & 55 &  & 36.00\\
+MRFSS & 1982 & REC\_PR(6) & 109 &  & 65.00\\
+MRFSS & 1983 & REC\_PR(6) & 83 &  & 60.00\\
+MRFSS & 1984 & REC\_PR(6) & 176 &  & 117.00\\
+MRFSS & 1985 & REC\_PR(6) & 137 &  & 93.00\\
+MRFSS & 1986 & REC\_PR(6) & 158 &  & 102.00\\
+MRFSS & 1987 & REC\_PR(6) & 97 &  & 45.00\\
+MRFSS & 1988 & REC\_PR(6) & 79 &  & 46.00\\
+MRFSS & 1989 & REC\_PR(6) & 94 &  & 51.00\\
+MRFSS & 1993 & REC\_PR(6) & 510 &  & 269.00\\
+MRFSS & 1994 & REC\_PR(6) & 285 &  & 147.00\\
+MRFSS & 1995 & REC\_PR(6) & 152 &  & 85.00\\
+MRFSS & 1996 & REC\_PR(6) & 119 &  & 73.00\\
+MRFSS & 1997 & REC\_PR(6) & 92 &  & 50.00\\
+MRFSS & 1998 & REC\_PR(6) & 124 &  & 79.00\\
+MRFSS & 1999 & REC\_PR(6) & 255 &  & 135.00\\
+MRFSS & 2000 & REC\_PR(6) & 197 &  & 101.00\\
+MRFSS & 2001 & REC\_PR(6) & 71 &  & 45.00\\
+MRFSS & 2002 & REC\_PR(6) & 240 &  & 126.00\\
+MRFSS & 2003 & REC\_PR(6) & 494 &  & 187.00\\
+CRFS & 2004 & REC\_PR(6) & 2098 &  & 371.00\\
+CRFS & 2005 & REC\_PR(6) & 4068 &  & 1784.21\\
+CRFS & 2006 & REC\_PR(6) & 5036 &  & 2208.77\\
+CRFS & 2007 & REC\_PR(6) & 3889 &  & 1705.70\\
+CRFS & 2008 & REC\_PR(6) & 2600 &  & 1140.35\\
+CRFS & 2009 & REC\_PR(6) & 1994 &  & 874.56\\
+CRFS & 2010 & REC\_PR(6) & 1938 &  & 850.00\\
+CRFS & 2011 & REC\_PR(6) & 2210 &  & 969.30\\
+CRFS & 2012 & REC\_PR(6) & 1917 &  & 840.79\\
+CRFS & 2013 & REC\_PR(6) & 2409 &  & 1056.58\\
+CRFS & 2014 & REC\_PR(6) & 2117 &  & 1058.00\\
+CRFS & 2015 & REC\_PR(6) & 3492 &  & 1620.00\\
+CRFS & 2016 & REC\_PR(6) & 3315 &  & 1406.00\\
+CRFS & 2017 & REC\_PR(6) & 2963 &  & 1384.00\\
+CRFS & 2018 & REC\_PR(6) & 3225 &  & 1350.00\\
+CRFS & 2019 & REC\_PR(6) & 3426 &  & 1329.00\\
+CDFW & 1988 & DWV\_ONBOARD(8) & 674 &  & 100.00\\
+CDFW & 1989 & DWV\_ONBOARD(8) & 1274 &  & 134.00\\
+CDFW & 1990 & DWV\_ONBOARD(8) & 583 &  & 48.00\\
+CDFW & 1991 & DWV\_ONBOARD(8) & 388 &  & 62.00\\
+CDFW & 1992 & DWV\_ONBOARD(8) & 1173 &  & 145.00\\
+CDFW & 1993 & DWV\_ONBOARD(8) & 1079 &  & 162.00\\
+CDFW & 1994 & DWV\_ONBOARD(8) & 753 &  & 112.00\\
+CDFW & 1995 & DWV\_ONBOARD(8) & 964 &  & 147.00\\
+CDFW & 1996 & DWV\_ONBOARD(8) & 582 &  & 137.00\\
+CDFW & 1997 & DWV\_ONBOARD(8) & 1278 &  & 177.00\\
+CDFW & 1998 & DWV\_ONBOARD(8) & 662 &  & 118.00\\
 NWFSC & 2003 & NWFSC\_TWL(9) & 21 & 4 & \\
 NWFSC & 2004 & NWFSC\_TWL(9) & 6 & 4 & \\
 NWFSC & 2005 & NWFSC\_TWL(9) & 7 & 2 & \\
@@ -2285,8 +2274,8 @@ NWFSC & 2016 & NWFSC\_TWL(9) & 9 & 9 & \\
 NWFSC & 2017 & NWFSC\_TWL(9) & 64 & 12 & \\
 NWFSC & 2018 & NWFSC\_TWL(9) & 26 & 7 & \\
 NWFSC & 2019 & NWFSC\_TWL(9) & 42 & 7 & \\
-J\_ABRAMS & 2010 & ABRAMS\_RESEARCH(11) & 25 & NA & \\
-J\_ABRAMS & 2011 & ABRAMS\_RESEARCH(11) & 56 & NA & \\
+J\_ABRAMS & 2010 & ABRAMS\_RESEARCH(11) & 25 &  & \\
+J\_ABRAMS & 2011 & ABRAMS\_RESEARCH(11) & 56 &  & \\
 SWFSC & 2002 & SWFSC\_GF\_ECOL(12) & 71 & 13 & \\
 SWFSC & 2003 & SWFSC\_GF\_ECOL(12) & 110 & 22 & \\
 SWFSC & 2004 & SWFSC\_GF\_ECOL(12) & 118 & 18 & \\
@@ -2578,46 +2567,53 @@ Size DblN end logit REC PR(6) BLK1repl 2002 & -1.746 & 3 & (-8, 9) & OK & 0.8373
 
 
 
-\begin{landscape}\begin{table}
+\begin{landscape}\begingroup\fontsize{8}{10}\selectfont
 
-\caption{(\#tab:drop-one)Suggested data-weighting for length and age composition data using the McAllister-Ianelli and Francis approaches, after five tuning iterations to the pre-STAR base model.}
-\centering
-\resizebox{\linewidth}{!}{
-\begin{tabular}[t]{llrlrrrrrl}
+\begin{longtable}[t]{llrlrrrrrr}
+\caption{(\#tab:data-weights)Suggested data-weighting for length and age composition data using the McAllister-Ianelli and Francis approaches, after five tuning iterations to the pre-STAR base model.}\\
 \toprule
 Method & DataType & Fleet\_No & Fleet\_Name & iter\_1 & iter\_2 & iter\_3 & iter\_4 & iter\_5 & base\\
 \midrule
-Francis & Length & 1 & COM\_HKL & 0.428 & 0.385 & 0.348 & 0.329 & 0.319 & 0.30397800000000003\\
-Francis & Length & 2 & COM\_TWL & 4.310 & 4.941 & 4.630 & 4.543 & 4.489 & 4.38795\\
-Francis & Length & 3 & COM\_NET & 0.596 & 0.615 & 0.603 & 0.598 & 0.595 & 0.58989999999999998\\
-Francis & Length & 4 & REC\_PC & 0.207 & 0.156 & 0.148 & 0.144 & 0.142 & 0.139823\\
-Francis & Length & 5 & REC\_PC\_DIS & 0.196 & 0.192 & 0.193 & 0.195 & 0.196 & 0.19603300000000001\\
-Francis & Length & 6 & REC\_PR & 0.166 & 0.113 & 0.103 & 0.097 & 0.095 & 9.3468999999999997E-2\\
-Francis & Length & 8 & DWV\_ONBOARD & 0.260 & 0.222 & 0.220 & 0.218 & 0.217 & 0.21468100000000001\\
-Francis & Length & 9 & NWFSC\_TWL & 0.202 & 0.229 & 0.246 & 0.247 & 0.247 & 0.24612300000000001\\
-Francis & Length & 11 & ABRAMS\_RESEARCH & 0.961 & 1.408 & 1.729 & 1.918 & 2.018 & 2.1612580000000001\\
-Francis & Length & 12 & SWFSC\_GF\_ECOL & 0.511 & 0.480 & 0.456 & 0.438 & 0.427 & 0.41106500000000001\\
-Francis & Length & 13 & CCFRP & 0.120 & 0.057 & 0.049 & 0.047 & 0.047 & 4.6188E-2\\
-Francis & Ages & 9 & NWFSC\_TWL & 1.110 & 0.565 & 0.585 & 0.578 & 0.575 & 0.57703400000000005\\
-Francis & Ages & 11 & ABRAMS\_RESEARCH & 1.060 & 0.922 & 0.893 & 0.880 & 0.876 & 0.86923700000000004\\
-Francis & Ages & 12 & SWFSC\_GF\_ECOL & 0.388 & 0.287 & 0.280 & 0.275 & 0.273 & 0.269202\\
-M-I & Length & 1 & COM\_HKL & 0.991 & 0.985 & 0.983 & 0.982 & 0.982 & NA\\
-M-I & Length & 2 & COM\_TWL & 6.483 & 6.669 & 6.700 & 6.705 & 6.706 & NA\\
-M-I & Length & 3 & COM\_NET & 3.619 & 3.689 & 3.691 & 3.692 & 3.692 & NA\\
-M-I & Length & 4 & REC\_PC & 0.622 & 0.610 & 0.607 & 0.606 & 0.606 & NA\\
-M-I & Length & 5 & REC\_PC\_DIS & 0.302 & 0.302 & 0.303 & 0.303 & 0.303 & NA\\
-M-I & Length & 6 & REC\_PR & 0.208 & 0.185 & 0.180 & 0.179 & 0.179 & NA\\
-M-I & Length & 8 & DWV\_ONBOARD & 1.007 & 1.283 & 1.330 & 1.336 & 1.337 & NA\\
-M-I & Length & 9 & NWFSC\_TWL & 0.647 & 0.644 & 0.643 & 0.643 & 0.642 & NA\\
-M-I & Length & 11 & ABRAMS\_RESEARCH & 0.812 & 0.791 & 0.783 & 0.781 & 0.780 & NA\\
-M-I & Length & 12 & SWFSC\_GF\_ECOL & 1.897 & 2.036 & 2.055 & 2.058 & 2.059 & NA\\
-M-I & Length & 13 & CCFRP & 0.792 & 0.861 & 0.886 & 0.894 & 0.896 & NA\\
-M-I & Ages & 9 & NWFSC\_TWL & 0.425 & 0.408 & 0.408 & 0.409 & 0.409 & NA\\
-M-I & Ages & 11 & ABRAMS\_RESEARCH & 0.521 & 0.524 & 0.524 & 0.524 & 0.524 & NA\\
-M-I & Ages & 12 & SWFSC\_GF\_ECOL & 0.432 & 0.433 & 0.433 & 0.433 & 0.433 & NA\\
+\endfirsthead
+\caption[]{(\#tab:data-weights)Suggested data-weighting for length and age composition data using the McAllister-Ianelli and Francis approaches, after five tuning iterations to the pre-STAR base model. \textit{(continued)}}\\
+\toprule
+Method & DataType & Fleet\_No & Fleet\_Name & iter\_1 & iter\_2 & iter\_3 & iter\_4 & iter\_5 & base\\
+\midrule
+\endhead
+
+\endfoot
 \bottomrule
-\end{tabular}}
-\end{table}
+\endlastfoot
+Francis & Length & 1 & COM\_HKL & 0.428 & 0.385 & 0.348 & 0.329 & 0.319 & 0.304\\
+Francis & Length & 2 & COM\_TWL & 4.310 & 4.941 & 4.630 & 4.543 & 4.489 & 4.388\\
+Francis & Length & 3 & COM\_NET & 0.596 & 0.615 & 0.603 & 0.598 & 0.595 & 0.590\\
+Francis & Length & 4 & REC\_PC & 0.207 & 0.156 & 0.148 & 0.144 & 0.142 & 0.140\\
+Francis & Length & 5 & REC\_PC\_DIS & 0.196 & 0.192 & 0.193 & 0.195 & 0.196 & 0.196\\
+Francis & Length & 6 & REC\_PR & 0.166 & 0.113 & 0.103 & 0.097 & 0.095 & 0.093\\
+Francis & Length & 8 & DWV\_ONBOARD & 0.260 & 0.222 & 0.220 & 0.218 & 0.217 & 0.215\\
+Francis & Length & 9 & NWFSC\_TWL & 0.202 & 0.229 & 0.246 & 0.247 & 0.247 & 0.246\\
+Francis & Length & 11 & ABRAMS\_RESEARCH & 0.961 & 1.408 & 1.729 & 1.918 & 2.018 & 2.161\\
+Francis & Length & 12 & SWFSC\_GF\_ECOL & 0.511 & 0.480 & 0.456 & 0.438 & 0.427 & 0.411\\
+Francis & Length & 13 & CCFRP & 0.120 & 0.057 & 0.049 & 0.047 & 0.047 & 0.046\\
+Francis & Ages & 9 & NWFSC\_TWL & 1.110 & 0.565 & 0.585 & 0.578 & 0.575 & 0.577\\
+Francis & Ages & 11 & ABRAMS\_RESEARCH & 1.060 & 0.922 & 0.893 & 0.880 & 0.876 & 0.869\\
+Francis & Ages & 12 & SWFSC\_GF\_ECOL & 0.388 & 0.287 & 0.280 & 0.275 & 0.273 & 0.269\\
+M-I & Length & 1 & COM\_HKL & 0.991 & 0.985 & 0.983 & 0.982 & 0.982 & \\
+M-I & Length & 2 & COM\_TWL & 6.483 & 6.669 & 6.700 & 6.705 & 6.706 & \\
+M-I & Length & 3 & COM\_NET & 3.619 & 3.689 & 3.691 & 3.692 & 3.692 & \\
+M-I & Length & 4 & REC\_PC & 0.622 & 0.610 & 0.607 & 0.606 & 0.606 & \\
+M-I & Length & 5 & REC\_PC\_DIS & 0.302 & 0.302 & 0.303 & 0.303 & 0.303 & \\
+M-I & Length & 6 & REC\_PR & 0.208 & 0.185 & 0.180 & 0.179 & 0.179 & \\
+M-I & Length & 8 & DWV\_ONBOARD & 1.007 & 1.283 & 1.330 & 1.336 & 1.337 & \\
+M-I & Length & 9 & NWFSC\_TWL & 0.647 & 0.644 & 0.643 & 0.643 & 0.642 & \\
+M-I & Length & 11 & ABRAMS\_RESEARCH & 0.812 & 0.791 & 0.783 & 0.781 & 0.780 & \\
+M-I & Length & 12 & SWFSC\_GF\_ECOL & 1.897 & 2.036 & 2.055 & 2.058 & 2.059 & \\
+M-I & Length & 13 & CCFRP & 0.792 & 0.861 & 0.886 & 0.894 & 0.896 & \\
+M-I & Ages & 9 & NWFSC\_TWL & 0.425 & 0.408 & 0.408 & 0.409 & 0.409 & \\
+M-I & Ages & 11 & ABRAMS\_RESEARCH & 0.521 & 0.524 & 0.524 & 0.524 & 0.524 & \\
+M-I & Ages & 12 & SWFSC\_GF\_ECOL & 0.432 & 0.433 & 0.433 & 0.433 & 0.433 & \\*
+\end{longtable}
+\endgroup{}
 \end{landscape}
 
 
@@ -2625,7 +2621,7 @@ M-I & Ages & 12 & SWFSC\_GF\_ECOL & 0.432 & 0.433 & 0.433 & 0.433 & 0.433 & NA\\
 <!-- ======================================================================= -->
 <!-- **************************   Sensitivity  ***************************** --> 
 <!-- ======================================================================= -->
-
+\FloatBarrier
 <!-- drop 1 -->
 
 
@@ -2633,44 +2629,81 @@ M-I & Ages & 12 & SWFSC\_GF\_ECOL & 0.432 & 0.433 & 0.433 & 0.433 & 0.433 & NA\\
 
 \begin{table}
 
-\caption{(\#tab:drop-one-50)Likelihood components from the leave one out analysis of the pre-STAR base model.}
+\caption{(\#tab:drop-one)Likelihood components from the leave one out analysis of the pre-STAR base model.}
 \centering
 \resizebox{\linewidth}{!}{
-\begin{tabular}[t]{lrrrrrrrrrrrrr}
+\begin{tabular}[t]{lrrrrrr}
 \toprule
-Label & pre-STAR\_base & no\_COM\_HKL & no\_COM\_TWL & no\_COM\_NET & no\_REC\_PC & no\_REC\_PC\_DIS & no\_REC\_PR & DWV\_ONBOARD & no\_NWFSC\_TWL & no\_REC\_ONBOARD & no\_ABRAMS\_RESEARCH & no\_SWFSC\_GF\_ECOL & no\_CCFRP\\
+Label & pre-STAR\_base & no\_COM\_HKL & no\_COM\_TWL & no\_COM\_NET & no\_REC\_PC & no\_REC\_PC\_DIS\\
 \midrule
-N.Parms & 115.000 & 113.000 & 113.000 & 111.000 & 104.000 & 112.000 & 103.000 & 115.000 & 112.000 & 115.000 & 115.000 & 115.000 & 112.000\\
-TOTAL & 910.571 & 886.431 & 887.894 & 903.309 & 853.962 & 887.799 & 842.732 & 901.725 & 453.806 & 915.877 & 723.727 & 815.093 & 903.442\\
-Survey & -55.121 & -55.341 & -55.069 & -54.993 & -46.506 & -55.296 & -41.896 & -45.539 & -53.087 & -49.159 & -55.803 & -55.071 & -47.274\\
-Length\_comp & 370.792 & 347.782 & 348.279 & 363.172 & 314.154 & 348.598 & 296.000 & 355.090 & 317.016 & 370.117 & 298.109 & 352.340 & 357.127\\
-Age\_comp & 581.647 & 581.938 & 582.039 & 581.783 & 577.342 & 581.765 & 573.202 & 582.738 & 185.839 & 581.878 & 468.925 & 504.841 & 584.196\\
-Recruitment & 13.129 & 11.972 & 12.545 & 13.221 & 8.811 & 12.612 & 15.378 & 9.408 & 3.887 & 12.928 & 12.300 & 12.815 & 9.221\\
-Parm\_priors & 0.116 & 0.072 & 0.092 & 0.121 & 0.153 & 0.113 & 0.041 & 0.020 & 0.146 & 0.105 & 0.189 & 0.160 & 0.165\\
-NatM\_uniform\_Fem\_GP\_1 & 0.089 & 0.091 & 0.090 & 0.088 & 0.087 & 0.089 & 0.094 & 0.096 & 0.082 & 0.089 & 0.090 & 0.087 & 0.086\\
-L\_at\_Amin\_Fem\_GP\_1 & 7.786 & 7.754 & 7.788 & 7.773 & 7.941 & 7.798 & 7.873 & 7.894 & 2.665 & 7.858 & 7.907 & 8.042 & 7.682\\
-L\_at\_Amax\_Fem\_GP\_1 & 55.383 & 55.347 & 55.414 & 55.315 & 55.480 & 55.359 & 55.398 & 55.461 & 54.476 & 55.475 & 55.895 & 55.465 & 55.360\\
-VonBert\_K\_Fem\_GP\_1 & 0.145 & 0.146 & 0.145 & 0.146 & 0.143 & 0.146 & 0.143 & 0.144 & 0.177 & 0.144 & 0.142 & 0.141 & 0.147\\
-CV\_young\_Fem\_GP\_1 & 0.096 & 0.096 & 0.096 & 0.096 & 0.097 & 0.095 & 0.103 & 0.097 & 0.054 & 0.097 & 0.103 & 0.094 & 0.095\\
-CV\_old\_Fem\_GP\_1 & 0.075 & 0.076 & 0.076 & 0.075 & 0.069 & 0.075 & 0.058 & 0.074 & 0.091 & 0.075 & 0.085 & 0.075 & 0.075\\
-NatM\_uniform\_Mal\_GP\_1 & 0.084 & 0.087 & 0.085 & 0.084 & 0.082 & 0.084 & 0.090 & 0.092 & 0.087 & 0.085 & 0.078 & 0.082 & 0.082\\
-L\_at\_Amin\_Mal\_GP\_1 & 6.025 & 5.992 & 5.984 & 6.019 & 6.134 & 6.073 & 6.125 & 5.987 & 5.661 & 6.075 & 6.293 & 6.198 & 6.015\\
-L\_at\_Amax\_Mal\_GP\_1 & 49.896 & 49.861 & 49.835 & 49.873 & 49.931 & 49.897 & 49.932 & 49.806 & 48.895 & 49.911 & 51.341 & 49.814 & 49.986\\
-VonBert\_K\_Mal\_GP\_1 & 0.199 & 0.200 & 0.200 & 0.199 & 0.197 & 0.198 & 0.197 & 0.200 & 0.223 & 0.198 & 0.186 & 0.196 & 0.198\\
-CV\_young\_Mal\_GP\_1 & 0.076 & 0.076 & 0.076 & 0.075 & 0.075 & 0.075 & 0.076 & 0.076 & 0.050 & 0.076 & 0.082 & 0.076 & 0.075\\
-SR\_LN(R0) & 6.072 & 6.130 & 6.093 & 6.065 & 6.001 & 6.078 & 6.167 & 6.261 & 6.054 & 6.065 & 6.022 & 6.048 & 5.998\\
-Q\_extraSD\_REC\_PR(6) & 0.184 & 0.185 & 0.182 & 0.185 & 0.165 & 0.184 &  & 0.183 & 0.190 & 0.186 & 0.184 & 0.189 & 0.156\\
-Bratio\_2021 & 0.391 & 0.427 & 0.397 & 0.386 & 0.276 & 0.394 & 0.461 & 0.475 & 0.350 & 0.367 & 0.387 & 0.374 & 0.381\\
-SSB\_unfished & 1114.670 & 1111.270 & 1100.150 & 1104.010 & 1056.010 & 1116.470 & 1062.550 & 1138.850 & 1258.060 & 1097.050 & 1075.040 & 1116.830 & 1105.680\\
-Totbio\_unfished & 6264.570 & 6302.200 & 6219.740 & 6240.070 & 6008.800 & 6279.770 & 6200.400 & 6546.320 & 6381.090 & 6147.110 & 6464.640 & 6307.160 & 6117.130\\
-Recr\_unfished & 433.531 & 459.429 & 442.736 & 430.575 & 403.752 & 436.042 & 476.663 & 523.510 & 425.995 & 430.385 & 412.280 & 423.416 & 402.527\\
-Dead\_Catch\_SPR & 140.884 & 145.028 & 141.881 & 140.347 & 134.758 & 141.325 & 146.545 & 156.489 & 141.986 & 139.694 & 140.130 & 139.100 & 130.307\\
-OFLCatch\_2023 & 168.686 & 184.428 & 171.247 & 166.356 & 127.785 & 170.296 & 210.223 & 212.608 & 144.434 & 160.312 & 168.305 & 161.547 & 122.502\\
+N.Parms & 115.000 & 113.000 & 113.000 & 111.000 & 104.000 & 112.000\\
+TOTAL & 910.571 & 886.431 & 887.894 & 903.309 & 853.962 & 887.799\\
+Survey & -55.121 & -55.341 & -55.069 & -54.993 & -46.506 & -55.296\\
+Length\_comp & 370.792 & 347.782 & 348.279 & 363.172 & 314.154 & 348.598\\
+Age\_comp & 581.647 & 581.938 & 582.039 & 581.783 & 577.342 & 581.765\\
+Recruitment & 13.129 & 11.972 & 12.545 & 13.221 & 8.811 & 12.612\\
+Parm\_priors & 0.116 & 0.072 & 0.092 & 0.121 & 0.153 & 0.113\\
+NatM\_uniform\_Fem\_GP\_1 & 0.089 & 0.091 & 0.090 & 0.088 & 0.087 & 0.089\\
+L\_at\_Amin\_Fem\_GP\_1 & 7.786 & 7.754 & 7.788 & 7.773 & 7.941 & 7.798\\
+L\_at\_Amax\_Fem\_GP\_1 & 55.383 & 55.347 & 55.414 & 55.315 & 55.480 & 55.359\\
+VonBert\_K\_Fem\_GP\_1 & 0.145 & 0.146 & 0.145 & 0.146 & 0.143 & 0.146\\
+CV\_young\_Fem\_GP\_1 & 0.096 & 0.096 & 0.096 & 0.096 & 0.097 & 0.095\\
+CV\_old\_Fem\_GP\_1 & 0.075 & 0.076 & 0.076 & 0.075 & 0.069 & 0.075\\
+NatM\_uniform\_Mal\_GP\_1 & 0.084 & 0.087 & 0.085 & 0.084 & 0.082 & 0.084\\
+L\_at\_Amin\_Mal\_GP\_1 & 6.025 & 5.992 & 5.984 & 6.019 & 6.134 & 6.073\\
+L\_at\_Amax\_Mal\_GP\_1 & 49.896 & 49.861 & 49.835 & 49.873 & 49.931 & 49.897\\
+VonBert\_K\_Mal\_GP\_1 & 0.199 & 0.200 & 0.200 & 0.199 & 0.197 & 0.198\\
+CV\_young\_Mal\_GP\_1 & 0.076 & 0.076 & 0.076 & 0.075 & 0.075 & 0.075\\
+SR\_LN(R0) & 6.072 & 6.130 & 6.093 & 6.065 & 6.001 & 6.078\\
+Q\_extraSD\_REC\_PR(6) & 0.184 & 0.185 & 0.182 & 0.185 & 0.165 & 0.184\\
+Bratio\_2021 & 0.391 & 0.427 & 0.397 & 0.386 & 0.276 & 0.394\\
+SSB\_unfished & 1114.670 & 1111.270 & 1100.150 & 1104.010 & 1056.010 & 1116.470\\
+Totbio\_unfished & 6264.570 & 6302.200 & 6219.740 & 6240.070 & 6008.800 & 6279.770\\
+Recr\_unfished & 433.531 & 459.429 & 442.736 & 430.575 & 403.752 & 436.042\\
+Dead\_Catch\_SPR & 140.884 & 145.028 & 141.881 & 140.347 & 134.758 & 141.325\\
+OFLCatch\_2023 & 168.686 & 184.428 & 171.247 & 166.356 & 127.785 & 170.296\\
 \bottomrule
 \end{tabular}}
 \end{table}
 
+\begin{table}
 
+\caption{(\#tab:drop-one2)Likelihood components from the leave one out analysis of the pre-STAR base model.}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{lrrrrrr}
+\toprule
+Label & no\_REC\_PR & DWV\_ONBOARD & no\_NWFSC\_TWL & no\_REC\_ONBOARD & no\_ABRAMS\_RESEARCH & no\_SWFSC\_GF\_ECOL\\
+\midrule
+N.Parms & 103.000 & 115.000 & 112.000 & 115.000 & 115.000 & 115.000\\
+TOTAL & 842.732 & 901.725 & 453.806 & 915.877 & 723.727 & 815.093\\
+Survey & -41.896 & -45.539 & -53.087 & -49.159 & -55.803 & -55.071\\
+Length\_comp & 296.000 & 355.090 & 317.016 & 370.117 & 298.109 & 352.340\\
+Age\_comp & 573.202 & 582.738 & 185.839 & 581.878 & 468.925 & 504.841\\
+Recruitment & 15.378 & 9.408 & 3.887 & 12.928 & 12.300 & 12.815\\
+Parm\_priors & 0.041 & 0.020 & 0.146 & 0.105 & 0.189 & 0.160\\
+NatM\_uniform\_Fem\_GP\_1 & 0.094 & 0.096 & 0.082 & 0.089 & 0.090 & 0.087\\
+L\_at\_Amin\_Fem\_GP\_1 & 7.873 & 7.894 & 2.665 & 7.858 & 7.907 & 8.042\\
+L\_at\_Amax\_Fem\_GP\_1 & 55.398 & 55.461 & 54.476 & 55.475 & 55.895 & 55.465\\
+VonBert\_K\_Fem\_GP\_1 & 0.143 & 0.144 & 0.177 & 0.144 & 0.142 & 0.141\\
+CV\_young\_Fem\_GP\_1 & 0.103 & 0.097 & 0.054 & 0.097 & 0.103 & 0.094\\
+CV\_old\_Fem\_GP\_1 & 0.058 & 0.074 & 0.091 & 0.075 & 0.085 & 0.075\\
+NatM\_uniform\_Mal\_GP\_1 & 0.090 & 0.092 & 0.087 & 0.085 & 0.078 & 0.082\\
+L\_at\_Amin\_Mal\_GP\_1 & 6.125 & 5.987 & 5.661 & 6.075 & 6.293 & 6.198\\
+L\_at\_Amax\_Mal\_GP\_1 & 49.932 & 49.806 & 48.895 & 49.911 & 51.341 & 49.814\\
+VonBert\_K\_Mal\_GP\_1 & 0.197 & 0.200 & 0.223 & 0.198 & 0.186 & 0.196\\
+CV\_young\_Mal\_GP\_1 & 0.076 & 0.076 & 0.050 & 0.076 & 0.082 & 0.076\\
+SR\_LN(R0) & 6.167 & 6.261 & 6.054 & 6.065 & 6.022 & 6.048\\
+Q\_extraSD\_REC\_PR(6) &  & 0.183 & 0.190 & 0.186 & 0.184 & 0.189\\
+Bratio\_2021 & 0.461 & 0.475 & 0.350 & 0.367 & 0.387 & 0.374\\
+SSB\_unfished & 1062.550 & 1138.850 & 1258.060 & 1097.050 & 1075.040 & 1116.830\\
+Totbio\_unfished & 6200.400 & 6546.320 & 6381.090 & 6147.110 & 6464.640 & 6307.160\\
+Recr\_unfished & 476.663 & 523.510 & 425.995 & 430.385 & 412.280 & 423.416\\
+Dead\_Catch\_SPR & 146.545 & 156.489 & 141.986 & 139.694 & 140.130 & 139.100\\
+OFLCatch\_2023 & 210.223 & 212.608 & 144.434 & 160.312 & 168.305 & 161.547\\
+\bottomrule
+\end{tabular}}
+\end{table}
 
 <!-- ======================================================================= -->
 <!-- ************************** Likelihood Profile ************************* --> 
@@ -2970,6 +3003,7 @@ bias for reader 1 and curvilinear standard deviation for both readers."}
 
 ![Results from 50 jittered runs of the pre-STAR base model.  Missing values indicate the run did not converge.\label{fig:jitter}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/jitter_NCA.png){width=100% height=100% alt="Results from 50 jittered runs of the pre-STAR base model.  Missing values indicate the run did not converge."}
 
+\clearpage
 \FloatBarrier
 
 
@@ -3208,7 +3242,7 @@ fishery selectivity and with steepness fixed at 0.72."}
 <!--steepness-->
 
 
-![Likelihood profile across steepness values for each data type..\label{fig:h-profile}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/North.Steepness.Profiles.png){width=100% height=100% alt="Likelihood profile across steepness values for each data type.."}
+![Likelihood profile across steepness values for each data type.\label{fig:h-profile}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/North.Steepness.Profiles.png){width=100% height=100% alt="Likelihood profile across steepness values for each data type."}
 
 ![Trajectories of depletion across values of steepness.\label{fig:h-depl}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/North_Steepness_Profiles_depletion.png){width=100% height=100% alt="Trajectories of depletion across values of steepness."}
 
@@ -3238,19 +3272,15 @@ fishery selectivity and with steepness fixed at 0.72."}
 retro.fig.filein = list.files(path = fig_loc,  
                   pattern = glob2rx(paste0("retro_*",model.area, ".png")), 
                   full.names = TRUE)
-
-knitr::include_graphics(retro.fig.filein)
 ```
 
-![](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/retro_Bratio_NCA.png)![](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/retro_indices_flt13_NCA.png)![](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/retro_recdevs_NCA.png)![](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/retro_spawnbio_NCA.png)
 
 
-
-![Change in the spawning biomass when the most recent 5 years of data area removed sequentially.\label{fig:retro-spawnb}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/retro_spawnbio_NCA.png){width=100% height=100% alt="Change in the spawning biomass when the most recent 5 years of data area removed sequentially."}
+![Change in the spawning biomass when the most recent 5 years of data area removed sequentially.\label{fig:retro-spawnb}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/retro_recdevs_NCA.png){width=100% height=100% alt="Change in the spawning biomass when the most recent 5 years of data area removed sequentially."}
 
 ![Change in the fraction of unfished biomass when the most recent 5 years of data area removed sequentially.\label{fig:retro-bratio}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/retro_Bratio_NCA.png){width=100% height=100% alt="Change in the fraction of unfished biomass when the most recent 5 years of data area removed sequentially."}
 
-![Change in the recruitment deviations when the most recent 5 years of data area removed sequentially.\label{fig:retro-recdev}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/retro_recdevs_NCA.png){width=100% height=100% alt="Change in the recruitment deviations when the most recent 5 years of data area removed sequentially."}
+![Change in the recruitment deviations when the most recent 5 years of data area removed sequentially.\label{fig:retro-recdev}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/retro_spawnbio_NCA.png){width=100% height=100% alt="Change in the recruitment deviations when the most recent 5 years of data area removed sequentially."}
 
 
 
@@ -3266,11 +3296,11 @@ sens1.fig.filein = list.files(path = fig_loc,
 
 
 
-![Change in the spawning biomass to a series of model sensitivity runs.\label{fig:sens1-spawnb}](NA){width=100% height=100% alt="Change in the spawning biomass to a series of model sensitivity runs."}
+![Change in the spawning biomass to a series of model sensitivity runs.\label{fig:sens1-spawnb}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/sens01_spawnbio_NCA.png){width=100% height=100% alt="Change in the spawning biomass to a series of model sensitivity runs."}
 
 ![Change in the fraction of unfished biomass to a series of model sensitivity runs.\label{fig:sens1-bratio}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/sens01_Bratio_NCA.png){width=100% height=100% alt="Change in the fraction of unfished biomass to a series of model sensitivity runs."}
 
-![Change in the recruitment deviations to a series of model sensitivity runs.\label{fig:sens1-recdev}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/sens01_spawnbio_NCA.png){width=100% height=100% alt="Change in the recruitment deviations to a series of model sensitivity runs."}
+![Change in the recruitment deviations to a series of model sensitivity runs.\label{fig:sens1-recdev}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/sens01_recdevs_NCA.png){width=100% height=100% alt="Change in the recruitment deviations to a series of model sensitivity runs."}
 
 <!--chapter:end:60figures.Rmd-->
 
@@ -3280,7 +3310,7 @@ sens1.fig.filein = list.files(path = fig_loc,
 
 
 
-## MRFSS Dockside Index of Abundance
+## MRFSS Dockside Index of Abundance {#mrfss-index}
 
 
 ### MRFSS Dockside CPFV Index, 1980-1999
@@ -3557,7 +3587,7 @@ Year & Mean & logSE & lower HPD & upper HPD\\
   
 \clearpage
 
-## California Onboard CPFV Index of Abundance
+## California Onboard CPFV Index of Abundance {#cpfv-index}
  
 
 ### Califronia Onboard Observer Survey, 1999-2019
@@ -3862,7 +3892,7 @@ Year & Mean & logSE & lower HPD & upper HPD\\
 
 \clearpage 
 
-## Deb Wilson-Vandenberg Onboard CPFV Index of Abundance
+## Deb Wilson-Vandenberg Onboard CPFV Index of Abundance {#debwv-index}
 
 
 ### Deb Wilson-Vandenberg Index
@@ -4116,7 +4146,7 @@ Year & Mean & logSE & lower HPD & upper HPD\\
 \clearpage
 
 
-## CRFS PR Dockside  Index of Abundance
+## CRFS PR Dockside Index of Abundance {#pr-index}
 
 
 ### CRFS Dockside Private Boat Index
@@ -4343,7 +4373,7 @@ Year & Mean & logSE & lower HPD & upper HPD\\
 
 \clearpage
 
-## CCFRP Index of Abundance
+## CCFRP Index of Abundance {#ccfrp-index}
 
 
 ### California Collaborative Fisheries Research Project Index
@@ -4597,7 +4627,7 @@ sjPlot::plot_grid(figure.Dpos.list, tags = TRUE, margin = c(.1, .1, .1, .1))
 
 \clearpage
 
-## WCGBTS Index of Abundance
+## WCGBTS Index of Abundance {#wcgbts-index}
 
 
 ### Northwest Fisheries Science Center West Coast Groundfish Bottom Trawl Survey
@@ -4838,10 +4868,48 @@ ggpubr::ggarrange(pos.qq, pos.resid, ncol = 1)
 
 \clearpage
 
-## Graphic representing California's recreational regulations over time
+## Recreational Regulations {#regs-graphic}
 
 
-![Recreational depth closures for the northern California management area.\label{fig:rec-reg-n}](figures/Regs_Northern.png)
+\clearpage
+
+\begin{landscape}
+
+\subsection{Graphic of California recreational regulations over time.}
+
+\begin{figure}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Northern.png}
+\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-n}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_N_M_NC_SF_shelf_rockfish.png}
+\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-cn}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_MTRYSC_C_MBSC_S_shelf_rockfish.png}
+\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-cs}}
+\end{figure}
+
+
+\begin{figure}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Southern.png}
+\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-s}}
+\end{figure}
+
+
+\end{landscape}
+
+\clearpage
+
+\clearpage 
+
+# References
 
 
 <!--chapter:end:70appendices-north.Rmd-->

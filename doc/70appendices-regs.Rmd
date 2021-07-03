@@ -1,4 +1,35 @@
+\clearpage
+
+\begin{landscape}
+
+\subsection{Graphic of California recreational regulations over time.}
+
+\begin{figure}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Northern.png}
+\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-n}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_N_M_NC_SF_shelf_rockfish.png}
+\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-cn}}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_MTRYSC_C_MBSC_S_shelf_rockfish.png}
+\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-cs}}
+\end{figure}
 
 
+\begin{figure}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Southern.png}
+\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-s}}
+\end{figure}
 
-![Recreational depth closures for the northern California management area.\label{fig:rec-reg-n}](figures/Regs_Northern.png)
+
+\end{landscape}
+
+\clearpage
