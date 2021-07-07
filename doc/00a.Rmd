@@ -3,7 +3,7 @@ geometry: margin=1in
 month: "`r format(Sys.Date(), '%B')`"
 year: "`r format(Sys.Date(), '%Y')`"
 params:
-    model: "south"
+    model: "north"
 preamble: |
 header-includes:
   - \usepackage{booktabs}
@@ -20,7 +20,7 @@ header-includes:
   - \usepackage{makecell}
   - \usepackage{xcolor}
   - \usepackage{placeins}
-  - \usepackage[inner]{showlabels}
+  - \usepackage[inline]{showlabels}
 output:
   sa4ss::techreport_pdf:
     default
@@ -131,7 +131,7 @@ model$FleetNames_parsed <- c("commercial hook-and-line fishery",
                            "West Coast Groundfish Bottomfish Trawl Survey",
                            "recreational PC onboard survey",
                            "CDFW reserach (aka green binder)",
-                           "Dummy fleet")
+                           "Early years hook-and-line")
 }
 
 model$FleetNames_label <- stringr::str_replace_all(model$FleetNames, "_", "-")

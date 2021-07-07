@@ -1,7 +1,7 @@
 
 
 
-```{r, albin, reasults = 'asis'}
+```{r, albin-allocate, reasults = 'asis'}
 kableExtra::kbl(
   readxl::read_xlsx("./tables/Allocate_MRFSS_1980-1989.xlsx", sheet = 2),
   booktabs = TRUE,

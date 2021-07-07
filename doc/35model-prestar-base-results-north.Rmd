@@ -1,0 +1,182 @@
+# Assessment Results
+
+The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \@ref(tab:params). Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \@ref(tab:referenceES). Estimates of stock size and status over time are shown in Table \@ref(tab:timeseries). 
+
+The full r4ss plotting output is available in the supplementary material.
+
+## Parameter Estimates
+
+```{r parameters, include = FALSE, eval = TRUE, cache = TRUE}
+# get parameter names from base model
+estimated_pars <- model$parameters %>%
+  dplyr::filter(!is.na(Active_Cnt)) %>%
+  rownames()
+```
+
+The base model has a total of `r length(estimated_pars)` estimated parameters
+(Figure \@ref(tab:params)) that can be grouped into the following
+categories and are described in more detail in the following sections:
+
+
+
+Biological parameters  
+- 1 natural mortality parameter (female and male assumed the same)  
+- 9 growth parameters
+    + 6 Schnute growth parameters (length at age 0, length at age 30, and $k$)   
+    + 3 parameters controlling variability in growth, the CV in length at age 0  
+  and the CV in length at age 30 with a linear ramp in length-at-age  (CV for old males was not estimated
+
+
+Stock-recruit parameters  
+- $log(R_0)$ controlling equilibrium recruitment  
+- `r nrow(model$recruit)` recruitment deviations parameters covering the range  
+  `r min(model$recruit$Yr)`-`r max(model$recruit$Yr)`, with 
+  `r min(model$recruit$Yr[model$recruit$era=="Main"])`-`r max(model$recruit$Yr[model$recruit$era=="Main"])`
+  representing the "main" period modeled as a zero-centered deviation vector  
+  
+Index parameters  
+- `r sum(sum(grepl("Q_extra", estimated_pars)))` extra standard deviation parameters
+for indices  
+
+Selectivity parameters  
+- `r sum(grepl("Size_DblN", estimated_pars))` selectivity parameters, of which
+`r sum(grepl("Size_DblN.*BLK", estimated_pars))` represented changes over time  
+
+## Fixed parameters
+- $h$ controlling the steepness of the stock-recruit relationship
+- $M$ for males
+- Selectivity parameters estimated at the bounds during model exploration were fixed in the pre-STAR model
+
+## Growth Estimation
+```{r, include=FALSE, echo = FALSE}
+# calculate Linf and t0 from Schnute vB parameterization
+unSchnute.fn <- function(Amin, Amax, Lmin, Lmax, k)
+{
+   Linf <- Lmin + (Lmax-Lmin)/(1-exp(-k*(Amax-Amin)))
+   t0   <- Amin + Amax - (1/k)*log((exp(k*Amax)*Lmax - exp(k*Amin)*Lmin)/(Lmax-Lmin))
+   out  <- c(Linf, t0)
+   names(out) <- c("Linf","t0")
+   return(out)
+}
+# vermilion example
+# females 
+female_growth <- unSchnute.fn(0, 30, model$MGparmAdj$L_at_Amin_Fem_GP_1[1], model$MGparmAdj$L_at_Amax_Fem_GP_1[1], model$MGparmAdj$VonBert_K_Fem_GP_1[1])
+
+if(model.area=="SCA"){
+# for males,  apply exponential offsets to the female values
+male_growth <- unSchnute.fn(0, 30,  
+   model$MGparmAdj$L_at_Amin_Fem_GP_1[1]*exp(model$MGparmAdj$L_at_Amin_Mal_GP_1[1]),     model$MGparmAdj$L_at_Amax_Fem_GP_1[1]*exp(model$MGparmAdj$L_at_Amax_Mal_GP_1[1]),
+   model$MGparmAdj$VonBert_K_Fem_GP_1[1]*exp(model$MGparmAdj$VonBert_K_Mal_GP_1[1]))
+male_growth[3] <- model$MGparmAdj$VonBert_K_Fem_GP_1[1]*exp(model$MGparmAdj$VonBert_K_Mal_GP_1[1])
+} else {
+
+male_growth <- unSchnute.fn(0, 30, 
+                            model$MGparmAdj$L_at_Amin_Mal_GP_1[1],
+                            model$MGparmAdj$L_at_Amax_Mal_GP_1[1],
+                            model$MGparmAdj$VonBert_K_Mal_GP_1[1])
+male_growth[3] <- model$MGparmAdj$VonBert_K_Mal_GP_1[1]
+}
+```
+
+
+
+The northern California base model estimated reasonable growth parameters for k and lengths at age 0 and age 30. Internal estimates of growth were estimated directly for both females and males, and not as an offset. An offset for male growth was explored, but the CV of length at $L_{age=30}$ was estimated around 2-3%.  When the male CV was fixed to female CV, the assessment model shrunk the CV of females at $L_{age=30}$, which the STAT did not find reasonable.  Therefore, the male CV at $L_{age=30}$ was fixed at the CV estimated for females of 0.07 (Figure \@ref(fig:fittedgrowth)).
+
+The direct estimation of male  $L_{age=0}=6.02$ cm was reasonable compared to female  $L_{age=0}=7.8$.  While $k$ was estimated  larger for males (0.19) than females (0.15), female $L_{age=30}$  of 55 cm was larger than males at 49 cm.  These results are consistent with other studies that have looked at sex-specific growth in vermilion rockfish.
+
+Estimates of the vonBertalanffy parameters transformed from the Schnute parameterization used by SS are below.  In both parameterizations of the growth equation, the $k$ has the same definition.
+\begin{centering}
+
+Females $L_{\infty}$ = `r round(female_growth[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Fem_GP_1[1], 3)`; $t_0$ = `r round(female_growth[2], 2)`
+
+Males $L_{\infty}$ = `r round(male_growth[1])` cm; $k$ = `r round(male_growth[2], 3)`; $t_0$ = `r round(male_growth[2], 2)`
+
+\end{centering}
+
+\vspace{0.5cm}
+
+
+## Natural Mortality Estimation
+
+The northern California model directly estimates male growth and natural mortality parameters due to the above-mentioned issue with estimation of CVs for length at age 30. Female natural mortality was estimated at 0.089 (SE = 0.009) and male natural mortality was estimated at 0.084 (SE = 0.01), which the STAT considered reasonable given that observed maximum ages for both sexes are similar. Latitudinal gradients in natural mortality have been estimated for many species of rockfish, which is consistent with the higher estimates of M in the southern model.
+
+ 
+
+## Fits to Age Composition
+The following plots show fits to the conditional age-at-length composition for each 
+fleet/survey:   
+- WCGBT survey: Figures \ref{fig:comp_condAALfit_residsflt9mkt0_page1} - \ref{fig:comp_condAALfit_residsflt9mkt0_page3}, \ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_TWL}, and \ref{fig:comp_condAALfit_Andre_plotsflt9mkt0_page1} - \ref{fig:comp_condAALfit_Andre_plotsflt9mkt0_page4}   
+- Abrams research survey: Figures \ref{fig:comp_condAALfit_residsflt11mkt0}, \ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeABRAMS_RESEARCH} and \ref{fig:comp_condAALfit_Andre_plotsflt11mkt0}  
+- SWFSC groundfish ecology survey: Figures \ref{fig:comp_condAALfit_residsflt12mkt0} , \ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeSWFSC_GF_ECOL} and \ref{fig:comp_condAALfit_Andre_plotsflt12mkt0}  
+  
+Fits to the conditional age at length data sets seemed reasonable, with no evidence of strong residual patterns. The largest residuals were mainly associated with the infrequently encountered, oldest individuals. The model was able to reproduce interannual changes in mean age for the NWFSC trawl and Abrams research data, but tended to slightly overestimate average age (by about 1 year) in three of the four years for the SWFSC GF Ecology data set.
+
+
+## Estimated Selectivity and Fits to Length Composition
+The following plots show estimated selectivity (when not mirrored) and fits to the length composition for each 
+fleet/survey:
+
+- Commercial hook-and-line: Figures \ref{fig:endyr-selex-COM-HKL}, \ref{fig:len-pearson-COM-HKL}, and \ref{fig:mean-len-fit-COM-HKL} 
+- Commercial trawl: Figures \ref{fig:endyr-selex-COM-TWL}, \ref{fig:len-pearson-COM-TWL}, and \@ref(fig:mean-len-fit-COM-TWL}
+- Commercial net: Figures \ref{fig:endyr-selex-COM-NET}, \ref{fig:len-pearson-COM-NET}, and \ref{fig:mean-len-fit-COM-NET}
+- Recreational retained PC: Figures \ref{fig:endyr-selex-REC-PC}, \ref{fig:sel03_len_timevary_surf_flt4sex1},  \ref{fig:len-pearson-REC-PC}  and Figure \ref{fig:mean-len-fit-REC-PC} 
+- Recreational discard PC Figures \ref{fig:endyr-selex-REC-PC-DIS}, \ref{fig:len-pearson-REC-PC-DIS}  and \ref{fig:mean-len-fit-REC-PC-DIS}
+- Recreational retained PR: Figures \ref{fig:endyr-selex-REC-PR}, \ref{fig:sel03_len_timevary_surf_flt6sex1}, \ref{fig:len-pearson-REC-PR} and \ref{fig:mean-len-fit-REC-PR}  
+- Deb Wilson-Vandenberg onboard CPFV survey: Figure \ref{fig:len-pearson-DWV-ONBOARD}  and \ref{fig:mean-len-fit-DWV-ONBOARD} 
+- WCGBT survey: Figures \ref{fig:endyr-selex-NWFSC-TWL}, \ref{fig:endyr-selex-NWFSC-TWL}, \ref{fig:len-pearson-NWFSC-TWL}  and \ref{fig:mean-len-fit-NWFSC-TWL} 
+- Abrams research survey: Figures \ref{fig:len-pearson-ABRAMS-RESEARCH}  and \ref{fig:mean-len-fit-ABRAMS-RESEARCH}  
+- SWFSC groundfish ecology survey: Figures \ref{fig:len-pearson-SWFSC-GF-ECOL}  and \ref{fig:mean-len-fit-SWFSC-GF-ECOL}    
+- CCFRP: Figures \ref{fig:endyr-selex-CCFRP}, \ref{fig:len-pearson-CCFRP} and Figure \ref{fig:mean-len-fit-CCFRP}  
+
+Fits to the time-aggregated length comps were best for the commercial, recreational, and CCFRP fleets Figure \@ref(fig:lenfits-all). The WCGBT survey does not sample primary adult habitat types, resulting in a length frequency distribution that appears bimodal and is difficult for the model to reproduce Figure \@ref(fig:lenfits-all), and also reflected in the descending limb of the selectivity around 0.42 for any fish larger than 20 cm (Figure \@ref(fig:endyr-selex-NWFSC-TWL)). Fits to the two short-term research fleets (SWFSC GF Ecology and Abrams) are adequate, but ultimately based on mirrored selectivity curves (details in selectivity section, below). Fits to length composition data from the recreational fleets show evidence of modal progressions due to strong year classes (e.g., the 1984-5 year classes entering the fishery a few years later), do not show evidence of strong patterns in the pearson residual plots, and the model is able to track associated changes in mean length over time.
+
+The Abrams research fleet and SWFSC groundfish ecology lengths were mirrored to the commercial hook-and-line fleet, which was fixed to asymptotic selectivity (Figure \@ref(fig:endyr-selex-COM-HKL)).  Initial estimation of the commercial trawl selectivity resulted in large estimates with large standard errors.  Therefore, it was fixed to be asymptotic and the peak size and the ascending width were estimated (Figure \@ref(fig:endyr-selex-COM-TWL)).  The historic net fishery selectivity was well estimated with four parameters and a descending limb; fish were fully selected by around 43 cm and by around 47 cm selectivity decreased to 0.6 (Figure \@ref(fig:endyr-selex-COM-NET)).
+
+All three estimated selectivities for recreational fleets were estimated as domed selectivities (Figures \@ref(fig:endyr-selex-REC-PC), \@ref(fig:endyr-selex-REC-PC-DIS), \@ref(fig:endyr-selex-REC-PR)). A number of regulatory changes in the recreational fleets prompted selectivity time blocks, and both recreational retained fleets estimated a large length at full selectivity in the later time block, from 2017-2020, which was expected due to the relaxation of depth restrictions in areas of higher vermilion density.   The width of the end year selectivity for the recreational PR fleet is wider than that of the PC fleet, which has larger size at peak selectivity.  Peak selectivity of the discard fleet is around 20 cm, and once fish reach 40 cm, they are no longer selected by the discard fleet.  There is no size limit on vermilion rockfish and this is assumed to represent angler preference.
+
+The CCFRP fishes within 150 ft of water to reduce barotrauma-induced mortality and does not observe the larger fish that are seen in the recreational fleets fishing in deeper waters and further offshore (\@ref(endyr-selex-CCFRP). The estimated length composition fits vary by year, with the early years expecting larger fish than were observed and the more recent years (2015-2020) expecting smaller fish, likely from the larger 2013-2014 year classes.
+
+
+
+## Fits to Indices
+The following plots show log-scale fits to the indices and residuals by fleet/survey:
+- MRFSS dockside PC survey: Figures \@ref(fig:log-cpue-REC-PC) and \@ref(fig:cpue-resid-REC-PC)  
+- Deb Wilson-Vandenberg onboard CPFV survey: Figures \@ref(fig:log-cpue-DWV-ONBOARD) and \@ref(fig:cpue-resid-DWV-ONBOARD)  
+- CDFW/Cal Poly onboard CPFV survey: Figures \@ref(fig:log-cpue-REC-PC-ONBOARD) and \@ref(fig:cpue-resid-REC-PC-ONBOARD)  
+- CDFW dockside PR survey: Figures \@ref(fig:log-cpue-REC-PR) and \@ref(fig:cpue-resid-REC-PR)  
+- CCFRP survey: Figures \@ref(fig:log-cpue-CCFRP) and \@ref(fig:cpue-resid-CCFRP)  
+
+Fits to the indices vary in quality. Three of the four recreational indices represented the PC fleet, covering the years 1980-2019.
+The MRFSS era dockside interview index was fit reasonably well except for the first few years of the index (Figures \@ref(fig:log-cpue-REC-PC) and \@ref(fig:cpue-resid-REC-PC)). The Deb Wilson-Vandenberg onboard survey from 1988-1998 was fairly flat and uninformative, and the model was not able to reproduce a spike in 1990 when an increased CPUE was estimated in the standardized index (Figures \@ref(fig:log-cpue-DWV-ONBOARD) and \@ref(fig:cpue-resid-DWV-ONBOARD)). However, it is unclear whether the increase in CPUE for one year is an artifact of the data or represents an actual short-term increase in abundance. The CDFW and Cal Poly onboard index, which now contains 21 years of data provided an uninformative fit to the data. Both the beginning (1999-2001) and ending (2017-2019) years represent time periods when the fishery had access to deeper water.  Even with selectivity time blocks for these periods, the index was not fit to the decrease in observed CPUE from 1999-2001 or the slight increase from 2017-2019. There is some pattern in the residuals with groups of alternating positive and negative years (Figures \@ref(fig:log-cpue-REC-PC-ONBOARD) and \@ref(fig:cpue-resid-REC-PC-ONBOARD)).
+The recreational PR index was not well fit, even with additional error added within the model and residual patterns 
+also indicate a poor fit (Figures \@ref(fig:log-cpue-REC-PR) and \@ref(fig:cpue-resid-REC-PR)). Residuals for the 
+first part of the survey are positive and negative for the second half of the survey. The only fishery-independent 
+index, CCFRP, fit reasonably well to the increasing trend from 2016-2020 (Figures \@ref(fig:log-cpue-CCFRP) and \@ref(fig:cpue-resid-CCFRP)). All of the indices (recreational and CCFRP) indicated an increasing trend from 
+2008 to 2010 and then a decrease with lows in all indices  in 2013 that was not fit in any of the indices.  CCFRP 
+is the only index sampling within the MPAs, and starting in 2017 the index represents the entire coast.  
+
+
+
+
+## Derived Quantities
+Vermilion spawning output in northern California was estimated to be 436 million eggs in 2021 (~95% asymptotic intervals: 222-650; Table \@ref(tab:referenceES), which equates to a depletion level of 39% (~95% asymptotic intervals: 21%-57%; Table \@ref(tab:referenceES); Figure \@ref(fig:depl)) in 2021. Depletion is a ratio of the estimated spawning output in a particular year relative to estimated unfished, equilibrium spawning output. Spawning output north of Point Conception declined rapidly throughout the 1970s, 1980s, and 1990s to a level below the Minimum Stock Size Threshold (MSST), but catches decreased enough in the late 1990s and 2000s for the stock to reach a stable level of spawning output (Table \@ref(tab:timeseries), Figure \@ref(fig:ssb)). Stock size is estimated to have been at the lowest level during the 1990s, but has since increased, in part due to strong recruitments in 1999 and 2016. The stock is estimated to have been below the management target of B40% since the early 1980s (Figure \@ref(fig:depl)), recently returning to levels near the target biomass. Relative exploitation rates [(1-SPR) / (1-SPR50%)] increased through time, exceeding target levels from the 1970s through the 1990s. Exploitation over the past decade has fluctuated around target levels (Figure \@ref(fig:1-spr)), with most catches landed by the recreational sector. In 2021, vermilion biomass north of Point Conception is estimated to be near the target biomass level, while experiencing fishing intensity around the SPR fishing intensity target (Figure \@ref(fig:phase)). The equilibrium yield curve is shifted left, as expected from the Beverton-Holt steepness parameter (h=0.72) (Figures \@ref(fig:yield2) and \@ref(fig:yield3)).
+
+
+## Recruitment Deviations
+
+Model estimates of recruitment for the 1970-2018 period indicated an extended period of below average recruitment throughout the 1970s and early 1980s, which is generally inconsistent with strong recruitment trends for many years in the 1970s and in 1980 for other species of rockfish.  As this time period is only weakly informed by length data, this may indicate some potential for model misspecification. Major recruitments (strong year classes) estimated in the northern California model include strong 1984, 1985, 1999, and 2016 year classes. (Figures \@ref(fig:recdevs), \@ref(fig:bh-resids) and  \@ref(fig:phase)). These are consistent with estimates of strong year classes in other rockfish stock assessments, nearly all of which suggest very high recruitment in 1999. More recently, strong year classes have been estimated in 2016 for widow rockfish, sablefish and Pacific hake, observations that are consistent with observations of high juvenile rockfish abundance in the California Current during the 2015-2016 large marine heatwave [@Schroeder2019].  Due to ageing error, years adjacent to strong (or weak) cohorts are sometimes estimated as having similar deviations. 
+
+
+
+### Reference Points
+Reference points were calculated using the estimated selectivities and catch distribution among fleets in the most recent year of the model, `r endyr`. 
+Sustainable total yield (landings plus discards) was 
+`r round(model$derived_quants[model$derived_quants$Label == 'Dead_Catch_SPR', 'Value'], 2)` mt when using an $SPR_{50\%}$ 
+reference harvest rate. The spawning output equivalent to 40% of the unfished level ($SB_{40\%}$) was `r round(model$derived_quants[model$derived_quants$Label == 'SSB_SPR', 'Value'], 2)` 
+million eggs. 
+
+The `r endyr`. spawning biomass relative to unfished equilibrium spawning biomass is above the target of 40% of unfished levels (Figure \@ref(fig:depl)). 
+The relative fishing intensity, $(1-SPR)/(1-SPR_{50\%})$, was above the management target frogs (Figure \@ref(fig:1-spr)). 
+
+Table \@ref(tab:referenceES) shows the full suite of estimated reference points for the base model and Figures \@ref(fig:yield2) and \@ref(fig:yield3) show the equilibrium curve based on a steepness value fixed at `r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"], 2)`.
+

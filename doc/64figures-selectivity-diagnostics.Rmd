@@ -1,4 +1,38 @@
 
+```{r, results = "asis"}
+add_figure(
+  filein = file.path(paste0(fig_loc,"/CV_of_Length_vs_Age.png")),
+  caption = "Coefficient of variation of length at age for vermilion rockfish from the NWFSC hook-and-line survey",
+  label = "cv-length-age"
+)
+
+```
+
+
+
+<!-- ======================================================================= -->
+<!-- ********************* Model Diagnostics ******************************* --> 
+<!-- ======================================================================= -->
+
+```{r, results = 'asis'}
+
+if(model.area=='NCA'){
+  add_figure(
+    filein = file.path(paste0(fig_loc,"/jitter_preSTAR_base_NCA.png")),
+    caption = "Results from 100 jittered runs of the pre-STAR base model.  Missing values indicate the run did not converge",
+    label = "jitter"
+  )
+} else {
+  add_figure(
+    filein = file.path(paste0(fig_loc,"/jitter_preSTAR_base_SCA.png")),
+    caption = "Results from 100 jittered runs of the pre-STAR base model",
+    label = "jitter"
+  )
+}
+```
+
+
+
 <!-- ======================================================================= -->
 <!-- ************************    Growth   ********************************** --> 
 <!-- ======================================================================= -->
@@ -62,9 +96,10 @@ for (a in 1:n_fleets_blocks){
 #get the fleet info for fleets that have estimated selectivity
 selex_params <- data.frame(model$parameters$Label[grep("DblN", model$parameters$Label)])
 colnames(selex_params) = "A"
-
+regexp <- "[[:digit:]]+"
 selex_params <- selex_params %>%
-  mutate(fleet_ID = substr(A, nchar(A)-2+1, nchar(A)-1)) %>%
+   mutate(fleet_ID = stringr::str_extract(A,regexp)) %>%
+ # mutate(fleet_ID = substr(A, nchar(A)-2+1, nchar(A)-1)) %>%
   dplyr::select(fleet_ID) %>%
   filter(fleet_ID>0) %>%
   unique
@@ -94,24 +129,4 @@ for (i in selex_fleets$fleet_ID) {
 
 \FloatBarrier 
 
-<!-- ======================================================================= -->
-<!-- ********************* Model Diagnostics ******************************* --> 
-<!-- ======================================================================= -->
-
-```{r, results = 'asis'}
-
-if(model.area=='NCA'){
-  add_figure(
-    filein = file.path(paste0(fig_loc,"/jitter_NCA.png")),
-    caption = "Results from 50 jittered runs of the pre-STAR base model.  Missing values indicate the run did not converge",
-    label = "jitter"
-  )
-} else {
-  add_figure(
-    filein = file.path(paste0(fig_loc,"/jitter_SCA.png")),
-    caption = "Results from 50 jittered runs of the pre-STAR base model",
-    label = "jitter"
-  )
-}
-```
 

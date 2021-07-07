@@ -51,11 +51,38 @@ M.fig.filein = list.files(path = fig_loc,
                   pattern = glob2rx(paste0(stringr::str_to_title(params$model),"*NatMort*.png")),
                   full.names = TRUE)
 
-#R0.fig.filein = list.files(path = fig_loc,  
-#                  pattern = glob2rx(paste0(stringr::str_to_title(params$model),"*R0*.png")),
-#                  full.names = TRUE)
+R0.fig.filein = list.files(path = fig_loc,  
+                  pattern = glob2rx(paste0(stringr::str_to_title(params$model),"*R0*.png")),
+                  full.names = TRUE)
 
 ```
+
+<!----nat M--->
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = M.fig.filein[3] ,
+  caption =  "Likelihood profile across natural mortality values for each data type",
+  label = 'm-profile'
+)
+
+sa4ss::add_figure(
+  filein = M.fig.filein[1] ,
+  caption =  "Trajectories of depletion across values of female natural mortality",
+  label = 'm-depl'
+)
+
+sa4ss::add_figure(
+  filein = M.fig.filein[2] ,
+  caption =  "Trajectories of spawning output across values of female natural mortality",
+  label = 'm-spawn'
+)
+```
+
+
+
+
+
 
 <!--steepness-->
 
@@ -82,27 +109,23 @@ sa4ss::add_figure(
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = M.fig.filein[3] ,
-  caption =  "Likelihood profile across natural mortality values for each data type",
-  label = 'm-profile'
-)
-
-sa4ss::add_figure(
   filein = M.fig.filein[1] ,
-  caption =  "Trajectories of depletion across values of female natural mortality",
-  label = 'm-depl'
+  caption =  "Likelihood profile across R0 values for each data type",
+  label = 'r0-profile'
 )
 
 sa4ss::add_figure(
   filein = M.fig.filein[2] ,
-  caption =  "Trajectories of spawning output across values of female natural mortality",
-  label = 'm-spawn'
+  caption =  "Trajectories of depletion across values of R0",
+  label = 'r0-depl'
+)
+
+sa4ss::add_figure(
+  filein = M.fig.filein[3] ,
+  caption =  "Trajectories of spawning output across values of R0",
+  label = 'r0-spawn'
 )
 ```
-
-
-
-
 
 
 

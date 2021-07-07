@@ -37,7 +37,7 @@ for (i in unique(model$cpue$Fleet_name)) {
 }
 ```
 
-
+\FloatBarrier
 
 
 <!-- ======================================================================= -->
@@ -45,13 +45,22 @@ for (i in unique(model$cpue$Fleet_name)) {
 <!-- ======================================================================= -->
 
 
+```{r, results = 'asis'}
+caal_pearson <- plot_info %>%
+  filter(category == "A@LComp") %>%
+  filter(grepl("condAALfit_resids", label))
+filein = file.path(mod_loc, "plots")
+for (a in 1:length(caal_pearson$label)){
+    cap = caal_pearson$caption[a]
+	lab = caal_pearson$label[a]
+		add_figure(filein = file.path(filein, caal_pearson$file[a]), 
+			   caption = cap, 
+			   label = lab)
+}
+```
 
 
-
-<!-- ======================================================================= -->
-<!-- **********************  Age @ Length Comps **************************** --> 
-<!-- ======================================================================= -->
-
+\FloatBarrier
 
 ```{r, results = 'asis'}
 caal_fit <- plot_info %>%
@@ -69,6 +78,15 @@ for (a in 1:length(caal_fit$label)){
 			   label = lab)
 }
 ```
+
+
+\FloatBarrier
+
+<!-- ======================================================================= -->
+<!-- **********************  Age @ Length Comps **************************** --> 
+<!-- ======================================================================= -->
+
+
 
 ```{r, results = 'asis'}
 caal_fit_andre <- plot_info %>%

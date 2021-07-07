@@ -16,7 +16,7 @@ label = 'recruits')
 add_figure(
 filein = file.path(base_loc, "plots", "recdevs2_withbars.png"), 
 caption = "Estimated time series of recruitment deviations",
-label = 'rec-devs')
+label = 'recdevs')
 ```
 
 

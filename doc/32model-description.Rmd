@@ -1,29 +1,14 @@
 ## Model Specifications
 
-A decision was made by the STAT after discussions with the Pacific Fishery Management Council’s Groundfish Management Team and Groundfish Advisory Panel to model the areas north and south of Point Conception independently for a number of reasons. This included a discussion of the assumed higher densities of sunset rockfish south of Point Conception and the general decline in vermilion rockfish density as latitude increases.  The preliminary exploration of length data also suggested that the size composition of landed fish north and south of Point Conception differed in a number of fleets. The STAT did maintain consistency across the two models when the data supported the decisions, i.e., maintaining the same recreational and commercial fleet structures and sharing biological data from the more data-rich southern assessment.
+A decision was made by the STAT after discussions with the Pacific Fishery Management Council’s Groundfish Management Team and Groundfish Advisory Panel to model the areas north and south of Point Conception independently for a number of reasons. These included a discussion of the evidence supporting higher densities of sunset rockfish south of Point Conception and the general decline in vermilion rockfish density as latitude increases.  The preliminary exploration of length data also suggested that the size composition of landed fish north and south of Point Conception differed in a number of fleets. The STAT maintained consistency across the two models when the data supported the decisions, i.e., maintaining the same recreational and commercial fleet structures and sharing biological data from the more data-rich southern assessment.
 
-The commercial fleet catches includes dead discards, which were a small percent of the overall landings in both areas (averaging 7.4 mt coastwide since 2015, although increasing since 2017). In addition, there were very little data available from WCGOP. There are four recreational fleets representing retained and assumed-dead discard catches for the PC and PR fleets.  This follows the same practice as a number of other recent rockfish stock assessments in recent years, where the ability to accurately estimate a retention curve is masked by depth-dependent mortality rates. Vermilion rockfish is a desirable species in the recreational fleet and the majority of available lengths from discarded fish from the CDFW and Cal Poly observer programs were regulatory discards from trips when the groundfish fishery was closed and were not representative of discards in the recreational fleet.
-
-The specifications of the California models north and south of Point Conception are very similar.  The major differences between the two models are the availability of fishery-independent data sources that are region specific. 
-
-The fishery-independent data used to estimate the weight-length relationship and the maturity ogive were mainly derived from data collected south of Point Conception, and the parameters were shared across both models.
+The structure of the California models north and south of Point Conception are very similar. Population dynamics in both regions operate on an annual time step and are initialized from an unfished equilibrium condition in 1875. Sex-specific age and length structure is modeled from age 0 (recruitment age) to an accumulator age (plus group) of 70, with 1-cm population length bins ranging from 6-70 cm. Length data bins are 2-cm wide, and range from 8-70 cm in the south and 10-70 cm in the north. Expected recruitment is assumed to follow a Beverton-Holt function of spawning output, with lognormally-distributed recruitment deviations. Growth (male and female) is modeled using the Schute parameterization of von Bertalanffy growth, with two estimated lengths (ages 0 and 30) and a growth rate coefficient (*k*). The major differences between the two models are the availability of fishery-independent data sources that are region-specific, and the parameterization of male growth and mortality parameters (details below).
 
 
-The specification of the California models north and south of Point Conception 
-are very similar.  The major differences between the to models are the availability 
-of fishery-independent data sources that are region specific. 
+The models in both regions are conditioned on catches from the commercial and recreational sectors. The commercial sector is divided into three fleets (hook-and-line, trawl, and net gears). Landings from minor commercial gears were a negligible component of the total harvest and were combined with the hook-and-line fleet. The recreational sector was divided into four fleets according to boat mode (party/charter or private/rental) and catch type (retained or discarded). This follows the same practice as a number of other recent rockfish stock assessments, where the ability to accurately estimate a retention curve is complicated by depth-dependent discard mortality rates.
 
-The `r Spp` assessment `r params$model` of Point Conception (\PtC) off the coast of California is assessed using a two-sex model with sex-specific growth.
+Vermilion rockfish is a desirable species and discards are a small component of total fishing mortality in both the commercial and recreational sectors. The commercial catches do not include dead discards, which were estimated to be a small percent of the overall landings in both areas (averaging 7.4 mt coastwide since 2015, although increasing since 2017). In addition, there were very few observations available from WCGOP. The size distribution of recreational discards from the CDFW and Cal Poly onboard observer programs represented larger fish from periods when the recreational shelf rockfish fishery closed versus smaller fish discarded when the fishery was open.  Fish discarded during trips when vermilion were prohibited were removed from the recreational PC discard fleet length composition.  
 
-The model assumed seven fishing fleets with removals beginning in `r startyr`: 
-
-*Commercial*: There are three commercial fleets; hook-and-line, trawl, and net. 
-All of the commercial fleets represented landed dead catch and assumed dead discards.
-
-*Recreational*: There are four recreational fleets.  Each of the PC and PR modes have 
-separate fleets for retained and discarded catch.  This decision was driven by the 
-length compositions between retained 
-and discarded fish (with discarded fish on average smaller than retained fish).
 
 
 ```{asis, echo = model.area=='NCA'}
@@ -37,11 +22,10 @@ of Point Conception; 1) the MRFSS CPFV dockside survey, 2) Deb Wilson-Vandenberg
 
 
 ```{asis, echo = model.area=='SCA'}
-*Fishery-Dependent Surveys*:  There are three fishery-dependent survey fleets south of Point 
-Conception; 1) MRFSS CPFV dockside survey, 2) CDFW onboard observer survey, and 3) CRFS PR1 dockside survey.
+The southern California model is fit to three fishery-dependent indices of relative abundance: 1) MRFSS CPFV dockside, 2) CDFW onboard observer, and 3) CRFS PR1 dockside. The MRFSS CPFV dockside index is assumed to be proportional to changes in the relative abundance of the recreational party/charter fleet (retained fish only). The CDFW onboard observer index represents the same fleet (rec party/charter), but indexes change in abundance during recent years. The onboard index is specified as a separate “survey” fleet in the model because it overlaps in time with the MRFSS dockside time series. Both the MRFSS and onboard indices use the recreational party/charter fleet’s selectivity curve to define vulnerable size classes. The CRFS PR1 dockside index is linked to the recreational private/rental fleet (retained fish), and uses the same selectivity curve. Recreational length measurements are included as marginal length compositions (proportions at length, sexes combined) by year starting in 1975 and 1978 for the PC and PR modes, respectively. Fishery-dependent length composition data is also included for the commercial hook-and-line and net fleets, but trawl length data were too sparse to be used for estimating trawl-specific selectivity parameters. Age structures from the commercial fleets were also sparse and not considered for the southern California assessment.
 
-*Research*: There are four research fleets; 1) CDFW "green binder" research ,
-2) NWFSC WCGBT survey, and 3) two fleets for the NWFSC hook-and-line survey.
+Four fleets describe fishery-independent data sources in the southern California model. The primary source is the NWFSC hook-and-line survey. Data from this survey were used to create an index of relative abundance, marginal length compositions by sex and year, and conditional-age-at-length data by sex and year. Length and age data from the hook-and-line survey were broken into two fleets to better match assumptions in the index standardization methodology (see Appendix for details). The NWFSC trawl survey is the second fishery-independent data source in the southern model. An abundance index was developed for the trawl survey, but ultimately rejected due to high interannual variability, sparse data, and imprecise estimates. However, conditional-age-at-length data and associated marginal length comps, both by sex and year, were retained in the model. The earliest available age and length composition data came from assorted CDFW research cruises which are collectively known as the “green binder” data (see data section for additional information). 
+
 ```
 
 ### Additional Specifications
@@ -60,34 +44,15 @@ The recreational PC and PR fleets applied three time blocks for selectivity:  `r
 ```
 
 ```{asis, echo = model.area=='SCA'}
-Selectivity was specified using the double normal parameterization within Stock Synthesis for all fleets. Selectivities were estimated for the commercial hook-and-line fleet and the commercial net fleet. The commercial trawl fleet is mirrored to the commercial hook-and-line fleet. Selectivity was estimated for the recreational PC fleet, recreational PC discard fleet and the Recreational PR fleet.  There were no length data available for the recreational PR fleet, and it mirrors the selectivity of the recreational PC discard fleet. Selectivity for the recreational PC onboard index of abundance is mirrored to the recreational PC fleet as they share the same length composition.
-
-Selectivities were estimated for all fishery-independent data sources.
-
-The commercial fleet selectivity applied three time blocks: 1975-1988, 1990-2001, and 2002-2020. The commercial selectivity blocks for the hook-and-line fleet were fixed to be asymptotic, while the dome-shaped selectivity was explored for the commercial net fishery. The recreational fleet selectivity applied two time blocks 1975-2000 and 2001-2020, and selectivities were allowed to be dome-shaped.  A number of regulatory changes occurred around 1999-2002, including depth closures, changes to the number of hooks, and the implementation of the CCAs. 
+Length-based selectivity is specified using the double normal parameterization within Stock Synthesis. Selectivity parameters were estimated for the commercial hook-and-line fleet and the commercial net fleet. The commercial trawl fleet is mirrored to the commercial hook-and-line fleet. Selectivity was estimated for the recreational PC fleet, recreational PC discard fleet and the Recreational PR fleet.  There were no length data available for the recreational PR fleet, and it mirrors the selectivity of the recreational PC discard fleet. Selectivity for the recreational PC onboard index of abundance is mirrored to the recreational PC fleet as they share the same length composition. Length-based selectivities were estimated for all fishery-independent data sources. Age-based selectivity was set equal to 1 for all ages in all fleets, except for the NWFSC trawl survey which has a selectivity of 0 for young-of-the-year (age 0) fish.
 ```
 
 The length composition data for some years and fleets was small, and may not be 
-representative of the total catch. Length composition data were removed from the 
-model if fewer than 10 fish were measured in a given 
-year and fleet. Initial input sample sizes were also capped at x00 for each set of length composition data.
-
-The time-series of landings begins in 1875 for the commercial fleet and in 1916 for 
-the recreational fleet.  This captures the inception of the fishery, so the stock is 
-assumed to be in equilibrium at the beginning of the modeled period.
-
-The internal population dynamics model tracks ages 0-70, where age 70 is the ‘plus-group.’ 
-There are relatively few observations in the age compositions that are greater than age 28. 
-The population length bins and the length composition length bins are set at 2-cm bins from 
-fish 10-70 cm fork length.
-
-The first year of recruitment deviations begins in `r `min(model$recruitpars$Yr)`, with 1963 as the last year 
-of early recruitment deviations with no bias adjustment and 1980 as the first year 
-with full bias adjustment.  
+representative of the total catch. Years with insufficient data were excluded from the likelihood, and initial sample sizes (prior to data weighting) for length composition data were set equal to a proxy such as the number or trips, hauls, or sampling events (as described in Table \@ref(tab:length-sample-size)).
 
 ### Modeling Platform and Structure
 
-The assessment was conducted used Stock Synthesis version 3.30.16.00 developed by 
+The assessment was conducted used Stock Synthesis version 3.30.17.00 developed by 
 Dr. Richard Methot at the NOAA, NWFSC [@Methot2013]. This most recent 
 version was used because it included improvements and corrections to older 
 model versions. The R package [r4ss](https://github.com/r4ss/r4ss), version 
@@ -99,36 +64,41 @@ found on the
 
 
 ### Model Parameters
+The population dynamics model has many parameters, some estimated using the available data in the assessment and some fixed at values either external to the assessment or informed by the available data.  A summary of all estimated and fixed parameter values, including associated properties, are listed in Table (\@ref(tab:params).
 
+
+```{asis, echo = model.area=='NCA'}
+A total of 115 parameters were estimated in the base model, including recruitment deviations. Time-invariant growth parameters (Brody growth coefficient, lengths at age 0 and age 30, and CV old/young) using the Schnute parameterization of the von Bertalanffy growth function were estimated for each sex. The CV of the distribution of length-at-age, CV(L), in the base model is estimated at the lower and upper ages specified in the Schnute parameterization of von Bertalanffy growth, and a linear interpolation between these 2 parameters is a function of age. This choice was based on visual inspection of the relationship between CV(L) and age, by sex, using the NWFSC hook-and-line survey data (Figure \@ref(fig:cv-length-age)). Natural mortality was estimated for females and males, and informed by a prior distribution.  Selectivity varied by fleet, and was assumed to be either asymptotic or domed for retained fleets, and forced to be domed for discard fleets with initial and final selectivity fixed at zero.  All selectivity parameters were assumed to be time-invariant, except time blocks were used to capture changes in peak selectivity associated with regulatory changes in 2002 and 2017 (see regulations section). Recruitment deviates were estimated in the base model from 1970 – 2020.  Initial (equilibrium) recruitment was also estimated.  An extra standard deviation parameter was estimated for the PR mode abundance index, as the externally estimated CVs were small due to extremely large sample sizes (1000s of trips).
+```
+
+```{asis, echo = model.area=='SCA'}
+A total of 112 parameters were estimated in the base model, including recruitment deviations. Time-invariant growth parameters (Brody growth coefficient, lengths at age 0 and age 30, and CV old/young) using the Schnute parameterization of the von Bertalanffy growth function were estimated for each sex, with male values parameterized as exponential offsets from female parameters. The CV of the distribution of length-at-age, CV(L), in the base model is estimated at the lower and upper ages specified in the Schnute parameterization of von Bertalanffy growth, and a linear interpolation between these 2 parameters is a function of age. This choice was based on visual inspection of the relationship between CV(L) and age, by sex, using the NWFSC hook-and-line survey data (Figure \@ref(fig:cv-length-age)). Natural mortality was estimated for females and informed by a prior distribution. Natural mortality for males was assumed equal to female (exponential offset fixed at zero). Selectivity varied by fleet, and was assumed to be either asymptotic or domed for retained fleets, and forced to be domed for discard fleets with initial and final selectivity fixed at zero.  All selectivity parameters were assumed to be time-invariant, except time blocks were used to capture changes in peak selectivity associated with regulatory changes in 2002 and 2017 (see regulations section). Recruitment deviates were estimated in the base model from 1965 – 2020.  Initial (equilibrium) recruitment was also estimated.  An extra standard deviation parameter was estimated for the PR mode abundance index, as the externally estimated CVs were small due to extremely large sample sizes (1000s of trips).
+```
 
 ### Priors
 
-The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) and reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017, has been a primary source of information on steepness for rockfishes. This approach, however, was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absence of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 prior for steepness ($h$; beta distribution with $\mu$=`r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"],2)` and $\sigma$=0.15) is retained.  
+The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) and reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017, has been a primary source of information on steepness for rockfishes. This approach, however, was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absence of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 prior for steepness ($h$; beta distribution with $\mu$=`r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"],2)` and $\sigma$=0.16) is retained.  
+
+A prior for natural mortality was developed using the method of [@Hamel2015]. The STAT examined the distribution of ages from the NWFSC hook-and-line survey and found that roughly 99.9% of otoliths aged were in the mid-50s or younger. Therefore an approximate maximum age of 54 was selected, giving a median estimate of 0.1 $yr^{-1}$ for the prior. The STAT notes that the recommended log-scale standard deviation of 0.438 for the prior makes it only weakly informative, so small changes to the median value do not affect assessment results.
+
 
 
 ### Data Weighting
 Length composition and conditional-age-at-length (CAAL) compositions sample sizes for 
 the base model were tuned by the "Francis method," based on equation TA1.8 in Francis 
-[-@Francis2011], and implemented in the r4ss package. This approach involves comparing 
-the residuals in the model’s expected mean length with respect to the observed mean 
-length and associated uncertainty derived from the composition vectors and their 
-associated input sample sizes. The sample sizes are then tuned so that the observed 
-and expected variability are consistent. After adjustment to the sample sizes, models 
-were not re-tuned if the bootstrap uncertainty value around the tuning factor overlapped 1.0. 
+[-@Francis2011], and implemented in the r4ss package. 
 
 As outlined in the Best Practices, a sensitivity run was conducted with length and 
 conditional-age-at-length (CAAL) compositions were re-weighted using the 
-Ianelli-McAllister harmonic mean method [@McAllister1997]. Additionally, weighting 
+McAllister-Ianelli harmonic mean method [@McAllister1997]. See the model sensitivity section for a comparison of the Francis and McAllister-Ianelli results. Additionally, weighting 
 using the Dirichlet-Multinomial likelihood, that includes and estimable parameter (theta) 
 that scales the input sample size, was explored. However, all estimates of the ratio of 
 $\theta/(1+\theta)$ were greater than 0.99, which indicates the models is trying to tune 
-the sample size as high as possible.  Given this result, the STAT chose not to further explore 
+the sample size as large as possible.  Given this result, the STAT chose not to further explore 
 the Dirichlet-Multinomial data weighting. As a note, there is a bug in SS Version 3.30.16.00 that 
 prevents the number of estimated weights from being larger than the number of fleets.  This was 
 fixed in SS Version 3.30.16.01 and this version was only used for exploration of the Dirichlet-Multinomial data weighting.
 
-The STAT explored both McAllister-Ianelli and Francis data weighting methods with the 
-pre-STAR base model.  
 
 
 

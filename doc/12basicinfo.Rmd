@@ -11,7 +11,7 @@ sunset rockfish (*Sebastes crocotulus*). Adult fish tend to cluster on high reli
 and kelp forests [@Hyde2009]. North of Point Conception, California, some adults are shallower, 
 living in caves and cracks [@Love2002]. Vermilion rockfish have shown high site fidelity 
 [@Hannah2011 (only tagged 1 vermilion); @Lea1999], and low to average larval dispersal 
-distance [@Hyde2009]. Lowe et al. (2009) [-@Lowe2009] suggested that vermilion rockfish 
+distance [@Hyde2009]. Lowe et al. [-@Lowe2009] suggested that vermilion rockfish 
 have a lower site fidelity than previously believed, but acknowledged that their
 observations of movements to different depths may have been due to differences in depth distribution between the species. 
 Vermilion rockfish have been aged to over 80 years, but few fish have been aged above 60 years, with females growing larger than their male counterparts. 50% of females are mature at 5 years and about 
@@ -42,13 +42,12 @@ their diet includes octopuses, salps, shrimps, and pelagic red crabs.
 
 This assessment represents the aggregate population dynamics of the cryptic species pair vermilion rockfish 
 and sunset rockfish.
-Hyde [-@Hyde2007] examinedseven mitochondrial and two nuclear genes, which upon analysis suggested 
-three species within the subgenus *Rosicola*. Hyde et al. 
-[-@Hyde2008b] described sunset rockfish as a distinct species noting depth separation 
+Hyde [-@Hyde2007] examined seven mitochondrial and two nuclear genes, which upon analysis suggested 
+three species within the subgenus *Rosicola*. Hyde et al. [-@Hyde2008b] described sunset rockfish as a distinct species noting depth separation 
 of the adult populations of the two species using nine microsatellite loci. 
 Adult sunset rockfish are mainly distributed at depths 
 greater than 50 fm (100 m) and are predominantly located south of Point Conception (\PtC). 
-Hyde [@Hyde2009] and Budrick [@Budrick2016]  identified speciation using mtDNA assays and microsatellite loci, 
+Hyde [@Hyde2009] and Budrick [@Budrick2016]  identified species using mtDNA assays and microsatellite loci, 
 respectively.  The mtDNA analyses proved to be subject to errors in species identification due to introgression resulting from mating between the two species post-divergence.
 Additional population clusters of vermilion were found north of Point Conception, but neither 
 study detected population structure between Half Moon Bay, California and Brookings, 
@@ -118,7 +117,7 @@ monitoring of this economically and ecologically important species complex.
 
 ## Map
 A map showing the scope of the two California `r spp` assessments and depicting boundaries 
-at Point Conception (\PtC) that separates the two assessments. THe northern 
+at Point Conception (\PtC) that separates the two assessments. The northern 
 model is bounded by the California/Oregon border (\CAOR) and the southern model is 
 bounded by the U.S./ Mexico border at the south (Figure \@ref(fig:assess-area)). 
 Cape Mendocino (\CapeM) is also noted as it is a management boundary for the 

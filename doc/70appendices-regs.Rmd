@@ -5,28 +5,28 @@
 \subsection{Graphic of California recreational regulations over time.}
 
 \begin{figure}
-\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Northern.png}
-\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-n}}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Northern_ShelfRF.png}
+\caption{Recreational depth closures for shelf rockfish in the northern California management area.\label{fig:rec-reg-n}}
 \end{figure}
 
 \FloatBarrier
 
 \begin{figure}
-\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_N_M_NC_SF_shelf_rockfish.png}
-\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-cn}}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_NorthCentral_ShelfRF.png}
+\caption{Recreational depth closures for shelf rockfish in the north central California management area.\label{fig:rec-reg-cn}}
 \end{figure}
 
 \FloatBarrier
 
 \begin{figure}
-\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_MTRYSC_C_MBSC_S_shelf_rockfish.png}
-\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-cs}}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Central_ShelfRF.png}
+\caption{Recreational depth closures for shelf rockfish in the central California management area.\label{fig:rec-reg-cs}}
 \end{figure}
 
 
 \begin{figure}
-\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Southern.png}
-\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-s}}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Southern_ShelfRF.png}
+\caption{Recreational depth closures for shelf rockfish in the southern California management area.\label{fig:rec-reg-s}}
 \end{figure}
 
 

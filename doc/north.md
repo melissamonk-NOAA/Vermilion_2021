@@ -20,7 +20,7 @@ header-includes:
   - \usepackage{makecell}
   - \usepackage{xcolor}
   - \usepackage{placeins}
-  - \usepackage[inner]{showlabels}
+  - \usepackage[inline]{showlabels}
 output:
   sa4ss::techreport_pdf:
     default
@@ -398,7 +398,7 @@ by 1953, then declined to approximately 256 vessels around 1963.
 
 Vermilion rockfish are a targeted species in California's recreational fishery
 and have always ranked high in terms of catch among rockfish species, both in the party/charter 
-boat and private/rental sectors.  Onboard surveys of CPFV vessels in southern California ranked vermilion as the 5th and 3rd most common rockfish species in the mid-1970s and mid-1980s, respectively [@CollinsCrookeUnpublished; @Ally1991]. Onboard CPFV observers in central California saw vermilion rockfish in over 27% of all observed drifts over the period 1987-1998, making vermilion rockfish 5th among rockfish species in terms of encounter rates per drift [@Monk2016]
+boat and private/rental sectors.  Onboard surveys of CPFV vessels in southern California ranked vermilion as the 5th and 3rd most common rockfish species in the mid-1970s and mid-1980s, respectively [@Collins1978; @Ally1991]. Onboard CPFV observers in central California saw vermilion rockfish in over 27% of all observed drifts over the period 1987-1998, making vermilion rockfish 5th among rockfish species in terms of encounter rates per drift [@Monk2016]
 
 In southern California, harvest of vermilion from recreational fisheries, as a percentage of the total vermilion harvest, varied considerably from 1980 to 2000. After 2000, largely due to reduced commercial access to shelf habitat, recreational fisheries accounted for almost all the vermilion harvest in Southern California, with relatively minor contributions from the commercial fleets.  Similar patterns occurred north of Point Conception, with the majority of vermilion rockfish landings coming to ports in San Luis Obispo county.
 
@@ -617,7 +617,7 @@ in some southern California port complexes through 1983. See Appendix A of Dick
 et al. [-@Dick2007] and Pearson et al. [-@Pearson2008]; pp. 8 and 15-16] for 
 further details.
 
-Commercial catches from 1978-present were pulled from the CALCOM database, which is stratified using an identical design as the pre-1978 data described above and ensured consistency of the port complex and gear groupings over the entire time series (1969-2020). Although available strata definitions within PacFIN do not match the design of the California commercial catch expansion [@Pearson19xx], the STAT was able to manually aggregate data from PacFIN to almost exactly match the CALCOM estimates (Figure \@ref(fig:calcom-pacfin)). The STAT recommends that port complex and gear group definitions used to expand California commercial catch estimates be incorporated into PacFIN lookup tables to facilitate future comparisons, ensure consistency between the two systems, and help identify potential errors.
+Commercial catches from 1978-present were pulled from the CALCOM database, which is stratified using an identical design as the pre-1978 data described above and ensured consistency of the port complex and gear groupings over the entire time series (1969-2020). Although available strata definitions within PacFIN do not match the design of the California commercial catch expansion [@Pearson1997], the STAT was able to manually aggregate data from PacFIN to almost exactly match the CALCOM estimates (Figure \@ref(fig:calcom-pacfin)). The STAT recommends that port complex and gear group definitions used to expand California commercial catch estimates be incorporated into PacFIN lookup tables to facilitate future comparisons, ensure consistency between the two systems, and help identify potential errors.
 
 
 
@@ -627,7 +627,7 @@ Commercial catches from 1978-present were pulled from the CALCOM database, which
 Biological data (lengths) from the commercial fisheries that landed vermilion rockfish were extracted 
 from CALCOM. The CALCOM length composition data were “expanded” (catch-weighted by stratum, then aggregated by region, gear group, and year) to better represent the size composition of the landed catch. The length composition is available in Figure \@ref(fig:len-data-COM-HKL) 
 for the commercial hook-and-line fleet, 
-`r ifelse(model.area=='NCA', noquote("\@ref(fig:len-data-COM-TWL) for the commercial trawl fleet",,"") 
+\ref{fig:len-data-COM-TWL} for the commercial trawl fleet 
 and \@ref(fig:len-data-COM-NET) for the commercial net fleet.
 Input sample sizes for commercial length composition were based on the number of port samples and are in Table \@ref(tab:length-sample-size). Length compositions with fewer than 30 measured fish in a region/gear/year combination were not included in the model likelihood.
 
@@ -649,8 +649,7 @@ to low annual sample sizes.
 
 *Recreational Landings, 1928-1980*
 
-[paragraph on Ralston et al. rec reconstruction pending -- use mode-specific values from JF]
-[also include paragraph about sensitivities to discard -- not included in Ralston reconstruction]
+Recreational catch estimates prior to 1981 were based on the [@Ralston2010] catch reconstruction, which estimated catches by mode (CPFV and private vessel modes, where latter included any shore-based catches) and estimated catches separately north and south of Point Conception.  Party/Charter (PC mode) catches of all rockfish were based on logbook data (which do not report rockfish to the species level), scaled by compliance estimates, while total recreational catches from private/rental vessels (PR mode) catches were based on a combination of the relative catch rates observed in the PC fleet and a linear ramp between catch estimates in the early 1960s and those in the early 1980s (as described in Ralston et al. [-@Ralston2010]).  The species composition of rockfish catches was estimated using a combination of the 1980s MRFS data as well as limited CPFV species composition data from onboard observer programs in the late 1970s (south of Conception) and dockside recreational creel surveys in the late 1950s and early 1960s (north of Point Conception).  Vermilion (and sunset) rockfish have long been recognized as an important target of recreational fishers south of Point Conception, as well as those in the Morro Bay region, although they are less frequently encountered in recreational fisheries further north.  As noted in Ralston et al. [-@Ralston2010] the catch reconstruction effort was intended to be an “iterative and multistage process,” and there is considerable room for improvements in  both the commercial and the recreational catch reconstruction estimates.
 
 *Marine Recreational Fishery Statistics Survey (MRFSS), 1980-2003*
 
@@ -734,7 +733,7 @@ the CRFS. This survey improves upon the MRFSS sampling design, employing higher
 sampling rates and producing estimates with finer spatial and temporal resolution. The CRFS also employs onboard CPFV observers, providing spatially referenced, drift-level estimates of catch and discard for a subset of anglers on observed groundfish trips, as well as length composition data for discarded catch. These data are extremely valuable to stock assessment (see the CRFS Onboard Index of Abundance Index for 
 further details).
 
-CRFS mortality estimates for the period 2005-2020 were queried from [RecFIN] (www.recfin.org). 
+CRFS mortality estimates for the period 2005-2020 were queried from [RecFIN](www.recfin.org). 
 Reported estimates were aggregated into subregion (north and south of Point Conception) and boat mode (PC and PR), and filtered to exclude fish 
 caught in Mexican waters. Shore modes were a minor component of the recreational catch and were combined with the PR mode. 
 
@@ -803,7 +802,7 @@ These otoliths were not aged for this assessment.
 
 *Recreational indices of abundance*
 
-A number of indices of abundance were explored for the recreational fleet.  There were no or limited recreational index data from 2020 due to COVID-19. Discard catch is available from onboard observer surveys, but was not included in indices.  The STAT considered developing separate indices for discards, but sample sizes were not large enough to warrant modeling. The CDFW CPFV logbook data were not considered as an index of abundance due to the fact that 
+A number of indices of abundance were explored for the recreational fleet (Figure \@ref(index9_standcpueall)).  There were no or limited recreational index data from 2020 due to COVID-19. Discard catch is available from onboard observer surveys, but was not included in indices.  The STAT considered developing separate indices for discards, but sample sizes were not large enough to warrant modeling. The CDFW CPFV logbook data were not considered as an index of abundance due to the fact that 
 vermilion may not be reported to the species level.
 
 
@@ -928,13 +927,13 @@ in the CCFRP survey is in Figure \@ref(fig:len_data_REC-CCFRP).
 *Index of Abundance*
 The index of abundance in the pre-STAR base model is based on a Bayesian negative binomial 
 model, and the posterior predictions were weighted with the assumption that 20% of 
-the available habitat within California state waters (0-3 nm) is within MPAs. 
+the available habitat within California state waters (0-3 nm) is within MPAs (Figure \@ref(index9_standcpueall)). 
 The SWFSC has worked extensively on quantifying rocky habitat from high resolution
 bathymetric data collected as part of the Seafloor Mapping Program.  The quantification 
 of habitat has been used in a number of stock assessments to weight indices of abundance 
 since 2013.  This is the first time the habitat data are utilized to weight an inside/outside 
 MPA effet within an index.  Full details on the observed data, model selection and modeling 
-methods can be found in the Appendix.
+methods can be found in Appendix \@ref(sec:ccfrp-index).
 
 
 
@@ -1212,30 +1211,15 @@ decision.
 
 ## Model Specifications
 
-A decision was made by the STAT after discussions with the Pacific Fishery Management Council’s Groundfish Management Team and Groundfish Advisory Panel to model the areas north and south of Point Conception independently for a number of reasons. This included a discussion of the assumed higher densities of sunset rockfish south of Point Conception and the general decline in vermilion rockfish density as latitude increases.  The preliminary exploration of length data also suggested that the size composition of landed fish north and south of Point Conception differed in a number of fleets. The STAT did maintain consistency across the two models when the data supported the decisions, i.e., maintaining the same recreational and commercial fleet structures and sharing biological data from the more data-rich southern assessment.
+A decision was made by the STAT after discussions with the Pacific Fishery Management Council’s Groundfish Management Team and Groundfish Advisory Panel to model the areas north and south of Point Conception independently for a number of reasons. These included a discussion of the evidence supporting higher densities of sunset rockfish south of Point Conception and the general decline in vermilion rockfish density as latitude increases.  The preliminary exploration of length data also suggested that the size composition of landed fish north and south of Point Conception differed in a number of fleets. The STAT maintained consistency across the two models when the data supported the decisions, i.e., maintaining the same recreational and commercial fleet structures and sharing biological data from the more data-rich southern assessment.
 
-The commercial fleet catches includes dead discards, which were a small percent of the overall landings in both areas (averaging 7.4 mt coastwide since 2015, although increasing since 2017). In addition, there were very little data available from WCGOP. There are four recreational fleets representing retained and assumed-dead discard catches for the PC and PR fleets.  This follows the same practice as a number of other recent rockfish stock assessments in recent years, where the ability to accurately estimate a retention curve is masked by depth-dependent mortality rates. Vermilion rockfish is a desirable species in the recreational fleet and the majority of available lengths from discarded fish from the CDFW and Cal Poly observer programs were regulatory discards from trips when the groundfish fishery was closed and were not representative of discards in the recreational fleet.
-
-The specifications of the California models north and south of Point Conception are very similar.  The major differences between the two models are the availability of fishery-independent data sources that are region specific. 
-
-The fishery-independent data used to estimate the weight-length relationship and the maturity ogive were mainly derived from data collected south of Point Conception, and the parameters were shared across both models.
+The structure of the California models north and south of Point Conception are very similar. Population dynamics in both regions operate on an annual time step and are initialized from an unfished equilibrium condition in 1875. Sex-specific age and length structure is modeled from age 0 (recruitment age) to an accumulator age (plus group) of 70, with 1-cm population length bins ranging from 6-70 cm. Length data bins are 2-cm wide, and range from 8-70 cm in the south and 10-70 cm in the north. Expected recruitment is assumed to follow a Beverton-Holt function of spawning output, with lognormally-distributed recruitment deviations. Growth (male and female) is modeled using the Schute parameterization of von Bertalanffy growth, with two estimated lengths (ages 0 and 30) and a growth rate coefficient (*k*). The major differences between the two models are the availability of fishery-independent data sources that are region-specific, and the parameterization of male growth and mortality parameters (details below).
 
 
-The specification of the California models north and south of Point Conception 
-are very similar.  The major differences between the to models are the availability 
-of fishery-independent data sources that are region specific. 
+The models in both regions are conditioned on catches from the commercial and recreational sectors. The commercial sector is divided into three fleets (hook-and-line, trawl, and net gears). Landings from minor commercial gears were a negligible component of the total harvest and were combined with the hook-and-line fleet. The recreational sector was divided into four fleets according to boat mode (party/charter or private/rental) and catch type (retained or discarded). This follows the same practice as a number of other recent rockfish stock assessments, where the ability to accurately estimate a retention curve is complicated by depth-dependent discard mortality rates.
 
-The Vermilion rockfish assessment north of Point Conception (\PtC) off the coast of California is assessed using a two-sex model with sex-specific growth.
+Vermilion rockfish is a desirable species and discards are a small component of total fishing mortality in both the commercial and recreational sectors. The commercial catches do not include dead discards, which were estimated to be a small percent of the overall landings in both areas (averaging 7.4 mt coastwide since 2015, although increasing since 2017). In addition, there were very few observations available from WCGOP. The size distribution of recreational discards from the CDFW and Cal Poly onboard observer programs represented larger fish from periods when the recreational shelf rockfish fishery closed versus smaller fish discarded when the fishery was open.  Fish discarded during trips when vermilion were prohibited were removed from the recreational PC discard fleet length composition.  
 
-The model assumed seven fishing fleets with removals beginning in 1875: 
-
-*Commercial*: There are three commercial fleets; hook-and-line, trawl, and net. 
-All of the commercial fleets represented landed dead catch and assumed dead discards.
-
-*Recreational*: There are four recreational fleets.  Each of the PC and PR modes have 
-separate fleets for retained and discarded catch.  This decision was driven by the 
-length compositions between retained 
-and discarded fish (with discarded fish on average smaller than retained fish).
 
 
 *Fishery-Dependent Surveys*:  There are four fishery-dependent survey fleets north 
@@ -1264,26 +1248,11 @@ The recreational PC and PR fleets applied three time blocks for selectivity:  `r
 
 
 The length composition data for some years and fleets was small, and may not be 
-representative of the total catch. Length composition data were removed from the 
-model if fewer than 10 fish were measured in a given 
-year and fleet. Initial input sample sizes were also capped at x00 for each set of length composition data.
-
-The time-series of landings begins in 1875 for the commercial fleet and in 1916 for 
-the recreational fleet.  This captures the inception of the fishery, so the stock is 
-assumed to be in equilibrium at the beginning of the modeled period.
-
-The internal population dynamics model tracks ages 0-70, where age 70 is the ‘plus-group.’ 
-There are relatively few observations in the age compositions that are greater than age 28. 
-The population length bins and the length composition length bins are set at 2-cm bins from 
-fish 10-70 cm fork length.
-
-The first year of recruitment deviations begins in `r `min(model$recruitpars$Yr)`, with 1963 as the last year 
-of early recruitment deviations with no bias adjustment and 1980 as the first year 
-with full bias adjustment.  
+representative of the total catch. Years with insufficient data were excluded from the likelihood, and initial sample sizes (prior to data weighting) for length composition data were set equal to a proxy such as the number or trips, hauls, or sampling events (as described in Table \@ref(tab:length-sample-size)).
 
 ### Modeling Platform and Structure
 
-The assessment was conducted used Stock Synthesis version 3.30.16.00 developed by 
+The assessment was conducted used Stock Synthesis version 3.30.17.00 developed by 
 Dr. Richard Methot at the NOAA, NWFSC [@Methot2013]. This most recent 
 version was used because it included improvements and corrections to older 
 model versions. The R package [r4ss](https://github.com/r4ss/r4ss), version 
@@ -1295,54 +1264,44 @@ found on the
 
 
 ### Model Parameters
+The population dynamics model has many parameters, some estimated using the available data in the assessment and some fixed at values either external to the assessment or informed by the available data.  A summary of all estimated and fixed parameter values, including associated properties, are listed in Table (\@ref(tab:params).
+
+
+A total of 115 parameters were estimated in the base model, including recruitment deviations. Time-invariant growth parameters (Brody growth coefficient, lengths at age 0 and age 30, and CV old/young) using the Schnute parameterization of the von Bertalanffy growth function were estimated for each sex. The CV of the distribution of length-at-age, CV(L), in the base model is estimated at the lower and upper ages specified in the Schnute parameterization of von Bertalanffy growth, and a linear interpolation between these 2 parameters is a function of age. This choice was based on visual inspection of the relationship between CV(L) and age, by sex, using the NWFSC hook-and-line survey data (Figure \@ref(fig:cv-length-age)). Natural mortality was estimated for females and males, and informed by a prior distribution.  Selectivity varied by fleet, and was assumed to be either asymptotic or domed for retained fleets, and forced to be domed for discard fleets with initial and final selectivity fixed at zero.  All selectivity parameters were assumed to be time-invariant, except time blocks were used to capture changes in peak selectivity associated with regulatory changes in 2002 and 2017 (see regulations section). Recruitment deviates were estimated in the base model from 1970 – 2020.  Initial (equilibrium) recruitment was also estimated.  An extra standard deviation parameter was estimated for the PR mode abundance index, as the externally estimated CVs were small due to extremely large sample sizes (1000s of trips).
+
 
 
 ### Priors
 
-The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) and reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017, has been a primary source of information on steepness for rockfishes. This approach, however, was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absence of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 prior for steepness ($h$; beta distribution with $\mu$=0.72 and $\sigma$=0.15) is retained.  
+The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) and reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017, has been a primary source of information on steepness for rockfishes. This approach, however, was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absence of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 prior for steepness ($h$; beta distribution with $\mu$=0.72 and $\sigma$=0.16) is retained.  
+
+A prior for natural mortality was developed using the method of [@Hamel2015]. The STAT examined the distribution of ages from the NWFSC hook-and-line survey and found that roughly 99.9% of otoliths aged were in the mid-50s or younger. Therefore an approximate maximum age of 54 was selected, giving a median estimate of 0.1 $yr^{-1}$ for the prior. The STAT notes that the recommended log-scale standard deviation of 0.438 for the prior makes it only weakly informative, so small changes to the median value do not affect assessment results.
+
 
 
 ### Data Weighting
 Length composition and conditional-age-at-length (CAAL) compositions sample sizes for 
 the base model were tuned by the "Francis method," based on equation TA1.8 in Francis 
-[-@Francis2011], and implemented in the r4ss package. This approach involves comparing 
-the residuals in the model’s expected mean length with respect to the observed mean 
-length and associated uncertainty derived from the composition vectors and their 
-associated input sample sizes. The sample sizes are then tuned so that the observed 
-and expected variability are consistent. After adjustment to the sample sizes, models 
-were not re-tuned if the bootstrap uncertainty value around the tuning factor overlapped 1.0. 
+[-@Francis2011], and implemented in the r4ss package. 
 
 As outlined in the Best Practices, a sensitivity run was conducted with length and 
 conditional-age-at-length (CAAL) compositions were re-weighted using the 
-Ianelli-McAllister harmonic mean method [@McAllister1997]. Additionally, weighting 
+McAllister-Ianelli harmonic mean method [@McAllister1997]. See the model sensitivity section for a comparison of the Francis and McAllister-Ianelli results. Additionally, weighting 
 using the Dirichlet-Multinomial likelihood, that includes and estimable parameter (theta) 
 that scales the input sample size, was explored. However, all estimates of the ratio of 
 $\theta/(1+\theta)$ were greater than 0.99, which indicates the models is trying to tune 
-the sample size as high as possible.  Given this result, the STAT chose not to further explore 
+the sample size as large as possible.  Given this result, the STAT chose not to further explore 
 the Dirichlet-Multinomial data weighting. As a note, there is a bug in SS Version 3.30.16.00 that 
 prevents the number of estimated weights from being larger than the number of fleets.  This was 
 fixed in SS Version 3.30.16.01 and this version was only used for exploration of the Dirichlet-Multinomial data weighting.
-
-The STAT explored both McAllister-Ianelli and Francis data weighting methods with the 
-pre-STAR base model.  
 
 
 
 
 ### Key Assumptions and Structural Choices
 
-A key assumption made by this assessment model is that the biological parameters between the cryptic species pair vermilion and sunset rockfish are the same. The catch histories are inseparable at this time, especially for 
-the early commercial landings. Ongoing research may shed light on this issue.
-
-
-
-
-### Evaluation of Model Parameters
-
-A number of models were explored to look the the first year of estimated recruitment deviations.  
-
-Models estimating steepness were also considered.
-
+Many of the key assumptions and structural choices made in this assessment were evaluated through sensitivity analyses.  For consistency, model structural choices were made that were likely to result in the most parsimonious treatment of the available data, either a priori determined or through the evaluation of model goodness of fit.  
+The major structural choices in both California assessments were 1) the use of a single, stationary, and closed population model to describe the aggregate population dynamics and biological parameters of the cryptic species pair in each region, 2) density-dependence entirely characterized by a Beverton-Holt stock recruitment relationship, 3) that natural mortality rates can be adequately estimated from available data, and 4) time blocks based on major regulatory changes adequately characterize changes in size-selectivity of fishing gear over time. The catch histories of vermilion and sunset rockfishes are inseparable at this time, making estimation of species-specific fishing mortality rates impossible. Ongoing research may shed light on this issue, and help improve our understanding of potential differences between the species (e.g., vital rates) that could influence estimates of stock productivity and sustainable yield.
 
 
 ### Convergence
@@ -1351,7 +1310,7 @@ Model convergence was determined by starting the minimization process from dispe
 values of the maximum likelihood estimates to determine if the model found a better 
 minimum. Jitter is a SS option that generates random starting values from a normal 
 distribution logistically transformed into each parameter’s range [@Methot2020]. This 
-was repeated 300 times and the minimum was reached in 67% of the runs  (Figure \@ref(fig:jitter)).
+was repeated 100 times and none of the runs converged to a lower negative log likelihood (Figure \@ref(fig:jitter)).
 The model did not experience convergence issues, e.g., final gradient was below 0.0001,
 when reasonable starting values were used and there were no difficulties in inverting 
 the Hessian to obtain estimates of variability.  We did sensitivity runs for 
@@ -1365,6 +1324,7 @@ log-likelihood nor the parameter estimates changed.
 
 The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \@ref(tab:params). Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \@ref(tab:referenceES). Estimates of stock size and status over time are shown in Table \@ref(tab:timeseries). 
 
+The full r4ss plotting output is available in the supplementary material.
 
 ## Parameter Estimates
 
@@ -1375,13 +1335,13 @@ The base model has a total of 115 estimated parameters
 categories and are described in more detail in the following sections:
 
 
+
 Biological parameters  
 - 1 natural mortality parameter (female and male assumed the same)  
-- 8 growth parameters, where the Age at Lmin and CV for old ma
-- 3 Schnute growth parameters (length at age 0, length at age 30, and $k$)   
-- 3 parameters controlling variability in growth, the CV in length at age 0  
-  and the CV in length at age 30 with a linear ramp in length-at-age  (CV for young males was not estimated)
-
+- 9 growth parameters
+    + 6 Schnute growth parameters (length at age 0, length at age 30, and $k$)   
+    + 3 parameters controlling variability in growth, the CV in length at age 0  
+  and the CV in length at age 30 with a linear ramp in length-at-age  (CV for old males was not estimated
 
 
 Stock-recruit parameters  
@@ -1403,26 +1363,18 @@ Selectivity parameters
 ## Fixed parameters
 - $h$ controlling the steepness of the stock-recruit relationship
 - $M$ for males
-- Selectivity parameters that were estimated at the bounds and fixed in the pre-STAR model
+- Selectivity parameters estimated at the bounds during model exploration were fixed in the pre-STAR model
 
-## Natural Mortality
-
-Female natural mortality was estimated at 0.09 and male natural mortality was fixed at the female-estimated value. 
+## Growth Estimation
 
 
 
 
-## Growth (Length-at-Age)
+The northern California base model estimated reasonable growth parameters for k and lengths at age 0 and age 30. Internal estimates of growth were estimated directly for both females and males, and not as an offset. An offset for male growth was explored, but the CV of length at $L_{age=30}$ was estimated around 2-3%.  When the male CV was fixed to female CV, the assessment model shrunk the CV of females at $L_{age=30}$, which the STAT did not find reasonable.  Therefore, the male CV at $L_{age=30}$ was fixed at the CV estimated for females of 0.07 (Figure \@ref(fig:fittedgrowth)).
 
+The direct estimation of male  $L_{age=0}=6.02$ cm was reasonable compared to female  $L_{age=0}=7.8$.  While $k$ was estimated  larger for males (0.19) than females (0.15), female $L_{age=30}$  of 55 cm was larger than males at 49 cm.  These results are consistent with other studies that have looked at sex-specific growth in vermilion rockfish.
 
-
-Internal estimates of growth were estimated directly for males, and not as an offset. An offset for male growth was explored, but the CV of length at $L_{age=30}$ was estimated around 2-3%.  When the male CV was fixed to female CV, the assessment model shrunk the CV of females at $L_{age=30}$, which the STAT did not find reasonable.  Therefore, the male CV at $L_{age=30}$ was fixed at the CV estimated for females of 0.07 (Figure \@ref(fig:fittedgrowth)).
-
-The direct estimation of male  $L_{age=0}=6.02$ cm was reasonable compared to female  $L_{age=0}=7.8$.  While $k$ was estimated  larger for males (0.19) than females (0.15), female size at t $L_{age=30}$  of 55 cm was larger than males at 79 cm.  These results are consistent with other studies that have looked at sex-specific growth in vermilion rockfish.
-
-
-
-Estimates of the traditional vonBertallanffy parameters transformed from the Schnute parameterization used by SS are below.  In both parameterizations, the $k$ parameter is the same.
+Estimates of the vonBertalanffy parameters transformed from the Schnute parameterization used by SS are below.  In both parameterizations of the growth equation, the $k$ has the same definition.
 \begin{centering}
 
 Females $L_{\infty}$ = 56 cm; $k$ = 0.145; $t_0$ = -1.03
@@ -1433,123 +1385,76 @@ Males $L_{\infty}$ = 50 cm; $k$ = 0.199; $t_0$ = -0.65
 
 \vspace{0.5cm}
 
-## Selectivity
 
-The estimated length sensitivities by fleets are shown in Figure \@ref(fig:selex-length-all) 
-and by age in Figure \@ref(fig:selex-age-all)  
+## Natural Mortality Estimation
 
+The northern California model directly estimates male growth and natural mortality parameters due to the above-mentioned issue with estimation of CVs for length at age 30. Female natural mortality was estimated at 0.089 (SE = 0.009) and male natural mortality was estimated at 0.084 (SE = 0.01), which the STAT considered reasonable given that observed maximum ages for both sexes are similar. Latitudinal gradients in natural mortality have been estimated for many species of rockfish, which is consistent with the higher estimates of M in the southern model.
 
-Time varying selectivititues for the recreational PC fishery
-Figure \@ref(fig:sel03_len_timevary_surf_flt4sex1)    #
-Figure \@ref(fig:sel03_len_timevary_surf_flt6sex1)   #
-Figure \@ref(fig:endyr-selex-COM-HKL)  
-Figure \@ref(fig:endyr-selex-COM-TWL)  
-Figure \@ref(fig:endyr-selex-COM-NET)  
-Figure \@ref(fig:endyr-selex-REC-PC)  
-Figure \@ref(fig:endyr-selex-REC-PC-DIS)  
-Figure \@ref(fig:endyr-selex-REC-PR)  
-Figure \@ref(fig:endyr-selex-REC-PR-DIS)  
-Figure \@ref(fig:endyr-selex-NWFSC-TWL)  
+ 
+
+## Fits to Age Composition
+The following plots show fits to the conditional age-at-length composition for each 
+fleet/survey:   
+- WCGBT survey: Figures \ref{fig:comp_condAALfit_residsflt9mkt0_page1} - \ref{fig:comp_condAALfit_residsflt9mkt0_page3}, \ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_TWL}, and \ref{fig:comp_condAALfit_Andre_plotsflt9mkt0_page1} - \ref{fig:comp_condAALfit_Andre_plotsflt9mkt0_page4}   
+- Abrams research survey: Figures \ref{fig:comp_condAALfit_residsflt11mkt0}, \ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeABRAMS_RESEARCH} and \ref{fig:comp_condAALfit_Andre_plotsflt11mkt0}  
+- SWFSC groundfish ecology survey: Figures \ref{fig:comp_condAALfit_residsflt12mkt0} , \ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeSWFSC_GF_ECOL} and \ref{fig:comp_condAALfit_Andre_plotsflt12mkt0}  
+  
+Fits to the conditional age at length data sets seemed reasonable, with no evidence of strong residual patterns. The largest residuals were mainly associated with the infrequently encountered, oldest individuals. The model was able to reproduce interannual changes in mean age for the NWFSC trawl and Abrams research data, but tended to slightly overestimate average age (by about 1 year) in three of the four years for the SWFSC GF Ecology data set.
 
 
+## Estimated Selectivity and Fits to Length Composition
+The following plots show estimated selectivity (when not mirrored) and fits to the length composition for each 
+fleet/survey:
 
+- Commercial hook-and-line: Figures \ref{fig:endyr-selex-COM-HKL}, \ref{fig:len-pearson-COM-HKL}, and \ref{fig:mean-len-fit-COM-HKL} 
+- Commercial trawl: Figures \ref{fig:endyr-selex-COM-TWL}, \ref{fig:len-pearson-COM-TWL}, and \@ref(fig:mean-len-fit-COM-TWL}
+- Commercial net: Figures \ref{fig:endyr-selex-COM-NET}, \ref{fig:len-pearson-COM-NET}, and \ref{fig:mean-len-fit-COM-NET}
+- Recreational retained PC: Figures \ref{fig:endyr-selex-REC-PC}, \ref{fig:sel03_len_timevary_surf_flt4sex1},  \ref{fig:len-pearson-REC-PC}  and Figure \ref{fig:mean-len-fit-REC-PC} 
+- Recreational discard PC Figures \ref{fig:endyr-selex-REC-PC-DIS}, \ref{fig:len-pearson-REC-PC-DIS}  and \ref{fig:mean-len-fit-REC-PC-DIS}
+- Recreational retained PR: Figures \ref{fig:endyr-selex-REC-PR}, \ref{fig:sel03_len_timevary_surf_flt6sex1}, \ref{fig:len-pearson-REC-PR} and \ref{fig:mean-len-fit-REC-PR}  
+- Deb Wilson-Vandenberg onboard CPFV survey: Figure \ref{fig:len-pearson-DWV-ONBOARD}  and \ref{fig:mean-len-fit-DWV-ONBOARD} 
+- WCGBT survey: Figures \ref{fig:endyr-selex-NWFSC-TWL}, \ref{fig:endyr-selex-NWFSC-TWL}, \ref{fig:len-pearson-NWFSC-TWL}  and \ref{fig:mean-len-fit-NWFSC-TWL} 
+- Abrams research survey: Figures \ref{fig:len-pearson-ABRAMS-RESEARCH}  and \ref{fig:mean-len-fit-ABRAMS-RESEARCH}  
+- SWFSC groundfish ecology survey: Figures \ref{fig:len-pearson-SWFSC-GF-ECOL}  and \ref{fig:mean-len-fit-SWFSC-GF-ECOL}    
+- CCFRP: Figures \ref{fig:endyr-selex-CCFRP}, \ref{fig:len-pearson-CCFRP} and Figure \ref{fig:mean-len-fit-CCFRP}  
+
+Fits to the time-aggregated length comps were best for the commercial, recreational, and CCFRP fleets Figure \@ref(fig:lenfits-all). The WCGBT survey does not sample primary adult habitat types, resulting in a length frequency distribution that appears bimodal and is difficult for the model to reproduce Figure \@ref(fig:lenfits-all), and also reflected in the descending limb of the selectivity around 0.42 for any fish larger than 20 cm (Figure \@ref(fig:endyr-selex-NWFSC-TWL)). Fits to the two short-term research fleets (SWFSC GF Ecology and Abrams) are adequate, but ultimately based on mirrored selectivity curves (details in selectivity section, below). Fits to length composition data from the recreational fleets show evidence of modal progressions due to strong year classes (e.g., the 1984-5 year classes entering the fishery a few years later), do not show evidence of strong patterns in the pearson residual plots, and the model is able to track associated changes in mean length over time.
+
+The Abrams research fleet and SWFSC groundfish ecology lengths were mirrored to the commercial hook-and-line fleet, which was fixed to asymptotic selectivity (Figure \@ref(fig:endyr-selex-COM-HKL)).  Initial estimation of the commercial trawl selectivity resulted in large estimates with large standard errors.  Therefore, it was fixed to be asymptotic and the peak size and the ascending width were estimated (Figure \@ref(fig:endyr-selex-COM-TWL)).  The historic net fishery selectivity was well estimated with four parameters and a descending limb; fish were fully selected by around 43 cm and by around 47 cm selectivity decreased to 0.6 (Figure \@ref(fig:endyr-selex-COM-NET)).
+
+All three estimated selectivities for recreational fleets were estimated as domed selectivities (Figures \@ref(fig:endyr-selex-REC-PC), \@ref(fig:endyr-selex-REC-PC-DIS), \@ref(fig:endyr-selex-REC-PR)). A number of regulatory changes in the recreational fleets prompted selectivity time blocks, and both recreational retained fleets estimated a large length at full selectivity in the later time block, from 2017-2020, which was expected due to the relaxation of depth restrictions in areas of higher vermilion density.   The width of the end year selectivity for the recreational PR fleet is wider than that of the PC fleet, which has larger size at peak selectivity.  Peak selectivity of the discard fleet is around 20 cm, and once fish reach 40 cm, they are no longer selected by the discard fleet.  There is no size limit on vermilion rockfish and this is assumed to represent angler preference.
+
+The CCFRP fishes within 150 ft of water to reduce barotrauma-induced mortality and does not observe the larger fish that are seen in the recreational fleets fishing in deeper waters and further offshore (\@ref(endyr-selex-CCFRP). The estimated length composition fits vary by year, with the early years expecting larger fish than were observed and the more recent years (2015-2020) expecting smaller fish, likely from the larger 2013-2014 year classes.
+
+
+
+## Fits to Indices
+The following plots show log-scale fits to the indices and residuals by fleet/survey:
+- MRFSS dockside PC survey: Figures \@ref(fig:log-cpue-REC-PC) and \@ref(fig:cpue-resid-REC-PC)  
+- Deb Wilson-Vandenberg onboard CPFV survey: Figures \@ref(fig:log-cpue-DWV-ONBOARD) and \@ref(fig:cpue-resid-DWV-ONBOARD)  
+- CDFW/Cal Poly onboard CPFV survey: Figures \@ref(fig:log-cpue-REC-PC-ONBOARD) and \@ref(fig:cpue-resid-REC-PC-ONBOARD)  
+- CDFW dockside PR survey: Figures \@ref(fig:log-cpue-REC-PR) and \@ref(fig:cpue-resid-REC-PR)  
+- CCFRP survey: Figures \@ref(fig:log-cpue-CCFRP) and \@ref(fig:cpue-resid-CCFRP)  
+
+Fits to the indices vary in quality. Three of the four recreational indices represented the PC fleet, covering the years 1980-2019.
+The MRFSS era dockside interview index was fit reasonably well except for the first few years of the index (Figures \@ref(fig:log-cpue-REC-PC) and \@ref(fig:cpue-resid-REC-PC)). The Deb Wilson-Vandenberg onboard survey from 1988-1998 was fairly flat and uninformative, and the model was not able to reproduce a spike in 1990 when an increased CPUE was estimated in the standardized index (Figures \@ref(fig:log-cpue-DWV-ONBOARD) and \@ref(fig:cpue-resid-DWV-ONBOARD)). However, it is unclear whether the increase in CPUE for one year is an artifact of the data or represents an actual short-term increase in abundance. The CDFW and Cal Poly onboard index, which now contains 21 years of data provided an uninformative fit to the data. Both the beginning (1999-2001) and ending (2017-2019) years represent time periods when the fishery had access to deeper water.  Even with selectivity time blocks for these periods, the index was not fit to the decrease in observed CPUE from 1999-2001 or the slight increase from 2017-2019. There is some pattern in the residuals with groups of alternating positive and negative years (Figures \@ref(fig:log-cpue-REC-PC-ONBOARD) and \@ref(fig:cpue-resid-REC-PC-ONBOARD)).
+The recreational PR index was not well fit, even with additional error added within the model and residual patterns 
+also indicate a poor fit (Figures \@ref(fig:log-cpue-REC-PR) and \@ref(fig:cpue-resid-REC-PR)). Residuals for the 
+first part of the survey are positive and negative for the second half of the survey. The only fishery-independent 
+index, CCFRP, fit reasonably well to the increasing trend from 2016-2020 (Figures \@ref(fig:log-cpue-CCFRP) and \@ref(fig:cpue-resid-CCFRP)). All of the indices (recreational and CCFRP) indicated an increasing trend from 
+2008 to 2010 and then a decrease with lows in all indices  in 2013 that was not fit in any of the indices.  CCFRP 
+is the only index sampling within the MPAs, and starting in 2017 the index represents the entire coast.  
+
+
+
+
+## Derived Quantities
+Vermilion spawning output in northern California was estimated to be 436 million eggs in 2021 (~95% asymptotic intervals: 222-650; Table \@ref(tab:referenceES), which equates to a depletion level of 39% (~95% asymptotic intervals: 21%-57%; Table \@ref(tab:referenceES); Figure \@ref(fig:depl)) in 2021. Depletion is a ratio of the estimated spawning output in a particular year relative to estimated unfished, equilibrium spawning output. Spawning output north of Point Conception declined rapidly throughout the 1970s, 1980s, and 1990s to a level below the Minimum Stock Size Threshold (MSST), but catches decreased enough in the late 1990s and 2000s for the stock to reach a stable level of spawning output (Table \@ref(tab:timeseries), Figure \@ref(fig:ssb)). Stock size is estimated to have been at the lowest level during the 1990s, but has since increased, in part due to strong recruitments in 1999 and 2016. The stock is estimated to have been below the management target of B40% since the early 1980s (Figure \@ref(fig:depl)), recently returning to levels near the target biomass. Relative exploitation rates [(1-SPR) / (1-SPR50%)] increased through time, exceeding target levels from the 1970s through the 1990s. Exploitation over the past decade has fluctuated around target levels (Figure \@ref(fig:1-spr)), with most catches landed by the recreational sector. In 2021, vermilion biomass north of Point Conception is estimated to be near the target biomass level, while experiencing fishing intensity around the SPR fishing intensity target (Figure \@ref(fig:phase)). The equilibrium yield curve is shifted left, as expected from the Beverton-Holt steepness parameter (h=0.72) (Figures \@ref(fig:yield2) and \@ref(fig:yield3)).
 
 
 ## Recruitment Deviations
 
-
-
-Figure \@ref(fig:recruits)  
-Figure \@ref(fig:rec-devs)  
-
-
-
-
-
-
-
-## Fits to the Data
-Model fits to the indices of abundance, fishery length composition, survey length 
-composition, and conditional age-at-length observations are all discussed below. 
-The full r4ss plotting output is available in the supplementary material.
-
-
-### Data weighting
-
-Francis weighting was selected and provided better fits to the indices 
-and was re-tuned for five iterations to determine if the method serially downweighted any 
-one data source.
-
-
-*Indices*
-
-
-
-Figure \@ref(fig:cpueall)  
-Figure \@ref(fig:log-cpue-REC-PC)    
-Figure \@ref(fig:cpue-resid-REC-PC)
-Figure \@ref(fig:log-cpue-REC-PR)  
-Figure \@ref(fig:cpue-resid-REC-PR)  
-Figure \@ref(fig:log-cpue-DWV-ONBOARD)  
-Figure \@ref(fig:cpue-resid-DWV-ONBOARD)  
-Figure \@ref(fig:log-cpue-REC-PC-ONBOARD)  
-Figure \@ref(fig:cpue-resid-REC-PC-ONBOARD)  
-Figure \@ref(fig:log-cpue-CCFRP)  
-Figure \@ref(fig:cpue-resid-CCFRP)  
-
-
-
-
-
-*Length Composition*
-
-
-Figure \@ref(fig:lenfits-all)  
-Figure \@ref(fig:len-pearson-COM-HKL)  and Figure \@ref(fig:mean-len-fit-COM-HKL)  
-Figure \@ref(fig:len-pearson-COM-TWL)  and Figure \@ref(fig:mean-len-fit-COM-TWL)  
-Figure \@ref(fig:len-pearson-COM-NET)  and Figure \@ref(fig:mean-len-fit-COM-NET)  
-Figure \@ref(fig:len-pearson-REC-PC)  and Figure \@ref(fig:mean-len-fit-REC-PC)  
-Figure \@ref(fig:len-pearson-REC-PC-DIS)  and Figure \@ref(fig:mean-len-fit-REC-PC-DIS)  
-Figure \@ref(fig:len-pearson-DWV-ONBOARD)  and Figure \@ref(fig:mean-len-fit-DWV-ONBOARD)  
-Figure \@ref(fig:len-pearson-NWFSC-TWL)  and Figure \@ref(fig:mean-len-fit-NWFSC-TWL)  
-Figure \@ref(fig:len-pearson-ABRAMS-RESEARCH)  and Figure \@ref(fig:mean-len-fit-ABRAMS-RESEARCH)  
-Figure \@ref(fig:len-pearson-SWFSC-GF-ECOL)  and Figure \@ref(fig:mean-len-fit-SWFSC-GF-ECOL)  
-Figure \@ref(fig:len-pearson-CCFRP)    and Figure \@ref(fig:mean-len-fit-CCFRP)  
-
-
-
-
-*Conditional Age at Length*
-
-
-
-Figure \@ref(fig:ssb)  
-Figure \@ref(fig:depl)  
-Figure \@ref(fig:comp_condAALfit_residsflt9mkt0_page1)   #
-Figure \@ref(fig:comp_condAALfit_residsflt9mkt0_page3)   #
-Figure \@ref(fig:comp_condAALfit_residsflt11mkt0)   #
-Figure \@ref(fig:comp_condAALfit_residsflt12mkt0)   #
-Figure \@ref(fig:comp_condAALfit_Andre_plotsflt9mkt0_page1)   #
-Figure \@ref(fig:comp_condAALfit_Andre_plotsflt9mkt0_page4)   #
-
-
-
-
-
-
-*Stock recruitment curve*
-Figure \@ref(fig:bh-curve)
-Figure \@ref(fig:bh-resids)
-
-
-
-
-## Population Trajectory
-
-
-
-
-
+Model estimates of recruitment for the 1970-2018 period indicated an extended period of below average recruitment throughout the 1970s and early 1980s, which is generally inconsistent with strong recruitment trends for many years in the 1970s and in 1980 for other species of rockfish.  As this time period is only weakly informed by length data, this may indicate some potential for model misspecification. Major recruitments (strong year classes) estimated in the northern California model include strong 1984, 1985, 1999, and 2016 year classes. (Figures \@ref(fig:recdevs), \@ref(fig:bh-resids) and  \@ref(fig:phase)). These are consistent with estimates of strong year classes in other rockfish stock assessments, nearly all of which suggest very high recruitment in 1999. More recently, strong year classes have been estimated in 2016 for widow rockfish, sablefish and Pacific hake, observations that are consistent with observations of high juvenile rockfish abundance in the California Current during the 2015-2016 large marine heatwave [@Schroeder2019].  Due to ageing error, years adjacent to strong (or weak) cohorts are sometimes estimated as having similar deviations. 
 
 
 
@@ -1560,18 +1465,13 @@ Sustainable total yield (landings plus discards) was
 reference harvest rate. The spawning output equivalent to 40% of the unfished level ($SB_{40\%}$) was 497.31 
 million eggs. 
 
-The predicted spawning output from the base model shows frogs (Figure \@ref(fig:ssb)).  The spawning output then frogs.
-
 The 2020. spawning biomass relative to unfished equilibrium spawning biomass is above the target of 40% of unfished levels (Figure \@ref(fig:depl)). 
-The relative fishing intensity, $(1-SPR)/(1-SPR_{50\%})$, was above the management target frogs (Figure \@ref(fig:1-spr)). The relative fishing intensity has been frogs (Figure \@ref(fig:phase)).
+The relative fishing intensity, $(1-SPR)/(1-SPR_{50\%})$, was above the management target frogs (Figure \@ref(fig:1-spr)). 
 
 Table \@ref(tab:referenceES) shows the full suite of estimated reference points for the base model and Figures \@ref(fig:yield2) and \@ref(fig:yield3) show the equilibrium curve based on a steepness value fixed at 0.72.
 
 
-
-
-
-<!--chapter:end:35model-prestar-base-results.Rmd-->
+<!--chapter:end:35model-prestar-base-results-north.Rmd-->
 
 # Assessment Model Diagnostics
 
@@ -1591,7 +1491,11 @@ Likelihood profiles were conducted for natural mortality (M), steepness (h) and 
 
 
 
+The profiles for natural mortality in the northern model (Figures \@ref(fig:m-profile), \@ref(fig:m-depl), and \@ref(fig:m-spawn)) suggest that this parameter is reasonably well informed between a range of approximately 0.07 and 0.11, a somewhat lower range of values than was estimated for the southern model.  Interestingly, profiles for natural mortality in the north indicated that the length data were better fit by the model with a lower natural mortality rate, and the age data were better fit by a higher rate, a result that is in contrast to that observed in the southern model.  Most of the indices were also better fit by a higher natural mortality rate, although the Deb Wilson-Vandenberg Index and the onboard observer index were better fit with lower natural mortality rates.  As is typical, spawning output increased with decreasing natural mortality, such that the model estimate with M = 0.05 was 1.5 times that of the model estimate when M was assumed to be 0.12. Similarly, the model estimated depletion in 2020 was well above the target level, close to 70%, for the M=0.12 model, while the ending depletion was just barely over the minimum stock size threshold of 25% of the unfished level in the M=0.05 model (Figure \@ref(fig:m-depl)).  
 
+A profile of steepness was conducted on values ranging from 0.30 to 0.90 in 0.10 increments.  The likelihood profiles (by component, and by component and fleet) are shown as  Figure \@ref(fig:h-profile), and the resulting model trajectories (spawning output and relative depletion) are shown as Figures \@ref(fig:h-spawn) and \@ref(fig:h-depl).  The likelihood profiles show that the overall best fit to the data is associated with high steepness values, although the data were generally uninformative above steepness values of 0.5.  Overall the length data were not very informative, and there was some odd jumps in the likelihood in some fleets at very low (0.3) steepness values.  Similarly the age data were only marginally informative, and suggested higher steepness values in general.  Most of the indices also suggested higher steepness values, particularly the NWFSC hook and line survey index, although the Rec PC index had a significantly better fit at lower steepness values.  Predictably, spawning output scaled down with higher steepness values and up with lower values, however the estimate of stock status in 2021 was actually more optimistic with lower steepness values and more pessimistic with higher steepness values.  The higher steepness runs were also more pessimistic with respect to historical (late 1980s through the early 2000s) stock status.       
+
+A profile on the log of unfished recruitment was conducted on values ranging from 5.7 to 6.4 (the base model estimate was 6.07), and is shown as Figure \@ref(fig:r0-profile).  In general, age data was better fit by the model with higher values of R0, as was most of the survey data (as well as recruitment via likelihood penalties).  The DWV_onboard survey index and the Rec_PR were both somewhat better fit by the lower R0 values. All length data were either better fit to lower R0 values or were uninformative.  As with the southern model, spawning output is estimated to be greater with the higher R0 values, although the overall difference in scaling was minimal for early years.  Also consistent with the southern model result, the northern model result was more pessimistic with the lower R0 values, with the low R0 values being below the MSST and higher R0 values suggesting that relative spawning output is well above target levels (Figures \@ref(fig:r0-depl) and \@ref(fig:r0-spawn)). As with the southern model, this is a result of corresponding model changes in the estimate of the natural mortality rate (which is estimated to be much lower in the low R0 model), such that the R0 profile is in many ways simply providing the same information as the profile on the natural mortality rate.  Additional profiles in which M is fixed may be helpful in evaluating model performance.
 
 
 
@@ -1635,7 +1539,7 @@ Over the last several decades, spatially explicit management measures at both th
 
 Regardless of the management objective, spatial closures are expected to increase the spatial heterogeneity in abundance and size or age structure of fished stocks. This greater spatial variability can complicate the assumptions made in stock assessment models, particularly the assumption that the densities and demographic structure of assessed populations are relatively homogeneous, at least across predictable habitat types such as bathymetric gradients or substrate types [@Punt2004; @Field2007; @Berger2017].  Although a wide range of factors above and beyond spatial management measures can also lead to violations of those assumptions, and the challenge is intuitively less problematic for populations with high movement rates and/or high population turnover, the challenge can be particularly important for longer lived populations with lower movement rates.  The challenge can best be summarized by the result that the more effective MPAs or other closed areas are at protecting populations within them, the more likely it is that traditional assessment approaches will be biased or more uncertain.  
 
-If the spatial closures also prevent fisheries independent surveys from evaluating the relative abundance and demographic structure of managed populations, the challenges in developing robust population models, and thus robust management advice, become even more severe.  While spatially explicit assessment models provide a means of more explicitly addressing these challenges, such models are computationally intensive, require robust data from the specific areas being modeled, and may also require detailed information regarding movement and dispersal rates [@McGilliard2015; @Berger2017; @Puntet2020; @Cadrin2020].  Moreover, the complexity of these spatial models increases substantially if the size and location of closed areas changes over time, as many of the more “fisheries management based” closures (e.g., RCAs) have in California groundfish fisheries.  Thus, such approaches may be less feasible for more data limited stocks, such as northern and southern vermilion rockfish, at least in the near term.  However, the fact that both the northern and southern assessment models are informed by fishery-independent surveys that include habitats both inside and outside area closures provides some hope for greater recognition of spatial factors in future assessments.  
+If the spatial closures also prevent fisheries independent surveys from evaluating the relative abundance and demographic structure of managed populations, the challenges in developing robust population models, and thus robust management advice, become even more severe.  While spatially explicit assessment models provide a means of more explicitly addressing these challenges, such models are computationally intensive, require robust data from the specific areas being modeled, and may also require detailed information regarding movement and dispersal rates [@McGilliard2015; @Berger2017; @Punt2020; @Cadrin2020].  Moreover, the complexity of these spatial models increases substantially if the size and location of closed areas changes over time, as many of the more “fisheries management based” closures (e.g., RCAs) have in California groundfish fisheries.  Thus, such approaches may be less feasible for more data limited stocks, such as northern and southern vermilion rockfish, at least in the near term.  However, the fact that both the northern and southern assessment models are informed by fishery-independent surveys that include habitats both inside and outside area closures provides some hope for greater recognition of spatial factors in future assessments.  
 
 
 
@@ -1712,19 +1616,19 @@ particularly for recruitment.
 \multicolumn{13}{l}{\textbf{North of 40°10' N}}\\
 \hspace{1em}OFL & 11.127 & 11.127 & 9.717 & 9.717 & 9.717 & 9.717 & 9.720 & 9.720 & 9.720 & 9.720 & 9.700 & 9.700\\
 \hspace{1em}ABC & 5.564 & 5.564 & 8.104 & 8.104 & 8.104 & 8.104 & 8.104 & 8.104 & 8.104 & 8.104 & 7.547 & 7.547\\
-\hspace{1em}Total landings & 15.958 & 19.191 & 14.855 & 11.129 & 14.521 & 12.774 & 21.285 & 23.613 & 26.891 &  &  & \\
-\hspace{1em}CA rec landings & 4.221 & 4.885 & 2.675 & 2.971 & 5.066 & 4.590 & 6.557 & 7.748 & 7.963 &  &  & \\
-\hspace{1em}OR rec landings & 6.510 & 9.430 & 6.643 & 4.300 & 5.315 & 4.005 & 9.076 & 9.478 & 10.043 &  &  & \\
-\hspace{1em}WA rec landings & 1.204 & 1.063 & 1.539 & 1.196 & 1.328 & 1.237 & 0.923 & 1.297 & 2.764 &  &  & \\
-\hspace{1em}Commercial landings & 4.020 & 3.813 & 3.997 & 2.660 & 2.812 & 2.873 & 4.703 & 5.089 & 6.121 &  &  & \\
+\hspace{1em}Total landings & 15.249 & 18.695 & 14.149 & 10.504 & 13.472 & 12.104 & 20.602 & 22.949 & 25.696 &  &  & \\
+\hspace{1em}CA rec landings & 4.209 & 4.867 & 2.657 & 2.950 & 5.018 & 4.549 & 6.490 & 7.631 & 7.884 &  &  & \\
+\hspace{1em}OR rec landings & 6.102 & 9.150 & 6.305 & 3.949 & 4.653 & 3.689 & 8.798 & 9.199 & 9.252 &  &  & \\
+\hspace{1em}WA rec landings & 1.001 & 0.911 & 1.279 & 0.960 & 1.141 & 0.997 & 0.731 & 1.151 & 2.497 &  &  & \\
+\hspace{1em}Commercial landings & 3.935 & 3.767 & 3.906 & 2.644 & 2.661 & 2.799 & 4.557 & 4.966 & 6.063 &  &  & \\
 \hspace{1em}Research & 0.002 &  & 0.002 & 0.002 &  & 0.069 & 0.026 & 0.002 &  &  &  & \\
 \addlinespace[0.3em]
 \multicolumn{13}{l}{\textbf{South of 40°10' N}}\\
 \hspace{1em}OFL & 308.359 & 308.359 & 269.276 & 269.276 & 269.276 & 269.276 & 269.280 & 269.280 & 269.280 & 269.280 & 269.280 & 269.280\\
 \hspace{1em}ABC & 154.179 & 154.179 & 224.576 & 224.576 & 224.576 & 224.576 & 224.580 & 224.580 & 224.580 & 224.580 & 209.515 & 209.515\\
-\hspace{1em}Total Landings & 212.055 & 237.477 & 239.113 & 198.743 & 337.037 & 293.361 & 342.357 & 346.100 & 489.251 &  &  & \\
-\hspace{1em}CA rec landings & 193.070 & 218.726 & 210.219 & 169.254 & 293.786 & 261.086 & 288.636 & 279.750 & 418.146 &  &  & \\
-\hspace{1em}Commercial landings & 17.040 & 16.657 & 26.619 & 26.626 & 39.714 & 29.210 & 48.202 & 59.698 & 67.273 &  &  & \\
+\hspace{1em}Total Landings & 210.310 & 235.216 & 237.074 & 197.043 & 334.984 & 292.375 & 341.207 & 344.454 & 484.967 &  &  & \\
+\hspace{1em}CA rec landings & 191.437 & 216.480 & 208.198 & 167.572 & 291.779 & 260.162 & 287.493 & 278.158 & 413.946 &  &  & \\
+\hspace{1em}Commercial landings & 16.928 & 16.642 & 26.601 & 26.607 & 39.669 & 29.148 & 48.195 & 59.644 & 67.189 &  &  & \\
 \hspace{1em}Research & 1.944 & 2.094 & 2.275 & 2.863 & 3.536 & 3.065 & 5.519 & 6.652 & 3.832 &  &  & \\
 \bottomrule
 \end{tabular}}
@@ -2936,6 +2840,19 @@ bias for reader 1 and curvilinear standard deviation for both readers."}
 \FloatBarrier
 
 
+![Coefficient of variation of length at age for vermilion rockfish from the NWFSC hook-and-line survey.\label{fig:cv-length-age}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/CV_of_Length_vs_Age.png){width=100% height=100% alt="Coefficient of variation of length at age for vermilion rockfish from the NWFSC hook-and-line survey."}
+
+
+
+<!-- ======================================================================= -->
+<!-- ********************* Model Diagnostics ******************************* --> 
+<!-- ======================================================================= -->
+
+
+![Results from 50 jittered runs of the pre-STAR base model.  Missing values indicate the run did not converge.\label{fig:jitter}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/jitter_preSTAR_base_NCA.png){width=100% height=100% alt="Results from 50 jittered runs of the pre-STAR base model.  Missing values indicate the run did not converge."}
+
+
+
 <!-- ======================================================================= -->
 <!-- ************************    Growth   ********************************** --> 
 <!-- ======================================================================= -->
@@ -2990,17 +2907,10 @@ bias for reader 1 and curvilinear standard deviation for both readers."}
 
 ![Female ending year selectivity for the West coast groundfish bottomfish trawl survey.\label{fig:endyr-selex-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/sel09_len_flt9sex1.png){width=100% height=100% alt="Female ending year selectivity for the West coast groundfish bottomfish trawl survey."}
 
-![Female ending year selectivity for the recreational PR discard fishery.\label{fig:endyr-selex-REC-PR-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/sel09_len_flt7sex1.png){width=100% height=100% alt="Female ending year selectivity for the recreational PR discard fishery."}
+![Female ending year selectivity for the California Collaborative Fisheries Research Project survey.\label{fig:endyr-selex-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/sel09_len_flt13sex1.png){width=100% height=100% alt="Female ending year selectivity for the California Collaborative Fisheries Research Project survey."}
 
 
 \FloatBarrier 
-
-<!-- ======================================================================= -->
-<!-- ********************* Model Diagnostics ******************************* --> 
-<!-- ======================================================================= -->
-
-
-![Results from 50 jittered runs of the pre-STAR base model.  Missing values indicate the run did not converge.\label{fig:jitter}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/jitter_NCA.png){width=100% height=100% alt="Results from 50 jittered runs of the pre-STAR base model.  Missing values indicate the run did not converge."}
 
 \clearpage
 \FloatBarrier
@@ -3103,7 +3013,7 @@ Labels 'retained' and 'discard' indicate discarded or retained sampled for each 
 
 ![Residuals of fit to index for the CCFRP. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/index10_resids_SE_total_CCFRP.png){width=100% height=100% alt="Residuals of fit to index for the CCFRP. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty."}
 
-
+\FloatBarrier
 
 
 <!-- ======================================================================= -->
@@ -3112,12 +3022,18 @@ Labels 'retained' and 'discard' indicate discarded or retained sampled for each 
 
 
 
+![Pearson residuals, whole catch, NWFSC_TWL (max=45.75) (plot 1 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_residsflt9mkt0_page1.png){width=100% height=100% alt="Pearson residuals, whole catch, NWFSC_TWL (max=45.75) (plot 1 of 3)."}
+
+![Pearson residuals, whole catch, NWFSC_TWL (max=45.75) (plot 1 of 3) (plot 2 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_residsflt9mkt0_page2.png){width=100% height=100% alt="Pearson residuals, whole catch, NWFSC_TWL (max=45.75) (plot 1 of 3) (plot 2 of 3)."}
+
+![Pearson residuals, whole catch, NWFSC_TWL (max=45.75) (plot 1 of 3) (plot 2 of 3) (plot 3 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_residsflt9mkt0_page3.png){width=100% height=100% alt="Pearson residuals, whole catch, NWFSC_TWL (max=45.75) (plot 1 of 3) (plot 2 of 3) (plot 3 of 3)."}
+
+![Pearson residuals, whole catch, ABRAMS_RESEARCH (max=12.18).\label{fig:comp_condAALfit_residsflt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_residsflt11mkt0.png){width=100% height=100% alt="Pearson residuals, whole catch, ABRAMS_RESEARCH (max=12.18)."}
+
+![Pearson residuals, whole catch, SWFSC_GF_ECOL (max=25.11).\label{fig:comp_condAALfit_residsflt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_residsflt12mkt0.png){width=100% height=100% alt="Pearson residuals, whole catch, SWFSC_GF_ECOL (max=25.11)."}
 
 
-<!-- ======================================================================= -->
-<!-- **********************  Age @ Length Comps **************************** --> 
-<!-- ======================================================================= -->
-
+\FloatBarrier
 
 
 ![Mean age from conditional data (aggregated across length bins) for NWFSC_TWL with 95% confidence intervals  based on current samples sizes.Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from NWFSC_TWL:0.9949 (0.553-3.7699) .\label{fig:comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_TWL.png){width=100% height=100% alt="Mean age from conditional data (aggregated across length bins) for NWFSC_TWL with 95% confidence intervals  based on current samples sizes.Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from NWFSC_TWL:0.9949 (0.553-3.7699) ."}
@@ -3125,6 +3041,15 @@ Labels 'retained' and 'discard' indicate discarded or retained sampled for each 
 ![Mean age from conditional data (aggregated across length bins) for ABRAMS_RESEARCH with 95% confidence intervals  based on current samples sizes.Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from ABRAMS_RESEARCH:1.0018 (1.0018-Inf) .\label{fig:comp_condAALfit_data_weighting_TA1.8_condAgeABRAMS_RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_data_weighting_TA1.8_condAgeABRAMS_RESEARCH.png){width=100% height=100% alt="Mean age from conditional data (aggregated across length bins) for ABRAMS_RESEARCH with 95% confidence intervals  based on current samples sizes.Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from ABRAMS_RESEARCH:1.0018 (1.0018-Inf) ."}
 
 ![Mean age from conditional data (aggregated across length bins) for SWFSC_GF_ECOL with 95% confidence intervals  based on current samples sizes.Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from SWFSC_GF_ECOL:1.0027 (0.6919-11.4985) .\label{fig:comp_condAALfit_data_weighting_TA1.8_condAgeSWFSC_GF_ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT/plots/comp_condAALfit_data_weighting_TA1.8_condAgeSWFSC_GF_ECOL.png){width=100% height=100% alt="Mean age from conditional data (aggregated across length bins) for SWFSC_GF_ECOL with 95% confidence intervals  based on current samples sizes.Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from SWFSC_GF_ECOL:1.0027 (0.6919-11.4985) ."}
+
+
+\FloatBarrier
+
+<!-- ======================================================================= -->
+<!-- **********************  Age @ Length Comps **************************** --> 
+<!-- ======================================================================= -->
+
+
 
 
 ![Conditional AAL plot, whole catch, NWFSC_TWL (plot 1 of 4)
@@ -3174,7 +3099,7 @@ These plots show mean age and std. dev. in conditional A@L.<br>Left plots are me
 
 
 
-![Estimated time series of recruitment deviations.\label{fig:rec-devs}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/recdevs2_withbars.png){width=100% height=100% alt="Estimated time series of recruitment deviations."}
+![Estimated time series of recruitment deviations.\label{fig:recdevs}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/recdevs2_withbars.png){width=100% height=100% alt="Estimated time series of recruitment deviations."}
 
 
 
@@ -3238,15 +3163,7 @@ fishery selectivity and with steepness fixed at 0.72."}
 
 
 
-<!--steepness-->
-
-
-![Likelihood profile across steepness values for each data type.\label{fig:h-profile}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/North.Steepness.Profiles.png){width=100% height=100% alt="Likelihood profile across steepness values for each data type."}
-
-![Trajectories of depletion across values of steepness.\label{fig:h-depl}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/North_Steepness_Profiles_depletion.png){width=100% height=100% alt="Trajectories of depletion across values of steepness."}
-
-![Trajectories of spawning output across values of steepness.\label{fig:h-spawn}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/North.Steepness.Profiles.png){width=100% height=100% alt="Trajectories of spawning output across values of steepness."}
-
+<!----nat M--->
 
 
 ![Likelihood profile across natural mortality values for each data type.\label{fig:m-profile}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/NorthNatMortProfilesDepletion.png){width=100% height=100% alt="Likelihood profile across natural mortality values for each data type."}
@@ -3258,6 +3175,24 @@ fishery selectivity and with steepness fixed at 0.72."}
 
 
 
+
+
+<!--steepness-->
+
+
+![Likelihood profile across steepness values for each data type.\label{fig:h-profile}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/North.Steepness.Profiles.png){width=100% height=100% alt="Likelihood profile across steepness values for each data type."}
+
+![Trajectories of depletion across values of steepness.\label{fig:h-depl}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/North_Steepness_Profiles_depletion.png){width=100% height=100% alt="Trajectories of depletion across values of steepness."}
+
+![Trajectories of spawning output across values of steepness.\label{fig:h-spawn}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/North.Steepness.Profiles.png){width=100% height=100% alt="Trajectories of spawning output across values of steepness."}
+
+
+
+![Likelihood profile across R0 values for each data type.\label{fig:r0-profile}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/North.NatMortProfiles.png){width=100% height=100% alt="Likelihood profile across R0 values for each data type."}
+
+![Trajectories of depletion across values of R0.\label{fig:r0-depl}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/North.NatMortProfilesSpawning.png){width=100% height=100% alt="Trajectories of depletion across values of R0."}
+
+![Trajectories of spawning output across values of R0.\label{fig:r0-spawn}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/NorthNatMortProfilesDepletion.png){width=100% height=100% alt="Trajectories of spawning output across values of R0."}
 
 
 
@@ -4877,28 +4812,28 @@ ggpubr::ggarrange(pos.qq, pos.resid, ncol = 1)
 \subsection{Graphic of California recreational regulations over time.}
 
 \begin{figure}
-\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Northern.png}
-\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-n}}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Northern_ShelfRF.png}
+\caption{Recreational depth closures for shelf rockfish in the northern California management area.\label{fig:rec-reg-n}}
 \end{figure}
 
 \FloatBarrier
 
 \begin{figure}
-\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_N_M_NC_SF_shelf_rockfish.png}
-\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-cn}}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_NorthCentral_ShelfRF.png}
+\caption{Recreational depth closures for shelf rockfish in the north central California management area.\label{fig:rec-reg-cn}}
 \end{figure}
 
 \FloatBarrier
 
 \begin{figure}
-\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_MTRYSC_C_MBSC_S_shelf_rockfish.png}
-\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-cs}}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Central_ShelfRF.png}
+\caption{Recreational depth closures for shelf rockfish in the central California management area.\label{fig:rec-reg-cs}}
 \end{figure}
 
 
 \begin{figure}
-\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Southern.png}
-\caption{Recreational depth closures for the northern California management area.\label{fig:rec-reg-s}}
+\includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Southern_ShelfRF.png}
+\caption{Recreational depth closures for shelf rockfish in the southern California management area.\label{fig:rec-reg-s}}
 \end{figure}
 
 

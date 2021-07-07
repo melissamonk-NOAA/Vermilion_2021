@@ -3,8 +3,7 @@
 
 *Recreational Landings, 1928-1980*
 
-[paragraph on Ralston et al. rec reconstruction pending -- use mode-specific values from JF]
-[also include paragraph about sensitivities to discard -- not included in Ralston reconstruction]
+Recreational catch estimates prior to 1981 were based on the [@Ralston2010] catch reconstruction, which estimated catches by mode (CPFV and private vessel modes, where latter included any shore-based catches) and estimated catches separately north and south of Point Conception.  Party/Charter (PC mode) catches of all rockfish were based on logbook data (which do not report rockfish to the species level), scaled by compliance estimates, while total recreational catches from private/rental vessels (PR mode) catches were based on a combination of the relative catch rates observed in the PC fleet and a linear ramp between catch estimates in the early 1960s and those in the early 1980s (as described in Ralston et al. [-@Ralston2010]).  The species composition of rockfish catches was estimated using a combination of the 1980s MRFS data as well as limited CPFV species composition data from onboard observer programs in the late 1970s (south of Conception) and dockside recreational creel surveys in the late 1950s and early 1960s (north of Point Conception).  Vermilion (and sunset) rockfish have long been recognized as an important target of recreational fishers south of Point Conception, as well as those in the Morro Bay region, although they are less frequently encountered in recreational fisheries further north.  As noted in Ralston et al. [-@Ralston2010] the catch reconstruction effort was intended to be an “iterative and multistage process,” and there is considerable room for improvements in  both the commercial and the recreational catch reconstruction estimates.
 
 *Marine Recreational Fishery Statistics Survey (MRFSS), 1980-2003*
 
@@ -35,7 +34,7 @@ identified strata with positive catch in numbers but missing or zero values for
 catch in weight. Catch in weight for these strata was then estimated by imputing 
 a value of average weight based on the mean of the reported average weights in 
 the same year and subregion, which had a greater influence on average 
-weight than boat mode (Figure \@(fig:rec-avg-weight)). The effect of this data imputation was relatively 
+weight than boat mode (Figure \@(fig:rec-avg-weights)). The effect of this data imputation was relatively 
 minor for vermilion rockfish overall (~1% increase in total catch by weight, 
 1980-2004). However, 70% of missing catch in weight occurred over the years 
 2001-2004, with differences in individual year/mode/subregion combinations sometimes exceeding 10-20%.
@@ -52,7 +51,7 @@ estimates of catch in numbers from a separate study [@Albin1993] that used a fin
 resolution in the northern subregion (including SLO County). Over the period 
 1981-1986, numbers of vermilion rockfish landed in SLO County was found to 
 be roughly equal to the numbers of vermilion rockfish landed in all California 
-counties north of SLO County (Table \@(tab:rec_allocate)). Therefore, to approximate catches north
+counties north of SLO County (Table \@(tab:albin-allocate)). Therefore, to approximate catches north
 and south of Point Conception from 1980-1989, the STAT reduced the ‘southern’ 
 subregion annual catch (which included SLO County) from 1980-1989 by an amount 
 equal to the northern subregion catch during the same period, and doubled the 
@@ -88,7 +87,7 @@ the CRFS. This survey improves upon the MRFSS sampling design, employing higher
 sampling rates and producing estimates with finer spatial and temporal resolution. The CRFS also employs onboard CPFV observers, providing spatially referenced, drift-level estimates of catch and discard for a subset of anglers on observed groundfish trips, as well as length composition data for discarded catch. These data are extremely valuable to stock assessment (see the CRFS Onboard Index of Abundance Index for 
 further details).
 
-CRFS mortality estimates for the period 2005-2020 were queried from [RecFIN] (www.recfin.org). 
+CRFS mortality estimates for the period 2005-2020 were queried from [RecFIN](www.recfin.org). 
 Reported estimates were aggregated into subregion (north and south of Point Conception) and boat mode (PC and PR), and filtered to exclude fish 
 caught in Mexican waters. Shore modes were a minor component of the recreational catch and were combined with the PR mode. 
 
@@ -158,11 +157,10 @@ Data collected during the Miller and Gotshall study was also used by Karpov (199
 ```
 
 The number of available fish by year and fleet as well as the method we used to 
-calculate initial sample sizes are in Table \@ref(tab:length-sample-size) and Table \@ref(tab:length-inputN). 
-Length composition data can be found in the following: Figure
-\@ref(fig:len-data-REC-PC) Figure Figure \@ref(fig:len-data-REC-PC-DIS) for 
-the recreational PC retained and discard fleets, 
-Figure \@ref(fig:len-data-REC-PR) for the recreational PR fleet
+calculate initial sample sizes are in Tables \@ref(tab:length-sample-size) and  \@ref(tab:length-inputN). 
+Length composition data can be found in Figure
+\@ref(fig:len-data-REC-PC) for the recreational PC retained fleet and Figure \@ref(fig:len-data-REC-PC-DIS) for 
+the recreational PC retained and discard fleets, `r ifelse(model.area=='SCA', noquote("and") ,"")` Figure \@ref(fig:len-data-REC-PR) for the recreational PR fleet
 `r ifelse(model.area=='NCA', noquote(", and Figure \\ref{fig:len-data-DWV-ONBOARD} for the Deb Wilson-Vandenberg CPFV onboard survey."),".")`
 
 
@@ -178,7 +176,7 @@ These otoliths were not aged for this assessment.
 
 *Recreational indices of abundance*
 
-A number of indices of abundance were explored for the recreational fleet.  There were no or limited recreational index data from 2020 due to COVID-19. Discard catch is available from onboard observer surveys, but was not included in indices.  The STAT considered developing separate indices for discards, but sample sizes were not large enough to warrant modeling. The CDFW CPFV logbook data were not considered as an index of abundance due to the fact that 
+A number of indices of abundance were explored for the recreational fleet (Figure \@ref(fig:cpueall)).  There were no or limited recreational index data from 2020 due to COVID-19. Discard catch is available from onboard observer surveys, but was not included in indices.  The STAT considered developing separate indices for discards, but sample sizes were not large enough to warrant modeling. The CDFW CPFV logbook data were not considered as an index of abundance due to the fact that 
 vermilion may not be reported to the species level.
 
 
