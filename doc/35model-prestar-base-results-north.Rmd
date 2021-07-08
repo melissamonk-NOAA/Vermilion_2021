@@ -29,7 +29,7 @@ Biological parameters
 
 Stock-recruit parameters  
 - $log(R_0)$ controlling equilibrium recruitment  
-- `r nrow(model$recruit)` recruitment deviations parameters covering the range  
+- Recruitment deviations parameters covering the range  
   `r min(model$recruit$Yr)`-`r max(model$recruit$Yr)`, with 
   `r min(model$recruit$Yr[model$recruit$era=="Main"])`-`r max(model$recruit$Yr[model$recruit$era=="Main"])`
   representing the "main" period modeled as a zero-centered deviation vector  
@@ -117,7 +117,7 @@ The following plots show estimated selectivity (when not mirrored) and fits to t
 fleet/survey:
 
 - Commercial hook-and-line: Figures \ref{fig:endyr-selex-COM-HKL}, \ref{fig:len-pearson-COM-HKL}, and \ref{fig:mean-len-fit-COM-HKL} 
-- Commercial trawl: Figures \ref{fig:endyr-selex-COM-TWL}, \ref{fig:len-pearson-COM-TWL}, and \@ref(fig:mean-len-fit-COM-TWL}
+- Commercial trawl: Figures \ref{fig:endyr-selex-COM-TWL}, \ref{fig:len-pearson-COM-TWL}, and \ref{fig:mean-len-fit-COM-TWL}
 - Commercial net: Figures \ref{fig:endyr-selex-COM-NET}, \ref{fig:len-pearson-COM-NET}, and \ref{fig:mean-len-fit-COM-NET}
 - Recreational retained PC: Figures \ref{fig:endyr-selex-REC-PC}, \ref{fig:sel03_len_timevary_surf_flt4sex1},  \ref{fig:len-pearson-REC-PC}  and Figure \ref{fig:mean-len-fit-REC-PC} 
 - Recreational discard PC Figures \ref{fig:endyr-selex-REC-PC-DIS}, \ref{fig:len-pearson-REC-PC-DIS}  and \ref{fig:mean-len-fit-REC-PC-DIS}
@@ -134,7 +134,7 @@ The Abrams research fleet and SWFSC groundfish ecology lengths were mirrored to 
 
 All three estimated selectivities for recreational fleets were estimated as domed selectivities (Figures \@ref(fig:endyr-selex-REC-PC), \@ref(fig:endyr-selex-REC-PC-DIS), \@ref(fig:endyr-selex-REC-PR)). A number of regulatory changes in the recreational fleets prompted selectivity time blocks, and both recreational retained fleets estimated a large length at full selectivity in the later time block, from 2017-2020, which was expected due to the relaxation of depth restrictions in areas of higher vermilion density.   The width of the end year selectivity for the recreational PR fleet is wider than that of the PC fleet, which has larger size at peak selectivity.  Peak selectivity of the discard fleet is around 20 cm, and once fish reach 40 cm, they are no longer selected by the discard fleet.  There is no size limit on vermilion rockfish and this is assumed to represent angler preference.
 
-The CCFRP fishes within 150 ft of water to reduce barotrauma-induced mortality and does not observe the larger fish that are seen in the recreational fleets fishing in deeper waters and further offshore (\@ref(endyr-selex-CCFRP). The estimated length composition fits vary by year, with the early years expecting larger fish than were observed and the more recent years (2015-2020) expecting smaller fish, likely from the larger 2013-2014 year classes.
+The CCFRP fishes within 150 ft of water to reduce barotrauma-induced mortality and does not observe the larger fish that are seen in the recreational fleets fishing in deeper waters and further offshore (Figure \@ref(fig:endyr-selex-CCFRP)). The estimated length composition fits vary by year, with the early years expecting larger fish than were observed and the more recent years (2015-2020) expecting smaller fish, likely from the larger 2013-2014 year classes.
 
 
 
@@ -176,7 +176,7 @@ reference harvest rate. The spawning output equivalent to 40% of the unfished le
 million eggs. 
 
 The `r endyr`. spawning biomass relative to unfished equilibrium spawning biomass is above the target of 40% of unfished levels (Figure \@ref(fig:depl)). 
-The relative fishing intensity, $(1-SPR)/(1-SPR_{50\%})$, was above the management target frogs (Figure \@ref(fig:1-spr)). 
+The relative fishing intensity, $(1-SPR)/(1-SPR_{50\%})$, was above the management target (Figure \@ref(fig:1-spr)). 
 
 Table \@ref(tab:referenceES) shows the full suite of estimated reference points for the base model and Figures \@ref(fig:yield2) and \@ref(fig:yield3) show the equilibrium curve based on a steepness value fixed at `r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"], 2)`.
 

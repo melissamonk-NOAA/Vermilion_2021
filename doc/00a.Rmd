@@ -20,7 +20,6 @@ header-includes:
   - \usepackage{makecell}
   - \usepackage{xcolor}
   - \usepackage{placeins}
-  - \usepackage[inline]{showlabels}
 output:
   sa4ss::techreport_pdf:
     default
@@ -29,6 +28,7 @@ output:
     keep_md: true
 lang: en
 papersize: a4
+csl: CJFAS.csl
 ---
 
 <!-- Common lat/long 
@@ -44,7 +44,6 @@ rmarkdown::find_pandoc(version = "2.14.0.3")
 
 
 ```{r opts, include = FALSE}
-
 library(kableExtra)
 library(dplyr)
 library(ggplot2)
@@ -130,7 +129,7 @@ model$FleetNames_parsed <- c("commercial hook-and-line fishery",
                            "NWFSC hook-and-line survey",
                            "West Coast Groundfish Bottomfish Trawl Survey",
                            "recreational PC onboard survey",
-                           "CDFW reserach (aka green binder)",
+                           "CDFW reserach (aka green binder) survey",
                            "Early years hook-and-line")
 }
 

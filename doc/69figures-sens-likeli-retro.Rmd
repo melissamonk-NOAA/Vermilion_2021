@@ -44,15 +44,15 @@ sa4ss::add_figure(
 
 ```{r, warning = FALSE, inclue = FALSE}
 h.fig.filein = list.files(path = fig_loc,  
-                  pattern = glob2rx(paste0(stringr::str_to_title(params$model),"*Steepness*.png")),
+                  pattern = glob2rx(paste0("^h_*",model.area,".png")),
                   full.names = TRUE)
 
 M.fig.filein = list.files(path = fig_loc,  
-                  pattern = glob2rx(paste0(stringr::str_to_title(params$model),"*NatMort*.png")),
+                  pattern = glob2rx(paste0("^M*",model.area,".png")),
                   full.names = TRUE)
 
 R0.fig.filein = list.files(path = fig_loc,  
-                  pattern = glob2rx(paste0(stringr::str_to_title(params$model),"*R0*.png")),
+                  pattern = glob2rx(paste0("^R0*",model.area,".png")),
                   full.names = TRUE)
 
 ```
@@ -61,7 +61,7 @@ R0.fig.filein = list.files(path = fig_loc,
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = M.fig.filein[3] ,
+  filein = M.fig.filein[2] ,
   caption =  "Likelihood profile across natural mortality values for each data type",
   label = 'm-profile'
 )
@@ -73,34 +73,29 @@ sa4ss::add_figure(
 )
 
 sa4ss::add_figure(
-  filein = M.fig.filein[2] ,
+  filein = M.fig.filein[3] ,
   caption =  "Trajectories of spawning output across values of female natural mortality",
   label = 'm-spawn'
 )
 ```
 
-
-
-
-
-
 <!--steepness-->
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = h.fig.filein[1] ,
+  filein = h.fig.filein[2] ,
   caption =  "Likelihood profile across steepness values for each data type",
   label = 'h-profile'
 )
 
 sa4ss::add_figure(
-  filein = h.fig.filein[2] ,
+  filein = h.fig.filein[1] ,
   caption =  "Trajectories of depletion across values of steepness",
   label = 'h-depl'
 )
 
 sa4ss::add_figure(
-  filein = h.fig.filein[1] ,
+  filein = h.fig.filein[3] ,
   caption =  "Trajectories of spawning output across values of steepness",
   label = 'h-spawn'
 )
@@ -109,19 +104,19 @@ sa4ss::add_figure(
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = M.fig.filein[1] ,
+  filein = R0.fig.filein[2] ,
   caption =  "Likelihood profile across R0 values for each data type",
   label = 'r0-profile'
 )
 
 sa4ss::add_figure(
-  filein = M.fig.filein[2] ,
+  filein = R0.fig.filein[1] ,
   caption =  "Trajectories of depletion across values of R0",
   label = 'r0-depl'
 )
 
 sa4ss::add_figure(
-  filein = M.fig.filein[3] ,
+  filein = R0.fig.filein[3] ,
   caption =  "Trajectories of spawning output across values of R0",
   label = 'r0-spawn'
 )
@@ -134,7 +129,7 @@ sa4ss::add_figure(
 <!-- ======================================================================= -->
 <!-- *******************     Retrospectives    ***************************** --> 
 <!-- ======================================================================= -->
-```{r, echo = TRUE, outwidth = "50%"}
+```{r, include = FALSE, warning = FALSE}
 retro.fig.filein = list.files(path = fig_loc,  
                   pattern = glob2rx(paste0("retro_*",model.area, ".png")), 
                   full.names = TRUE)
@@ -145,7 +140,7 @@ retro.fig.filein = list.files(path = fig_loc,
 ```{r, results = 'asis'}
 sa4ss::add_figure(
   filein = retro.fig.filein[2] ,
-  caption = "Change in the spawning biomass when the most recent 5 years of data area removed sequentially",
+  caption = "Change in the spawning putput when the most recent 5 years of data area removed sequentially",
   label = 'retro-spawnb'
 )
 
@@ -169,7 +164,7 @@ sa4ss::add_figure(
 <!-- *******************     Other sensitivities**************************** --> 
 <!-- ======================================================================= -->
 
-```{r, echo = TRUE, outwidth = "50%"}
+```{r,include = FALSE, warning = FALSE}
 sens1.fig.filein = list.files(path = fig_loc,  
                   pattern = glob2rx(paste0("sens01*",model.area, ".png")), 
                   full.names = TRUE)
@@ -179,7 +174,7 @@ sens1.fig.filein = list.files(path = fig_loc,
 ```{r, results = 'asis'}
 sa4ss::add_figure(
   filein = sens1.fig.filein[3] ,
-  caption = "Change in the spawning biomass to a series of model sensitivity runs",
+  caption = "Change in the trajectory of spawning output to a series of model sensitivity runs",
   label = 'sens1-spawnb'
 )
 

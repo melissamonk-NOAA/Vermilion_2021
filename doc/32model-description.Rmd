@@ -40,7 +40,7 @@ dominant collection method for teh SWFSC groundfish ecology survey and is mirror
 Selectivity parameters were estimated for all fishery-independent data sources.
 
 
-The recreational PC and PR fleets applied three time blocks for selectivity:  `r startyr` - `r time_blocks$Yr[1]-1`, `r time_blocks$Yr[1]` - `r time_blocks$Yr[2]-1`, - `r time_blocks$Yr[2]` - `r endyr`. All commercial fleet selectivity was constant across model years `r startyr` - `r endyr`.
+The recreational PC and PR fleets applied three blocks for selectivity:  1875-2001, 2002-2016, adn 2017-2020. All commercial fleet selectivity was constant across model years 1875-2020.
 ```
 
 ```{asis, echo = model.area=='SCA'}
@@ -64,7 +64,7 @@ found on the
 
 
 ### Model Parameters
-The population dynamics model has many parameters, some estimated using the available data in the assessment and some fixed at values either external to the assessment or informed by the available data.  A summary of all estimated and fixed parameter values, including associated properties, are listed in Table (\@ref(tab:params).
+The population dynamics model has many parameters, some estimated using the available data in the assessment and some fixed at values either external to the assessment or informed by the available data.  A summary of all estimated and fixed parameter values, including associated properties, are listed in Table \@ref(tab:params).
 
 
 ```{asis, echo = model.area=='NCA'}

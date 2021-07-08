@@ -26,7 +26,7 @@ Biological parameters
 Stock-recruit parameters  
 - `r 2 + nrow(model$recruit)` recruitment parameters  
 - $log(R_0)$ controlling equilibrium recruitment  
-- `r nrow(model$recruit)` recruitment deviations parameters covering the range  
+- Recruitment deviations parameters covering the range  
   `r min(model$recruit$Yr)`-`r max(model$recruit$Yr)`, with 
   `r min(model$recruit$Yr[model$recruit$era=="Main"])`-`r max(model$recruit$Yr[model$recruit$era=="Main"])`
   representing the "main" period modeled as a zero-centered deviation vector  
@@ -59,20 +59,13 @@ unSchnute.fn <- function(Amin, Amax, Lmin, Lmax, k)
 # females 
 female_growth <- unSchnute.fn(0, 30, model$MGparmAdj$L_at_Amin_Fem_GP_1[1], model$MGparmAdj$L_at_Amax_Fem_GP_1[1], model$MGparmAdj$VonBert_K_Fem_GP_1[1])
 
-if(model.area=="SCA"){
+
 # for males,  apply exponential offsets to the female values
 male_growth <- unSchnute.fn(0, 30,  
    model$MGparmAdj$L_at_Amin_Fem_GP_1[1]*exp(model$MGparmAdj$L_at_Amin_Mal_GP_1[1]),     model$MGparmAdj$L_at_Amax_Fem_GP_1[1]*exp(model$MGparmAdj$L_at_Amax_Mal_GP_1[1]),
    model$MGparmAdj$VonBert_K_Fem_GP_1[1]*exp(model$MGparmAdj$VonBert_K_Mal_GP_1[1]))
 male_growth[3] <- model$MGparmAdj$VonBert_K_Fem_GP_1[1]*exp(model$MGparmAdj$VonBert_K_Mal_GP_1[1])
-} else {
 
-male_growth <- unSchnute.fn(0, 30, 
-                            model$MGparmAdj$L_at_Amin_Mal_GP_1[1],
-                            model$MGparmAdj$L_at_Amax_Mal_GP_1[1],
-                            model$MGparmAdj$VonBert_K_Mal_GP_1[1])
-male_growth[3] <- model$MGparmAdj$VonBert_K_Mal_GP_1[1]
-}
 ```
 
 
@@ -83,7 +76,7 @@ Estimates of the vonBertalanffy parameters transformed from the Schnute paramete
 
 Females $L_{\infty}$ = `r round(female_growth[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Fem_GP_1[1], 3)`; $t_0$ = `r round(female_growth[2], 2)`
 
-Males $L_{\infty}$ = `r round(male_growth[1])` cm; $k$ = `r round(male_growth[2], 3)`; $t_0$ = `r round(male_growth[2], 2)`
+Males $L_{\infty}$ = `r round(male_growth[1])` cm; $k$ = `r round(male_growth[3], 3)`; $t_0$ = `r round(male_growth[2], 2)`
 
 \end{centering}
 
@@ -116,15 +109,15 @@ Fits to the marginal and conditional age at length data sets were best for the N
 The following plots show estimated selectivity (when not mirrored) and fits to the length composition for each 
 fleet/survey:
 
-* Commercial hook-and-line: Figures \ref{fig:endyr-selex-COM-HKL}, \ref{fig:sel03_len_timevary_surf_flt1sex1}, \ref{fig:len-pearson-COM-HKL}, and \ref{fig:mean-len-fit-COM-HKL} 
+* Commercial hook-and-line: Figures \ref{fig:endyr-selex-COM-HKL}, \ref{fig:sel03_len_timevary_surf_flt1sex1}, \ref{fig:len-pearson-COM-HKL}, and \ref{fig:mean-len-fit-COM-HKL}   
 * Commercial net: Figures \ref{fig:endyr-selex-COM-NET}, \ref{fig:len-pearson-COM-NET}, and \ref{fig:mean-len-fit-COM-NET}
-- Recreational retained PC: Figures \ref{fig:endyr-selex-REC-PC}, \ref{fig:sel03_len_timevary_surf_flt4sex1},  \ref{fig:len-pearson-REC-PC}  and \ref{fig:mean-len-fit-REC-PC} 
-- Recreational discard PC Figures \ref{fig:endyr-selex-REC-PC-DIS}, \ref{fig:len-pearson-REC-PC-DIS}  and \ref{fig:mean-len-fit-REC-PC-DIS}
-- Recreational retained PR: Figures \ref{fig:endyr-selex-REC-PR}, \ref{fig:sel03_len_timevary_surf_flt6sex1}, \ref{fig:len-pearson-REC-PR} and \ref{fig:mean-len-fit-REC-PR}  
-- WCGBT survey: Figures \ref{fig:endyr-selex-NWFSC-TWL}, \ref{fig:endyr-selex-NWFSC-TWL}, \ref{fig:len-pearson-NWFSC-TWL}  and \ref{fig:mean-len-fit-NWFSC-TWL} 
-- CDFW research survey: Figures \ref{fig:len-pearson-CDFW-RESEARCH} \ref{fig:mean-len-fit-CDFW-RESEARCH}  
-- NWFSC hook-and-line survey: Figure \ref{fig:len-pearson-NWFSC-HKL}, and \ref{fig:mean-len-fit-NWFSC-HKL} 
-- Early NWFSC hook-and-line survey: Figures \ref{fig:len-pearson-EARLY-HKL} and \ref{fig:mean-len-fit-EARLY-HKL} 
+* Recreational retained PC: Figures \ref{fig:endyr-selex-REC-PC}, \ref{fig:sel03_len_timevary_surf_flt4sex1},  \ref{fig:len-pearson-REC-PC}  and \ref{fig:mean-len-fit-REC-PC}  
+* Recreational discard PC Figures \ref{fig:endyr-selex-REC-PC-DIS}, \ref{fig:len-pearson-REC-PC-DIS}  and \ref{fig:mean-len-fit-REC-PC-DIS}
+* Recreational retained PR: Figures \ref{fig:endyr-selex-REC-PR}, \ref{fig:sel03_len_timevary_surf_flt6sex1}, \ref{fig:len-pearson-REC-PR} and \ref{fig:mean-len-fit-REC-PR}  
+* WCGBT survey: Figures \ref{fig:endyr-selex-NWFSC-TWL}, \ref{fig:endyr-selex-NWFSC-TWL}, \ref{fig:len-pearson-NWFSC-TWL}  and \ref{fig:mean-len-fit-NWFSC-TWL} 
+* CDFW research survey: Figures \ref{fig:len-pearson-CDFW-RESEARCH} \ref{fig:mean-len-fit-CDFW-RESEARCH}  
+* NWFSC hook-and-line survey: Figure \ref{fig:len-pearson-NWFSC-HKL}, and \ref{fig:mean-len-fit-NWFSC-HKL} 
+* Early NWFSC hook-and-line survey: Figures \ref{fig:len-pearson-EARLY-HKL} and \ref{fig:mean-len-fit-EARLY-HKL} 
   
 Fits to the time-aggregated length comps were best for the commercial, recreational, and NWFSC survey fleets Figure \@ref(fig:lenfits-all). The NWFSC trawl survey does not sample primary adult habitat types, resulting in a multi-modal length frequency distribution that is difficult for the model to reproduce Figure \@ref(fig:lenfits-all). Fits to the early CDFW research fleet are poor, but the data informing these years are relatively sparse in comparison to current sampling programs such as CRFS. Length composition data from the recreational fleets show evidence of modal progressions due to strong year classes (e.g., the 1999 year class showing up around 2002), do not show evidence of strong patterns in the pearson residual plots, and the model is able to track associated changes in mean length over time.
 

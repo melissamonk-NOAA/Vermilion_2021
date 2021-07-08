@@ -116,9 +116,10 @@ monitoring of this economically and ecologically important species complex.
 
 
 ## Map
-A map showing the scope of the two California `r spp` assessments and depicting boundaries 
-at Point Conception (\PtC) that separates the two assessments. The northern 
-model is bounded by the California/Oregon border (\CAOR) and the southern model is 
+A map showing the scope of the two California `r spp` assessments and depicting a 
+boundary 
+at Point Conception (\PtC) that separates the two assessments is provided as Figure \@ref(fig:assess-area). The northern California
+model is bounded by the California/Oregon border (\CAOR) and the southern California model is 
 bounded by the U.S./ Mexico border at the south (Figure \@ref(fig:assess-area)). 
 Cape Mendocino (\CapeM) is also noted as it is a management boundary for the 
 Pacific Fishery Management Council (PFMC) "minor shelf rockfish" stock complex.

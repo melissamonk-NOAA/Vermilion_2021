@@ -35,9 +35,14 @@ sa4ss::read_child("65figures-lenfits.Rmd")
 \FloatBarrier
 
 ```{r render-67, results = "asis"}
-sa4ss::read_child("67figures-indices-age.Rmd")
+sa4ss::read_child("67figures-indices.Rmd")
 ```
 
+\FloatBarrier
+
+```{r render-67a, results = "asis"}
+sa4ss::read_child("67afigures-caal.Rmd")
+```
 
 \FloatBarrier
 

@@ -2,7 +2,7 @@
 ```{r, results = "asis"}
 add_figure(
   filein = file.path(paste0(fig_loc,"/CV_of_Length_vs_Age.png")),
-  caption = "Coefficient of variation of length at age for vermilion rockfish from the NWFSC hook-and-line survey",
+  caption = "Coefficient of variation of length versus age for vermilion rockfish from the NWFSC hook-and-line survey",
   label = "cv-length-age"
 )
 
@@ -57,7 +57,7 @@ sa4ss::add_figure(
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(base_loc,"plots", "sel01_multiple_fleets_length1.png"), 
-caption = "Selectivity at length by fleet",
+caption = "End year selectivity at length by fleet/survey",
 label = 'selex-length-all')
 ```
 
@@ -77,7 +77,7 @@ plot_info = read.csv(file.path(base_loc,"plots", "plotinfotable_for_doc.csv"))
 selex_time = plot_info %>%
   filter(grepl("sel03_len_timevary_surf", label)) %>%
   filter(grepl("sex1", label))
-n_fleets_blocks = ifelse(model.area=="NCA",2,3)
+n_fleets_blocks = ifelse(model.area=="NCA",2,4)
 filein = file.path(base_loc, "plots")
 for (a in 1:n_fleets_blocks){
 	cap = selex_time$caption[a]

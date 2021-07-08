@@ -26,7 +26,7 @@ to better under biological parameters.
   + Conduct life history studies
   + Conduct research to identify the proportion of each species in population and in catches
 
-- Take a closer look at the Ralston historical catch reconstruction (\ref{Ralston2010}) and 
+- Take a closer look at historical catch reconstructions and 
 all other historical data sources.
 
 - Refine CCFRP survey index to look at alternative possible model structures, including 

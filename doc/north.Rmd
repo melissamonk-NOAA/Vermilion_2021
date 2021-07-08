@@ -20,7 +20,6 @@ header-includes:
   - \usepackage{makecell}
   - \usepackage{xcolor}
   - \usepackage{placeins}
-  - \usepackage[inline]{showlabels}
 output:
   sa4ss::techreport_pdf:
     default
@@ -29,6 +28,7 @@ output:
     keep_md: true
 lang: en
 papersize: a4
+csl: CJFAS.csl
 ---
 
 <!-- Common lat/long 
@@ -44,7 +44,6 @@ rmarkdown::find_pandoc(version = "2.14.0.3")
 
 
 ```{r opts, include = FALSE}
-
 library(kableExtra)
 library(dplyr)
 library(ggplot2)
@@ -130,7 +129,7 @@ model$FleetNames_parsed <- c("commercial hook-and-line fishery",
                            "NWFSC hook-and-line survey",
                            "West Coast Groundfish Bottomfish Trawl Survey",
                            "recreational PC onboard survey",
-                           "CDFW reserach (aka green binder)",
+                           "CDFW reserach (aka green binder) survey",
                            "Early years hook-and-line")
 }
 
@@ -275,7 +274,7 @@ Replace text.
 <!--chapter:end:10a.Rmd-->
 
 # Introduction
-Note to readers: Text in section is the same in both California `r spp` assessment 
+Note to readers: Text in this section is the same in both California `r spp` assessment 
 documents.
 
 ```{r render-12, results = "asis"}
@@ -293,7 +292,7 @@ sa4ss::read_child("13fisheries.Rmd")
 # Data
 
 The STAT presented proposed analyses and data sources for the 2021 `r spp` 
-assessment during the PFMC Pre-Assessment Workshop for 2021 Vermilion and 
+assessment to the Council advisory bodies in Novemeber 2020, and again during the PFMC Pre-Assessment Workshop for 2021 Vermilion and 
 Lingcod Stock Assessments, hosted virtually on March 29, 2021. Topics addressed 
 included progress on research priorities, data sources and types, stock structure, 
 fleet structure, key model parameters (e.g. natural mortality), and potential 
@@ -304,10 +303,10 @@ are included within this section.
 ## Fishery-Dependent Data
 
 A complete summary of estimated `r spp` removals by each fleet in the 
-commercial and recreational fleets modeled in this assessment is provided in Table 
+commercial and recreational sectors modeled in this assessment is provided in Table 
 \@ref(tab:landings).  The data sources for landings varied by each fleet and a summary 
 of each data source and the time period for which it was used is in Table \@ref(tab:catch-source).
-Of note is that the commercial landings are in metric tons (mt) and the recreational landings 
+The commercial landings are in metric tons (mt) and the recreational landings 
 are in numbers of fish (thousands of fish). Data and 
 methods used to derive these estimates are described in this section.
 
@@ -437,7 +436,7 @@ Biological parameters
 
 Stock-recruit parameters  
 - $log(R_0)$ controlling equilibrium recruitment  
-- `r nrow(model$recruit)` recruitment deviations parameters covering the range  
+- Recruitment deviations parameters covering the range  
   `r min(model$recruit$Yr)`-`r max(model$recruit$Yr)`, with 
   `r min(model$recruit$Yr[model$recruit$era=="Main"])`-`r max(model$recruit$Yr[model$recruit$era=="Main"])`
   representing the "main" period modeled as a zero-centered deviation vector  
@@ -525,7 +524,7 @@ The following plots show estimated selectivity (when not mirrored) and fits to t
 fleet/survey:
 
 - Commercial hook-and-line: Figures \ref{fig:endyr-selex-COM-HKL}, \ref{fig:len-pearson-COM-HKL}, and \ref{fig:mean-len-fit-COM-HKL} 
-- Commercial trawl: Figures \ref{fig:endyr-selex-COM-TWL}, \ref{fig:len-pearson-COM-TWL}, and \@ref(fig:mean-len-fit-COM-TWL}
+- Commercial trawl: Figures \ref{fig:endyr-selex-COM-TWL}, \ref{fig:len-pearson-COM-TWL}, and \ref{fig:mean-len-fit-COM-TWL}
 - Commercial net: Figures \ref{fig:endyr-selex-COM-NET}, \ref{fig:len-pearson-COM-NET}, and \ref{fig:mean-len-fit-COM-NET}
 - Recreational retained PC: Figures \ref{fig:endyr-selex-REC-PC}, \ref{fig:sel03_len_timevary_surf_flt4sex1},  \ref{fig:len-pearson-REC-PC}  and Figure \ref{fig:mean-len-fit-REC-PC} 
 - Recreational discard PC Figures \ref{fig:endyr-selex-REC-PC-DIS}, \ref{fig:len-pearson-REC-PC-DIS}  and \ref{fig:mean-len-fit-REC-PC-DIS}
@@ -542,7 +541,7 @@ The Abrams research fleet and SWFSC groundfish ecology lengths were mirrored to 
 
 All three estimated selectivities for recreational fleets were estimated as domed selectivities (Figures \@ref(fig:endyr-selex-REC-PC), \@ref(fig:endyr-selex-REC-PC-DIS), \@ref(fig:endyr-selex-REC-PR)). A number of regulatory changes in the recreational fleets prompted selectivity time blocks, and both recreational retained fleets estimated a large length at full selectivity in the later time block, from 2017-2020, which was expected due to the relaxation of depth restrictions in areas of higher vermilion density.   The width of the end year selectivity for the recreational PR fleet is wider than that of the PC fleet, which has larger size at peak selectivity.  Peak selectivity of the discard fleet is around 20 cm, and once fish reach 40 cm, they are no longer selected by the discard fleet.  There is no size limit on vermilion rockfish and this is assumed to represent angler preference.
 
-The CCFRP fishes within 150 ft of water to reduce barotrauma-induced mortality and does not observe the larger fish that are seen in the recreational fleets fishing in deeper waters and further offshore (\@ref(endyr-selex-CCFRP). The estimated length composition fits vary by year, with the early years expecting larger fish than were observed and the more recent years (2015-2020) expecting smaller fish, likely from the larger 2013-2014 year classes.
+The CCFRP fishes within 150 ft of water to reduce barotrauma-induced mortality and does not observe the larger fish that are seen in the recreational fleets fishing in deeper waters and further offshore (Figure \@ref(fig:endyr-selex-CCFRP)). The estimated length composition fits vary by year, with the early years expecting larger fish than were observed and the more recent years (2015-2020) expecting smaller fish, likely from the larger 2013-2014 year classes.
 
 
 
@@ -584,7 +583,7 @@ reference harvest rate. The spawning output equivalent to 40% of the unfished le
 million eggs. 
 
 The `r endyr`. spawning biomass relative to unfished equilibrium spawning biomass is above the target of 40% of unfished levels (Figure \@ref(fig:depl)). 
-The relative fishing intensity, $(1-SPR)/(1-SPR_{50\%})$, was above the management target frogs (Figure \@ref(fig:1-spr)). 
+The relative fishing intensity, $(1-SPR)/(1-SPR_{50\%})$, was above the management target (Figure \@ref(fig:1-spr)). 
 
 Table \@ref(tab:referenceES) shows the full suite of estimated reference points for the base model and Figures \@ref(fig:yield2) and \@ref(fig:yield3) show the equilibrium curve based on a steepness value fixed at `r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"], 2)`.
 
@@ -598,7 +597,7 @@ Table \@ref(tab:referenceES) shows the full suite of estimated reference points 
 To better understand how data from individual fishery sectors or scientific surveys affected assessment results, we excluded data sets from the likelihood, one fleet at a time (referred to here as a “drop-one” analysis). “Fleet” in this sense refers to either a fishing fleet or a survey “fleet.” To do this, we set “lambdas” (multipliers for each likelihood component) equal to zero. This is equivalent to removing the data from the model. When composition data were excluded, the selectivity parameters for that fleet were fixed at the base model estimates to standardize the size and age composition of harvested fish. When abundance indices were excluded, relevant catchability and ‘extraSE’ parameters associated with the index were not estimated. Composition data weights for the remaining fleets were kept consistent with the base model values. Results from all the ‘drop-one’ runs were compared to the base model using time series plots and tables containing likelihood components, parameter estimates and derived quantities.
 
 ```{asis, echo = model.area=='SCA'}
-For the southern California model, the NWFSC hook-and-line (HKL) survey is divided across two fleets (8 and 12; see survey description in section \@ref(sec:nwfsc-hook-and-line-survey)). For consistency with other ‘drop-one’ runs, fleets 8 and 12 were excluded at the same time to remove all data associated with the hook-and-line survey. Removal of the HKL survey fleet (index, length comps, and age comps) resulted in larger estimates of unfished spawning output (Figure \@ref(fig:drop-spawnbio)), and affected the trend in spawning biomass in recent years. Only removal of the REC_PC fleet had a noticeable effect on spawning output in the terminal year, but the difference was well within the estimated range of uncertainty from the base model. Relative spawning output (‘depletion’) estimates showed little change relative to the range of plausible outcomes predicted by the base model (Figure \@ref(fig:drop-bratio)). Removal of the REC_PC fleet reduced the magnitude of negative recruitment deviations estimated in the 1970s, as well as the strength of the 1999 year class (Figure \@ref(fig:drop-recdev)), but most general patterns in recruitment were consistent across the set of drop-one sensitivity tests. Changes in likelihoods, parameter estimates and derived quantities are recorded in Tables \@ref(tab:drop-one) and \@ref(tab:drop-one2). Comparison of likelihoods among drop-one scenarios should be treated with caution due to changes in the data sets that were fit in each model run.
+For the southern California model, the NWFSC hook-and-line (HKL) survey is divided across two fleets (8 and 12; see survey description in the Fishery-Independent Data sources section). For consistency with other ‘drop-one’ runs, fleets 8 and 12 were excluded at the same time to remove all data associated with the hook-and-line survey. Removal of the HKL survey fleet (index, length comps, and age comps) resulted in larger estimates of unfished spawning output (Figure \@ref(fig:drop-spawnbio)), and affected the trend in spawning biomass in recent years. Only removal of the REC_PC fleet had a noticeable effect on spawning output in the terminal year, but the difference was well within the estimated range of uncertainty from the base model. Relative spawning output (‘depletion’) estimates showed little change relative to the range of plausible outcomes predicted by the base model (Figure \@ref(fig:drop-bratio)). Removal of the REC_PC fleet reduced the magnitude of negative recruitment deviations estimated in the 1970s, as well as the strength of the 1999 year class (Figure \@ref(fig:drop-recdev)), but most general patterns in recruitment were consistent across the set of drop-one sensitivity tests. Changes in likelihoods, parameter estimates and derived quantities are recorded in Tables \@ref(tab:drop-one) and \@ref(tab:drop-one2). Comparison of likelihoods among drop-one scenarios should be treated with caution due to changes in the data sets that were fit in each model run.
 ```
 
 ```{asis, echo = model.area=='NCA'}
@@ -692,7 +691,7 @@ to better under biological parameters.
   + Conduct life history studies
   + Conduct research to identify the proportion of each species in population and in catches
 
-- Take a closer look at the Ralston historical catch reconstruction (\ref{Ralston2010}) and 
+- Take a closer look at historical catch reconstructions and 
 all other historical data sources.
 
 - Refine CCFRP survey index to look at alternative possible model structures, including 
@@ -744,9 +743,12 @@ particularly for recruitment.
 sa4ss::read_child("51tables-execsummary.Rmd")
 ```
 
+
+
 ```{r render-52, results = "asis"}
 sa4ss::read_child("52tables-catch.Rmd")
 ```
+
 
 
 ```{r render-54, results = "asis"}
@@ -801,9 +803,14 @@ sa4ss::read_child("65figures-lenfits.Rmd")
 \FloatBarrier
 
 ```{r render-67, results = "asis"}
-sa4ss::read_child("67figures-indices-age.Rmd")
+sa4ss::read_child("67figures-indices.Rmd")
 ```
 
+\FloatBarrier
+
+```{r render-67a, results = "asis"}
+sa4ss::read_child("67afigures-caal.Rmd")
+```
 
 \FloatBarrier
 
@@ -834,6 +841,24 @@ sa4ss::read_child("69figures-sens-likeli-retro.Rmd")
 # Appendix
 
 
+## Detailed Fit to Length Composition Data{#append-fit} 
+
+
+```{r, results='asis'}
+plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
+len_fit = plot_info[which(plot_info$category == "LenComp"), ]
+plot.vec = grep("comp_lenfit_flt", len_fit$label)
+filein = file.path(mod_loc, "plots")
+for (a in plot.vec){
+	cap = len_fit$caption[a]
+	lab = len_fit$label[a]
+	add_figure(filein = file.path(filein, len_fit$file[a]), 
+			   caption = cap, 
+			   label = lab)
+}
+```
+
+\clearpage
 
 ## MRFSS Dockside Index of Abundance {#mrfss-index}
 

@@ -106,18 +106,18 @@ coast (although coastwide coverage is limited to recent years) and provides rela
 *Age and Length Data.* A total of 48 otolithsfrom the CCFRP survey were available, but not included in the 
 assessment model due to low 
 annual sample sizes. The composition of length data from 4,344 vermilion encountered 
-in the CCFRP survey is in Figure \@ref(fig:len_data_REC-CCFRP).
+in the CCFRP survey is in Figure \@ref(fig:len-data-CCFRP).
 
 *Index of Abundance*
 The index of abundance in the pre-STAR base model is based on a Bayesian negative binomial 
 model, and the posterior predictions were weighted with the assumption that 20% of 
-the available habitat within California state waters (0-3 nm) is within MPAs (Figure \@ref(index9_standcpueall)). 
+the available habitat within California state waters (0-3 nm) is within MPAs (Figure \@ref(cpueall)). 
 The SWFSC has worked extensively on quantifying rocky habitat from high resolution
 bathymetric data collected as part of the Seafloor Mapping Program.  The quantification 
 of habitat has been used in a number of stock assessments to weight indices of abundance 
 since 2013.  This is the first time the habitat data are utilized to weight an inside/outside 
 MPA effet within an index.  Full details on the observed data, model selection and modeling 
-methods can be found in Appendix \@ref(sec:ccfrp-index).
+methods can be found in the Appendices.
 ```
 
 
@@ -150,7 +150,7 @@ The length composition can be found in \@ref(fig:len-data-NWFSC-HKL).
 The NWFSC hook-and-line survey has been used in a number of stock assessments.  Vermilion 
 is one of the most common species encountered in the survey and is one of the only sources of information 
 about the stock inside the CCAs, which have been closed to fishing since 2001.  Details regarding the 
-index of abundance, sample sizes and model selection can be found in the Appendix.
+index of abundance, sample sizes and model selection can be found in the Appendices.
 
 
 

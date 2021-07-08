@@ -1,7 +1,7 @@
 # Data
 
 The STAT presented proposed analyses and data sources for the 2021 `r spp` 
-assessment during the PFMC Pre-Assessment Workshop for 2021 Vermilion and 
+assessment to the Council advisory bodies in Novemeber 2020, and again during the PFMC Pre-Assessment Workshop for 2021 Vermilion and 
 Lingcod Stock Assessments, hosted virtually on March 29, 2021. Topics addressed 
 included progress on research priorities, data sources and types, stock structure, 
 fleet structure, key model parameters (e.g. natural mortality), and potential 
@@ -12,10 +12,10 @@ are included within this section.
 ## Fishery-Dependent Data
 
 A complete summary of estimated `r spp` removals by each fleet in the 
-commercial and recreational fleets modeled in this assessment is provided in Table 
+commercial and recreational sectors modeled in this assessment is provided in Table 
 \@ref(tab:landings).  The data sources for landings varied by each fleet and a summary 
 of each data source and the time period for which it was used is in Table \@ref(tab:catch-source).
-Of note is that the commercial landings are in metric tons (mt) and the recreational landings 
+The commercial landings are in metric tons (mt) and the recreational landings 
 are in numbers of fish (thousands of fish). Data and 
 methods used to derive these estimates are described in this section.
 

@@ -1,6 +1,6 @@
 ## Historical and Current Fishery Information
 *Commercial Fishery*
-The commercial groundfish fishery off California developed in the late 19th century and consisted mainly of hook and line gear types. At the turn of the century, total rockfish landings were estimated to be on the range of 2000 to 3500 tons statewide, with slightly over half of the catch during this period coming from waters south of Point Conception, and most of the remaining catch from central California ports (particularly San Francisco and Monterey).  Catches declined through the 1930s as a result of the rapid expansion of the California sardine fishery, which tended to be more profitable. 
+The commercial groundfish fishery off California developed in the late 19th century and consisted mainly of hook and line gear types. At the turn of the century, total rockfish landings were estimated to be between 2,000 to 3,500 tons statewide, with slightly over half of the catch during this period coming from waters south of Point Conception, and most of the remaining catch from central California ports (particularly San Francisco and Monterey).  Catches declined through the 1930s as a result of the rapid expansion of the California sardine fishery, which tended to be more profitable. 
 [@Love2002]. The rockfish trawl fishery rapidly expanded into California in the early 1940s, after the introduction of the ‘balloon trawl’, and whenthe United States became involved in World War II and wartime shortage of red 
 meat created an increased demand for other sources of protein [@Alverson1964; 
 @Harry1961; @Lenarz1987]. Trawl landings have been restricted in most of southern California for decades [@Frey1971], and trawl gear north of Point Conception has not been a major component of the landings for vermilion, with the highest reported landings in the 1970s. The commercial setnet fishery has never been a large component of the vermilion rockfish landings and has essentially been non-existent for vermilion since 2002 when the state of California prohibited set net gear in 60 fm or less. The largest net landings for vermilion were in the 1980s.
@@ -26,10 +26,12 @@ Both historical reconstructions used these data to represent species composition
 total rockfish catch during earlier periods of the fishery. aAs a result, the reconstructions may 
 overestimate the percentage of deep-water speciesin earlier fisheries that operated closer 
 to port and in shallower depths.
-*Recreational Fishery*
+
+
+*Recreational Fishery*  
 The Commercial Passenger Fishing Vessel (CPFV; aka ‘party’ and ‘charter’ boat) 
 fleet began ca. 1919 in California, although recreational fishing effort for 
-fishes other than Tunas, other gamefish, and salmon was minimal until about 1930. The CPFV fleet numbered about 200 vessels in 1939 [@Croker1940, cited in Young [-@Young1969]). 
+fishes other than Tunas, other gamefish, and salmon was minimal until about 1930. The CPFV fleet numbered about 200 vessels in 1939 [-@Croker1940], cited in Young [-@Young1969]). 
 After a hiatus in most operations during WWII, the fleet increased to about 590 vessels 
 by 1953, then declined to approximately 256 vessels around 1963. 
 
@@ -60,25 +62,23 @@ for two- month periods) and seasons. Starting in 1994 the commercial groundfish
 fishery sector was divided into two components: limited entry and open access 
 with specific regulations designed for each component. Other regulatory actions 
 for the general rockfish categories have included area closures, gear restrictions, 
-and cumulative bimonthly trip limits set for the four different commercial sectors - 
-limited entry fixed gear, limited entry trawl, open access trawl, and open access non-trawl.
+and cumulative bimonthly trip limits set for the four different commercial sectors: limited entry fixed gear, limited entry trawl, open access trawl, and open access non-trawl.
 Harvest guidelines are also used to regulate the annual harvest for both the recreational and 
 commercial sectors. 
 
 In 2000, changes in the PFMC’s rockfish management structure resulted in the discontinued 
 use of the \emph{Sebastes} complex, and was replaced with three species 
-groups: nearshore, shelf, and slope rockfishes (January 4, 2000; 65 FR 221), of 
-which `r spp` are included in the minor shelf rockfish group. 
+groups: nearshore, shelf, and slope rockfishes (January 4, 2000; 65 FR 221). 
+Vermilion rockfish are managed in aggregate with other species in the minor shelf rockfish group, which is further divided into management areas north and south of Cape Mendocino, California (\CapeM). 
 
 Since the enactment of California’s Marine Life Management Act  (MLMA), the Council and State in a coordinated 
 effort developed and adopted various management specifications to keep harvest 
 within the harvest targets, including seasonal and area closures (e.g. the CCAs; 
-a closure of Cordell Banks to specific fishing), depth restrictions, minimum 
-size limits, and bag limits to regulate the recreational fishery and license 
+a closure of Cordell Banks to specific fishing), depth restrictions, gear restrictions, and bag limits to regulate the recreational fishery. Commercial fisheries were regulated through the use of license 
 and permit regulations, finfish trap permits, gear restrictions, seasonal 
 and area closures (e.g. the RCAs and CCAs; a closure of Cordell Banks to 
 specific fishing), depth restrictions, trip limits, and minimum size 
-limits to regulate the commercial fishery [@Vandenberg2014].
+limits [@Vandenberg2014].
 
 **Management of Recreational Fisheries**
 
@@ -93,7 +93,7 @@ California also began spatial management, including area closures, and depth
 restrictions for the recreational fleet in 2000.  In general, the recreational 
 season north of Point Conception 
 extends from April to December, and south of Point Conception from March to December. 
-In the area that `r spp` are most commonly landed, from Monterey to Morro Bay, the 
+In northern California `r spp` are most commonly landed, from Monterey to Morro Bay, where the 
 maximum depth open to recreational fishing has been between 30 and 40 
 fathoms until 2017.  In 2017 the depth restrictions were eased by 10 fathoms, 
 opening up fishing depths along the central California coast that had not been 
@@ -101,7 +101,7 @@ open consistently since 2002.  In
 both 2017 and 2018, the deepest 10 fathoms was closed prior to the prescribed 
 season in December due to high by-catch rates of yelloweye rockfish, which is still 
 overfished. A full history of the recreational 
-regulations relating to the spatial management of the fleet can be found frog.   
+regulations relating to the spatial management of the fleet can be found in the Appendix.   
 
 
 **Cowcod Conservation Areas (CCA)**
@@ -112,10 +112,8 @@ In 2002 the PFMC established trawl- and non-trawl area closures known as the Roc
 
 
 ## Management Performance
-The contribution of `r spp` to the shelf rockfish OFLs is currently derived from 
-the data-poor Depletion-Based Stock Reduction Analysis[@Dick2010].  A 2005 
-assessment was not accepted for management and a 2013 data-moderate assessment 
-was not reviewed by the STAR panel due to insufficient time.
+The contribution of `r spp` to the shelf rockfish OverFishing Limit (OFL) is currently derived from the data-poor Depletion-Based Stock Reduction Analysis[@Dick2010].  A 2005 
+vermilion stock assessment was not accepted for use in management and a 2013 data-moderate assessment was not reviewed by the STAR panel due to insufficient time.
 
 
 Total mortality for `r spp` was obtained from the Groundfish Expanded Mortality 
@@ -143,6 +141,6 @@ harvested in the northwest Mexican Pacific Ocean (E.M. Boj&oacute;rquez, Centro 
 Investigaciones Biol&oacute;gicas del Noroeste, S.C., personal communication).  Dr. 
 Boj&oacute;rquez also reached out to colleagues at the 
 [Fisheries National Institute](https://www.gob.mx/inapesca) who reported that rockfish 
-are occasionally caught in the sport fishery in the Ensenada City.
+are occasionally caught in the sport fishery in Ensenada City.
 
 
