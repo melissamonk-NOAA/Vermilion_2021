@@ -624,7 +624,7 @@ Commercial catches from 1978-present were pulled from the CALCOM database, which
 
 Biological data (lengths) from the commercial fisheries that landed vermilion rockfish were extracted 
 from CALCOM. The CALCOM length composition data were “expanded” (catch-weighted by stratum, then aggregated by region, gear group, and year) to better represent the size composition of the landed catch. The length composition is available in Figure \@ref(fig:len-data-COM-HKL) 
-for the commercial hook-and-line fleet,\ref{fig:len-data-COM-TWL} for the commercial trawl fleetand \@ref(fig:len-data-COM-NET) for the commercial net fleet.
+for the commercial hook-and-line fleet,FIgure \ref{fig:len-data-COM-TWL} for the commercial trawl fleetand Figure \@ref(fig:len-data-COM-NET) for the commercial net fleet.
 Input sample sizes for commercial length composition were based on the number of port samples and are in Table \@ref(tab:length-sample-size). Length compositions with fewer than 30 measured fish in a region/gear/year combination were not included in the model likelihood.
 
 
@@ -781,7 +781,7 @@ Data collected during the Miller and Gotshall study was also used by Karpov (199
 The number of available fish by year and fleet as well as the method we used to 
 calculate initial sample sizes are in Tables \@ref(tab:length-sample-size) and  \@ref(tab:length-inputN). 
 Length composition data can be found in Figure
-\@ref(fig:len-data-REC-PC) for the recreational PC retained fleet, Figure \@ref(fig:len-data-REC-PC-DIS) for 
+\@ref(fig:len-data-REC-PC) for the recreational PC retained fleet and Figure \@ref(fig:len-data-REC-PC-DIS) for 
 the recreational PC discard fleet,  Figure \@ref(fig:len-data-REC-PR) for the recreational PR fleet, and Figure \ref{fig:len-data-DWV-ONBOARD} for the Deb Wilson-Vandenberg CPFV onboard survey.
 
 
@@ -824,7 +824,7 @@ set of possible cells spread from the Mexican to the Canadian borders.
 Vermilion rockfish are strongly associated with rocky 
 habitat,i.e., untrawlable habitat, but can be found over soft bottom, especially as 
 juveniles.  This survey spans the entire West Coast and provided data for both the northern 
-and southern California assessments. However, this survey does not sample most rocky habitats, nor does the survey conduct sampling within the Cowcod Conservation Areas (CCAs) or the California state MPA network.
+and southern California assessments. However, this survey does not sample most rocky habitats, nor does the survey conduct sampling within the Cowcod Conservation Areas (CCAs) or the California state Marine Protected Area (MPA) network.
 
  
 **Available Data**
@@ -855,7 +855,7 @@ D. Pearson (SWFSC, retired) conducted a series of groundfish surveys (hook-and-l
 trawl) from 2003 - 2005 along the coast of California.  Surveys were conducted onboard 
 chartered commercial vessels and NOAA research vessels.
 
-Even though samples were collected via multiple gear types, they were combined for use 
+Even though samples were collected via multiple gear types, the the majority were collected using commercial hook-and-line hear, and data from all gears were combined for use 
 in the assessment.
 
 **Available Data**
@@ -872,14 +872,14 @@ For his master's thesis work at Humboldt State University, Jeff Abrams conducted
 hook-and-line surveys in 2010 and 2011 off of California's North Coast [@Abrams2014]. Sites were randomly sampled from 
 areas of known rocky habitat within six depth by distance-from-port strata out of three ports:
 Crescent City Harbor, Trinidad Bay and Noyo River Harbor.  The otoliths collected as part of this 
-study are valuable for nearshore groundfish stock assessments that are often lacking biological samples, 
+study are valuable stock assessments of recreationally-important groundifsh species that are often lacking biological samples, 
 especially from the North Coast. This collection resides at the SWFSC Santa Cruz lab. 
 
 **Available Data**
 
 *Age and Length Data.* 
 All 81 vermilion collected during the survey were aged and represent the most northern biological 
-samples in this model. The available length composition in Figure
+samples in this model. The available length compositions for males and females, 2010-2011, are shown in Figure
 \@ref(fig:len-data-ABRAMS-RESEARCH). 
 
 
@@ -892,7 +892,7 @@ evaluate the performance of MPAs and understand nearshore fish populations
 MPAs in central California
 (A&ntilde;o Nuevo, Point Lobos, Point Buchon, and Piedras Blancas)
 to include the entire California coast.
-Fish are collected by volunteer anglers aboard Commercial Passenger Fishing Vessels (CPFV)s guided by one of 
+Fish are collected by volunteer anglers aboard CPFVs guided by one of 
 the following academic institutions based on proximity to fishing location:
 Humboldt State University;
 Bodega Marine Laboratories;
@@ -905,7 +905,7 @@ Surveys consist of fishing with hook-and-line gear for 30-45 minutes within
 randomly chosen 500 by 500 m grid cells within and outside MPAs.
 Prior to 2017, all fish were measured for length and released or descended to depth;
 since then, some have been retained for biological collections including otoliths and fin clips. 
-This is the only long term fisheries-independent data series that spans the entire California 
+This is the only longterm fisheries-independent data series that spans the entire California 
 coast (although coastwide coverage is limited to recent years) and provides relative abundance and demographic data on fish stocks within California's network of MPAs.
 
 
@@ -920,18 +920,16 @@ in the CCFRP survey is in Figure \@ref(fig:len-data-CCFRP).
 The index of abundance in the pre-STAR base model is based on a Bayesian negative binomial 
 model, and the posterior predictions were weighted with the assumption that 20% of 
 the available habitat within California state waters (0-3 nm) is within MPAs (Figure \@ref(cpueall)). 
-The SWFSC has worked extensively on quantifying rocky habitat from high resolution
-bathymetric data collected as part of the Seafloor Mapping Program.  The quantification 
-of habitat has been used in a number of stock assessments to weight indices of abundance 
+The SWFSC has worked extensively on quantifying area of rocky habitat from high resolution
+bathymetric data collected as part of the Seafloor Mapping Program. This method of habitat area quantification has been used in a number of stock assessments to weight indices of abundance 
 since 2013.  This is the first time the habitat data are utilized to weight an inside/outside 
-MPA effet within an index.  Full details on the observed data, model selection and modeling 
-methods can be found in the Appendices.
+MPA effect within an index of abundance.  Full details on the observed data, model selection and modeling methods can be found in the Appendices.
 
 
 
 ## Additional Considered Data Sources
 
-The STAT considered the following studies as possible data sources, but found that Vermilion rockfish were not well sampled and no further analysis was conducted. 
+The STAT considered the following data sources, but found that Vermilion rockfish were not well sampled and no further analysis was conducted. 
 
 *NWFSC Triennial Survey*
 
@@ -955,9 +953,9 @@ data from 1977 were omitted from this analysis.
 The surveys in 1980, 1983, and 1986 covered the US West Coast south to 
 36.8\textdegree N latitude and a depth range of 55-366 m.
 The surveys in 1989 and 1992 covered the same depth range but extended the 
-southern range to 34.5\textdegree N (near Point Conception).
+southern range to \CapeM (near Point Conception).
 From 1995 through 2004, the surveys covered the depth range 55-500 m and 
-surveyed south to 34.5\textdegree N.
+surveyed south to \CapeM.
 In 2004, the final year of the Triennial Survey series, the NWFSC FRAM 
 conducted the survey following similar protocols to earlier years.
 
@@ -977,7 +975,7 @@ in assessments.
 
 The Partnership for Interdisciplinary Studies of Coastal Oceans, 
 [PISCO-UCSC](http://www.piscoweb.org/kelp-forest-study), conducts a number of surveys 
-to monitor the kelp forests, one of which is a kelp forest fish survey. PISCO
+to monitor the kelp forests, one of which is a subtidal fish survey. PISCO
 has monitored fish population in the 0-20 m depth range as part of the 
 Marine Life Protection Act (MLPA) since 1998.  Paired sites inside and outside MPAs 
 are surveyed to monitor the long-term dynamics of the kelp forest ecosystem and provide 
@@ -985,18 +983,17 @@ insight into the effect of MPAs on kelp forest species. PISCO conducts the fish
 surveys from late July through September. At each site, benthic, midwater, and canopy 
 scuba transects are conducted at 5, 10, 15, and 20 m depth.  All divers are trained 
 in species identification.  Along each 30 m transect, divers enumerate all identifiable 
-non-cryptic fish, and measure total length to the nearest centimeter.  PISCO surveys 
-are conducted by the University of California Santa Cruz (UCSC) in central California and 
-through the University of California Santa Barbara in southern California. 
+non-cryptic fish, and estimate total length to the nearest centimeter.  PISCO surveys 
+are conducted by the University of California Santa Cruz (UCSC) in central California and the University of California Santa Barbara in southern California. 
 
 *California Cooperative Oceanic Fisheries Investigations* 
 
-The CalCOFI surveys began in 1951 and conducts quarterly cruises off southern & 
-central California, collecting a suite of hydrographic and biological data on 
-station and underway. Ichthyoplankon sampling with a paired bongo started in 1978. 
+The California Cooperative Oceanic Fisheries Investigations (CalCOFI) survey began in 1951 and conducts quarterly cruises off southern & 
+central California, collecting a suite of hydrographic and biological data at fixed  
+stations and while underway. Ichthyoplankon sampling with a paired bongo started in 1978. 
 Data on larval abundance from the CalCOFI Ichthyoplankton survey have been used in 
 stock assessments of several species, including bocaccio, cowcod and shortbelly 
-rockfish.  Although the long-term dataset is limited to a small subset of species 
+rockfish.  Although the long-term dataset is limited to a subset of species 
 for which morphological identification of larvae has been possible, recent research 
 has been successful at identifying a broader range of species based on genetic 
 identification of larvae [@Thompson2016]. 
@@ -1018,7 +1015,7 @@ to a broader spatial scale in the 2001-2004 period, and since 2004 most years ha
 coastwide data from a combination of SWFSC, NWFSC and Cooperative Research surveys 
 (see Field et al. [-@Field2021] for more complete details regarding coastwide 
 pre-recruit data, and Sakuma et al. [-@Sakuma2016] and Friedman et al. [-@Friedman2018] 
-for additional details and alternative applications of survey data). 
+for additional details and alternative applications of survey data). Only 47 of nearly 300,000 total juvenile *Sebastes* encountered in the juvenile surveys since 2001 were identified as vermillion or sunset rockfish [@Field2021].  Despite this, the assessment results suggest that at least a reasonable fraction of recruitment variability for sunset and vermillion rockfish is shared with other rockfish and groundfish stocks throughout the California Current, many of which also had strong year classes in 1984, 1999 and 2015, and future investigations could lead to the development of multispecies-based recruitment indicators that could be helpful for future assessments.
 
 
 
@@ -1046,25 +1043,25 @@ two regions, the same two readers aged fish for a Committee of Age Reading Exper
 (CARE)exchange among four ageing labs, initiated by the SWFSC.
 
 Ageing error was estimated using publicly available software [@Thorson2012].
-The software setting for bias was set to unbiased for reader 1 who was more 
-experienced. The $\Delta AIC$ among the top three models was less than two. The 
+Reader 1 who was more 
+experienced, was assumed to be unbiased. The $\Delta AIC$ among the top three models was less than two. The 
 best fitting model selected curvilinear bias for reader 1 and curvilinear standard 
 deviation for both readers.  
-An analysis of ageing error removing one fish aged at 88 by reader 1 and 78 by reader 2 
+An analysis of ageing error after removing one fish aged at 88 by reader 1 and 78 by reader 2 
 selected the model with reader 2 as unbiased and curvilinear standard deviation 
 (Figure \@ref(fig:oldfish)). The reading of the oldest aged fish falls within the 95% confidence 
 interval using this model (Figure \@ref(fig:truereads)).The latter model was selected 
 for use in the assessment and the distribution of true age and observed 
 age is in Figure \@ref(fig:ageerror). 
 
-The resulting estimate indicated a standard deviation in age readings 
+The resulting estimates of ageing error indicated a standard deviation in age readings 
 increasing from 0.001 years at age 0 to a standard deviation of 2.37 years at age 70, 
 the first year of the plus group in the assessment model.
 
 
 
 ### Maturity
-Maturity at length of nominal vermilion rockfish was previously studied by Wyllie Echeverria (1987) [-@Echeverria1987] from fish collected off central California. She found that 50% of females sampled were mature by 37 cm total length, and 50% of males were mature by 38 cm total length. Love et al. [-@Love1990b] reported 37 cm total length for female size at 50% maturity, based on fish collected in southern California. Phillips (1964) [-@Phillips1964] reported a size at 50% maturity of 13 inches (33 cm) total length, although the sampling location of the fish used to determine maturity for that study was not specified within California.
+Maturity at length of nominal vermilion rockfish was previously studied by Wyllie Echeverria [-@Echeverria1987] from fish collected off central California. She found that 50% of females sampled were mature by 37 cm total length, and 50% of males were mature by 38 cm total length. Love et al. [-@Love1990b] reported 37 cm total length for female size at 50% maturity, based on fish collected in southern California. Phillips [-@Phillips1964] reported a size at 50% maturity of 13 inches (33 cm) total length, although the sampling location of the fish used to determine maturity for that study was not specified within California.
 
 
 For the current assessment, Melissa Head (NWFSC, pers. comm.) determined maturity 
@@ -1074,7 +1071,7 @@ maturity.’ The former category includes “juveniles exhibiting dummy runs (ea
 vitellogenesis or yolk granules present in a small proportion of oocytes, some 
 in early stages of cellular decay) and skip spawners (adults foregoing spawning 
 in a given year)” (M. Head, pers. comm.), while the latter excludes such cases. 
-A logistic regression wa sfit to the functional maturity determination as a function of fork length (Figure \@ref(fig:fitted-fecundity)), estimating LMAT at 38.4 cm , with a slope of -0.312, 
+A logistic regression was fit to the functional maturity determination as a function of fork length (Figure \@ref(fig:functional-maturity)), estimating LMAT at 38.4 cm , with a slope of -0.312, 
 based on the parameterization in Stock Synthesis.  The samples available from areas north of Pt. Conception were smaller fish and did not allow for estimates of separate 
 maturity curves.  Both California vermilion assessments assumed the same maturity 
 ogive (Figure \@ref(fig:maturity)). 
@@ -1082,12 +1079,12 @@ ogive (Figure \@ref(fig:maturity)).
 
 
 ### Fecundity
-Phillips [-@Phillips1964] reported fecundity for nominal “vermilion” rockfish collected in waters off California. Based on a sample of 12 fish ranging in size from 315-550 mm total length, he reported the maximum and minimum number of eggs as 1,625,600 and 63,300 per female, respectively. Love et al. [-@Love1990b] estimated fecundity of fish in southern California, and reported a allometric fecundity - length relationship (eggs vs. total length, cm) with an exponent of 5.02, suggesting a significant increase in weight-specific fecundity with female size given a roughly cubic weight-length relationship. Dick et al. [-@Dick2017] conducted a meta-analysis of Sebastes fecundity-length relationships. Insufficient data were available to model the subgenus *Rosicola*, but the predictive distribution of the fecundity-length exponent for the genus as whole centered around a value of 4, supporting a general pattern of increasing weight-specific fecundity among the Sebastes. Analyses to date have not examined size-dependent changes in brood frequency for vermilion or sunset rockfishes, i.e. fecundity estimates represent brood fecundity.
+Phillips [-@Phillips1964] reported fecundity for nominal “vermilion” rockfish collected in waters off California. Based on a sample of 12 fish ranging in size from 315-550 mm total length, he reported the minimum and maximum number of eggs as 63,300 and 1,625,600 per female, respectively. Love et al. [-@Love1990b] estimated fecundity of fish in southern California, and reported an allometric fecundity - length relationship (eggs vs. total length, cm) with an exponent of 5.02, suggesting a significant increase in weight-specific fecundity with female size given a roughly cubic weight-length relationship. Dick et al. [-@Dick2017] conducted a meta-analysis of *Sebastes* fecundity-length relationships. Insufficient data were available to model the subgenus *Rosicola*, but the predictive distribution of the fecundity-length exponent for the genus as whole centered around a value of four, supporting a general pattern of increasing weight-specific fecundity among the *Sebastes*. Analyses to date have not examined size-dependent changes in brood frequency for vermilion or sunset rockfishes, i.e. current fecundity estimates represent brood fecundity.
 
-For this assessment, new observations of fecundity at length were supplied by S. Beyer (UCSC / SWFSC, pers. comm.). These data were combined with digitized historical data sets mentioned above to estimate a new fecundity-length relationship (Figure \@ref(fig:fitted-fecundity)). The relationship between fecundity (millions of eggs) and fork length (cm) estimated from these data and used in the assessment was
+For this assessment, new observations of fecundity at length were supplied by S. Beyer (UCSC / SWFSC, pers. comm.). These data were combined with digitized historical data sets used by Dick et al. [-@Dick2017] to estimate a new fecundity-length relationship (Figure \@ref(fig:fitted-fecundity)). The relationship between fecundity (millions of eggs) and fork length (cm) estimated from these data and used in the assessment was
  $F = 2.8e^{-9}L^{4.97}$
 
-The resulting relationship between fecundity by female weight (kg) is in Figure \@ref(fig:fecundity), with spawning output at age is in Figure \@ref(fig:spawnage).
+The resulting relationship between fecundity by female weight (kg) is illustrated in Figure \@ref(fig:fecundity), with spawning output at age (the product of maturity and fecundity) is in Figure \@ref(fig:spawnage).
 
 
 
@@ -1117,7 +1114,7 @@ the source of FishLife data is FishBase, there is a good chance the estimates of
 $M$ are also from methods using longevity, though the actual source of longevity 
 in FishLife was unknown. 
 Both California vermilion assessments used the Hamel prior [-@Hamel2015], which 
-is defined as a lognormal with mean $ln\frac{5.4}{A_{max}}$  and SE = 0.4384343.
+is defined as a lognormal with log-scale mean = $ln\frac{5.4}{A_{max}}$  and SE = 0.4384343.
 Using a maximum age of 54 the point estimate and median of the prior is 0.1, which 
 is used as a prior on $M$ in the assessment model. We also explore sensitivity to 
 these assumptions of natural mortality through likelihood profiling.
@@ -1141,11 +1138,7 @@ data sources including the NWFSC hook-and-line survey and the WCGBTS. The estima
 weight-length was assumed the same for males and females: 
 $W$=1.744e-05$L$^3^ 
 (Figure \@ref(fig:weightlength)). 
-In Oregon and Washington, the estimated parameters (a,b) of the $W=aL^b$ relationship were:
-- OR Female: 2.60642 e-05, 2.927321
-- OR Male: 3.763596 e-05, 2.829314
-- WA Female: 0.0000136, 3.1
-- WA Male: 0.0000238, 2.96
+I
 
 
 <!--chapter:end:20data.Rmd-->
@@ -1215,51 +1208,52 @@ Vermilion rockfish is a desirable species and discards are a small component of 
 
 
 *Fishery-Dependent Surveys*:  There are four fishery-dependent survey fleets north 
-of Point Conception; 1) the MRFSS CPFV dockside survey, 2) Deb Wilson-Vandenberg CPFV onboard observer survey, 3)CDFW/Cal Poly onboard observer survey, and 4) CRFS PR1 dockside survey.
+of Point Conception: 
+1) the MRFSS CPFV dockside survey, 
+2) Deb Wilson-Vandenberg CPFV onboard observer survey, 
+3) CDFW/Cal Poly onboard observer survey, and 
+4) CRFS PR1 dockside survey.
 
 
-*Research*: There are three research fleets; 1) Abrams conditional-length-at-age data, 
-2) NWFSC WCGBT survey data, and 3) SWFSC groundfish ecology survey data.
+*Research*: 
+  There are three research fleets: 
+1) Abrams conditional-length-at-age data, 
+2) NWFSC WCGBT survey data, and 
+3) SWFSC groundfish ecology survey data.
 
 
 
 
 ### Additional Specifications
 
-Selectivity was specified using the double normal parameterization within Stock Synthesis for all fleets. Selectivities were estimated for the commercial hook-and-line fleet, commercial trawl fleet, and the commercial net fleet.  Selectivity was estimated for the recreational PC fleet, recreational PC discard fleet and the Recreational PR fleet.  There were no length data available for the recreational PR fleet, and it mirrors the selectivity of the recreational PC discard fleet.
+Selectivity was specified using the double normal parameterization within Stock Synthesis for all fleets. Selectivity parameters were estimated for the commercial hook-and-line fleet, commercial trawl fleet, and the commercial net fleet.  Selectivity parameters were estimated for the recreational PC fleet, recreational PC discard fleet and the Recreational PR fleet.  There were no length data available for the recreational PR discard fleet, and it mirrors the selectivity of the recreational PC discard fleet.
 Selectivity for the recreational PC onboard index of abundance is mirrored to the recreational 
 PC fleet as they share the same length composition.  The Abrams research selectivity mirrors the 
-commercial hook-and-line fleet. The STAT explored mirroring this data set to the recreational PC fleet, but the length composition was more representative of the commercial fleet. The Abrams dataset was too sparse and only collected over a two year period.  Hook-and-line gear was the 
-dominant collection method for teh SWFSC groundfish ecology survey and is mirrored to the commercial hook-and-line fleet.
+commercial hook-and-line fleet. The STAT explored mirroring this data set to the recreational PC fleet, but the length composition was more representative of the commercial fleet. The Abrams dataset was too sparse to estimate its own selectivity parameters and was only collected over a two year period.  Hook-and-line gear was the 
+dominant collection method for the SWFSC groundfish ecology survey and is mirrored to the commercial hook-and-line fleet.
 
-Selectivity parameters were estimated for all fishery-independent data sources.
-
-
-The recreational PC and PR fleets applied three blocks for selectivity:  1875-2001, 2002-2016, adn 2017-2020. All commercial fleet selectivity was constant across model years 1875-2020.
+Selectivity parameters were estimated for all fishery-independent fleets.
 
 
 
-The length composition data for some years and fleets was small, and may not be 
-representative of the total catch. Years with insufficient data were excluded from the likelihood, and initial sample sizes (prior to data weighting) for length composition data were set equal to a proxy such as the number or trips, hauls, or sampling events (as described in Table \@ref(tab:length-sample-size)).
+The length composition sample sizes for some years and fleets was small, and observations may not be 
+representative of the total catch. Years with insufficient data were excluded from the likelihood, and initial sample sizes (prior to data weighting) for length composition data were set equal to a proxy such as the number or trips, hauls, or sampling events (as described in Tables \@ref(tab:length-sample-size) and \@ref(tab:length-inputN)).
 
 ### Modeling Platform and Structure
-
-The assessment was conducted used Stock Synthesis version 3.30.17.00 developed by 
-Dr. Richard Methot at the NOAA, NWFSC [@Methot2013]. This most recent 
-version was used because it included improvements and corrections to older 
-model versions. The R package [r4ss](https://github.com/r4ss/r4ss), version 
+The assessment was conducted using Stock Synthesis (SS) version 3.30.17.00 developed by 
+Dr. Richard Methot [@Methot2013]. The R package [r4ss](https://github.com/r4ss/r4ss), version 
 1.38.0, along with R version 4.0.1 were used to investigate and plot model fits. 
 
-Electronic SS model files including the data, control, starter, and forecast files can be 
+Electronic SS model input files including the data, control, starter, and forecast files can be 
 found on the 
 [PFMC's website](https://www.pcouncil.org/groundfish/stock-assessments/).
 
 
 ### Model Parameters
-The population dynamics model has many parameters, some estimated using the available data in the assessment and some fixed at values either external to the assessment or informed by the available data.  A summary of all estimated and fixed parameter values, including associated properties, are listed in Table \@ref(tab:params).
+The population dynamics model has many parameters, some estimated using the available data in the assessment and some fixed at values either determined external to the assessment or informed by the available data.  Estimated and fixed parameter values, including associated properties (bounds, priors, asymptotic standard errors), are in Table \@ref(tab:params).
 
 
-A total of 115 parameters were estimated in the base model, including recruitment deviations. Time-invariant growth parameters (Brody growth coefficient, lengths at age 0 and age 30, and CV old/young) using the Schnute parameterization of the von Bertalanffy growth function were estimated for each sex. The CV of the distribution of length-at-age, CV(L), in the base model is estimated at the lower and upper ages specified in the Schnute parameterization of von Bertalanffy growth, and a linear interpolation between these 2 parameters is a function of age. This choice was based on visual inspection of the relationship between CV(L) and age, by sex, using the NWFSC hook-and-line survey data (Figure \@ref(fig:cv-length-age)). Natural mortality was estimated for females and males, and informed by a prior distribution.  Selectivity varied by fleet, and was assumed to be either asymptotic or domed for retained fleets, and forced to be domed for discard fleets with initial and final selectivity fixed at zero.  All selectivity parameters were assumed to be time-invariant, except time blocks were used to capture changes in peak selectivity associated with regulatory changes in 2002 and 2017 (see regulations section). Recruitment deviates were estimated in the base model from 1970 – 2020.  Initial (equilibrium) recruitment was also estimated.  An extra standard deviation parameter was estimated for the PR mode abundance index, as the externally estimated CVs were small due to extremely large sample sizes (1000s of trips).
+A total of 115 parameters were estimated in the base model, including recruitment deviations. Time-invariant growth parameters (Brody growth coefficient, lengths at age 0 and age 30, and CV old/young) using the Schnute parameterization of the von Bertalanffy growth function were estimated for each sex. The CV of the distribution of length-at-age, CV(L), in the base model is estimated at the lower and upper ages specified in the Schnute parameterization of von Bertalanffy growth, and a linear interpolation between these 2 parameters is a function of age. This choice was based on visual inspection of the relationship between CV(L) and age, by sex, using the NWFSC hook-and-line survey data (Figure \@ref(fig:cv-length-age)). Natural mortality was estimated for both females and males, and informed by a prior distribution.  Selectivity varied by fleet, and was assumed to be either asymptotic or domed for retained fleets, and forced to be domed for discard fleets with initial and final selectivity fixed at zero. Most selectivity parameters were assumed to be time-invariant, except time blocks were used to capture changes in selectivity associated with regulatory changes in 2002 and 2017 (see regulations section). Recruitment deviates were estimated in the base model from 1970 – 2020.  Initial (unfished equilibrium) recruitment was also estimated.  An extra standard deviations were estimated for the PR mode abundance index, as the externally estimated CVs were small due to extremely large sample sizes (1000s of trips).
 
 
 
@@ -1267,12 +1261,12 @@ A total of 115 parameters were estimated in the base model, including recruitmen
 
 The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) and reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017, has been a primary source of information on steepness for rockfishes. This approach, however, was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absence of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 prior for steepness ($h$; beta distribution with $\mu$=0.72 and $\sigma$=0.16) is retained.  
 
-A prior for natural mortality was developed using the method of [@Hamel2015]. The STAT examined the distribution of ages from the NWFSC hook-and-line survey and found that roughly 99.9% of otoliths aged were in the mid-50s or younger. Therefore an approximate maximum age of 54 was selected, giving a median estimate of 0.1 $yr^{-1}$ for the prior. The STAT notes that the recommended log-scale standard deviation of 0.438 for the prior makes it only weakly informative, so small changes to the median value do not affect assessment results.
+A prior for natural mortality was developed using the method of [@Hamel2015]. The STAT examined the distribution of ages from the NWFSC hook-and-line survey and found that roughly 99.9% of otoliths aged were in the mid-50s or younger. Therefore an approximate maximum age of 54 was selected, giving a median estimate of 0.1 $yr^{-1}$ for the prior. The STAT notes that the recommended log-scale standard deviation of 0.438 for the prior makes it only weakly informative, so small changes to the prior's median value do not affect estimates of *M* and other assessment results.
 
 
 
 ### Data Weighting
-Length composition and conditional-age-at-length (CAAL) compositions sample sizes for 
+Length composition and conditional-age-at-length (CAAL) composition sample sizes for 
 the base model were tuned by the "Francis method," based on equation TA1.8 in Francis 
 [-@Francis2011], and implemented in the r4ss package. 
 
@@ -1292,22 +1286,19 @@ fixed in SS Version 3.30.16.01 and this version was only used for exploration of
 
 ### Key Assumptions and Structural Choices
 
-Many of the key assumptions and structural choices made in this assessment were evaluated through sensitivity analyses.  For consistency, model structural choices were made that were likely to result in the most parsimonious treatment of the available data, either a priori determined or through the evaluation of model goodness of fit.  
-The major structural choices in both California assessments were 1) the use of a single, stationary, and closed population model to describe the aggregate population dynamics and biological parameters of the cryptic species pair in each region, 2) density-dependence entirely characterized by a Beverton-Holt stock recruitment relationship, 3) that natural mortality rates can be adequately estimated from available data, and 4) time blocks based on major regulatory changes adequately characterize changes in size-selectivity of fishing gear over time. The catch histories of vermilion and sunset rockfishes are inseparable at this time, making estimation of species-specific fishing mortality rates impossible. Ongoing research may shed light on this issue, and help improve our understanding of potential differences between the species (e.g., vital rates) that could influence estimates of stock productivity and sustainable yield.
+theThe STAT used sensitivity analyses to evaluate robustness of the base model to key assumptions and structural choices. The major structural choices in both California assessments were 1) the use of a single, stationary, and closed population model to describe the aggregate population dynamics and biological parameters of the cryptic species pair in each region, 2) density-dependence entirely characterized by a Beverton-Holt stock recruitment relationship, 3) that natural mortality rates can be adequately estimated from available data, and 4) time blocks based on major regulatory changes adequately characterize changes in size-selectivity of fishing gear over time. The catch histories of vermilion and sunset rockfishes are inseparable at this time, making estimation of species-specific fishing mortality rates impossible. Ongoing research may shed light on this issue, and help improve our understanding of potential differences between the species (e.g., vital rates) that could influence estimates of stock productivity and sustainable yield.
 
 
 ### Convergence
 
-Model convergence was determined by starting the minimization process from dispersed 
+Model convergence was examined by starting the minimization algorithm from dispersed 
 values of the maximum likelihood estimates to determine if the model found a better 
-minimum. Jitter is a SS option that generates random starting values from a normal 
+minimum. "Jitter" is an option in SS that generates random starting values from a normal 
 distribution logistically transformed into each parameter’s range [@Methot2020]. This 
 was repeated 100 times and none of the runs converged to a lower negative log likelihood (Figure \@ref(fig:jitter)).
 The model did not experience convergence issues, e.g., final gradient was below 0.0001,
 when reasonable starting values were used and there were no difficulties in inverting 
-the Hessian to obtain estimates of variability.  We did sensitivity runs for 
-convergence by changing the phases for key estimated parameters; neither the total 
-log-likelihood nor the parameter estimates changed.
+the Hessian to obtain estimates of variability.  
 
 
 <!--chapter:end:30model.Rmd-->
@@ -1528,7 +1519,7 @@ Projections of OFL (mt), ABC (mt), age 10+ biomass (mt), spawning output (billio
 
 Over the last several decades, spatially explicit management measures at both the state and federal/management council level have been implemented to achieve a wide range of marine resource and fishery management objectives. Depth restrictions to commercial and recreational fisheries in the Rockfish Conservation Areas (RCAs) and the Cowcod Conservation Areas (CCAs) are key among those, as are the suite of total and partial exclusion of commercial and recreational fishing activities in the California statewide network of Marine Protected Areas (MPAs). While the former are associated with explicit fisheries management objectives, the latter have a suite of ecological and economic objectives, most of which are not specific to, nor integrated across, the fisheries management arena. Despite this, both types of spatial management measures are expected to result in various biological, ecological, and socioeconomic effects within and adjacent to their boundaries.  All of these effects have the potential to influence the nature and quality of the data used to inform stock assessments of species that reside in these areas, including vermilion rockfish.
 
-Regardless of the management objective, spatial closures are expected to increase the spatial heterogeneity in abundance and size or age structure of fished stocks. This greater spatial variability can complicate the assumptions made in stock assessment models, particularly the assumption that the densities and demographic structure of assessed populations are relatively homogeneous, at least across predictable habitat types such as bathymetric gradients or substrate types [@Punt2004; @Field2007; @Berger2017].  Although a wide range of factors above and beyond spatial management measures can also lead to violations of those assumptions, and the challenge is intuitively less problematic for populations with high movement rates and/or high population turnover, the challenge can be particularly important for longer lived populations with lower movement rates.  The challenge can best be summarized by the result that the more effective MPAs or other closed areas are at protecting populations within them, the more likely it is that traditional assessment approaches will be biased or more uncertain.  
+Regardless of the management objective, spatial closures are expected to increase the spatial heterogeneity in abundance and size or age structure of fished stocks. This greater spatial variability can complicate the assumptions made in stock assessment models, particularly the assumption that the densities and demographic structure of assessed populations are relatively homogeneous, at least across predictable habitat types such as bathymetric gradients or substrate types [@Punt2004; @Field2006; @Berger2017].  Although a wide range of factors above and beyond spatial management measures can also lead to violations of those assumptions, and the challenge is intuitively less problematic for populations with high movement rates and/or high population turnover, the challenge can be particularly important for longer lived populations with lower movement rates.  The challenge can best be summarized by the result that the more effective MPAs or other closed areas are at protecting populations within them, the more likely it is that traditional assessment approaches will be biased or more uncertain.  
 
 If the spatial closures also prevent fisheries independent surveys from evaluating the relative abundance and demographic structure of managed populations, the challenges in developing robust population models, and thus robust management advice, become even more severe.  While spatially explicit assessment models provide a means of more explicitly addressing these challenges, such models are computationally intensive, require robust data from the specific areas being modeled, and may also require detailed information regarding movement and dispersal rates [@McGilliard2015; @Berger2017; @Punt2020; @Cadrin2020].  Moreover, the complexity of these spatial models increases substantially if the size and location of closed areas changes over time, as many of the more “fisheries management based” closures (e.g., RCAs) have in California groundfish fisheries.  Thus, such approaches may be less feasible for more data limited stocks, such as northern and southern vermilion rockfish, at least in the near term.  However, the fact that both the northern and southern assessment models are informed by fishery-independent surveys that include habitats both inside and outside area closures provides some hope for greater recognition of spatial factors in future assessments.  
 
@@ -2199,7 +2190,7 @@ CCFRP & 2020 & CCFRP(13) & 447 & 111 & \\*
 
 \begin{table}
 
-\caption{(\#tab:length-inputN)Initial input samples sizes by fleet and year for length composition data.}
+\caption{(\#tab:length-inputN)Basis for initial input samples sizes by fleet and years for the length composition data in the table above.}
 \centering
 \fontsize{10}{12}\selectfont
 \begin{tabular}[t]{lllr}
@@ -2809,6 +2800,13 @@ bias for reader 1 and curvilinear standard deviation for both readers."}
 
 
 ![Maturity at length.\label{fig:maturity}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/Verm21NoCA_077_proposed_base_using_SS_OPT//plots/bio6_maturity.png){width=100% height=100% alt="Maturity at length."}
+
+
+
+![Fitted logistic regression of estimated functional maturity as a function of fork length for vermilion rockfish.\label{fig:functional-maturity}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/vermilion_functional_maturity.png){width=100% height=100% alt="Fitted logistic regression of estimated functional maturity as a function of fork length for vermilion rockfish."}
+
+
+
 
 
 
@@ -4918,6 +4916,143 @@ ggpubr::ggarrange(pos.qq, pos.resid, ncol = 1)
 \clearpage
 
 \clearpage 
+
+## Allocation of Yield Among Federal Management Areas
+
+<!-- Common lat/long 
+Cape Mendocino, Pt. Conception and OR border -->
+\newcommand\CapeM{$40^\circ 10^\prime N$}
+\newcommand\PtC{$34^\circ 27^\prime N$}
+\newcommand\CAOR{$42^\circ 00^\prime N$}
+
+
+
+
+
+
+
+
+
+## Allocation of Yield Among Federal Management Areas
+
+
+The 2021 northern California base model for vermilion represents U.S. 
+waters between \PtC and the California-Oregon border \CAOR. Federal management of 
+the minor shelf rockfish, which includes vermilion, is based on areas north and south of \CapeM, 
+near Cape Mendocino. Therefore, yield estimates from the northern California base 
+model must be divided between the northern and southern management areas in order 
+to determine the contribution of vermilion to the minor nearshore rockfish overfishing limit (OFL).
+
+Allocation of the OFL could, ideally, be based on a fishery-independent survey of 
+abundance, but lacking that information several alternatives exist. Previous 
+allocations have used catch as a proxy for abundance when no other information 
+was available [@Dick2010; @Dick2011]. Recent catches of vermilion in the recreational 
+and commercial sectors suggest that roughly 4.8% and 2.8%, respectively, of catches 
+in these sectors are landed north of Cape Mendocino (Tables \@ref(tab:rec-split) and \@ref(tab:com-split)). Removals for the recreational fleet are in numbers of fish and removals 
+from the commercial fleet are in mt, to be consistent with the assessment inputs. 
+
+Recent advances in habitat mapping allow us to estimate the relative amount of reef 
+habitat within state waters (0-3 nm) in each area, e.g., the [California Seafloor Mapping Project](https://walrus.wr.usgs.gov/mapping/csmp/).
+If we assumed that average density of vermilion is constant over the assessed area, 
+the fraction of vermilion occurring north of Cape Mendocino would be equal to the 
+fraction of habitat in the same area:  approximately 18% (pers. comm. Rebecca Miller, UCSC). However, the assumption of equal density may not be accurate, and no direct estimates of 
+density are available from a fishery-independent survey with adequate spatial coverage.
+
+As was proposed in the 2017 blue/deacon rockfish complex stock assessment [@Dick2017a] we combined existing habitat information with a proxy for fish density – catch per unit effort. Although data from the CRFS onboard CPFV observer 
+program are more precise in terms of total catch, effort, and location, relatively few 
+samples are available north of Cape Mendocino. Sampling coverage for the dockside 
+survey is spatially more complete, in that numerous samples exist in the northern 
+management area. We therefore used the private boat (PR1) CPUE data to develop a spatial 
+index (with CPUE assumed proportional to density), and multiplied the area-specific 
+CPUE estimates by the amount of habitat to produce a spatial index of relative abundance.
+Data were filtered using the same methods detailed in the assessment for the CRFS 
+private boat dockside index. Years prior to 2016 were subsequently dropped as well as 2020 due to reduced sampling during COVID-19, to create an index that is representative of recent catch rates in each area. Sample sizes (number of trips) for the final data set are shown in Table \@ref(tab:number-trips).
+
+Vermilion rockfish is a shelf species and we recognize that there is a fraction of the 
+population and rocky habitat outside of state waters.  However, due to depth closures that began in 2002, samples from deeper waters are not available, nor is the associated habitat 
+data.  This method assumes the same proportion of habitat outside state waters north and 
+south of Cape Mendocino. We explored limiting the data to only angler-reported trips inside state waters. However, the accuracy of the angler-reported trip location is unknown and the 
+trip may represent catch from both inside and outside state waters. Filtering based on 
+angler-reported area fished did not affect the final result, so we retained all data for this analysis.
+
+
+We modeled CPUE (vermilion per angler trip) using a Bayesian negative binomial regression with subregion (defined as CRFS districts, see Table \@ref(tab:number-trips)) as a qualitative covariate and 
+pooling data across years 2016-2019. Including the subregion covariate reduced AIC 
+by 2270 points relative to the null (intercept-only) model. CPUE in the Wine District subregion was lower than the other subregions in the model 
+(Table \@ref(tab:rel-cpue)). When CPUE is multiplied by the percentage of habitat area north of \CapeM latitude, the expected percentage of the stock that occurs north of Cape Mendocino is 4.4% (Table \@ref(tab:rel-cpue)).
+
+\clearpage
+
+
+<!--Tables-->
+
+
+\begin{table}
+
+\caption{(\#tab:rec-split)California recreational total mortality (1000s of fish) for vermilion by CRFS district, 2016-2019. The Redwood district occurs mainly north of Cape Mendocino. Source:RecFIN}
+\centering
+\begin{tabular}[t]{ccccc>{\centering\arraybackslash}p{3cm}}
+\toprule
+Year & CENTRAL & BAY & WINE & REDWOOD & Percent mortality in Redwood District\\
+\midrule
+\cellcolor{gray!6}{2016} & \cellcolor{gray!6}{63.382} & \cellcolor{gray!6}{15.480} & \cellcolor{gray!6}{3.888} & \cellcolor{gray!6}{2.099} & \cellcolor{gray!6}{2.47\%}\\
+2017 & 79.042 & 20.795 & 4.891 & 2.858 & 2.66\%\\
+\cellcolor{gray!6}{2018} & \cellcolor{gray!6}{89.937} & \cellcolor{gray!6}{17.996} & \cellcolor{gray!6}{4.192} & \cellcolor{gray!6}{3.214} & \cellcolor{gray!6}{2.79\%}\\
+2019 & 96.274 & 29.016 & 8.616 & 3.363 & 2.45\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+
+\caption{(\#tab:com-split)Commercial landings (mt) of vermilion in California port complexes located north (CRS+ERK) and south (MRO-BRG) of Cape Mendocino, 2016-2019. Source: CALCOM.}
+\centering
+\begin{tabular}[t]{ccc>{\centering\arraybackslash}p{3cm}}
+\toprule
+Year & MRO-BRG & CRS+ERK & Percent landings in CRS+ERK\\
+\midrule
+\cellcolor{gray!6}{2016} & \cellcolor{gray!6}{12.477} & \cellcolor{gray!6}{0.888} & \cellcolor{gray!6}{1.33\%}\\
+2017 & 12.738 & 1.550 & 2.32\%\\
+\cellcolor{gray!6}{2018} & \cellcolor{gray!6}{17.650} & \cellcolor{gray!6}{2.010} & \cellcolor{gray!6}{3.00\%}\\
+2019 & 16.579 & 3.052 & 4.56\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+
+\caption{(\#tab:number-trips)Number of trips sampled in the PR1 mode by year and CRFS District.}
+\centering
+\begin{tabular}[t]{ccccc}
+\toprule
+YEAR & Central & Bay & Wine & Redwood\\
+\midrule
+\cellcolor{gray!6}{2016} & \cellcolor{gray!6}{2175} & \cellcolor{gray!6}{795} & \cellcolor{gray!6}{279} & \cellcolor{gray!6}{1108}\\
+2017 & 1782 & 800 & 392 & 1148\\
+\cellcolor{gray!6}{2018} & \cellcolor{gray!6}{1783} & \cellcolor{gray!6}{677} & \cellcolor{gray!6}{345} & \cellcolor{gray!6}{1149}\\
+2019 & 1724 & 681 & 204 & 1151\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+
+\caption{(\#tab:rel-cpue)Estimated CPUE, percent habitat area, and relative abundance by CRFS District.}
+\centering
+\begin{tabular}[t]{lcccrl}
+\toprule
+CRFS District & CPUE & Area & Percent of Area & CPUExAREA & Relative Abundance\\
+\midrule
+\cellcolor{gray!6}{Central} & \cellcolor{gray!6}{0.833} & \cellcolor{gray!6}{315.912} & \cellcolor{gray!6}{35.56\%} & \cellcolor{gray!6}{0.296} & \cellcolor{gray!6}{59.32\%}\\
+Bay & 0.448 & 271.279 & 30.54\% & 0.137 & 27.45\%\\
+\cellcolor{gray!6}{Wine} & \cellcolor{gray!6}{0.286} & \cellcolor{gray!6}{136.937} & \cellcolor{gray!6}{15.42\%} & \cellcolor{gray!6}{0.044} & \cellcolor{gray!6}{8.82\%}\\
+Redwood & 0.122 & 164.193 & 18.48\% & 0.022 & 4.41\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+<!--figures-->
+
+\clearpage
 
 # References
 
