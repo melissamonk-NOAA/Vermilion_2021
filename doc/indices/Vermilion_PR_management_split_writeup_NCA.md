@@ -23,11 +23,6 @@ header-includes:
   - \usepackage{placeins}
 ---
 
-<!-- Common lat/long 
-Cape Mendocino, Pt. Conception and OR border -->
-\newcommand\CapeM{$40^\circ 10^\prime N$}
-\newcommand\PtC{$34^\circ 27^\prime N$}
-\newcommand\CAOR{$42^\circ 00^\prime N$}
 
 
 

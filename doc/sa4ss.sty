@@ -35,16 +35,17 @@
 % hyperxmp works with hyperref and must be loaded before it
 \RequirePackage[hyphens]{url}
 \RequirePackage[pagebackref]{hyperref}
-\PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
+%\PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
 \renewcommand{\backref}[1]{[p#1]}
 \RequirePackage{color}
-\definecolor{link}{rgb}{0.45,0.51,0.67}
+%\definecolor{link}{RGB}{0, 0, 255}
 \hypersetup{
-  colorlinks,
-  citecolor=link,
-  filecolor=link,
-  linkcolor=link,
-  urlcolor=link
+  colorlinks=true,
+  citecolor=blue,
+  filecolor=blue,
+  linkcolor=blue,
+  linktoc=page,
+  urlcolor=blue
 }
 % todo: fix this from tagged-article.md
 % $if(colorlinks)$
@@ -221,5 +222,5 @@
 
 % Acronyms
 \usepackage{glossaries}
-\glsdisablehyper
+
 \loadglsentries{sa4ss_glossaries.tex}

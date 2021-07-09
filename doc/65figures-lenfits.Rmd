@@ -27,7 +27,7 @@ for (i in 1:length(unique_fleets)) {
    add_figure(
     filein = dir(paste0(base_loc, "/plots"), pattern = paste0("comp_lenfit_residsflt", unique_fleets[i],"mkt*"), full.names = TRUE)[1],
     caption = paste0("Pearson residuals for the ", fleet_info$FleetNames_parsed[fleet_info$fleet_ID==unique_fleets[i]], ". Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)"),
-    label = paste0("len-pearson-", fleet_info$FleetNames[fleet_info$fleet_ID==unique_fleets[i]])
+    label = paste0("len-pearson-", fleet_info$FleetNames_label[fleet_info$fleet_ID==unique_fleets[i]])
     #,
     #width = 50,
     #height = 50
@@ -38,7 +38,7 @@ for (i in 1:length(unique_fleets)) {
                  pattern = paste0("comp_lenfit_data_weighting_TA1.8_",
                                   fleet_info$FleetNames[fleet_info$fleet_ID==unique_fleets[i]], ".png$"), full.names = TRUE),
     caption = paste0("Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the ",fleet_info$FleetNames_parsed[fleet_info$fleet_ID==unique_fleets[i]]),
-    label = paste0('mean-len-fit-', fleet_info$FleetNames[fleet_info$fleet_ID==unique_fleets[i]])
+    label = paste0('mean-len-fit-', fleet_info$FleetNames_label[fleet_info$fleet_ID==unique_fleets[i]])
     #,
     #width = 50,
     #height = 50

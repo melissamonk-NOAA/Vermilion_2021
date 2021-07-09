@@ -31,9 +31,10 @@ The length compositions by year of vermilion from the WCGBT survey are shown in 
 *Maturity samples.* Maturity samples were analyzed by by Melissa Head (NWFSC) and a 
 description of the results is in the section on biological data.
 
-*Index of abundance.* The index was considered, but not used in the pre-STAR base model. Sample 
-sizes of vermilion rockfish were low. A VAST model was attempted and did not converge 
-for either the northern or southern California data.  The STAT also developed 
+*Index of abundance.* The index was considered, but not used in the pre-STAR base model.
+VASTWestCoast was explored for standardization of the WCBTS data both north and south of Point Conception. Unfortunately, results were uncertain given the small number of tows that observed r spp. Truncating the spatial distribution of the survey to less than 300 m, which only eliminated a small handful of positive tows, did not decrease the uncertainty such that spatially-explicit parameters were estimable. Model convergence was more of an issue south of Point Conception rather than north of the break. Changing the distributional assumptions of the positive model or changing to a tweedie-like distribution that combines the two models did not increase the likelihood that the model could estimate spatially-explicit parameters. It was decided that a non-spatial model, which is more easily accomplished outside of the VAST framework would be best for all areas where the survey samples this species. Future research could investigate correlation structures between areas and if shared information across small regions of overlap would stabilize parameter estimation.
+
+The STAT also developed 
 a delta-glm model for each area (north and south of Point Conception). Full details 
 of the final index are in the Appendix, including 
 sample sizes, model selection criteria, and model diagnostics.  
@@ -111,7 +112,7 @@ in the CCFRP survey is in Figure \@ref(fig:len-data-CCFRP).
 *Index of Abundance*
 The index of abundance in the pre-STAR base model is based on a Bayesian negative binomial 
 model, and the posterior predictions were weighted with the assumption that 20% of 
-the available habitat within California state waters (0-3 nm) is within MPAs (Figure \@ref(cpueall)). 
+the available habitat within California state waters (0-3 nm) is within MPAs (Figure \@ref(fig:cpueall)). 
 The SWFSC has worked extensively on quantifying area of rocky habitat from high resolution
 bathymetric data collected as part of the Seafloor Mapping Program. This method of habitat area quantification has been used in a number of stock assessments to weight indices of abundance 
 since 2013.  This is the first time the habitat data are utilized to weight an inside/outside 

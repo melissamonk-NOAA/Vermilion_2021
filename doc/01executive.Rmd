@@ -1,40 +1,192 @@
 # Executive Summary{-}
-To be completed after the STAR panel.
+To be completed after the STAR panel. Tables from the pre-STAR base model 
+are included for reference during the STAR panel.
 
 ## Stock{-}
 This assessment reports the status of the vermlion rockfish (_Sebastes miniatus_) 
 and sunset rockfish (_Sebastes crocotulus_) complex (referred to as vermilion 
 throughout), resource in U.S. waters off the coast of California `r params$model` 
-of Point Conception (\PtC) using data 
-through 2020.
+of Point Conception (\PtC) using data through 2020.
 
 
 ## Landings{-}
-Replace text.
+Text will be provided after the STAR panel.
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+removals <- read.csv('./tex_tables/a_Catches_ES.csv') %>%
+  mutate_at(c(-1), round,3) %>%
+  rename(`Total Landings` = Total.Landings)
+colnames(removals) = gsub("_","-",colnames(removals))
+```
+
+```{r, results = 'asis'}
+kableExtra::kbl(removals,
+                booktabs=TRUE,
+                caption="Recent landings by fleet, total landings summed across fleets, and the total mortality including discards.",
+                label="removalsES",
+                escape = FALSE) %>%
+  kable_styling(latex_options = c("striped", "HOLD_position","scale_down"))
+```
 
 ## Data and Assessment{-}
-Replace text.
+Text will be provided after the STAR panel.
 
 ## Stock Biomass{-}
-Replace text.
+Text will be provided after the STAR panel.
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+ssb <- read.csv('./tex_tables/b_SSB_ES.csv') %>%
+  mutate_at(c(-1), round,3) 
+```
+
+```{r, results = 'asis'}
+kableExtra::kbl(ssb,
+                booktabs=TRUE,
+                caption="Estimated recent trend in spawning output and the fraction unfished and the 95 percent intervals.",
+                label="ssbES",
+                col.names = c("Year" , "Spawning Output" , "Lower Interval" , "Upper Interval" , "Fraction Unfished" , "Lower Interval" , "Upper Interval"),
+                escape = FALSE) %>%
+  kable_styling(latex_options = c("striped", "HOLD_position", "scale_down"))
+```
 
 ## Recruitment{-}
-Replace text.
+Text will be provided after the STAR panel.
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+recr <- read.csv('./tex_tables/c_Recr_ES.csv') %>%
+  mutate_at(c(-1), round,3) 
+```
+
+```{r, results = 'asis'}
+kableExtra::kbl(recr,
+                booktabs=TRUE,
+                caption="Estimated recent trend in recruitment and recruitment deviations and the 95 percent intervals.",
+                label="recrES",
+                col.names = c("Year" , "Recruitment" , "Lower Interval" , "Upper Interval" , "Recruitment Deviations" , "Lower Interval" , "Upper Interval"),
+                escape = FALSE) %>%
+  kable_styling(latex_options = c("striped", "HOLD_position","scale_down"))
+```
 
 ## Exploitation Status{-}
-Replace text.
+Text will be provided after the STAR panel.
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+exploit <- read.csv('./tex_tables/d_SPR_ES.csv') %>%
+  mutate_at(c(2:7), round,3)
+```
+
+```{r, results = 'asis'}
+kableExtra::kbl(exploit,
+                booktabs=TRUE,
+                caption="Estimated recent trend in the (1-SPR)/(1-SPR 50\\%) where SPR is the spawning potential ratio the exploitation rate, and the  95 percent intervals.",
+                label="exploitES",
+                col.names = c("Year" , "(1-SPR)/(1-SPR 50\\%)" , "Lower Interval" , "Upper Interval" , "Exploitation Rate" , "Lower Interval" , "Upper Interval"),
+                escape = FALSE) %>%
+  kable_styling(latex_options = c("striped", "HOLD_position","scale_down"))
+```
 
 ## Reference Points{-}
-Replace text.
+Text will be provided after the STAR panel.
+
+
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+refpts <- read.csv('./tex_tables/e_ReferencePoints_ES.csv') %>%
+  mutate_at(c(2:4), round,3)
+```
+
+```{r, results = 'asis'}
+kableExtra::kbl(refpts,
+                booktabs=TRUE,
+                caption="Summary of reference points and management quantities including estimates of the 95 percent intervals.",
+                label="referenceES",
+                escape = FALSE,
+                col.names = c("", "Estimate","Lower Interval","Upper Interval")) %>%
+  kable_styling(latex_options = c("striped", "HOLD_position"))
+
+
+```
 
 ## Management Performance{-}
-Replace text.
+Text will be provided after the STAR panel.
+
+```{r, warning = FALSE, inclue = FALSE}
+management <- readxl::read_xlsx("./tables/VRML_management_history.xlsx", sheet = "Management")  %>%
+  mutate(across(c(2:13), ~ round(.,3)))
+management$Area_landings = c("OFL", "ABC", "Total landings", 
+                             "CA rec landings", "OR rec landings", 
+                             "WA rec landings","Commercial landings", "Research",
+                             "OFL", "ABC", "Total Landings", 
+                             "CA rec landings", "Commercial landings", "Research")
+colnames(management)[1] = ""
+
+```
+
+
+```{r, management, results = 'asis'}
+kableExtra::kbl(management, booktabs = TRUE, 
+  caption = "Annual estimates of total mortality, overfishing limit (OFL), acceptable biological catch (ABC), annual catch limit (ACL) for vermilion. The ABC is equal to the ACL.  Data were obtained from the GEMM reports.",
+escape = FALSE) %>%
+kableExtra::pack_rows(group_label = paste0("North of 40",intToUtf8(176),"10\' N"), start_row = 1, end_row = 8) %>%
+kableExtra::pack_rows(group_label = paste0("South of 40",intToUtf8(176),"10\' N"), start_row = 9, end_row = 14) %>%
+  kable_styling(latex_options = "scale_down")
+```
+
 
 ## Unresolved Problems and Major Uncertainties{-}
-Replace text.
+Text will be provided after the STAR panel.
 
 ## Decision Table{-}
-Replace text.
+Text will be provided after the STAR panel.
+
+*Projections* 
+
+
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+projection <- read.csv('./tex_tables/g_Projections_ES.csv') %>%
+  mutate_at(c(2:4), round,3)
+```
+
+```{r, results = 'asis'}
+kableExtra::kbl(projection,
+                booktabs=TRUE,
+                caption="Projections of potential OFLs (mt), ABCs (mt), estimated spawning output and fraction unfished.",
+                label="projectionES",
+                escape = FALSE,
+                col.names = c("Year" , "Predicted OFL (mt)" , "ABC Catch (mt)" , "Age 4+ Biomass (mt)" , "Spawning Output" , "Fraction Unfished")) %>%
+  kable_styling(latex_options = c("striped", "HOLD_position","scale_down"))
+
+
+```
+
+
+*Summary Table*
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+summaryES <- read.csv('./tex_tables/i_Summary_ES.csv') 
+summaryES[1:2,] =management[1:2,1:12]
+summaryES <- summaryES %>%
+  mutate_at(-1, as.numeric) %>%
+  mutate_at(-1, round, 3) 
+summaryES$Quantity[4] = "(1-SPR)/(1-SPR 50\\%)"
+
+
+```
+
+```{r, results = 'asis'}
+
+kableExtra::kbl(summaryES,
+                booktabs=TRUE,
+                caption="Summary of recent estimates and managment quantities.",
+                label="summaryES",
+                escape = FALSE, 
+                col.names = c("Quantity", seq(2011,2021,1))) %>%
+  kable_styling(latex_options = c("striped", "HOLD_position", "scale_down"))
+
+
+```
+
 
 ## Research and Data Needs{-}
-Replace text.
+Text will be provided after the STAR panel.

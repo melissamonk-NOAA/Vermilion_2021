@@ -11,11 +11,10 @@ caal_fits <- plot_info %>%
 for(i in 1:length(caal_fits$FleetNames)){
     filein = file.path(mod_loc, "plots")
     lab = caal_fits$label[i]
-    cap = caal_fits$caption[i]
-      #ifelse(grepl("condAALfit_data_weighting", caal_fits$label[i]),
-      #           gsub("<br>","",stringr::str_extract(caal_fits$caption[i],".+?(?=For)")),
-       #          caal_fits$caption[i])
-  	add_figure(filein = file.path(filein, caal_fits$file[i]), 
+    cap = ifelse(grepl("TA1.8", caal_fits$file[i]),
+                 gsub("<br>","",stringr::str_extract(caal_fits$caption[i],".+?(?=For)")), 
+                 caal_fits$caption[i])
+    	add_figure(filein = file.path(filein, caal_fits$file[i]), 
 			   caption = cap, 
 			   label = lab)
 }

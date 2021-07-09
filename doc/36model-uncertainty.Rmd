@@ -68,3 +68,25 @@ Trends in spawning output for the southern California assessment model were gene
 
 ## Unresolved Problems and Major Uncertainties
 
+```{asis, echo = model.area=='NCA'}
+This assessment treats populations north and south of Point Conception as separate, but there is likely larval or juvenile dispersal, and potentially some adult movement, among these areas.  Dispersal and movement rates are not well known.
+
+The primary fishery-independent survey for west coast groundfish, the NWC WCGBTS, does not sample rocky habitats where most vermilion rockfish are found, and thus does not provide a robust index of abundance.  An alternative survey, the CCFRP hook and line survey, provides a good signal for vermilion rockfish, including relative abundance and demographic structure in marine protected areas, but has a limited depth distribution and thus only reflects abundance of smaller, younger individuals. Increasing spatial management will continue to have impacts on the robustness of fishery-dependent abundance and demographic data to inform assessment models.  
+
+In addition to not including data from closed areas, many of the fishery dependent indices are noisy, and some are not particularly well fit, such as the rec PR index.
+
+Age data are limited and consequently growth and natural mortality estimates are uncertain.  There is an unusual pattern of tension among data sources inferred by the likelihood profiles, with age data suggesting a higher natural mortality rate and length data suggesting a lower *M*.  This is opposite the pattern seen in the southern assessment, and (very generally speaking) many other west coast groundfish assessments.
+
+The model estimates a series of very low recruitment events throughout most of the 1970s, a period in which many other rockfish in this region experienced high levels of recruitment.  Recruitment patterns in more recent years generally follow those for other stocks.  It is possible that selectivity patterns changed, data are biased, model misspecification, or unknown ecosystem interactions could be responsible for this pattern.  
+```
+
+
+```{asis, echo = model.area=='SCA'}
+Uncertainty around the magnitude of historical catches may be higher for this stock in this region, as some accounts suggest considerably higher historical catches than estimated in the 2010 catch reconstruction.  
+
+The primary fishery-independent survey for west coast groundfish, the NWC WCGBTS, does not sample rocky habitats where most vermilion rockfish are found, and thus does not provide a robust index of abundance.  The NWFSC hook and line survey provides demographic and relative abundance data throughout the Southern California Bight, with the exception of some state closed areas, and the results of this survey, as well as known spatial management measures (e.g,. CCAs, state MPAs) as well as anecdotal accounts of spatial patterns in fishing effort indicate heterogeneity in fishing effort that likely bias fishery-dependent data sources.
+
+While recent age data are robust, based primarily on the NWC hook and line data, historical age data (both fishery dependent and fishery independent) are very limited.  The likelihood profiles suggest a somewhat commonly seen pattern of tension among data sources, with age data suggesting a lower natural mortality rate and length data (as well as most index data) suggesting a higher M.  Natural mortality appears to be reasonably well estimated but is still uncertain, and seems to have the greatest influence on scaling the relative biomass and stock trajectory. 
+
+The model estimates a series of very low recruitment events through the late 1970s and early 1980s, a period in which many other rockfish in this region experienced high levels of recruitment.  Recruitment patterns in more recent years generally follow those for other stocks.  It is possible that selectivity patterns changed, data are biased, model misspecification, or unknown ecosystem interactions could be responsible for this pattern.  
+```

@@ -14,13 +14,12 @@ Regardless of the management objective, spatial closures are expected to increas
 If the spatial closures also prevent fisheries independent surveys from evaluating the relative abundance and demographic structure of managed populations, the challenges in developing robust population models, and thus robust management advice, become even more severe.  While spatially explicit assessment models provide a means of more explicitly addressing these challenges, such models are computationally intensive, require robust data from the specific areas being modeled, and may also require detailed information regarding movement and dispersal rates [@McGilliard2015; @Berger2017; @Punt2020; @Cadrin2020].  Moreover, the complexity of these spatial models increases substantially if the size and location of closed areas changes over time, as many of the more “fisheries management based” closures (e.g., RCAs) have in California groundfish fisheries.  Thus, such approaches may be less feasible for more data limited stocks, such as northern and southern vermilion rockfish, at least in the near term.  However, the fact that both the northern and southern assessment models are informed by fishery-independent surveys that include habitats both inside and outside area closures provides some hope for greater recognition of spatial factors in future assessments.  
 
 
-
-# Unresolved Problems and Major Uncertainties
+# Research Recommendations
 We recommend the following research be conducted before the next assessment:
 
 - Investigate the structure of complex and contribution of each species to the 
 vermilion/sunset complex. Investigate possible spatial differences in biological parameters within 
-a single species and also between the two species.  Little biological data for south of 
+a single species and also between the two species. Little biological data for south of 
 Point Conception or north of Point Arena were available for this assessment and is needed 
 to better under biological parameters. 
   + Conduct life history studies

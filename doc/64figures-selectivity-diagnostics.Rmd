@@ -65,7 +65,8 @@ label = 'selex-length-all')
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = file.path(base_loc,"plots", "sel02_multiple_fleets_age1.png"),
+  filein = ifelse(model.area=='NCA', file.path(base_loc,"plots", "sel02_multiple_fleets_age1.png"),
+                  file.path(base_loc,"plots", "sel02_multiple_fleets_age2.png")),
   caption = "Selectivity at age derived from selectivity at length for multiple fleets",
   label = 'selex-age-all'
 )
