@@ -21,25 +21,25 @@ two regions, the same two readers aged fish for a Committee of Age Reading Exper
 (CARE)exchange among four ageing labs, initiated by the SWFSC.
 
 Ageing error was estimated using publicly available software [@Thorson2012].
-The software setting for bias was set to unbiased for reader 1 who was more 
-experienced. The $\Delta AIC$ among the top three models was less than two. The 
+Reader 1 who was more 
+experienced, was assumed to be unbiased. The $\Delta AIC$ among the top three models was less than two. The 
 best fitting model selected curvilinear bias for reader 1 and curvilinear standard 
 deviation for both readers.  
-An analysis of ageing error removing one fish aged at 88 by reader 1 and 78 by reader 2 
+An analysis of ageing error after removing one fish aged at 88 by reader 1 and 78 by reader 2 
 selected the model with reader 2 as unbiased and curvilinear standard deviation 
 (Figure \@ref(fig:oldfish)). The reading of the oldest aged fish falls within the 95% confidence 
 interval using this model (Figure \@ref(fig:truereads)).The latter model was selected 
 for use in the assessment and the distribution of true age and observed 
 age is in Figure \@ref(fig:ageerror). 
 
-The resulting estimate indicated a standard deviation in age readings 
+The resulting estimates of ageing error indicated a standard deviation in age readings 
 increasing from 0.001 years at age 0 to a standard deviation of 2.37 years at age 70, 
 the first year of the plus group in the assessment model.
 
 
 
 ### Maturity
-Maturity at length of nominal vermilion rockfish was previously studied by Wyllie Echeverria (1987) [-@Echeverria1987] from fish collected off central California. She found that 50% of females sampled were mature by 37 cm total length, and 50% of males were mature by 38 cm total length. Love et al. [-@Love1990b] reported 37 cm total length for female size at 50% maturity, based on fish collected in southern California. Phillips (1964) [-@Phillips1964] reported a size at 50% maturity of 13 inches (33 cm) total length, although the sampling location of the fish used to determine maturity for that study was not specified within California.
+Maturity at length of nominal vermilion rockfish was previously studied by Wyllie Echeverria [-@Echeverria1987] from fish collected off central California. She found that 50% of females sampled were mature by 37 cm total length, and 50% of males were mature by 38 cm total length. Love et al. [-@Love1990b] reported 37 cm total length for female size at 50% maturity, based on fish collected in southern California. Phillips [-@Phillips1964] reported a size at 50% maturity of 13 inches (33 cm) total length, although the sampling location of the fish used to determine maturity for that study was not specified within California.
 
 
 For the current assessment, Melissa Head (NWFSC, pers. comm.) determined maturity 
@@ -49,7 +49,7 @@ maturity.’ The former category includes “juveniles exhibiting dummy runs (ea
 vitellogenesis or yolk granules present in a small proportion of oocytes, some 
 in early stages of cellular decay) and skip spawners (adults foregoing spawning 
 in a given year)” (M. Head, pers. comm.), while the latter excludes such cases. 
-A logistic regression wa sfit to the functional maturity determination as a function of fork length (Figure \@ref(fig:fitted-fecundity)), estimating LMAT at 38.4 cm , with a slope of -0.312, 
+A logistic regression was fit to the functional maturity determination as a function of fork length (Figure \@ref(fig:functional-maturity)), estimating LMAT at 38.4 cm , with a slope of -0.312, 
 based on the parameterization in Stock Synthesis.  The samples available from areas north of Pt. Conception were smaller fish and did not allow for estimates of separate 
 maturity curves.  Both California vermilion assessments assumed the same maturity 
 ogive (Figure \@ref(fig:maturity)). 
@@ -57,12 +57,12 @@ ogive (Figure \@ref(fig:maturity)).
 
 
 ### Fecundity
-Phillips [-@Phillips1964] reported fecundity for nominal “vermilion” rockfish collected in waters off California. Based on a sample of 12 fish ranging in size from 315-550 mm total length, he reported the maximum and minimum number of eggs as 1,625,600 and 63,300 per female, respectively. Love et al. [-@Love1990b] estimated fecundity of fish in southern California, and reported a allometric fecundity - length relationship (eggs vs. total length, cm) with an exponent of 5.02, suggesting a significant increase in weight-specific fecundity with female size given a roughly cubic weight-length relationship. Dick et al. [-@Dick2017] conducted a meta-analysis of Sebastes fecundity-length relationships. Insufficient data were available to model the subgenus *Rosicola*, but the predictive distribution of the fecundity-length exponent for the genus as whole centered around a value of 4, supporting a general pattern of increasing weight-specific fecundity among the Sebastes. Analyses to date have not examined size-dependent changes in brood frequency for vermilion or sunset rockfishes, i.e. fecundity estimates represent brood fecundity.
+Phillips [-@Phillips1964] reported fecundity for nominal “vermilion” rockfish collected in waters off California. Based on a sample of 12 fish ranging in size from 315-550 mm total length, he reported the minimum and maximum number of eggs as 63,300 and 1,625,600 per female, respectively. Love et al. [-@Love1990b] estimated fecundity of fish in southern California, and reported an allometric fecundity - length relationship (eggs vs. total length, cm) with an exponent of 5.02, suggesting a significant increase in weight-specific fecundity with female size given a roughly cubic weight-length relationship. Dick et al. [-@Dick2017] conducted a meta-analysis of *Sebastes* fecundity-length relationships. Insufficient data were available to model the subgenus *Rosicola*, but the predictive distribution of the fecundity-length exponent for the genus as whole centered around a value of four, supporting a general pattern of increasing weight-specific fecundity among the *Sebastes*. Analyses to date have not examined size-dependent changes in brood frequency for vermilion or sunset rockfishes, i.e. current fecundity estimates represent brood fecundity.
 
-For this assessment, new observations of fecundity at length were supplied by S. Beyer (UCSC / SWFSC, pers. comm.). These data were combined with digitized historical data sets mentioned above to estimate a new fecundity-length relationship (Figure \@ref(fig:fitted-fecundity)). The relationship between fecundity (millions of eggs) and fork length (cm) estimated from these data and used in the assessment was
+For this assessment, new observations of fecundity at length were supplied by S. Beyer (UCSC / SWFSC, pers. comm.). These data were combined with digitized historical data sets used by Dick et al. [-@Dick2017] to estimate a new fecundity-length relationship (Figure \@ref(fig:fitted-fecundity)). The relationship between fecundity (millions of eggs) and fork length (cm) estimated from these data and used in the assessment was
  $F = 2.8e^{-9}L^{4.97}$
 
-The resulting relationship between fecundity by female weight (kg) is in Figure \@ref(fig:fecundity), with spawning output at age is in Figure \@ref(fig:spawnage).
+The resulting relationship between fecundity by female weight (kg) is illustrated in Figure \@ref(fig:fecundity), with spawning output at age (the product of maturity and fecundity) is in Figure \@ref(fig:spawnage).
 
 
 
@@ -92,7 +92,7 @@ the source of FishLife data is FishBase, there is a good chance the estimates of
 $M$ are also from methods using longevity, though the actual source of longevity 
 in FishLife was unknown. 
 Both California vermilion assessments used the Hamel prior [-@Hamel2015], which 
-is defined as a lognormal with mean $ln\frac{5.4}{A_{max}}$  and SE = 0.4384343.
+is defined as a lognormal with log-scale mean = $ln\frac{5.4}{A_{max}}$  and SE = 0.4384343.
 Using a maximum age of 54 the point estimate and median of the prior is 0.1, which 
 is used as a prior on $M$ in the assessment model. We also explore sensitivity to 
 these assumptions of natural mortality through likelihood profiling.
@@ -108,7 +108,7 @@ Figure \@ref(fig:sexratio-NWFSC-TWL)  along with 75% intervals calculated as Jef
 
 
 ```{asis, echo = model.area=='SCA'}
-The sex ratio was assumed to be 50:50 in the assessment model.  The majority of the recent age data in the assessment were collected from the NWFSC hook-and-line survey.  There is a clear pattern of the sex ratio skewed towrads females in all years of the NWFSC hook-and-line survey beginning around 50 cm (Figures \@ref(fig:sexratio-NWFSC-HKL)   and \@ref(fig:sexratio-EARLY-HKL) ). There are no clear patterns in the sex ration from the WCGBTS CAAL data nor the CDFW research fleet (\@ref(fig:sexratio-NWFSC-TWL)   and \@ref(fig:sexratio-CDFW-RESEARCH)).  
+The sex ratio was assumed to be 50:50 in the assessment model.  The majority of the recent age data in the assessment were collected from the NWFSC hook-and-line survey.  There is a clear pattern of the sex ratio becoming skewed towards females in all years of the NWFSC hook-and-line survey beginning around 50 cm (Figures \@ref(fig:sexratio-NWFSC-HKL)   and \@ref(fig:sexratio-EARLY-HKL)), as expected due to differences in male and female growth. There are no clear patterns in the sex ration from the WCGBTS CAAL data nor the CDFW research fleet (\@ref(fig:sexratio-NWFSC-TWL)   and \@ref(fig:sexratio-CDFW-RESEARCH)).  
 
 
 ```
@@ -123,10 +123,5 @@ data sources including the NWFSC hook-and-line survey and the WCGBTS. The estima
 weight-length was assumed the same for males and females: 
 $W$=`r format(model$MGparmAdj$Wtlen_1_Fem[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Fem[1],2)`^ 
 (Figure \@ref(fig:weightlength)). 
-In Oregon and Washington, the estimated parameters (a,b) of the $W=aL^b$ relationship were:
-- OR Female: 2.60642 e-05, 2.927321
-- OR Male: 3.763596 e-05, 2.829314
-- WA Female: 0.0000136, 3.1
-- WA Male: 0.0000238, 2.96
-
+I
 

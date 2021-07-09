@@ -89,7 +89,7 @@ Commercial catches from 1978-present were pulled from the CALCOM database, which
 
 Biological data (lengths) from the commercial fisheries that landed `r spp` were extracted 
 from CALCOM. The CALCOM length composition data were “expanded” (catch-weighted by stratum, then aggregated by region, gear group, and year) to better represent the size composition of the landed catch. The length composition is available in Figure \@ref(fig:len-data-COM-HKL) 
-for the commercial hook-and-line fleet,`r ifelse(model.area=='NCA', noquote("\\ref{fig:len-data-COM-TWL} for the commercial trawl fleet"), "")`and \@ref(fig:len-data-COM-NET) for the commercial net fleet.
+for the commercial hook-and-line fleet,`r ifelse(model.area=='NCA', noquote("FIgure \\ref{fig:len-data-COM-TWL} for the commercial trawl fleet"), "")`and Figure \@ref(fig:len-data-COM-NET) for the commercial net fleet.
 Input sample sizes for commercial length composition were based on the number of port samples and are in Table \@ref(tab:length-sample-size). Length compositions with fewer than 30 measured fish in a region/gear/year combination were not included in the model likelihood.
 
 

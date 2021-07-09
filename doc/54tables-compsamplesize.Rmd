@@ -54,7 +54,7 @@ kableExtra::kbl(length.sample.size,
 ```{r,length-inputN, results = 'asis'}
 kableExtra::kbl(inputN, 
                 booktabs = TRUE, 
-  caption = "Initial input samples sizes by fleet and year for length composition data.", align = 'lllrrr',
+  caption = "Basis for initial input samples sizes by fleet and years for the length composition data in the table above.", align = 'lllrrr',
 linesep = ""
 ) %>%
   kable_styling(latex_options = "striped", font_size = 10)

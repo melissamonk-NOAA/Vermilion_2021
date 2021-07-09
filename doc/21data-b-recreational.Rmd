@@ -158,7 +158,7 @@ Data collected during the Miller and Gotshall study was also used by Karpov (199
 The number of available fish by year and fleet as well as the method we used to 
 calculate initial sample sizes are in Tables \@ref(tab:length-sample-size) and  \@ref(tab:length-inputN). 
 Length composition data can be found in Figure
-\@ref(fig:len-data-REC-PC) for the recreational PC retained fleet, Figure \@ref(fig:len-data-REC-PC-DIS) for 
+\@ref(fig:len-data-REC-PC) for the recreational PC retained fleet and Figure \@ref(fig:len-data-REC-PC-DIS) for 
 the recreational PC discard fleet, `r ifelse(model.area=='SCA', noquote("and") ,"")` Figure \@ref(fig:len-data-REC-PR) for the recreational PR fleet`r ifelse(model.area=='NCA', noquote(", and Figure \\ref{fig:len-data-DWV-ONBOARD} for the Deb Wilson-Vandenberg CPFV onboard survey."),".")`
 
 

@@ -63,6 +63,18 @@ sa4ss::add_figure(
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
+  filein = file.path(fig_loc, "vermilion_functional_maturity.png"),
+  caption = "Fitted logistic regression of estimated functional maturity as a function of fork length for vermilion rockfish",
+  label = 'functional-maturity'
+)
+```
+
+
+
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
   filein = file.path(fig_loc, "fitted_fec_len.png"),
   caption = "Fitted fecundity as a function of weight from samples of vermilion rockfish",
   label = 'fitted-fecundity'

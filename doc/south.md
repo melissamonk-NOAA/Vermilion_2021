@@ -463,7 +463,7 @@ open consistently since 2002.  In
 both 2017 and 2018, the deepest 10 fathoms was closed prior to the prescribed 
 season in December due to high by-catch rates of yelloweye rockfish, which is still 
 overfished. A full history of the recreational 
-regulations relating to the spatial management of the fleet can be found frog.   
+regulations relating to the spatial management of the fleet can be found in the Appendix.   
 
 
 **Cowcod Conservation Areas (CCA)**
@@ -775,14 +775,12 @@ The number of available fish by year and fleet as well as the method we used to
 calculate initial sample sizes are in Tables \@ref(tab:length-sample-size) and  \@ref(tab:length-inputN). 
 Length composition data can be found in Figure
 \@ref(fig:len-data-REC-PC) for the recreational PC retained fleet, Figure \@ref(fig:len-data-REC-PC-DIS) for 
-the recreational PC discard fleet, and Figure \@ref(fig:len-data-REC-PR) for the recreational PR fleet
-.
+the recreational PC discard fleet, and Figure \@ref(fig:len-data-REC-PR) for the recreational PR fleet.
 
 
 *Recreational age composition data*
 
-There are no recreational age composition data available for vermilion rockfish from state sampling 
-programs.
+There are no recreational age composition data available for vermilion rockfish from state sampling programs.
 
 
 *Recreational indices of abundance*
@@ -1058,7 +1056,7 @@ the first year of the plus group in the assessment model.
 
 
 ### Maturity
-Maturity at length of nominal vermilion rockfish was previously studied by Wyllie Echeverria (1987) [-@Echeverria1987] from fish collected off central California. She found that 50% of females sampled were mature by 37 cm total length, and 50% of males were mature by 38 cm total length. Love et al. (1990) [-@Love1990b] reported 37 cm total length for female size at 50% maturity, based on fish collected in southern California. Phillips (1964) [-@Phillips1964] reported a size at 50% maturity of 13 inches (33 cm) total length, although the sampling location of the fish used to determine maturity for that study was not specified within California.
+Maturity at length of nominal vermilion rockfish was previously studied by Wyllie Echeverria (1987) [-@Echeverria1987] from fish collected off central California. She found that 50% of females sampled were mature by 37 cm total length, and 50% of males were mature by 38 cm total length. Love et al. [-@Love1990b] reported 37 cm total length for female size at 50% maturity, based on fish collected in southern California. Phillips (1964) [-@Phillips1964] reported a size at 50% maturity of 13 inches (33 cm) total length, although the sampling location of the fish used to determine maturity for that study was not specified within California.
 
 
 For the current assessment, Melissa Head (NWFSC, pers. comm.) determined maturity 

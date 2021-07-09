@@ -13,11 +13,18 @@ Vermilion rockfish is a desirable species and discards are a small component of 
 
 ```{asis, echo = model.area=='NCA'}
 *Fishery-Dependent Surveys*:  There are four fishery-dependent survey fleets north 
-of Point Conception; 1) the MRFSS CPFV dockside survey, 2) Deb Wilson-Vandenberg CPFV onboard observer survey, 3)CDFW/Cal Poly onboard observer survey, and 4) CRFS PR1 dockside survey.
+of Point Conception: 
+1) the MRFSS CPFV dockside survey, 
+2) Deb Wilson-Vandenberg CPFV onboard observer survey, 
+3) CDFW/Cal Poly onboard observer survey, and 
+4) CRFS PR1 dockside survey.
 
 
-*Research*: There are three research fleets; 1) Abrams conditional-length-at-age data, 
-2) NWFSC WCGBT survey data, and 3) SWFSC groundfish ecology survey data.
+*Research*: 
+  There are three research fleets: 
+1) Abrams conditional-length-at-age data, 
+2) NWFSC WCGBT survey data, and 
+3) SWFSC groundfish ecology survey data.
 ```
 
 
@@ -51,7 +58,6 @@ The length composition data for some years and fleets was small, and may not be
 representative of the total catch. Years with insufficient data were excluded from the likelihood, and initial sample sizes (prior to data weighting) for length composition data were set equal to a proxy such as the number or trips, hauls, or sampling events (as described in Table \@ref(tab:length-sample-size)).
 
 ### Modeling Platform and Structure
-
 The assessment was conducted used Stock Synthesis version 3.30.17.00 developed by 
 Dr. Richard Methot at the NOAA, NWFSC [@Methot2013]. This most recent 
 version was used because it included improvements and corrections to older 
