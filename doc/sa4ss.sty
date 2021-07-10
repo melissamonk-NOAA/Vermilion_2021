@@ -1,6 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesPackage{sa4ss}[2020/11/10 v0.99 sa4ss package]
 
+
 % Page layout
 \RequirePackage{tikz}
 \RequirePackage{geometry}
@@ -34,19 +35,12 @@
 % links - dark blue
 % hyperxmp works with hyperref and must be loaded before it
 \RequirePackage[hyphens]{url}
-\RequirePackage[pagebackref]{hyperref}
-%\PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
+\RequirePackage[luatex, pagebackref]{hyperref}
+\PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
 \renewcommand{\backref}[1]{[p#1]}
 \RequirePackage{color}
-%\definecolor{link}{RGB}{0, 0, 255}
-\hypersetup{
-  colorlinks=true,
-  citecolor=blue,
-  filecolor=blue,
-  linkcolor=blue,
-  linktoc=page,
-  urlcolor=blue
-}
+\definecolor{link}{RGB}{0, 0, 255}
+\hypersetup{colorlinks=true, citecolor=blue, filecolor=blue, linkcolor=blue,linktoc=page,urlcolor=blue}
 % todo: fix this from tagged-article.md
 % $if(colorlinks)$
 % \PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
@@ -220,7 +214,4 @@
 \usepackage{luatex85} % Otherwise, it will complain about \pdfminorversion missing when using luatex > 0.85.
 \usepackage{pgfpages}
 
-% Acronyms
-\usepackage{glossaries}
 
-\loadglsentries{sa4ss_glossaries.tex}

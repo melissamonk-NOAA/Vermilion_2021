@@ -18,7 +18,6 @@ header-includes:
   - \usepackage{threeparttable}
   - \usepackage[normalem]{ulem}
   - \usepackage{makecell}
-  - \usepackage{xcolor}
   - \usepackage{placeins}
 output:
   sa4ss::techreport_pdf:

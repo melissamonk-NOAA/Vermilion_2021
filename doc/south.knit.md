@@ -18,7 +18,6 @@ header-includes:
   - \usepackage{threeparttable}
   - \usepackage[normalem]{ulem}
   - \usepackage{makecell}
-  - \usepackage{xcolor}
   - \usepackage{placeins}
 output:
   sa4ss::techreport_pdf:
@@ -1383,7 +1382,6 @@ data sources including the NWFSC hook-and-line survey and the WCGBTS. The estima
 weight-length was assumed the same for males and females: 
 $W$=1.744e-05$L$^3^ 
 (Figure \@ref(fig:weightlength)). 
-I
 
 
 <!--chapter:end:20data.Rmd-->
@@ -1691,6 +1689,15 @@ Table \@ref(tab:referenceES) shows the full suite of estimated reference points 
 To better understand how data from individual fishery sectors or scientific surveys affected assessment results, we excluded data sets from the likelihood, one fleet at a time (referred to here as a “drop-one” analysis). “Fleet” in this sense refers to either a fishing fleet or a survey “fleet.” To do this, we set “lambdas” (multipliers for each likelihood component) equal to zero. This is equivalent to removing the data from the model. When composition data were excluded, the selectivity parameters for that fleet were fixed at the base model estimates to standardize the size and age composition of harvested fish. When abundance indices were excluded, relevant catchability and ‘extraSE’ parameters associated with the index were not estimated. Composition data weights for the remaining fleets were kept consistent with the base model values. Results from all the ‘drop-one’ runs were compared to the base model using time series plots and tables containing likelihood components, parameter estimates and derived quantities.
 
 For the southern California model, the NWFSC hook-and-line (HKL) survey is divided across two fleets (8 and 12; see survey description in the Fishery-Independent Data sources section). For consistency with other ‘drop-one’ runs, fleets 8 and 12 were excluded at the same time to remove all data associated with the hook-and-line survey. Removal of the HKL survey fleet (index, length comps, and age comps) resulted in larger estimates of unfished spawning output (Figure \@ref(fig:drop-spawnbio)), and affected the trend in spawning biomass in recent years. Only removal of the REC_PC fleet had a noticeable effect on spawning output in the terminal year, but the difference was well within the estimated range of uncertainty from the base model. Relative spawning output (‘depletion’) estimates showed little change relative to the range of plausible outcomes predicted by the base model (Figure \@ref(fig:drop-bratio)). Removal of the REC_PC fleet reduced the magnitude of negative recruitment deviations estimated in the 1970s, as well as the strength of the 1999 year class (Figure \@ref(fig:drop-recdev)), but most general patterns in recruitment were consistent across the set of drop-one sensitivity tests. Changes in likelihoods, parameter estimates and derived quantities are recorded in Tables \@ref(tab:drop-one) and \@ref(tab:drop-one2). Comparison of likelihoods among drop-one scenarios should be treated with caution due to changes in the data sets that were fit in each model run.
+
+
+
+### Sensitivity to Catch Uncertainty
+To evaluate the influence of highly uncertain catch histories, we developed several sensitivity analyses.  A “typical” sensitivity is to both halve and double historical catches, which tend to be far more uncertain than catches in the more recent and better documented era, particularly for rockfish (Sebastes).  This is because historically most rockfish were landed in mixed stock market categories such as “unspecified rockfish” or “group red rockfish,” and the species composition of these market categories were not sampled until the recent era (1978 in central and northern California, 1983 in the southern California Bight).  However, as described in the historical catch section, recent evaluations have suggested that historical catches in the Southern California Bight may be more uncertain than previously realized.  Specifically, vermilion rockfish was explicitly described as “one of the most important commercial species, it is one of the three leading species (of rockfish) in Southern California” [@Roedel1953].  The other two of the most important commercial species in southern waters were bocaccio, which is estimated to represented nine percent of total rockfish catch in southern waters between 1916 and 1950, and 20% between 1916 and 1968; and chilipepper, estimated to represent 11% of the catch between 1916 and 1950 and 14% between 1916 and 1968.  However, the catch reconstruction estimated that vermilion catch to be less than five percent of the historical total for this region, while several species that were not described or described as “minor” importance were estimated to represent 10% or more of the catch (including bank, blackgill, bronzespotted and cowcod rockfish).  The former two in particular are more deeply distributed slope species that were unlikely to represent a large fraction of catches in the 1920s and 1930s [@Miller2014].  
+
+One partial explanation for the discrepancy is that market category 959, which is described as “group red” rockfish was rarely used until the late 1930s and early 1940s, but likely accounted for much of the vermilion catch from that period onward.  Thus, vermilion would have been included in other market categories, such as market category 250, “unspecified rockfish,” which accounted for half of the total rockfish catch early in the historical period.  By the time species composition data were actually collected in the early 1980s, that market category would have very few vermilion, as most would have been sorted into “group red” or the “vermilion” (249) market categories.  Consequently, when recent species composition data were applied to the historical market category catches, the fraction estimated to be vermilion would be biased low, and vermilion rockfish would be underrepresented in the earliest portion of the landings history.  To evaluate a plausible alternative to the current estimates, we evaluated the consequences of assuming that both 10% and 20% of the total rockfish catches in the Southern California Bight were vermilion rockfish (comparable to the other two “leading species”).  This effect would have likely been reduced from the late 1950s and early 1960s onward, thus for these sensitivities we only applied the higher catch levels to the pre-1969 time period (e.g., the time period of the historical reconstruction).  These sensitivities were done in addition to both halving and doubling catches (both commercial and recreational) for the entire pre-1980 time period. 
+
+The halving and doubling of catches did lead to substantive (but not enormous) differences in estimates of stock status, with a slightly more pessimistic perception in the doubling of historical catches and a slightly more optimistic perception in the halving (Figures \@ref(fig:sens2-depl) and \@ref(fig:sens2-spr)).  However, the treatment of only pre-1969 commercial catches did not lead to substantive changes in the perception of stock status, only a slight scaling of historical spawning output and an increase in historical harvest rates, resulted in a considerably earlier and more rapid stock decline relative to the base model.  Associated with that increased scaling of historical spawning output was a slight increase in the equilibrium MSY level, by one to three tons depending on the scenario.  The halving and doubling of all historical catches prior to 1980 had a more substantive effect on the estimated equilibrium MSY level, decreasing by approximately four tons and increasing by ~18 tons, respectively.  However, there is less evidence to support a doubling of both relatively recent (60s through 70s) commercial catches and of recreational catches at this time.  Given the relatively modest influence on the model results, and the need for more rigorous investigations and improvements to historical catch estimates (which are best done as an overarching effort on all historical catches), additional efforts to improve these estimates are likely more appropriate for future research recommendations.  
 
 
 
@@ -3626,10 +3633,16 @@ fishery selectivity and with steepness fixed at 0.72."}
 ![Change in the recruitment deviations when a single fleet is removed from the model.\label{fig:drop-recdev}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/drop1_recdevs_SCA.png){width=100% height=100% alt="Change in the recruitment deviations when a single fleet is removed from the model."}
 
 
+<!--john catch sens-->
 
 
 
 
+
+
+![Change in depletion when historical catches are modified..\label{fig:sens2-depl}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/sens2_spr_SCA.png){width=100% height=100% alt="Change in depletion when historical catches are modified.."}
+
+![Change in the relative SPR when historical catches are modified.\label{fig:sens2-spr}](NA){width=100% height=100% alt="Change in the relative SPR when historical catches are modified."}
 
 <!-- ======================================================================= -->
 <!-- ************************** Likelihood Profile ************************* --> 

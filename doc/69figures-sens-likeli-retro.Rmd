@@ -32,10 +32,29 @@ sa4ss::add_figure(
 ```
 
 
+<!--john catch sens-->
 
 
+```{r, warning = FALSE, inclue = FALSE}
+sens2.fig.filein = list.files(path = fig_loc,  
+                  pattern = glob2rx(paste0("sens2*",model.area, ".png")), 
+                  full.names = TRUE)
+```
 
 
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = sens2.fig.filein[1] ,
+  caption = "Change in depletion when historical catches are modified.",
+  label = 'sens2-depl'
+)
+
+sa4ss::add_figure(
+  filein = sens2.fig.filein[2] ,
+  caption = "Change in the relative SPR when historical catches are modified",
+  label = 'sens2-spr'
+)
+```
 
 <!-- ======================================================================= -->
 <!-- ************************** Likelihood Profile ************************* --> 

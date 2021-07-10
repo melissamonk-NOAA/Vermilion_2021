@@ -123,5 +123,5 @@ data sources including the NWFSC hook-and-line survey and the WCGBTS. The estima
 weight-length was assumed the same for males and females: 
 $W$=`r format(model$MGparmAdj$Wtlen_1_Fem[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Fem[1],2)`^ 
 (Figure \@ref(fig:weightlength)). 
-I
+
 

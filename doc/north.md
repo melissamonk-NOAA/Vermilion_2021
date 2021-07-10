@@ -18,7 +18,6 @@ header-includes:
   - \usepackage{threeparttable}
   - \usepackage[normalem]{ulem}
   - \usepackage{makecell}
-  - \usepackage{xcolor}
   - \usepackage{placeins}
 output:
   sa4ss::techreport_pdf:
@@ -1388,7 +1387,6 @@ data sources including the NWFSC hook-and-line survey and the WCGBTS. The estima
 weight-length was assumed the same for males and females: 
 $W$=1.744e-05$L$^3^ 
 (Figure \@ref(fig:weightlength)). 
-I
 
 
 <!--chapter:end:20data.Rmd-->
@@ -1715,6 +1713,13 @@ To better understand how data from individual fishery sectors or scientific surv
 
 Drop-one analysis of the northern California assessment revealed slightly larger variability in spawning output trends relative to the south, but all runs were still within the range of uncertainty estimated by the base model (Figure \@ref(fig:drop-spawnbio)). Removal of most fleets had little effect on terminal stock status, with best estimates in the vicinity of target biomass levels (Figure \@ref(fig:drop-bratio)). An exception was removal of the REC_PC fleet, which caused the best estimate of terminal depletion to drop just above the minimum stock size threshold. This suggests that the REC_PC data sets, together, favor a less-depleted stock relative to data from the other fleets. The strength of the 2016 year class is sensitive to the removal of fleet-specific data sets (Figure \@ref(fig:drop-recdev)). Removal of the REC_PR fleet produces the largest estimates of 2016 cohort size, and removal of the NWFSC_TWL fleet estimates a 2016 deviation that is less than half as large (but still positive). Uncertainty in the strength of this recent year class should be taken into consideration for short term forecasts of stock abundance and yield. Changes in likelihoods, parameter estimates and derived quantities are recorded in Table \@ref(tab:drop-one). Comparison of likelihoods among drop-one scenarios should be treated with caution due to changes in the data sets that were fit in each model run.
 
+### Sensitivity to Catch Uncertainty
+
+
+
+To evaluate the influence of highly uncertain catch histories, the we both halved and doubled the  historical catches in the pre-STAR base model.  The historical catches tend to be far more uncertain than catches in the more recent and better documented era for rockfish (*Sebastes* spp.), as historically most rockfish were landed in mixed stock market categories.  However, relative to the somewhat elevated uncertainties described in the historical catch sensitivity analysis for southern vermilion, there is less evidence for substantive bias in historical catches of vermilion rockfish north of Point Conception, where there is better evidence that vermilion made up a relatively modest fraction of the total catch. 
+
+The halving and doubling of historical catches in the northern model did lead to substantial differences in estimates of stock status (Figures \@ref(fig:sens2-depl) and \@ref(fig:sens2-spr)). A doubling of historical catches restuled in a stock slightly above the MSST, and a substantially larger predicted biomass when historical catches were halved.  Equilibrium MSY estimates were also larger with greater historical catches (by approximately 32 tons) and reduced with lower historical catches.  The relative change in model fit, as reflected by the total negative log likelihood, was modest, with a slightly improved fit in the lower historical catch scenario, and a slightly poorer fit in the higher historical catch scenario. 
 
 
 ## Likelihood Profiles
@@ -3652,10 +3657,16 @@ fishery selectivity and with steepness fixed at 0.72."}
 ![Change in the recruitment deviations when a single fleet is removed from the model.\label{fig:drop-recdev}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/drop1_recdevs_NCA.png){width=100% height=100% alt="Change in the recruitment deviations when a single fleet is removed from the model."}
 
 
+<!--john catch sens-->
 
 
 
 
+
+
+![Change in depletion when historical catches are modified..\label{fig:sens2-depl}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/sens2_depl_NCA.png){width=100% height=100% alt="Change in depletion when historical catches are modified.."}
+
+![Change in the relative SPR when historical catches are modified.\label{fig:sens2-spr}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/sens2_spr_NCA.png){width=100% height=100% alt="Change in the relative SPR when historical catches are modified."}
 
 <!-- ======================================================================= -->
 <!-- ************************** Likelihood Profile ************************* --> 

@@ -1216,9 +1216,7 @@ are conducted by the University of California Santa Cruz (UCSC) in central Calif
 
 *California Cooperative Oceanic Fisheries Investigations* 
 
-The California Cooperative Oceanic Fisheries Investigations (CalCOFI) survey began in 1951 and conducts quarterly cruises off southern & 
-central California, collecting a suite of hydrographic and biological data at fixed  
-stations and while underway. Ichthyoplankon sampling with a paired bongo started in 1978. 
+The California Cooperative Oceanic Fisheries Investigations (CalCOFI) survey began in 1951 and conducts quarterly cruises off southern & central California, collecting a suite of hydrographic and biological data at fixed stations and while underway; ichthyoplankon sampling with a paired bongo started in 1978.
 Data on larval abundance from the CalCOFI Ichthyoplankton survey have been used in 
 stock assessments of several species, including bocaccio, cowcod and shortbelly 
 rockfish.  Although the long-term dataset is limited to a subset of species 
@@ -1737,6 +1735,16 @@ Trends in spawning output for the southern California assessment model were gene
 ## Unresolved Problems and Major Uncertainties
 
 
+
+
+Uncertainty around the magnitude of historical catches may be higher for this stock in this region, as some accounts suggest considerably higher historical catches than estimated in the 2010 catch reconstruction.  
+
+The primary fishery-independent survey for west coast groundfish, the NWC WCGBTS, does not sample rocky habitats where most vermilion rockfish are found, and thus does not provide a robust index of abundance.  The NWFSC hook and line survey provides demographic and relative abundance data throughout the Southern California Bight, with the exception of some state closed areas, and the results of this survey, as well as known spatial management measures (e.g,. CCAs, state MPAs) as well as anecdotal accounts of spatial patterns in fishing effort indicate heterogeneity in fishing effort that likely bias fishery-dependent data sources.
+
+While recent age data are robust, based primarily on the NWC hook and line data, historical age data (both fishery dependent and fishery independent) are very limited.  The likelihood profiles suggest a somewhat commonly seen pattern of tension among data sources, with age data suggesting a lower natural mortality rate and length data (as well as most index data) suggesting a higher M.  Natural mortality appears to be reasonably well estimated but is still uncertain, and seems to have the greatest influence on scaling the relative biomass and stock trajectory. 
+
+The model estimates a series of very low recruitment events through the late 1970s and early 1980s, a period in which many other rockfish in this region experienced high levels of recruitment.  Recruitment patterns in more recent years generally follow those for other stocks.  It is possible that selectivity patterns changed, data are biased, model misspecification, or unknown ecosystem interactions could be responsible for this pattern.  
+
 <!--chapter:end:36model-uncertainty.Rmd-->
 
 # Harvest Projections and Decision Tables
@@ -1753,11 +1761,6 @@ Over the last several decades, spatially explicit management measures at both th
 Regardless of the management objective, spatial closures are expected to increase the spatial heterogeneity in abundance and size or age structure of fished stocks. This greater spatial variability can complicate the assumptions made in stock assessment models, particularly the assumption that the densities and demographic structure of assessed populations are relatively homogeneous, at least across predictable habitat types such as bathymetric gradients or substrate types [@Punt2004; @Field2006; @Berger2017].  Although a wide range of factors above and beyond spatial management measures can also lead to violations of those assumptions, and the challenge is intuitively less problematic for populations with high movement rates and/or high population turnover, the challenge can be particularly important for longer lived populations with lower movement rates.  The challenge can best be summarized by the result that the more effective MPAs or other closed areas are at protecting populations within them, the more likely it is that traditional assessment approaches will be biased or more uncertain.  
 
 If the spatial closures also prevent fisheries independent surveys from evaluating the relative abundance and demographic structure of managed populations, the challenges in developing robust population models, and thus robust management advice, become even more severe.  While spatially explicit assessment models provide a means of more explicitly addressing these challenges, such models are computationally intensive, require robust data from the specific areas being modeled, and may also require detailed information regarding movement and dispersal rates [@McGilliard2015; @Berger2017; @Punt2020; @Cadrin2020].  Moreover, the complexity of these spatial models increases substantially if the size and location of closed areas changes over time, as many of the more “fisheries management based” closures (e.g., RCAs) have in California groundfish fisheries.  Thus, such approaches may be less feasible for more data limited stocks, such as northern and southern vermilion rockfish, at least in the near term.  However, the fact that both the northern and southern assessment models are informed by fishery-independent surveys that include habitats both inside and outside area closures provides some hope for greater recognition of spatial factors in future assessments.  
-
-
-
-# Unresolved Problems and Major Uncertainties
-
 
 
 # Research Recommendations
@@ -3290,7 +3293,7 @@ bias for reader 1 and curvilinear standard deviation for both readers."}
 \FloatBarrier 
 
 
-![Selectivity at age derived from selectivity at length for multiple fleets.\label{fig:selex-age-all}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/Verm21SoCA_089_pre-STAR_base_with_SS_OPT//plots/sel02_multiple_fleets_age1.png){width=100% height=100% alt="Selectivity at age derived from selectivity at length for multiple fleets."}
+![Selectivity at age derived from selectivity at length for multiple fleets.\label{fig:selex-age-all}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/Verm21SoCA_089_pre-STAR_base_with_SS_OPT//plots/sel02_multiple_fleets_age2.png){width=100% height=100% alt="Selectivity at age derived from selectivity at length for multiple fleets."}
 
 <!--time varying selectivity-->
 
