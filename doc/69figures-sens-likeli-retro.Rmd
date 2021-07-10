@@ -158,20 +158,20 @@ retro.fig.filein = list.files(path = fig_loc,
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = retro.fig.filein[2] ,
-  caption = "Change in the spawning putput when the most recent 5 years of data area removed sequentially",
+  filein = retro.fig.filein[1] ,
+  caption = "Change in the spawning output when the most recent 5 years of data area removed sequentially",
   label = 'retro-spawnb'
 )
 
 
 sa4ss::add_figure(
-  filein = retro.fig.filein[1] ,
+  filein = retro.fig.filein[3] ,
   caption =  "Change in the fraction of unfished biomass when the most recent 5 years of data area removed sequentially",
   label = 'retro-bratio'
 )
 
 sa4ss::add_figure(
-  filein = retro.fig.filein[3] ,
+  filein = retro.fig.filein[2] ,
   caption = "Change in the recruitment deviations when the most recent 5 years of data area removed sequentially",
   label = 'retro-recdev'
 )
