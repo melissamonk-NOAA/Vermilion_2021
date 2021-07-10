@@ -6,9 +6,7 @@ kableExtra::kbl(
   readxl::read_xlsx("./tables/Allocate_MRFSS_1980-1989.xlsx", sheet = 2),
   booktabs = TRUE,
   caption = "Estimated ratio of SLO catch (in numbers) to catch in California 
-  counties north of SLO from Albin et al. (1993) Table 1.  Notes: 1) there is a Table 
-  1 for every year in Albein et al. (1993), 2) due to rounding error, the total may not 
-  equal the sum of the counties") %>%
+  counties north of SLO from Albin et al. (1993) Table 1.") %>%
   kableExtra::kable_styling(latex_options = "repeat_header", font_size = 10) 
 ```
 
@@ -20,9 +18,9 @@ kableExtra::kbl(
 
 ```{r, warning = FALSE, inclue = FALSE, messages = FALSE}
 landings <- readxl::read_xlsx("./tables/landings.xlsx", sheet = model.area) %>%
-  rename(fleet_ID = Fleet) %>%
-  mutate(fleet_ID = as.character(fleet_ID))
-landings <- inner_join(landings,fleet_info)
+  rename(fleet_ID = Fleet)
+
+landings <- left_join(landings,fleet_info)
 landings <- landings %>% 
   mutate(Fleet = paste0(FleetNames, "(",fleet_ID,")")) %>%
   mutate(Fleet = gsub("\\_", " ",Fleet)) 

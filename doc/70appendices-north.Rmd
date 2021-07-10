@@ -79,7 +79,6 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_NCA.md")
 
 \clearpage 
 
-## Allocation of Yield Among Federal Management Areas
 ```{r mngmnt-split, results = 'asis'}
   sa4ss::read_child("./indices/Vermilion_PR_management_split_writeup_NCA.md")
 ``` 

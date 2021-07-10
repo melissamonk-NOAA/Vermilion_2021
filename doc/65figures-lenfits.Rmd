@@ -1,3 +1,89 @@
+<!-- ======================================================================= -->
+<!-- ************************    Selectivity     *************************** --> 
+<!-- ======================================================================= -->
+
+\FloatBarrier
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = ifelse(model.area=='NCA', file.path(base_loc,"plots", "sel02_multiple_fleets_age1.png"),
+                  file.path(base_loc,"plots", "sel02_multiple_fleets_age2.png")),
+  caption = "Selectivity at age derived from selectivity at length for multiple fleets",
+  label = 'selex-age-all'
+)
+```
+
+\FloatBarrier
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+filein = file.path(base_loc,"plots", "sel01_multiple_fleets_length1.png"), 
+caption = "End year selectivity at length by fleet/survey",
+label = 'selex-length-all')
+```
+
+\FloatBarrier 
+
+
+<!--time varying selectivity-->
+```{r, results ='asis'}
+plot_info = read.csv(file.path(base_loc,"plots", "plotinfotable_for_doc.csv"))
+selex_time = plot_info %>%
+  filter(grepl("sel03_len_timevary_surf", label)) %>%
+  filter(grepl("sex1", label))
+n_fleets_blocks = ifelse(model.area=="NCA",2,4)
+filein = file.path(base_loc, "plots")
+for (a in 1:n_fleets_blocks){
+	cap = selex_time$caption[a]
+	lab = selex_time$label[a]
+	add_figure(filein = file.path(filein, selex_time$file[a]), 
+			   caption = cap, 
+			   label = lab)
+
+}
+```
+
+\FloatBarrier 
+<!--selectivity for fleets that are not mirrored-->
+
+```{r, messages = FALSE, warnings = FALSE} 
+#get the fleet info for fleets that have estimated selectivity
+selex_params <- data.frame(model$parameters$Label[grep("DblN", model$parameters$Label)])
+colnames(selex_params) = "A"
+regexp <- "[[:digit:]]+"
+selex_params <- selex_params %>%
+   mutate(fleet_ID = stringr::str_extract(A,regexp)) %>%
+ # mutate(fleet_ID = substr(A, nchar(A)-2+1, nchar(A)-1)) %>%
+  dplyr::select(fleet_ID) %>%
+  filter(fleet_ID>0) %>%
+  unique
+selex_params$fleet_ID = as.numeric(selex_params$fleet_ID)
+selex_fleets = left_join(selex_params, fleet_info)
+```
+
+
+\FloatBarrier 
+
+```{r, results='asis'}
+j <- 1
+for (i in selex_fleets$fleet_ID) {
+    add_figure(
+    filein = dir(paste0(base_loc, "/plots"), 
+                 pattern = paste0("sel09_len_flt",i,"sex1.png$"), full.names = TRUE),
+    caption = paste0("Female ending year selectivity for the ", selex_fleets$FleetNames_parsed[j]),
+    label = paste0("endyr-selex-", selex_fleets$FleetNames_label[j])
+#    ,
+#    width = 50,
+#    height = 50
+  )
+  j<- j + 1
+}
+```
+
+
+\FloatBarrier 
+
+
 
 <!-- ======================================================================= -->
 <!-- ********************** Fit to the Length Data ************************* --> 
@@ -28,20 +114,14 @@ for (i in 1:length(unique_fleets)) {
     filein = dir(paste0(base_loc, "/plots"), pattern = paste0("comp_lenfit_residsflt", unique_fleets[i],"mkt*"), full.names = TRUE)[1],
     caption = paste0("Pearson residuals for the ", fleet_info$FleetNames_parsed[fleet_info$fleet_ID==unique_fleets[i]], ". Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)"),
     label = paste0("len-pearson-", fleet_info$FleetNames_label[fleet_info$fleet_ID==unique_fleets[i]])
-    #,
-    #width = 50,
-    #height = 50
   )
 
-   add_figure(
+add_figure(
     filein = dir(paste0(base_loc, "/plots"), 
                  pattern = paste0("comp_lenfit_data_weighting_TA1.8_",
                                   fleet_info$FleetNames[fleet_info$fleet_ID==unique_fleets[i]], ".png$"), full.names = TRUE),
     caption = paste0("Mean length for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the ",fleet_info$FleetNames_parsed[fleet_info$fleet_ID==unique_fleets[i]]),
     label = paste0('mean-len-fit-', fleet_info$FleetNames_label[fleet_info$fleet_ID==unique_fleets[i]])
-    #,
-    #width = 50,
-    #height = 50
   )
 
 }
@@ -49,5 +129,5 @@ for (i in 1:length(unique_fleets)) {
 
 
 
-\FloatBarrier
 
+\FloatBarrier 

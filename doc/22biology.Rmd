@@ -18,7 +18,7 @@ above. The same readers aged otoliths for both `r spp` stock assessment models.
 Age reader 1 read all of the otoliths for the southern model and both readers read 
 otoliths for the northern California model. In addition to the otoliths from these 
 two regions, the same two readers aged fish for a Committee of Age Reading Experts 
-(CARE)exchange among four ageing labs, initiated by the SWFSC.
+(CARE) exchange among four ageing labs, initiated by the SWFSC.
 
 Ageing error was estimated using publicly available software [@Thorson2012].
 Reader 1 who was more 

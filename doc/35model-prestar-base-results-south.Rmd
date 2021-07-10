@@ -1,5 +1,5 @@
 # Assessment Results
-The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \@ref(tab:drop-one). Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \@ref(tab:referenceES). Estimates of stock size and status over time are shown in Table \@ref(tab:timeseries). 
+The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are in Table \@ref(tab:drop-one). Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \@ref(tab:referenceES). Estimates of stock size and status over time are shown in Table \@ref(tab:timeseries). 
 
 The full r4ss plotting output is available in the supplementary materials1.
 
@@ -86,20 +86,22 @@ Males $L_{\infty}$ = `r round(male_growth[1])` cm; $k$ = `r round(male_growth[3]
 
 The southern California model estimates female natural mortality (*M*) and fixes male *M* at the same value. The estimated value of 0.125 (SE = 0.009) for both sexes is higher than the value estimated for northern California, but not inconsistent with the observed range of ages. Latitudinal gradients in natural mortality have been estimated for many species of rockfish, which is consistent with the lower estimates of M in the northern model.
 
-## Fits to Conditional Age Composition
+## Fits to Age Composition
 The following plots show the pearson residuals, mean age with Francis data weighting, and 
 mean age and standard deviation in conditional age-at-length by fleet/survey:
-
-- NWFSC hook-and-line survey: Figures \ref{fig:comp_condAALfit_residsflt8mkt0},
-\ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_HKL}, and  \ref{fig:comp_condAALfit_Andre_plotsflt8mkt0_page1} - \ref{fig:comp_condAALfit_Andre_plotsflt8mkt0_page2}     
-
-- WCGBT survey: Figures \ref{fig:comp_condAALfit_residsflt9mkt0_page1}- \ref{fig:comp_condAALfit_residsflt9mkt0_page2}, \ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_TWL}, and \ref{fig:comp_condAALfit_Andre_plotsflt9mkt0_page1}- \ref{fig:comp_condAALfit_Andre_plotsflt9mkt0_page4} 
 
 - CDFW research survey:Figures \ref{fig:comp_condAALfit_residsflt11mkt0},
 \ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeCDFW_RESEARCH}, and \ref{fig:comp_condAALfit_Andre_plotsflt11mkt0} 
 
 - Early NWFSC hook-and-line survey: Figures \ref{fig:comp_condAALfit_residsflt12mkt0_page1}, \ref{fig:comp_condAALfit_residsflt12mkt0_page2},
 \ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeEARLY_HKL}, and \ref{fig:comp_condAALfit_Andre_plotsflt12mkt0_page1} - \ref{fig:comp_condAALfit_Andre_plotsflt12mkt0_page3} 
+
+- NWFSC hook-and-line survey: Figures \ref{fig:comp_condAALfit_residsflt8mkt0},
+\ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_HKL}, and  \ref{fig:comp_condAALfit_Andre_plotsflt8mkt0_page1} - \ref{fig:comp_condAALfit_Andre_plotsflt8mkt0_page2}     
+
+- WCGBT survey: Figures \ref{fig:comp_condAALfit_residsflt9mkt0_page1}- \ref{fig:comp_condAALfit_residsflt9mkt0_page2}, \ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_TWL}, and \ref{fig:comp_condAALfit_Andre_plotsflt9mkt0_page1}- \ref{fig:comp_condAALfit_Andre_plotsflt9mkt0_page4} 
+
+
 
 Fits to the marginal and conditional age at length data sets were best for the NWFSC hook-and-line survey, which is not surprising given that this survey accounted for the majority of age at length observations (over 9000). Similar to the northern model, the largest residuals were associated with infrequently encountered, older individuals, and no significant residual patterns were apparent. The model was able to reproduce interannual changes in mean age reasonably well, with the exception of 2009, when observed average age was unusually high (~5 years higher than surrounding years), but also had the largest variance.
 
@@ -110,12 +112,12 @@ fleet/survey:
 
 * Commercial hook-and-line: Figures \ref{fig:endyr-selex-COM-HKL}, \ref{fig:sel03_len_timevary_surf_flt1sex1}, \ref{fig:len-pearson-COM-HKL}, and \ref{fig:mean-len-fit-COM-HKL}   
 * Commercial net: Figures \ref{fig:endyr-selex-COM-NET}, \ref{fig:len-pearson-COM-NET}, and \ref{fig:mean-len-fit-COM-NET}
-* Recreational retained PC: Figures \ref{fig:endyr-selex-REC-PC}, \ref{fig:sel03_len_timevary_surf_flt4sex1},  \ref{fig:len-pearson-REC-PC}  and \ref{fig:mean-len-fit-REC-PC}  
+* Recreational retained PC: Figures \ref{fig:endyr-selex-REC-PC}, \ref{fig:sel03_len_timevary_surf_flt4sex1},  \ref{fig:len-pearson-REC-PC}  and \ref{fig:mean-len-fit-REC-PC
 * Recreational discard PC Figures \ref{fig:endyr-selex-REC-PC-DIS}, \ref{fig:len-pearson-REC-PC-DIS}  and \ref{fig:mean-len-fit-REC-PC-DIS}
 * Recreational retained PR: Figures \ref{fig:endyr-selex-REC-PR}, \ref{fig:sel03_len_timevary_surf_flt6sex1}, \ref{fig:len-pearson-REC-PR} and \ref{fig:mean-len-fit-REC-PR}  
-* WCGBT survey: Figures \ref{fig:endyr-selex-NWFSC-TWL}, \ref{fig:endyr-selex-NWFSC-TWL}, \ref{fig:len-pearson-NWFSC-TWL}  and \ref{fig:mean-len-fit-NWFSC-TWL} 
-* CDFW research survey: Figures \ref{fig:len-pearson-CDFW-RESEARCH} \ref{fig:mean-len-fit-CDFW-RESEARCH}  
-* NWFSC hook-and-line survey: Figure \ref{fig:len-pearson-NWFSC-HKL}, and \ref{fig:mean-len-fit-NWFSC-HKL} 
+* WCGBT survey: Figures \ref{fig:endyr-selex-NWFSC-TWL}, \ref{fig:len-pearson-NWFSC-TWL}  and \ref{fig:mean-len-fit-NWFSC-TWL} 
+* CDFW research survey: Figures \ref{fig:len-pearson-CDFW-RESEARCH} and  \ref{fig:mean-len-fit-CDFW-RESEARCH}
+* NWFSC hook-and-line survey: Figure \ref{fig:len-pearson-NWFSC-HKL} and \ref{fig:mean-len-fit-NWFSC-HKL} 
 * Early NWFSC hook-and-line survey: Figures \ref{fig:len-pearson-EARLY-HKL} and \ref{fig:mean-len-fit-EARLY-HKL} 
   
 Fits to the time-aggregated length comps were best for the commercial, recreational, and NWFSC survey fleets Figure \@ref(fig:lenfits-all). The NWFSC trawl survey does not effectively sample primary adult habitat types, resulting in a multi-modal length frequency distribution that is difficult for the model to reproduce Figure \@ref(fig:lenfits-all). Fits to the early CDFW research fleet are poor, but the data informing these years are relatively sparse in comparison to current sampling programs such as CRFS. Length composition data from the recreational fleets show evidence of modal progressions due to strong year classes (e.g., the 1999 year class showing up around 2002), there are no patterns in the pearson residual plots, and the model is able to track associated changes in mean length over time.
@@ -131,6 +133,7 @@ Peak selectivity for the WCGBTS was fixed at the smallest length bin (Figure \@r
 
 ## Fits to Indices
 The following plots show log-scale fits to the indices and residuals by fleet/survey:  
+
 - MRFSS dockside PC survey: Figures \@ref(fig:log-cpue-REC-PC) and \@ref(fig:cpue-resid-REC-PC)  
 - CDFW dockside PR survey: Figures \@ref(fig:log-cpue-REC-PR) and \@ref(fig:cpue-resid-REC-PR)  
 - NWFSC hook-and-line survey: Figures \@ref(fig:log-cpue-NWFSC-HKL) and \@ref(fig:cpue-resid-NWFSC-HKL)  
@@ -150,13 +153,13 @@ the pattern of increased abundance in the last three years. Since the survey mov
 
 
 ## Derived Quantities
-Vermilion spawning output in southern California was estimated to be 522 million eggs in 2021 (~95% asymptotic intervals: 262-781; Table  \@ref(tab:referenceES), which equates to a depletion level of 49% (~95% asymptotic intervals: 30%-70%; Table  \@ref(tab:referenceES); Figure \@ref(fig:depl)) in 2021. Depletion is a ratio of the estimated spawning output in a particular year relative to estimated unfished, equilibrium spawning output. Spawning output south of Point Conception declined rapidly throughout the 1970s, 1980s, and 1990s to a level below the Minimum Stock Size Threshold (MSST), but catches decreased enough in the 2000s for the stock to reach a stable level of spawning output (Table \@ref(tab:timeseries), Figure \@ref(fig:ssb)). Stock size is estimated to have been at the lowest level in the mid-1990s, but has since increased, in part due to an exceptionally strong recruitment in 1999, followed by several years of above-average recruitment. The stock is estimated to have been below the management target of (40% of unfished spawning output) from 1986-2007 (Figure\@ref(fig:depl). Relative exploitation rates [(1-SPR) / (1-SPR50%)] increased through time, exceeding target levels from the mid-1970s through the late 1990s. Exploitation over the past decade has fluctuated around target levels (Figure  \@ref(fig:1-spr)), with catches almost entirely landed by the recreational sector. In 2021, vermilion biomass south of Point Conception is estimated to be above the target biomass level, while experiencing fishing intensity around the SPR fishing intensity target (Figure \@ref(fig:1-spr)). The equilibrium yield curve is shifted left, as expected given the assumed value for the Beverton-Holt steepness parameter (h=0.72)(Figures \@ref(fig:yield2) and \@ref(fig:yield3)).
+Vermilion spawning output in southern California was estimated to be 522 million eggs in 2021 (~95% asymptotic intervals: 262-781; Table  \@ref(tab:referenceES), which equates to a depletion level of 49% (~95% asymptotic intervals: 30%-70%; Table  \@ref(tab:referenceES)); Figure \@ref(fig:depl)) in 2021. Depletion is a ratio of the estimated spawning output in a particular year relative to estimated unfished, equilibrium spawning output. Spawning output south of Point Conception declined rapidly throughout the 1970s, 1980s, and 1990s to a level below the Minimum Stock Size Threshold (MSST), but catches decreased enough in the 2000s for the stock to reach a stable level of spawning output (Table \@ref(tab:timeseries), Figure \@ref(fig:depl)). Stock size is estimated to have been at the lowest level in the mid-1990s, but has since increased, in part due to an exceptionally strong recruitment in 1999, followed by several years of above-average recruitment. The stock is estimated to have been below the management target of (40% of unfished spawning output) from 1986-2007 (Figure\@ref(fig:depl). Relative exploitation rates [(1-SPR) / (1-SPR50%)] increased through time, exceeding target levels from the mid-1970s through the late 1990s. Exploitation over the past decade has fluctuated around target levels (Figure  \@ref(fig:1-spr)), with catches almost entirely landed by the recreational sector. In 2021, vermilion biomass south of Point Conception is estimated to be above the target biomass level, while experiencing fishing intensity around the SPR fishing intensity target (Figure \@ref(fig:1-spr)). The equilibrium yield curve is shifted left, as expected given the assumed value for the Beverton-Holt steepness parameter (h=0.72)(Figures \@ref(fig:yield2) and \@ref(fig:yield3)).
 
 Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \@ref(tab:referenceES). Estimates of stock size and status over time are shown in Table \@ref(tab:timeseries). 
 
 ## Recruitment Deviations
 
-Major recruitments (strong year classes) in southern California were consistently estimated by the primary sources of age data (NWFSC hook-and-line and trawl surveys), with a strong 1999 year class estimated even when either data set is removed (see sensitivity section). Other years with relatively high estimates of recruitment were 1983-84, 1999, and 2016 (Figures \@ref(fig:recdevs), \@ref(fig:bh-resids) and  \@ref(fig:phase)). These are consistent with estimates of strong year classes in other rockfish stock assessments. Due to ageing error, years adjacent to strong (or weak) cohorts are sometimes estimated as having similar deviations.
+Major recruitments (strong year classes) in southern California were consistently estimated by the primary sources of age data (NWFSC hook-and-line and trawl surveys), with a strong 1999 year class estimated even when either data set is removed (see sensitivity section). Other years with relatively high estimates of recruitment were 1983-84, 1999, and 2016 (Figures \@ref(fig:recruits), \@ref(fig:recdevs), and \@ref(fig:bh-resids)). These are consistent with estimates of strong year classes in other rockfish stock assessments. Due to ageing error, years adjacent to strong (or weak) cohorts are sometimes estimated as having similar deviations.
 
 ### Reference Points
 
@@ -166,7 +169,7 @@ Sustainable total yield (landings plus dead discards) was
 reference harvest rate. The spawning output equivalent to 40% of the unfished level ($SB_{40\%}$) was `r round(model$derived_quants[model$derived_quants$Label == 'SSB_Btgt', 'Value'], 2)` 
 million eggs. 
 
-The `r endyr`. spawning biomass relative to unfished equilibrium spawning biomass is above the target of 40% of unfished levels (Figure \@ref(fig:depl)). 
-The estimated relative fishing intensity, $(1-SPR)/(1-SPR_{50\%})$, has fluctuated around the target level for the past decade, was above the management target in 2019 and below the management target in 2020 (Figure \@ref(fig:1-spr)). 
+The `r endyr` spawning biomass relative to unfished equilibrium spawning biomass is above the target of 40% of unfished levels (Figure \@ref(fig:depl)). 
+The estimated relative fishing intensity, $(1-SPR)/(1-SPR_{50\%})$, has fluctuated around the target level for the past decade, was above the management target in 2019 and below the management target in 2020 (Figures \@ref(fig:1-spr) and  \@ref(fig:phase)). 
 
 Table \@ref(tab:referenceES) shows the full suite of estimated reference points for the base model and Figures \@ref(fig:yield2) and \@ref(fig:yield3) show the equilibrium yield curve and net production based on a steepness value fixed at `r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"], 2)`.

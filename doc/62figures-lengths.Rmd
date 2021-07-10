@@ -1,4 +1,11 @@
 
+
+<!----------------------------ALL CPUEs --------------------------------------->
+
+\FloatBarrier
+
+
+
 <!-- ======================================================================= -->
 <!-- **********************  Length Samples ******************************** --> 
 <!-- ======================================================================= -->
@@ -28,15 +35,57 @@ len.filein = list.files(base_loc_plots,
   group_by(flts) %>% slice(1) %>%
   mutate(flt1 = as.numeric(gsub("[[:alpha:]]", "", flts))) %>%
   arrange(flt1)
+len.filein= left_join(len.filein,fleet_info, by = c("flt1" ="fleet_ID"))
 ```
 
+
+
+
+
 ```{r, results = 'asis'}
- for (i in 1:length(len.filein$flt1)) {   
+len.filein.com = subset(len.filein,FleetType=="com")
+len.filein.rec = subset(len.filein,FleetType=="rec")
+len.filein.fi = subset(len.filein,FleetType=="fi")
+
+ for (i in 1:length(len.filein.com$flt1)) {   
    add_figure( 
-     filein = len.filein$lfile[i],
-    caption = paste0("Length composition data from the ", fleet_info$FleetNames_parsed[fleet_info$fleet_ID==len.filein$flt1[i]] ),
-    label = paste0("len-data-", fleet_info$FleetNames_label[fleet_info$fleet_ID==len.filein$flt1[i]])
+     filein = len.filein.com$lfile[i],
+    caption = paste0("Length composition data from the ", len.filein.com$FleetNames_parsed[i] ),
+    label = paste0("len-data-", len.filein.com$FleetNames_label[i])
+  )
+}
+
+add_figure(
+filein = file.path(fig_loc, "rec_avg_weight.png"), 
+caption = "Average weights calculated from the recreational landings data on RecFIN",
+label = 'rec-avg-weights')
+
+
+
+for (i in 1:(length(len.filein.rec$flts))) {   
+   add_figure( 
+     filein = len.filein.rec$lfile[i],
+    caption = paste0("Length composition data from the ", len.filein.rec$FleetNames_parsed[i] ),
+    label = paste0("len-data-", len.filein.rec$FleetNames_label[i])
+  )
+}
+
+add_figure(
+    filein = file.path(base_loc, "plots", "index9_standcpueall.png"),
+    caption = "Standardized indices overlaid. Each index is rescaled to have mean observation = 1.0",
+    label = 'cpueall')
+
+
+
+for (i in 1:(length(len.filein.fi$flts))) {   
+   add_figure( 
+     filein = len.filein.fi$lfile[i],
+    caption = paste0("Length composition data from the ", len.filein.fi$FleetNames_parsed[i]),
+    label = paste0("len-data-", len.filein.fi$FleetNames_label[i])
   )
 }
 
 ```
+
+
+

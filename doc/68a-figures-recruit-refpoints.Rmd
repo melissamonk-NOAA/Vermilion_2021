@@ -1,4 +1,29 @@
 
+
+<!-- ======================================================================= -->
+<!-- *********************** Reference Points ****************************** --> 
+<!-- ======================================================================= -->
+
+\FloatBarrier
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(base_loc, "plots", "ts9_Relative_spawning_output_intervals.png"), 
+caption = "Estimated time series of relative spawning output",
+label = 'depl')
+```
+
+\FloatBarrier
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+filein = file.path(base_loc, "plots", "SPR3_ratiointerval.png"), 
+caption = "Timeseries of SPR ratio: (1-SPR)/(1-SPR_50%)",
+label = '1-spr')
+```
+
+
+
 <!-- ======================================================================= -->
 <!-- ************************** Recruitment ******************************** --> 
 <!-- ======================================================================= -->
@@ -35,17 +60,18 @@ caption = "Deviations around the stock-recruit curve. Labels are on first, last,
 label = 'bh-resids')
 ```
 
-<!-- ======================================================================= -->
-<!-- *********************** Reference Points ****************************** --> 
-<!-- ======================================================================= -->
 
 
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(base_loc, "plots", "SPR3_ratiointerval.png"), 
-caption = "Timeseries of SPR ratio: (1-SPR)/(1-SPR_50%)",
-label = '1-spr')
-```
+
+
+
+
+
+
+\FloatBarrier
+
+
+
 
 
 ```{r, results = 'asis'}

@@ -37,10 +37,6 @@ Cape Mendocino, Pt. Conception and OR border -->
 \newcommand\CAOR{$42^\circ 00^\prime N$}
 
 
-```{r, setup, include=FALSE}
-rmarkdown::find_pandoc(version = "2.14.0.3")
-```
-
 
 ```{r opts, include = FALSE}
 library(kableExtra)
@@ -88,21 +84,22 @@ Spp = 'Vermilion rockfish'
 fig_loc = paste0(getwd(), "/figures")
 base_loc_plots = paste0(base_loc,"plots")
 table_loc = paste0(getwd(), "/tables/")
-tex_tables_loc = paste0(getwd(),"/tex_tables/", params$model)
-tex_parent_loc = paste0(getwd(),"/tex_tables/")
+#exec table folder that is now really the csv files, but not changing th name
+exec_tables_loc = paste0(getwd(),"/exec_tables/", params$model,"/")
+#tex_parent_loc = paste0(getwd(),"/tex_tables/")
 #move the tex tables to the parent folder depending on which model you're working on 
 #best solution I have so far
-files <- list.files(path = tex_tables_loc, full.names = TRUE)
-files_new <- gsub(dirname(files[1]), tex_parent_loc, files)
-for (i in 1:length(files)){
-  file.copy(files[i], files_new[i])
-}
+# files <- list.files(path = tex_tables_loc, full.names = TRUE)
+# files_new <- gsub(dirname(files[1]), tex_parent_loc, files)
+# for (i in 1:length(files)){
+#   file.copy(files[i], files_new[i])
+# }
 
 
 # model_loc = "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/"
 
 
-
+#give fleets each a full name
 if(params$model=="north"){
 model$FleetNames_parsed <- c("commercial hook-and-line fishery",
                            "commercial trawl fishery",
@@ -132,10 +129,33 @@ model$FleetNames_parsed <- c("commercial hook-and-line fishery",
                            "Early years hook-and-line")
 }
 
+
+#Give fleets a designation
+#give fleets each a full name
+if(params$model=="north"){
+model$FleetType <- c("com","com","com",
+                     "rec","rec", "rec","rec",
+                     "rec",
+                     "fi", #fishery-independent
+                     "rec",
+                     "fi",
+                     "fi",
+                     "fi")
+} else {
+model$FleetType <- c("com","com","com",
+                     "rec","rec", "rec","rec",
+                     "fi",
+                     "fi",
+                     "rec",
+                     "fi",
+                     "fi")
+}
+#create a fleet info table
 model$FleetNames_label <- stringr::str_replace_all(model$FleetNames, "_", "-")
 
-fleet_info = data.frame(cbind(model$fleet_ID, model$FleetNames, model$FleetNames_label, model$FleetNames_parsed))
-colnames(fleet_info) = c("fleet_ID", "FleetNames", "FleetNames_label", "FleetNames_parsed")
+fleet_info = data.frame(cbind(model$fleet_ID, model$FleetNames, model$FleetNames_label, model$FleetNames_parsed, model$FleetType))
+colnames(fleet_info) = c("fleet_ID", "FleetNames", "FleetNames_label", "FleetNames_parsed", "FleetType")
+fleet_info$fleet_ID = as.numeric(fleet_info$fleet_ID)
 
 plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
 

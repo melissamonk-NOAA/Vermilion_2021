@@ -18,6 +18,12 @@ sa4ss::read_child("63figures-biology.Rmd")
 
 \FloatBarrier
 
+```{r render-67a, results = "asis"}
+sa4ss::read_child("67afigures-caal.Rmd")
+```
+
+\FloatBarrier
+
 ```{r render-64, results = "asis"}
 sa4ss::read_child("64figures-selectivity-diagnostics.Rmd")
 ```
@@ -31,26 +37,15 @@ sa4ss::read_child("65figures-lenfits.Rmd")
 ```
 
 
-
 \FloatBarrier
 
 ```{r render-67, results = "asis"}
 sa4ss::read_child("67figures-indices.Rmd")
 ```
 
-\FloatBarrier
-
-```{r render-67a, results = "asis"}
-sa4ss::read_child("67afigures-caal.Rmd")
-```
 
 \FloatBarrier
 
-```{r render-68, results = "asis"}
-sa4ss::read_child("68figures-timeseries.Rmd")
-```
-
-\FloatBarrier
 
 ```{r render-68a, results = "asis"}
 sa4ss::read_child("68a-figures-recruit-refpoints.Rmd")

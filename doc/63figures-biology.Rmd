@@ -6,19 +6,19 @@
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-filein = file.path(fig_loc, "oldfish.jpg"), 
-caption = "Photograph of the *oldest* aged fish used in the assessment with annuli marked by B. Kamikawa (NWFSC)",
-label = 'oldfish')
-```
-
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
 filein = file.path(fig_loc, "Reader 1 vs Reader 2.png"), 
 caption = "Aging precision between initial and blind double reads for vermilion. 
 Numbers in the bubbles are the sample sizes of otoliths cross-read",
 label = 'reader1reader2')
 ```	
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+filein = file.path(fig_loc, "oldfish.jpg"), 
+caption = "Photograph of the *oldest* aged fish used in the assessment with annuli marked by B. Kamikawa (NWFSC)",
+label = 'oldfish')
+```
 
 
 ```{r, results = 'asis'}
@@ -44,12 +44,11 @@ label = 'ageerror')
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = file.path(base_loc,"plots", "bio5_weightatsize.png"),
-  caption = "Weight-length relationship",
-  label = 'weightlength'
+  filein = file.path(fig_loc, "vermilion_functional_maturity.png"),
+  caption = "Fitted logistic regression of estimated functional maturity as a function of fork length for vermilion rockfish",
+  label = 'functional-maturity'
 )
 ```
-
 
 
 ```{r, results = 'asis'}
@@ -60,14 +59,6 @@ sa4ss::add_figure(
 )
 ```
 
-
-```{r, results = 'asis'}
-sa4ss::add_figure(
-  filein = file.path(fig_loc, "vermilion_functional_maturity.png"),
-  caption = "Fitted logistic regression of estimated functional maturity as a function of fork length for vermilion rockfish",
-  label = 'functional-maturity'
-)
-```
 
 
 
@@ -123,8 +114,30 @@ for (i in 1:length(sex.ratio.filein)) {
   #  height = 50
   )
 }
-
-
-
 ```
 
+\FloatBarrier
+
+<!--weight-length-->
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = file.path(base_loc,"plots", "bio5_weightatsize.png"),
+  caption = "Weight-length relationship",
+  label = 'weightlength'
+)
+```
+
+<!-- ======================================================================= -->
+<!-- ************************    Growth   ********************************** --> 
+<!-- ======================================================================= -->
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = file.path(base_loc,"plots", "bio1_sizeatage.png"),
+  caption = "Length at age in the beginning of the year (or season) in the ending year of the model. Shaded area indicates 95% distribution of length at age around estimated growth curve",
+    label = 'fittedgrowth')
+```
+
+
+\FloatBarrier 

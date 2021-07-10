@@ -2,12 +2,8 @@
 <!-- ******************* Data Used in the Model *************************** --> 
 <!-- ====================================================================== --> 
 
-```{r, results = 'asis'}
-sa4ss::add_figure(
-filein = file.path(base_loc_plots, "data_plot2.png"), 
-caption = "Summary of data sources used in the base model",
-label = 'data-plot')
-```
+\FloatBarrier
+
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(fig_loc, "assess_area.png"), 
@@ -29,18 +25,22 @@ label = 'catch')
 
 
 ```{r, results = 'asis'}
+sa4ss::add_figure(
+filein = file.path(base_loc_plots, "data_plot2.png"), 
+caption = "Summary of data sources used in the base model",
+label = 'data-plot')
+```
+
+
+
+
+
+```{r, results = 'asis'}
 add_figure(
 filein = file.path(fig_loc, "compare_pacfin_calcom.png"), 
 caption = "Comparison of landings from CALCOM and PacFIN",
 label = 'calcom-pacfin')
 ```
 
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(fig_loc, "rec_avg_weight.png"), 
-caption = "Average weights calculated from the recreational landings data on RecFIN",
-label = 'rec-avg-weights')
-```
-
+\FloatBarrier
 

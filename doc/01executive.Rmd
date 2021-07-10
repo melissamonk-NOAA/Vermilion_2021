@@ -13,7 +13,7 @@ of Point Conception (\PtC) using data through 2020.
 Text will be provided after the STAR panel.
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
-removals <- read.csv('./tex_tables/a_Catches_ES.csv') %>%
+removals <- read.csv(paste0(exec_tables_loc,'a_Catches_ES.csv')) %>%
   mutate_at(c(-1), round,3) %>%
   rename(`Total Landings` = Total.Landings)
 colnames(removals) = gsub("_","-",colnames(removals))
@@ -35,7 +35,7 @@ Text will be provided after the STAR panel.
 Text will be provided after the STAR panel.
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
-ssb <- read.csv('./tex_tables/b_SSB_ES.csv') %>%
+ssb <- read.csv(paste0(exec_tables_loc,'b_SSB_ES.csv')) %>%
   mutate_at(c(-1), round,3) 
 ```
 
@@ -53,7 +53,7 @@ kableExtra::kbl(ssb,
 Text will be provided after the STAR panel.
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
-recr <- read.csv('./tex_tables/c_Recr_ES.csv') %>%
+recr <- read.csv(paste0(exec_tables_loc,'c_Recr_ES.csv')) %>%
   mutate_at(c(-1), round,3) 
 ```
 
@@ -71,7 +71,7 @@ kableExtra::kbl(recr,
 Text will be provided after the STAR panel.
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
-exploit <- read.csv('./tex_tables/d_SPR_ES.csv') %>%
+exploit <- read.csv(paste0(exec_tables_loc,'d_SPR_ES.csv')) %>%
   mutate_at(c(2:7), round,3)
 ```
 
@@ -91,7 +91,7 @@ Text will be provided after the STAR panel.
 
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
-refpts <- read.csv('./tex_tables/e_ReferencePoints_ES.csv') %>%
+refpts <- read.csv(paste0(exec_tables_loc,'e_ReferencePoints_ES.csv')) %>%
   mutate_at(c(2:4), round,3)
 ```
 
@@ -144,7 +144,7 @@ Text will be provided after the STAR panel.
 
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
-projection <- read.csv('./tex_tables/g_Projections_ES.csv') %>%
+projection <- read.csv(paste0(exec_tables_loc,'g_Projections_ES.csv')) %>%
   mutate_at(c(2:4), round,3)
 ```
 
@@ -164,7 +164,7 @@ kableExtra::kbl(projection,
 *Summary Table*
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
-summaryES <- read.csv('./tex_tables/i_Summary_ES.csv') 
+summaryES <- read.csv(paste0(exec_tables_loc,'i_Summary_ES.csv')) 
 summaryES[1:2,] =management[1:2,1:12]
 summaryES <- summaryES %>%
   mutate_at(-1, as.numeric) %>%

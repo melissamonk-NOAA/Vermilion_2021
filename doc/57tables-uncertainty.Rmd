@@ -23,7 +23,7 @@ dropone2 <- readxl::read_xlsx(dropone.filein) %>%
 
 ```{r,drop-one, results = 'asis'}
 kableExtra::kbl(dropone, booktabs = TRUE, 
-  caption = "Likelihood components from the leave one out analysis of the pre-STAR base model.",
+  caption = "Likelihood components, parameter estimates and derived quantities from the leave one out analysis of the pre-STAR base model.",
   linesep = ""
 ) %>%
   kable_styling(latex_options = c("scale_down")) 

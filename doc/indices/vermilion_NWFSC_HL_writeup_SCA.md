@@ -1,12 +1,12 @@
 ---
-title: "NWFSC HL Survey Index for vermilion in 2021"
+title: "NWFSC HL Survey Index for Vermilion in 2021"
 author: ""
-date: "June 24, 2021"
+date: "July 10, 2021"
 params:
     Model.number: 2
-    species.name: "vermilion"
+    species.name: "lingcod"
     survey.name: "NWFSC HL"
-    assess.folder: "VRML"
+    assess.folder: "LCOD"
     index.subfolder: "NWFSC_HL"
 output:
   bookdown::pdf_document2: 
@@ -44,37 +44,39 @@ always_allow_html: true
 
 ### Northwest Fisheries Science Center Hook-and-Line Survey
 
-Since 2004, the NWFSC has conducted an annual hook-and-line survey targeting shelf rockfish at fixed stations (‘sites’) in the Southern California Bight (Figure xx). During each site visit, three deckhands simultaneously deploy 5-hook sampling rigs (this is referred to as a single ‘drop’) for a maximum of 5 minutes per line, but individual lines may be retrieved sooner at the angler’s discretion (e.g. to avoid losing fish). Five drops are attempted at each site for a maximum possible catch of 75 fish per site per year (3 anglers × 5 hooks × 5 drops). Further details regarding the sampling frame, site selection, and survey methodology are described by [-@Harms].
+Since 2004, the NWFSC has conducted an annual hook-and-line survey targeting shelf rockfish at fixed stations (‘sites’) in the Southern California Bight (Figure \@ref(fig:spp-sites)). During each site visit, three deckhands simultaneously deploy 5-hook sampling rigs (this is referred to as a single ‘drop’) for a maximum of 5 minutes per line, but individual lines may be retrieved sooner at the angler’s discretion (e.g. to avoid losing fish). Five drops are attempted at each site for a maximum possible catch of 75 fish per site per year (3 anglers × 5 hooks × 5 drops). Further details regarding the sampling frame, site selection, and survey methodology are described by [-@Harms2008].
 
-***Northwest Fisheries Science Center Hook-and-Line Survey Index: Data Preparation, Filtering, and Sample Sizes**
+From 2004 through 2013, sampling was conducted only outside the Cowcod Conservation Areas. Beginning in 2014, 40 sites inside the CCAs were sampled, and roughly another 40 sites have been added in subsequent years inside the CCAs. The survey currently has 201 sites (79 inside and 122 outside the CCAs).
 
-Vermilion is one of the most commonly encountered species in the NWFSC hook-and-line survey (Figure \@ref(fig:spp-sites)). Sample sizes by depth and year can be found in Tables 
+**Northwest Fisheries Science Center Hook-and-Line Survey Index: Data Preparation, Filtering, and Sample Sizes**
+
+Vermilion is one of the most commonly encountered species in the NWFSC hook-and-line survey [Harms 2008]  (Figure \@ref(fig:spp-sites)). Sites considered for an abundance index were limited to those that have caught at least 1 vermilion rockfish over the period 2004-2018 (circles in Figure xx ). Only 14 sites were identified as catching no vermilion over the entire sampling period. Sample sizes by depth and year can be found in Tables 
 \@ref(tab:tab-depth-nwfschl) and \@ref(tab:tab-year-nwfschl).
-Note that depth was used as a continuous variable in the model, and depth bins were create for data exploration only. 
+Note that depth was used as a continuous variable (second-order polynomial) in the model, and depth bins were created for descriptive purposes and data exploration only. 
+
 
 
 *Northwest Fisheries Science Center Hook-and-Line Survey Index: Model Selection, Fits, and Diagnostics*
 
-A number of distributions were explored to fit an appropriate error distribution to 
-the data.
 
+The STAT explored alternative model structures to generate a standardized index of relative abundance. This included alternative response variables (catch in weight, catch in numbers, presence/absence), levels of aggregation (hook, drop, or site), probability distributions (binomial, negative binomial, lognormal, delta-gamma, and logit-normal), and covariates (year, site number, depth, distance to port, area, inside/outside CCA). Preliminary analyses showed that trends in the annual proportion of positive hooks were very similar to trends in catch rate per drop or site. Posterior predictive checks of annual means and standard deviations identified the logit-normal model as the most appropriate error distribution. The final model included covariate terms for year, site number, drop number, a 
+Second-order depth term, and a normally-distributed random effect for each observation.
 
-The final model included terms for Year, Site, Drop number within a site, a 
-second order depth, and a random effect for each observation.
 
 Models were fit using the “rstanarm” R package (version 2.21.1). Posterior predictive 
-checks of the Bayesian model fit for the binomial model and the positive model 
-were all reasonable (Figures \@ref(fig:fig-posterior-mean-nwfschl)  and 
+checks of the Bayesian model fit for the final logit model 
+were all reasonable (Figures \@ref(fig:fig-posterior-mean-nwfschl) and 
  \@ref(fig:fig-posterior-sd-nwfschl)). The model generated data sets with the 
- proportion zeros similar to the 50%  zeroes in the observed data 
+ proportion zeros similar to the ~50% zeroes in the data 
 (Figure \@ref(fig:fig-propzero-nwfschl)). The predicted marginal effects from 
-both the final logit normal model can be found in (Figures \@ref(fig:marginal-nwfschl).
-The depth effect is masked by the site effect in the marginal effects.  A model
+the final logit normal model can be found in Figure \@ref(fig:marginal-nwfschl).
+The marginal depth effect represents the influence of depth on the proportion of vermilion *after* accounting for site effects.  A model
 run without the site effect confirms that that depth follows the expected pattern 
-observed in the data.
-The  final index (Table \@ref(tab:tab-index-nwfschl)) 
-represents a similar trend to the arithmetic mean of the annual CPUE (Figure \@ref(fig:fig-cpue-nwfschl)).  
+observed in the data, i.e. a peak near 145 m (Figure \@ref(fig:marginal2-nwfschl)).
+The  final index (Table \@ref(tab:tab-index-nwfschl)), 
+when compared to the arithmetic mean of the annual CPUE, declines slightly more from 2008-2012, with a significant increase after 2016 (Figure \@ref(fig:fig-cpue-nwfschl)).  
 
+The expansion of the survey area into the CCAs after 2014 limits exploration of year/area interactions in the model. The STAT adopted an approach similar to that used for the 2019 assessment of cowcod [@Dick2019]. Specifically, because site effects (both inside and outside the CCA) are constant over time in the index, selectivity for the index is estimated using composition data that represents all areas (2014-2019, inside and outside the CCAs). Not wanting to lose length and age compositions prior to 2014, these data are moved to a ‘dummy’ fleet in the assessment model, and allowed to have a different selectivity curve due to differences in size composition inside and outside the CCAs [@Keller2019]. This treatment of the data, although not ideal, was seen as preferable to development of two separate indices.
 
 
 
@@ -210,25 +212,25 @@ Year & Positive Samples & Samples & Percent Positive\\
 \toprule
 Year & Mean & logSE & lower HPD & upper HPD\\
 \midrule
-\cellcolor{gray!6}{2004} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{0.28} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.07}\\
-2005 & 0.05 & 0.28 & 0.03 & 0.08\\
-\cellcolor{gray!6}{2006} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{0.28} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.07}\\
-2007 & 0.04 & 0.28 & 0.02 & 0.07\\
-\cellcolor{gray!6}{2008} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{0.28} & \cellcolor{gray!6}{0.01} & \cellcolor{gray!6}{0.04}\\
+\cellcolor{gray!6}{2004} & \cellcolor{gray!6}{0.0403} & \cellcolor{gray!6}{0.2824} & \cellcolor{gray!6}{0.0222} & \cellcolor{gray!6}{0.0666}\\
+2005 & 0.0491 & 0.2768 & 0.0272 & 0.0798\\
+\cellcolor{gray!6}{2006} & \cellcolor{gray!6}{0.0438} & \cellcolor{gray!6}{0.2817} & \cellcolor{gray!6}{0.0239} & \cellcolor{gray!6}{0.0719}\\
+2007 & 0.0445 & 0.2790 & 0.0244 & 0.0722\\
+\cellcolor{gray!6}{2008} & \cellcolor{gray!6}{0.0266} & \cellcolor{gray!6}{0.2843} & \cellcolor{gray!6}{0.0145} & \cellcolor{gray!6}{0.0444}\\
 \addlinespace
-2009 & 0.04 & 0.28 & 0.02 & 0.06\\
-\cellcolor{gray!6}{2010} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{0.28} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{0.06}\\
-2011 & 0.05 & 0.27 & 0.03 & 0.09\\
-\cellcolor{gray!6}{2012} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.28} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{0.07}\\
-2013 & 0.05 & 0.28 & 0.03 & 0.09\\
+2009 & 0.0355 & 0.2819 & 0.0195 & 0.0583\\
+\cellcolor{gray!6}{2010} & \cellcolor{gray!6}{0.0361} & \cellcolor{gray!6}{0.2825} & \cellcolor{gray!6}{0.0197} & \cellcolor{gray!6}{0.0599}\\
+2011 & 0.0532 & 0.2741 & 0.0295 & 0.0864\\
+\cellcolor{gray!6}{2012} & \cellcolor{gray!6}{0.0454} & \cellcolor{gray!6}{0.2756} & \cellcolor{gray!6}{0.0254} & \cellcolor{gray!6}{0.0739}\\
+2013 & 0.0526 & 0.2765 & 0.0290 & 0.0858\\
 \addlinespace
-\cellcolor{gray!6}{2014} & \cellcolor{gray!6}{0.06} & \cellcolor{gray!6}{0.27} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{0.09}\\
-2015 & 0.06 & 0.27 & 0.03 & 0.10\\
-\cellcolor{gray!6}{2016} & \cellcolor{gray!6}{0.06} & \cellcolor{gray!6}{0.27} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{0.09}\\
-2017 & 0.10 & 0.26 & 0.06 & 0.15\\
-\cellcolor{gray!6}{2018} & \cellcolor{gray!6}{0.09} & \cellcolor{gray!6}{0.26} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.14}\\
+\cellcolor{gray!6}{2014} & \cellcolor{gray!6}{0.0578} & \cellcolor{gray!6}{0.2697} & \cellcolor{gray!6}{0.0326} & \cellcolor{gray!6}{0.0931}\\
+2015 & 0.0599 & 0.2661 & 0.0339 & 0.0957\\
+\cellcolor{gray!6}{2016} & \cellcolor{gray!6}{0.0586} & \cellcolor{gray!6}{0.2697} & \cellcolor{gray!6}{0.0329} & \cellcolor{gray!6}{0.0950}\\
+2017 & 0.0963 & 0.2562 & 0.0559 & 0.1511\\
+\cellcolor{gray!6}{2018} & \cellcolor{gray!6}{0.0879} & \cellcolor{gray!6}{0.2606} & \cellcolor{gray!6}{0.0501} & \cellcolor{gray!6}{0.1392}\\
 \addlinespace
-2019 & 0.07 & 0.27 & 0.04 & 0.11\\
+2019 & 0.0674 & 0.2681 & 0.0381 & 0.1085\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -245,23 +247,23 @@ Year & Mean & logSE & lower HPD & upper HPD\\
 \end{figure}
 
 
-
-![(\#fig:fig-propzero-nwfschl)Posterior predictive distribution of the proportion of zero observations in replicate data sets generated by the logit normal model with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_NWFSC_HL_writeup_SCA_files/figure-latex/fig-propzero-nwfschl-1.pdf) 
-
+\FloatBarrier
 
 ![(\#fig:fig-posterior-mean-nwfschl)Posterior predictive draws of the mean by year with a vertical line of the raw data average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_NWFSC_HL_writeup_SCA_files/figure-latex/fig-posterior-mean-nwfschl-1.pdf) 
 
+\FloatBarrier
 
 ![(\#fig:fig-posterior-sd-nwfschl)Posterior predictive draws of the standard deviation by year with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_NWFSC_HL_writeup_SCA_files/figure-latex/fig-posterior-sd-nwfschl-1.pdf) 
 
 
-![(\#fig:fig-cpue-nwfschl)Standardized index and arithmetic mean of the CPUE from the filtered data. Each timeseries is scaled to its respective means.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_NWFSC_HL_writeup_SCA_files/figure-latex/fig-cpue-nwfschl-1.pdf) 
+![(\#fig:fig-propzero-nwfschl)Posterior predictive distribution of the proportion of zero observations in replicate data sets generated by the logit normal model with a vertical line representing the observed average.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_NWFSC_HL_writeup_SCA_files/figure-latex/fig-propzero-nwfschl-1.pdf) 
 
+
+![(\#fig:marginal2-nwfschl)Marginal effect of depth from a logit normal model without site.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_NWFSC_HL_writeup_SCA_files/figure-latex/marginal2-nwfschl-1.pdf) 
 
 
 ![(\#fig:marginal-nwfschl)Marginal effects from the final model logit normal model.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_NWFSC_HL_writeup_SCA_files/figure-latex/marginal-nwfschl-1.pdf) 
 
 
+![(\#fig:fig-cpue-nwfschl)Standardized index and arithmetic mean of the CPUE from the filtered data. Each timeseries is scaled to its respective means.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_NWFSC_HL_writeup_SCA_files/figure-latex/fig-cpue-nwfschl-1.pdf) 
 
-
-![(\#fig:marginal2-nwfschl)Marginal effect of depth from a logit normal model without site.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_NWFSC_HL_writeup_SCA_files/figure-latex/marginal2-nwfschl-1.pdf) 

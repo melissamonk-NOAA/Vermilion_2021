@@ -25,7 +25,7 @@ kableExtra::pack_rows(group_label = paste0("South of 40",intToUtf8(176),"10\' N"
 -->
 
 ```{r, warning = FALSE, inclue = FALSE}
-timeseries <- read.csv("./tex_tables/TimeSeries.csv") %>%
+timeseries <- read.csv(paste0(exec_tables_loc,"TimeSeries.csv")) %>%
   mutate_at(c(2:9), round,3)
 ```
 

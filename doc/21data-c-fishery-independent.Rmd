@@ -43,22 +43,6 @@ sample sizes, model selection criteria, and model diagnostics.
 
 
 ```{asis, echo = model.area=='NCA'}
-### SWFSC Groundfish Ecology Cruises
-D. Pearson (SWFSC, retired) conducted a series of groundfish surveys (hook-and-line and 
-trawl) from 2003 - 2005 along the coast of California.  Surveys were conducted onboard 
-chartered commercial vessels and NOAA research vessels.
-
-Even though samples were collected via multiple gear types, the the majority were collected using commercial hook-and-line hear, and data from all gears were combined for use 
-in the assessment.
-
-**Available Data**
-
-*Age and Length Data.*
-A total of 229 vermilion were aged from this survey from samples in 2004-2005.
-The length composition includes 355 vermilion from these surveys 
-(Figures \@ref(fig:len-data-SWFSC-GF-ECOL)).
-
-
 ### J. Abrams thesis data
 
 For his master's thesis work at Humboldt State University, Jeff Abrams conducted fishery-independent
@@ -74,6 +58,21 @@ especially from the North Coast. This collection resides at the SWFSC Santa Cruz
 All 81 vermilion collected during the survey were aged and represent the most northern biological 
 samples in this model. The available length compositions for males and females, 2010-2011, are shown in Figure
 \@ref(fig:len-data-ABRAMS-RESEARCH). 
+
+### SWFSC Groundfish Ecology Cruises
+D. Pearson (SWFSC, retired) conducted a series of groundfish surveys (hook-and-line and 
+trawl) from 2003 - 2005 along the coast of California.  Surveys were conducted onboard 
+chartered commercial vessels and NOAA research vessels.
+
+Even though samples were collected via multiple gear types, the the majority were collected using commercial hook-and-line hear, and data from all gears were combined for use 
+in the assessment.
+
+**Available Data**
+
+*Age and Length Data.*
+A total of 229 vermilion were aged from this survey from samples in 2004-2005.
+The length composition includes 355 vermilion from these surveys 
+(Figure \@ref(fig:len-data-SWFSC-GF-ECOL)).
 
 
 ### California Collaborative Fisheries Research Project
@@ -144,8 +143,8 @@ Composition data from the hook-and-line survey are assigned to two different fle
 **Available Data**
 
 *Age and Length Data.* This survey provides a wealth of biological information for the 
-stock assessment, including lengths of 22,720 vermilion and ages from 9,211 vermilion. 
-The length composition can be found in Figure \@ref(fig:len-data-NWFSC-HKL) for the period 2014-2019 (sampling inside the CCAs) and Figure \@ref(tab:length-sample-size) for years 2004-2013, when sampling was limited to areas outside the CCAs. 
+stock assessment, including lengths of 22,720 vermilion and ages from 9,211 vermilion (Table \@ref(tab:length-sample-size)). 
+The length composition can be found in Figure \@ref(fig:len-data-NWFSC-HKL) for the period 2014-2019 (sampling inside the CCAs) and Figure \@ref(fig:len-data-EARLY-HKL) for years 2004-2013, when sampling was limited to areas outside the CCAs. 
 
 
 *Index of Abundance.*
