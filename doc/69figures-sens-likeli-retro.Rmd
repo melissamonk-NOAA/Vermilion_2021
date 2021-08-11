@@ -210,4 +210,34 @@ sa4ss::add_figure(
   label = 'sens1-recdev'
 )
 ```
+<!-- ======================================================================= -->
+<!-- *******************    Other sensitivities 3**************************** --> 
+<!-- ======================================================================= -->
 
+```{r,include = FALSE, warning = FALSE}
+sens1.fig.filein = list.files(path = fig_loc,  
+                  pattern = glob2rx(paste0("sens3*",model.area, ".png")), 
+                  full.names = TRUE)
+```
+
+
+```{r, results = 'asis'}
+sa4ss::add_figure(
+  filein = sens3.fig.filein[1] ,
+  caption = "Change in the trajectory of spawning output to a series of model sensitivity runs",
+  label = 'sens3a'
+)
+
+
+sa4ss::add_figure(
+  filein = sens3.fig.filein[2] ,
+  caption =  "Change in the fraction of unfished biomass to a series of model sensitivity runs",
+  label = 'sens3b'
+)
+
+sa4ss::add_figure(
+  filein = sens3.fig.filein[3] ,
+  caption = "Change in the recruitment deviations to a series of model sensitivity runs",
+  label = 'sens3c'
+)
+```

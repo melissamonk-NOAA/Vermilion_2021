@@ -55,7 +55,7 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_SCA.md")
 
 \clearpage
 
-## WCGBTS Index of Abundance {#wcgbts-index}
+## WCGBTS Index of Abundance 
 
 ```{r wcgbts-index, results = 'asis'}
   sa4ss::read_child("./indices/vermilion_WCGBTS_writeup_SCA.md")
@@ -65,11 +65,12 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_SCA.md")
 
 ## Recreational Regulations {#regs-graphic}
 
-```{r wcgbts-index, results = 'asis'}
-  sa4ss::read_child("./indices/vermilion_WCGBTS_writeup_SCA.md")
+```{r rec-regs, results = 'asis'}
+  sa4ss::read_child("70appendices-regs.Rmd")
 ``` 
 
 \clearpage 
+
 
 
 # References

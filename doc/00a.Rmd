@@ -158,5 +158,4 @@ colnames(fleet_info) = c("fleet_ID", "FleetNames", "FleetNames_label", "FleetNam
 fleet_info$fleet_ID = as.numeric(fleet_info$fleet_ID)
 
 plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
-
 ```

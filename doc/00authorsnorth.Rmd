@@ -16,17 +16,27 @@ author:
     middle: C
     family: Field
   - name: Emma M. Saas
-    code: 1
+    code: 2
     first: E
     middle: M
     family: Saas
-author_list: Monk, M.H., E.J. Dick, J.C. Field, E.M. Saas
+  - name: Tanya L. Rogers
+    code: 1
+    first: T
+    middle: L
+    family: Rogers
+author_list: Monk, M.H., E.J. Dick, J.C. Field, E.M. Saas, T.L. Rogers
 affiliation:
   - code: 1
     address: Southwest Fisheries Science Center, U.S. Department of Commerce, National
       Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110
       McAllister Way, Santa Cruz, California 95060
-address: ^1^Southwest Fisheries Science Center, U.S. Department of Commerce, National
-  Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110 McAllister
-  Way, Santa Cruz, California 95060
+  - code: 2
+    address: Fisheries Collaborative Program, Insitute of Marine Sciences, University of California,         Santa Cruz, 110 McAllister Way, Santa Cruz, California 95060
+address: 
+  - ^1^Southwest Fisheries Science Center, U.S. Department of Commerce, National
+    Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110 McAllister
+    Way, Santa Cruz, California 95060
+  - ^2^Fisheries Collaborative Program, Insitute of Marine Sciences, University of California, Santa     Cruz, 110 McAllister Way, Santa Cruz, California 95060
+  
 ---

@@ -1,8 +1,8 @@
 ###Run r4ss
 
 ##NORTHERN CA MODEL
-#detach("package:sa4ss", unload = TRUE)
-#remotes::install_github("nwfsc-assess/sa4ss")
+detach("package:sa4ss", unload = TRUE)
+remotes::install_github("nwfsc-assess/sa4ss")
 library(sa4ss)
 
 setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/")
@@ -56,8 +56,8 @@ source("code/dir_recent.R")
 #-------------------------------------------------------------------------------
 #Run each time the base model changes
 #Set base model file directory
-dir.path = c("C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/",
-             "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/")
+dir.path = c("C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/",
+             "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/")
 
 doc_dir <- "C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc"
 #North
@@ -69,7 +69,7 @@ setwd(base_loc)
 sa4ss::read_model(
   mod_loc = base_loc,
   create_plots = TRUE, 
-  save_loc = file.path(doc_dir, "tex_tables/north"),
+  #save_loc = file.path(doc_dir, "tex_tables/north"),
   verbose = TRUE)
 
 

@@ -1,7 +1,7 @@
 ---
 title: "MRFSS Dockside CPFV Index, 1980-1999, for vermilion in 2021"
 author: "Melissa H. Monk"
-date: "June 20, 2021"
+date: "July 19, 2021"
 params:
     Model.number: 1
     species.name: "vermilion"
@@ -159,7 +159,7 @@ a main effects model including
 YEAR and SubRegion 
 was fit for the binomial model and a main 
 effects model including 
-NA 
+YEAR and SubRegion and AREA X 
 was fit for the  Lognormal model.
 Models were fit using the “rstanarm” R package (version 2.21.1). Posterior predictive 
 checks of the Bayesian model fit for the binomial model and the positive model 
@@ -172,6 +172,9 @@ The predicted marginal effects from both the binomial and Lognormal models
 can be found in (Figures \@ref(fig:fig-Dbin-marginal-mrfss) and 
 \@ref(fig:fig-Dpos-marginal-mrfss)). The final index (Table \@ref(tab:tab-index-mrfss)) 
 represents a similar trend to the arithmetic mean of the annual CPUE (Figure \@ref(fig:fig-cpue-mrfss)).
+
+
+<!-- ******************************* TABLES ******************************** -->
 
 \newpage
 
@@ -236,10 +239,11 @@ Model & Binomial $\Delta$AIC & Lognormal $\Delta$AIC\\
 YEAR + SubRegion & 0.00 & 0.89\\
 \cellcolor{gray!6}{YEAR + SubRegion + WAVE} & \cellcolor{gray!6}{1.77} & \cellcolor{gray!6}{3.03}\\
 YEAR + SubRegion + WAVE + AREA X & 3.76 & 1.85\\
-\cellcolor{gray!6}{YEAR + WAVE + AREA X} & \cellcolor{gray!6}{22.67} & \cellcolor{gray!6}{16.13}\\
+\cellcolor{gray!6}{YEAR + WAVE} & \cellcolor{gray!6}{22.05} & \cellcolor{gray!6}{21.16}\\
 \addlinespace
 YEAR + AREA X & 20.13 & 14.44\\
-\cellcolor{gray!6}{YEAR + SubRegion + AREA X} & \cellcolor{gray!6}{2.00} & \cellcolor{gray!6}{0.00}\\
+\cellcolor{gray!6}{YEAR + WAVE + AREA X} & \cellcolor{gray!6}{22.67} & \cellcolor{gray!6}{16.13}\\
+YEAR + SubRegion + AREA X & 2.00 & 0.00\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -255,23 +259,23 @@ YEAR + AREA X & 20.13 & 14.44\\
 \centering
 \begin{tabular}[t]{rrrrr}
 \toprule
-Year & Mean & logSE & lower HPD & upper HPD\\
+Year & Index & logSE & lower HPD & upper HPD\\
 \midrule
-\cellcolor{gray!6}{1980} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.21} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{0.08}\\
+\cellcolor{gray!6}{1980} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.21} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{0.08}\\
 1981 & 0.04 & 0.32 & 0.02 & 0.07\\
 \cellcolor{gray!6}{1982} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.23} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{0.07}\\
 1983 & 0.07 & 0.26 & 0.04 & 0.11\\
 \cellcolor{gray!6}{1984} & \cellcolor{gray!6}{0.09} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.06} & \cellcolor{gray!6}{0.13}\\
 \addlinespace
 1985 & 0.06 & 0.16 & 0.04 & 0.08\\
-\cellcolor{gray!6}{1986} & \cellcolor{gray!6}{0.07} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.10}\\
+\cellcolor{gray!6}{1986} & \cellcolor{gray!6}{0.07} & \cellcolor{gray!6}{0.16} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.10}\\
 1987 & 0.08 & 0.21 & 0.05 & 0.12\\
-\cellcolor{gray!6}{1988} & \cellcolor{gray!6}{0.11} & \cellcolor{gray!6}{0.18} & \cellcolor{gray!6}{0.08} & \cellcolor{gray!6}{0.15}\\
-1989 & 0.09 & 0.20 & 0.06 & 0.13\\
+\cellcolor{gray!6}{1988} & \cellcolor{gray!6}{0.11} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{0.08} & \cellcolor{gray!6}{0.15}\\
+1989 & 0.09 & 0.21 & 0.06 & 0.13\\
 \addlinespace
-\cellcolor{gray!6}{1995} & \cellcolor{gray!6}{0.08} & \cellcolor{gray!6}{0.19} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.12}\\
+\cellcolor{gray!6}{1995} & \cellcolor{gray!6}{0.08} & \cellcolor{gray!6}{0.20} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{0.12}\\
 1996 & 0.09 & 0.11 & 0.07 & 0.11\\
-\cellcolor{gray!6}{1997} & \cellcolor{gray!6}{0.23} & \cellcolor{gray!6}{0.11} & \cellcolor{gray!6}{0.18} & \cellcolor{gray!6}{0.29}\\
+\cellcolor{gray!6}{1997} & \cellcolor{gray!6}{0.23} & \cellcolor{gray!6}{0.11} & \cellcolor{gray!6}{0.19} & \cellcolor{gray!6}{0.29}\\
 1998 & 0.17 & 0.12 & 0.13 & 0.21\\
 \cellcolor{gray!6}{1999} & \cellcolor{gray!6}{0.09} & \cellcolor{gray!6}{0.12} & \cellcolor{gray!6}{0.07} & \cellcolor{gray!6}{0.11}\\
 \bottomrule
@@ -283,16 +287,14 @@ Year & Mean & logSE & lower HPD & upper HPD\\
 \FloatBarrier
 
 
-
-\FloatBarrier
-
+<!-- ******************************* FIGURES ******************************** -->
 
 \begin{figure}
-\includegraphics[width=0.6\linewidth]{C:/Stock_Assessments/VRML_Assessment_2021/Indices_of_Abundance/MRFSS_dockside/NCA/2021-05-28/MRFSS_dockside_SM_species} \caption{Species coefficients (blue bars) from the binomial GLM for presence/absence of vermilion rockfish in the CRFS private boat data. Horizontal black bars are $95\%$ confidence intervals.}(\#fig:fig-sm-mrfss)
+\includegraphics[width=0.6\linewidth]{C:/Stock_Assessments/VRML_Assessment_2021/Indices_of_Abundance/MRFSS_dockside/NCA/2021-07-19/MRFSS_dockside_SM_species} \caption{Species coefficients (blue bars) from the binomial GLM for presence/absence of vermilion rockfish in the CRFS private boat data. Horizontal black bars are $95\%$ confidence intervals.}(\#fig:fig-sm-mrfss)
 \end{figure}
 
 
-![(\#fig:fig-dist-fits-mrfss)Q-Q plot of the positive observations lognormal gamma distributions and fitted values vs residuals for the Lognormal .](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_MRFSS_dockside_writeup_NCA_files/figure-latex/fig-dist-fits-mrfss-1.pdf) 
+![(\#fig:fig-dist-fits-mrfss)Q-Q plot (top) of the positive observations lognormal gamma distributions and fitted values vs residuals for the Lognormal model (bottom).](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_MRFSS_dockside_writeup_NCA_files/figure-latex/fig-dist-fits-mrfss-1.pdf) 
 
 
 \FloatBarrier
