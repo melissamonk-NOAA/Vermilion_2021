@@ -1,16 +1,11 @@
 # Executive Summary{-}
 
 
-## Stock
+## Stock{-}
 
-This assessment reports the status of the vermlion rockfish (_Sebastes miniatus_) 
-and sunset rockfish (_Sebastes crocotulus_) complex (referred to as vermilion rockfish 
-throughout), resource in U.S. waters off the coast of California `r params$model` 
+This assessment reports the combined status of the vermilion rockfish (_Sebastes miniatus_) and sunset rockfish (_Sebastes crocotulus_), referred to as “vermilion rockfish” throughout, in U.S. waters off the coast of California `r params$model` 
 of Point Conception (\PtC) using data through 2020. Genetic evidence suggests 
-a mixture of the two species with the majority of thee sunset rockfish population 
-south of Point Conception. Alternative spatial structures for the vermilion rockfish 
-assessment should be assessed if additional data on stock structure and the distribution 
-of the two species become available.
+overlapping distributions for the two species, with the majority of the sunset rockfish population occupying waters south of Point Conception. Alternative spatial structures for the vermilion rockfish assessment should be considered if additional data on stock structure and the distribution of the two species become available.
 
 
 ## Catches{-}
@@ -30,13 +25,13 @@ max.catch.5 <- Tot.catch %>% top_n(5, Catch)
 Tot.catch.recent <- Tot.catch %>% filter(Yr>2010)
 ```
 
-Over the past decade, vermilion rockfish off the coast of California have been 
+Over the past decade, vermilion rockfish in the assessed area off the coast of California in have been 
 primarily caught by the recreational fishery (Table \@ref(tab:removalsES)). 
-Annual total landings of catch and discards of `r spp` have ranged between 
+Annual total mortality of catch and discards of `r spp` have ranged between 
 `r paste0( min(round(Tot.catch.recent$Catch,0)), '-', max(round(Tot.catch.recent$Catch, 0)))` 
-mt, with landings (catch + discards) in `r model$endyr` totaling `r round(Tot.catch.recent$Catch[Tot.catch.recent$Yr==model$endyr] ,0)` mt. 
+mt, with total mortality (catch + discards) in `r model$endyr` of `r round(Tot.catch.recent$Catch[Tot.catch.recent$Yr==model$endyr] ,0)` mt. 
 Vermilion and sunset rockfishes landings from all sectors have historically been recorded as 
-“vermilion rockfish” and recreational sampling in California currently does not 
+“vermilion rockfish” and sampling programs in California currently do not 
 differentiate between the two species.
 
 Recreational removals in California prior to 2004 were only estimated at large 
@@ -45,35 +40,47 @@ the Marine Recreational Fisheries Statistics Survey (MRFSS). Recent sampling
 (2004 – present) by the California Recreational Fisheries Survey (CRFS) produces 
 estimates of vermilion landings and discard at a finer spatial resolution. Total 
 removals `r params$model` of Point Conception increased steadily following World 
-War II, peaking in the late 1970s and early 1980s with annual removals exceeding 
+War II, peaking in the late 1970s and 1980s with annual removals exceeding 
 `r round(max(Tot.catch$Catch), 0)` mt per year (Figure \@ref(fig:catch)). Recent 
-years have seen a steady increase in landings, but total removals remain low 
-relative to historical levels.
+years have seen a steady increase in landings, with recreational fleets accounting for the majority of landings.
 
 \FloatBarrier
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(base_loc_plots, "catch2 landings stacked.png"), 
-caption = "Catch histories by fleet used in the base model",
+caption = "Catch histories by fleet used in the base model 
+              (Commercial hook-and-line =  COM_HKL,
+                Commercial trawl = COM_TWL, Commercial net = COM_NET,
+              Recreational party/charter retained = REC_PC, Recreational 
+              private/rental retained = REC_PR, Recreational party/charter 
+              dead discards = REC_PC_DIS, Recreational private/rental dead 
+              discards = REC_PR_DIS)",
 label = 'catch')
 ```
 
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
 removals <- read.csv(paste0(exec_tables_loc,'a_Catches_ES.csv')) %>%
-  mutate_at(c(-1), round,3) %>%
-  rename(`Total Landings` = Total.Landings)
-colnames(removals) = gsub("_","-",colnames(removals))
+  mutate_at(c(-1), round,3) 
+removals <- removals[,1:9]
 ```
 
 ```{r, results = 'asis'}
 kableExtra::kbl(removals,
                 booktabs=TRUE,
-                caption="Recent landings by fleet, total landings summed across 
-                fleets, and the total mortality including discards.",
-                label="removalsES",
+                caption="Recent mortality (mt) by fleet and total landings summed across 
+                all fleets in the model.",
+                col.names = c("Year", "Hook-and-line", "Trawl","Net",
+                              "Retained"," Dead discards","Retained",
+                              "Dead discards", "Total Mortality"),
+                label="removalsES", 
+                align = "c",
+                linesep = "",
                 escape = FALSE) %>%
+  add_header_above(c(" " = 4, "Party/charter" = 2, "Private/rental" = 2, " " = 1)) %>%
+   add_header_above(c(" " = 1, "Commercial" = 3, "Recreational" = 4, " " = 1), line = F, bold = T) %>%
+  column_spec(c(2:9), width = ".6in") %>%
   kable_styling(latex_options = c("striped", "HOLD_position","scale_down"))
 ```
 
@@ -82,37 +89,58 @@ kableExtra::kbl(removals,
 
 ## Data and Assessment{-}
 
-This is the first full stock assessment for vermilion and sunset rockfishes. 
+```{asis, echo = model.area=='NCA'}
 A full assessment was attempted in 2005, but not accepted for management and a 
-data moderate assessment in 2013 was not reviewed.  The 2021 assessment uses 
-Stock Synthesis 3 (version V3.30.17.0). The assessment is a two sex model, with 
-the population spanning from Point Conception to the California/Oregon border. 
+data moderate assessment in 2013 was not reviewed.  As such, this is the first benchmark assessment for vermilion and sunset rockfishes. The 2021 assessment uses 
+Stock Synthesis 3 (version V3.30.17.0). The assessment is a two-sex model, with 
+the population spanning from Point Conception (\PtC) to the California/Oregon border (\CAOR). 
 The assessment model operates on an annual time step covering the period 1875 to 
-2020 (not including forecast years) and assumed an unfished 
+2020 (not including forecast years) and assumes an unfished 
 population prior to 1875. Population dynamics are modeled for ages 0 through 70, 
 with age-70 being the accumulator age.  
 
 The model is conditioned on catch from two sectors (commercial and recreational) 
 divided among seven fleets, and is informed by five abundance indices 
-(one fishery-independent survey, two CPUE indices from shore-based sampling programs, 
-and two CPUE indices from onboard observer programs).  Discards for the commercial 
-fleet are not included in the model. Commercial discards of vermilion are a small 
+(one fishery-independent survey, two CPUE indices from shore-based recreational fishery sampling programs, 
+and two CPUE indices from recreational onboard party/charter boat observer programs). The model is also fit to length composition data from fishery-independent and fishery-dependent sources, as well as age compositions conditioned on length.  Discards for the commercial 
+fleets are not included in the model. Commercial discards of vermilion are a small 
 fraction of the total mortality and data on commercial discard length composition is
 limited. The recreational fishery is split into four fleets, one discard and one 
-retained fish fleet each for the private/rental and the party/charter boat modes.
+retained fish fleet each for the private/rental and the party/charter boat modes. The model also incorporates an updated length-weight relationship, length-based maturity schedule, and fecundity-at-length function.
 
 The assessment estimates parameters for natural mortality of females and males, 
-steepness of the Beverton-Holt stock-recruitment relationship, and sex-specific 
-growth parameters. Year class strength is estimated as deviations from the expected 
-stock-recruitment relationship beginning in 1965.
-
-The assessment estimates parameters for natural mortality of females and males 
-and sex-specific growth parameters. Year class strength is estimated as deviations 
-from the expected stock-recruitment relationship beginning in 1965. Steepness of 
+and sex-specific 
+growth parameters. Year class strength is estimated as deviations from a Beverton-Holt stock-recruitment relationship beginning in 1970. Steepness of 
 the Beverton-Holt stock-recruitment relationship is fixed at the mean of the prior, 
-0.72. A number of sources of uncertainty are addressed in this assessment. This 
-assessment includes length data, estimated growth, an updated length-weight curve, 
-an updated maturity curve, a number of new indices, and new conditional age-at-length data.  
+0.72. 
+```
+
+
+```{asis, echo = model.area=='SCA'}
+A full assessment was attempted in 2005, but not accepted for management and a 
+data moderate assessment in 2013 was not reviewed.  As such, this is the first benchmark assessment for vermilion and sunset rockfishes. The 2021 assessment uses 
+Stock Synthesis 3 (version V3.30.17.0). The assessment is a two-sex model, with 
+the population spanning from the U.S./Mexico border to Point Conception (\PtC). 
+The model operates on an annual time step covering the period 1875 to 
+2020 (not including forecast years) and assumes an unfished 
+population prior to 1875. Population dynamics are modeled for ages 0 through 70, 
+with age-70 being the accumulator age.  
+
+The model is conditioned on catch from two sectors (commercial and recreational) 
+divided among seven fleets, and is informed by four abundance indices 
+(one fishery-independent survey, two CPUE indices from shore-based sampling programs, 
+and one CPUE index using onboard party/charter observer data). The model is also fit to length composition data from fishery-independent and fishery-dependent sources, as well as age compositions conditioned on length.  Discards for the commercial 
+fleets are not included in the model. Commercial discards of vermilion are a small 
+fraction of the total mortality and data on commercial discard length composition is
+limited. The recreational fishery is split into four fleets, one discard and one 
+retained fish fleet each for the private/rental and the party/charter boat modes. The model also incorporates an updated length-weight relationship, length-based maturity schedule, and fecundity-at-length function.
+
+The assessment estimates a single natural mortality rate for females and males, 
+steepness of the Beverton-Holt stock-recruitment relationship, and sex-specific 
+growth parameters. Year class strength is estimated as deviations from a Beverton-Holt  expected stock-recruitment relationship beginning in 1965. 
+```
+
+ 
 
 \FloatBarrier
 
@@ -120,51 +148,70 @@ an updated maturity curve, a number of new indices, and new conditional age-at-l
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
 #Read in table to use values in the text and print the table below
-ssb <- read.csv(paste0(exec_tables_loc,'b_SSB_ES.csv')) %>%
-  mutate_at(c(-1), round,3) 
+refpts <- read.csv(paste0(exec_tables_loc,'e_ReferencePoints_ES.csv')) %>%
+  mutate_at(c(2:4), round,3) 
+
 ```
 
 
-Spawning output of vermilion rockfish was estimated to be `r round(ssb$Spawning.Output[ssb$Year==model$endyr],0)` million eggs in 2021 or `r scales::percent(ssb$Fraction.Unfished[ssb$Year==model$endyr], accuracy = 1)` of 
-unfished spawning output (“depletion,” Table \@ref(tab:ssbES)). Depletion is a 
-ratio of the estimated spawning output in a particular year relative to estimated 
+Spawning output of vermilion rockfish was estimated to be 
+`r round(refpts[1,2], 0)`  million eggs in 2021 (95% asymptotic interval: 
+`r paste0(round(refpts[1,3],0), " - ", round(refpts[1,4],0))` million eggs) or 
+`r scales::percent(refpts[5,2], accuracy = 1)` 
+(95% asymptotic interval: 
+`r paste0(scales::percent(refpts[5,3], accuracy = 1)," - ", scales::percent(refpts[5,4], accuracy = 1))` million eggs) 
+of unfished spawning output (“depletion,” Table \@ref(tab:ssbES)). Depletion 
+is a ratio of the estimated spawning output in a particular year relative to 
+estimated 
 unfished, equilibrium spawning output. 
 
 ```{asis, echo = model.area=='NCA'}
-In northern California, spawning output declined rapidly in the 1970s and early 1980s, falling below the minimum stock size threshold for a number of years in the 1990sa dn early 2000s, followed by a steady recovery since the late 2000s (Figures \@ref(fig:ssbES) and \@ref(fig:deplES)). The trend in spawning output in 2020 is just above the management target (40% of unfished spawning output).
+In northern California, spawning output declined rapidly in the 1970s and early 
+1980s, likely falling below the minimum stock size threshold for a number of 
+years in the 1990s and early 2000s, followed by a steady recovery since the 
+late 2000s (Figures \@ref(fig:ssbES) and \@ref(fig:deplES)). The spawning output 
+in 2021 is just above the management target (40% of unfished spawning output).
 ```
 
 ```{asis, echo = model.area=='SCA'}
-In southern California, spawning output declined rapidly in the 1970s and early 1980s, falling below the minimum stock size threshold in the early 1980s, followed by a steady recovery since the late 2000s (Figures \@ref(fig:ssbES) and \@ref(fig:deplES)). The trend in spawning output in 2017 is approaching the management target (40% of unfished spawning output), but the precision of that estimate is low relative to other management reference points (e.g. the SPR50% proxies for target spawning output and maximum yield).
+In southern California, spawning output declined rapidly in the 1970s and early 1980s, likely falling below the minimum stock size threshold in the early 1990s, followed by a steady recovery since the early 2000s (Figures \@ref(fig:ssbES) and \@ref(fig:deplES)). The spawning output in 2021 is above the management target (40% of unfished spawning output).
 ```
 
 
 <!--BEGIN  EXECUTIVE SUMMARY SPAWNING BIOMASS AND DEPLETE TABLES AND FIGURES-->
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(base_loc, "plots", "ts9_Relative_spawning_output_intervals.png"), 
-caption = "Estimated time series of relative spawning output depletion (spawning output relative to unfished spawning output) with approximate 95% asymptotic confidence intervals (dashed lines)",
-label = 'deplES')
+filein = file.path(base_loc, "plots", "ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png"), 
+caption = "Estimated time series of spawning output (solid line with circles) with approximate 95% asymptotic confidence intervals (dashed lines)",
+label = 'ssbES')
 ```
 
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(base_loc, "plots", "ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png"), 
-caption = "Estimated time series of spawning output with approximate 95% asymptotic confidence intervals (dashed lines)",
-label = 'ssbES')
+filein = file.path(base_loc, "plots", "ts9_Relative_spawning_output_intervals.png"), 
+caption = "Estimated time series of spawning output relative to unfished spawning output (solid line with circles) with approximate 95% asymptotic confidence intervals (dashed lines)",
+label = 'deplES')
 ```
-
-
 
 ```{r, results = 'asis'}
 kableExtra::kbl(ssb,
                 booktabs=TRUE,
-                caption="Estimated recent trend in spawning output and the fraction unfished and the 95 percent intervals.",
+                caption="Estimated recent trend in spawning output and the fraction unfished and the approximate 95\\% asymtotic confidence intervals.",
                 label="ssbES",
-                col.names = c("Year" , "Spawning Output" , "Lower Interval" , "Upper Interval" , "Fraction Unfished" , "Lower Interval" , "Upper Interval"),
+                linesep = "",
+                align = "c",
+                col.names = c("Year" , "Estimate" , 
+                              "Lower Interval" , "Upper Interval" , 
+                              "Estimate" , "Lower Interval" , 
+                              "Upper Interval"),
                 escape = FALSE) %>%
-  kable_styling(latex_options = c("striped", "HOLD_position", "scale_down"))
+  add_header_above(c(" " = 1,
+                     "Spawning Output" = 3,
+                     "Fraction Unfished" = 3), bold = T) %>%
+  column_spec(c(2:3,5:7), width = ".6in") %>%
+  column_spec(4, border_right = T, width = ".6in") %>%
+  kable_styling(latex_options = "HOLD_position")
 ```
 
 <!-- *************END EXECUTIVE SUMMARY SPAWNING BIOMASS AND**************** -->
@@ -175,43 +222,75 @@ kableExtra::kbl(ssb,
 ## Recruitment{-}
 
 ```{asis, echo = model.area=='NCA'}
-Recruitment deviations were estimated from 1970-2020 with a recent, strong recruitment in 2016 that has contributed to the recent increase in vermilion biomass in northern California (Table \@ref(tab:recrES); Figure \@ref(fig:recruitsES)). Overall, variability in recruitment is average (to low) in the years following 2016.  
+Recruitment deviations were estimated from 1970-2020 with a recent, strong 
+recruitment in 2016 that has contributed to the recent increase in vermilion 
+biomass in northern California (Table \@ref(tab:recrES); Figure \@ref(fig:recruitsES)). 
+The second highest estimated recruitment occurred in 1985 and is more certain 
+than the estimated 2016 recruitment Overall, variability in recruitment is 
+average (to low) in the years following 2016.  
 ```
 
 ```{asis, echo = model.area=='SCA'}
-ajor recruitments (strong year classes) in southern California were consistently estimated by the primary sources of age data (NWFSC hook-and-line and trawl surveys), with a strong 1999 year class estimated even when either data set is removed (see sensitivity section). Other years with relatively high estimates of recruitment were 1983-84, 1999, and 2016 these are consistent with estimates of strong year classes in other rockfish stock assessments. 
+Major recruitments (strong year classes) in southern California were consistently 
+estimated by both primary sources of age data (NWFSC hook-and-line and trawl 
+                                              surveys), with a strong 1999 year 
+class estimated even when either data set was removed (see sensitivity section) 
+(Figure \@ref(fig:recruitsES)). Other years with 
+relatively high estimates of recruitment were 1983-84, 1999, and 2016. These 
+are consistent with estimates of strong year classes in other rockfish stock 
+assessments. Recent recruitments (2011-2020) have been above average in most 
+years that are well-informed by data (Table \@ref(tab:recrES)), although extended periods of below-average 
+recruitment (e.g. 2001-2006) have also occurred and future trends in recruitment 
+are highly uncertain.
 ```
+
 
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(base_loc, "plots", "ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png"),
-caption = "Age-0 recruits (1,000s) with ~95% asymptotic intervals",
+caption = "Age-0 recruits (1,000s) with approximate 95% asymptotic confidence intervals",
 label = 'recruitsES')
 ```
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
 recr <- read.csv(paste0(exec_tables_loc,'c_Recr_ES.csv')) %>%
-  mutate_at(c(-1), round,3) 
+  mutate_at(c(2:4), round, 0) %>% 
+  mutate_at(c(5:7), round, 3)
 ```
 
 ```{r, results = 'asis'}
 kableExtra::kbl(recr,
                 booktabs=TRUE,
-                caption="Estimated recent trend in recruitment and recruitment deviations and the 95 percent intervals.",
+                caption="Estimated recent trend in recruitment and recruitment 
+                deviations and the approximate 95\\% asymptotic confidence intervals.",
                 label="recrES",
-                col.names = c("Year" , "Recruitment" , "Lower Interval" , "Upper Interval" , "Recruitment Deviations" , "Lower Interval" , "Upper Interval"),
+                linesep = "",
+                col.names = c("Year" , "Estimate" , "Lower Interval" , 
+                              "Upper Interval" , "Estimate" , 
+                              "Lower Interval" , "Upper Interval"),
                 escape = FALSE) %>%
-  kable_styling(latex_options = c("striped", "HOLD_position","scale_down"))
+  add_header_above(c(" " = 1,
+                     "Recruitment" = 3,
+                     "Recruitment Deviations" = 3), bold = T) %>%
+   column_spec(c(2:3,5:7), width = ".6in") %>%
+  column_spec(4, border_right = T, width = ".6in") %>%
+  kable_styling(latex_options = "HOLD_position")
 ```
+
 
 \FloatBarrier
 
 ## Exploitation Status{-}
 
 ```{asis, echo = model.area=='NCA'}
-The annual (equilibrium) SPR harvest rate for vermilion was above target  from 2017-2019 (Table \@ref(tab:exploitES), Figure \@ref(fig:1-sprES)). Prior to 2011, the harvest rate exceeded the target for a number of years, regularly reaching levels 50% above target in the 1980s and 1990s (Figure \@ref(fig:1-sprES)). As with current estimates of spawning output, recent estimates of exploitation status are highly uncertain, ranging from 68% to 129% of target in 2020 (Table ES7). As a percentage of total biomass (ages 4+), California harvest rates peaked in the 1980s and 1990s, but have since declined to levels below 10% for the past decade (Figure \@ref(fig:FmortalityES)). Harvest rates in California are currently above target, and the stock is just above the target biomass (Figure \@ref(fig:phaseES)). The equilibrium yield curve is shifted left, as expected from the Beverton-Holt steepness parameter fixed at 0.72 (Figure \@ref(fig:yield2ES)).
+The annual (equilibrium) spawning potential ratio (SPR) for vermilion was above target  from 2017-2019 (Table \@ref(tab:exploitES), Figure \@ref(fig:1-sprES)). Prior to 2011, the fishing intensity exceeded the target for a number of years, regularly reaching levels 50% above target in the 1980s and 1990s (Figure \@ref(fig:1-sprES)). As with current estimates of spawning output, recent estimates of exploitation status are highly uncertain, ranging from 68% to 129% of target in 2020 (Table \@ref(tab:exploitES)). As a percentage of total biomass (ages 4+), California harvest rates peaked in the 1980s and 1990s, but have since declined to levels below 10% for the past decade (Figure \@ref(fig:FmortalityES)). Harvest rates in northern California were near target in 2020, but above target in the three previous years, and the stock is just below the target biomass (Figure \@ref(fig:phaseES)).  However, the harvest rate in 2019 was above target, and may be more representative of future catches, all else equal, given reductions in fishing activity during the 2020 pandemic. The equilibrium yield curve is shifted left, as expected from the Beverton-Holt steepness parameter fixed at 0.72 (Figure \@ref(fig:yield2ES)).
 ```
+
+```{asis, echo = model.area=='SCA'}
+The annual (equilibrium) spawning potential ratio (SPR) for vermilion in southern California has fluctuated around the management target for the past decade, with a recent spike in 2019 (Table \@ref(tab:exploitES), Figure \@ref(fig:1-sprES)). Prior to 2011, the fishing intensity exceeded the target for a number of years in the 1980s and 1990s, regularly reaching levels 50% above target (Figure \@ref(fig:1-sprES)). As with current estimates of spawning output, recent estimates of exploitation status are highly uncertain, ranging from 45% to 104% of target in 2020, and 102% to 172% above target in 2019 (Table \@ref(tab:exploitES)). As a percentage of biomass (ages 4+), southern California harvest rates peaked in the 1980s and 1990s, but have since declined to near-target levels for the past decade (Figure \@ref(fig:FmortalityES)). Harvest rates in southern California in 2020 were currently below target, and the stock is above the target biomass (Figure \@ref(fig:phaseES)). However, the harvest rate in 2019 was above target, and may be more representative of future catches, all else equal, given reductions in fishing activity during the 2020 pandemic. The equilibrium yield curve is shifted left, as expected from the Beverton-Holt steepness parameter estimated at 0.73 (Figure \@ref(fig:yield2ES)).
+```
+
 
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
@@ -222,17 +301,29 @@ exploit <- read.csv(paste0(exec_tables_loc,'d_SPR_ES.csv')) %>%
 ```{r, results = 'asis'}
 kableExtra::kbl(exploit,
                 booktabs=TRUE,
-                caption="Estimated recent trend in the (1-SPR)/(1-SPR 50\\%) where SPR is the spawning potential ratio the exploitation rate, and the  95 percent intervals.",
+                caption="Estimated recent trend in the relative fishing intensity
+                ($\\frac{1-SPR}{1-SPR_{50\\%}}$, 
+                where SPR is the spawning potential ratio) and the exploitation rate, 
+                with approximate 95\\% asymptotic confidence intervals.",
                 label="exploitES",
-                col.names = c("Year" , "(1-SPR)/(1-SPR 50\\%)" , "Lower Interval" , "Upper Interval" , "Exploitation Rate" , "Lower Interval" , "Upper Interval"),
-                escape = FALSE) %>%
-  kable_styling(latex_options = c("striped", "HOLD_position","scale_down"))
+                linesep = "",
+              #  escape = FALSE,
+                col.names = c("Year" , "Estimate" , 
+                              "Lower Interval" , "Upper Interval" , 
+                              "Estimate" , "Lower Interval" , 
+                              "Upper Interval")) %>%
+ add_header_above(c(" " = 1,
+                     "Relative Fishing Intensity" = 3,
+                     "Exploitation Rate" = 3), bold = T) %>%
+  column_spec(c(2:3,5:7), width = ".6in") %>%
+  column_spec(4, border_right = T, width = ".6in") %>%
+  kable_styling(latex_options = "HOLD_position")
 ```
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(base_loc, "plots", "SPR3_ratiointerval.png"), 
-caption = "Timeseries of SPR ratio: (1-SPR)/(1-SPR_50%)",
+caption = "Timeseries of relative fishing intensity ($\\frac{1-SPR}{1-SPR_{50\\%}}$ where SPR is the spawning potential ratio) with approximate 95% asymptotic confidence intervals (dashed lines).",
 label = '1-sprES')
 ```
 
@@ -240,7 +331,7 @@ label = '1-sprES')
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(base_loc, "plots", "ts_summaryF.png"), 
-caption = "Time-series of estimated summary harvest rate (total catch divided by age-0 and older biomass) for the base case models with approximate 95% asymptotic confidence intervals (grey lines).",
+caption = "Time-series of estimated summary harvest rate (total catch divided by age-4 and older biomass) for the base case model with approximate 95% asymptotic confidence intervals (veritcal lines).",
 label = 'FmortalityES')
 ```
 
@@ -248,7 +339,7 @@ label = 'FmortalityES')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(base_loc, "plots", "SPR4_phase.png"), 
-caption = "Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point show the 95 percent intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95 percent region which accounts for the estimated correlations between the biomass ratio and SPR ratio",
+caption = "Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point show the 95% intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95% region which accounts for the estimated correlations between the biomass ratio and SPR ratio. Fishing intensity in 2020 was reduced to due the pandemic",
 label = 'phaseES')
 ```
 
@@ -256,8 +347,8 @@ label = 'phaseES')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(base_loc, "plots", "yield2_yield_curve_with_refpoints.png"), 
-caption = "Equilibrium yield curve for the base case model. Values are based on the 2020
-fishery selectivity",
+caption = "Equilibrium yield curve for the base case model with management quantities. Values are based on the 2020
+fishery selectivities",
 label = 'yield2ES')
 ```
 
@@ -266,26 +357,23 @@ label = 'yield2ES')
 
 ## Ecosystem Considerations{-}
 
-In this assessment, ecosystem considerations were not explicitly included in the analysis.  
-This is primarily due to a lack of relevant data and results of analyses (conducted elsewhere) 
-that could contribute ecosystem-related quantitative information for the assessment.
+In this assessment, ecosystem considerations were not explicitly included in analyses.
+This is primarily due to a lack of relevant data that could contribute ecosystem-related quantitative information for the assessment.
 
 Vermilion/sunset rockfish are described as feeding on a wide range of both
 pelagic and benthic prey items, including forage fish species such as anchovies 
 and mesopelagic fishes, squid, krill and octopus, as well as sporadically abundant
-pelagic organisms such as pyrosomes, salps and pelagic red crabs 
-[@Phillips1964; @Love2002]. 
+pelagic organisms such as pyrosomes, salps and pelagic red crabs. 
+
 
 As with most other rockfish and groundfish in the California Current, recruitment, 
 or cohort (year-class) strength appears to be highly variable for the vermilion/sunset 
-rockfish complex, with only a modest apparent relationship to estimated levels of spawning output.  
-Oceanographic and ecosystem factors are widely recognized to be key drivers of
+rockfish complex, with only a modest apparent relationship to estimated levels of spawning output.  Oceanographic and ecosystem factors are widely recognized to be key drivers of
 recruitment variability for most species of groundfish, as well as most elements
 of California Current food webs.  Although it is feasible that 
 ecosystem factors, the results of pre-recruit surveys for co-occurring species, 
 or the results of other groundfish assessments might ultimately be used to 
-forecast recruitment for more data-limited stocks such as vermilion/sunset,
-as suggested by [@Thorson2014], such approaches would require more 
+forecast recruitment for more data-limited stocks such as vermilion/sunset. Such approaches would require more 
 development and evaluation.  Consequently, environmental factors are not 
 explicitly considered in this assessment.
 
@@ -293,55 +381,118 @@ explicitly considered in this assessment.
 \FloatBarrier
 
 ## Reference Points{-}
+Reference point and management quantities for the vermilion rockfish base case 
+model can be found in Table \@ref(tab:referenceES). In 2021, spawning output 
+relative to unfished spawning output ("depletion") is estimated at 
+`r scales::percent(refpts[5,2], accuracy = 1)` (95% asymptotic interval: 
+`r paste0(scales::percent(refpts[5,3], accuracy = 1)," - ", scales::percent(refpts[5,4], accuracy = 1))`). 
+This stock assessment estimates that `r spp` in the `r params$model` is above 
+the biomass target ($SB_{40\%}$), and well above the minimum stock size 
+threshold ($SB_{25\%}$). Unfished age four-plus biomass is estimated to be 
+`r round(refpts[2,2],0)` mt in the base case model (95% asymptotic interval: 
+`r paste0(round(refpts[2,3],0), " - ", round(refpts[2,4],0))` mt).
+The target spawning output ($SB_{40\%}$) is `r round(refpts[7,2],0)` million eggs 
+(95% asymptotic interval: `r paste0(round(refpts[7,3],0), " - ", round(refpts[7,4],0))` million eggs), 
+which corresponds with an equilibrium yield of `r round(refpts[10,2],0)` mt 
+(95% asymptotic interval: `r paste0(round(refpts[10,3],0), " - ", round(refpts[10,4],0))` mt). 
+Equilibrium yield at the proxy $F_{MSY}$ 
+harvest rate corresponding to $SPR_{50\%}$ is `r round(refpts[15,2],0)` mt 
+(95% asymptotic interval: `r paste0(round(refpts[15,3],0), " - ", round(refpts[15,4],0))` mt), 
+Table \@ref(tab:referenceES) and Figure \@ref(fig:yield2ES)).
+
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
-refpts <- read.csv(paste0(exec_tables_loc,'e_ReferencePoints_ES.csv')) %>%
-  mutate_at(c(2:4), round,3)
+#Moved to Stock Biomass to make sure of the numbers there
+#refpts <- read.csv(paste0(exec_tables_loc,'e_ReferencePoints_ES.csv')) %>%
+#  mutate_at(c(2:4), round,3)
+refpts1 = refpts[-c(6,11,15),]
+refpts1$X = c("Unfished Spawning Output",
+"Unfished Age 4+ Biomass (mt)",
+"Unfished Recruitment ($R_0$)",
+"Spawning Output (2021)",
+"Fraction Unfished (2021)",
+"Proxy Spawning Output $SB_{40\\%}$",
+"SPR Resulting in $SB_{40\\%}$",
+"Exploitation Rate Resulting in $SB_{40\\%}$",
+"Yield with SPR Based On $SB_{40\\%}$ (mt)",
+"Proxy Spawning Output ($SPR_{50\\%}$)",
+"$SPR_{50\\%}$",
+"Exploitation Rate Corresponding to $SPR_{50\\%}$",
+"Yield with $SPR_{50\\%}$ at $SB_{SPR}$ (mt)",
+"Spawning Output at MSY ($SB_{MSY}$)",
+"$SPR_{MSY}$",
+"Exploitation Rate Corresponding to $SPR_{MSY}$",
+"MSY (mt)")
+rownames(refpts1) = c()
 ```
-
-Reference point and management quantities for the vermilion rockfish base case model can be found in Table \@ref(tab:referenceES). In 2020, spawning output relative to unfished spawning 
-output ("depletion") is estimated at `r scales::percent(ssb$Fraction.Unfished[ssb$Year==model$endyr], accuracy = 1)`. This stock assessment estimates that `r spp` in the `r params$model` is above the biomass 
-target ($SB_{40\%}$), and well above the minimum stock size threshold ($SB_{25\%}$). 
-Unfished age four-plus biomass is estimated to be `r refpts[2,2]` mt in the 
-base case model. The target spawning output ($SB_{40\%}$) 
-is `r refpts[7,2]` million eggs, which corresponds with an 
-equilibrium yield of `r refpts[10,2]` mt. Equilibrium yield at the proxy $F_{MSY}$ 
-harvest rate corresponding to $SPR_{50\%}$ is `r refpts[15,2]` mt (Table \@ref(tab:referenceES) and Figure \@ref(fig:yield2ES)).
-
-
-
-
 
 
 ```{r, results = 'asis'}
-kableExtra::kbl(refpts,
+kableExtra::kbl(refpts1,
                 booktabs=TRUE,
-                caption="Summary of reference points and management quantities including estimates of the 95 percent intervals.",
+                caption="Summary of reference points and management quantities including estimates of the approximate 95\\% asymtotic confidence intervals.",
                 label="referenceES",
+                linesep = "",
                 escape = FALSE,
                 col.names = c("", "Estimate","Lower Interval","Upper Interval")) %>%
-  kable_styling(latex_options = c("striped", "HOLD_position", "scale_down"))
-
-
+        kableExtra::pack_rows(group_label = "Reference Points Based on $SB_{40\\%}$",
+                              start_row = 6, end_row = 9, escape = FALSE) %>%
+        kableExtra::pack_rows(group_label ="Reference Points Based on SPR Proxy for MSY", 
+                              start_row = 10, end_row = 13) %>%
+        kableExtra::pack_rows(group_label = "Reference Points Based on Estimated MSY Values", 
+                              start_row = 14, end_row = 17) %>%
+      kable_styling(latex_options = c("HOLD_position", "scale_down"))
 ```
 
 
 \FloatBarrier
 
 ## Management Performance{-}
-Vermilion rockfish are managed as part of the minor shelf rockfish
-complex in the Pacific Coast Groundfish Fishery Management Plan. The total mortality 
-of the minor shelf rockfish has been above the ACL in all years (2011-2019). 
-Total mortality estimates from the NWFSC are not yet available 
-for 2019-2020. A summary of these values 
-as well as other base case summary results can be found in Tables \@ref(tab:managementES) and 
-\@ref(tab:summaryES).
+Vermilion rockfish have been managed as part of the minor shelf rockfish
+complexes in the Pacific Coast Groundfish Fishery Management Plan. North \CapeM 
+total mortality of the minor shelf rockfish complex has exceeded the OFL since 
+2011. South of \CapeM, total mortality of the minor shelf rockfish complex has 
+exceeded the OFL since 2015, and exceeded the ABC in most years since 2011 
+Total mortality estimates from the NWFSC are not yet available for 2019-2020. 
+A summary of these values as well as other base case summary results can be found 
+in Tables \@ref(tab:summaryES) and \@ref(tab:managementES).
 
 
-Results from post-STAR base models in all areas are presented in Table \@ref(tab:CombinedRefPtsES).
-fraction of No. CA allocated to northern management area (north of \CapeM) is based on Appendix in Northern CA assessment.
-The fraction of of the northern California stock that is estimated to be north of \CapeM 
-is 4.44%. The projected OFLs (2023-2032) assume full attainment of GMT-projected catches for 2021-22, and catches based on the PFMC harvest control rule given P* =  0.45 and sigma = 1.
 
+Results from post-STAR base models in all areas (southern California, northern 
+California, Oregon, and Washington) are presented in Table \@ref(tab:CombinedRefPtsES). 
+The fraction of the northern CA model allocated to the northern management area 
+(north of \CapeM) is based on an Appendix in northern CA assessment.
+
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+summaryES <- read.csv(paste0(exec_tables_loc,'i_Summary_ES.csv')) 
+#summaryES[1:2,] =management[1:2,1:12]
+summaryES <- summaryES %>%
+  mutate_at(-1, as.numeric) %>%
+  mutate_at(-1, round, 3) 
+summaryES$Quantity[c(1:3,5,8,11)] = c("Total catch (mt)", 
+                                      "$(1-SPR)/(1-SPR_{50\\%})$",
+                                      "Annual F", "Estimate", 
+                                      "Estimate", "Estimate")
+```
+
+
+```{r, results = 'asis'}
+kableExtra::kbl(summaryES,
+                booktabs=TRUE,
+                caption="Summary of recent estimates and managment quantities for vermilion rockfish.",
+                label="summaryES",
+                linesep = "",
+                escape = FALSE, 
+                col.names = c("Quantity", seq(2011,2021,1))) %>%
+   kableExtra::pack_rows(group_label = "Spawning Output ($10^6$)", 
+                                              start_row = 5, end_row = 7, escape = FALSE) %>%
+   kableExtra::pack_rows(group_label = "Recruits (1,000s)", 
+                                              start_row = 8, end_row = 10) %>%
+   kableExtra::pack_rows(group_label = "Fraction Unfished", 
+                                             start_row = 11, end_row = 13) %>%
+  kable_styling(latex_options = c("HOLD_position", "scale_down"))
+```
 
 
 ```{r, warning = FALSE, inclue = FALSE}
@@ -350,7 +501,7 @@ management <- readxl::read_xlsx("./tables/VRML_management_history.xlsx", sheet =
 management$Area_landings = c("OFL", "ABC", "Total landings", 
                              "CA rec landings", "OR rec landings", 
                              "WA rec landings","Commercial landings", "Research",
-                             "OFL", "ABC", "Total Landings", 
+                             "OFL", "ABC", "Total landings", 
                              "CA rec landings", "Commercial landings", "Research")
 colnames(management)[1] = ""
 
@@ -359,12 +510,14 @@ colnames(management)[1] = ""
 
 ```{r, management, results = 'asis'}
 kableExtra::kbl(management, booktabs = TRUE, 
-  caption = "Annual estimates of total mortality, overfishing limit (OFL), acceptable biological catch (ABC), annual catch limit (ACL) for vermilion. The ABC is equal to the ACL.  Data were obtained from the GEMM reports.",
+  caption = "Annual estimates of total mortality, overfishing limit (OFL), acceptable biological catch (ABC), annual catch limit (ACL) for vermilion in the minor shelf rockfish complex as reported in the GEMM report (NWFSC).",
   label = 'managementES',
+  linesep = "",
 escape = FALSE) %>%
 kableExtra::pack_rows(group_label = paste0("North of 40",intToUtf8(176),"10\' N"), start_row = 1, end_row = 8) %>%
 kableExtra::pack_rows(group_label = paste0("South of 40",intToUtf8(176),"10\' N"), start_row = 9, end_row = 14) %>%
-  kable_styling(latex_options = "scale_down")
+  kable_styling(latex_options = c("HOLD_position","scale_down")) %>%
+  row_spec(8, hline_after = TRUE)
 ```
 
 
@@ -376,102 +529,100 @@ combinedrefpts = readxl::read_xlsx(paste0(table_loc,"Combined_Reference_Points.x
 ```
 
 ```{r, results = 'asis'}
-kableExtra::kbl(combinedrefpts, format = "latex",
+kableExtra::kbl(combinedrefpts, #format = "latex",
                 booktabs=TRUE,
                 label="CombinedRefPtsES",
-                align = "l",
-                caption = "Combined reference points for the four stock assessments conducted 
-               for vermilion and sunset rockfishes in 2021.") %>%
+                escape = F,
+                align = "c",
+                linesep = "",
+                col.names = c("Description", "CA South model", "CA North model",
+                              "\\PtC{} to \\CapeM", "South of \\CapeM", "\\CapeM{} to CA/OR border", 
+                              "OR model", "WA model", "North of \\CapeM"),
+                caption = "Combined reference points for the four stock 
+                assessments conducted for vermilion and sunset rockfishes in 2021. The fraction of the northern California stock that is estimated to be north of \\CapeM{} is 4.44\\% (see the appendix in the northern CA model for more details). The projected OFLs (2023-2032) assume full attainment of GMT-projected catches for 2021-22, and catches based on the PFMC harvest control rule given $p\\ast$ =  0.45 and $\\sigma$ = 1.") %>%
   kable_styling(latex_options = c("scale_down")) %>%
-  column_spec(1, width = "2in") %>%
-  column_spec(c(2:9), width = ".5in")
+  kableExtra::pack_rows(group_label = "Reference Points Based on $SPR_{50\\%}$", 
+                        start_row = 6, end_row = 7, escape = FALSE) %>%
+  column_spec(1, width = "2.5in") %>%
+  column_spec(2, width = ".5in", border_left = T) %>%
+  column_spec(c(3), width = ".5in") %>%
+  column_spec(c(4:5), width = ".7in") %>%
+  column_spec(6, width = ".7in", border_left = T) %>%
+  column_spec(c(7:9), width = ".5in") %>%
+  row_spec(c(5,7), hline_after = T) %>%
+  kable_styling(latex_options = "HOLD_position")
 ```
 
-
-```{r,echo=FALSE, warning=FALSE, message=FALSE}
-summaryES <- read.csv(paste0(exec_tables_loc,'i_Summary_ES.csv')) 
-summaryES[1:2,] =management[1:2,1:12]
-summaryES <- summaryES %>%
-  mutate_at(-1, as.numeric) %>%
-  mutate_at(-1, round, 3) 
-summaryES$Quantity[4] = "(1-SPR)/(1-SPR 50\\%)"
-
-```
-
-
-```{r, results = 'asis'}
-
-kableExtra::kbl(summaryES,
-                booktabs=TRUE,
-                caption="Summary of recent estimates and managment quantities.",
-                label="summaryES",
-              #  escape = FALSE, 
-                col.names = c("Quantity", seq(2011,2021,1))) %>%
-  kable_styling(latex_options = c("striped", "HOLD_position", "scale_down"))
-```
 
 
 
 \FloatBarrier
 
 ## Unresolved Problems and Major Uncertainties{-}
-The stratification of assessment areas along the coast was based on consideration of population structure identified in genetic analyses, differences in historical exploitation, disparate availability of data sources and state specific regulations to mitigate the catch of overfished species affecting catch of co-occurring stocks like vermilion rockfish.  The Panel discussed the potential for alternative stratification such as north and south of Cape Mendocino depending on the results of future analysis of population structure under the Saltonstall/Kennedy grant discussed in the assessment south of Point Conception to better understand the distribution of sunset rockfish, potential for hybridization and resolve considerations surrounding population structure apparent in vermilion rockfish. A more regional approach might allow for greater efficiency gained by fewer assessment areas, while accounting for key differences.  
+The stratification of assessment areas was based on consideration of population structure identified in genetic analyses, differences in historical exploitation, differences in length composition within fleets, and availability of data sources.  The Panel discussed the potential for alternative stratifications such as north and south of Cape Mendocino depending on the results of future analysis of population structure under the Saltonstall/Kennedy grant.
 
-Natural mortality remains the primary axis of uncertainty across assessment areas.  Additional collection of otoliths from across the range of the stock and ageing existing structures from the hook and line survey may help reduce uncertainty in the future. 
+Natural mortality remains the primary axis of uncertainty across assessment areas.  Additional collection of otoliths from across the range of the stock and continued ageing of available otoliths may help reduce uncertainty in the future. In the relatively data-rich southern model, steepness was estimated and uncertainties in both natural mortality and steepness were considered when determining alternative states of nature.
 
 
 \FloatBarrier
 
 ## Decision Table and Forecasts{-}
 The forecasts of stock abundance and yield were developed using the post-STAR 
-base model, with the forecasted projections presented in 
+base model, with the forecast projections presented in 
 Table \@ref(tab:projectionES). The total catches in 2021 and 2022 are set to 
 the projected catch from the California Department of Fish and Wildlife (CDFW) by 
-sector.
+sector and model region, i.e., allocated north and south of \PtC.
 
 ```{asis, echo = model.area=='NCA'}
 Uncertainty in the forecasts is based upon the three states of nature agreed upon 
 at the STAR panel, reflecting three different natural mortality rates. The steepness 
-parameter of the Beverton-Hold stock-recruit curve  was fixed in the base model and the 
-alternative states of nature and the alternate states of nature maintain the 
-female to male natural mortality rata ratio from  the base model. To capture the 75% interval, alternate states were identified that were within 0.66 negative log-likelihood points from the base model.
-The high state of nature fixes female $M$ = 0.0956 and male $M$ = 0.08989. For the low state of nature, female $M$ = 0.0769 and male $M$ = 0.07231.
+parameter of the Beverton-Holt stock-recruit curve was fixed in the base model
+and in all of the forecasts.  The northern California model is not data rich and 
+while there is uncertainty in steepness, it was not well estimated in the base 
+model when natural mortality was also estimated. The alternative states of nature 
+and the alternate states of nature maintain the 
+female to male natural mortality rate ratio from  the base model. To capture the 
+75% interval around the negative log-likelihood, alternate states were identified 
+within 0.66 negative log-likelihood points from the base model where female 
+$M$ = 0.0856 and male $M$ = 0.0805.
+The high state of nature fixes female $M$ = 0.0956 and male $M$ = 0.08989. 
+For the low state of nature, female $M$ = 0.0769 and male $M$ = 0.07231.
 
-For reference, the base model predicted sigma is 0.246. The buffers were calculated assuming a category 2 stock, with  sigma = 1.0 
-and a $p^*$ = 0.45. Alternative catch streams assume (rows in the table) sigma = 1.0 
-and a $p^*$ = 0.4, and removals of long-term equilibrium catch with and without a buffer assuming sigma = 1.0 and a $p^*$ = 0.45. The buffer multiplier with $p^*$ = 0.45 ranges from 0.874 in 2023 ramping to 0.803 in 2032. 
-Current medium-term forecasts based on the alternative states of nature project that 
-the stock will remain above the target threshold of 40% in 2032 (Table \@ref(tab:DecisionES)).  In al of the scenarios of the low state of natre,  
+For reference, the base model predicted $\sigma$ = 0.246. The buffers between the OFL and ABC  were calculated assuming a category 2 stock, with  $\sigma$ = 1.0 
+and a $p^*$ = 0.45. Alternative catch streams (rows in the table) include $\sigma$ = 1.0 
+with a $p^*$ = 0.4, and removals of long-term equilibrium catch with and without a buffer assuming $\sigma$ = 1.0 with a $p^*$ = 0.45. The buffer multiplier with $p^*$ = 0.45 ranges from 0.874 in 2023 ramping to 0.803 in 2032. 
+
+Current forecasts based on the alternative states of nature and requested catch streams project that the stock will remain above the target threshold of 40% in 2032 (Table \@ref(tab:DecisionES)).  In all of the scenarios of the low state of nature,  
 the stock remains below the target threshold of 40% until 2026 or 2027.
-The base 
-model with the base catches results in an increasing stock over the period from 
+The base model with the base catches results in an increasing stock over the period from 
 2023-2032. In all scenarios the catch significantly decreases from 2022 to 2023 in a 
-all catch scenarios; assumed catch in 2022 is 227 mt, and 2023 cathes from the base 
+all catch scenarios; assumed catch in 2022 is 227 mt, and 2023 catches from the base 
 model range from 118-139 mt.  The base model includes a portion of the stock within 
-the northern management unit (north of \CapeM).  Analaysis from an appendix suggests 
+the northern management unit (north of \CapeM).  An analysis based on the private/rental 
+mode index through 2019 suggests 
 that 4.44% of the catches from this model should be apportioned to the northern 
 management unit for vermilion rockfish.
+
+The STAT cautions that the GMT projections for catches in 2021-2022 (22 mt per year) exceed the maximum sustainable yield according to both proxies ($B_{40\%}$ and $SPR_{50\%}$) as well as the MSY value based on the estimated value of steepness (Table \@ref(tab:referenceES)). The northern California stock is just above target biomass in 2021 (43% of unfished spawning ouptut), so these catch levels are unlikely to result in significant stock declines over a short period of time. However, similar catch levels would exceed the overfishing limits (OFL) if carried forward for 2023 and beyond (\@ref(tab:CombinedRefPtsES)), and would be unsustainable in the long term. Given recent and projected near-term exploitation levels, and especially if vermilion and sunset rockfishes continue to be managed as part of the minor shelf rockfish complex, the STAT recommends regular monitoring of total mortality for these two species to avoid excessive stock depletion and potential loss of yield.
 ```
 
 
 ```{asis, echo = model.area=='SCA'}
-Uncertainty in the forecasts is based upon the three states of nature agreed upon 
-at the STAR panel, reflecting a bivariate sensitivity analysis between natural mortality and steepness. Both natural moratlity (assumed females equal to males) and steepness were estimated in the base model.
+Uncertainty in the decision table forecasts is based upon the three alternative states of nature agreed upon during the STAR panel, reflecting results of a bivariate likelihood profile over natural mortality and steepness. The low state of nature assumes $M$ = .1125 and $h$ = 0.675, and the high state of nature assumes $M$ = 0.1475 and $h$ = 0.875.
 
-For reference, the base model predicted sigma is 0.258. The buffers were calculated assuming a category 2 stock, with  sigma = 1.0 
-and a $p^*$ = 0.45. Alternative catch streams (rows in the table) assume sigma = 1.0 
-and a $p^*$ = 0.4, and removals of long-term equilibrium catch with and without a buffer assuming sigma = 1.0 and a $p^*$ = 0.45. The buffer multiplier with $p^*$ = 0.45 ranges from 0.874 in 2023 ramping to 0.803 in 2032. The low state of nature assumes $M$ = .1125 and $h$ = 0.675, and the high state of nature asumes $M$ = 0.1475 and $h$ = 0.875.
+The buffers between OFL and ABC were calculated assuming a category 2 stock, with  $\sigma$ = 1.0 
+and a $p^*$ = 0.45. For reference, the base model predicted $\sigma$ is 0.258, calculated using the asymptotic standard error of the predicted OFL in 2021. Alternative catch streams (rows in the table) include $\sigma$ = 1.0 
+with a $p^*$ = 0.4, and removals of long-term equilibrium catch at the $F_{SPR=50\%}$ harvest rate with and without a buffer assuming $\sigma$ = 1.0 and a $p^*$ = 0.45. The buffer multiplier with $p^*$ = 0.45 ranges from 0.874 in 2023 ramping to 0.803 in 2032. 
 
-Current medium-term forecasts based on the alternative states of nature project that 
-the stock will remain above the target threshold of 40% in 2032 in the base model and also 
-the state of nature assuming higher productivity (Table \@ref(tab:DecisionES)).  In all scenarios of the low state of nature,  
-the stock remains below the target threshold of 40% until throughout the forecast.
-The base 
-model with the base catches results in an increasing stock over the period from 
-2023-2032. In all scenarios the catch significantly decreases from 2022 to 2023 in a 
-all catch scenarios; assumed catch in 2022 is 210 mt, and 2023 cathes from the base 
-model range from 121-148 mt.
+ The base 
+model with the default harvest control rule catches (P*=0.45, $\sigma$=1) predicts an increasing stock over the period from 
+2023-2032. Forecasts based on the alternative catch streams project that 
+the stock will remain above the target threshold of 40% through 2032 given either the base model or “high” states of nature (Table \@ref(tab:DecisionES)).  Given the low state of nature, the stock remains below the target threshold of 40% throughout the 12-year forecast under all four catch scenarios.
+
+The STAT cautions that the GMT projections for catches in 2021-2022 (210 mt per year) exceed the maximum sustainable yield according to both proxies ($B_{40\%}$ and $SPR_{50\%}$) as well as the MSY value based on the estimated value of steepness (Table \@ref(tab:referenceES)). The southern California stock is above target biomass, so the GMT catch levels are unlikely to result in significant stock declines over a 2-year period. However, similar catch levels would exceed the overfishing limits (OFL) for 2023 and beyond (Table \@ref(tab:projectionES)), and would be unsustainable in the long term. Given recent and projected near-term exploitation levels, and especially if vermilion and sunset rockfishes continue to be managed as part of the minor shelf rockfish complex, the STAT recommends regular monitoring of total mortality for these two species to avoid excessive stock depletion and potential loss of yield.
 ```
+
+
 
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
@@ -483,11 +634,16 @@ projection <- read.csv(paste0(exec_tables_loc,'g_Projections_ES.csv')) %>%
 ```{r, results = 'asis'}
 kableExtra::kbl(projection,
                 booktabs=TRUE,
-                caption="Projections of potential OFLs (mt), ABCs (mt), estimated spawning output and fraction unfished.",
+                caption="Projections of potential OFLs (mt), ABCs (mt), estimated age 4+ biomass (mt), estimated spawning output ($10^6$ eggs) and fraction unfished.",
                 label="projectionES",
-               # escape = FALSE,
-                col.names = c("Year" , "Predicted OFL (mt)" , "ABC Catch (mt)" , "Age 4+ Biomass (mt)" , "Spawning Output" , "Fraction Unfished")) %>%
-  kable_styling(latex_options = c("striped", "HOLD_position","scale_down"))
+                linesep = "",
+                align = "c",
+                 escape = FALSE,
+                col.names = c("Year" , "Predicted OFL" , 
+                              "ABC Catch" , "Age 4+ Biomass" , 
+                              "Spawning Output" , "Fraction Unfished")) %>%
+  column_spec(c(2:6), width = ".8in") %>%
+  kable_styling(latex_options = c("striped", "HOLD_position"))
 
 
 ```
@@ -509,19 +665,27 @@ decisiontable <- readxl::read_xlsx(decisiontable.filein) %>%
 ```{r, results = 'asis'}
 
 if(model.area=='NCA'){
-kableExtra::kbl(decisiontable, format = "latex",
-                booktabs=TRUE,
-                label="DecisionES",
-                digits = c(0,0,3,0,0,3,0,3,0,3),
-                align = "c",
-               # escape = FALSE, 
+kableExtra::kbl(decisiontable, 
                 col.names = c(" ","Year",
                               "Buffer",
                               "Catch (mt)",
                               "Spawning Output", "Fraction Unfished",
                               "Spawning Output", "Fraction Unfished",
                               "Spawning Output", "Fraction Unfished"),
-                caption = "Decision table summarizing 12 year projections (2021 to 2032) for vermilion based on three alternative states of nature spanning quantiles of spawning output in 2021.  Columns range over low, medium, and high state of nature, and rows range over different assumptions of total catch levels corresponding to the forecast catches from each state of nature.  Catches in 2021 and 2022 are fixed at catches provided by the CDFW.") %>%
+                caption = "Decision table summarizing 12-year projections 
+                (2021 to 2032) for vermilion based on three alternative 
+                states of nature spanning quantiles of spawning output in 
+                2021.  Columns range over low, medium, and high state of 
+                nature, and rows range over different assumptions of total 
+                catch levels corresponding to the forecast catches from 
+                each state of nature.  Catches in 2021 and 2022 are fixed 
+                at catches provided by the CDFW.",
+                booktabs=TRUE,
+                label="DecisionES",
+                digits = c(0,0,3,0,0,3,0,3,0,3),
+                align = "c",
+                escape = FALSE,
+                linesep = "") %>%
   kable_styling(latex_options = c("scale_down")) %>%
   add_header_above(c(" " = 4,
                      "NLL = 1031.34" = 2,
@@ -546,19 +710,20 @@ kableExtra::kbl(decisiontable, format = "latex",
   collapse_rows(columns = 1, valign = "middle", latex_hline = "major") 
 } else {
 
-kableExtra::kbl(decisiontable, format = "latex",
+kableExtra::kbl(decisiontable,
                 booktabs=TRUE,
                 label="DecisionES",
+                linesep = "",
                 digits = c(0,0,3,0,0,3,0,3,0,3),
                 align = "c",
-               # escape = FALSE, 
+                escape = FALSE, 
                 col.names = c(" ","Year",
                               "Buffer",
                               "Catch (mt)",
                               "Spawning Output", "Fraction Unfished",
                               "Spawning Output", "Fraction Unfished",
                               "Spawning Output", "Fraction Unfished"),
-                caption = "Decision table summarizing 12year projections (2021 to 2032) for vermilion based on three alternative states of nature spanning quantiles of spawning output in 2021.  Columns range over low, medium, and high state of nature, and rows range over different assumptions of total catch levels corresponding to the forecast catches from each state of nature.  Catches in 2021 and 2022 are fixed at catches provided by the CDFW.") %>%
+                caption = "Decision table summarizing 12-year projections (2021 to 2032) for vermilion based on three alternative states of nature spanning quantiles of spawning output in 2021.  Columns range over low, medium, and high state of nature, and rows range over different assumptions of total catch levels corresponding to the forecast catches from each state of nature.  Catches in 2021 and 2022 are fixed at catches provided by the CDFW.") %>%
   kable_styling(latex_options = c("scale_down")) %>%
   add_header_above(c(" " = 4,
                      "NLL = 1015.23" = 2,
@@ -591,51 +756,31 @@ kableExtra::kbl(decisiontable, format = "latex",
 
 ## Research and Data Needs{-}
 
-There are several areas for further research that were identified while conducting 
-this assessment that could result in information useful to future vermilion and sunset 
-rockfish assessments.  The list below is believed to represent strategic pieces of 
-information that would likely help to resolve key uncertainties associated with 
-assessing either or both species. Many would provide the necessary information to 
-evaluate basic life history parameters and spatiotemporal population and fleet dynamics.
+The following are high priority research and data needs for this assessment.  Additional details for each topic can be found in the full assessment.
 
-- Investigate the structure of complex and contribution of each species to the 
-vermilion/sunset complex. Investigate possible spatial differences in biological parameters within 
-a single species and also between the two species. Little biological data for south of 
-Point Conception or north of Point Arena were available for this assessment and is needed 
-to better under biological parameters. 
-  + Conduct life history studies
-  + Conduct research to identify the proportion of each species in population and in catches
+We recommend the following research be conducted before the next assessment:
+ 
+- Develop a coastwide hook-and-line survey to provide indices of abundance and associated biological sampling providing representative data in untrawlable habitats.  
 
-- Take a closer look at historical catch reconstructions and 
-all other historical data sources.
+- Examine the available tools more fully in cases when a survey’s footprint is abruptly changed as a result of management action. These tools may include (but are not limited to), treating the “new” and “old” surveys as completely separate (aka breaking the survey), using selectivity blocks, or spatial/temporal modeling approaches. This avenue is important for many fishery-independent and -dependent indices, as they are subjected to numerous spatial management changes which in turn can affect the veracity of the data collected.  Additional efforts are needed to investigate how fishery selectivity changes with management changes and how best to address the effects of management changes on length composition and indices. 
 
-- Refine CCFRP survey index to look at alternative possible model structures, including 
-a hierarchical structure and random effects. The CCFRP survey is the only 
-fishery-independent survey available for nearshore rockfish sampling the nearshore rocky 
-reef habitats. As of this assessment, only two years of coastwide data are available, 
-and the index was limited to the site in central California that have been monitored 
-since 2007.
+- Expansion of the California Collaborative Fisheries Research Project from the current 120 ft depth or starting similar surveys that sample in deeper waters outside, if not inside MPAs and other closed areas to encompass the full depth distribution of vermilion and sunset rockfish or other shallow shelf rockfish species would provide valuable data for future assessments.
 
-- Continue to investigate the most appropriate model structure for the NWFSC HL survey index.
-The NWFSC HL survey is the only long-term fishery-independent survey in rocky (untrawlable) habitat 
-in the Southern California Bight. We also recommend evaluating how to structure the NWFSC Hook-and-Line survey index given its expansion into the CCA, also independent analysis of information content in NWFSC Hook-and-Line survey.Increased spatiotemporal sampling around Pt. Conception would aid in identifying stock boundaries.
+- Conduct additional investigations to resolve uncertainties in historical catch reconstructions would improve estimates of the scale of assessments and provide more representative removal estimates.
 
-- Utilize existing ROV survey data sources
-  + SWFSC Submersible Survey of the Cowcod Conservation Areas [@Yoklavich2007]. 
-  +  This was a line-transect survey designed to estimate cowcod abundance in 2002 
-  conducted from a submersible inside the CCAs.  Originally, only cowcod were enumerated from the video footage.  Over the last few years, the SWFSC has re-analyzed the video footage to enumerate other rockfish species. 
-    + The SWFSC Fishery Resource Division (FRD) conducted a survey of potential cowcod habitat between Point Conception and the U.S. – Mexico border from October through December of 2012 [@Stierhoff2013].
-    +  SWFSC staff are submitting proposals to conduct an additional submersible survey in the southern California Bight
-    + CDFW ROV survey data
+- Explore appropriate methods of including catches as numbers of fish vs. biomass.
 
 
-- Collection of length and age data are recommended for both the commercial and 
-recreational fisheries.  Very little age data are available from either fishery for 
-vermilion and sunset rockfishes.
 
-- Investigate possible environmental drivers/co-variates for biological parameters, 
-particularly for recruitment.
 
-- Resolve differences between CalCOM and PacFIN expanded length composition data sets. 
+```{asis, echo = model.area=='SCA'}
+- There is currently a very small amount of fishery-dependent age data collected in Southern California such that none were included in the Southern California stock assessment. 
 
+- Continue the NWFSC hook-and-line survey, which is a very important and informative source of data for the Southern California stock assessment. Additional research into methods to standardize the hook-and line survey.
+```
+```{asis, echo = model.area=='NCA'}
+- Connectedness of this stock with Southern California (below point Conception) is an unresolved uncertainty as outlined in the STAT report and elsewhere in this report. Further studies on larval/juvenile/adult movement via tagging or other methods are warranted. Additionally population substructure investigations, particularly north and south of Cape Mendocino are also recommended. 
+
+- Development of a more comprehensive fishery-independent index is a priority for this region. This could involve expansion of the CCFRP across depths and latitudes or expansion of the NWFSC hook-and-line survey northward. 
+```
 

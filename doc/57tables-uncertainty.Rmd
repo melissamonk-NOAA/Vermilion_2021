@@ -102,19 +102,19 @@ kableExtra::kbl(sens1, booktabs = TRUE,
 <!-- ======================================================================= -->
 
 ```{r, warning = FALSE, inclue = FALSE}
-sens1.filein = list.files(path = table_loc, 
+sens3.filein = list.files(path = table_loc, 
                #   pattern = glob2rx(print(paste0("drop1_table_",model.area, ".xlsx"))), 
                   pattern = glob2rx(paste0("sens3_",model.area, ".xlsx")), 
                   full.names = TRUE)
-sens1 <- readxl::read_xlsx(sens1.filein) %>%
-  mutate_at(vars(disc_selex), as.numeric) %>%
+sens3 <- readxl::read_xlsx(sens3.filein) %>%
+ # mutate_at(vars(disc_selex), as.numeric) %>%
   mutate(across(where(is.numeric), round, 3)) %>%
   filter(!grepl("Size", Label))
 ```
 
 
-```{r sens1, results = 'asis'}
-kableExtra::kbl(sens1, booktabs = TRUE, 
+```{r sens3, results = 'asis'}
+kableExtra::kbl(sens3, booktabs = TRUE, 
   caption = "Likelihood components from additional sensitivity runs conducted after the draft document was submitted, and before the STAR panel. Descriptions of each run are in the text and all models are sensitivities using the pre-STAR base model.",
   linesep = ""
 ) %>%

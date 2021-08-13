@@ -215,7 +215,7 @@ sa4ss::add_figure(
 <!-- ======================================================================= -->
 
 ```{r,include = FALSE, warning = FALSE}
-sens1.fig.filein = list.files(path = fig_loc,  
+sens3.fig.filein = list.files(path = fig_loc,  
                   pattern = glob2rx(paste0("sens3*",model.area, ".png")), 
                   full.names = TRUE)
 ```

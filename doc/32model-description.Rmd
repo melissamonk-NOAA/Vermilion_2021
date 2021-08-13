@@ -12,20 +12,19 @@ Vermilion rockfish is a desirable species and discards are a small component of 
 
 
 ```{asis, echo = model.area=='NCA'}
-*Fishery-Dependent Surveys*:  There are four fishery-dependent survey fleets north 
-of Point Conception: 
-1) the MRFSS CPFV dockside survey, 
-2) Deb Wilson-Vandenberg CPFV onboard observer survey, 
-3) CDFW/Cal Poly onboard observer survey, and 
-4) CRFS PR1 dockside survey.
+The northern California model is fit to four fishery-dependent indices of relative abundance: 1) MRFSS CPFV dockside, 2) two onboard observer surveys, and 3) CRFS PR1 dockside. The MRFSS CPFV dockside index is assumed to be proportional to changes in the relative abundance of the recreational party/charter fleet (retained fish only). The onboard observer indices represent the same fleet (rec party/charter), but indices change in abundance during recent years. The onboard indices are specified as separate “survey” fleets in the model because they overlaps in time with the MRFSS dockside time series. Both the MRFSS and onboard indices use the recreational party/charter fleet’s selectivity curve to define vulnerable size classes. The CRFS PR1 dockside index is linked to the recreational private/rental fleet (retained fish), and uses the same selectivity curve. Recreational length measurements are included as marginal length compositions (proportions at length, sexes combined) by year starting in 1980 for both the PC and PR modes. Fishery-dependent length composition data are also included for the three commercial fleets. Age structures from the commercial fleets were also sparse and not considered for the northern California assessment.
 
+Fishery-independent data sources in the southern California model are organized into four fleets. Data from the CCFRP survey were used to create an index of relative abundance and marginal length compositions by year. The WCGBT survey is the second fishery-independent data source in the southern model. An abundance index was developed for the WCGBT survey, but ultimately rejected due to high interannual variability, sparse data, and imprecise estimates. However, trawl survey conditional-age-at-length data and associated marginal length comps, both by sex and year, were retained in the model. Additional age and length composition data came from the SWFSC groundfish ecology cruises and Jeff Abrams thesis collections (see data section for additional information).
 
-*Research*: 
-  There are three research fleets: 
-1) Abrams conditional-length-at-age data, 
-2) NWFSC WCGBT survey data, and 
-3) SWFSC groundfish ecology survey data.
+**Changes from the pre-STAR base model to the post-STAR base model**
+During the STAR panel two changes to the base model were agreed STAT proposed a modifications to the pre-STAR base that included  1) a time block on the CCFRP index in 2017 after the survey was expanded from central California to the entire California coast, as explored in Request 1 of the STAR panel report, 2) CCFRP length compositions re-weighted to reflect the weighting used in the index, and 3) removal of 2020 from the PR dockside index of abundance due to sampling constraints during COVID. The final base model was approved by both the STAT and the Panel. 
 ```
+
+
+
+
+
+
 
 
 ```{asis, echo = model.area=='SCA'}
@@ -33,6 +32,8 @@ The southern California model is fit to three fishery-dependent indices of relat
 
 Fishery-independent data sources in the southern California model are organized into four fleets. The primary data source is the NWFSC hook-and-line survey. Data from this survey were used to create an index of relative abundance, marginal length compositions by sex and year, and conditional-age-at-length data by sex and year. Length and age data from the hook-and-line survey were broken into two fleets to better match assumptions in the index standardization methodology (see Appendix for details). The NWFSC trawl survey is the second fishery-independent data source in the southern model. An abundance index was developed for the trawl survey, but ultimately rejected due to high interannual variability, sparse data, and imprecise estimates. However, trawl survey conditional-age-at-length data and associated marginal length comps, both by sex and year, were retained in the model. The earliest available age and length composition data came from assorted CDFW research cruises which are collectively known as the “green binder” data (see data section for additional information). 
 
+**Changes from the pre-STAR base model to the post-STAR base model**
+Two suggestions from the STAR panel were incorporated into the final base model. These were 1) implement a time-block in 2017 to represent changes in selectivity for the commercial hook-and-line fishery resulting from regulatory changes, and 2) estimate steepness. 
 ```
 
 ### Additional Specifications

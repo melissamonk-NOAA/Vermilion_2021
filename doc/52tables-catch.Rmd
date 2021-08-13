@@ -36,7 +36,7 @@ landings_table <- landings %>%
 
 ```{r, landings, results = 'asis'}
 kableExtra::kbl(landings_table, longtable = TRUE, booktabs = TRUE, 
-  caption = "Landings of vermilion by fleet and year. All recreational fleet landings are in numbers (thousands of fish) and commercial fleets in biomass (mt)A description of the sources of the landings data are in the text and the next table.",
+  caption = "Landings of vermilion by fleet and year. All recreational fleet landings are in numbers (thousands of fish) and commercial fleets in biomass (mt). A description of the sources of the landings data are in the text and the next table.",
   align  = 'r', linesep = ""
 ) %>%
   column_spec(1, width = "1cm") %>%

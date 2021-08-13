@@ -1,14 +1,14 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{Executive Summary}{i}{section*.2}%
-\contentsline {subsection}{\numberline {0.1}Stock}{i}{subsection.0.1}%
-\contentsline {subsection}{Catches}{i}{section*.3}%
-\contentsline {subsection}{Data and Assessment}{ii}{section*.6}%
-\contentsline {subsection}{Stock Biomass}{iii}{section*.7}%
-\contentsline {subsection}{Recruitment}{iv}{section*.11}%
-\contentsline {subsection}{Exploitation Status}{v}{section*.14}%
-\contentsline {subsection}{Ecosystem Considerations}{ix}{section*.20}%
-\contentsline {subsection}{Reference Points}{ix}{section*.21}%
-\contentsline {subsection}{Management Performance}{x}{section*.23}%
-\contentsline {subsection}{Unresolved Problems and Major Uncertainties}{xii}{section*.27}%
-\contentsline {subsection}{Decision Table and Forecasts}{xii}{section*.28}%
-\contentsline {subsection}{Research and Data Needs}{xv}{section*.31}%
+\contentsline {subsection}{Stock}{i}{section*.3}%
+\contentsline {subsection}{Catches}{i}{section*.4}%
+\contentsline {subsection}{Data and Assessment}{iii}{section*.7}%
+\contentsline {subsection}{Stock Biomass}{iii}{section*.8}%
+\contentsline {subsection}{Recruitment}{v}{section*.12}%
+\contentsline {subsection}{Exploitation Status}{vi}{section*.15}%
+\contentsline {subsection}{Ecosystem Considerations}{x}{section*.21}%
+\contentsline {subsection}{Reference Points}{x}{section*.22}%
+\contentsline {subsection}{Management Performance}{xi}{section*.24}%
+\contentsline {subsection}{Unresolved Problems and Major Uncertainties}{xiii}{section*.28}%
+\contentsline {subsection}{Decision Table and Forecasts}{xiii}{section*.29}%
+\contentsline {subsection}{Research and Data Needs}{xvii}{section*.32}%

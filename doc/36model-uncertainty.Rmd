@@ -1,8 +1,8 @@
 # Assessment Model Diagnostics
 
-## Sensitivity to Assumptions, Data and, Weighting
+## Sensitivity to Assumptions, Data, and Weighting
 
-All sensitivities in this section use the pre-STAR base model.
+All sensitivities in this section use the **pre-STAR** base model.
 
 
 To better understand how data from individual fishery sectors or scientific surveys affected assessment results, we excluded data sets from the likelihood, one fleet at a time (referred to here as a “drop-one” analysis). “Fleet” in this sense refers to either a fishing fleet or a survey “fleet.” To do this, we set “lambdas” (multipliers for each likelihood component) equal to zero. This is equivalent to removing the data from the model. When composition data were excluded, the selectivity parameters for that fleet were fixed at the base model estimates to standardize the size and age composition of harvested fish. When abundance indices were excluded, relevant catchability and ‘extraSE’ parameters associated with the index were not estimated. Composition data weights for the remaining fleets were kept consistent with the base model values. Results from all the ‘drop-one’ runs were compared to the base model using time series plots and tables containing likelihood components, parameter estimates and derived quantities.
@@ -32,9 +32,49 @@ The halving and doubling of historical catches in the northern model did lead to
 ```
 
 
+### Other Model Sensitivities
+Results from the **pre-STAR** base model were compared to several alternative model specifications, as described below.
+
+- Estimate the Beverton-Holt steepness parameter (*h*) rather than fixing it at the prior mean (*h*=0.72); estimate uncertainty intervals for comparison to base
+- Start recruitment deviations 5 years earlier than the base model configuration
+- Start recruitment deviations 5 years later than the base model configuration
+- Compare results based on the McAllister-Ianelli data weighting method (for composition data) to the Francis method used for the base model.
+- Mirror the recreational discard fleets’ selectivity curves to the corresponding retained fleets (PC or PR) rather than fitting to discard length comps as in the base model.
+
+
+```{asis, echo = model.area=='NCA'}
+Trends in spawning output for the northern California assessment model were generally robust to this set of sensitivities (Figure \@ref(fig:sens1-spawnb)). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness was estimated at a higher value than the prior mean (estimated at 0.94 vs. fixed at 0.72). Similarly, stock status did not vary greatly among this set of sensitivity runs, with only a minor increase in 2021 relative spawning output when using McAllister-Ianelli weights and a slight decrease when estimating steepness (Figure \@ref(fig:sens1-bratio)). The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method significantly reduced the magnitude of the 2016 year class, and generally increased the variance of the estimated deviations. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table \@ref(tab:data-weights)), and resulted in lower estimates of the male and female natural mortality rates (Table \@ref(tab:sens1)).
+
+During the STAR panel review, the STAT presented results from several sensitivity runs that were completed after distribution of the draft assessment document. All runs were conducted with the pre-STAR base models. These included:
+- Fixing the natural mortality rate (M) to a value consistent with the observed maximum age when applying the Hamel prior (i.e., M = 5.4/80 = 0.07 $yr^{-1}$)
+- Assuming asymptotic (2-parameter) selectivity curves for all fleets, except for recreational discard and the NWFSC trawl survey)
+- Estimating domed (4-parameter) selectivity curves for all fleets, but allowing for asymptotic shapes when supported by the data.
+- Use of a 3-parameter, reparameterized Ricker stock-recruitment relationship instead of a standard, 2-parameter Beverton-Holt relationship.
+
+
+The STAT compared several results from these runs to the pre-STAR base model, including time series of spawning output, relative spawning output, and recruitment deviations (Figures \@ref(fig:sens3a), \@ref(fig:sens3b), and \@ref(fig:sens3c)). Negative log likelihoods (total and by data type), parameter estimates, and derived quantities were also examined relative to the pre-STAR base (Table \@ref(tab:sens3)). Fixing M at 0.07 degraded the overall fit to the data, increasing the likelihood by about 3 points. The model with forced asymptotic selectivity estimated a slightly higher natural mortality rates (female M=0.11, male M-0.10) and had a total negative likelihood that was over 30 points higher than the pre-STAR base model. Estimating 4 selectivity parameters per fleet (excluding the discard and NWFSC trawl survey) produced results similar to the pre-base model, with a slightly larger population scale. Parameters from a reparameterized Ricker stock-recruitment relationship were estimable (Table \@ref(tab:sens3)) with M fixed at base model values, but produced point results and a total likelihood that were generally consistent with the Beverton-Holt relationship assumed in the base model.
+```
+
+
+```{asis, echo = model.area=='SCA'}
+Trends in spawning output for the southern California assessment model were generally robust to this set of sensitivities. However, recent estimates of spawning output were much lower when using McAllister-Ianelli data weights, relative to the Francis method used in the base model (Figure \@ref(fig:sens1-spawnb)). The model tuned to McAllister-Ianelli weights was below target biomass, while the other models that used Francis weights showed similar trends in depletion and were above target biomass (Figure \@ref(fig:sens1-bratio)). The McAllister-Ianelli approach estimated a natural mortality rate that was about 20% lower than the Francis method (Tables \@ref(tab:sens1)). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness in the southern region was estimated at a similar value than the prior mean (estimated at 0.77 vs. fixed at 0.72), and estimation of this parameter did not have a large effect on uncertainty in spawning output or recruitment deviations. The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method increased the variance of the estimated deviations as well as the estimated strength of the 1999 year class, relative to the models using the Francis approach. Changing the start date of the recruitment deviations had almost no effect. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table \@ref(tab:data-weights)).
+
+During the STAR panel review, the STAT presented results from several sensitivity runs that were completed after distribution of the draft assessment document. All runs were conducted with the pre-STAR base models. These included:
+- Fixing the natural mortality rate (M) to a value consistent with the observed maximum age when applying the Hamel prior (i.e., M = 5.4/80 = 0.07 $yr^{-1}$)
+- Assuming asymptotic (2-parameter) selectivity curves for all fleets, except for recreational discard and the NWFSC trawl survey)
+- Estimating domed (4-parameter) selectivity curves for all fleets, but allowing for asymptotic shapes when supported by the data.
+- Use of a 3-parameter, reparameterized Ricker stock-recruitment relationship instead of a standard, 2-parameter Beverton-Holt relationship.
+- “Direct” estimation of male natural mortality and growth parameters, in contrast to the base model, which uses an exponential offset parameterization for male parameters and fixes male M = female M.
+- Reduce the input variance of the NWFSC HKL index, forcing the model to fit the index better
+
+The STAT compared several results from these runs to the pre-STAR base model, including time series of spawning output, relative spawning output, and recruitment deviations (Figures \@ref(fig:sens3a), \@ref(fig:sens3b), and \@ref(fig:sens3c)). Negative log likelihoods (total and by data type), parameter estimates, and derived quantities were also examined relative to the pre-STAR base (Table \@ref(tab:sens3)). Fixing M at 0.07 degraded the overall fit to the data, increasing the likelihood by more than 38 points. The model with forced asymptotic selectivity did not converge (parameters hit bounds), estimated a natural mortality rate that was inconsistent with the observed ages (M=0.26) and had a higher total negative likelihood. Estimating 4 selectivity parameters per fleet (excluding the discard and NWFSC trawl survey) produced results similar to the pre-base model. The STAT notes that the post-STAR base model allowed for greater flexibility in time-varying selectivity for the commercial hook-and-line fleet, relative to the pre-STAR base, so results from this sensitivity may differ if applied to the post-STAR base model. Parameters from a reparameterized Ricker stock-recruitment relationship were estimable (Table \@ref(tab:sens3)) with M fixed at 0.12, but produced point results that were generally consistent with the Beverton-Holt relationship assumed in the base model. However, uncertainty in spawning output and relative stock status were greatly increased under the 3-parameter Ricker model. Sex-specific estimates of the natural mortality rate were similar to the combined estimate in the base model, and within one standard deviation based on reported asymptotic standard errors of the parameters. Lastly, reducing the input standard errors for the NWFSC hook-and-line survey had the expected effect of improving the fit to the index, but degraded the overall model fit. The improved fit to the hook-and-line index was mainly accomplished through a reduction in the estimated natural mortality rate, slowing the rate of population increase to better match the index. 
+```
+
+
+
 ## Likelihood Profiles
 
-Likelihood profiles were conducted for natural mortality (M), steepness (h) and the log of R0 (unfished recruitment) by fixing these parameters across a range of values and continuing to estimate the remaining parameters assuming the base model framework.  All models in this section use the post-STAR base models.
+Likelihood profiles were conducted for natural mortality (M), steepness (h) and the log of R0 (unfished recruitment) by fixing these parameters across a range of values and continuing to estimate the remaining parameters assuming the base model framework.  All models in this section use the **post-STAR** base models.
 
 ```{asis, echo = model.area=='SCA'}
 The profiles for natural mortality in the southern base model (Figures \@ref(fig:m-profile), \@ref(fig:m-depl), and \@ref(fig:m-spawn)) suggest that this parameter is reasonably well informed between a range of approximately 0.11 and 0.14.  The profiles suggest a somewhat commonly observed phenomena of tension between the age data, which would suggest a lower natural mortality rate, and the length and index data, which tend to fit the data better with a higher value for M.  The notable exceptions to these generalizations include the NWFSC hook and line survey index, which fits the data better with a considerably lower M, and the commercial fisheries data (hook and line, and setnet), which also fit the data better with a lower M.  Intuitively, spawning output increased with lower natural mortality rate estimates, while the estimate of relative stock status was more pessimistic, while the converse was true (lower spawning output, more optimistic stock status estimates) with higher M values. 
@@ -56,7 +96,7 @@ A profile on the log of unfished recruitment was conducted on values ranging fro
 
 ## Retrospective Analysis
 
-All models in this section use the post-STAR base model.
+All models in this section use the **post-STAR** base model.
 
 ```{asis, echo = model.area=='SCA'}
 A five year retrospective analysis was conducted on the southern base model by sequentially removing data, beginning with data from the year 2020.  Figures \@ref(fig:retro-spawnb), \@ref(fig:retro-bratio), and \@ref(fig:retro-recdev) show the estimated spawning output, the estimated depletion, the recruitment deviation estimates and the estimated fit to the NWFSC hook and line survey index (which appeared to be the index fit most affected by the analysis).  The greatest impact was the declining estimate of the strength of the 2016 year class, similar to the northern model, with the interesting result that with the loss of only 1-3 years of data the model attributes greater recruitment to 2015 relative to the base model, with variable responses among other recruitment estimates.  This change is associated with an increasingly pessimistic perception of stock status, although the overall scaling of spawning output is relatively modest.  This shift is understandably associated with the change in population trajectory as data supporting strong recent recruitment are removed.  Beyond this shift, this analysis does not suggest that there are substantive retrospective patterns (Table \@ref(tab:retro)).  Note that all composition data weights were held constant at the base model values during each run.
@@ -68,35 +108,7 @@ A five year retrospective analysis was conducted on the northern base model by s
 ```
 
 
-## Other Model Sensitivities
-Results from the pre-STAR base model were compared to several alternative model specifications, as described below.
 
-- Estimate the Beverton-Holt steepness parameter (*h*) rather than fixing it at the prior mean (*h*=0.72); estimate uncertainty intervals for comparison to base
-- Start recruitment deviations 5 years earlier than the base model configuration
-- Start recruitment deviations 5 years later than the base model configuration
-- Compare results based on the McAllister-Ianelli data weighting method (for composition data) to the Francis method used for the base model.
-- Mirror the recreational discard fleets’ selectivity curves to the corresponding retained fleets (PC or PR) rather than fitting to discard length comps as in the base model.
-
-
-```{asis, echo = model.area=='NCA'}
-Trends in spawning output for the northern California assessment model were generally robust to this set of sensitivities (Figure \@ref(fig:sens1-spawnb)). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness was estimated at a higher value than the prior mean (estimated at 0.94 vs. fixed at 0.72). Similarly, stock status did not vary greatly among this set of sensitivity runs, with only a minor increase in 2021 relative spawning output when using McAllister-Ianelli weights and a slight decrease when estimating steepness (Figure \@ref(fig:sens1-bratio)). The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method significantly reduced the magnitude of the 2016 year class, and generally increased the variance of the estimated deviations. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table \@ref(tab:data-weights)), and resulted in lower estimates of the male and female natural mortality rates (Table \@ref(tab:sens1)).
-
-During the STAR panel review, the STAT presented results from several sensitivity runs that were completed after distribution of the draft assessment document. All runs were conducted with the pre-STAR base models. These included:
-- Fixing the natural mortality rate (M) to a value consistent with the observed maximum age when applying the Hamel prior (i.e., M = 5.4/80 = 0.07 $yr^{-1}$)
-- Assuming asymptotic (2-parameter) selectivity curves for all fleets, except for recreational discard and the NWFSC trawl survey)
-- Estimating domed (4-parameter) selectivity curves for all fleets, but allowing for asymptotic shapes when supported by the data.
-- Use of a 3-parameter, reparameterized Ricker stock-recruitment relationship instead of a standard, 2-parameter Beverton-Holt relationship.
-- “Direct” estimation of male natural mortality and growth parameters, in contrast to the base model, which uses an exponential offset parameterization for male parameters and fixes male M = female M.
-- Reduce the input variance of the NWFSC HKL index, forcing the model to fit the index better
-
-The STAT compared several results from these runs to the pre-STAR base model, including time series of spawning output, relative spawning output, and recruitment deviations (Figures \@ref(fig:sens3a), \@ref(fig:sens3b), and \@ref(fig:sens3c)). Negative log likelihoods (total and by data type), parameter estimates, and derived quantities were also examined relative to the pre-STAR base (Table \@ref(tab:sens3)). Fixing M at 0.07 degraded the overall fit to the data, increasing the likelihood by more than 38 points. The model with forced asymptotic selectivity did not converge (parameters hit bounds), estimated a natural mortality rate that was inconsistent with the observed ages (M=0.26) and had a higher total negative likelihood. Estimating 4 selectivity parameters per fleet (excluding the discard and NWFSC trawl survey) produced results similar to the pre-base model. The STAT notes that the post-STAR base model allowed for greater flexibility in time-varying selectivity for the commercial hook-and-line fleet, relative to the pre-STAR base, so results from this sensitivity may differ if applied to the post-STAR base model. Parameters from a reparameterized Ricker stock-recruitment relationship were estimable (Table \@ref(tab:sens3)) with M fixed at 0.12, but produced point results that were generally consistent with the Beverton-Holt relationship assumed in the base model. However, uncertainty in spawning output and relative stock status were greatly increased under the 3-parameter Ricker model. Sex-specific estimates of the natural mortality rate were similar to the combined estimate in the base model, and within one standard deviation based on reported asymptotic standard errors of the parameters. Lastly, reducing the input standard errors for the NWFSC hook-and-line survey had the expected effect of improving the fit to the index, but degraded the overall model fit. The improved fit to the hook-and-line index was mainly accomplished through a reduction in the estimated natural mortality rate, slowing the rate of population increase to better match the index. 
- 
-```
-
-
-```{asis, echo = model.area=='SCA'}
-Trends in spawning output for the southern California assessment model were generally robust to this set of sensitivities. However, recent estimates of spawning output were much lower when using McAllister-Ianelli data weights, relative to the Francis method used in the base model (Figure \@ref(fig:sens1-spawnb)). The model tuned to McAllister-Ianelli weights was below target biomass, while the other models that used Francis weights showed similar trends in depletion and were above target biomass (Figure \@ref(fig:sens1-bratio)). The McAllister-Ianelli approach estimated a natural mortality rate that was about 20% lower than the Francis method (Tables \@ref(tab:sens1)). Best estimates from all runs were within the estimated range of uncertainty for the base model. Steepness in the southern region was estimated at a similar value than the prior mean (estimated at 0.77 vs. fixed at 0.72), and estimation of this parameter did not have a large effect on uncertainty in spawning output or recruitment deviations. The use of McAllister-Ianelli weights had the greatest impact on estimated recruitment deviations (Figure \@ref(fig:sens1-recdev)). This weighting method increased the variance of the estimated deviations as well as the estimated strength of the 1999 year class, relative to the models using the Francis approach. Changing the start date of the recruitment deviations had almost no effect. The McAllister-Ianelli method gives greater weight to the composition data for this model (Table \@ref(tab:data-weights)).
-```
 
 ## Unresolved Problems and Major Uncertainties
 
