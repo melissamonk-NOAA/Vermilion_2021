@@ -20,14 +20,14 @@ add_figure(
 
 if(model.area=='NCA'){
   add_figure(
-    filein = file.path(paste0(fig_loc,"/jitter_preSTAR_base_NCA.png")),
-    caption = "Results from 100 jittered runs of the pre-STAR base model.  Missing values indicate the run did not converge",
+    filein = file.path(paste0(fig_loc,"/jitter_postSTAR_base_NCA.png")),
+    caption = "Results from 100 jittered runs of the post-STAR base model.  Missing values indicate the 43 runs that did not converge",
     label = "jitter"
   )
 } else {
   add_figure(
-    filein = file.path(paste0(fig_loc,"/jitter_preSTAR_base_SCA.png")),
-    caption = "Results from 100 jittered runs of the pre-STAR base model",
+    filein = file.path(paste0(fig_loc,"/jitter_postSTAR_base_SCA.png")),
+    caption = "Results from 100 jittered runs of the post-STAR base model",
     label = "jitter"
   )
 }

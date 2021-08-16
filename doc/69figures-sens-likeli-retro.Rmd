@@ -92,9 +92,21 @@ sa4ss::add_figure(
 )
 
 sa4ss::add_figure(
-  filein = M.fig.filein[3] ,
+  filein = M.fig.filein[5] ,
   caption =  "Trajectories of spawning output across values of female natural mortality",
   label = 'm-spawn'
+)
+
+sa4ss::add_figure(
+  filein = M.fig.filein[4] ,
+  caption =  "Trajectories of age-0 recruits across values of female natural mortality",
+  label = 'm-recruits'
+)
+
+sa4ss::add_figure(
+  filein = M.fig.filein[3] ,
+  caption =  "Trajectories of estimated recruitment deviations across values of female natural mortality",
+  label = 'm-recdevs'
 )
 ```
 
@@ -114,9 +126,21 @@ sa4ss::add_figure(
 )
 
 sa4ss::add_figure(
-  filein = h.fig.filein[3] ,
+  filein = h.fig.filein[5] ,
   caption =  "Trajectories of spawning output across values of steepness",
   label = 'h-spawn'
+)
+
+sa4ss::add_figure(
+  filein = h.fig.filein[4] ,
+  caption =  "Trajectories of age-0 recruits across values of steepness",
+  label = 'h-recruits'
+)
+
+sa4ss::add_figure(
+  filein = h.fig.filein[3] ,
+  caption =  "Trajectories of estimated recruitment deviations across values of steepness",
+  label = 'h-recdevs'
 )
 ```
 
@@ -135,9 +159,21 @@ sa4ss::add_figure(
 )
 
 sa4ss::add_figure(
-  filein = R0.fig.filein[3] ,
+  filein = R0.fig.filein[5] ,
   caption =  "Trajectories of spawning output across values of R0",
   label = 'r0-spawn'
+)
+
+sa4ss::add_figure(
+  filein = R0.fig.filein[4] ,
+  caption =  "Trajectories of age-0 recruits across values of R0",
+  label = 'r0-recruits'
+)
+
+sa4ss::add_figure(
+  filein = R0.fig.filein[3] ,
+  caption =  "Trajectories of estimated recruitment deviations across values of R0",
+  label = 'r0-recdevs'
 )
 ```
 
@@ -158,23 +194,33 @@ retro.fig.filein = list.files(path = fig_loc,
 
 ```{r, results = 'asis'}
 sa4ss::add_figure(
-  filein = retro.fig.filein[1] ,
+  filein = retro.fig.filein[4] ,
   caption = "Change in the spawning output when the most recent 5 years of data area removed sequentially",
   label = 'retro-spawnb'
 )
 
 
 sa4ss::add_figure(
-  filein = retro.fig.filein[3] ,
+  filein = retro.fig.filein[1] ,
   caption =  "Change in the fraction of unfished biomass when the most recent 5 years of data area removed sequentially",
   label = 'retro-bratio'
+)
+
+
+sa4ss::add_figure(
+  filein = retro.fig.filein[3] ,
+  caption =  "Trajectories of age-0 recruits when the most recent 5 years of data area removed sequentially",
+  label = 'retro-recruits'
 )
 
 sa4ss::add_figure(
   filein = retro.fig.filein[2] ,
   caption = "Change in the recruitment deviations when the most recent 5 years of data area removed sequentially",
-  label = 'retro-recdev'
+  label = 'retro-recdevs'
 )
+
+
+
 ```
 
 

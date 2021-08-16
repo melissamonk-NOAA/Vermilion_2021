@@ -151,6 +151,9 @@ growth parameters. Year class strength is estimated as deviations from a Beverto
 refpts <- read.csv(paste0(exec_tables_loc,'e_ReferencePoints_ES.csv')) %>%
   mutate_at(c(2:4), round,3) 
 
+
+ssb <- read.csv(paste0(exec_tables_loc, 'b_SSB_ES.csv')) %>%
+   mutate_at(c(2:7), round,3) 
 ```
 
 
