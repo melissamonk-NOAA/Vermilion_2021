@@ -7,7 +7,7 @@
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(fig_loc, "assess_area.png"), 
-caption = "Map of the assssment area with the 3 nm California state water boundary.  The northern California model includes areas from Point Conception to the California-Oregon border and the southern California assessment includes areas from Point Concpetion to the USA-Mexico border",
+caption = "Map of the assssment area with the 3 nm California state water boundary.  The northern California model includes areas from Point Conception to the California-Oregon border and the southern California assessment includes areas from Point Concpetion to the USA-Mexico border. The boundary at Cape Mendocino is a Pacific Fishery Management Council boundary for management of the stock complex, provided for reference",
 label = 'assess-area')
 ```	
 
@@ -18,7 +18,13 @@ label = 'assess-area')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(base_loc_plots, "catch2 landings stacked.png"), 
-caption = "Catches by fleet used in the base model",
+caption = "Catch histories by fleet used in the base model 
+              (Commercial hook-and-line =  COM_HKL,
+                Commercial trawl = COM_TWL, Commercial net = COM_NET,
+              Recreational party/charter retained = REC_PC, Recreational 
+              private/rental retained = REC_PR, Recreational party/charter 
+              dead discards = REC_PC_DIS, Recreational private/rental dead 
+              discards = REC_PR_DIS)",
 label = 'catch')
 ```
 
@@ -27,7 +33,7 @@ label = 'catch')
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(base_loc_plots, "data_plot2.png"), 
-caption = "Summary of data sources used in the base model",
+caption = "Summary of data sources used in the base model. See the text for fleet descriptions",
 label = 'data-plot')
 ```
 
@@ -38,7 +44,7 @@ label = 'data-plot')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(fig_loc, "compare_pacfin_calcom.png"), 
-caption = "Comparison of landings from CALCOM and PacFIN",
+caption = "Comparison of total California landings from CALCOM and PacFIN",
 label = 'calcom-pacfin')
 ```
 

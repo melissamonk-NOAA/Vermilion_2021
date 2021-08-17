@@ -64,7 +64,7 @@ linesep = ""
 \newpage
 
 ```{r, age-sample-size, results = 'asis'}
-kableExtra::kbl(age.sample.size, 
+kableExtra::kbl(age.sample.size, linesep = "",
                 longtable = TRUE, booktabs = TRUE, 
   caption = "Samples sizes of conditional age-at-length data by year.",
   col.names = c("Source", "Year", "Fleet(#)", "Number of fish")

@@ -1,7 +1,8 @@
 
 ## Additional Considered Data Sources
 
-The STAT considered the following data sources, but found that `r Spp` were not well sampled and no further analysis was conducted. 
+The STAT considered the following data sources, but found that `r spp` were 
+not well sampled and no further analysis was conducted. 
 
 *NWFSC Triennial Survey*
 
@@ -28,8 +29,9 @@ The surveys in 1989 and 1992 covered the same depth range but extended the
 southern range to \CapeM (near Point Conception).
 From 1995 through 2004, the surveys covered the depth range 55-500 m and 
 surveyed south to \CapeM.
-In 2004, the final year of the Triennial Survey series, the NWFSC FRAM 
-conducted the survey following similar protocols to earlier years.
+In 2004, the final year of the Triennial Survey series, the NWFSC Fishery 
+Resource Analysis and Monitoring Division (FRAM) conducted the survey following 
+similar protocols to earlier years.
 
 
 *Alaska Fisheries Science Center Slope Survey* 

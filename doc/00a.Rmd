@@ -65,8 +65,8 @@ options(knitr.kable.NA = '') #print blank cells in tables with NA
 
 source("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/code/dir_recent.R")
 dir.path <- ifelse(params$model=="north",
-             "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/",
-             "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/")
+             "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/",
+             "C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/")
 model.dir <- dir_recent(dir = dir.path, pattern = "Verm")
 base_loc <- paste0(model.dir,"/")
 

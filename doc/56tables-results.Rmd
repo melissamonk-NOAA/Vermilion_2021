@@ -83,5 +83,20 @@ kableExtra::kbl(dataweight, booktabs = TRUE, longtable = TRUE,
 
 
 
+```{r, warning = FALSE, inclue = FALSE}
+timeseries <- read.csv(paste0(exec_tables_loc,"TimeSeries.csv")) %>%
+  mutate_at(c(2:9), round,3)
+```
+
+```{r, results = 'asis'}
+kableExtra::kbl(timeseries, booktabs = TRUE, longtable = TRUE, linesep = "",
+                caption = "Time series of population estimates from the base model.",
+                col.names = c("Year", "Total Biomass (mt)","Spawning Output","Total Biomass 4+ (mt)", "Fraction Unfished", "Age-0 Recruits", "Total Mortality (mt)","(1-SPR)/(1-SPR 50\\%)", "Exploitation Rate"),
+                             label = "timeseries") %>%
+  column_spec(1:9, width="1.2cm") %>%
+  kableExtra::kable_styling(latex_options = "repeat_header", font_size = 8)
+
+
+```
 
 

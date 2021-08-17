@@ -1,5 +1,5 @@
 ## Basic Information and Life History
-*Note: Prior to the identification of sunset rockfish as a separate species [-@Hyde2008b], historical studies of “vermilion” rockfish, particularly those conducted south of Point Conception (\PtC), California, could have included a mixture of both species. Also, many current studies and data sets (e.g., landing statistics) do not distinguish between the species. In this document, we refer simply to “vermilion rockfish” when no species-specific information is available.*
+*Note: Prior to the identification of sunset rockfish as a separate species [@Hyde2008b], historical studies of “vermilion” rockfish, particularly those conducted south of Point Conception (\PtC), California, could have included a mixture of both species. Also, many current studies and data sets (e.g., landing statistics) do not distinguish between the species. In this document, we refer simply to “vermilion rockfish” when no species-specific information is available.*
 
 
 
@@ -8,14 +8,14 @@ depths of 6 m to 436 m [@Love2002]. However, they are most commonly found from c
 to Punta Baja, Mexico [@Hyde2009] at depths of 50 m to 150 m [@Hyde2009].  Hyde and Vetter 
 [-@Hyde2009] describe vermilion rockfish as residents of shallower depths (<100 m) than their sibling species,
 sunset rockfish (*Sebastes crocotulus*). Adult fish tend to cluster on high relief rocky outcrops [@Love2002] 
-and kelp forests [@Hyde2009]. North of Point Conception, California, some adults are shallower, 
+and kelp forests [@Hyde2009]. North of Point Conception, California, some adults reside in  shallower, 
 living in caves and cracks [@Love2002]. Vermilion rockfish have shown high site fidelity 
 [@Hannah2011 (only tagged 1 vermilion); @Lea1999], and low to average larval dispersal 
 distance [@Hyde2009]. Lowe et al. [-@Lowe2009] suggested that vermilion rockfish 
 have a lower site fidelity than previously believed, but acknowledged that their
 observations of movements to different depths may have been due to differences in depth distribution between the species. 
-Vermilion rockfish have been aged to over 80 years, but few fish have been aged above 60 years, with females growing larger than their male counterparts. 50% of females are mature at 5 years and about 
-37 cm, with males probably maturing at shorter lengths than females [@Love2002].
+Vermilion rockfish have been aged to over 80 years, but few fish have been aged above 60 years, with females growing larger than their male counterparts. Fifty percent of females are mature at 5 years and about 
+37 cm, with males likely maturing at shorter lengths than females [@Love2002].
 
 Vermilion rockfish are viviparous, and females produce an estimated 63,000 to 2,600,000 eggs per brood, with larger fish releasing a substantially larger number of larvae. 
 In southern California, vermilion rockfish larvae are released between July and March. 
@@ -26,15 +26,12 @@ be due to weak poleward flow of nearshore waters corresponding with peak vermili
 
 Young-of-the-year vermilion rockfish settle out of the water column during two primary recruitment 
 periods per year, first from February to April and a second from August to October, 
-and settlement has been observed in May off southern California [@Love2002]. Larvae 
-measure about 4.3 mm. Young-of-the-year vermilion and sunset rockfish are both mottled 
-brown with areas of black, and older juveniles turn a mottled orange or red color [@Love2012a]. 
-Juvenile fish are found individually from 6 m to 36 m, living near sand and structures. 
-After two months, juveniles travel deeper and live on low relief rocky outcrops and 
+and settlement has been observed in May off southern California [@Love2002].  Young-of-the-year vermilion and sunset rockfish are both mottled brown with areas of black, and older juveniles turn a mottled orange or red color [@Love2012a]. Larvae 
+measure about 4.3 mm and juvenile fish are found in depths of 6-36 m, living near sand and structure. After two months, juveniles travel deeper and live on low relief rocky outcrops and 
 other structures [@Love2002].
 
 Adult vermilion rockfish predominantly eat smaller fish, though sometimes they pursue 
-euphausiids and other various macroplankton [@Phillips1964]. Love [-@Love2002] noted 
+euphausiids and other various macroplankton [@Phillips1964]. Love et al. [-@Love2002] noted 
 their diet includes octopuses, salps, shrimps, and pelagic red crabs. 
 
 
@@ -47,7 +44,7 @@ three species within the subgenus *Rosicola*. Hyde et al. [-@Hyde2008b] describe
 of the adult populations of the two species using nine microsatellite loci. 
 Adult sunset rockfish are mainly distributed at depths 
 greater than 50 fm (100 m) and are predominantly located south of Point Conception (\PtC). 
-Hyde [@Hyde2009] and Budrick [@Budrick2016]  identified species using mtDNA assays and microsatellite loci, 
+Hyde and Vetter [-@Hyde2009] and Budrick [-@Budrick2016]  identified species using mtDNA assays and microsatellite loci, 
 respectively.  The mtDNA analyses proved to be subject to errors in species identification due to introgression resulting from mating between the two species post-divergence.
 Additional population clusters of vermilion were found north of Point Conception, but neither 
 study detected population structure between Half Moon Bay, California and Brookings, 
@@ -55,20 +52,20 @@ Oregon [@Hyde2009; @Budrick2016].
 
 Vermilion and sunset rockfishes are morphologically very similar, with color being 
 the most commonly 
-cited differentiating feature. Hyde [-@Hyde2009] noted differences in three of six morphological 
+cited differentiating feature. Hyde and Vetter [-@Hyde2009] noted differences in three of six morphological 
 parameters examined, but none of them can readily be used for field identification.
 
 In all historical and current recreational and commercial catches, sunset and 
 vermilion rockfish are both recorded as vermilion rockfish.  Future studies, 
 such as the one described below will provide data needed to compare biological 
-parameters between the two species as well as habitats.
+parameters between the two species as well as habitats and distributions.
 
 _Ongoing Population Structure Research (Provided by John Harms, NWFSC)_
 
 A group of researchers from the NWFSC and SWFSC is collaborating on a project to 
 genotype tissue specimens collected from the vermilion and sunset rockfish cryptic 
-pair captured during the West Coast Groundfish Bottom Trawl Survey and the Southern 
-CA Shelf Rockfish Hook and Line Survey for the years 2004 - 2019.  Funding for this 
+pair captured during the West Coast Groundfish Bottom Trawl (WCGBT) Survey and the Southern 
+CA Shelf Rockfish Hook-and-Line Survey for the years 2004 - 2019.  Funding for this 
 project was obtained through the Saltonstall-Kennedy program for FY 2020 through a 
 proposal led by representatives from Pacific States Marine Fisheries Commission and 
 the commercial passenger fishing vessel industry in southern California.  
@@ -119,8 +116,8 @@ monitoring of this economically and ecologically important species complex.
 A map showing the scope of the two California `r spp` assessments and depicting a 
 boundary 
 at Point Conception (\PtC) that separates the two assessments is provided as Figure \@ref(fig:assess-area). The northern California
-model is bounded by the California/Oregon border (\CAOR) and the southern California model is 
-bounded by the U.S./ Mexico border at the south (Figure \@ref(fig:assess-area)). 
+model is bounded in the north by the California/Oregon border (\CAOR) and the southern California model is 
+bounded by the U.S./ Mexico border in the south (Figure \@ref(fig:assess-area)). 
 Cape Mendocino (\CapeM) is also noted as it is a management boundary for the 
 Pacific Fishery Management Council (PFMC) "minor shelf rockfish" stock complex.
 
@@ -155,8 +152,7 @@ species, including seabirds, piscivorous fishes, and marine mammals.
 
 As with most other rockfish and groundfish in the California Current, recruitment, 
 or cohort (year-class) strength appears to be highly variable for the vermilion/sunset 
-rockfish complex, with only a modest apparent relationship to estimated levels of spawning output.  
-Oceanographic and ecosystem factors are widely recognized to be key drivers of
+rockfish complex, with only a modest apparent relationship to estimated levels of spawning output. Oceanographic and ecosystem factors are widely recognized to be key drivers of
 recruitment variability for most species of groundfish, as well as most elements
 of California Current food webs.  Empirical estimates of recruitment from pelagic 
 juvenile rockfish surveys have been used to inform incoming year class strength for 

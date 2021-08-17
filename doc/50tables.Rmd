@@ -3,12 +3,6 @@
 
 # Tables
 
-```{r render-51, results = "asis"}
-sa4ss::read_child("51tables-execsummary.Rmd")
-```
-
-
-
 ```{r render-52, results = "asis"}
 sa4ss::read_child("52tables-catch.Rmd")
 ```

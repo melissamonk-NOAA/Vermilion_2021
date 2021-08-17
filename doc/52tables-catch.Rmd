@@ -4,7 +4,7 @@
 ```{r, albin-allocate, reasults = 'asis'}
 kableExtra::kbl(
   readxl::read_xlsx("./tables/Allocate_MRFSS_1980-1989.xlsx", sheet = 2),
-  booktabs = TRUE,
+  booktabs = TRUE, linesep = "",
   caption = "Estimated ratio of SLO catch (in numbers) to catch in California 
   counties north of SLO from Albin et al. (1993) Table 1.") %>%
   kableExtra::kable_styling(latex_options = "repeat_header", font_size = 10) 
@@ -13,7 +13,7 @@ kableExtra::kbl(
 
 
 
-
+\newpage
 
 
 ```{r, warning = FALSE, inclue = FALSE, messages = FALSE}
