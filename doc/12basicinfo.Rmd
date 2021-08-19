@@ -8,7 +8,7 @@ depths of 6 m to 436 m [@Love2002]. However, they are most commonly found from c
 to Punta Baja, Mexico [@Hyde2009] at depths of 50 m to 150 m [@Hyde2009].  Hyde and Vetter 
 [-@Hyde2009] describe vermilion rockfish as residents of shallower depths (<100 m) than their sibling species,
 sunset rockfish (*Sebastes crocotulus*). Adult fish tend to cluster on high relief rocky outcrops [@Love2002] 
-and kelp forests [@Hyde2009]. North of Point Conception, California, some adults reside in  shallower, 
+and kelp forests [@Hyde2009]. North of Point Conception, California, some adults reside in  shallower water, 
 living in caves and cracks [@Love2002]. Vermilion rockfish have shown high site fidelity 
 [@Hannah2011 (only tagged 1 vermilion); @Lea1999], and low to average larval dispersal 
 distance [@Hyde2009]. Lowe et al. [-@Lowe2009] suggested that vermilion rockfish 
@@ -20,8 +20,7 @@ Vermilion rockfish have been aged to over 80 years, but few fish have been aged 
 Vermilion rockfish are viviparous, and females produce an estimated 63,000 to 2,600,000 eggs per brood, with larger fish releasing a substantially larger number of larvae. 
 In southern California, vermilion rockfish larvae are released between July and March. 
 In central and northern California, this release occurs in September, December, and 
-April-June [@Love2002].  Larval release in fall and winter is not common among other 
-rockfish species. Hyde and Vetter [-@Hyde2009] suggest that low larval dispersal may 
+April-June [@Love2002]. Hyde and Vetter [-@Hyde2009] suggest that low larval dispersal may 
 be due to weak poleward flow of nearshore waters corresponding with peak vermilion larval release. 
 
 Young-of-the-year vermilion rockfish settle out of the water column during two primary recruitment 

@@ -12,29 +12,37 @@ dropone.filein = list.files(path = table_loc,
 dropone <- readxl::read_xlsx(dropone.filein) %>%
   mutate(across(where(is.numeric), round, 3)) %>%
   filter(!grepl("Size", Label)) %>%
+  setNames(gsub("_", " ", names(.))) %>%
   select(1:7)
 
 dropone2 <- readxl::read_xlsx(dropone.filein) %>%
   mutate(across(where(is.numeric), round, 3)) %>%
   filter(!grepl("Size", Label)) %>%
+  setNames(gsub("_", " ", names(.))) %>%
   select(c(1,8:ncol(.)))
 ```
 
 
 ```{r,drop-one, results = 'asis'}
 kableExtra::kbl(dropone, booktabs = TRUE, 
-  caption = "Likelihood components, parameter estimates and derived quantities from the leave one out analysis of the pre-STAR base model.",
+  caption = "Likelihood components, parameter estimates and derived quantities from the leave one out analysis of the pre-STAR base model. Continued in the next table.",
   linesep = ""
 ) %>%
-  kable_styling(latex_options = c("scale_down")) 
+  add_header_above(c(" " = 2, "Fleet Removed" = 5)) %>%
+ #  column_spec(1, width="1.4in") %>%
+ #  column_spec(2:7, width=".5in") %>%
+kableExtra::landscape()
 ```
 
 ```{r,drop-one2, results = 'asis'}
 kableExtra::kbl(dropone2, booktabs = TRUE, 
-  caption = "Likelihood components from the leave one out analysis of the pre-STAR base model.",
+  caption = "Likelihood components from the additional leave one out analysis of the pre-STAR base model. The column name is the fleet removed from the model.",
   linesep = ""
 ) %>%
-  kable_styling(latex_options = c("scale_down")) 
+#   column_spec(1, width="1.2in") %>%
+#   column_spec(2:7, width=".6in") %>%
+
+kableExtra::landscape()
 ```
 
 <!-- ======================================================================= -->
@@ -66,8 +74,9 @@ kableExtra::kbl(retro, booktabs = TRUE,
   caption = "Likelihood components from the retrospective analysis removing one to five years of data of the pre-STAR base model.",
   linesep = ""
 ) %>%
+kableExtra::landscape()
  # column_spec(1, width = "2cm") %>
-  kable_styling(latex_options = c("scale_down"), font_size = 10)
+ # kable_styling(latex_options = c("scale_down"), font_size = 10)
 ```
 
 

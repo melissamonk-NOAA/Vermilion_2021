@@ -14,7 +14,7 @@ relatively small number (approximately 700) of possible cells from a very large
 set of possible cells spread from the Mexican to the Canadian borders.
 
 Vermilion rockfish are strongly associated with rocky 
-habitat,i.e., untrawlable habitat, but can be found over soft bottom, especially as 
+habitat, i.e., untrawlable habitat, but can be found over soft bottom, especially as 
 juveniles.  This survey spans the entire West Coast and provided data for both the 
 northern and southern California assessments. However, this survey does not sample 
 most rocky habitats, nor does the survey conduct sampling within the Cowcod 
@@ -37,7 +37,7 @@ survey are shown in Figure \@ref(fig:len-data-NWFSC-TWL).
 description of the results is in the section on biological data.
 
 *Index of abundance.* The index was considered, but not used in the pre-STAR 
-base model. VASTWestCoast was explored for standardization of the WCBTS data both 
+base model. VAST-WestCoast was explored for standardization of the WCBTS data both 
 north and south of Point Conception. Unfortunately, results were uncertain given 
 the small number of tows that observed vermilion rockfish. Truncating the spatial 
 distribution of the survey to less than 300 m, which only eliminated a small 
@@ -142,7 +142,9 @@ as part of the Seafloor Mapping Program. This method of habitat area quantificat
 has been used in a number of stock assessments to weight indices of abundance 
 since 2013.  This is the first time the habitat data are utilized to weight an 
 inside/outside MPA effect within an index of abundance.  Full details on the 
-observed data, model selection and modeling methods can be found in the Appendices.
+observed data, model selection and modeling methods can be found in the Appendices. 
+Although it was not used in the assessment, the details related to the index of 
+abundance are retained in the document for future reference.
 ```
 
 
@@ -188,7 +190,8 @@ Vermilion is one of the most common species encountered in the survey and is one
 of the only sources of information about the stock inside the CCAs, which have 
 been closed to fishing since 2001.  Details regarding the 
 index of abundance, sample sizes and model selection can be found in the Appendices.
-
+Although it was not used in the assessment, the details related to the index of 
+abundance are retained in the document for future reference.
 
 
 ### California Department of Fish and Wildlife CPFV Survey

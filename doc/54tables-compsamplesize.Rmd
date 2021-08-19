@@ -24,7 +24,10 @@ inputN <- readxl::read_xlsx("./tables/sample sizes for vermilion composition dat
   mutate(yrs = paste0(minYr,"-",maxYr)) %>%
   dplyr::select(SOURCE, FLEET_NO, N_INIT_BASIS, yrs) %>%
   unique() %>%
-  rename(`Initial Sample Size Basis` = N_INIT_BASIS)
+  rename(`Initial Sample Size Basis` = N_INIT_BASIS,
+         Source = SOURCE,
+         `Fleet No.` = FLEET_NO,
+         Years = yrs)
 
 
 age.sample.size <- readxl::read_xlsx("./tables/sample sizes for vermilion composition data.xlsx", sheet = paste0(model.area, "_AGE")) %>%
@@ -76,3 +79,14 @@ kableExtra::kbl(age.sample.size, linesep = "",
   kable_styling(latex_options = "repeat_header")#, full_width = FALSE)
 ```
 
+
+
+
+```{r, albin-allocate, reasults = 'asis'}
+kableExtra::kbl(
+  readxl::read_xlsx("./tables/Allocate_MRFSS_1980-1989.xlsx", sheet = 2),
+  booktabs = TRUE, linesep = "",
+  caption = "Estimated ratio of SLO catch (in numbers) to catch in California 
+  counties north of SLO from Albin et al. (1993).") %>%
+  kableExtra::kable_styling(latex_options = "repeat_header", font_size = 10) 
+```

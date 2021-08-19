@@ -16,7 +16,7 @@ rmd_files: ['00a.Rmd',
              '40management.Rmd',
              '41acknowledgements.Rmd',
              '50tables.Rmd',
-             '60figures.Rmd' #,
-      #       '70appendices-north.Rmd'
+             '60figures.Rmd',
+             '70appendices-north.Rmd'
 ]
 

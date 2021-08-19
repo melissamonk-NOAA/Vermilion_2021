@@ -253,7 +253,7 @@ sa4ss::add_figure(
 sa4ss::add_figure(
   filein = sens1.fig.filein[2] ,
   caption = "Change in the recruitment deviations to a series of model sensitivity runs",
-  label = 'sens1-recdev'
+  label = 'sens1-recdevs'
 )
 ```
 <!-- ======================================================================= -->

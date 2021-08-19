@@ -99,14 +99,14 @@ these assumptions of natural mortality through likelihood profiling.
 ### Sex Ratio
 
 ```{asis, echo = model.area=='NCA'}
-The sex ratio at birth was assumed to be 50:50 and plots of the sex ratio by year for data with sex-specific CAAL data are available in Figure \@ref(fig:sexratio-ABRAMS-RESEARCH), Figure \@ref(fig:sexratio-SWFSC-GF-ECOL), and 
-Figure \@ref(fig:sexratio-NWFSC-TWL)  along with 75% intervals calculated as Jeffreys intervals based on adjusted input sample sizes from Francis weighting [@Brown2001]. The WCGBTS provided the majority of age data to the assessment and no clear patterns can be seen in the sex ratios.  For years with fish larger than 50 cm, the sex ratio is skewed towards females, but the data are too sparse to draw conclusions about the true sex ratio in the population.
+The sex ratio at birth was assumed to be 50:50 and plots of the sex ratio by year for data with sex-specific CAAL data are available in Figure \@ref(fig:sexratio-ABRAMS-RESEARCH-1), Figure \@ref(fig:sexratio-SWFSC-GF-ECOL-2), and 
+Figure \@ref(fig:sexratio-NWFSC-TWL-3)  along with 75% intervals calculated as Jeffreys intervals based on adjusted input sample sizes from Francis weighting [@Brown2001]. The WCGBTS provided the majority of age data to the assessment and no clear patterns can be seen in the sex ratios.  For years with fish larger than 50 cm, the sex ratio is skewed towards females, which is consistent with the observation that females grow larger than males, on average.
 
 ```
 
 
 ```{asis, echo = model.area=='SCA'}
-The sex ratio was assumed to be 50:50 in the assessment model.  The majority of the recent age data in the assessment were collected from the NWFSC hook-and-line survey.  There is a clear pattern of the sex ratio becoming skewed towards females in all years of the NWFSC hook-and-line survey beginning around 50 cm (Figures \@ref(fig:sexratio-NWFSC-HKL) and \@ref(fig:sexratio-EARLY-HKL)), as expected due to differences in male and female growth. There are no clear patterns in the sex ratio from the WCGBTS CAAL data nor the CDFW research fleet (\@ref(fig:sexratio-NWFSC-TWL)   and \@ref(fig:sexratio-CDFW-RESEARCH)).  
+The sex ratio was assumed to be 50:50 in the assessment model. The majority of the recent age data in the assessment were collected from the NWFSC hook-and-line survey.  There is a clear pattern of the sex ratio becoming skewed towards females in all years of the NWFSC hook-and-line survey beginning around 50 cm (Figures \@ref(fig:sexratio-NWFSC-HKL-3) and \@ref(fig:sexratio-EARLY-HKL-2)), as expected due to differences in male and female growth. There are no clear patterns in the sex ratio from the CDFW research fleet nor the WCGBTS (Figures \@ref(fig:sexratio-NWFSC-TWL-4), \@ref(fig:sexratio-NWFSC-TWL-5) \@ref(fig:sexratio-CDFW-RESEARCH-1)). 
 
 
 ```

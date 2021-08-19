@@ -7,7 +7,7 @@ rockfish catches reported in a summary of early California fisheries landings by
 Sette and Fielder [-@Sette1928] for the years 1888, 1892, 1895, 1899, 1904, 1908 
 and 1915.  No rockfish were reported for 1888. We assumed no catches prior to 1875
  and interpolated the catches between 0 mt and the 1892 catches (total of 834 
-tons) reported. Similarly, catches between the reported years were interpolated 
+tons) as reported. Similarly, catches between the reported years were interpolated 
 assuming a straight linear trend between the years reported.  We used a 
 ratio-estimator derived from the catch reconstruction fraction of vermilion 
 rockfish in total rockfish landings for the 1916 to 1919 period (the ratio for
@@ -104,7 +104,7 @@ extracted from CALCOM. The CALCOM length composition data were “expanded”
 better represent the size composition of the landed catch. The length composition 
 is available in Figure \@ref(fig:len-data-COM-HKL) 
 for the commercial hook-and-line fleet, `r ifelse(model.area=='NCA', noquote("Figure \\ref{fig:len-data-COM-TWL} for the commercial trawl fleet "), "")` and Figure \@ref(fig:len-data-COM-NET) for the commercial net fleet. Input sample sizes for 
-commercial length composition were based on the number of port samples and are in 
+commercial length compositions were based on the number of port samples and are in 
 Table \@ref(tab:length-sample-size). Length compositions with fewer than 30
 measured fish in a region/gear/year combination were not included in the model 
 likelihood.

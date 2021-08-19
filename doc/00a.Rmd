@@ -19,6 +19,7 @@ header-includes:
   - \usepackage[normalem]{ulem}
   - \usepackage{makecell}
   - \usepackage{placeins}
+  - \usepackage{caption}
 output:
   sa4ss::techreport_pdf:
     default
@@ -113,7 +114,7 @@ model$FleetNames_parsed <- c("commercial hook-and-line fishery",
                            "recreational PC onboard survey",
                            "Abrams thesis research survey",
                            "SWFSC groundfish ecology survey",
-                           "California Collaborative Fisheries Research Project survey")
+                           "California Collaborative Fisheries Research Program survey")
 } else {
 model$FleetNames_parsed <- c("commercial hook-and-line fishery",
                            "commercial trawl fishery",
@@ -125,7 +126,7 @@ model$FleetNames_parsed <- c("commercial hook-and-line fishery",
                            "NWFSC hook-and-line survey",
                            "West Coast Groundfish Bottomfish Trawl Survey",
                            "recreational PC onboard survey",
-                           "CDFW reserach (aka green binder) survey",
+                           "CDFW research (aka green binder) survey",
                            "Early years hook-and-line")
 }
 

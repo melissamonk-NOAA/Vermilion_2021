@@ -1,9 +1,6 @@
-### Key Assumptions and Structural Choices in the Pre-STAR base
+### Key Assumptions and Structural Choices
 
-The STAT used sensitivity analyses to evaluate robustness of the base model to key assumptions and structural choices. The major structural choices in both California assessments were 1) the use of a single, stationary, and closed population model to describe the aggregate population dynamics and biological parameters of the cryptic species pair in each region, 2) density-dependence entirely characterized by a Beverton-Holt stock recruitment relationship, 3) that natural mortality rates can be adequately estimated from available data, and 4) time blocks based on major regulatory changes adequately characterize changes in size-selectivity of fishing gear over time. The catch histories of vermilion and sunset rockfishes are inseparable at this time, making estimation of species-specific fishing mortality rates impossible. Ongoing research may shed light on this issue, and help improve our understanding of potential differences between the species (e.g., vital rates) that could influence estimates of stock productivity and sustainable yield.
-
-
-### Changes made during the STAR panel
+The STAT used sensitivity analyses to evaluate robustness of the pre-STAR base models to key assumptions and structural choices. The major structural choices in both California assessments were 1) the use of a single, stationary, and closed population model to describe the aggregate population dynamics and biological parameters of the cryptic species pair in each region, 2) density-dependence entirely characterized by a Beverton-Holt stock recruitment relationship, 3) that natural mortality rates can be adequately estimated from available data, and 4) time blocks based on major regulatory changes adequately characterize changes in size-selectivity of fishing gear over time. The catch histories of vermilion and sunset rockfishes are inseparable at this time, making estimation of species-specific fishing mortality rates impossible. Ongoing research may shed light on this issue, and help improve our understanding of potential differences between the species (e.g., vital rates) that could influence estimates of stock productivity and sustainable yield. 
 
 
 ### Convergence
@@ -12,7 +9,8 @@ Model convergence was examined by starting the minimization algorithm from dispe
 values of the maximum likelihood estimates to determine if the model found a better 
 minimum. "Jitter" is an option in SS that generates random starting values from a normal 
 distribution logistically transformed into each parameter’s range [@Methot2020]. This 
-was repeated 100 times and none of the runs converged to a lower negative log likelihood (Figure \@ref(fig:jitter)).
+was repeated 100 times and none of the runs converged to a lower negative log likelihood 
+in the post-STAR base model (Figure \@ref(fig:jitter)).
 The model did not experience convergence issues, e.g., final gradient was below 0.0001,
 when reasonable starting values were used and there were no difficulties in inverting 
 the Hessian to obtain estimates of variability.  

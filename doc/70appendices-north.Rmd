@@ -22,12 +22,13 @@ for (a in plot.vec){
 
 \clearpage
 
+
 ## MRFSS Dockside Index of Abundance {#mrfss-index}
 
 ```{r mrfss-index, results = 'asis'}
  sa4ss::read_child("./indices/vermilion_MRFSS_dockside_writeup_NCA.md") 
 ```
-  
+
 \clearpage
 
 ## California Onboard CPFV Index of Abundance {#cpfv-index}

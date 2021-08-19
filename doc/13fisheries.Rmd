@@ -2,7 +2,7 @@
 *Commercial Fishery*   
 The commercial groundfish fishery off California developed in the late 19th 
 century and consisted mainly of hook and line gear types (Figure \@ref(fig:catch)). 
-At the turn of the century, total rockfish landings were estimated to be between 
+At the end of the 19th century, total rockfish landings were estimated to be between 
 2,000 to 3,500 tons statewide, with slightly over half of the catch during this 
 period coming from waters south of Point Conception, and most of the remaining 
 catch from central California ports (particularly San Francisco and Monterey). 
@@ -57,7 +57,7 @@ fishes other than Tunas, other gamefish, and salmon was minimal until about
 1930. The CPFV fleet numbered about 200 vessels in 1939 [[@Croker1940], cited 
 in Young [-@Young1969]). After a hiatus in most operations during WWII, the 
 fleet increased to about 590 vessels by 1953, then declined to approximately 
-256 vessels around 1963. 
+256 vessels around 1963.  
 
 Onboard surveys of CPFV vessels in southern California ranked vermilion as the 
 fifth and third most common rockfish species in the mid-1970s and mid-1980s, 
@@ -172,11 +172,10 @@ Multiyear [GEMM](https://www.nwfsc.noaa.gov/data/api/v1/source/observer.gemm_fac
 report [@Somers2020]. The coastwide management of the shelf rockfish complex is split at Cape 
 Mendocino (\CapeM).  Therefore, the  northern California `r spp` 
 model contains a portion of the management area from Cape Mendocino (\CapeM) 
-to the California-Oregon border (\CAOR).  The southern California `r spp` contains the 
-area within the southern management area (south of \CapeM) south of Point Conception (\PtC).
+to the California-Oregon border (\CAOR).  The southern California `r spp` model contains the 
+area within the southern management area (south of \CapeM) that is south of Point Conception (\PtC).
 
-The total mortality of the shelf rockfish 
-south complex has been above the OFL in all years (2011-2019) north of \CapeM, and 
+The total mortality of the shelf rockfish complex has been above the OFL in all years (2011-2019) north of \CapeM, and 
 above the OFL south of \CapeM from 2015-2019. Total mortality 
 estimates from the NMFS NWFSC are not yet available for 2020 (Table \@ref(tab:managementES)). `r Spp` total 
 mortality was on average 59% (range 55%-66%) of the total shelf rockfish south 

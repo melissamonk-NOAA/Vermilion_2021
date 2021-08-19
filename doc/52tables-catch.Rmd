@@ -1,17 +1,6 @@
 
 
 
-```{r, albin-allocate, reasults = 'asis'}
-kableExtra::kbl(
-  readxl::read_xlsx("./tables/Allocate_MRFSS_1980-1989.xlsx", sheet = 2),
-  booktabs = TRUE, linesep = "",
-  caption = "Estimated ratio of SLO catch (in numbers) to catch in California 
-  counties north of SLO from Albin et al. (1993) Table 1.") %>%
-  kableExtra::kable_styling(latex_options = "repeat_header", font_size = 10) 
-```
-
-
-
 
 \newpage
 
@@ -36,7 +25,10 @@ landings_table <- landings %>%
 
 ```{r, landings, results = 'asis'}
 kableExtra::kbl(landings_table, longtable = TRUE, booktabs = TRUE, 
-  caption = "Landings of vermilion by fleet and year. All recreational fleet landings are in numbers (thousands of fish) and commercial fleets in biomass (mt). A description of the sources of the landings data are in the text and the next table.",
+  caption = "Landings of vermilion by fleet and year. All recreational fleet 
+  landings are in numbers (thousands of fish) and commercial fleets in biomass 
+  (mt). A description of the sources of the landings data are in the text and 
+  the next table.",
   align  = 'r', linesep = ""
 ) %>%
   column_spec(1, width = "1cm") %>%
@@ -53,6 +45,8 @@ kableExtra::kbl(landings_table, longtable = TRUE, booktabs = TRUE,
   kableExtra::kable_styling(latex_options = "repeat_header", font_size = 10) 
 #  footnote(alphabet = c("Cooperative Groundfish Survey", "MRFSS"))
 ```
+
+
 
 
 ```{r, warning = FALSE, inclue = FALSE}
@@ -79,20 +73,29 @@ if(model.area == 'NCA'){
 }
 ```
 
+
+\vspace{2in}
+
+
 ```{r, catch-source, results = 'asis'}
 kableExtra::kbl(catch_source, booktabs = TRUE, 
-  caption = "Sources of landings for the commercial and recreational fleets.  The interpolated values were interpolated by J. Field (SWFSC). The reconstruction refers to the commercial and recreational catch recontructions in Ralston et al. (2010). Detailed descriptions of the sources are in the text.",
+  caption = "Sources of landings for the commercial and recreational fleets.  
+  The interpolated values were interpolated by J. Field (SWFSC). The reconstruction 
+  refers to the commercial and recreational catch recontructions in Ralston et al. 
+  (2010). Detailed descriptions of the sources are in the text.",
   align  = 'l', linesep = ""
 ) %>%
   column_spec(1, width = "3cm") %>%
  # column_spec(2:length(catch_source$CALCOM), width = "2cm") %>%
-  kableExtra::kable_styling(latex_options = c("striped", "scale_down"))
+  kableExtra::kable_styling(latex_options = c("striped")) %>%
+  kableExtra::landscape()
 ```
 
 
 
 ```{r, warning = FALSE, inclue = FALSE}
-area6 <- readxl::read_xlsx("./tables/Area_6_Adjustment_to_Ralston.xlsx", sheet = 1) %>%
+area6 <- readxl::read_xlsx("./tables/Area_6_Adjustment_to_Ralston.xlsx",
+                           sheet = 1) %>%
   mutate_at(c(2:8,10,12), round,3)
 
 ```
@@ -103,14 +106,17 @@ area6 <- readxl::read_xlsx("./tables/Area_6_Adjustment_to_Ralston.xlsx", sheet =
 kableExtra::kbl(
   area6,
   booktabs = TRUE, longtable = TRUE,
-  caption = "Re-apportionment of the Ralson et al. (2010) commercial catch reconstruction to north and south of Point Conception. San Luis Obispo county landings were assigned to southern California.") %>%
- add_header_above(c(" "=1, "FB 105" = 1, "NMFS ERD live-access server" = 3,
+  caption = "Re-apportionment of the Ralson et al. (2010) commercial catch 
+  reconstruction to north and south of Point Conception. San Luis Obispo county 
+  landings were assigned to southern California.") %>%
+add_header_above(c(" "=1, "FB 105" = 1, "NMFS ERD live-access server" = 3,
                     " " = 1, "Major SLO Ports" = 2, " " =4)) %>%
-    column_spec(1:5, width = "1.2cm")  %>%
-    column_spec(6, width = "1.5cm")  %>%
-    column_spec(7:12, width = "1.5cm")  %>%
-    kableExtra::kable_styling(latex_options = c("striped","repeat_header"), font_size = 8) %>%
-  landscape()
+column_spec(1:5, width = "1.2cm")  %>%
+column_spec(6, width = "1.5cm")  %>%
+column_spec(7:12, width = "1.5cm")  %>%
+row_spec(0, align = "c") %>%
+kableExtra::kable_styling(latex_options = c("striped","repeat_header"), font_size = 8) %>%
+landscape()
 
 ```
 

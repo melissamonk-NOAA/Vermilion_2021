@@ -4,7 +4,7 @@
 
 
 
-```{r, params,  results = 'asis'}
+```{r, warning = FALSE, inclue = FALSE}
 mod_params = model$parameters[-c(grep('Impl',model$parameters$Label),
 							     grep('Fore',model$parameters$Label)),
                                 (names(model$parameters) %in%
@@ -30,24 +30,24 @@ rownames(mod_params) = c()
 mod_params[,"Label"] = gsub("\\_", " ", mod_params[,"Label"])
 mod_params[,"PR_type"] = gsub("\\_", " ", mod_params[,"PR_type"])
 # Add column names
-col_names = c('Parameter',
+colnames(mod_params) = c('Parameter',
                          'Value',
                          'Phase',
                          'Bounds',
                          'Status',
                          'SD',
                          'Prior (Exp.Val, SD)')
-sa4ss::table_format(x = mod_params,
+```
+
+
+
+```{r, paramstable, results = 'asis'}
+kableExtra::kbl(mod_params, booktabs = T,
              caption = "List of parameters used in the base model, including estimated values and standard deviations (SD), bounds (minimum and maximum), estimation phase (negative values not estimated), status (indicates if parameters are near bounds), and prior type information (mean and SD).",
-             label = "params",
              align = 'l',
-             col_names = col_names,
-             longtable = TRUE,
-             font_size = 9,
-             landscape = TRUE,
-             custom_width = TRUE,
-             col_to_adjust = c(1,7), 
-             width = c("8.5cm", "4cm"))                         
+             longtable = TRUE)  %>%
+  kable_styling(latex_options = c("repeat_header"), font_size = 8) %>%
+  kableExtra::landscape()
 ```
 
 <!-- ======================================================================= -->
@@ -71,15 +71,16 @@ dataweight <- readxl::read_xlsx(dataweight.filein) %>%
 ```{r,data-weights, results = 'asis'}
 kableExtra::kbl(dataweight, booktabs = TRUE, longtable = TRUE,
   caption = "Suggested data-weighting for length and age composition data using the McAllister-Ianelli and Francis approaches, after five tuning iterations to the pre-STAR base model.",
-  linesep = ""
+  linesep = "",
+  col.names = c("Method","Data Type", "Fleet No.","Fleet Name", "Iteration 1", 
+                "Iteration 2", "Iteration 3", "Iteration 4" , "Iteration 5",
+                "Base Model") 
 ) %>%
  # column_spec(1, width = "2cm") %>%
 
-  kable_styling(latex_options = c("scale_down", "repeat_header"), font_size = 8) %>%
+  kable_styling(latex_options = c("repeat_header"), font_size = 8) %>%
   kableExtra::landscape()
 ```
-
-
 
 
 
@@ -90,10 +91,18 @@ timeseries <- read.csv(paste0(exec_tables_loc,"TimeSeries.csv")) %>%
 
 ```{r, results = 'asis'}
 kableExtra::kbl(timeseries, booktabs = TRUE, longtable = TRUE, linesep = "",
-                caption = "Time series of population estimates from the base model.",
-                col.names = c("Year", "Total Biomass (mt)","Spawning Output","Total Biomass 4+ (mt)", "Fraction Unfished", "Age-0 Recruits", "Total Mortality (mt)","(1-SPR)/(1-SPR 50\\%)", "Exploitation Rate"),
+                caption = "Time series of population estimates from the base model.", 
+                align  = "c",
+                escape = F,
+                col.names = c("Year", "Total Biomass (mt)",
+                              "Spawning Output ($10^6$ eggs)","Total Biomass 4+ (mt)", 
+                              "Fraction Unfished", "Age-0 Recruits", 
+                              "Total Mortality (mt)","$\\frac{1-SPR}{1-SPR_{50\\%}}$", 
+                              "Exploitation Rate"),
                              label = "timeseries") %>%
-  column_spec(1:9, width="1.2cm") %>%
+  column_spec(1, width=".3in") %>%
+  column_spec(2:6, width=".6in") %>%
+  column_spec(7:9, width=".6in") %>%
   kableExtra::kable_styling(latex_options = "repeat_header", font_size = 8)
 
 
