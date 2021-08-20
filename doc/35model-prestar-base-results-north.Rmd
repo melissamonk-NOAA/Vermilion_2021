@@ -1,9 +1,12 @@
 # Assessment Results
 
-The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params} and the likelihood components are shown in Table \@ref(tab:drop-one). Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \@ref(tab:referenceES). Estimates of stock size and status over time are shown in Table \@ref(tab:timeseries). 
-
-The full r4ss plotting output is available in the supplementary material on the 
+The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params}. The full r4ss plotting output is available in the supplementary material on the 
 Council's website.
+
+## Fixed parameters
+The following parameters were fixed in the post-STAR base model:  
+* $h$ controlling the steepness of the stock-recruit relationship
+* Selectivity parameters estimated at the bounds during model exploration 
 
 ## Parameter Estimates
 
@@ -15,37 +18,7 @@ estimated_pars <- model$parameters %>%
 ```
 
 The base model has a total of `r length(estimated_pars)` estimated parameters
-(Table \@ref(tab:paramstable)) that can be grouped into the following
-categories and are described in more detail in the following sections:
-
-
-
-**Biological parameters**   
-* 2 natural mortality parameters (female and male)  
-* 9 growth parameters    
-    + 6 Schnute growth parameters (length at age 0, length at age 30, and $k$)   
-    + 3 parameters controlling variability in growth, the CV in length at age 0  
-  and the CV in length at age 30 with a linear ramp in length-at-age  (CV for old males was fixed at 0.07)
-
-
-**Stock-recruit parameters**  
-* $log(R_0)$ controlling equilibrium recruitment  
-* Recruitment deviations parameters covering the range  
-  `r min(model$recruit$Yr[model$recruit$era=="Main"])`-`r max(model$recruit$Yr[model$recruit$era=="Main"])`
-  representing the "main" period modeled as a zero-centered deviation vector  
-  
-***Index parameters** 
-* `r sum(sum(grepl("Q_extra", estimated_pars)))` extra standard deviation parameter
-for the PR dockside index of abundance
-
-**Selectivity parameters** 
-* `r sum(grepl("Size_DblN", estimated_pars))` selectivity parameters, of which
-`r sum(grepl("Size_DblN.*BLK", estimated_pars))` represented changes over time  
-
-## Fixed parameters
-The following parameters were fixed in the post-STAR base model:  
-* $h$ controlling the steepness of the stock-recruit relationship
-* Selectivity parameters estimated at the bounds during model exploration 
+(Table \@ref(tab:paramstable)) that are described in more detail in the following sections:
 
 
 ## Growth Estimation
@@ -111,7 +84,7 @@ Fits to the conditional age at length data sets seemed reasonable, with no evide
 Fits to the time-aggregated length comps were best for the commercial, 
 recreational, and CCFRP fleets Figure (\@ref(fig:lenfits-all)). The following 
 plots show estimated selectivity (when not mirrored, 
-Figures \@ref(fig:sel03_len_timevary_surf_flt4sex1)-\@ref(fig:endyr-selex-CCFRP)) and fits to the length composition (Figures \@ref(fig:len-pearson-COM-HKL)-\@ref(fig:mean-len-fit-CCFRP) for each 
+Figures \@ref(fig:selex-age-all) - \@ref(fig:endyr-selex-CCFRP)) and fits to the length composition (Figures \@ref(fig:lenfits-all) - \@ref(fig:mean-len-fit-CCFRP) for each 
 fleet/survey:
 
 - Commercial hook-and-line: Figures \ref{fig:endyr-selex-COM-HKL}, \ref{fig:len-pearson-COM-HKL}, and \ref{fig:mean-len-fit-COM-HKL} 
@@ -155,19 +128,23 @@ index, CCFRP, fit reasonably well to the increasing trend from 2016-2020 (Figure
 is the only index sampling within the MPAs, and starting in 2017 the index represents the entire coast north of Point Conception.  
 
 
-
-
 ## Derived Quantities
-Vermilion spawning output in northern California was estimated to be 436 million eggs in 2021 (~95% asymptotic intervals: 222-650; Table \@ref(tab:referenceES)), which equates to a depletion level of 39% (~95% asymptotic intervals: 21%-57%; Table \@ref(tab:referenceES); Figure \@ref(fig:depl)) in 2021. Depletion is a ratio of the estimated spawning output in a particular year relative to estimated unfished, equilibrium spawning output. Spawning output north of Point Conception declined rapidly throughout the 1970s, 1980s, and 1990s to a level below the Minimum Stock Size Threshold (MSST), but catches decreased enough in the late 1990s and 2000s for the stock to reach a stable level of spawning output (Table \@ref(tab:timeseries), Figure \@ref(fig:depl)). Stock size is estimated to have been at the lowest level during the 1990s, but has since increased, in part due to strong recruitments in 1999 and 2016. The stock is estimated to have been below the management target of B40% since the early 1980s (Figure \@ref(fig:depl)), recently returning to levels near the target biomass. Relative exploitation rates ($\frac{1-SPR}{1-SPR_{50\%}}$) increased through time, exceeding target levels from the 1970s through the 1990s. Exploitation over the past decade has fluctuated around target levels (Figure \@ref(fig:1-spr)), with most catches landed by the recreational sector. In 2021, vermilion biomass north of Point Conception is estimated to be near the target biomass level, while experiencing fishing intensity around the SPR fishing intensity target (Figure \@ref(fig:phase)). The equilibrium yield curve is shifted left, as expected from the fixed Beverton-Holt steepness parameter h=0.72 (Figures \@ref(fig:yield2) and \@ref(fig:yield3)).
+Spawning output north of Point Conception declined rapidly throughout the 1970s, 1980s, and 1990s to a level below the Minimum Stock Size Threshold (MSST), but catches decreased enough in the late 1990s and 2000s for the stock to reach a stable level of spawning output (Table \@ref(tab:timeseries), Figure \@ref(fig:depl)). Stock size is estimated to have been at the lowest level during the 1990s, but has since increased, in part due to strong recruitments in 1999 and 2016. The stock is estimated to have been below the management target of B40% since the early 1980s (Figure \@ref(fig:depl)), recently returning to levels near the target biomass. Relative exploitation rates ($\frac{1-SPR}{1-SPR_{50\%}}$) increased through time, exceeding target levels from the 1970s through the 1990s. Exploitation over the past decade has fluctuated around target levels (Figure \@ref(fig:1-spr)), with most catches landed by the recreational sector. 
+
+Vermilion spawning output in northern California was estimated to be 4`r round(refpts[4,2], 0)`  million eggs in 2021 (95% asymptotic interval: 
+`r paste0(round(refpts[4,3],0), " - ", round(refpts[4,4],0))` million eggs) or 
+`r scales::percent(refpts[5,2], accuracy = 1)` 
+(95% asymptotic interval: 
+`r paste0(scales::percent(refpts[5,3], accuracy = 1)," - ", scales::percent(refpts[5,4], accuracy = 1))`) 
+of unfished spawning output in 2021(“depletion,” Table \@ref(tab:ssbES)) and Figure \@ref(fig:depl)). In 2021, vermilion biomass north of Point Conception is estimated to be near the target biomass level, while experiencing fishing intensity around the SPR fishing intensity target (Figure \@ref(fig:phase)). The equilibrium yield curve is shifted left, as expected from the fixed Beverton-Holt steepness parameter h=0.72 (Figures \@ref(fig:yield2) and \@ref(fig:yield3)). Harvest rates in northern California were near target in 2020, but above target in the three previous years (Figure \@ref(fig:phase)).
 
 
 ## Recruitment Deviations
 
-Model estimates of recruitment for the 1970-2018 period indicated an extended period of below-average recruitment throughout the 1970s and early 1980s, which is generally inconsistent with strong recruitment trends for many years in the 1970s and in 1980 for other species of rockfish.  As this time period is only weakly informed by length data, this may indicate some potential for model misspecification. Major recruitments (strong year classes) estimated in the northern California model include strong 1984, 1985, 1999, and 2016 year classes. (Figures \@ref(fig:recruits), \@ref(fig:recdevs), and \@ref(fig:bh-resids)). These are consistent with estimates of strong year classes in other rockfish stock assessments, nearly all of which suggest very high recruitment in 1999. More recently, strong year classes have been estimated in 2016 for widow rockfish, sablefish and Pacific hake, observations that are consistent with observations of high juvenile rockfish abundance in the California Current during the 2015-2016 large marine heatwave [@Schroeder2019].  Due to ageing error, years adjacent to strong (or weak) cohorts are sometimes estimated as having similar deviations. 
-
-
+Model estimates of recruitment for the 1970-2018 period indicated an extended period of below-average recruitment throughout the 1970s and early 1980s, which is generally inconsistent with strong recruitment trends for many years in the 1970s and in 1980 for other species of rockfish.  As this time period is only weakly informed by length data, this may indicate some potential for model misspecification. Major recruitments (strong year classes) estimated in the northern California model include strong 1984, 1985, 1999, and 2016 year classes. (Figures \@ref(fig:bh-curve), \@ref(fig:bh-resids), \@ref(fig:recruits), and \@ref(fig:recdevs)). These are consistent with estimates of strong year classes in other rockfish stock assessments, nearly all of which suggest very high recruitment in 1999. More recently, strong year classes have been estimated in 2016 for widow rockfish, sablefish and Pacific hake, observations that are consistent with observations of high juvenile rockfish abundance in the California Current during the 2015-2016 large marine heatwave [@Schroeder2019].  Due to ageing error, years adjacent to strong (or weak) cohorts are sometimes estimated as having similar deviations. 
 
 ## Reference Points
+
 Reference points were calculated using the estimated selectivities and catch distribution among fleets in the most recent year of the model, `r endyr`. 
 Sustainable total yield (landings plus discards) was 
 `r round(model$derived_quants[model$derived_quants$Label == 'Dead_Catch_SPR', 'Value'], 2)` mt when using an $SPR_{50\%}$ 

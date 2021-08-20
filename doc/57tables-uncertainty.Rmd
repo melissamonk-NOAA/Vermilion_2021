@@ -54,30 +54,7 @@ kableExtra::landscape()
 
 
 
-<!-- ======================================================================= -->
-<!-- *******************     Retrospectives    ***************************** --> 
-<!-- ======================================================================= -->
 
-```{r, warning = FALSE, inclue = FALSE}
-retro.filein = list.files(path = table_loc, 
-               #   pattern = glob2rx(print(paste0("drop1_table_",model.area, ".xlsx"))), 
-                  pattern = glob2rx(paste0("retro_",model.area, ".xlsx")), 
-                  full.names = TRUE)
-retro <- readxl::read_xlsx(retro.filein) %>%
-  mutate(across(where(is.numeric), round, 3)) %>%
-  filter(!grepl("Size", Label))
-```
-
-
-```{r retro, results = 'asis'}
-kableExtra::kbl(retro, booktabs = TRUE, 
-  caption = "Likelihood components from the retrospective analysis removing one to five years of data of the pre-STAR base model.",
-  linesep = ""
-) %>%
-kableExtra::landscape()
- # column_spec(1, width = "2cm") %>
- # kable_styling(latex_options = c("scale_down"), font_size = 10)
-```
 
 
 <!-- ======================================================================= -->
@@ -133,4 +110,27 @@ kableExtra::kbl(sens3, booktabs = TRUE,
 ```
 
 
+<!-- ======================================================================= -->
+<!-- *******************     Retrospectives    ***************************** --> 
+<!-- ======================================================================= -->
 
+```{r, warning = FALSE, inclue = FALSE}
+retro.filein = list.files(path = table_loc, 
+               #   pattern = glob2rx(print(paste0("drop1_table_",model.area, ".xlsx"))), 
+                  pattern = glob2rx(paste0("retro_",model.area, ".xlsx")), 
+                  full.names = TRUE)
+retro <- readxl::read_xlsx(retro.filein) %>%
+  mutate(across(where(is.numeric), round, 3)) %>%
+  filter(!grepl("Size", Label))
+```
+
+
+```{r retro, results = 'asis'}
+kableExtra::kbl(retro, booktabs = TRUE, 
+  caption = "Likelihood components from the retrospective analysis removing one to five years of data of the pre-STAR base model.",
+  linesep = ""
+) %>%
+kableExtra::landscape()
+ # column_spec(1, width = "2cm") %>
+ # kable_styling(latex_options = c("scale_down"), font_size = 10)
+```

@@ -32,11 +32,11 @@ affiliation:
       Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110
       McAllister Way, Santa Cruz, California 95060
   - code: 2
-    address: Fisheries Collaborative Program, Insitute of Marine Sciences, University of California,         Santa Cruz, 110 McAllister Way, Santa Cruz, California 95060
+    address: Fisheries Collaborative Program, Insitute of Marine Sciences, University of California, Santa Cruz, 110 McAllister Way, Santa Cruz, California 95060
 address: 
   - ^1^Southwest Fisheries Science Center, U.S. Department of Commerce, National
     Oceanic and Atmospheric Administration, National Marine Fisheries Service, 110 McAllister
     Way, Santa Cruz, California 95060
-  - ^2^Fisheries Collaborative Program, Insitute of Marine Sciences, University of California, Santa     Cruz, 110 McAllister Way, Santa Cruz, California 95060
+  - ^2^Fisheries Collaborative Program, Insitute of Marine Sciences, University of California, Santa Cruz, 110 McAllister Way, Santa Cruz, California 95060
   
 ---

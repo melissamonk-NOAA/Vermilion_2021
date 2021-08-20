@@ -95,7 +95,6 @@ comparisons, ensure consistency between the two systems, and help identify poten
 
 
 
-
 *Commercial length and age composition data*
 
 Biological data (lengths) from the commercial fisheries that landed `r spp` were 
@@ -105,7 +104,7 @@ better represent the size composition of the landed catch. The length compositio
 is available in Figure \@ref(fig:len-data-COM-HKL) 
 for the commercial hook-and-line fleet, `r ifelse(model.area=='NCA', noquote("Figure \\ref{fig:len-data-COM-TWL} for the commercial trawl fleet "), "")` and Figure \@ref(fig:len-data-COM-NET) for the commercial net fleet. Input sample sizes for 
 commercial length compositions were based on the number of port samples and are in 
-Table \@ref(tab:length-sample-size). Length compositions with fewer than 30
+Tables \@ref(tab:length-sample-size) and \@ref(tab:length-inputN). Length compositions with fewer than 30
 measured fish in a region/gear/year combination were not included in the model 
 likelihood.
 

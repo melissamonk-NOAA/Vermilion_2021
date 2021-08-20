@@ -130,6 +130,38 @@ sa4ss::add_figure(
 ```
 
 <!-- ======================================================================= -->
+<!-- ************************    Model parameters ********************************** --> 
+<!-- ======================================================================= -->
+
+\FloatBarrier 
+
+```{r, results = "asis"}
+add_figure(
+  filein = file.path(paste0(fig_loc,"/CV_of_Length_vs_Age.png")),
+  caption = "Coefficient of variation of length versus age for vermilion rockfish from the NWFSC hook-and-line survey",
+  label = "cv-length-age"
+)
+
+```
+
+```{r, results = 'asis'}
+
+if(model.area=='NCA'){
+  add_figure(
+    filein = file.path(paste0(fig_loc,"/jitter_postSTAR_base_NCA.png")),
+    caption = "Results from 100 jittered runs of the post-STAR base model.  Missing values indicate the 43 runs that did not converge",
+    label = "jitter"
+  )
+} else {
+  add_figure(
+    filein = file.path(paste0(fig_loc,"/jitter_postSTAR_base_SCA.png")),
+    caption = "Results from 100 jittered runs of the post-STAR base model",
+    label = "jitter"
+  )
+}
+```
+
+<!-- ======================================================================= -->
 <!-- ************************    Growth   ********************************** --> 
 <!-- ======================================================================= -->
 

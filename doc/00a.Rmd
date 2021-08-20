@@ -127,7 +127,7 @@ model$FleetNames_parsed <- c("commercial hook-and-line fishery",
                            "West Coast Groundfish Bottomfish Trawl Survey",
                            "recreational PC onboard survey",
                            "CDFW research (aka green binder) survey",
-                           "Early years hook-and-line")
+                           "NWFSC hook-and-line early years")
 }
 
 

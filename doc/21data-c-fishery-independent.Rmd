@@ -29,7 +29,7 @@ i.e., few enough individuals were caught that
 all were measured. The assessment north of Point Conception includes 467 ages, which 
 is the majority of the vermilion rockfish with available length information (587 total).
 South of Point Conception, 1,283 of the 1,962 vermilion observed and measured 
-were also aged. The length compositions by year of vermilion from the WCGBT 
+were also aged (Table \@ref(tab:age-sample-size)). The length compositions by year of vermilion from the WCGBT 
 survey are shown in Figure \@ref(fig:len-data-NWFSC-TWL). 
 
 

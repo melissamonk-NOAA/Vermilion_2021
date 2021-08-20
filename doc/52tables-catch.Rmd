@@ -66,10 +66,10 @@ catch_source <- landings %>%
 
 if(model.area == 'NCA'){
  catch_source <- catch_source %>%
-   dplyr::select(Fleet, Interpolated, Reconstruction, `CALCOM ratio estimator`, `Coop Groundfish Survey`, CALCOM, MRFSS, CRFS)
+   dplyr::select(Fleet, Interpolated, Reconstruction, CALCOM, MRFSS, CRFS)
 } else {
   catch_source <- catch_source %>%
-   dplyr::select(Fleet, Interpolated, Reconstruction, `CALCOM ratio estimator`, CALCOM, MRFSS, CRFS)
+   dplyr::select(Fleet, Interpolated, Reconstruction, CALCOM, MRFSS, CRFS)
 }
 ```
 

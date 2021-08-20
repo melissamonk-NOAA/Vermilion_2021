@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <!-- ======================================================================= -->
 <!-- ****************************** Parameter ****************************** --> 
 <!-- ======================================================================= -->
@@ -46,15 +52,18 @@ kableExtra::kbl(mod_params, booktabs = T,
              caption = "List of parameters used in the base model, including estimated values and standard deviations (SD), bounds (minimum and maximum), estimation phase (negative values not estimated), status (indicates if parameters are near bounds), and prior type information (mean and SD).",
              align = 'l',
              longtable = TRUE)  %>%
-  kable_styling(latex_options = c("repeat_header"), font_size = 8) %>%
+  kable_styling(latex_options = c("repeat_header", "HOLD_position"), font_size = 8) %>%
   kableExtra::landscape()
 ```
+
+
+
+
+
 
 <!-- ======================================================================= -->
 <!-- ****************** Convergence Data Weighting ************************* --> 
 <!-- ======================================================================= -->
-
-
 
 ```{r, warning = FALSE, inclue = FALSE}
 dataweight.filein = list.files(path = table_loc, 
@@ -78,9 +87,10 @@ kableExtra::kbl(dataweight, booktabs = TRUE, longtable = TRUE,
 ) %>%
  # column_spec(1, width = "2cm") %>%
 
-  kable_styling(latex_options = c("repeat_header"), font_size = 8) %>%
+  kable_styling(latex_options = c("repeat_header", "HOLD_position"), font_size = 8) %>%
   kableExtra::landscape()
 ```
+
 
 
 

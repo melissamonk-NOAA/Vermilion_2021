@@ -1,9 +1,17 @@
-\clearpage
+\newpage
 
-# Appendix
+# Appendices{-}
+
+\renewcommand{\thesubsection}{Appendix \Alph{subsection}}
 
 
 ## Detailed Fit to Length Composition Data{#append-fit} 
+\renewcommand{\thepage}{A\arabic{page}}
+\renewcommand{\thefigure}{A\arabic{figure}}
+\renewcommand{\thetable}{A\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 
 ```{r, results='asis'}
@@ -20,71 +28,124 @@ for (a in plot.vec){
 }
 ```
 
-\clearpage
+\FloatBarrier
+
 
 
 ## MRFSS Dockside Index of Abundance {#mrfss-index}
+\renewcommand{\thepage}{B\arabic{page}}
+\renewcommand{\thefigure}{B\arabic{figure}}
+\renewcommand{\thetable}{B\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
 
 ```{r mrfss-index, results = 'asis'}
- sa4ss::read_child("./indices/vermilion_MRFSS_dockside_writeup_NCA.md") 
+sa4ss::read_child("./indices/vermilion_MRFSS_dockside_writeup_NCA.md") 
 ```
 
-\clearpage
+\newpage
 
 ## California Onboard CPFV Index of Abundance {#cpfv-index}
- 
+\renewcommand{\thepage}{C\arabic{page}}
+\renewcommand{\thefigure}{C\arabic{figure}}
+\renewcommand{\thetable}{C\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
 ```{r ca-cpfv-onboard-index, results = 'asis'}
- sa4ss::read_child("./indices/vermilion_CA_CPFV_onboard_writeup_NCA.md") 
+sa4ss::read_child("./indices/vermilion_CA_CPFV_onboard_writeup_NCA.md") 
 ``` 
 
-\clearpage 
+\newpage
+
 
 ## Deb Wilson-Vandenberg Onboard CPFV Index of Abundance {#debwv-index}
+\renewcommand{\thepage}{D\arabic{page}}
+\renewcommand{\thefigure}{D\arabic{figure}}
+\renewcommand{\thetable}{D\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 ```{r devwv-index, results = 'asis'}
- sa4ss::read_child("./indices/vermilion_DebWV_onboard_writeup_NCA.md") 
+sa4ss::read_child("./indices/vermilion_DebWV_onboard_writeup_NCA.md") 
 ``` 
 
-\clearpage
+\newpage
 
 
 ## CRFS PR Dockside Index of Abundance {#pr-index}
+\renewcommand{\thepage}{E\arabic{page}}
+\renewcommand{\thefigure}{E\arabic{figure}}
+\renewcommand{\thetable}{E\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 ```{r crfs-pr-index, results = 'asis'}
 sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_NCA.md")
 ``` 
 
-\clearpage
+\newpage
 
 ## CCFRP Index of Abundance {#ccfrp-index}
+\renewcommand{\thepage}{F\arabic{page}}
+\renewcommand{\thefigure}{F\arabic{figure}}
+\renewcommand{\thetable}{F\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 ```{r ccfrp-index, results = 'asis'}
- sa4ss::read_child("./indices/vermilion_CCFRP_writeup_NCA.md") 
+sa4ss::read_child("./indices/vermilion_CCFRP_writeup_NCA.md") 
 ``` 
 
-\clearpage
+\newpage
 
 ## WCGBTS Index of Abundance {#wcgbts-index}
+\renewcommand{\thepage}{G\arabic{page}}
+\renewcommand{\thefigure}{G\arabic{figure}}
+\renewcommand{\thetable}{G\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 ```{r wcgbts-index, results = 'asis'}
-  sa4ss::read_child("./indices/vermilion_WCGBTS_writeup_NCA.md")
+sa4ss::read_child("./indices/vermilion_WCGBTS_writeup_NCA.md")
 ``` 
 
-\clearpage
+\newpage
 
 ## Recreational Regulations {#regs-graphic}
+\renewcommand{\thepage}{H\arabic{page}}
+\renewcommand{\thefigure}{H\arabic{figure}}
+\renewcommand{\thetable}{H\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 ```{r rec-regs, results = 'asis'}
-  sa4ss::read_child("70appendices-regs.Rmd")
+sa4ss::read_child("70appendices-regs.Rmd")
 ``` 
 
-\clearpage 
+\newpage 
+
+## Management Boundary Analysis
+\renewcommand{\thepage}{I\arabic{page}}
+\renewcommand{\thefigure}{I\arabic{figure}}
+\renewcommand{\thetable}{I\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 ```{r mngmnt-split, results = 'asis'}
-  sa4ss::read_child("./indices/Vermilion_PR_management_split_writeup_NCA.md")
+sa4ss::read_child("./indices/Vermilion_PR_management_split_writeup_NCA.md")
 ``` 
 
-\clearpage
+\newpage
 
 # References
 

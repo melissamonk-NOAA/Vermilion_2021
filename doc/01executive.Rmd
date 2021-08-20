@@ -31,7 +31,7 @@ primarily caught by the recreational fishery (Table \@ref(tab:removalsES)).
 Annual total mortality of catch and discards of `r spp` have ranged between 
 `r paste0( min(round(Tot.catch.recent$Catch,0)), '-', max(round(Tot.catch.recent$Catch, 0)))` 
 mt, with total mortality (catch + discards) in `r model$endyr` of `r round(Tot.catch.recent$Catch[Tot.catch.recent$Yr==model$endyr] ,0)` mt. 
-Vermilion and sunset rockfishes landings from all sectors have historically been recorded as 
+Vermilion and sunset rockfish landings from all sectors have historically been recorded as 
 “vermilion rockfish” and sampling programs in California currently do not 
 differentiate between the two species.
 
@@ -64,7 +64,7 @@ label = 'catchES')
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
 removals <- read.csv(paste0(exec_tables_loc,'a_Catches_ES.csv')) %>%
-  mutate_at(c(-1), round,3) 
+  mutate_at(c(-1), round,1) 
 removals <- removals[,1:9]
 ```
 
@@ -292,7 +292,7 @@ The annual (equilibrium) spawning potential ratio (SPR) for vermilion was above 
 ```
 
 ```{asis, echo = model.area=='SCA'}
-The annual (equilibrium) spawning potential ratio (SPR) for vermilion in southern California has fluctuated around the management target for the past decade, with a recent spike in 2019 (Table \@ref(tab:exploitES), Figure \@ref(fig:1-sprES)). Prior to 2011, the fishing intensity exceeded the target for a number of years in the 1980s and 1990s, regularly reaching levels 50% above target (Figure \@ref(fig:1-sprES)). As with current estimates of spawning output, recent estimates of equilibrium SPR are highly uncertain, ranging from 45% to 104% of target in 2020, and 102% to 172% above target in 2019 (Table \@ref(tab:exploitES)). As a percentage of biomass (ages 4+), southern California harvest rates peaked in the 1980s and 1990s, but have since declined to near-target levels for the past decade (Figure \@ref(fig:FmortalityES)). Harvest rates in southern California in 2020 were currently below target, and the stock is above the target biomass (Figure \@ref(fig:phaseES)). However, the harvest rate in 2019 was above target, and may be more representative of future catches, all else equal, given reductions in fishing activity during the 2020 pandemic. The equilibrium yield curve is shifted left, as expected from the Beverton-Holt steepness parameter estimated at 0.73 (Figure \@ref(fig:yield2ES)).
+The annual (equilibrium) spawning potential ratio (SPR) for vermilion in southern California has fluctuated around the management target for the past decade, with a recent spike in 2019 (Table \@ref(tab:exploitES), Figure \@ref(fig:1-sprES)). Prior to 2011, the fishing intensity exceeded the target for a number of years in the 1980s and 1990s, regularly reaching levels 50% above target (Figure \@ref(fig:1-sprES)). As with current estimates of spawning output, recent estimates of equilibrium SPR are highly uncertain, ranging from 45% to 104% of target in 2020, and 102% to 172% of target in 2019 (Table \@ref(tab:exploitES)). As a percentage of biomass (ages 4+), southern California harvest rates peaked in the 1980s and 1990s, but have since declined to near-target levels for the past decade (Figure \@ref(fig:FmortalityES)). Harvest rates in southern California in 2020 were below target, and the stock was above the target biomass (Figure \@ref(fig:phaseES)). However, the harvest rate in 2019 was above target, and may be more representative of future catches, all else equal, given reductions in fishing activity during the 2020 pandemic. The equilibrium yield curve is shifted left, as expected from the Beverton-Holt steepness parameter estimated at 0.73 (Figure \@ref(fig:yield2ES)).
 ```
 
 
@@ -335,7 +335,7 @@ label = '1-sprES')
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(base_loc, "plots", "ts_summaryF.png"), 
-caption = "Time-series of estimated summary harvest rate (total catch divided by age-4 and older biomass) for the base case model with approximate 95% asymptotic confidence intervals (veritcal lines).",
+caption = "Time-series of estimated summary harvest rate (total catch divided by age-4 and older biomass) for the base case model with approximate 95% asymptotic confidence intervals (vertical lines).",
 label = 'FmortalityES')
 ```
 
@@ -343,7 +343,7 @@ label = 'FmortalityES')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(base_loc, "plots", "SPR4_phase.png"), 
-caption = "Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point show the 95% intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95% region which accounts for the estimated correlations between the biomass ratio and SPR ratio. Fishing intensity in 2020 was reduced to due the pandemic",
+caption = "Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point (representing 2020) show the 95% intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95% region which accounts for the estimated correlations between the biomass ratio and SPR ratio. Fishing intensity in 2020 was reduced to due the pandemic",
 label = 'phaseES')
 ```
 
@@ -399,7 +399,7 @@ The target spawning output ($SB_{40\%}$) is `r round(refpts[7,2],0)` million egg
 (95% asymptotic interval: `r paste0(round(refpts[7,3],0), " - ", round(refpts[7,4],0))` million eggs). 
 Equilibrium yield at the proxy $F_{MSY}$ 
 harvest rate corresponding to $SPR_{50\%}$ is `r round(refpts[15,2],0)` mt 
-(95% asymptotic interval: `r paste0(round(refpts[15,3],0), " - ", round(refpts[15,4],0))` mt), 
+(95% asymptotic interval: `r paste0(round(refpts[15,3],0), " - ", round(refpts[15,4],0))` mt, 
 Table \@ref(tab:referenceES) and Figure \@ref(fig:yield2ES)).
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}

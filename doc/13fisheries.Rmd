@@ -21,8 +21,7 @@ been non-existent for vermilion since 2002 when the state of California prohibit
 setnet gear in 60 fm or less. The largest net landings for vermilion were in the 1980s.
 
 Vermilion have been landed in the commercial live-fish fishery that developed 
-off the coast of 
-California in the 1990s, but have not been a major target of that fishery due 
+off the coast of California in the 1990s, but have not been a major target of that fishery due 
 to their susceptibility to barotrauma. The fraction of the total catch 
 from the live fish fleet is small, concentrated in northern California, and 
 included in the commercial hook-and-line fleet in the northern California 
@@ -30,7 +29,6 @@ assessment models.  The STAT also learned that vermilion targeted for the live-f
 fishery, but landed dead due to barotrauma, remain valuable and may be sold dead. 
 Separation of catch and size compositions for the live and dead catch is therefore 
 less informative and was not pursued further.
-
 
 Miller et al. [-@Miller2014] described the spatial and temporal development of the 
 California commercial groundfish fishery based on historical CDFW fish ticket 
@@ -40,12 +38,11 @@ has shifted from shallow, coastal areas to deeper depths, greater distances from
 port, and in areas of more inclement weather over time. That general result was 
 also found with limited data from recreational fisheries. Sampling of commercial 
 species compositions in Southern California began in 1983, a time when the 
-groundfish fleet was already fishing in deeper depths.
-Both historical reconstructions used these data to represent species compositions of 
+groundfish fleet was already fishing in deeper depths. Both historical 
+reconstructions used these data to represent species compositions of 
 total rockfish catch during earlier periods of the fishery. As a result, the 
 reconstructions may overestimate the percentage of deep-water species in earlier 
 fisheries that operated closer to port and in shallower depths.
-
 
 *Recreational Fishery*  
 Vermilion rockfish are a targeted species in California's recreational fishery
@@ -54,7 +51,7 @@ the party/charter boat and private/rental sectors. The Commercial Passenger
 Fishing Vessel (CPFV; aka ‘party’ and ‘charter’ boat) fleet began circa 1919 
 in California, although recreational fishing effort for 
 fishes other than Tunas, other gamefish, and salmon was minimal until about 
-1930. The CPFV fleet numbered about 200 vessels in 1939 [[@Croker1940], cited 
+1930. The CPFV fleet numbered about 200 vessels in 1939 ([@Croker1940], cited 
 in Young [-@Young1969]). After a hiatus in most operations during WWII, the 
 fleet increased to about 590 vessels by 1953, then declined to approximately 
 256 vessels around 1963.  
@@ -97,8 +94,7 @@ with specific regulations designed for each component. Other regulatory actions
 for the general rockfish categories have included area closures, gear restrictions, 
 and cumulative bimonthly trip limits set for the four different commercial sectors: 
 limited entry fixed gear, limited entry trawl, open access trawl, and open access non-trawl.
-Harvest guidelines are also used to regulate the annual harvest for both the recreational and 
-commercial sectors. 
+Harvest guidelines are also used to regulate the annual harvest for both the recreational and commercial sectors. 
 
 In 2000, changes in the PFMC’s rockfish management structure resulted in the 
 discontinued use of the \emph{Sebastes} complex, and was replaced with three species 
@@ -160,7 +156,7 @@ seasonally changing boundaries to help reduce fishing mortality.
 
 
 ## Management Performance
-The contribution of `r spp` to the minor shelf rockfish Over Fishing Limit (OFL) is 
+The contribution of `r spp` to the minor shelf rockfish Overfishing Limit (OFL) is 
 currently derived from the data-poor Depletion-Based Stock Reduction
 Analysis [@Dick2010].  A 2005 vermilion stock assessment was not accepted for use 
 in management and a 2013 data-moderate assessment was not reviewed by the STAR 

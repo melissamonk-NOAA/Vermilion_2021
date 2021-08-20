@@ -83,7 +83,7 @@ setwd(base_loc)
 sa4ss::read_model(
   mod_loc = base_loc,
   create_plots = TRUE, 
-  save_loc = file.path(file.path(base_loc,"tex_tables")),
+  save_loc = file.path(base_loc,"tex_tables"),
   verbose = TRUE)
 
 

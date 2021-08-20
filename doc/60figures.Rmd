@@ -22,11 +22,6 @@ sa4ss::read_child("63figures-biology.Rmd")
 sa4ss::read_child("67afigures-caal.Rmd")
 ```
 
-\FloatBarrier
-
-```{r render-64, results = "asis"}
-sa4ss::read_child("64figures-selectivity-diagnostics.Rmd")
-```
 
 \clearpage
 \FloatBarrier

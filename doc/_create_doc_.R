@@ -21,8 +21,6 @@ bookdown::render_book("00a.Rmd",
 file.rename("north.pdf",paste0(set.model,"_", format(Sys.time(), "%d-%b-%Y %H.%M"),".pdf"))
 
 
-
-
 #SOUTHERN MODEL
 set.model = "south"
 setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")

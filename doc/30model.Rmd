@@ -2,7 +2,7 @@
 
 ## History of Modeling Approaches
 
-Current yield estimates for vermilion rockfish were estimated using
+Current yield estimates for vermilion rockfish were estimated for the entire West Coast using
 Depletion-Based Stock Reduction Analysis (DB-SRA) [@Dick2010]. Average catch 
 in 2008-2009 was 136.3 mt, and the median OFL in 2010 was 314.3 mt with a 28% 
 probability that recent catch exceeded the OFL in 2010 [@Dick2010].
