@@ -47,17 +47,17 @@ in early stages of cellular decay) and skip spawners (adults foregoing spawning
 in a given year)” (M. Head, pers. comm.), while the latter excludes such cases. 
 A logistic regression was fit to the functional maturity determination as a 
 function of fork length (Figure \@ref(fig:functional-maturity)), estimating 
-length at 50% maturity at 38.4 cm , with a slope of -0.312, 
+length at 50% maturity at 38.4 cm, with a slope of -0.312, 
 based on the parameterization in Stock Synthesis.  The samples available from 
 areas north of Point Conception were smaller fish and did not allow for estimates 
-of separate maturity curves.  Both California vermilion assessments assumed the 
+of separate maturity curves.  Both California vermilion rockfish assessments assumed the 
 same maturity 
 ogive (Figure \@ref(fig:maturity)). 
 
 
 
 ### Fecundity
-Phillips [-@Phillips1964] reported fecundity for nominal “vermilion” rockfish collected in waters off California. Based on a sample of 12 fish ranging in size from 315-550 mm total length, he reported the minimum and maximum number of eggs as 63,300 and 1,625,600 per female, respectively. Love et al. [-@Love1990b] estimated fecundity of fish in southern California, and reported an allometric fecundity - length relationship (eggs vs. total length, cm) with an exponent of 5.02, suggesting a significant increase in weight-specific fecundity with female size given a roughly cubic weight-length relationship. Dick et al. [-@Dick2017] conducted a meta-analysis of *Sebastes* fecundity-length relationships. Insufficient data were available to model the subgenus *Rosicola*, but the predictive distribution of the fecundity-length exponent for the genus as whole centered around a value of four, supporting a general pattern of increasing weight-specific fecundity among the *Sebastes*. Analyses to date have not examined size-dependent changes in brood frequency for vermilion or sunset rockfishes, i.e. current fecundity estimates represent brood fecundity.
+Phillips [-@Phillips1964] reported fecundity for nominal “vermilion” rockfish collected in waters off California. Based on a sample of 12 fish ranging in size from 315-550 mm total length, he reported the minimum and maximum number of eggs as 63,300 and 1,625,600 per female, respectively. Love et al. [-@Love1990b] estimated fecundity of fish in southern California, and reported an allometric fecundity - length relationship (eggs vs. total length, cm) with an exponent of 5.02, suggesting a significant increase in weight-specific fecundity with female size given a roughly cubic weight-length relationship. Dick et al. [-@Dick2017] conducted a meta-analysis of *Sebastes* fecundity-length relationships. Insufficient data were available to model the subgenus *Rosicola*, but the predictive distribution of the fecundity-length exponent for the genus as whole centered around a value of four, supporting a general pattern of increasing weight-specific fecundity among the *Sebastes*. Analyses to date have not examined size-dependent changes in brood frequency for vermilion or sunset rockfish, i.e. current fecundity estimates represent brood fecundity.
 
 For this assessment, new observations of fecundity at length were supplied by S. Beyer (UCSC / SWFSC, pers. comm.). These data were combined with digitized historical data sets used by Dick et al. [-@Dick2017] to estimate a new fecundity-length relationship (Figure \@ref(fig:fitted-fecundity)). The relationship between fecundity (millions of eggs) and fork length (cm) estimated from these data and used in the assessment was
  $F = 2.8e^{-9}L^{4.97}$
@@ -80,7 +80,7 @@ form of the Then et al. [-@Then2018] functional regression model and is a common
 applied method for West Coast groundfish. The NMT also allows for the construction 
 of a natural mortality prior weighted across methods by the user. 
 
-The STATs for the four vermilion assessment models all used the same prior for 
+The STATs for the four vermilion rockfish assessment models all used the same prior for 
 natural mortality across models. We assumed the age of 54 years to represent the practical 
 longevity (i.e., 90% of 
 the commonly seen maximum age of 60) for both females and males, though the absolute 
@@ -89,7 +89,7 @@ Empirical $M$ estimators using the von Bertalanffy growth parameters were also c
 the source of FishLife data is FishBase, there is a good chance the estimates of 
 $M$ are also from methods using longevity, though the actual source of longevity 
 in FishLife was unknown. 
-Both California vermilion assessments used the Hamel prior [-@Hamel2015], which 
+Both California vermilion rockfish assessments used the Hamel prior [-@Hamel2015], which 
 is defined as a lognormal with log-scale mean = $ln\frac{5.4}{A_{max}}$  and SE = 0.438.
 Using a maximum age of 54 the point estimate and median of the prior is 0.1, which 
 is used as a prior on $M$ in the assessment model. We also explore sensitivity to 
@@ -123,3 +123,5 @@ $W$=`r format(model$MGparmAdj$Wtlen_1_Fem[1], scientific = TRUE)`$L$^`r round(mo
 (Figure \@ref(fig:weightlength)). 
 
 
+###  Environmental or Ecosystem Data
+As noted in Section 1.3, ecosystem data were not explicitly used in this assessment.

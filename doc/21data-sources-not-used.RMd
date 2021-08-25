@@ -62,7 +62,7 @@ are conducted by the University of California Santa Cruz (UCSC) in central Calif
 
 *California Cooperative Oceanic Fisheries Investigations* 
 
-The California Cooperative Oceanic Fisheries Investigations (CalCOFI) survey began in 1951 and conducts quarterly cruises off southern & central California, collecting a suite of hydrographic and biological data at fixed stations and while underway; ichthyoplankon sampling with a paired bongo started in 1978.
+The California Cooperative Oceanic Fisheries Investigations (CalCOFI) survey began in 1951 and conducts quarterly cruises off southern and central California, collecting a suite of hydrographic and biological data at fixed stations and while underway; ichthyoplankon sampling with a paired bongo started in 1978.
 Data on larval abundance from the CalCOFI Ichthyoplankton survey have been used in 
 stock assessments of several species, including bocaccio, cowcod and shortbelly 
 rockfish.  Although the long-term dataset is limited to a subset of species 

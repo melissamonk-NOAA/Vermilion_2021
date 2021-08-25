@@ -1,9 +1,61 @@
 # Harvest Projections and Decision Tables
 
-**This section will be completed after the STAR panel**
-<!--
-Projections of OFL (mt), ABC (mt), age 10+ biomass (mt), spawning output (billions of eggs), and depletion (% of unfished spawning output) are shown for the default harvest control rule in Table 62. Catch estimates for 2021 and 2022 are based on GMT recommendations (M. Mandrup, CDFW; pers. comm.), with frog mt for commercial and frog mt for recreational fleets. Projections assume a constant allocation among fleets equal to the recommended catch for 2021 and 2022 (frog% commercial, frog% commercial).
--->
+The forecasts of stock abundance and yield were developed using the post-STAR 
+base model, with the forecast projections presented in 
+Table \@ref(tab:projectionES). The total catches in 2021 and 2022 are set to 
+the projected catch from the California Department of Fish and Wildlife (CDFW) by 
+sector and model region, i.e., allocated north and south of \PtC in California.
+
+```{asis, echo = model.area=='NCA'}
+Uncertainty in the forecasts is based upon the three states of nature agreed upon 
+at the STAR panel, reflecting three different natural mortality rates. The steepness 
+parameter of the Beverton-Holt stock-recruit curve was fixed in the base model
+and in all of the forecasts.  The northern California model is not data rich and 
+while there is uncertainty in steepness, it was not well estimated in the base 
+model when natural mortality was also estimated. The alternative states of nature 
+maintain the 
+female to male natural mortality rate ratio from  the base model. To capture the 
+75% interval around the negative log-likelihood, alternate states were identified 
+within 0.66 negative log-likelihood points from the base model where female 
+$M$ = 0.0856 and male $M$ = 0.0805.
+The high state of nature fixes female $M$ = 0.0956 and male $M$ = 0.08989. 
+For the low state of nature, female $M$ = 0.0769 and male $M$ = 0.07231.
+
+For reference, the base model predicted $\sigma$ = 0.246. The buffers between the OFL and ABC  were calculated assuming a category 2 stock, with  $\sigma$ = 1.0 
+and a $p^*$ = 0.45. Alternative catch streams (rows in the table) include $\sigma$ = 1.0 
+with a $p^*$ = 0.4, and removals of long-term equilibrium catch with and without a buffer assuming $\sigma$ = 1.0 with a $p^*$ = 0.45. The buffer multiplier with $p^*$ = 0.45 ranges from 0.874 in 2023 ramping to 0.803 in 2032. 
+
+Current forecasts based on the alternative states of nature and requested catch streams project that the stock will remain above the target threshold of 40% in 2032 (Table \@ref(tab:DecisionES)).  In all of the scenarios of the low state of nature, the stock remains below the 
+target threshold of 40% until 2026 or 2027.
+The base model with the base catches results in an increasing stock over the period from 
+2023-2032. In all scenarios the catch significantly decreases from 2022 to 2023; projected catch in 2022 is 227 mt, and 2023 catches from the base 
+model range from 118-139 mt.  The base model includes a portion of the stock within 
+the northern management unit (north of \CapeM).  An analysis based on the private/rental 
+mode index through 2019 suggests 
+that 4.44% of the catches from this model should be apportioned to the northern 
+management unit for vermilion rockfish.
+
+The STAT cautions that the GMT projections for catches in 2021-2022 (22 mt per year) exceed the maximum sustainable yield according to both proxies ($B_{40\%}$ and $SPR_{50\%}$) as well as the MSY value based on the estimated value of steepness (Table \@ref(tab:referenceES)). The northern California stock is just above target biomass in 2021 (43% of unfished spawning ouptut), so these catch levels are unlikely to result in significant stock declines over a short period of time. However, similar catch levels would exceed the overfishing limits (OFL) if carried forward for 2023 and beyond (Table \@ref(tab:CombinedRefPtsES)), and would be unsustainable in the long term. Given recent and projected near-term exploitation levels, and especially if vermilion and sunset rockfish continue to be managed as part of the minor shelf rockfish complex, the STAT recommends regular monitoring of total mortality for these two species to avoid excessive stock depletion and potential loss of yield.
+```
+
+
+```{asis, echo = model.area=='SCA'}
+Uncertainty in the decision table forecasts is based upon the three alternative states of nature agreed upon during the STAR panel, reflecting results of a bivariate likelihood profile over natural mortality and steepness. The low state of nature assumes $M$ = .1125 and $h$ = 0.675, and the high state of nature assumes $M$ = 0.1475 and $h$ = 0.875.
+
+The buffers between OFL and ABC were calculated assuming a category 2 stock, with  $\sigma$ = 1.0 
+and a $p^*$ = 0.45. For reference, the base model predicted $\sigma$ is 0.258, calculated using the asymptotic standard error of the predicted OFL in 2021. Alternative catch streams (rows in the table) include $\sigma$ = 1.0 
+with a $p^*$ = 0.4, and removals of long-term equilibrium catch at the $F_{SPR=50\%}$ harvest rate with and without a buffer assuming $\sigma$ = 1.0 and a $p^*$ = 0.45. The buffer multiplier with $p^*$ = 0.45 ranges from 0.874 in 2023 ramping to 0.803 in 2032. 
+
+ The base 
+model with the default harvest control rule catches (p*=0.45, $\sigma$=1) predicts an increasing stock over the period from 
+2023-2032. Forecasts based on the alternative catch streams project that 
+the stock will remain above the target threshold of 40% through 2032 given either the base model or “high” states of nature (Table \@ref(tab:DecisionES)).  Given the low state of nature, the stock remains below the target threshold of 40% throughout the 12-year forecast under all four catch scenarios.
+
+The STAT cautions that the GMT projections for catches in 2021-2022 (210 mt per year) exceed the maximum sustainable yield according to both proxies ($B_{40\%}$ and $SPR_{50\%}$) as well as the MSY value based on the estimated value of steepness (Table \@ref(tab:referenceES)). The southern California stock is above target biomass, so the GMT catch levels are unlikely to result in significant stock declines over a 2-year period. However, similar catch levels would exceed the overfishing limits (OFL) for 2023 and beyond (Table \@ref(tab:projectionES)), and would be unsustainable in the long term. Given recent and projected near-term exploitation levels, and especially if vermilion and sunset rockfish continue to be managed as part of the minor shelf rockfish complex, the STAT recommends regular monitoring of total mortality for these two species to avoid excessive stock depletion and potential loss of yield.
+```
+
+
+
 
 ## Regional Management and Spatial Management Considerations
 
@@ -14,11 +66,11 @@ Regardless of the management objective, spatial closures are expected to increas
 If the spatial closures also prevent fisheries independent surveys from evaluating the relative abundance and demographic structure of managed populations, the challenges in developing robust population models, and thus robust management advice, become even more severe.  While spatially explicit assessment models provide a means of more explicitly addressing these challenges, such models are computationally intensive, require robust data from the specific areas being modeled, and may also require detailed information regarding movement and dispersal rates [@McGilliard2015; @Berger2017; @Punt2020; @Cadrin2020].  Moreover, the complexity of these spatial models increases substantially if the size and location of closed areas changes over time, as many of the more “fisheries management based” closures (e.g., RCAs) have in California groundfish fisheries.  Thus, such approaches may be less feasible for more data limited stocks, such as northern and southern vermilion rockfish, at least in the near term.  However, the fact that both the northern and southern assessment models are informed by fishery-independent surveys that include habitats both inside and outside area closures provides some hope for greater recognition of spatial factors in future assessments.  
 
 
-# Research Recommendations
+# Research and Data Needs
 We recommend the following research be conducted before the next assessment:
 
 - Investigate the structure of complex and contribution of each species to the 
-vermilion/sunset complex. Investigate possible spatial differences in biological parameters within 
+vermilion/sunset rockfish complex. Investigate possible spatial differences in biological parameters within 
 a single species and also between the two species. Little biological data for south of 
 Point Conception or north of Point Arena were available for this assessment and is needed 
 to better under biological parameters. 
@@ -37,20 +89,20 @@ since 2007.
 
 - Continue to investigate the most appropriate model structure for the NWFSC HL survey index.
 The NWFSC HL survey is the only long-term fishery-independent survey in rocky (untrawlable) habitat 
-in the Southern California Bight. We also recommend evaluating how to structure the NWFSC Hook-and-Line survey index given its expansion into the CCA, also independent analysis of information content in NWFSC Hook-and-Line survey.Increased spatiotemporal sampling around Pt. Conception would aid in identifying stock boundaries.
+in the Southern California Bight. We also recommend evaluating how to structure the NWFSC Hook-and-Line survey index, given its expansion into the CCA, also independent analysis of information content in NWFSC Hook-and-Line survey. Increased spatiotemporal sampling around Point Conception would aid in identifying stock boundaries.
 
 - Utilize existing ROV survey data sources
   + SWFSC Submersible Survey of the Cowcod Conservation Areas [@Yoklavich2007]. 
   +  This was a line-transect survey designed to estimate cowcod abundance in 2002 
   conducted from a submersible inside the CCAs.  Originally, only cowcod were enumerated from the video footage.  Over the last few years, the SWFSC has re-analyzed the video footage to enumerate other rockfish species. 
     + The SWFSC Fishery Resource Division (FRD) conducted a survey of potential cowcod habitat between Point Conception and the U.S. – Mexico border from October through December of 2012 [@Stierhoff2013].
-    +  SWFSC staff are submitting proposals to conduct an additional submersible survey in the southern California Bight
+    +  SWFSC staff are submitting proposals to conduct an additional submersible survey in the Southern California Bight
     + CDFW ROV survey data
 
 
 - Collection of length and age data are recommended for both the commercial and 
 recreational fisheries.  Very little age data are available from either fishery for 
-vermilion and sunset rockfishes.
+vermilion and sunset rockfish.
 
 - Investigate possible environmental drivers/co-variates for biological parameters, 
 particularly for recruitment.

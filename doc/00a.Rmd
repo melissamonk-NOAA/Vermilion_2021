@@ -27,7 +27,7 @@ output:
     keep_tex: true
     keep_md: true
 lang: en
-papersize: a4
+pagesize: letter
 csl: CJFAS.csl
 ---
 

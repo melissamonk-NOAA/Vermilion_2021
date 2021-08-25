@@ -1,7 +1,7 @@
 ---
 title: "California Onboard CPFV Index, 1999-2019, for vermilion in 2021"
 author: "Melissa H. Monk"
-date: "August 19, 2021"
+date: "August 24, 2021"
 params:
     Model.number: 1
     species.name: "vermilion"
@@ -52,7 +52,7 @@ The catch cannot be linked to an individual, but rather
 to a specific fishing location.  The sampler also records the starting and 
 ending time, number of anglers observed, starting and ending depth, and measures 
 discarded fish. The fine-scale catch and effort data allow us to better filter 
-the data for indices to fishing stops within suitable habitat for vermilion. 
+the data for indices to fishing stops within suitable habitat for vermilion rockfish . 
 Cal Poly has modified protocols  reflect sampling changes that CDFW 
 has also adopted, e.g., observing fish as they are encountered instead of at 
 the level of a fisher’s bag. Therefore, the Cal Poly data area incorporated in 
@@ -72,7 +72,7 @@ fish as part of the angler interview at the bag and trip level. This index
 selectivity is mirrored to the recreational 
 fleet in the stock assessment model, which represent only retained (dead) 
 fish.  Therefore, only retained fish were modeled in this index. The length 
-from CDFW sampling are contained in the RecFIN database and indlucded in the 
+from CDFW sampling are contained in the RecFIN database and included in the 
 length composition for the recreational fleet in the assessment model. 
 
 A number of filters are applied to these data.  All of the Cal Poly data were 
@@ -86,13 +86,13 @@ with bathymetric data from state waters available at a 2 m resolution.  Reefs we
 developed based on a number of factors described in the supplemental material 
 ("Reef Delineation"). Depth restrictions in the recreational fishery were fairly 
 consistent from 2004-2016. Starting in 2017, depth restrictions eased in districts 
-north of Pt. Conception and the recreational fleet targeted these depths 
-(Figure \@ref(fig:fig-depthfished-cpfvonboard). The deeper waters (40-50 fm) are 
+north of Point Conception and the recreational fleet targeted these depths 
+(Figure \@ref(fig:fig-depthfished-cpfvonboard)). The deeper waters (40-50 fm) are 
 outside of the mapped hard bottom habitat, but could be assigend to the larger 
 areas considered as a factor in the index.
 
 We retained 14218 drifts for index standardization, with 
-5960 drifts encountering vermilion 
+5960 drifts encountering vermilion rockfish 
 (Table \@ref(tab:tab-data-filter-cpfvonboard)).  
 
 Sample sizes by factors selected to model, excluding WAVE can be found in Tables 
@@ -106,7 +106,7 @@ considered in model selection; trends in the average CPUE by region were similar
 in the filtered data set (Figure \@ref(fig:fig-areacpue-cpfvonboard)). 
 
 A Lognormal model  was 
-selected over a over a Gamma model for the positive observations by a $\Delta AIC$ of 919.67, and supported by Q-Q plots of the positive observations fit to both distributions (Figure \@ref(fig-dist-fits-cpfvonboard)). The delta-GLM
+selected over a over a Gamma model for the positive observations by a $\Delta AIC$ of 919.67, and supported by Q-Q plots of the positive observations fit to both distributions (Figure \@ref(fig:fig-dist-fits-cpfvonboard)). The delta-GLM
 method allows the linear predictors to differ between the binomial and positive models.
 Based on AIC values from maximum likelihood fits (Table \@ref(tab:tab-model-select-cpfvonboard)), 
 a main effects model including 
@@ -134,7 +134,8 @@ represents a similar trend to the arithmetic mean of the annual CPUE (Figure \@r
 
 \begin{table}
 
-\caption{(\#tab:tab-data-filter-cpfvonboard)Data filtering steps CA CPFV onboard survey index for vermilion in the southern model.}
+\caption{(\#tab:tab-data-filter-cpfvonboard)Data filtering steps for theCA CPFV onboard survey index for vermilion rockfish in the southern model. The last row in the table represents the number of trips used 
+      to develop the index.}
 \centering
 \begin{tabular}[t]{>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{15em}c>{\centering\arraybackslash}p{8em}>{\centering\arraybackslash}p{8em}}
 \toprule
@@ -158,7 +159,7 @@ Time fished & Removed upper two percent of time fished & 25948 & 6015 & 23\%\\
 
 \begin{table}
 
-\caption{(\#tab:tab-depth-cpfvonboard)Positive samples of vermilion in the southern model by depth (fm).}
+\caption{(\#tab:tab-depth-cpfvonboard)Positive samples of vermilion rockfish in the southern model by depth (fm).}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
@@ -181,7 +182,7 @@ Year & Positive Samples & Samples & Percent Positive\\
 
 \begin{table}
 
-\caption{(\#tab:tab-region-cpfvonboard)Samples of vermilion in the southern model by subregion used in the index.}
+\caption{(\#tab:tab-region-cpfvonboard)Samples of vermilion rockfish in the southern model by subregion used in the index.}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
@@ -202,7 +203,7 @@ Santa Barbara & 752 & 1581 & 48\%\\
 
 \begin{table}
 
-\caption{(\#tab:tab-year-cpfvonboard)Samples of vermilion in the southern model by year.}
+\caption{(\#tab:tab-year-cpfvonboard)Samples of vermilion rockfish in the southern model by year.}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
@@ -243,7 +244,7 @@ Year & Positive Samples & Samples & Percent Positive\\
 
 \begin{table}
 
-\caption{(\#tab:tab-model-select-cpfvonboard)Model selection for the CA CPFV onboard survey index for vermilion in the southern model.}
+\caption{(\#tab:tab-model-select-cpfvonboard)Model selection for the CA CPFV onboard survey index for vermilion rockfish in the southern model.}
 \centering
 \begin{tabular}[t]{lrr}
 \toprule
@@ -268,7 +269,7 @@ YEAR + DEPTH bin & 61.41 & 148.53\\
 \begin{table}
 
 \caption{(\#tab:tab-index-cpfvonboard)Standardized index for the CA CPFV onboard survey index with log-scale standard errors and 95\% highest
-       posterior density (HPD) intervals for vermilion in the southern model .}
+       posterior density (HPD) intervals for vermilion in the southern model.}
 \centering
 \begin{tabular}[t]{rrrrr}
 \toprule
@@ -338,19 +339,7 @@ Year & Index & logSE & lower HPD & upper HPD\\
 ![(\#fig:fig-cpue-cpfvonboard)Standardized index and arithmetic mean of the CPUE from the filtered data. Each timeseries is scaled to its respective mean.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_SCA_files/figure-latex/fig-cpue-cpfvonboard-1.pdf) 
 
 
-
-```
-## Warning in sjPlot::plot_grid(figure.Dbin.list, tags = FALSE, margin = c(0.1, : Not enough tags labels in list. Using
-## letters instead.
-```
-
 ![(\#fig:fig-Dbin-marginal-cpfvonboard)Marginal effects from the binomial model of the delta-GLM.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_SCA_files/figure-latex/fig-Dbin-marginal-cpfvonboard-1.pdf) 
 
-
-
-```
-## Warning in sjPlot::plot_grid(figure.Dpos.list, tags = FALSE, margin = c(0.1, : Not enough tags labels in list. Using
-## letters instead.
-```
 
 ![(\#fig:fig-Dpos-marginal-cpfvonboard)Marginal effects from the positive model of the delta-GLM.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CA_CPFV_onboard_writeup_SCA_files/figure-latex/fig-Dpos-marginal-cpfvonboard-1.pdf) 

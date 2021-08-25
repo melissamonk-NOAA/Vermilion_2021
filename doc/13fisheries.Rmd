@@ -14,19 +14,18 @@ involved in World War II and wartime shortage of red
 meat created an increased demand for other sources of protein [@Alverson1964; 
 @Harry1961; @Lenarz1987]. Trawl landings have been restricted in most of southern 
 California for decades [@Frey1971], and trawl gear north of Point Conception has 
-not recently been a major component of the landings for vermilion, with the 
+not recently been a major component of the landings for vermilion rockfish, with the 
 highest reported landings in the 1970s. The commercial setnet fishery has never 
 been a large component of the vermilion rockfish landings and has essentially 
-been non-existent for vermilion since 2002 when the state of California prohibited 
-setnet gear in 60 fm or less. The largest net landings for vermilion were in the 1980s.
+been non-existent for vermilion rockfish since 2002 when the state of California prohibited 
+setnet gear in 60 fm or less. The largest net landings for vermilion rockfish were in the 1980s.
 
-Vermilion have been landed in the commercial live-fish fishery that developed 
+Vermilion rockfish have been landed in the commercial live-fish fishery that developed 
 off the coast of California in the 1990s, but have not been a major target of that fishery due 
 to their susceptibility to barotrauma. The fraction of the total catch 
 from the live fish fleet is small, concentrated in northern California, and 
 included in the commercial hook-and-line fleet in the northern California 
-assessment models.  The STAT also learned that vermilion targeted for the live-fish 
-fishery, but landed dead due to barotrauma, remain valuable and may be sold dead. 
+assessment models.  The STAT also learned that vermilion rockfish landed dead (due to barotrauma) from a commercial trip landing live fish, remain valuable and may be sold dead. 
 Separation of catch and size compositions for the live and dead catch is therefore 
 less informative and was not pursued further.
 
@@ -56,17 +55,17 @@ in Young [-@Young1969]). After a hiatus in most operations during WWII, the
 fleet increased to about 590 vessels by 1953, then declined to approximately 
 256 vessels around 1963.  
 
-Onboard surveys of CPFV vessels in southern California ranked vermilion as the 
+Onboard surveys of CPFV vessels in southern California ranked vermilion rockfish as the 
 fifth and third most common rockfish species in the mid-1970s and mid-1980s, 
 respectively [@Collins1978; @Ally1991]. Onboard CPFV observers in central 
 California saw vermilion rockfish in over 27% of all observed drifts over the 
 period 1987-1998, making vermilion rockfish fifth among rockfish species in terms 
 of encounter rates per drift [@Monk2016]
 
-In southern California, harvest of vermilion from recreational fisheries, as a 
-percentage of the total vermilion harvest, varied considerably from 1980 to 2000. 
+In southern California, harvest of vermilion rockfish from recreational fisheries, as a 
+percentage of the total vermilion rockfish harvest, varied considerably from 1980 to 2000. 
 After 2000, largely due to reduced commercial access to shelf habitat, recreational 
-fisheries accounted for almost all the vermilion harvest in Southern California, 
+fisheries accounted for almost all the vermilion rockfish harvest in southern California, 
 with relatively minor contributions from the commercial fleets.  Similar patterns 
 occurred north of Point Conception, with the majority of vermilion rockfish 
 landings coming to ports in San Luis Obispo county.
@@ -84,7 +83,7 @@ authority of the Pacific Fishery Management Council (PFMC), and were managed as 
 of the *Sebastes* complex. Because neither species had undergone rigorous stock assessment 
 and did not compose a large fraction of the landings they were classified and 
 managed as part of "Remaining Rockfish" under the larger 
-heading of "Other Rockfish" ([@PFMC2004; @PFMC2002]).
+heading of "Other Rockfish" [@PFMC2004; @PFMC2002].
 
 Since the early 1980s a number of federal regulatory measures have been used to 
 manage the commercial rockfish fishery including cumulative trip limits (generally 
@@ -136,8 +135,8 @@ fathoms until 2017.  In 2017, the depth restrictions were eased by 10 fathoms,
 opening up 40-50 fm depths along the central California coast that had not been 
 open consistently since 2002.  In 
 both 2017 and 2018, the deepest 10 fathoms was closed prior to the prescribed 
-season in December due to high by-catch rates of yelloweye rockfish, which is still 
-overfished. A full history of the recreational 
+season in December due to high by-catch rates of yelloweye rockfish, which remains 
+in an overfished status and is undergoing rebuilding. A full history of the recreational 
 regulations relating to the spatial management of the fleet can be found in the Appendix.   
 
 
@@ -158,7 +157,7 @@ seasonally changing boundaries to help reduce fishing mortality.
 ## Management Performance
 The contribution of `r spp` to the minor shelf rockfish Overfishing Limit (OFL) is 
 currently derived from the data-poor Depletion-Based Stock Reduction
-Analysis [@Dick2010].  A 2005 vermilion stock assessment was not accepted for use 
+Analysis [@Dick2010].  A 2005 vermilion rockfish stock assessment was not accepted for use 
 in management and a 2013 data-moderate assessment was not reviewed by the STAR 
 panel due to insufficient time.
 
@@ -189,6 +188,6 @@ Boj&oacute;rquez also reached out to colleagues at the
 [Fisheries National Institute](https://www.gob.mx/inapesca) who reported that 
 vermilion rockfish are occasionally caught in the sport fishery in Ensenada City. 
 However, there are no data available on vermilion rockfish fisheries off the coast 
-of Mexico.
+of Mexico. Catches in Mexican waters by US fleets are not included in this assessment.
 
 

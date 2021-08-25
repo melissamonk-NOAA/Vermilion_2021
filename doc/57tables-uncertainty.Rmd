@@ -39,20 +39,14 @@ kableExtra::kbl(dropone2, booktabs = TRUE,
   caption = "Likelihood components from the additional leave one out analysis of the pre-STAR base model. The column name is the fleet removed from the model.",
   linesep = ""
 ) %>%
-#   column_spec(1, width="1.2in") %>%
-#   column_spec(2:7, width=".6in") %>%
-
+  column_spec(1, width="1.2in") %>%
+  column_spec(2:dim(dropone2)[2], width=".6in") %>%
 kableExtra::landscape()
 ```
 
 <!-- ======================================================================= -->
 <!-- ************************** Likelihood Profile ************************* --> 
 <!-- ======================================================================= -->
-
-
-
-
-
 
 
 
@@ -79,8 +73,8 @@ kableExtra::kbl(sens1, booktabs = TRUE,
   linesep = ""
 ) %>%
  # column_spec(1, width = "2cm") %>%
-  kable_styling(latex_options = c("scale_down")) #%>%
- # kableExtra::landscape()
+  kable_styling(latex_options = c("scale_down")) %>%
+  kableExtra::landscape()
 ```
 
 <!-- ======================================================================= -->

@@ -1,7 +1,7 @@
 ---
 title: "CRFS PR Index for vermilion in 2021"
 author: "Melissa H. Monk"
-date: "August 19, 2021"
+date: "August 24, 2021"
 params:
     Model.number: 1
     species.name: "vermilion"
@@ -43,7 +43,7 @@ always_allow_html: true
 Catch and effort data from CRFS dockside sampling of private boats, 2004-2018, 
 were provided by CDFW for use in this assessment. The data include catch (number 
 of fish) by species, number of anglers (i.e. effort units are angler trips), 
-angler-reported distance from shore, (Area.X: inside/outside of 3 nm, county, port, 
+angler-reported distance from shore (Area X: inside/outside of 3 nm), county, port, 
 interview site, year, month, and CRFS district. The sample size of the 
 unfiltered private boat CPUE data is much larger than the crfspr CPFV data set, 
 with 391,279 trips statewide, 120,655 in southern California (south 
@@ -108,7 +108,7 @@ represents a similar trend to the arithmetic mean of the annual CPUE (Figure \@r
  
 \begin{table}
 
-\caption{(\#tab:tab-data-filter-crfspr)Data filtering steps CRFS PR dockside survey index for vermilion in the northern model. The last row in the table represents the number of trips used 
+\caption{(\#tab:tab-data-filter-crfspr)Data filtering steps for theCRFS PR dockside survey index for vermilion rockfish in the northern model. The last row in the table represents the number of trips used 
       to develop the index.}
 \centering
 \begin{tabular}[t]{>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{15em}c>{\centering\arraybackslash}p{8em}>{\centering\arraybackslash}p{8em}}
@@ -130,7 +130,7 @@ Final trips & Retained trips with at least 0.95 groundfish. & 57647 & 21464 & 37
 
 \begin{table}
 
-\caption{(\#tab:tab-region-crfspr)Samples of vermilion in the northern model by subregion used in the index.}
+\caption{(\#tab:tab-region-crfspr)Samples of vermilion rockfish in the northern model by subregion used in the index.}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
@@ -148,7 +148,7 @@ Subregion & Positive Samples & Samples & Percent Positive\\
 
 \begin{table}
 
-\caption{(\#tab:tab-year-crfspr)Samples of vermilion in the northern model by year.}
+\caption{(\#tab:tab-year-crfspr)Samples of vermilion rockfish in the northern model by year.}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
@@ -183,7 +183,7 @@ Year & Positive Samples & Samples & Percent Positive\\
 
 \begin{table}
 
-\caption{(\#tab:tab-model-select-crfspr)Model selection for the CRFS PR dockside survey index for vermilion in the northern model.}
+\caption{(\#tab:tab-model-select-crfspr)Model selection for the CRFS PR dockside survey index for vermilion rockfish in the northern model.}
 \centering
 \begin{tabular}[t]{lrr}
 \toprule
@@ -209,7 +209,7 @@ YEAR + DISTRICT + AREA X & 42.53 & 47.71\\
 \begin{table}
 
 \caption{(\#tab:tab-index-crfspr)Standardized index for the CRFS PR dockside survey index with log-scale standard errors and 95\% highest
-       posterior density (HPD) intervals for vermilion in the northern model .}
+       posterior density (HPD) intervals for vermilion in the northern model.}
 \centering
 \begin{tabular}[t]{rrrrr}
 \toprule
@@ -261,7 +261,7 @@ Year & Index & logSE & lower HPD & upper HPD\\
 
 
 
-![(\#fig:fig-Dbin-marginal-crfspr)Binomial marginal effects from the final model](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_NCA_files/figure-latex/fig-Dbin-marginal-crfspr-1.pdf) 
+![(\#fig:fig-Dbin-marginal-crfspr)Binomial marginal effects from the final model.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_NCA_files/figure-latex/fig-Dbin-marginal-crfspr-1.pdf) 
 
 
 ![(\#fig:fig-Dpos-marginal-crfspr)Positive model marginal effects from the final model.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_CRFS_PR_dockside_writeup_NCA_files/figure-latex/fig-Dpos-marginal-crfspr-1.pdf) 

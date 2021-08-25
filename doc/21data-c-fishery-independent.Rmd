@@ -28,8 +28,8 @@ this survey, and in most cases lengths for the entire catch were available,
 i.e., few enough individuals were caught that 
 all were measured. The assessment north of Point Conception includes 467 ages, which 
 is the majority of the vermilion rockfish with available length information (587 total).
-South of Point Conception, 1,283 of the 1,962 vermilion observed and measured 
-were also aged (Table \@ref(tab:age-sample-size)). The length compositions by year of vermilion from the WCGBT 
+South of Point Conception, 1,283 of the 1,962 vermilion rockfish observed and measured 
+were also aged (Table \@ref(tab:age-sample-size)). The length compositions by year of vermilion rockfish from the WCGBT 
 survey are shown in Figure \@ref(fig:len-data-NWFSC-TWL). 
 
 
@@ -67,7 +67,7 @@ For his master's thesis work at Humboldt State University, Jeff Abrams conducted
 fishery-independent hook-and-line surveys in 2010 and 2011 off of California's 
 North Coast [@Abrams2014]. Sites were randomly sampled from 
 areas of known rocky habitat within six depth by distance-from-port strata out 
-of three ports: Crescent City Harbor, Trinidad Bay and Noyo River Harbor.  
+of three ports: Crescent City Harbor, Trinidad Bay and Noyo River Harbor.
 The otoliths collected as part of this study are valuable stock assessments of 
 recreationally-important groundifsh species that are often lacking biological samples, 
 especially from the North Coast. This collection resides at the SWFSC Santa Cruz lab. 
@@ -75,13 +75,13 @@ especially from the North Coast. This collection resides at the SWFSC Santa Cruz
 **Available Data**
 
 *Age and Length Data.* 
-All 81 vermilion collected during the survey were aged and represent the most 
+All 81 vermilion rockfish collected during the survey were aged and represent the most 
 northern biological samples in the northern California model. The available 
 length compositions for males and females, 2010-2011, are shown in Figure
 \@ref(fig:len-data-ABRAMS-RESEARCH). 
 
 ### SWFSC Groundfish Ecology Cruises
-D. Pearson (SWFSC, retired) conducted a series of groundfish surveys (hook-and-line and 
+Don Pearson (SWFSC, retired) conducted a series of groundfish surveys (hook-and-line and 
 trawl) from 2003 - 2005 along the coast of California.  Surveys were conducted onboard 
 chartered commercial vessels and NOAA research vessels.
 
@@ -92,8 +92,8 @@ were combined for use in the assessment.
 **Available Data**
 
 *Age and Length Data.*
-A total of 229 vermilion were aged from this survey from samples in 2004-2005.
-The length composition includes 355 vermilion from these surveys 
+A total of 229 vermilion rockfish otoliths were aged from this survey from samples in 2004-2005.
+The length composition includes 355 vermilion rockfish from these surveys 
 (Figure \@ref(fig:len-data-SWFSC-GF-ECOL)).
 
 
@@ -129,7 +129,6 @@ stocks within California's network of MPAs.
 
 *Age and Length Data.* A total of 48 otoliths from the CCFRP survey were available, 
 but not included in the assessment model due to annual sample sizes of fewer than 
-30 fish. The composition of length data from 4,344 vermilion encountered 
 in the CCFRP survey is in Figure \@ref(fig:len-data-CCFRP).
 
 *Index of Abundance*

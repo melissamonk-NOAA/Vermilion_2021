@@ -1,7 +1,7 @@
 # Data
 
 The STAT presented proposed analyses and data sources for the 2021 `r spp` 
-assessment to the Council advisory bodies in Novemeber 2020, and again during the PFMC Pre-Assessment Workshop for 2021 Vermilion and 
+assessment to the Council advisory bodies in Novemeber 2020, and again during the PFMC Pre-Assessment Workshop for 2021 Vermilion/Sunset Rockfish and 
 Lingcod Stock Assessments, hosted virtually on March 29, 2021. Topics addressed 
 included progress on research priorities, data sources and types, stock structure, 
 fleet structure, key model parameters (e.g. natural mortality), and potential 

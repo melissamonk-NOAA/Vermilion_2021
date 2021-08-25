@@ -1,7 +1,7 @@
 ---
 title: "NWFSC HL Survey Index for Vermilion in 2021"
 author: ""
-date: "July 10, 2021"
+date: "August 24, 2021"
 params:
     Model.number: 2
     species.name: "lingcod"
@@ -44,13 +44,13 @@ always_allow_html: true
 
 ### Northwest Fisheries Science Center Hook-and-Line Survey
 
-Since 2004, the NWFSC has conducted an annual hook-and-line survey targeting shelf rockfish at fixed stations (‘sites’) in the Southern California Bight (Figure \@ref(fig:spp-sites)). During each site visit, three deckhands simultaneously deploy 5-hook sampling rigs (this is referred to as a single ‘drop’) for a maximum of 5 minutes per line, but individual lines may be retrieved sooner at the angler’s discretion (e.g. to avoid losing fish). Five drops are attempted at each site for a maximum possible catch of 75 fish per site per year (3 anglers × 5 hooks × 5 drops). Further details regarding the sampling frame, site selection, and survey methodology are described by [-@Harms2008].
+Since 2004, the NWFSC has conducted an annual hook-and-line survey (NWFSC HL) targeting shelf rockfish at fixed stations (‘sites’) in the Southern California Bight (Figure \@ref(fig:spp-sites)). During each site visit, three deckhands simultaneously deploy 5-hook sampling rigs (this is referred to as a single ‘drop’) for a maximum of 5 minutes per line, but individual lines may be retrieved sooner at the angler’s discretion (e.g. to avoid losing fish). Five drops are attempted at each site for a maximum possible catch of 75 fish per site per year (3 anglers × 5 hooks × 5 drops). Further details regarding the sampling frame, site selection, and survey methodology are described by Harms et al. [-@Harms2008].
 
-From 2004 through 2013, sampling was conducted only outside the Cowcod Conservation Areas. Beginning in 2014, 40 sites inside the CCAs were sampled, and roughly another 40 sites have been added in subsequent years inside the CCAs. The survey currently has 201 sites (79 inside and 122 outside the CCAs).
+From 2004 through 2013, sampling was conducted only outside the Cowcod Conservation Areas (CCAs). Beginning in 2014, 40 sites inside the CCAs were sampled, and roughly another 40 sites have been added in subsequent years inside the CCAs. The survey currently has 201 sites (79 inside and 122 outside the CCAs).
 
 **Northwest Fisheries Science Center Hook-and-Line Survey Index: Data Preparation, Filtering, and Sample Sizes**
 
-Vermilion is one of the most commonly encountered species in the NWFSC hook-and-line survey [Harms 2008]  (Figure \@ref(fig:spp-sites)). Sites considered for an abundance index were limited to those that have caught at least 1 vermilion rockfish over the period 2004-2018 (circles in Figure xx ). Only 14 sites were identified as catching no vermilion over the entire sampling period. Sample sizes by depth and year can be found in Tables 
+Vermilion is one of the most commonly encountered species in the NWFSC hook-and-line survey [@Harms 2008]  (Figure \@ref(fig:spp-sites)). Sites considered for an abundance index were limited to those that have caught at least 1 vermilion rockfish over the period 2004-2018 (circles in Figure \@ref(fig:spp-sites)). Only 14 sites were identified as catching no vermilion over the entire sampling period. Sample sizes by depth and year can be found in Tables 
 \@ref(tab:tab-depth-nwfschl) and \@ref(tab:tab-year-nwfschl).
 Note that depth was used as a continuous variable (second-order polynomial) in the model, and depth bins were created for descriptive purposes and data exploration only. 
 
@@ -60,7 +60,7 @@ Note that depth was used as a continuous variable (second-order polynomial) in t
 
 
 The STAT explored alternative model structures to generate a standardized index of relative abundance. This included alternative response variables (catch in weight, catch in numbers, presence/absence), levels of aggregation (hook, drop, or site), probability distributions (binomial, negative binomial, lognormal, delta-gamma, and logit-normal), and covariates (year, site number, depth, distance to port, area, inside/outside CCA). Preliminary analyses showed that trends in the annual proportion of positive hooks were very similar to trends in catch rate per drop or site. Posterior predictive checks of annual means and standard deviations identified the logit-normal model as the most appropriate error distribution. The final model included covariate terms for year, site number, drop number, a 
-Second-order depth term, and a normally-distributed random effect for each observation.
+second-order depth term, and a normally-distributed random effect for each observation.
 
 
 Models were fit using the “rstanarm” R package (version 2.21.1). Posterior predictive 
@@ -70,7 +70,7 @@ were all reasonable (Figures \@ref(fig:fig-posterior-mean-nwfschl) and
  proportion zeros similar to the ~50% zeroes in the data 
 (Figure \@ref(fig:fig-propzero-nwfschl)). The predicted marginal effects from 
 the final logit normal model can be found in Figure \@ref(fig:marginal-nwfschl).
-The marginal depth effect represents the influence of depth on the proportion of vermilion *after* accounting for site effects.  A model
+The marginal depth effect represents the influence of depth on the proportion of vermilion after accounting for site effects.  A model
 run without the site effect confirms that that depth follows the expected pattern 
 observed in the data, i.e. a peak near 145 m (Figure \@ref(fig:marginal2-nwfschl)).
 The  final index (Table \@ref(tab:tab-index-nwfschl)), 
@@ -205,8 +205,8 @@ Year & Positive Samples & Samples & Percent Positive\\
 
 \begin{table}
 
-\caption{(\#tab:tab-index-nwfschl)Standardized index for the NWFSC HL survey index with log-scale standard errors and 95% highest
-       posterior density (HPD) intervals for vermilion in the southern model .}
+\caption{(\#tab:tab-index-nwfschl)Standardized index for the NWFSC Hook-and-Line Survey index with log-scale standard errors and 95\% highest
+       posterior density (HPD) intervals for vermilion in the southern model.}
 \centering
 \begin{tabular}[t]{rrrrr}
 \toprule

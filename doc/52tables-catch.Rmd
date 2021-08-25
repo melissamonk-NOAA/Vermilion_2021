@@ -25,7 +25,7 @@ landings_table <- landings %>%
 
 ```{r, landings, results = 'asis'}
 kableExtra::kbl(landings_table, longtable = TRUE, booktabs = TRUE, 
-  caption = "Landings of vermilion by fleet and year. All recreational fleet 
+  caption = "Landings of vermilion rockfish by fleet and year. All recreational fleet 
   landings are in numbers (thousands of fish) and commercial fleets in biomass 
   (mt). A description of the sources of the landings data are in the text and 
   the next table.",
@@ -42,7 +42,7 @@ kableExtra::kbl(landings_table, longtable = TRUE, booktabs = TRUE,
   column_spec(9, width = "1cm") %>%
   column_spec(10, width = "1cm") %>%
   kableExtra::row_spec(0, angle = 45) %>%
-  kableExtra::kable_styling(latex_options = "repeat_header", font_size = 10) 
+  kableExtra::kable_styling(latex_options = c("repeat_header"), font_size = 10, repeat_header_text = "Landings of vermilion rockfish by fleet and year (continued).") 
 #  footnote(alphabet = c("Cooperative Groundfish Survey", "MRFSS"))
 ```
 
@@ -115,7 +115,8 @@ column_spec(1:5, width = "1.2cm")  %>%
 column_spec(6, width = "1.5cm")  %>%
 column_spec(7:12, width = "1.5cm")  %>%
 row_spec(0, align = "c") %>%
-kableExtra::kable_styling(latex_options = c("striped","repeat_header"), font_size = 8) %>%
+kableExtra::kable_styling(latex_options = c("striped","repeat_header"),
+                           repeat_header_text = "Re-apportionment of the commercial catch reconstruction (continued).", font_size = 10) %>%
 landscape()
 
 ```

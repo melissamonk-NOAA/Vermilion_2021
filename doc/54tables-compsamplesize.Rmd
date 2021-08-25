@@ -1,5 +1,4 @@
 
-\clearpage 
 
 ```{r, warning = FALSE, inclue = FALSE}
 length.sample.size <- readxl::read_xlsx("./tables/sample sizes for vermilion composition data.xlsx", sheet = paste0(model.area, "_LEN")) %>%
@@ -53,6 +52,7 @@ kableExtra::kbl(length.sample.size,
   kable_styling(latex_options = "repeat_header", font_size = 10)
 ```
 
+\FloatBarrier
 
 ```{r,length-inputN, results = 'asis'}
 kableExtra::kbl(inputN, 
@@ -64,9 +64,8 @@ linesep = ""
 ```
 
 
-\newpage
 
-
+\FloatBarrier
 
 ```{r, albin-allocate, reasults = 'asis'}
 kableExtra::kbl(
@@ -88,8 +87,8 @@ kableExtra::kbl(age.sample.size, linesep = "",
 ) %>%
   column_spec(1, width = "3cm") %>%
   column_spec(2, width = "1cm") %>%
-  column_spec(3, width = "4cm") %>%
-  column_spec(4, width = "3cm") %>%
+  column_spec(3, width = "5cm") %>%
+  column_spec(4, width = "2cm") %>%
   kable_styling(latex_options = "repeat_header")#, full_width = FALSE)
 ```
 

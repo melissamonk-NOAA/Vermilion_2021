@@ -7,7 +7,7 @@ Recreational catch estimates prior to 1981 were based on the Ralston et al. [-@R
 
 *Marine Recreational Fishery Statistics Survey (MRFSS), 1980-2003*
 
-MRFSS estimates of California recreational landings from 1980-1989 and 1993-2003  
+MRFSS estimates of California recreational landings from 1980-1989 and 1993-2003 
 were downloaded from the Recreational Fisheries Information Network 
 ([RecFIN](https://www.recfin.org/)). The MRFSS survey design included stratification by 
 species (sunset rockfish were not recognized at the time), subregion (northern 
@@ -79,14 +79,15 @@ As noted above, MRFSS sampling was halted from 1990-1992 due to funding issues.
 The survey resumed in 1993 in all modes, except for the PC boat 
 mode which resumed in 1996 for counties north of Santa Barbara County.  To 
 produce catch estimates for the missing subregion/mode/year combinations, we 
-used linear interpolation. Shore modes were a minor component of the vermilion 
+used linear interpolation. Shore modes were a minor component of the vermilion rockfish 
 catch and therefore combined with catches from the private (PR) boat mode into 
 a single fleet. Specifically, catches were aggregated by subregion (adjusted as 
 described above), year, and mode, and endpoints for the interpolations were 
 defined as 2-year averages to reduce the effects of interannual variability 
 in catch on interpolated estimates.
 
-The MRFSS did not collect data on the size composition of discarded fish, 
+The MRFSS did not collect data on the size composition of discarded fish (except 
+in the program's last year, 2003), 
 although recent CRFS sampling shows that the mean size of discarded fish is 
 smaller than retained catch. Since catch type “B1” is an angler-reported mixture 
 of dead discards and landed fish which were unavailable to the sampler, the true 
@@ -127,7 +128,7 @@ of the recreational catch and were combined with the PR mode.
 
 Total recreational mortality estimates provided to RecFIN are 
 adjusted using species- and depth-specific discard mortality rates.
-The discard mortality rates for vermilion that were endorsed by the 
+The discard mortality rates for vermilion rockfish that were endorsed by the 
 SSC and adopted by the 
 PFMC in March 2017 are 20% for 0-10 fm, 34% for 10-20 fm, 50% for 20-30 fm, and 
 100% for greater than 30 fm.
@@ -156,7 +157,7 @@ Data collected during the Miller and Gotshall study was also used by Karpov (199
     * PC samples collected by commercial port samples (1978-1979)
     * MRFSS dockside PC survey (1980-2003)
     * CRFS dockside PC survey (2004-2019)
-    * CRFS onboard (discard only) and dockside (retained only surveys(2004-2019)
+    * CRFS onboard (discard only) and dockside (retained only surveys 2004-2019)
     * Deb Wilson-Vandenberg onboard CPFV survey (1988-1998)
 
 - Recreational private/rental mode (PR)

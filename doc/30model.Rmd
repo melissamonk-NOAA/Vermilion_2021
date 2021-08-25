@@ -14,18 +14,18 @@ endorse the results as being suitable for setting OYs." A 2013 data moderate
 assessment was prepared, but not reviewed. From the Pacific Coast Groundfish Stock 
 Assessment Review (STAR) Panel Report for Data-Moderate Assessments (2013): 
 "There was insufficient time during the review to evaluate all the assessments 
-originally requested by the Council. Assessments for vermilion/sunset rockfishes 
+originally requested by the Council. Assessments for vermilion/sunset rockfish 
 (*Sebastes miniatus* and *Sebastes crocotulus*) and yellowtail rockfish 
 (south of \CapeM) were not presented by the Stock Assessment Team (STAT)."
 
 
 ### Most Recent STAR Panel and SSC Recommendations 
 
-The 2005 STAR panel report compiled recommendations specific to vermilion, and also 
+The 2005 STAR panel report compiled recommendations specific to vermilion rockfish, and also 
 generic rockfish recommendations The generic rockfish recommendation are not 
 presented here.  The 2005 assessment was not accepted for management by the PFMC.
 
-**Vermilion rockfish recommendations**
+**Vermilion Rockfish Recommendations**
 
 Investigation into the species composition of nominal vermilion rockfish is needed.
 It is not clear that separate assessments for the northern and southern areas are warranted
@@ -34,10 +34,10 @@ timing of recruitment events, the estimated stock trends were similar in both ar
 Pooling of data from northern and southern areas may permit a more robust assessment
 model to be obtained.
 
-*2021 STAT response.* Since the 2005 assessment, vermilion rockfish were speciated 
+*2021 STAT Response.* Since the 2005 assessment, vermilion rockfish were speciated 
 to vermilion and sunset rockfishes [@Hyde2009].  Sunset rockfish are more common south of 
 Pt. Conception (\PtC) and historical catches and length distributions between 
-the two areas are different. The STAT discussed this at the Pre-Assessment workshop 
+the two areas are different. The STAT discussed this at the Pre-Assessment Workshop 
 and all participants agreed that modeling the areas separately was an appropriate 
 decision.
 

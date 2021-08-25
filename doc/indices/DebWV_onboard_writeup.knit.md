@@ -1,7 +1,7 @@
 ---
 title: "Deb Wilson-Vandenberg Onboard CPRV Index for vermilion in 2021"
 author: "Melissa H. Monk"
-date: "August 19, 2021"
+date: "August 25, 2021"
 params:
     Model.number: 1
     species.name: "vermilion"
@@ -43,7 +43,7 @@ always_allow_html: true
 
 The Deb Wilson-Vandenberg data set is an onboard observer survey data conducted 
 by CDFW survey in central California from 1987-1998 and referred to as the Deb 
-Wilson-Vandenberg onboard observer survey, [@Reilly1998]). During an onboard 
+Wilson-Vandenberg onboard observer survey, [@Reilly1998]. During an onboard 
 observer trip the sampler rides along on the CPFV and records location-specific 
 catch and discard information to the species level for a subset of anglers 
 onboard the vessel. The subset of observed anglers is usually a maximum of 15 
@@ -84,7 +84,7 @@ Luis Obispo county were sampled more frequently than other regions and the arith
 mean of CPUE by year was higher also higher in this area (Figure \@ref(fig:fig-areacpue-debwv))
  
 We retained 6597 drifts for index standardization, with 
-2016 fishing location encountering vermilion.  
+2016 fishing location encountering vermilion rockfish.  
 Tables of the number of samples and positive observervations by factors depth, region and year, 
 can be found in Tables \@ref(tab:tab-depth-debwv), \@ref(tab:tab-region-debwv), and 
 \@ref(tab:tab-year-debwv).
@@ -118,7 +118,7 @@ represents a similar trend to the arithmetic mean of the annual CPUE (Figure \@r
 
 \begin{table}
 
-\caption{(\#tab:tab-data-filter-debwv)Data filtering steps DebWV onboard survey index for vermilion in the northern model. The last row in the table represents the number of trips used 
+\caption{(\#tab:tab-data-filter-debwv)Data filtering steps for theDebWV onboard survey index for vermilion rockfish in the northern model. The last row in the table represents the number of trips used 
       to develop the index.}
 \centering
 \begin{tabular}[t]{>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{15em}c>{\centering\arraybackslash}p{8em}>{\centering\arraybackslash}p{8em}}
@@ -137,7 +137,7 @@ Time fished & Remove drifts fished less than 6 minutes & 6597 & 2016 & 31\%\\
 
 \begin{table}
 
-\caption{(\#tab:tab-depth-debwv)Positive samples of vermilion in the northern model by depth (fm).}
+\caption{(\#tab:tab-depth-debwv)Positive samples of vermilion rockfish in the northern model by depth (fm).}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
@@ -162,7 +162,7 @@ Year & Positive Samples & Samples & Percent Positive\\
 
 \begin{table}
 
-\caption{(\#tab:tab-region-debwv)Samples of vermilion in the northern model by subregion used in the index.}
+\caption{(\#tab:tab-region-debwv)Samples of vermilion rockfish in the northern model by subregion used in the index.}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
@@ -180,7 +180,7 @@ V4 & 408 & 2164 & 19\%\\
 
 \begin{table}
 
-\caption{(\#tab:tab-year-debwv)Samples of vermilion in the northern model by year.}
+\caption{(\#tab:tab-year-debwv)Samples of vermilion rockfish in the northern model by year.}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
@@ -209,7 +209,7 @@ Year & Positive Samples & Samples & Percent Positive\\
 
 \begin{table}
 
-\caption{(\#tab:tab-model-select-debwv)Model selection for the DebWV onboard survey index for vermilion in the northern model.}
+\caption{(\#tab:tab-model-select-debwv)Model selection for the DebWV onboard survey index for vermilion rockfish in the northern model.}
 \centering
 \begin{tabular}[t]{lrr}
 \toprule
@@ -235,7 +235,7 @@ YEAR + DEPTH bin & 642.50 & 272.83\\
 \begin{table}
 
 \caption{(\#tab:tab-index-debwv)Standardized index for the DebWV onboard survey index with log-scale standard errors and 95\% highest
-       posterior density (HPD) intervals for vermilion in the northern model .}
+       posterior density (HPD) intervals for vermilion in the northern model.}
 \centering
 \begin{tabular}[t]{rrrrr}
 \toprule

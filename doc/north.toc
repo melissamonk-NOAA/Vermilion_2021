@@ -2,77 +2,78 @@
 \contentsline {section}{Executive Summary}{i}{section*.2}%
 \contentsline {subsection}{Stock}{i}{section*.3}%
 \contentsline {subsection}{Catches}{i}{section*.4}%
-\contentsline {subsection}{Data and Assessment}{ii}{section*.7}%
-\contentsline {subsection}{Stock Biomass}{ii}{section*.8}%
-\contentsline {subsection}{Recruitment}{iv}{section*.12}%
-\contentsline {subsection}{Exploitation Status}{v}{section*.15}%
-\contentsline {subsection}{Ecosystem Considerations}{viii}{section*.21}%
-\contentsline {subsection}{Reference Points}{viii}{section*.22}%
-\contentsline {subsection}{Management Performance}{ix}{section*.24}%
-\contentsline {subsection}{Unresolved Problems and Major Uncertainties}{x}{section*.28}%
-\contentsline {subsection}{Decision Table and Forecasts}{x}{section*.29}%
-\contentsline {subsection}{Research and Data Needs}{xiii}{section*.32}%
+\contentsline {subsection}{Data and Assessment}{iii}{section*.7}%
+\contentsline {subsection}{Stock Biomass}{iv}{section*.8}%
+\contentsline {subsection}{Recruitment}{vi}{section*.12}%
+\contentsline {subsection}{Exploitation Status}{vii}{section*.15}%
+\contentsline {subsection}{Ecosystem Considerations}{xi}{section*.21}%
+\contentsline {subsection}{Reference Points}{xii}{section*.22}%
+\contentsline {subsection}{Management Performance}{xii}{section*.24}%
+\contentsline {subsection}{Unresolved Problems and Major Uncertainties}{xiv}{section*.28}%
+\contentsline {subsection}{Decision Table and Forecasts}{xiv}{section*.29}%
+\contentsline {subsection}{Research and Data Needs}{xviii}{section*.32}%
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Basic Information and Life History}{1}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Map}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.2}Map}{3}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Ecosystem Considerations}{3}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Historical and Current Fishery Information}{3}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Summary of Management History}{4}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Management Performance}{6}{subsection.1.6}%
-\contentsline {subsection}{\numberline {1.7}Foreign Fisheries}{6}{subsection.1.7}%
-\contentsline {section}{\numberline {2}Data}{6}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Fishery-Dependent Data}{6}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Commercial Landings and Discards}{6}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Recreational Landings and Discard}{8}{subsubsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.2}Fishery-Independent Data}{11}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}NWFSC West Coast Groundfish Bottom Trawl Survey}{11}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}J. Abrams thesis data}{12}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}SWFSC Groundfish Ecology Cruises}{12}{subsubsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}California Collaborative Fisheries Research Project}{12}{subsubsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.3}Additional Considered Data Sources}{13}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Biology}{14}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Ageing Precision and Bias}{14}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Maturity}{15}{subsubsection.2.4.2}%
-\contentsline {subsubsection}{\numberline {2.4.3}Fecundity}{15}{subsubsection.2.4.3}%
-\contentsline {subsubsection}{\numberline {2.4.4}Natural Mortality}{15}{subsubsection.2.4.4}%
-\contentsline {subsubsection}{\numberline {2.4.5}Sex Ratio}{16}{subsubsection.2.4.5}%
-\contentsline {subsubsection}{\numberline {2.4.6}Weight-Length Relationship}{16}{subsubsection.2.4.6}%
-\contentsline {section}{\numberline {3}Assessment Model Description}{16}{section.3}%
-\contentsline {subsection}{\numberline {3.1}History of Modeling Approaches}{16}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Most Recent STAR Panel and SSC Recommendations}{16}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Response to STAR Panel Requests}{17}{subsubsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.2}Model Specifications}{17}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Additional Specifications}{18}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Modeling Platform and Structure}{18}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Model Parameters}{18}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Priors}{19}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.5}Data Weighting}{19}{subsubsection.3.2.5}%
-\contentsline {subsubsection}{\numberline {3.2.6}Key Assumptions and Structural Choices}{19}{subsubsection.3.2.6}%
-\contentsline {subsubsection}{\numberline {3.2.7}Convergence}{20}{subsubsection.3.2.7}%
-\contentsline {section}{\numberline {4}Assessment Results}{20}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Fixed parameters}{20}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Parameter Estimates}{20}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Growth Estimation}{20}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Natural Mortality Estimation}{21}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Fits to Age Composition}{21}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Estimated Selectivity and Fits to Length Composition}{21}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Fits to Indices}{22}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Derived Quantities}{22}{subsection.4.8}%
-\contentsline {subsection}{\numberline {4.9}Recruitment Deviations}{23}{subsection.4.9}%
-\contentsline {subsection}{\numberline {4.10}Reference Points}{23}{subsection.4.10}%
-\contentsline {section}{\numberline {5}Assessment Model Diagnostics}{23}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Sensitivity to Assumptions, Data, and Weighting}{23}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Sensitivity to Catch Uncertainty}{24}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Other Model Sensitivities}{24}{subsubsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.2}Likelihood Profiles}{25}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Retrospective Analysis}{26}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Unresolved Problems and Major Uncertainties}{26}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Harvest Projections and Decision Tables}{26}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Regional Management and Spatial Management Considerations}{26}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Research Recommendations}{27}{section.7}%
-\contentsline {section}{\numberline {8}Acknowledgments (not required for draft assessments)}{29}{section.8}%
-\contentsline {section}{\numberline {9}Tables}{30}{section.9}%
-\contentsline {section}{\numberline {10}Figures}{57}{section.10}%
+\contentsline {subsection}{\numberline {1.4}Historical and Current Fishery Information}{5}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Summary of Management History}{6}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Management Performance}{8}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Foreign Fisheries}{8}{subsection.1.7}%
+\contentsline {section}{\numberline {2}Data}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Fishery-Dependent Data}{9}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Commercial Landings and Discards}{9}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Recreational Landings and Discard}{11}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Fishery-Independent Data}{15}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}NWFSC West Coast Groundfish Bottom Trawl Survey}{16}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}J. Abrams thesis data}{17}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}SWFSC Groundfish Ecology Cruises}{17}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}California Collaborative Fisheries Research Project}{17}{subsubsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.3}Additional Considered Data Sources}{18}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Biology}{20}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Ageing Precision and Bias}{20}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Maturity}{21}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Fecundity}{21}{subsubsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.4}Natural Mortality}{22}{subsubsection.2.4.4}%
+\contentsline {subsubsection}{\numberline {2.4.5}Sex Ratio}{23}{subsubsection.2.4.5}%
+\contentsline {subsubsection}{\numberline {2.4.6}Weight-Length Relationship}{23}{subsubsection.2.4.6}%
+\contentsline {subsubsection}{\numberline {2.4.7}Environmental or Ecosystem Data}{23}{subsubsection.2.4.7}%
+\contentsline {section}{\numberline {3}Assessment Model Description}{23}{section.3}%
+\contentsline {subsection}{\numberline {3.1}History of Modeling Approaches}{23}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Most Recent STAR Panel and SSC Recommendations}{24}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Response to STAR Panel Requests}{24}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Model Specifications}{24}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Additional Specifications}{26}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Modeling Platform and Structure}{27}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Model Parameters}{27}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Priors}{27}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Data Weighting}{28}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}Key Assumptions and Structural Choices}{28}{subsubsection.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.2.7}Convergence}{29}{subsubsection.3.2.7}%
+\contentsline {section}{\numberline {4}Assessment Results}{29}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Fixed parameters}{29}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Parameter Estimates}{29}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Growth Estimation}{29}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Natural Mortality Estimation}{30}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Fits to Age Composition}{30}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Estimated Selectivity and Fits to Length Composition}{30}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Fits to Indices}{32}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Derived Quantities}{33}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Recruitment Deviations}{33}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Reference Points}{33}{subsection.4.10}%
+\contentsline {section}{\numberline {5}Assessment Model Diagnostics}{34}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Sensitivity to Assumptions, Data, and Weighting}{34}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Sensitivity to Catch Uncertainty}{35}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Other Model Sensitivities}{35}{subsubsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.2}Likelihood Profiles}{36}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Retrospective Analysis}{38}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Unresolved Problems and Major Uncertainties}{38}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Harvest Projections and Decision Tables}{39}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Regional Management and Spatial Management Considerations}{40}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Research and Data Needs}{41}{section.7}%
+\contentsline {section}{\numberline {8}Acknowledgments}{43}{section.8}%
+\contentsline {section}{\numberline {9}Tables}{44}{section.9}%
+\contentsline {section}{\numberline {10}Figures}{81}{section.10}%
 \contentsline {section}{Appendices}{A1}{section*.174}%
 \contentsline {subsection}{\numberline {Appendix A}Detailed Fit to Length Composition Data}{A1}{subsection.10.1}%
 \contentsline {subsection}{\numberline {Appendix B}MRFSS Dockside Index of Abundance}{B1}{subsection.10.2}%
@@ -83,7 +84,6 @@
 \contentsline {subsection}{\numberline {Appendix G}WCGBTS Index of Abundance}{G1}{subsection.10.7}%
 \contentsline {subsubsection}{\numberline {Appendix G.1}Northwest Fisheries Science Center West Coast Groundfish Bottom Trawl Survey}{G1}{subsubsection.10.7.1}%
 \contentsline {subsection}{\numberline {Appendix H}Recreational Regulations}{H1}{subsection.10.8}%
-\contentsline {subsection}{\numberline {Appendix I}Graphic of California recreational regulations over time.}{H2}{subsection.10.9}%
-\contentsline {subsection}{\numberline {Appendix J}Management Boundary Analysis}{I1}{subsection.10.10}%
-\contentsline {subsection}{\numberline {Appendix K}Allocation of Yield Among Federal Management Areas}{I1}{subsection.10.11}%
-\contentsline {section}{\numberline {11}References}{I3}{section.11}%
+\contentsline {subsection}{\numberline {Appendix I}Management Boundary Analysis}{I1}{subsection.10.9}%
+\contentsline {subsection}{\numberline {Appendix J}Allocation of Yield Among Federal Management Areas}{I1}{subsection.10.10}%
+\contentsline {section}{\numberline {11}References}{I5}{section.11}%

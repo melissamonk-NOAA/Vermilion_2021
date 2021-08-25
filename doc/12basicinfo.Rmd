@@ -10,7 +10,7 @@ to Punta Baja, Mexico [@Hyde2009] at depths of 50 m to 150 m [@Hyde2009].  Hyde 
 sunset rockfish (*Sebastes crocotulus*). Adult fish tend to cluster on high relief rocky outcrops [@Love2002] 
 and kelp forests [@Hyde2009]. North of Point Conception, California, some adults reside in  shallower water, 
 living in caves and cracks [@Love2002]. Vermilion rockfish have shown high site fidelity 
-[@Hannah2011 (only tagged 1 vermilion); @Lea1999], and low to average larval dispersal 
+[@Hannah2011 (only tagged one vermilion rockfish); @Lea1999], and low to average larval dispersal 
 distance [@Hyde2009]. Lowe et al. [-@Lowe2009] suggested that vermilion rockfish 
 have a lower site fidelity than previously believed, but acknowledged that their
 observations of movements to different depths may have been due to differences in depth distribution between the species. 
@@ -21,7 +21,7 @@ Vermilion rockfish are viviparous, and females produce an estimated 63,000 to 2,
 In southern California, vermilion rockfish larvae are released between July and March. 
 In central and northern California, this release occurs in September, December, and 
 April-June [@Love2002]. Hyde and Vetter [-@Hyde2009] suggest that low larval dispersal may 
-be due to weak poleward flow of nearshore waters corresponding with peak vermilion larval release. 
+be due to weak poleward flow of nearshore waters corresponding with peak vermilion rockfish larval release. 
 
 Young-of-the-year vermilion rockfish settle out of the water column during two primary recruitment 
 periods per year, first from February to April and a second from August to October, 
@@ -44,15 +44,11 @@ of the adult populations of the two species using nine microsatellite loci.
 Adult sunset rockfish are mainly distributed at depths 
 greater than 50 fm (100 m) and are predominantly located south of Point Conception (\PtC). 
 Hyde and Vetter [-@Hyde2009] and Budrick [-@Budrick2016]  identified species using mtDNA assays and microsatellite loci, 
-respectively.  The mtDNA analyses proved to be subject to errors in species identification due to introgression resulting from mating between the two species post-divergence.
-Additional population clusters of vermilion were found north of Point Conception, but neither 
-study detected population structure between Half Moon Bay, California and Brookings, 
-Oregon [@Hyde2009; @Budrick2016].
+respectively.  
 
-Vermilion and sunset rockfishes are morphologically very similar, with color being 
-the most commonly 
-cited differentiating feature. Hyde and Vetter [-@Hyde2009] noted differences in three of six morphological 
-parameters examined, but none of them can readily be used for field identification.
+
+Vermilion and sunset rockfish are morphologically very similar, with color being 
+the most commonly cited differentiating feature. Hyde and Vetter [-@Hyde2009] noted differences in three of six morphological parameters examined, but none of them can readily be used for field identification.
 
 In all historical and current recreational and commercial catches, sunset and 
 vermilion rockfish are both recorded as vermilion rockfish.  Future studies, 
@@ -64,8 +60,8 @@ _Ongoing Population Structure Research (Provided by John Harms, NWFSC)_
 A group of researchers from the NWFSC and SWFSC is collaborating on a project to 
 genotype tissue specimens collected from the vermilion and sunset rockfish cryptic 
 pair captured during the West Coast Groundfish Bottom Trawl (WCGBT) Survey and the Southern 
-CA Shelf Rockfish Hook-and-Line Survey for the years 2004 - 2019.  Funding for this 
-project was obtained through the Saltonstall-Kennedy program for FY 2020 through a 
+California Shelf Rockfish Hook-and-Line Survey for the years 2004 - 2019.  Funding for this 
+project was obtained through the Saltonstall-Kennedy program for fiscal year 2020 through a 
 proposal led by representatives from Pacific States Marine Fisheries Commission and 
 the commercial passenger fishing vessel industry in southern California.  
 
@@ -73,15 +69,11 @@ After combining with specimens obtained through other collection efforts along
 the West Coast, approximately 25,000 tissue specimens will be analyzed.  Some 
 earlier efforts to separate this cryptic pair to species used mitochondrial DNA 
 (mtDNA) markers.  However, due to a one-way mitochondrial introgression from 
-the vermilion genome into the sunset genome, a portion of the sunset rockfish 
+the vermilion rockfish genome into the sunset rockfish genome (or incomplete lineage sorting), 
+a portion of the sunset rockfish 
 population contains mitochondrial DNA sequences consistent with vermilion rockfish 
 resulting in incorrect species assignments for these introgressed individuals 
-during the prior research project.  The current research has identified a robust 
-suite of genetic markers within the nuclear genomes of the two species that 
-definitively separates vermilion and sunset rockfish (including  introgressed 
-sunset rockfish), canary rockfish, first generation vermilion-sunset hybrids, 
-and identifies emerging patterns of intraspecific stock structure within the 
-two sister species.
+during the prior research project.  
 
 Once the collected specimens have been genotyped, any species-specific differences 
 in spatial and depth distribution, size composition, weight-length relationships, 
@@ -90,7 +82,7 @@ collected otoliths and ovaries, the demographics of the two species including
 age and growth and reproductive biology parameters such as length and age at 
 50% maturity and the prevalence of skip spawning will be explored and compared. 
 These new genotyping results will be combined with data from the prior mtDNA 
-work to  evaluate whether introgressed sunset rockfish represent a biologically
+work to  evaluate whether introgressed (hybrid) sunset rockfish represent a biologically
 intermediate subform of the species complex.  The effort also proposes to develop 
 and test the efficacy of models to predict the relative proportion of the two 
 species based upon explanatory variables including latitude, depth, species of 
@@ -134,7 +126,7 @@ and mesopelagic fishes, squid, krill and octopus, as well as sporadically abunda
 pelagic organisms such as pyrosomes, salps and pelagic red crabs 
 [@Phillips1964; @Love2002].  Interestingly, other rockfishes (either juvenile or 
 adult stages) have not been 
-documented as prey for vermilion, as they have been for other large *Sebastes* 
+documented as prey for vermilion rockfish, as they have been for other large *Sebastes* 
 species such as cowcod, bocaccio, and yelloweye rockfish.  For the latter species, 
 the idea of “cultivation effects,” in which adults crop down forage species that 
 are potential competitors/predators of their own juveniles [@Walters2001], 
@@ -155,9 +147,9 @@ rockfish complex, with only a modest apparent relationship to estimated levels o
 recruitment variability for most species of groundfish, as well as most elements
 of California Current food webs.  Empirical estimates of recruitment from pelagic 
 juvenile rockfish surveys have been used to inform incoming year class strength for 
-some of these stocks, however vermilion and sunset rockfish are rarely encountered 
+some of these stocks, however vermilion/sunset rockfish are rarely encountered 
 in these surveys.  Specifically, only 47 of nearly 300,000 total juvenile *Sebastes* 
-encountered in juvenile surveys since 2001 were identified as vermilion or sunset 
+encountered in juvenile surveys since 2001 were identified as vermilion/sunset 
 rockfish [@Field2021].  Despite this, the results here suggest that at least a
 reasonable fraction of recruitment variability for sunset and vermilion rockfish 
 is shared with other rockfish and groundfish stocks throughout the California Current, 
@@ -168,7 +160,7 @@ substantial fraction of overall groundfish recruitment trends and ecosystem
 productivity [@Stachura2014, @Schroeder2019].  Although it is feasible that 
 ecosystem factors, the results of pre-recruit surveys for co-occurring species, 
 or the results of other groundfish assessments might ultimately be used to 
-forecast recruitment for more data-limited stocks such as vermilion/sunset,
+forecast recruitment for more data-limited stocks such as vermilion and sunset rockfish,
 as suggested by [@Thorson2014], such approaches would require more 
 development and evaluation.  Consequently, environmental factors are not 
 explicitly considered in this assessment.

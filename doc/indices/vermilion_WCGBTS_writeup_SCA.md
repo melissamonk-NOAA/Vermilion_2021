@@ -1,7 +1,7 @@
 ---
 title: "West Coast Groundfish Bottom Trawl Survey for vermilion in 2021"
 author: "Melissa H. Monk"
-date: "July 01, 2021"
+date: "August 24, 2021"
 params:
     Model.number: 1
     species.name: "vermilion"
@@ -49,13 +49,12 @@ shelf. This survey, referred to in this document as the West Coast Groundfish
 Bottom Trawl Survey (WCGBT Survey or WCGBTS), is conducted annually. It uses a r
 andom-grid design covering the coastal waters from a depth of 55 m to 1,280 m 
 from late-May to early-October [@Keller2017]. Four chartered industry vessels 
-are used in most years. The location of vermilion/sunset catches relative to all 
-survey stations in WCGBT Survey are shown in .
+are used in most years. 
 
 ***WCGBTS Index: Data Preparation, Filtering, and Sample Sizes**
 
-Vermilion rockfish were found during the WCGBTS mainly off the coast of
-California (Figure). Haul-level information collected during the 
+Vermilion rockfish were found during the WCGBTS, mainly off the coast of
+California. Haul-level information collected during the 
 survey was extracted from the
 [Northwest Fisheries Science Center database](https://www.webapps.nwfsc.noaa.gov/data)
 using code within the `nwfscSurvey` package, providing information on 
@@ -68,13 +67,10 @@ area swept (hectares).
 Just
 two
 records with positive tows were located north of the California-Oregon border
-and were excluded from this analysis.
-ZeroMost of the positive tows were found in waters less than 200 m depth
-(Table /@ref{tab:ndepth}), and thus,
+and were excluded from this analysis. Most of the positive tows were found in waters less than 200 m depth
+(Table \@ref{tab:ndepth}), and thus,
 this analysis was truncated to waters with a depth of 300 m or less.
-
-positive tows were found south of 32.45 decimal degrees,
-which was used to represent the California-Mexico border.
+Positive tows were found south of 32.45 decimal degrees, which was used to represent the California-Mexico border.
 This left,
 fifty-eight
 positive tows north of 34.50 decimal degrees and
@@ -92,10 +88,7 @@ We modeled retained catch per angler hour (CPUE; number of fish per angler hour)
 a Bayesian delta-GLM model.  
 
 
-A Lognormal model  was 
-selected for the positive observation GLM by 
-a $\Delta AIC$ of  
-over a Gamma model.
+A Lognormal distribution was selected over a Gamma  for the positive observation GLM.
 <!--and supported by Q-Q plots of the positive observations fit to both distributions (Figure \@ref(fig:fig-dist-fits-wcgbts)). -->
 The delta-GLM
 method allows the linear predictors to differ between the binomial and positive models.
@@ -129,11 +122,11 @@ represents a similar trend to the arithmetic mean of the annual CPUE (Figure \@r
 
 \begin{table}
 
-\caption{(\#tab:tab-region-wcgbts)Samples of vermilion in the southern model by subregion used in the index.}
+\caption{(\#tab:tab-region-wcgbts)Samples of vermilion rockfish in the southern model by subregion used in the index.}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
-Year & Samples & Positive Samples & Percent Positive\\
+Subregion & Positive Samples & Samples & Percent Positive\\
 \midrule
 \cellcolor{gray!6}{32} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{64} & \cellcolor{gray!6}{22\%}\\
 33 & 46 & 340 & 14\%\\
@@ -146,11 +139,11 @@ Year & Samples & Positive Samples & Percent Positive\\
 
 \begin{table}
 
-\caption{(\#tab:tab-depth-wcgbts)Positive samples of vermilion in the southern model by depth (fm).}
+\caption{(\#tab:tab-depth-wcgbts)Positive samples of vermilion rockfish in the southern model by depth (fm).}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
-Year & Samples & Positive Samples & Percent Positive\\
+Year & Positive Samples & Samples & Percent Positive\\
 \midrule
 \cellcolor{gray!6}{{}[55,75]} & \cellcolor{gray!6}{28} & \cellcolor{gray!6}{87} & \cellcolor{gray!6}{32\%}\\
 (75,100] & 52 & 203 & 26\%\\
@@ -165,11 +158,11 @@ Year & Samples & Positive Samples & Percent Positive\\
 
 \begin{table}
 
-\caption{(\#tab:tab-year-wcgbts)Samples of vermilion in the southern model by year.}
+\caption{(\#tab:tab-year-wcgbts)Samples of vermilion rockfish in the southern model by year.}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
-Year & Samples & Positive Samples & Percent Positive\\
+Year & Positive Samples & Samples & Percent Positive\\
 \midrule
 \cellcolor{gray!6}{2003} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{9\%}\\
 2005 & 5 & 38 & 13\%\\
@@ -200,7 +193,7 @@ Year & Samples & Positive Samples & Percent Positive\\
 
 \begin{table}
 
-\caption{(\#tab:tab-model-select-wcgbts)Model selection for the WCGBTS survey index for vermilion in the southern model .}
+\caption{(\#tab:tab-model-select-wcgbts)Model selection for the WCGBTS survey index for vermilion rockfish in the southern model.}
 \centering
 \begin{tabular}[t]{lrr}
 \toprule
@@ -224,8 +217,8 @@ YEAR + LAT bin & 86.61 & 11.82\\
 
 \begin{table}
 
-\caption{(\#tab:tab-index-wcgbts)Standardized index for the WCGBTS survey index with log-scale standard errors and 95% highest
-       posterior density (HPD) intervals for vermilion in the southern model .}
+\caption{(\#tab:tab-index-wcgbts)Standardized index for the WCGBTS survey index with log-scale standard errors and 95\% highest
+       posterior density (HPD) intervals for vermilion in the southern model.}
 \centering
 \begin{tabular}[t]{rrrrr}
 \toprule

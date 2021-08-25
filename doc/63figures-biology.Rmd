@@ -7,7 +7,7 @@
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(fig_loc, "Reader 1 vs Reader 2.png"), 
-caption = "Aging precision between initial and blind double reads for vermilion. 
+caption = "Aging precision between initial and blind double reads for vermilion rockfish. 
 Numbers in the bubbles are the sample sizes of otoliths cross-read",
 label = 'reader1reader2')
 ```	

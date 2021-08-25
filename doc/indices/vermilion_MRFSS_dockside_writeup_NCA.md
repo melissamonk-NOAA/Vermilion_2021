@@ -1,7 +1,7 @@
 ---
 title: "MRFSS Dockside CPFV Index, 1980-1999, for vermilion in 2021"
 author: "Melissa H. Monk"
-date: "August 19, 2021"
+date: "August 25, 2021"
 params:
     Model.number: 2
     species.name: "vermilion"
@@ -72,18 +72,18 @@ For indices representing only north of Point Conception, the years 1993-1994 wer
 excluded due to limited spatial coverage.
 
 The Stephens-MacCall [-@Stephens2004] filtering approach was used to predict the 
-probability of catching vermilion, based 
+probability of catching vermilion rockfish, based 
 on the species composition of the sampler examined catch in a given trip. Prior 
 to applying the Stephens-MacCall filter, we identified potentially informative 
 predictor species, i.e., species with sufficient sample sizes and temporal coverage 
 (present in at least 5\% of all trips) to inform the binomial model.  The remaining 
-25 species all co-occurred with vermilion in at least one trip 
+25 species all co-occurred with vermilion rockfish in at least one trip 
 and were retained for the Stephens-MacCall logistic regression. Coefficients 
 from the Stephens-MacCall analysis (a binomial GLM) are positive 
-for species that are more likely to co-occur with vermilion, 
-and negative for species that are less likely to be caught with vermilion 
+for species that are more likely to co-occur with vermilion rockfish, 
+and negative for species that are less likely to be caught with vermilion rockfish 
 (Figure \@ref(fig:fig-sm-mrfss)).
-The top five species with high probability of co-occurrence with vermilion include
+The top five species with high probability of co-occurrence with vermilion rockfish include
 gopher, flag, copper, canary, and starry rockfishes, all of which are associated with rocky reef and kelp 
 habitats. The five species with the lowest probability of co-occurrence were 
 chinook salmon, widow and greenspotted rockfishes, chub mackerel and rosy rockfish.
@@ -95,38 +95,38 @@ associations informative for an index of abundance. Stephens and MacCall
 [-@Stephens2004] recommended including all trips above a threshold where the 
 false negatives and false positives are equally balanced.  However, this does 
 not have any biological relevance and for this data set, and we assume that if a 
-vermilion was landed, the anglers fished in appropriate habitat, 
-especially given vermilion is strongly associated with rocky habitat.
+vermilion rockfish was landed, the anglers fished in appropriate habitat, 
+especially given vermilion rockfish is strongly associated with rocky habitat.
 
 
 Stephens and MacCall [-@Stephens2004] proposed filtering (excluding) trips from the index 
 standardization based on a criterion of balancing the number of false positives 
 and false negatives. False positives (FP) are trips that are predicted to catch 
-a vermilion based on the species composition of the catch, but did not. False 
-negatives (FN) are trips that were not predicted to catch a vermilion, given the 
+a vermilion rockfish based on the species composition of the catch, but did not. False 
+negatives (FN) are trips that were not predicted to catch a vermilion rockfish, given the 
 catch composition, but caught at least one. The Stephens-MacCall filtering method identified the probability of occurrence at which the rate of "false 
 positives" equals "false negatives" of 0.35. The 
 trips selected using this criteria were compared to an alternative method 
 including all the "false positive" trips, regardless of the probability of 
-encountering vermilion. 
-This assumes that if vermilion were caught, the anglers must have fished in 
+encountering vermilion rockfish. 
+This assumes that if vermilion rockfish were caught, the anglers must have fished in 
 appropriate habitat during the trip. The catch included in this index is 
 "sampler-examined" and the samplers are well trained in species identification.
 
 
 The threshold probability that balances FP and FN excludes 
 1182 
-trips that did not catch a vermilion (52% 
+trips that did not catch a vermilion rockfish (52% 
 of the trips), and 188 
 trips (8% of the data) that 
-caught a vermilion. We retained the latter set of trips (FN), assuming that 
-catching a vermilion indicates that a non-negligible fraction of the fishing 
-effort occurred in habitat where vermilion occur. Only “true negatives” 
+caught a vermilion rockfish. We retained the latter set of trips (FN), assuming that 
+catching a vermilion rockfish indicates that a non-negligible fraction of the fishing 
+effort occurred in habitat where vermilion rockfish occur. Only “true negatives” 
 (the 1182 
-trips that neither caught vermilion, nor were predicted to catch them by the model) 
+trips that neither caught vermilion rockfish, nor were predicted to catch them by the model) 
 were excluded from the index standardization. The final dataset selected included 
 1083 trips, 70% 
-of which encountered vermilion.  Sample sizes by the factors selected to model are in Tables 
+of which encountered vermilion rockfish.  Sample sizes by the factors selected to model are in Tables 
 \@ref(tab:tab-region-mrfss) and \@ref(tab:tab-year-mrfss).
 
 
@@ -177,7 +177,7 @@ represents a similar trend to the arithmetic mean of the annual CPUE (Figure \@r
 
 \begin{table}
 
-\caption{(\#tab:tab-region-mrfss)Samples of vermilion in the northern model by subregion used in the index.}
+\caption{(\#tab:tab-region-mrfss)Samples of vermilion rockfish in the northern model by subregion used in the index.}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
@@ -193,7 +193,7 @@ N & 320 & 498 & 64\%\\
 
 \begin{table}
 
-\caption{(\#tab:tab-year-mrfss)Samples of vermilion in the northern model by year.}
+\caption{(\#tab:tab-year-mrfss)Samples of vermilion rockfish in the northern model by year.}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
@@ -226,7 +226,7 @@ Year & Positive Samples & Samples & Percent Positive\\
 
 \begin{table}
 
-\caption{(\#tab:tab-model-select-mrfss)Model selection for the MRFSS dockside survey index for vermilion in the northern model.}
+\caption{(\#tab:tab-model-select-mrfss)Model selection for the MRFSS dockside survey index for vermilion rockfish in the northern model.}
 \centering
 \begin{tabular}[t]{lrr}
 \toprule
@@ -252,7 +252,7 @@ YEAR + SubRegion + AREA X & 2.00 & 0.00\\
 \begin{table}
 
 \caption{(\#tab:tab-index-mrfss)Standardized index for the MRFSS dockside survey index with log-scale standard errors and 95\% highest
-       posterior density (HPD) intervals for vermilion in the northern model .}
+       posterior density (HPD) intervals for vermilion in the northern model.}
 \centering
 \begin{tabular}[t]{rrrrr}
 \toprule

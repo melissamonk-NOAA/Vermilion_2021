@@ -1,7 +1,7 @@
 ---
 title: "CCFRP Index for vermilion in 2021"
 author: "Melissa H. Monk"
-date: "August 19, 2021"
+date: "August 25, 2021"
 params:
     Model.number: 1
     species.name: "vermilion"
@@ -72,8 +72,8 @@ fishery-dependent onboard observer survey described above.
 
 The CCFRP data are quality controlled at the time they are key punched and little 
 filtering was needed for the index. 
-Cells not consistently sampled over time were excluded as well as cells that never encountered vermilion. CCFRP samples shallower 
-depths to avoid barotrauma-induced mortality.  We retained 5444 drifts for index standardization, with 1927 drifts encountering vermilion.
+Cells not consistently sampled over time were excluded as well as cells that never encountered vermilion rockfish. CCFRP samples shallower 
+depths to avoid barotrauma-induced mortality.  We retained 5444 drifts for index standardization, with 1927 drifts encountering vermilion rockfish.
   
 
 
@@ -119,7 +119,7 @@ open areas.  Each of these indices are scaled to their means to allow for direct
 
 \begin{table}
 
-\caption{(\#tab:tab-region-ccfrp)Samples of vermilion in the northern model by subregion used in the index.}
+\caption{(\#tab:tab-region-ccfrp)Samples of vermilion rockfish in the northern model by subregion used in the index.}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
@@ -137,7 +137,7 @@ Bodega Head & 490 & 1315 & 37\%\\
 
 \begin{table}
 
-\caption{(\#tab:tab-depth-ccfrp)Positive samples of vermilion in the northern model by depth (fm).}
+\caption{(\#tab:tab-depth-ccfrp)Positive samples of vermilion rockfish in the northern model by depth (fm).}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
@@ -154,7 +154,7 @@ Year & Positive Samples & Samples & Percent Positive\\
 
 \begin{table}
 
-\caption{(\#tab:tab-year-ccfrp)Samples of vermilion in the northern model by year.}
+\caption{(\#tab:tab-year-ccfrp)Samples of vermilion rockfish in the northern model by year.}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
@@ -186,7 +186,7 @@ Year & Positive Samples & Samples & Percent Positive\\
 
 \begin{table}
 
-\caption{(\#tab:tab-model-select-ccfrp)Model selection for the CCFRP survey index for vermilion in the northern model.}
+\caption{(\#tab:tab-model-select-ccfrp)Model selection for the CCFRP survey index for vermilion rockfish in the northern model.}
 \centering
 \begin{tabular}[t]{lr}
 \toprule
@@ -213,7 +213,7 @@ YEAR + AREA + DEPTH bin + offset(logEffort) & 478.98\\
 \begin{table}
 
 \caption{(\#tab:tab-index-ccfrp)Standardized index for the CCFRP survey index with log-scale standard errors and 95\% highest
-       posterior density (HPD) intervals for vermilion in the northern model .}
+       posterior density (HPD) intervals for vermilion in the northern model.}
 \centering
 \begin{tabular}[t]{rrrrr}
 \toprule

@@ -1,6 +1,6 @@
 # Assessment Results
 
-The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:params}. The full r4ss plotting output is available in the supplementary material on the 
+The base model parameter estimates along with approximate asymptotic standard errors are shown in Table \ref{tab:paramstable}. The full r4ss plotting output is available in the supplementary material on the 
 Council's website.
 
 ## Fixed parameters
@@ -32,7 +32,7 @@ unSchnute.fn <- function(Amin, Amax, Lmin, Lmax, k)
    names(out) <- c("Linf","t0")
    return(out)
 }
-# vermilion example
+# vermilion rockfish example
 # females 
 female_growth <- unSchnute.fn(0, 30, model$MGparmAdj$L_at_Amin_Fem_GP_1[1], model$MGparmAdj$L_at_Amax_Fem_GP_1[1], model$MGparmAdj$VonBert_K_Fem_GP_1[1])
 
@@ -75,23 +75,23 @@ The following plots show fits to the conditional age-at-length composition for e
 fleet/survey:   
 - Abrams research survey: Figures \ref{fig:comp_condAALfit_residsflt11mkt0}, \ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeABRAMS_RESEARCH} and \ref{fig:comp_condAALfit_Andre_plotsflt11mkt0}  
 - WCGBT survey: Figures \ref{fig:comp_condAALfit_residsflt9mkt0_page1} - \ref{fig:comp_condAALfit_residsflt9mkt0_page3}, \ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_TWL}, and \ref{fig:comp_condAALfit_Andre_plotsflt9mkt0_page1} - \ref{fig:comp_condAALfit_Andre_plotsflt9mkt0_page4}  
-- SWFSC groundfish ecology survey: Figures \ref{fig:comp_condAALfit_residsflt12mkt0} , \ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeSWFSC_GF_ECOL} and \ref{fig:comp_condAALfit_Andre_plotsflt12mkt0}  
+- SWFSC groundfish ecology survey: Figures \ref{fig:comp_condAALfit_residsflt12mkt0}, \ref{fig:comp_condAALfit_data_weighting_TA1.8_condAgeSWFSC_GF_ECOL} and \ref{fig:comp_condAALfit_Andre_plotsflt12mkt0}  
 
-Fits to the conditional age at length data sets seemed reasonable, with no evidence of strong residual patterns. The largest residuals were mainly associated with the infrequently encountered, oldest individuals. The model was able to reproduce interannual changes in mean age for the NWFSC trawl and Abrams research data, but tended to slightly overestimate average age (by about 1 year) in three of the four years for the SWFSC groundfish ecology data set.
+Fits to the conditional age-at-length data sets seemed reasonable, with no evidence of strong residual patterns. The largest residuals were mainly associated with the infrequently encountered, oldest individuals. The model was able to reproduce interannual changes in mean age for the NWFSC trawl and Abrams thesis research data, but tended to slightly overestimate average age (by about 1 year) in three of the four years for the SWFSC groundfish ecology data set.
 
 
 ## Estimated Selectivity and Fits to Length Composition
 Fits to the time-aggregated length comps were best for the commercial, 
 recreational, and CCFRP fleets Figure (\@ref(fig:lenfits-all)). The following 
 plots show estimated selectivity (when not mirrored, 
-Figures \@ref(fig:selex-age-all) - \@ref(fig:endyr-selex-CCFRP)) and fits to the length composition (Figures \@ref(fig:lenfits-all) - \@ref(fig:mean-len-fit-CCFRP) for each 
+Figures \@ref(fig:selex-age-all) - \@ref(fig:endyr-selex-CCFRP)) and fits to the length composition (Figures \@ref(fig:lenfits-all) - \@ref(fig:mean-len-fit-CCFRP)) for each 
 fleet/survey:
 
 - Commercial hook-and-line: Figures \ref{fig:endyr-selex-COM-HKL}, \ref{fig:len-pearson-COM-HKL}, and \ref{fig:mean-len-fit-COM-HKL} 
 - Commercial trawl: Figures \ref{fig:endyr-selex-COM-TWL}, \ref{fig:len-pearson-COM-TWL}, and \ref{fig:mean-len-fit-COM-TWL}
 - Commercial net: Figures \ref{fig:endyr-selex-COM-NET}, \ref{fig:len-pearson-COM-NET}, and \ref{fig:mean-len-fit-COM-NET}
 - Recreational retained PC: Figures  \ref{fig:sel03_len_timevary_surf_flt4sex1}, \ref{fig:endyr-selex-REC-PC}, \ref{fig:len-pearson-REC-PC},  and  \ref{fig:mean-len-fit-REC-PC} 
-- Recreational discard PC Figures \ref{fig:endyr-selex-REC-PC-DIS}, \ref{fig:len-pearson-REC-PC-DIS}  and \ref{fig:mean-len-fit-REC-PC-DIS}
+- Recreational discard PC: Figures \ref{fig:endyr-selex-REC-PC-DIS}, \ref{fig:len-pearson-REC-PC-DIS}  and \ref{fig:mean-len-fit-REC-PC-DIS}
 - Recreational retained PR: Figures \ref{fig:sel03_len_timevary_surf_flt6sex1}, \ref{fig:endyr-selex-REC-PR}, \ref{fig:len-pearson-REC-PR} and \ref{fig:mean-len-fit-REC-PR}
 - Deb Wilson-Vandenberg onboard CPFV survey: Figure \ref{fig:len-pearson-DWV-ONBOARD}  and \ref{fig:mean-len-fit-DWV-ONBOARD} 
 - WCGBT survey: Figures \ref{fig:endyr-selex-NWFSC-TWL}, \ref{fig:endyr-selex-NWFSC-TWL}, \ref{fig:len-pearson-NWFSC-TWL}  and \ref{fig:mean-len-fit-NWFSC-TWL} 
@@ -99,7 +99,7 @@ fleet/survey:
 - SWFSC groundfish ecology survey: Figures \ref{fig:len-pearson-SWFSC-GF-ECOL}  and \ref{fig:mean-len-fit-SWFSC-GF-ECOL}
 - CCFRP: Figures \ref{fig:endyr-selex-CCFRP}, \ref{fig:len-pearson-CCFRP} and Figure \ref{fig:mean-len-fit-CCFRP}  
 
-The WCGBTS does not sample primary adult habitat types, resulting in a length frequency distribution that appears bimodal and is difficult for the model to reproduce (Figure \@ref(fig:lenfits-all)), and also reflected in the descending limb of the selectivity around 0.42 for any fish larger than 20 cm (Figure \@ref(fig:endyr-selex-NWFSC-TWL)). Fits to the two short-term research fleets (SWFSC groundfish ecology ecology and Abrams) are adequate, but ultimately based on mirrored selectivity curves (details in selectivity section, below). Fits to length composition data from the recreational fleets show evidence of modal progressions due to strong year classes (e.g., the 1984-5 year classes entering the fishery a few years later), do not show evidence of strong patterns in the pearson residual plots, and the model is able to track associated changes in mean length over time.
+The WCGBTS does not sample primary adult habitat types, resulting in a length frequency distribution that appears bimodal and is difficult for the model to reproduce (Figure \@ref(fig:lenfits-all)), and also reflected in the descending limb of the selectivity around 0.42 for any fish larger than 20 cm (Figure \@ref(fig:endyr-selex-NWFSC-TWL)). Fits to the two short-term research fleets (SWFSC groundfish ecology surveys and Abrams thesis research) are adequate, but ultimately based on mirrored selectivity curves (details in selectivity section, below). Fits to length composition data from the recreational fleets show evidence of modal progressions due to strong year classes (e.g., the 1984-1985 year classes entering the fishery a few years later), do not show evidence of strong patterns in the pearson residual plots, and the model is able to track associated changes in mean length over time.
 
 The Abrams research fleet and SWFSC groundfish ecology selectivity curves were mirrored to the commercial hook-and-line fleet, which was fixed to an asymptotic selectivity (Figure \@ref(fig:endyr-selex-COM-HKL)).  Initial estimation of the commercial trawl selectivity resulted in large terminal estimates with large standard errors.  Therefore, it was fixed to be asymptotic and the peak size and the ascending width were estimated (Figure \@ref(fig:endyr-selex-COM-TWL)).  The historic net fishery selectivity was estimated with four parameters including a descending limb; fish were fully selected by around 43 cm and by around 47 cm selectivity decreased to 0.6 (Figure \@ref(fig:endyr-selex-COM-NET)).
 
@@ -131,17 +131,17 @@ is the only index sampling within the MPAs, and starting in 2017 the index repre
 ## Derived Quantities
 Spawning output north of Point Conception declined rapidly throughout the 1970s, 1980s, and 1990s to a level below the Minimum Stock Size Threshold (MSST), but catches decreased enough in the late 1990s and 2000s for the stock to reach a stable level of spawning output (Table \@ref(tab:timeseries), Figure \@ref(fig:depl)). Stock size is estimated to have been at the lowest level during the 1990s, but has since increased, in part due to strong recruitments in 1999 and 2016. The stock is estimated to have been below the management target of B40% since the early 1980s (Figure \@ref(fig:depl)), recently returning to levels near the target biomass. Relative exploitation rates ($\frac{1-SPR}{1-SPR_{50\%}}$) increased through time, exceeding target levels from the 1970s through the 1990s. Exploitation over the past decade has fluctuated around target levels (Figure \@ref(fig:1-spr)), with most catches landed by the recreational sector. 
 
-Vermilion spawning output in northern California was estimated to be 4`r round(refpts[4,2], 0)`  million eggs in 2021 (95% asymptotic interval: 
+Vermilion rockfish spawning output in northern California was estimated to be 4`r round(refpts[4,2], 0)`  million eggs in 2021 (95% asymptotic interval: 
 `r paste0(round(refpts[4,3],0), " - ", round(refpts[4,4],0))` million eggs) or 
 `r scales::percent(refpts[5,2], accuracy = 1)` 
 (95% asymptotic interval: 
 `r paste0(scales::percent(refpts[5,3], accuracy = 1)," - ", scales::percent(refpts[5,4], accuracy = 1))`) 
-of unfished spawning output in 2021(“depletion,” Table \@ref(tab:ssbES)) and Figure \@ref(fig:depl)). In 2021, vermilion biomass north of Point Conception is estimated to be near the target biomass level, while experiencing fishing intensity around the SPR fishing intensity target (Figure \@ref(fig:phase)). The equilibrium yield curve is shifted left, as expected from the fixed Beverton-Holt steepness parameter h=0.72 (Figures \@ref(fig:yield2) and \@ref(fig:yield3)). Harvest rates in northern California were near target in 2020, but above target in the three previous years (Figure \@ref(fig:phase)).
+of unfished spawning output in 2021(“depletion,” Table \@ref(tab:ssbES)) and Figure \@ref(fig:depl)). In 2021, vermilion rockfish biomass north of Point Conception is estimated to be near the target biomass level, while experiencing fishing intensity around the SPR fishing intensity target (Figure \@ref(fig:phase)). The equilibrium yield curve is shifted left, as expected from the fixed Beverton-Holt steepness parameter h=0.72 (Figures \@ref(fig:yield2) and \@ref(fig:yield3)). Harvest rates in northern California were near target in 2020, but above target in the three previous years (Figure \@ref(fig:phase)).
 
 
 ## Recruitment Deviations
 
-Model estimates of recruitment for the 1970-2018 period indicated an extended period of below-average recruitment throughout the 1970s and early 1980s, which is generally inconsistent with strong recruitment trends for many years in the 1970s and in 1980 for other species of rockfish.  As this time period is only weakly informed by length data, this may indicate some potential for model misspecification. Major recruitments (strong year classes) estimated in the northern California model include strong 1984, 1985, 1999, and 2016 year classes. (Figures \@ref(fig:bh-curve), \@ref(fig:bh-resids), \@ref(fig:recruits), and \@ref(fig:recdevs)). These are consistent with estimates of strong year classes in other rockfish stock assessments, nearly all of which suggest very high recruitment in 1999. More recently, strong year classes have been estimated in 2016 for widow rockfish, sablefish and Pacific hake, observations that are consistent with observations of high juvenile rockfish abundance in the California Current during the 2015-2016 large marine heatwave [@Schroeder2019].  Due to ageing error, years adjacent to strong (or weak) cohorts are sometimes estimated as having similar deviations. 
+Model estimates of recruitment for the 1970-2018 period indicated an extended period of below-average recruitment throughout the 1970s and early 1980s, which is generally inconsistent with strong recruitment trends for many years in the 1970s and in 1980 for other species of rockfish.  As this time period is only weakly informed by length data, this may indicate some potential for model misspecification. Major recruitments (strong year classes) estimated in the northern California model include strong 1984, 1985, 1999, and 2016 year classes (Figures \@ref(fig:bh-curve), \@ref(fig:bh-resids), \@ref(fig:recruits), and \@ref(fig:recdevs)). These are consistent with estimates of strong year classes in other rockfish stock assessments, nearly all of which suggest very high recruitment in 1999. More recently, strong year classes have been estimated in 2016 for widow rockfish, sablefish and Pacific hake, observations that are consistent with observations of high juvenile rockfish abundance in the California Current during the 2015-2016 large marine heatwave [@Schroeder2019].  Due to ageing error, years adjacent to strong (or weak) cohorts are sometimes estimated as having similar deviations. 
 
 ## Reference Points
 

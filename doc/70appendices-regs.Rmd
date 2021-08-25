@@ -2,7 +2,6 @@
 
 \begin{landscape}
 
-\subsection{Graphic of California recreational regulations over time.}
 
 \begin{figure}
 \includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_Northern_ShelfRF.png}
@@ -13,7 +12,7 @@
 
 \begin{figure}
 \includegraphics{C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/Regs_NorthCentral_ShelfRF.png}
-\caption{Recreational depth closures for shelf rockfish in the north central California management area.\label{fig:rec-reg-cn}}
+\caption{Recreational depth closures for shelf rockfish in the north-central California management area.\label{fig:rec-reg-cn}}
 \end{figure}
 
 \FloatBarrier
