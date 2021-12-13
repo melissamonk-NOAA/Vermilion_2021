@@ -26,15 +26,6 @@ header-includes:
 
 
 
-
-
-
-
-
-
-## Allocation of Yield Among Federal Management Areas
-
-
 The 2021 northern California base model for vermilion rockfish represents U.S. 
 waters between \PtC and the California-Oregon border \CAOR. Federal management of 
 the minor shelf rockfish, which includes vermilion rockfish, is based on areas north and south of \CapeM, 

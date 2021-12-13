@@ -1,6 +1,6 @@
 \clearpage
 
-# Acknowledgments
+# Acknowledgments{-}
 We gratefully acknowledge input and review from the STAR panel including John 
 Budrick (STAR panel chair; California Department of Fish and Wildlife), 
 Allan Hicks (International Pacific Halibut Commission), Matt Cieri (Center for 

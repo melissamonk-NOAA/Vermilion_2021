@@ -2160,7 +2160,7 @@ Males $L_{\infty}$ = 50 cm; $k$ = 0.199; $t_0$ = -0.63
 ## Natural Mortality Estimation
 
 The northern California model directly estimated male growth and natural mortality (*M*) parameters due to the above-mentioned issue with estimation of CVs for length at age 30 
-when using the offset parameterization. Female natural mortality was estimated at 0.09 (SE = 0.0083) and male natural mortality was estimated at 0.08 (SE = 0.0088), which the STAT considered reasonable given that observed maximum ages for both sexes are similar. Latitudinal gradients in natural mortality have been estimated for many species of rockfish, which is consistent with the higher estimates of $M$ in the southern model.
+when using the offset parameterization. Female natural mortality was estimated at 0.13 (SE = 0.012) and male natural mortality was estimated at 0 (SE = NA), which the STAT considered reasonable given that observed maximum ages for both sexes are similar. Latitudinal gradients in natural mortality have been estimated for many species of rockfish, which is consistent with the higher estimates of $M$ in the southern model.
 
  
 
@@ -2430,7 +2430,7 @@ particularly for recruitment.
 
 \clearpage
 
-# Acknowledgments
+# Acknowledgments{-}
 We gratefully acknowledge input and review from the STAR panel including John 
 Budrick (STAR panel chair; California Department of Fish and Wildlife), 
 Allan Hicks (International Pacific Halibut Commission), Matt Cieri (Center for 
@@ -2445,7 +2445,7 @@ Thanks to the SWFSC ages and the NWSFC CAP lab for reading vermilion rockfish ot
 \clearpage
 \floatplacement{table}{H}
 
-# Tables
+# Tables{-}
 
 
 \newpage
@@ -3797,8 +3797,7 @@ OFLCatch\_2023 & 168.686 & 161.477 & 150.481 & 114.336 & 105.421 & 101.855\\
 
 <!--chapter:end:50tables.Rmd-->
 
-\clearpage
-# Figures
+# Figures{-}
 
 
 
@@ -3806,10 +3805,8 @@ OFLCatch\_2023 & 168.686 & 161.477 & 150.481 & 114.336 & 105.421 & 101.855\\
 <!-- ******************* Data Used in the Model *************************** --> 
 <!-- ====================================================================== --> 
 
-\FloatBarrier
 
-
-![Map of the assssment area with the 3 nm California state water boundary.  The northern California model includes areas from Point Conception to the California-Oregon border and the southern California assessment includes areas from Point Concpetion to the USA-Mexico border. The boundary at Cape Mendocino is a Pacific Fishery Management Council boundary for management of the stock complex, provided for reference.\label{fig:assess-area}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/assess_area.png){width=80% height=80% alt="."}
+![Map of the assssment area with the 3 nm California state water boundary.  The northern California model includes areas from Point Conception to the California-Oregon border and the southern California assessment includes areas from Point Concpetion to the USA-Mexico border. The boundary at Cape Mendocino is a Pacific Fishery Management Council boundary for management of the stock complex, provided for reference.\label{fig:assess-area}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/assess_area.png){width=70% height=70% alt="."}
 
 <!-- ====================================================================== -->  
 <!-- ****************** Catches Used in the Model ************************* --> 
@@ -4368,14 +4365,10 @@ fishery selectivity and with steepness fixed at 0.72.\label{fig:yield2}](C:/Stoc
 
 <!--chapter:end:60figures.Rmd-->
 
+
 \newpage
 
-# Appendices{-}
-
-\renewcommand{\thesubsection}{Appendix \Alph{subsection}}
-
-
-## Detailed Fit to Length Composition Data{#append-fit} 
+# Appendix A. Detailed Fit to Length Composition Data{-} 
 \renewcommand{\thepage}{A\arabic{page}}
 \renewcommand{\thefigure}{A\arabic{figure}}
 \renewcommand{\thetable}{A\arabic{table}}
@@ -4385,45 +4378,45 @@ fishery selectivity and with steepness fixed at 0.72.\label{fig:yield2}](C:/Stoc
 
 
 
-![Length comps, whole catch, COM_HKL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt1mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt1mkt0_page1.png){width=100% height=100% alt="."}
+![Length comps, whole catch, COM_HKL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt1mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt1mkt0_page1.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, COM_HKL (plot 2 of 2).\label{fig:comp_lenfit_flt1mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt1mkt0_page2.png){width=100% height=100% alt="."}
+![Length comps, whole catch, COM_HKL (plot 2 of 2).\label{fig:comp_lenfit_flt1mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt1mkt0_page2.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, COM_TWL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt2mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt2mkt0.png){width=100% height=100% alt="."}
+![Length comps, whole catch, COM_TWL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt2mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt2mkt0.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, COM_NET.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt3mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt3mkt0.png){width=100% height=100% alt="."}
+![Length comps, whole catch, COM_NET.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt3mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt3mkt0.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, REC_PC (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt4mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt4mkt0_page1.png){width=100% height=100% alt="."}
+![Length comps, whole catch, REC_PC (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt4mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt4mkt0_page1.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, REC_PC (plot 2 of 3).\label{fig:comp_lenfit_flt4mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt4mkt0_page2.png){width=100% height=100% alt="."}
+![Length comps, whole catch, REC_PC (plot 2 of 3).\label{fig:comp_lenfit_flt4mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt4mkt0_page2.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, REC_PC (plot 3 of 3).\label{fig:comp_lenfit_flt4mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt4mkt0_page3.png){width=100% height=100% alt="."}
+![Length comps, whole catch, REC_PC (plot 3 of 3).\label{fig:comp_lenfit_flt4mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt4mkt0_page3.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, REC_PC_DIS.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt5mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt5mkt0.png){width=100% height=100% alt="."}
+![Length comps, whole catch, REC_PC_DIS.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt5mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt5mkt0.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, REC_PR (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt6mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt6mkt0_page1.png){width=100% height=100% alt="."}
+![Length comps, whole catch, REC_PR (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt6mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt6mkt0_page1.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, REC_PR (plot 2 of 3).\label{fig:comp_lenfit_flt6mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt6mkt0_page2.png){width=100% height=100% alt="."}
+![Length comps, whole catch, REC_PR (plot 2 of 3).\label{fig:comp_lenfit_flt6mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt6mkt0_page2.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, REC_PR (plot 3 of 3).\label{fig:comp_lenfit_flt6mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt6mkt0_page3.png){width=100% height=100% alt="."}
+![Length comps, whole catch, REC_PR (plot 3 of 3).\label{fig:comp_lenfit_flt6mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt6mkt0_page3.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, DWV_ONBOARD.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt8mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt8mkt0.png){width=100% height=100% alt="."}
+![Length comps, whole catch, DWV_ONBOARD.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt8mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt8mkt0.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, NWFSC_TWL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt9mkt0_page1.png){width=100% height=100% alt="."}
+![Length comps, whole catch, NWFSC_TWL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt9mkt0_page1.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, NWFSC_TWL (plot 2 of 2).\label{fig:comp_lenfit_flt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt9mkt0_page2.png){width=100% height=100% alt="."}
+![Length comps, whole catch, NWFSC_TWL (plot 2 of 2).\label{fig:comp_lenfit_flt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt9mkt0_page2.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, ABRAMS_RESEARCH.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt11mkt0.png){width=100% height=100% alt="."}
+![Length comps, whole catch, ABRAMS_RESEARCH.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt11mkt0.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, SWFSC_GF_ECOL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt12mkt0.png){width=100% height=100% alt="."}
+![Length comps, whole catch, SWFSC_GF_ECOL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt12mkt0.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, CCFRP.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt13mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt13mkt0.png){width=100% height=100% alt="."}
+![Length comps, whole catch, CCFRP.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt13mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt13mkt0.png){width=90% height=90% alt="."}
 
 \FloatBarrier
 
 
 
-## MRFSS Dockside Index of Abundance {#mrfss-index}
+# Appendix B. MRFSS Dockside Index of Abundance{-}
 \renewcommand{\thepage}{B\arabic{page}}
 \renewcommand{\thefigure}{B\arabic{figure}}
 \renewcommand{\thetable}{B\arabic{table}}
@@ -4714,7 +4707,7 @@ Year & Index & logSE & lower HPD & upper HPD\\
 
 \newpage
 
-## California Onboard CPFV Index of Abundance {#cpfv-index}
+# Appendix C. California Onboard CPFV Index of Abundance{-}
 \renewcommand{\thepage}{C\arabic{page}}
 \renewcommand{\thefigure}{C\arabic{figure}}
 \renewcommand{\thetable}{C\arabic{table}}
@@ -5036,7 +5029,7 @@ Year & Index & logSE & lower HPD & upper HPD\\
 \newpage
 
 
-## Deb Wilson-Vandenberg Onboard CPFV Index of Abundance {#debwv-index}
+# Appendix D. Deb Wilson-Vandenberg Onboard CPFV Index of Abundance{-}
 \renewcommand{\thepage}{D\arabic{page}}
 \renewcommand{\thefigure}{D\arabic{figure}}
 \renewcommand{\thetable}{D\arabic{table}}
@@ -5303,7 +5296,7 @@ Year & Index & logSE & lower HPD & upper HPD\\
 \newpage
 
 
-## CRFS PR Dockside Index of Abundance {#pr-index}
+# Appendix E. CRFS PR Dockside Index of Abundance{-}
 \renewcommand{\thepage}{E\arabic{page}}
 \renewcommand{\thefigure}{E\arabic{figure}}
 \renewcommand{\thetable}{E\arabic{table}}
@@ -5545,7 +5538,7 @@ Year & Index & logSE & lower HPD & upper HPD\\
 
 \newpage
 
-## CCFRP Index of Abundance {#ccfrp-index}
+# Appendix F. CCFRP Index of Abundance{-}
 \renewcommand{\thepage}{F\arabic{page}}
 \renewcommand{\thefigure}{F\arabic{figure}}
 \renewcommand{\thetable}{F\arabic{table}}
@@ -5799,7 +5792,7 @@ sjPlot::plot_grid(figure.Dpos.list, tags = TRUE, margin = c(.1, .1, .1, .1))
 
 \newpage
 
-## WCGBTS Index of Abundance {#wcgbts-index}
+# Appendix G. WCGBTS Index of Abundance{-}
 \renewcommand{\thepage}{G\arabic{page}}
 \renewcommand{\thefigure}{G\arabic{figure}}
 \renewcommand{\thetable}{G\arabic{table}}
@@ -5807,8 +5800,6 @@ sjPlot::plot_grid(figure.Dpos.list, tags = TRUE, margin = c(.1, .1, .1, .1))
 \setcounter{figure}{0}
 \setcounter{table}{0}
 
-
-### Northwest Fisheries Science Center West Coast Groundfish Bottom Trawl Survey
 
 In 2003, the NWFSC expanded the ongoing slope survey to include the continental 
 shelf. This survey, referred to in this document as the West Coast Groundfish 
@@ -6039,7 +6030,7 @@ ggpubr::ggarrange(pos.qq, pos.resid, ncol = 1)
 
 \newpage
 
-## Recreational Regulations {#regs-graphic}
+# Appendix H. Recreational Regulations{-}
 \renewcommand{\thepage}{H\arabic{page}}
 \renewcommand{\thefigure}{H\arabic{figure}}
 \renewcommand{\thetable}{H\arabic{table}}
@@ -6085,16 +6076,13 @@ ggpubr::ggarrange(pos.qq, pos.resid, ncol = 1)
 
 \newpage 
 
-## Management Boundary Analysis
+# Appendix I. Management Boundary Analysis{-}
 \renewcommand{\thepage}{I\arabic{page}}
 \renewcommand{\thefigure}{I\arabic{figure}}
 \renewcommand{\thetable}{I\arabic{table}}
 \setcounter{page}{1}
 \setcounter{figure}{0}
 \setcounter{table}{0}
-
-
-## Allocation of Yield Among Federal Management Areas
 
 
 The 2021 northern California base model for vermilion rockfish represents U.S. 
@@ -6213,9 +6201,10 @@ Redwood & 0.122 & 164.193 & 18.48\% & 0.022 & 4.41\%\\
 \end{table}
 <!--figures-->
 
-\newpage
+\clearpage
+# References{-}
+\thispagestyle{empty} 
 
-# References
 
 
 <!--chapter:end:70appendices-north.Rmd-->

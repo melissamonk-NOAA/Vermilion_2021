@@ -96,7 +96,7 @@ bibliography:
 <!--chapter:end:00bibliography.Rmd-->
 
 ---
-title: DRAFT The status of Vermilion Rockfish (_Sebastes miniatus_) and Sunset Rockfish (_Sebastes crocotulus_) in U.S. waters off the coast of California south of Ppoint Conception in 2021
+title: DRAFT The status of Vermilion Rockfish (_Sebastes miniatus_) and Sunset Rockfish (_Sebastes crocotulus_) in U.S. waters off the coast of California south of Point Conception in 2021
 ---
 
 
@@ -2382,7 +2382,7 @@ particularly for recruitment.
 
 \clearpage
 
-# Acknowledgments
+# Acknowledgments{-}
 We gratefully acknowledge input and review from the STAR panel including John 
 Budrick (STAR panel chair; California Department of Fish and Wildlife), 
 Allan Hicks (International Pacific Halibut Commission), Matt Cieri (Center for 
@@ -2397,7 +2397,7 @@ Thanks to the SWFSC ages and the NWSFC CAP lab for reading vermilion rockfish ot
 \clearpage
 \floatplacement{table}{H}
 
-# Tables
+# Tables{-}
 
 
 \newpage
@@ -3738,8 +3738,7 @@ OFLCatch\_2023 & 159.972 & 162.411 & 146.525 & 135.081 & 117.671 & 99.172\\
 
 <!--chapter:end:50tables.Rmd-->
 
-\clearpage
-# Figures
+# Figures{-}
 
 
 
@@ -3747,10 +3746,8 @@ OFLCatch\_2023 & 159.972 & 162.411 & 146.525 & 135.081 & 117.671 & 99.172\\
 <!-- ******************* Data Used in the Model *************************** --> 
 <!-- ====================================================================== --> 
 
-\FloatBarrier
 
-
-![Map of the assssment area with the 3 nm California state water boundary.  The northern California model includes areas from Point Conception to the California-Oregon border and the southern California assessment includes areas from Point Concpetion to the USA-Mexico border. The boundary at Cape Mendocino is a Pacific Fishery Management Council boundary for management of the stock complex, provided for reference.\label{fig:assess-area}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/assess_area.png){width=80% height=80% alt="."}
+![Map of the assssment area with the 3 nm California state water boundary.  The northern California model includes areas from Point Conception to the California-Oregon border and the southern California assessment includes areas from Point Concpetion to the USA-Mexico border. The boundary at Cape Mendocino is a Pacific Fishery Management Council boundary for management of the stock complex, provided for reference.\label{fig:assess-area}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/assess_area.png){width=70% height=70% alt="."}
 
 <!-- ====================================================================== -->  
 <!-- ****************** Catches Used in the Model ************************* --> 
@@ -4314,48 +4311,58 @@ fishery selectivity and with steepness fixed at 0.72.\label{fig:yield2}](C:/Stoc
 
 <!--chapter:end:60figures.Rmd-->
 
-\clearpage
+\newpage
 
-# Appendix
-
-## Detailed Fit to Length Composition Data{#append-fit} 
-
-
-
-![Length comps, whole catch, COM_HKL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt1mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt1mkt0_page1.png){width=100% height=100% alt="."}
-
-![Length comps, whole catch, COM_HKL (plot 2 of 2).\label{fig:comp_lenfit_flt1mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt1mkt0_page2.png){width=100% height=100% alt="."}
-
-![Length comps, whole catch, COM_NET.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt3mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt3mkt0.png){width=100% height=100% alt="."}
-
-![Length comps, whole catch, REC_PC (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt4mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt4mkt0_page1.png){width=100% height=100% alt="."}
-
-![Length comps, whole catch, REC_PC (plot 2 of 3).\label{fig:comp_lenfit_flt4mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt4mkt0_page2.png){width=100% height=100% alt="."}
-
-![Length comps, whole catch, REC_PC (plot 3 of 3).\label{fig:comp_lenfit_flt4mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt4mkt0_page3.png){width=100% height=100% alt="."}
-
-![Length comps, whole catch, REC_PC_DIS.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt5mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt5mkt0.png){width=100% height=100% alt="."}
-
-![Length comps, whole catch, REC_PR (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt6mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt6mkt0_page1.png){width=100% height=100% alt="."}
-
-![Length comps, whole catch, REC_PR (plot 2 of 3).\label{fig:comp_lenfit_flt6mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt6mkt0_page2.png){width=100% height=100% alt="."}
-
-![Length comps, whole catch, REC_PR (plot 3 of 3).\label{fig:comp_lenfit_flt6mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt6mkt0_page3.png){width=100% height=100% alt="."}
-
-![Length comps, whole catch, NWFSC_HKL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt8mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt8mkt0.png){width=100% height=100% alt="."}
-
-![Length comps, whole catch, NWFSC_TWL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt9mkt0_page1.png){width=100% height=100% alt="."}
-
-![Length comps, whole catch, NWFSC_TWL (plot 2 of 2).\label{fig:comp_lenfit_flt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt9mkt0_page2.png){width=100% height=100% alt="."}
-
-![Length comps, whole catch, CDFW_RESEARCH.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt11mkt0.png){width=100% height=100% alt="."}
-
-![Length comps, whole catch, EARLY_HKL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt12mkt0.png){width=100% height=100% alt="."}
-
-\clearpage
+# Appendix A. Detailed Fit to Length Composition Data{-} 
+\renewcommand{\thepage}{A\arabic{page}}
+\renewcommand{\thefigure}{A\arabic{figure}}
+\renewcommand{\thetable}{A\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 
-## MRFSS Dockside Index of Abundance {#mrfss-index}
+
+![Length comps, whole catch, COM_HKL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt1mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt1mkt0_page1.png){width=90% height=90% alt="."}
+
+![Length comps, whole catch, COM_HKL (plot 2 of 2).\label{fig:comp_lenfit_flt1mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt1mkt0_page2.png){width=90% height=90% alt="."}
+
+![Length comps, whole catch, COM_NET.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt3mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt3mkt0.png){width=90% height=90% alt="."}
+
+![Length comps, whole catch, REC_PC (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt4mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt4mkt0_page1.png){width=90% height=90% alt="."}
+
+![Length comps, whole catch, REC_PC (plot 2 of 3).\label{fig:comp_lenfit_flt4mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt4mkt0_page2.png){width=90% height=90% alt="."}
+
+![Length comps, whole catch, REC_PC (plot 3 of 3).\label{fig:comp_lenfit_flt4mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt4mkt0_page3.png){width=90% height=90% alt="."}
+
+![Length comps, whole catch, REC_PC_DIS.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt5mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt5mkt0.png){width=90% height=90% alt="."}
+
+![Length comps, whole catch, REC_PR (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt6mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt6mkt0_page1.png){width=90% height=90% alt="."}
+
+![Length comps, whole catch, REC_PR (plot 2 of 3).\label{fig:comp_lenfit_flt6mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt6mkt0_page2.png){width=90% height=90% alt="."}
+
+![Length comps, whole catch, REC_PR (plot 3 of 3).\label{fig:comp_lenfit_flt6mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt6mkt0_page3.png){width=90% height=90% alt="."}
+
+![Length comps, whole catch, NWFSC_HKL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt8mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt8mkt0.png){width=90% height=90% alt="."}
+
+![Length comps, whole catch, NWFSC_TWL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt9mkt0_page1.png){width=90% height=90% alt="."}
+
+![Length comps, whole catch, NWFSC_TWL (plot 2 of 2).\label{fig:comp_lenfit_flt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt9mkt0_page2.png){width=90% height=90% alt="."}
+
+![Length comps, whole catch, CDFW_RESEARCH.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt11mkt0.png){width=90% height=90% alt="."}
+
+![Length comps, whole catch, EARLY_HKL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/SCA/FINAL_base/Verm_Southern CA Vermilion post-STAR base/plots/comp_lenfit_flt12mkt0.png){width=90% height=90% alt="."}
+
+\FloatBarrier
+
+# Appendix B. MRFSS Dockside Index of Abundance{-}
+\renewcommand{\thepage}{B\arabic{page}}
+\renewcommand{\thefigure}{B\arabic{figure}}
+\renewcommand{\thetable}{B\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
 
 
 **MRFSS Dockside CPFV Index, 1980-1999**
@@ -4645,9 +4652,17 @@ Year & Index & logSE & lower HPD & upper HPD\\
 
 ![(\#fig:fig-cpue-mrfss)Standardized index and arithmetic mean of the CPUE from the filtered data. Each timeseries is scaled to its respective means.](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/indices/vermilion_MRFSS_dockside_writeup_SCA_files/figure-latex/fig-cpue-mrfss-1.pdf) 
   
-\clearpage
  
-## California CPFV Onboard Index of Abundance {#cpfv-index}
+\newpage
+
+# Appendix C. California Onboard CPFV Index of Abundance{-}
+\renewcommand{\thepage}{C\arabic{page}}
+\renewcommand{\thefigure}{C\arabic{figure}}
+\renewcommand{\thetable}{C\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
 
 
 **California Onboard Observer Survey, 1999-2019**
@@ -4960,7 +4975,13 @@ Year & Index & logSE & lower HPD & upper HPD\\
 
 \clearpage
 
-## CRFS PR Dockside Index of Abundance {#pr-index}
+# Appendix D. CRFS PR Dockside Index of Abundance{-}
+\renewcommand{\thepage}{D\arabic{page}}
+\renewcommand{\thefigure}{D\arabic{figure}}
+\renewcommand{\thetable}{D\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 
 **CRFS Dockside Private Boat Index**
@@ -5196,7 +5217,13 @@ Year & Index & logSE & lower HPD & upper HPD\\
 
 \clearpage
 
-## NWFSC Hook-and-Line Survey Index of Abundance {#nwfschl-index}
+# Appendix E. NWFSC Hook-and-Line Survey Index of Abundance{-}
+\renewcommand{\thepage}{E\arabic{page}}
+\renewcommand{\thefigure}{E\arabic{figure}}
+\renewcommand{\thetable}{E\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 
 ### Northwest Fisheries Science Center Hook-and-Line Survey
@@ -5427,10 +5454,15 @@ Year & Mean & logSE & lower HPD & upper HPD\\
 
 \clearpage
 
-## WCGBTS Index of Abundance 
+#Appendix F. WCGBTS Index of Abundance 
+\renewcommand{\thepage}{F\arabic{page}}
+\renewcommand{\thefigure}{F\arabic{figure}}
+\renewcommand{\thetable}{F\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 
-### Northwest Fisheries Science Center West Coast Groundfish Bottom Trawl Survey
 
 In 2003, the NWFSC expanded the ongoing slope survey to include the continental 
 shelf. This survey, referred to in this document as the West Coast Groundfish 
@@ -5666,7 +5698,13 @@ ggpubr::ggarrange(pos.qq, pos.resid, ncol = 1)
 
 \clearpage
 
-## Recreational Regulations {#regs-graphic}
+# Appendix G. Recreational Regulations{-}
+\renewcommand{\thepage}{G\arabic{page}}
+\renewcommand{\thefigure}{G\arabic{figure}}
+\renewcommand{\thetable}{G\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 
 \clearpage
@@ -5708,8 +5746,8 @@ ggpubr::ggarrange(pos.qq, pos.resid, ncol = 1)
 
 
 
-# References
-       
+# References{-}
+\thispagestyle{empty}        
 
 
 

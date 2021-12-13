@@ -35,15 +35,6 @@ always_allow_html: true
 
 
 
-
-
-
-
-
-
-
-### Northwest Fisheries Science Center West Coast Groundfish Bottom Trawl Survey
-
 In 2003, the NWFSC expanded the ongoing slope survey to include the continental 
 shelf. This survey, referred to in this document as the West Coast Groundfish 
 Bottom Trawl Survey (WCGBT Survey or WCGBTS), is conducted annually. It uses a r

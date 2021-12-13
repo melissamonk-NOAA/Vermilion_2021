@@ -1,8 +1,12 @@
-\clearpage
+\newpage
 
-# Appendix
-
-## Detailed Fit to Length Composition Data{#append-fit} 
+# Appendix A. Detailed Fit to Length Composition Data{-} 
+\renewcommand{\thepage}{A\arabic{page}}
+\renewcommand{\thefigure}{A\arabic{figure}}
+\renewcommand{\thetable}{A\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 
 ```{r, results='asis'}
@@ -15,22 +19,38 @@ for (a in plot.vec){
 	lab = len_fit$label[a]
 	add_figure(filein = file.path(filein, len_fit$file[a]), 
 			   caption = cap, 
-			   label = lab)
+			   label = lab,
+			   width = 90,
+			   height = 90)
 }
 ```
 
-\clearpage
+\FloatBarrier
 
+# Appendix B. MRFSS Dockside Index of Abundance{-}
+\renewcommand{\thepage}{B\arabic{page}}
+\renewcommand{\thefigure}{B\arabic{figure}}
+\renewcommand{\thetable}{B\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
-## MRFSS Dockside Index of Abundance {#mrfss-index}
 
 ```{r mrfss-index, results = 'asis'}
  sa4ss::read_child("./indices/vermilion_MRFSS_dockside_writeup_SCA.md") 
 ```
   
-\clearpage
  
-## California CPFV Onboard Index of Abundance {#cpfv-index}
+\newpage
+
+# Appendix C. California Onboard CPFV Index of Abundance{-}
+\renewcommand{\thepage}{C\arabic{page}}
+\renewcommand{\thefigure}{C\arabic{figure}}
+\renewcommand{\thetable}{C\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
 
 ```{r ca-cpfv-onboard-index, results = 'asis'}
  sa4ss::read_child("./indices/vermilion_CA_CPFV_onboard_writeup_SCA.md") 
@@ -38,7 +58,13 @@ for (a in plot.vec){
 
 \clearpage
 
-## CRFS PR Dockside Index of Abundance {#pr-index}
+# Appendix D. CRFS PR Dockside Index of Abundance{-}
+\renewcommand{\thepage}{D\arabic{page}}
+\renewcommand{\thefigure}{D\arabic{figure}}
+\renewcommand{\thetable}{D\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 ```{r crfs-pr-index, results = 'asis'}
 sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_SCA.md")
@@ -46,7 +72,13 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_SCA.md")
 
 \clearpage
 
-## NWFSC Hook-and-Line Survey Index of Abundance {#nwfschl-index}
+# Appendix E. NWFSC Hook-and-Line Survey Index of Abundance{-}
+\renewcommand{\thepage}{E\arabic{page}}
+\renewcommand{\thefigure}{E\arabic{figure}}
+\renewcommand{\thetable}{E\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 ```{r nwfschl-index, results = 'asis'}
   sa4ss::read_child("./indices/vermilion_NWFSC_HL_writeup_SCA.md")
@@ -55,7 +87,14 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_SCA.md")
 
 \clearpage
 
-## WCGBTS Index of Abundance 
+#Appendix F. WCGBTS Index of Abundance 
+\renewcommand{\thepage}{F\arabic{page}}
+\renewcommand{\thefigure}{F\arabic{figure}}
+\renewcommand{\thetable}{F\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
 
 ```{r wcgbts-index, results = 'asis'}
   sa4ss::read_child("./indices/vermilion_WCGBTS_writeup_SCA.md")
@@ -63,7 +102,13 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_SCA.md")
 
 \clearpage
 
-## Recreational Regulations {#regs-graphic}
+# Appendix G. Recreational Regulations{-}
+\renewcommand{\thepage}{G\arabic{page}}
+\renewcommand{\thefigure}{G\arabic{figure}}
+\renewcommand{\thetable}{G\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 ```{r rec-regs, results = 'asis'}
   sa4ss::read_child("70appendices-regs.Rmd")
@@ -73,7 +118,7 @@ sa4ss::read_child("./indices/vermilion_CRFS_PR_dockside_writeup_SCA.md")
 
 
 
-# References
-       
+# References{-}
+\thispagestyle{empty}        
 
 

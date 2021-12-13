@@ -71,19 +71,16 @@
 \contentsline {section}{\numberline {6}Harvest Projections and Decision Tables}{39}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Regional Management and Spatial Management Considerations}{40}{subsection.6.1}%
 \contentsline {section}{\numberline {7}Research and Data Needs}{41}{section.7}%
-\contentsline {section}{\numberline {8}Acknowledgments}{43}{section.8}%
-\contentsline {section}{\numberline {9}Tables}{44}{section.9}%
-\contentsline {section}{\numberline {10}Figures}{81}{section.10}%
-\contentsline {section}{Appendices}{A1}{section*.174}%
-\contentsline {subsection}{\numberline {Appendix A}Detailed Fit to Length Composition Data}{A1}{subsection.10.1}%
-\contentsline {subsection}{\numberline {Appendix B}MRFSS Dockside Index of Abundance}{B1}{subsection.10.2}%
-\contentsline {subsection}{\numberline {Appendix C}California Onboard CPFV Index of Abundance}{C1}{subsection.10.3}%
-\contentsline {subsection}{\numberline {Appendix D}Deb Wilson-Vandenberg Onboard CPFV Index of Abundance}{D1}{subsection.10.4}%
-\contentsline {subsection}{\numberline {Appendix E}CRFS PR Dockside Index of Abundance}{E1}{subsection.10.5}%
-\contentsline {subsection}{\numberline {Appendix F}CCFRP Index of Abundance}{F1}{subsection.10.6}%
-\contentsline {subsection}{\numberline {Appendix G}WCGBTS Index of Abundance}{G1}{subsection.10.7}%
-\contentsline {subsubsection}{\numberline {Appendix G.1}Northwest Fisheries Science Center West Coast Groundfish Bottom Trawl Survey}{G1}{subsubsection.10.7.1}%
-\contentsline {subsection}{\numberline {Appendix H}Recreational Regulations}{H1}{subsection.10.8}%
-\contentsline {subsection}{\numberline {Appendix I}Management Boundary Analysis}{I1}{subsection.10.9}%
-\contentsline {subsection}{\numberline {Appendix J}Allocation of Yield Among Federal Management Areas}{I1}{subsection.10.10}%
-\contentsline {section}{\numberline {11}References}{I5}{section.11}%
+\contentsline {section}{Acknowledgments}{43}{section*.33}%
+\contentsline {section}{Tables}{44}{section*.34}%
+\contentsline {section}{Figures}{81}{section*.43}%
+\contentsline {section}{Appendix A. Detailed Fit to Length Composition Data}{A1}{section*.177}%
+\contentsline {section}{Appendix B. MRFSS Dockside Index of Abundance}{B1}{section*.195}%
+\contentsline {section}{Appendix C. California Onboard CPFV Index of Abundance}{C1}{section*.209}%
+\contentsline {section}{Appendix D. Deb Wilson-Vandenberg Onboard CPFV Index of Abundance}{D1}{section*.225}%
+\contentsline {section}{Appendix E. CRFS PR Dockside Index of Abundance}{E1}{section*.240}%
+\contentsline {section}{Appendix F. CCFRP Index of Abundance}{F1}{section*.254}%
+\contentsline {section}{Appendix G. WCGBTS Index of Abundance}{G1}{section*.268}%
+\contentsline {section}{Appendix H. Recreational Regulations}{H1}{section*.280}%
+\contentsline {section}{Appendix I. Management Boundary Analysis}{I1}{section*.285}%
+\contentsline {section}{References}{I5}{section*.290}%

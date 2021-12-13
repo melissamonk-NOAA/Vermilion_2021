@@ -1,5 +1,4 @@
-\clearpage
-# Figures
+# Figures{-}
 
 
 ```{r render-61, results = "asis"}

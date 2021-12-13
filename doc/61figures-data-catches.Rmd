@@ -2,13 +2,11 @@
 <!-- ******************* Data Used in the Model *************************** --> 
 <!-- ====================================================================== --> 
 
-\FloatBarrier
-
 ```{r, results = 'asis'}
 sa4ss::add_figure(
 filein = file.path(fig_loc, "assess_area.png"), 
-width = 80,
-height = 80,
+width = 70,
+height = 70,
 caption = "Map of the assssment area with the 3 nm California state water boundary.  The northern California model includes areas from Point Conception to the California-Oregon border and the southern California assessment includes areas from Point Concpetion to the USA-Mexico border. The boundary at Cape Mendocino is a Pacific Fishery Management Council boundary for management of the stock complex, provided for reference",
 label = 'assess-area')
 ```	
