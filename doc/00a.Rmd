@@ -158,5 +158,6 @@ fleet_info = data.frame(cbind(model$fleet_ID, model$FleetNames, model$FleetNames
 colnames(fleet_info) = c("fleet_ID", "FleetNames", "FleetNames_label", "FleetNames_parsed", "FleetType")
 fleet_info$fleet_ID = as.numeric(fleet_info$fleet_ID)
 
-plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
+plot_info = read.csv(file.path(base_loc, "plots", "plotinfotable_for_doc.csv"))  #Did I rename this by hand??
+plot_info$label <- gsub("\\..*","",plot_info$file)
 ```

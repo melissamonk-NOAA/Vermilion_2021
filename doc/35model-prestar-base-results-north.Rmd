@@ -17,6 +17,43 @@ estimated_pars <- model$parameters %>%
   rownames()
 ```
 
+
+```{r, warning = FALSE, inclue = FALSE}
+mod_params = model$parameters[-c(grep('Impl',model$parameters$Label),
+							     grep('Fore',model$parameters$Label)),
+                                (names(model$parameters) %in%
+                                c("Num","Label","Value","Phase","Min",
+                                  "Max","Status","Parm_StDev",
+                                  "Pr_type","Prior","Pr_SD"))] 
+mod_params[,'Value'] = round(as.numeric(mod_params[,'Value']),3)                                 
+# Combine bounds into one column
+mod_params$Min = paste('(', mod_params$Min, ', ', mod_params$Max, ')', sep='')
+# Combine prior info to one column
+mod_params$PR_type = ifelse(mod_params$Pr_type == 'No_prior' , 'None', paste(mod_params$Pr_type,' (', mod_params$Prior,  ', ', mod_params$Pr_SD, ')', sep = ''))
+# Set long value to scientific notation
+mod_params[mod_params$Label == "Wtlen_1_Fem",3] = format(mod_params[mod_params$Label == "Wtlen_1_Fem",3], scientific = TRUE)
+mod_params[mod_params$Label == "Wtlen_1_Mal",3] = format(as.numeric(mod_params[mod_params$Label == "Wtlen_1_Mal",3]), scientific = TRUE)
+mod_params[mod_params$Label == "Eggs_scalar_Fem",3] = format(as.numeric(mod_params[mod_params$Label == "Eggs_scalar_Fem",3]), scientific = TRUE)
+mod_params[mod_params$Label == "L_at_Amax_Mal_GP_1",3] = round(as.numeric(mod_params[mod_params$Label == "L_at_Amax_Mal_GP_1",3]), 4)
+mod_params[mod_params$Label == "VonBert_K_Mal_GP_1",3] = round(as.numeric(mod_params[mod_params$Label == "VonBert_K_Mal_GP_1",3]), 3)
+mod_params[mod_params$Label == "CV_old_Mal_GP_1",3] = round(as.numeric(mod_params[mod_params$Label == "CV_old_Mal_GP_1",3]), 3)
+# Remove the max, prior and prior sd columns
+drops = c('Max', 'Prior', 'Pr_type', 'Pr_SD', 'Num')
+mod_params = mod_params[, !(names(mod_params) %in% drops)]
+rownames(mod_params) = c()
+mod_params[,"Label"] = gsub("\\_", " ", mod_params[,"Label"])
+mod_params[,"PR_type"] = gsub("\\_", " ", mod_params[,"PR_type"])
+# Add column names
+colnames(mod_params) = c('Parameter',
+                         'Value',
+                         'Phase',
+                         'Bounds',
+                         'Status',
+                         'SD',
+                         'Prior (Exp.Val, SD)')
+```
+
+
 The base model has a total of `r length(estimated_pars)` estimated parameters
 (Table \@ref(tab:paramstable)) that are described in more detail in the following sections:
 
@@ -67,6 +104,7 @@ Males $L_{\infty}$ = `r round(male_growth[1])` cm; $k$ = `r round(male_growth[3]
 
 The northern California model directly estimated male growth and natural mortality (*M*) parameters due to the above-mentioned issue with estimation of CVs for length at age 30 
 when using the offset parameterization. Female natural mortality was estimated at `r round(mod_params[1,2],2)` (SE = `r round(mod_params[1,6,],4)`) and male natural mortality was estimated at `r round(mod_params[13,2],2)` (SE = `r round(mod_params[13,6,],4)`), which the STAT considered reasonable given that observed maximum ages for both sexes are similar. Latitudinal gradients in natural mortality have been estimated for many species of rockfish, which is consistent with the higher estimates of $M$ in the southern model.
+
 
  
 

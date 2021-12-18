@@ -27,7 +27,7 @@ label = 'selex-length-all')
 
 <!--time varying selectivity-->
 ```{r, results ='asis'}
-plot_info = read.csv(file.path(base_loc,"plots", "plotinfotable_for_doc.csv"))
+#plot_info = read.csv(file.path(base_loc,"plots", "plotinfotable_for_doc.csv"))
 selex_time = plot_info %>%
   filter(grepl("sel03_len_timevary_surf", label)) %>%
   filter(grepl("sex1", label))

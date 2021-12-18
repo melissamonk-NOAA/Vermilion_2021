@@ -11,7 +11,7 @@
 \contentsline {subsection}{Management Performance}{xii}{section*.24}%
 \contentsline {subsection}{Unresolved Problems and Major Uncertainties}{xiv}{section*.28}%
 \contentsline {subsection}{Decision Table and Forecasts}{xiv}{section*.29}%
-\contentsline {subsection}{Research and Data Needs}{xviii}{section*.32}%
+\contentsline {subsection}{Research and Data Needs}{xvii}{section*.32}%
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Basic Information and Life History}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Map}{3}{subsection.1.2}%
@@ -83,4 +83,5 @@
 \contentsline {section}{Appendix G. WCGBTS Index of Abundance}{G1}{section*.268}%
 \contentsline {section}{Appendix H. Recreational Regulations}{H1}{section*.280}%
 \contentsline {section}{Appendix I. Management Boundary Analysis}{I1}{section*.285}%
-\contentsline {section}{References}{I5}{section*.290}%
+\contentsline {section}{Appendix J. Decision Table Assuming Category 2}{J1}{section*.290}%
+\contentsline {section}{References}{J3}{section*.292}%

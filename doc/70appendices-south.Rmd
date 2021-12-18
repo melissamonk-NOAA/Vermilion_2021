@@ -10,7 +10,7 @@
 
 
 ```{r, results='asis'}
-plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
+#plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
 len_fit = plot_info[which(plot_info$category == "LenComp"), ]
 plot.vec = grep("comp_lenfit_flt", len_fit$label)
 filein = file.path(mod_loc, "plots")

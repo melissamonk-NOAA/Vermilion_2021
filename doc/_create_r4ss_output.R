@@ -7,6 +7,7 @@ library(sa4ss)
 
 setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/")
 source("code/dir_recent.R")
+
 #setwd("C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc")
 
 
@@ -65,10 +66,11 @@ model.dir <- dir_recent(dir = dir.path[1], pattern = "Verm")
 base_loc <- paste0(model.dir)
 setwd(base_loc)
 
-#Create a model Rdata object if it hasn't been done
+#C5reate a model Rdata object if it hasn't been done
+#need to move 00mod.RData from working directory to the doc
 sa4ss::read_model(
   mod_loc = base_loc,
-  create_plots = TRUE, 
+  create_plots = FALSE, 
   save_loc = file.path(base_loc, "tex_tables"),
   verbose = TRUE)
 

@@ -11,7 +11,7 @@
 
 
 ```{r, results='asis'}
-plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
+#plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
 len_fit = plot_info[which(plot_info$category == "LenComp"), ]
 plot.vec = grep("comp_lenfit_flt", len_fit$label)
 filein = file.path(mod_loc, "plots")
@@ -142,6 +142,112 @@ sa4ss::read_child("70appendices-regs.Rmd")
 ```{r mngmnt-split, results = 'asis'}
 sa4ss::read_child("./indices/Vermilion_PR_management_split_writeup_NCA.md")
 ``` 
+
+\newpage 
+
+# Appendix J. Decision Table Assuming Category 2{-}
+\renewcommand{\thepage}{J\arabic{page}}
+\renewcommand{\thefigure}{J\arabic{figure}}
+\renewcommand{\thetable}{J\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
+Uncertainty in the forecasts is based upon the three states of nature agreed upon 
+at the STAR panel, reflecting three different natural mortality rates. The steepness 
+parameter of the Beverton-Holt stock-recruit curve was fixed in the base model
+and in all of the forecasts.  The northern California model is not data rich and 
+while there is uncertainty in steepness, it was not well estimated in the base 
+model when natural mortality was also estimated. The alternative states of nature 
+maintain the 
+female to male natural mortality rate ratio from  the base model. To capture the 
+$75\%$ interval around the negative log-likelihood, alternate states were identified 
+within 0.66 negative log-likelihood points from the base model where female 
+$M$ = 0.0856 and male $M$ = 0.0805.
+The high state of nature fixes female $M$ = 0.0956 and male $M$ = 0.08989. 
+For the low state of nature, female $M$ = 0.0769 and male $M$ = 0.07231.
+
+For reference, the base model predicted $\sigma$ = 0.246. The buffers between the 
+OFL and ABC  were calculated assuming a category 2 stock, with  $\sigma$ = 1.0 
+and a $p^*$ = 0.45. The alternative catch stream (rows in the table) include $\sigma$ = 1.0
+with a $p^*$ = 0.4 for a category 2 stock.  
+
+Current forecasts based on the alternative states of nature and requested catch 
+streams project that the stock will remain above the target threshold of 40% in 
+2032 (Table \@ref(tab:DecisionEScat2)).  In all of the scenarios of the low state 
+of nature, the stock remains below the 
+target threshold of $40\%$ until 2026 or 2027.
+The base model with the base catches results in an increasing stock over the period 
+from 
+2023-2032. In all scenarios the catch significantly decreases from 2022 to 2023; 
+projected catch in 2022 is 227 mt, and 2023 catches from the base 
+model range from 118-139 mt.  The base model includes a portion of the stock within 
+the northern management unit (north of \CapeM).  An analysis based on the private/rental 
+mode index through 2019 suggests 
+that $4.44\%$ of the catches from this model should be apportioned to the northern 
+management unit for vermilion rockfish.
+
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+decisiontable.filein = list.files(path = table_loc, 
+                  pattern = glob2rx(paste0("VRML_decision_table_", model.area, "_cat2.xlsx")), 
+                  full.names = TRUE)
+decisiontable_cat2 <- readxl::read_xlsx(decisiontable.filein) %>%
+   mutate(across(grep("Spawning", .), round, 0)) %>%
+   mutate(across(grep("Catch", .), round, 1)) %>%
+   mutate(across(grep("Fraction", .), round, 3))
+```
+
+
+
+```{r, results = 'asis'}
+kableExtra::kbl(decisiontable_cat2, 
+                col.names = c(" ","Year",
+                              "Buffer",
+                              "Catch (mt)",
+                              "Spawning Output", "Fraction Unfished",
+                              "Spawning Output", "Fraction Unfished",
+                              "Spawning Output", "Fraction Unfished"),
+                caption = "Decision table summarizing 12-year projections 
+                (2021 to 2032) for vermilion rockfish based on three alternative 
+                states of nature spanning quantiles of spawning output in 
+                2021.  Columns range over low, medium, and high state of 
+                nature, and rows range over different assumptions of total 
+                catch levels corresponding to the forecast catches from 
+                each state of nature.  Catches in 2021 and 2022 are fixed 
+                at catches provided by the CDFW.",
+                booktabs=TRUE,
+                label="DecisionEScat2",
+                digits = c(0,0,3,0,0,3,0,3,0,3),
+                align = "c",
+                escape = FALSE,
+                linesep = "") %>%
+  kable_styling(latex_options = c("scale_down")) %>%
+  add_header_above(c(" " = 4,
+                     "NLL = 1031.36" = 2,
+                     "NLL = 1030.7" = 2,
+                     "NLL = 1031.36" = 2)) %>%
+  add_header_above(c(" " = 4,
+                     "Male M = 0.0723" = 2, 
+                     "Male M = 0.0805" = 2,
+                     "Male M = 0.0899" = 2), line = F) %>%
+  add_header_above(c(" " = 4,
+                     "Female M = 0.0769" = 2, 
+                     "Female M = 0.0856" = 2,
+                     "Female M = 0.0956" = 2), line = F) %>%
+  add_header_above(c(" " = 4, 
+                     "Low Productivity" = 2, 
+                     "Base Model" = 2, 
+                     "High Productivity" = 2)) %>%
+  column_spec(1, width = "1in") %>%
+  column_spec(c(2:4), border_left = T) %>%
+  column_spec(c(5,7,9), width = ".8in", border_left = T) %>%
+  column_spec(c(6,8,10), width = ".8in") %>%
+  collapse_rows(columns = 1, valign = "middle", latex_hline = "major") 
+```
+
+
+
 
 \clearpage
 # References{-}

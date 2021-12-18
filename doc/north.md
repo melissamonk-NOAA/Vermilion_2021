@@ -1,6 +1,6 @@
 ---
 geometry: margin=1in
-month: "August"
+month: "December"
 year: "2021"
 params:
     model: "north"
@@ -96,7 +96,7 @@ bibliography:
 <!--chapter:end:00bibliography.Rmd-->
 
 ---
-title: DRAFT The status of Vermilion Rockfish (_Sebastes miniatus_) and Sunset Rockfish (_Sebastes crocotulus_) in U.S. waters off the coast of California north of Point Conception in 2021
+title: The status of Vermilion Rockfish (_Sebastes miniatus_) and Sunset Rockfish (_Sebastes crocotulus_) in U.S. waters off the coast of California north of Point Conception in 2021
 ---
 
 <!--chapter:end:00titlenorth.Rmd-->
@@ -172,7 +172,7 @@ for the majority of total mortality.
               Recreational party/charter retained = REC_PC, Recreational 
               private/rental retained = REC_PR, Recreational party/charter 
               dead discards = REC_PC_DIS, Recreational private/rental dead 
-              discards = REC_PR_DIS).\label{fig:catchES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/catch2 landings stacked.png){width=100% height=100% alt="."}
+              discards = REC_PR_DIS).\label{fig:catchES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/catch2 landings stacked.png){width=100% height=100% alt="."}
 
 
 
@@ -266,11 +266,11 @@ in 2021 is just above the management target (40% of unfished spawning output).
 
 <!--BEGIN  EXECUTIVE SUMMARY SPAWNING BIOMASS AND DEPLETE TABLES AND FIGURES-->
 
-![Estimated time series of spawning output (solid line with circles) with approximate 95% asymptotic confidence intervals (dashed lines).\label{fig:ssbES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png){width=100% height=100% alt="."}
+![Estimated time series of spawning output (solid line with circles) with approximate 95% asymptotic confidence intervals (dashed lines).\label{fig:ssbES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png){width=100% height=100% alt="."}
 
 
 
-![Estimated time series of spawning output relative to unfished spawning output (solid line with circles) with approximate 95% asymptotic confidence intervals (dashed lines).\label{fig:deplES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/ts9_Relative_spawning_output_intervals.png){width=100% height=100% alt="."}
+![Estimated time series of spawning output relative to unfished spawning output (solid line with circles) with approximate 95% asymptotic confidence intervals (dashed lines).\label{fig:deplES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/ts9_Relative_spawning_output_intervals.png){width=100% height=100% alt="."}
 
 \begin{table}[H]
 
@@ -315,7 +315,7 @@ than the estimated 2016 recruitment.
 
 
 
-![Age-0 recruits (1,000s) with approximate 95% asymptotic confidence intervals.\label{fig:recruitsES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png){width=100% height=100% alt="."}
+![Age-0 recruits (1,000s) with approximate 95% asymptotic confidence intervals.\label{fig:recruitsES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png){width=100% height=100% alt="."}
 
 
 
@@ -386,20 +386,20 @@ Year & Estimate & Lower Interval & Upper Interval & Estimate & Lower Interval & 
 \end{table}
 
 
-![Timeseries of relative fishing intensity ($\frac{1-SPR}{1-SPR_{50\%}}$ where SPR is the spawning potential ratio) with approximate 95% asymptotic confidence intervals (dashed lines).\label{fig:1-sprES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/SPR3_ratiointerval.png){width=100% height=100% alt="."}
+![Timeseries of relative fishing intensity ($\frac{1-SPR}{1-SPR_{50\%}}$ where SPR is the spawning potential ratio) with approximate 95% asymptotic confidence intervals (dashed lines).\label{fig:1-sprES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/SPR3_ratiointerval.png){width=100% height=100% alt="."}
 
 
 
-![Time-series of estimated summary harvest rate (total catch divided by age-4 and older biomass) for the base case model with approximate 95% asymptotic confidence intervals (vertical lines).\label{fig:FmortalityES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/ts_summaryF.png){width=100% height=100% alt="."}
+![Time-series of estimated summary harvest rate (total catch divided by age-4 and older biomass) for the base case model with approximate 95% asymptotic confidence intervals (vertical lines).\label{fig:FmortalityES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/ts_summaryF.png){width=100% height=100% alt="."}
 
 
 
-![Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point (representing 2020) show the 95% intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95% region which accounts for the estimated correlations between the biomass ratio and SPR ratio. Fishing intensity in 2020 was reduced to due the pandemic.\label{fig:phaseES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/SPR4_phase.png){width=100% height=100% alt="."}
+![Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point (representing 2020) show the 95% intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95% region which accounts for the estimated correlations between the biomass ratio and SPR ratio. Fishing intensity in 2020 was reduced to due the pandemic.\label{fig:phaseES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/SPR4_phase.png){width=100% height=100% alt="."}
 
 
 
 ![Equilibrium yield curve for the base case model with management quantities. Values are based on the 2020
-fishery selectivities.\label{fig:yield2ES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/yield2_yield_curve_with_refpoints.png){width=100% height=100% alt="."}
+fishery selectivities.\label{fig:yield2ES}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/yield2_yield_curve_with_refpoints.png){width=100% height=100% alt="."}
 
 
 \FloatBarrier
@@ -604,16 +604,16 @@ Fraction Unfished (2021) & 0.48 & 0.43 &  &  &  & 0.73 & 0.56 & \\
 \midrule
 GMT Projected Catch, 2021 (mt) & 210.30 & 226.77 & 216.79 & 427.09 & 9.98 & 12.96 & 2.69 & 25.63\\
 GMT Projected Catch, 2022 (mt) & 210.30 & 226.77 & 216.79 & 427.09 & 9.98 & 12.96 & 3.26 & 26.20\\
-OFL 2023 (mt) & 159.36 & 154.23 & 147.44 & 306.80 & 6.79 & 13.48 & 0.71 & 20.97\\
-OFL 2024 (mt) & 158.81 & 157.80 & 150.86 & 309.67 & 6.94 & 13.38 & 0.71 & 21.03\\
-OFL 2025 (mt) & 158.80 & 159.49 & 152.47 & 311.27 & 7.02 & 13.16 & 0.71 & 20.89\\
-OFL 2026 (mt) & 159.01 & 159.86 & 152.82 & 311.83 & 7.03 & 12.89 & 0.72 & 20.64\\
-OFL 2027 (mt) & 159.28 & 159.44 & 152.43 & 311.71 & 7.02 & 12.60 & 0.73 & 20.34\\
-OFL 2028 (mt) & 159.58 & 158.66 & 151.68 & 311.26 & 6.98 & 12.31 & 0.74 & 20.03\\
-OFL 2029 (mt) & 159.90 & 157.79 & 150.85 & 310.75 & 6.94 & 12.03 & 0.75 & 19.72\\
-OFL 2030 (mt) & 160.25 & 156.98 & 150.08 & 310.33 & 6.91 & 11.76 & 0.76 & 19.42\\
-OFL 2031 (mt) & 160.64 & 156.33 & 149.45 & 310.09 & 6.88 & 11.51 & 0.77 & 19.15\\
-OFL 2032 (mt) & 161.06 & 155.87 & 149.01 & 310.07 & 6.86 & 11.27 & 0.78 & 18.91\\
+OFL 2023 (mt) & 159.36 & 154.24 & 147.45 & 306.82 & 6.79 & 13.48 & 0.71 & 20.97\\
+OFL 2024 (mt) & 158.81 & 157.36 & 150.44 & 309.25 & 6.92 & 13.38 & 0.71 & 21.01\\
+OFL 2025 (mt) & 158.80 & 158.58 & 151.60 & 310.40 & 6.98 & 13.16 & 0.71 & 20.85\\
+OFL 2026 (mt) & 159.01 & 158.48 & 151.50 & 310.52 & 6.97 & 12.89 & 0.72 & 20.58\\
+OFL 2027 (mt) & 159.28 & 157.61 & 150.67 & 309.96 & 6.93 & 12.60 & 0.73 & 20.26\\
+OFL 2028 (mt) & 159.58 & 156.40 & 149.52 & 309.09 & 6.88 & 12.31 & 0.74 & 19.93\\
+OFL 2029 (mt) & 159.90 & 155.12 & 148.29 & 308.19 & 6.83 & 12.03 & 0.75 & 19.60\\
+OFL 2030 (mt) & 160.25 & 153.92 & 147.15 & 307.40 & 6.77 & 11.76 & 0.76 & 19.29\\
+OFL 2031 (mt) & 160.64 & 152.91 & 146.18 & 306.82 & 6.73 & 11.51 & 0.77 & 19.00\\
+OFL 2032 (mt) & 161.06 & 152.08 & 145.39 & 306.45 & 6.69 & 11.27 & 0.78 & 18.74\\
 \bottomrule
 \end{tabular}}
 \end{table}
@@ -653,9 +653,9 @@ $M$ = 0.0856 and male $M$ = 0.0805.
 The high state of nature fixes female $M$ = 0.0956 and male $M$ = 0.08989. 
 For the low state of nature, female $M$ = 0.0769 and male $M$ = 0.07231.
 
-For reference, the base model predicted $\sigma$ = 0.246. The buffers between the OFL and ABC  were calculated assuming a category 2 stock, with  $\sigma$ = 1.0 
-and a $p^*$ = 0.45. Alternative catch streams (rows in the table) include $\sigma$ = 1.0 
-with a $p^*$ = 0.4, and removals of long-term equilibrium catch with and without a buffer assuming $\sigma$ = 1.0 with a $p^*$ = 0.45. The buffer multiplier with $p^*$ = 0.45 ranges from 0.874 in 2023 ramping to 0.803 in 2032. 
+For reference, the base model predicted $\sigma$ = 0.246. The buffers between the OFL and ABC  were calculated assuming a category 1 stock, with  $\sigma$ = 0.5 
+and a $p^*$ = 0.45. The alternative catch stream (rows in the table) include $\sigma$ = 0.5 
+with a $p^*$ = 0.4 for a category 1 stock.  Additional runs assuming a category 2 stock, conducted prior to the decision of a category 1 designation are in an appendix.
 
 Current forecasts based on the alternative states of nature and requested catch streams project that the stock will remain above the target threshold of 40% in 2032 (Table \@ref(tab:DecisionES)).  In all of the scenarios of the low state of nature, the stock remains below the 
 target threshold of 40% until 2026 or 2027.
@@ -667,7 +667,7 @@ mode index through 2019 suggests
 that 4.44% of the catches from this model should be apportioned to the northern 
 management unit for vermilion rockfish.
 
-The STAT cautions that the GMT projections for catches in 2021-2022 (22 mt per year) exceed the maximum sustainable yield according to both proxies ($B_{40\%}$ and $SPR_{50\%}$) as well as the MSY value based on the estimated value of steepness (Table \@ref(tab:referenceES)). The northern California stock is just above target biomass in 2021 (43% of unfished spawning ouptut), so these catch levels are unlikely to result in significant stock declines over a short period of time. However, similar catch levels would exceed the overfishing limits (OFL) if carried forward for 2023 and beyond (Table \@ref(tab:CombinedRefPtsES)), and would be unsustainable in the long term. Given recent and projected near-term exploitation levels, and especially if vermilion and sunset rockfish continue to be managed as part of the minor shelf rockfish complex, the STAT recommends regular monitoring of total mortality for these two species to avoid excessive stock depletion and potential loss of yield.
+The STAT cautions that the GMT projections for catches in 2021-2022 (227 mt per year) exceed the maximum sustainable yield according to both proxies ($B_{40\%}$ and $SPR_{50\%}$) as well as the MSY value based on the estimated value of steepness (Table \@ref(tab:referenceES)). The northern California stock is just above target biomass in 2021 (43% of unfished spawning ouptut), so these catch levels are unlikely to result in significant stock declines over a short period of time. However, similar catch levels would exceed the overfishing limits (OFL) if carried forward for 2023 and beyond (Table \@ref(tab:CombinedRefPtsES)), and would be unsustainable in the long term. Given recent and projected near-term exploitation levels, and especially if vermilion and sunset rockfish continue to be managed as part of the minor shelf rockfish complex, the STAT recommends regular monitoring of total mortality for these two species to avoid excessive stock depletion and potential loss of yield. During the November 2021 Council meeting, additional projections with alternate catch assumptions for 2022 were conducted and provided for consideration.
 
 
 
@@ -686,18 +686,18 @@ The STAT cautions that the GMT projections for catches in 2021-2022 (22 mt per y
 \toprule
 Year & Predicted OFL & ABC Catch & Age 4+ Biomass & Spawning Output & Fraction Unfished\\
 \midrule
-\cellcolor{gray!6}{2021} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{3459.01} & \cellcolor{gray!6}{489.439} & \cellcolor{gray!6}{0.4273}\\
-2022 &  &  & 3459.01 & 490.953 & 0.4287\\
-\cellcolor{gray!6}{2023} & \cellcolor{gray!6}{154.226} & \cellcolor{gray!6}{134.794} & \cellcolor{gray!6}{3436.65} & \cellcolor{gray!6}{497.064} & \cellcolor{gray!6}{0.4340}\\
-2024 & 157.800 & 136.497 & 3489.40 & 516.147 & 0.4507\\
-\cellcolor{gray!6}{2025} & \cellcolor{gray!6}{159.485} & \cellcolor{gray!6}{136.679} & \cellcolor{gray!6}{3524.92} & \cellcolor{gray!6}{533.183} & \cellcolor{gray!6}{0.4655}\\
-2026 & 159.856 & 135.718 & 3547.19 & 547.117 & 0.4777\\
-\cellcolor{gray!6}{2027} & \cellcolor{gray!6}{159.445} & \cellcolor{gray!6}{134.093} & \cellcolor{gray!6}{3560.05} & \cellcolor{gray!6}{557.979} & \cellcolor{gray!6}{0.4872}\\
-2028 & 158.663 & 132.167 & 3567.12 & 566.209 & 0.4944\\
-\cellcolor{gray!6}{2029} & \cellcolor{gray!6}{157.790} & \cellcolor{gray!6}{130.334} & \cellcolor{gray!6}{3570.85} & \cellcolor{gray!6}{572.335} & \cellcolor{gray!6}{0.4997}\\
-2030 & 156.983 & 128.412 & 3572.83 & 576.840 & 0.5037\\
-\cellcolor{gray!6}{2031} & \cellcolor{gray!6}{156.332} & \cellcolor{gray!6}{126.629} & \cellcolor{gray!6}{3574.39} & \cellcolor{gray!6}{580.187} & \cellcolor{gray!6}{0.5066}\\
-2032 & 155.866 & 125.160 & 3576.26 & 582.729 & 0.5088\\
+\cellcolor{gray!6}{2021} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{3459.01} & \cellcolor{gray!6}{489} & \cellcolor{gray!6}{0.427}\\
+2022 &  &  & 3459.21 & 491 & 0.429\\
+\cellcolor{gray!6}{2023} & \cellcolor{gray!6}{154.2} & \cellcolor{gray!6}{144} & \cellcolor{gray!6}{3436.92} & \cellcolor{gray!6}{497} & \cellcolor{gray!6}{0.434}\\
+2024 & 157.4 & 146 & 3480.14 & 515 & 0.450\\
+\cellcolor{gray!6}{2025} & \cellcolor{gray!6}{158.6} & \cellcolor{gray!6}{147} & \cellcolor{gray!6}{3505.64} & \cellcolor{gray!6}{530} & \cellcolor{gray!6}{0.463}\\
+2026 & 158.5 & 146 & 3517.70 & 542 & 0.474\\
+\cellcolor{gray!6}{2027} & \cellcolor{gray!6}{157.6} & \cellcolor{gray!6}{145} & \cellcolor{gray!6}{3520.37} & \cellcolor{gray!6}{552} & \cellcolor{gray!6}{0.482}\\
+2028 & 156.4 & 143 & 3517.50 & 558 & 0.487\\
+\cellcolor{gray!6}{2029} & \cellcolor{gray!6}{155.1} & \cellcolor{gray!6}{141} & \cellcolor{gray!6}{3511.45} & \cellcolor{gray!6}{562} & \cellcolor{gray!6}{0.491}\\
+2030 & 153.9 & 139 & 3503.96 & 565 & 0.493\\
+\cellcolor{gray!6}{2031} & \cellcolor{gray!6}{152.9} & \cellcolor{gray!6}{138} & \cellcolor{gray!6}{3496.35} & \cellcolor{gray!6}{566} & \cellcolor{gray!6}{0.494}\\
+2032 & 152.1 & 136 & 3489.16 & 567 & 0.495\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -736,97 +736,49 @@ Year & Predicted OFL & ABC Catch & Age 4+ Biomass & Spawning Output & Fraction U
 
  & 2022 & 1.000 & 227 & 435 & 0.361 & 491 & 0.429 & 558 & 0.510\\
 
- & 2023 & 0.874 & 135 & 438 & 0.363 & 497 & 0.434 & 568 & 0.519\\
+ & 2023 & 0.935 & 144 & 438 & 0.363 & 497 & 0.434 & 568 & 0.519\\
 
- & 2024 & 0.865 & 136 & 453 & 0.376 & 516 & 0.451 & 591 & 0.540\\
+ & 2024 & 0.930 & 146 & 452 & 0.375 & 515 & 0.450 & 589 & 0.539\\
 
- & 2025 & 0.857 & 137 & 467 & 0.387 & 533 & 0.466 & 612 & 0.559\\
+ & 2025 & 0.926 & 147 & 464 & 0.385 & 530 & 0.463 & 608 & 0.556\\
 
- & 2026 & 0.849 & 136 & 477 & 0.396 & 547 & 0.478 & 629 & 0.575\\
+ & 2026 & 0.922 & 146 & 474 & 0.393 & 542 & 0.474 & 623 & 0.569\\
 
- & 2027 & 0.841 & 134 & 485 & 0.402 & 558 & 0.487 & 642 & 0.587\\
+ & 2027 & 0.917 & 145 & 480 & 0.398 & 552 & 0.482 & 634 & 0.579\\
 
- & 2028 & 0.833 & 132 & 491 & 0.407 & 566 & 0.494 & 652 & 0.595\\
+ & 2028 & 0.913 & 143 & 485 & 0.402 & 558 & 0.487 & 641 & 0.586\\
 
- & 2029 & 0.826 & 130 & 496 & 0.411 & 572 & 0.500 & 658 & 0.602\\
+ & 2029 & 0.909 & 141 & 488 & 0.405 & 562 & 0.491 & 646 & 0.590\\
 
- & 2030 & 0.818 & 128 & 499 & 0.414 & 577 & 0.504 & 663 & 0.606\\
+ & 2030 & 0.904 & 139 & 490 & 0.407 & 565 & 0.493 & 648 & 0.592\\
 
- & 2031 & 0.810 & 127 & 502 & 0.416 & 580 & 0.507 & 666 & 0.608\\
+ & 2031 & 0.900 & 138 & 492 & 0.408 & 566 & 0.494 & 649 & 0.593\\
 
-\multirow{-12}{1in}{\centering\arraybackslash $p^\ast = 0.45,  \sigma = 1$} & 2032 & 0.803 & 125 & 505 & 0.418 & 583 & 0.509 & 667 & 0.610\\
+\multirow{-12}{1in}{\centering\arraybackslash $p^\ast = 0.45,  \sigma = 0.5$} & 2032 & 0.896 & 136 & 493 & 0.409 & 567 & 0.495 & 648 & 0.592\\
 \cmidrule{1-10}
  & 2021 & 1.000 & 227 & 437 & 0.362 & 489 & 0.427 & 554 & 0.506\\
 
  & 2022 & 1.000 & 227 & 435 & 0.361 & 491 & 0.429 & 558 & 0.510\\
 
- & 2023 & 0.762 & 118 & 438 & 0.363 & 497 & 0.434 & 568 & 0.519\\
+ & 2023 & 0.873 & 135 & 438 & 0.363 & 497 & 0.434 & 568 & 0.519\\
 
- & 2024 & 0.747 & 118 & 456 & 0.378 & 519 & 0.453 & 593 & 0.542\\
+ & 2024 & 0.864 & 136 & 453 & 0.376 & 516 & 0.451 & 591 & 0.540\\
 
- & 2025 & 0.733 & 118 & 472 & 0.392 & 539 & 0.470 & 616 & 0.563\\
+ & 2025 & 0.856 & 137 & 467 & 0.387 & 533 & 0.466 & 612 & 0.559\\
 
- & 2026 & 0.719 & 117 & 487 & 0.404 & 556 & 0.485 & 636 & 0.581\\
+ & 2026 & 0.848 & 136 & 477 & 0.396 & 547 & 0.478 & 629 & 0.575\\
 
- & 2027 & 0.706 & 115 & 499 & 0.414 & 570 & 0.498 & 652 & 0.595\\
+ & 2027 & 0.840 & 134 & 485 & 0.402 & 558 & 0.487 & 642 & 0.587\\
 
- & 2028 & 0.693 & 113 & 509 & 0.422 & 581 & 0.508 & 664 & 0.607\\
+ & 2028 & 0.832 & 132 & 491 & 0.407 & 566 & 0.495 & 652 & 0.595\\
 
- & 2029 & 0.680 & 111 & 518 & 0.429 & 591 & 0.516 & 674 & 0.615\\
+ & 2029 & 0.824 & 130 & 496 & 0.411 & 572 & 0.500 & 658 & 0.602\\
 
- & 2030 & 0.667 & 108 & 525 & 0.436 & 599 & 0.523 & 681 & 0.622\\
+ & 2030 & 0.817 & 128 & 499 & 0.414 & 577 & 0.504 & 663 & 0.606\\
 
- & 2031 & 0.654 & 106 & 533 & 0.442 & 606 & 0.529 & 686 & 0.627\\
+ & 2031 & 0.809 & 127 & 502 & 0.416 & 580 & 0.507 & 666 & 0.608\\
 
-\multirow{-12}{1in}{\centering\arraybackslash $p^\ast = 0.40,  \sigma = 1$} & 2032 & 0.642 & 105 & 539 & 0.447 & 612 & 0.534 & 691 & 0.631\\
-\cmidrule{1-10}
- & 2021 & 1.000 & 227 & 437 & 0.362 & 489 & 0.427 & 554 & 0.506\\
-
- & 2022 & 1.000 & 227 & 435 & 0.361 & 491 & 0.429 & 558 & 0.510\\
-
- & 2023 & 1.000 & 139 & 438 & 0.363 & 497 & 0.434 & 568 & 0.519\\
-
- & 2024 & 1.000 & 139 & 453 & 0.376 & 516 & 0.451 & 590 & 0.539\\
-
- & 2025 & 1.000 & 139 & 467 & 0.387 & 533 & 0.465 & 610 & 0.558\\
-
- & 2026 & 1.000 & 139 & 477 & 0.396 & 546 & 0.477 & 627 & 0.573\\
-
- & 2027 & 1.000 & 139 & 485 & 0.402 & 557 & 0.486 & 639 & 0.584\\
-
- & 2028 & 1.000 & 139 & 491 & 0.407 & 564 & 0.493 & 647 & 0.591\\
-
- & 2029 & 1.000 & 139 & 495 & 0.410 & 569 & 0.497 & 652 & 0.596\\
-
- & 2030 & 1.000 & 139 & 497 & 0.412 & 572 & 0.499 & 654 & 0.598\\
-
- & 2031 & 1.000 & 139 & 98 & 0.413 & 573 & 0.500 & 655 & 0.598\\
-
-\multirow{-12}{1in}{\centering\arraybackslash Long-term Equil. Yield (MSY proxy, $SPR_{50\%}$), no buffer} & 2032 & 1.000 & 139 & 499 & 0.414 & 573 & 0.501 & 654 & 0.597\\
-\cmidrule{1-10}
- & 2021 & 1.000 & 227 & 437 & 0.362 & 489 & 0.427 & 554 & 0.506\\
-
- & 2022 & 1.000 & 227 & 435 & 0.361 & 491 & 0.429 & 558 & 0.510\\
-
- & 2023 & 0.874 & 122 & 438 & 0.363 & 497 & 0.434 & 568 & 0.519\\
-
- & 2024 & 0.865 & 120 & 456 & 0.378 & 518 & 0.453 & 593 & 0.542\\
-
- & 2025 & 0.857 & 119 & 472 & 0.392 & 538 & 0.470 & 616 & 0.563\\
-
- & 2026 & 0.849 & 118 & 486 & 0.403 & 555 & 0.485 & 635 & 0.580\\
-
- & 2027 & 0.841 & 117 & 498 & 0.413 & 569 & 0.497 & 651 & 0.595\\
-
- & 2028 & 0.833 & 116 & 508 & 0.421 & 580 & 0.507 & 663 & 0.606\\
-
- & 2029 & 0.826 & 116 & 516 & 0.428 & 589 & 0.515 & 672 & 0.614\\
-
- & 2030 & 0.818 & 115 & 522 & 0.433 & 596 & 0.521 & 678 & 0.620\\
-
- & 2031 & 0.810 & 114 & 528 & 0.438 & 602 & 0.526 & 682 & 0.624\\
-
-\multirow{-12}{1in}{\centering\arraybackslash Long-term Equil. Yield (MSY proxy, $SPR_{50\%}$), with buffer} & 2032 & 0.803 & 113 & 533 & 0.442 & 606 & 0.529 & 685 & 0.626\\
+\multirow{-12}{1in}{\centering\arraybackslash $p^\ast = 0.40,  \sigma = 0.5$} & 2032 & 0.801 & 125 & 505 & 0.418 & 583 & 0.509 & 667 & 0.610\\
 \bottomrule
 \end{tabular}}
 \end{table}
@@ -2132,6 +2084,10 @@ The following parameters were fixed in the post-STAR base model:
 
 
 
+
+
+
+
 The base model has a total of 118 estimated parameters
 (Table \@ref(tab:paramstable)) that are described in more detail in the following sections:
 
@@ -2160,7 +2116,8 @@ Males $L_{\infty}$ = 50 cm; $k$ = 0.199; $t_0$ = -0.63
 ## Natural Mortality Estimation
 
 The northern California model directly estimated male growth and natural mortality (*M*) parameters due to the above-mentioned issue with estimation of CVs for length at age 30 
-when using the offset parameterization. Female natural mortality was estimated at 0.13 (SE = 0.012) and male natural mortality was estimated at 0 (SE = NA), which the STAT considered reasonable given that observed maximum ages for both sexes are similar. Latitudinal gradients in natural mortality have been estimated for many species of rockfish, which is consistent with the higher estimates of $M$ in the southern model.
+when using the offset parameterization. Female natural mortality was estimated at 0.09 (SE = 0.0083) and male natural mortality was estimated at 0.08 (SE = 0.0088), which the STAT considered reasonable given that observed maximum ages for both sexes are similar. Latitudinal gradients in natural mortality have been estimated for many species of rockfish, which is consistent with the higher estimates of $M$ in the southern model.
+
 
  
 
@@ -3819,12 +3776,12 @@ OFLCatch\_2023 & 168.686 & 161.477 & 150.481 & 114.336 & 105.421 & 101.855\\
               Recreational party/charter retained = REC_PC, Recreational 
               private/rental retained = REC_PR, Recreational party/charter 
               dead discards = REC_PC_DIS, Recreational private/rental dead 
-              discards = REC_PR_DIS).\label{fig:catch}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/catch2 landings stacked.png){width=100% height=100% alt="."}
+              discards = REC_PR_DIS).\label{fig:catch}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/catch2 landings stacked.png){width=100% height=100% alt="."}
 
 
 
 
-![Summary of data sources used in the base model. See the text for fleet descriptions.\label{fig:data-plot}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/data_plot2.png){width=100% height=100% alt="."}
+![Summary of data sources used in the base model. See the text for fleet descriptions.\label{fig:data-plot}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/data_plot2.png){width=100% height=100% alt="."}
 
 
 
@@ -3855,31 +3812,31 @@ OFLCatch\_2023 & 168.686 & 161.477 & 150.481 & 114.336 & 105.421 & 101.855\\
 
 
 
-![Length composition data from the commercial hook-and-line fishery.\label{fig:len-data-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lendat_bubflt1mkt0_page2.png){width=100% height=100% alt="."}
+![Length composition data from the commercial hook-and-line fishery.\label{fig:len-data-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lendat_bubflt1mkt0_page2.png){width=100% height=100% alt="."}
 
-![Length composition data from the commercial trawl fishery.\label{fig:len-data-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lendat_bubflt2mkt0.png){width=100% height=100% alt="."}
+![Length composition data from the commercial trawl fishery.\label{fig:len-data-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lendat_bubflt2mkt0.png){width=100% height=100% alt="."}
 
-![Length composition data from the commercial net fishery.\label{fig:len-data-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lendat_bubflt3mkt0.png){width=100% height=100% alt="."}
+![Length composition data from the commercial net fishery.\label{fig:len-data-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lendat_bubflt3mkt0.png){width=100% height=100% alt="."}
 
 ![Average weights calculated from the recreational landings data on RecFIN.\label{fig:rec-avg-weights}](C:/Stock_Assessments/VRML_Assessment_2021/GitHub/Vermilion_2021/doc/figures/rec_avg_weight.png){width=100% height=100% alt="."}
 
-![Length composition data from the recreational PC retained fishery.\label{fig:len-data-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lendat_bubflt4mkt0_page3.png){width=100% height=100% alt="."}
+![Length composition data from the recreational PC retained fishery.\label{fig:len-data-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lendat_bubflt4mkt0_page3.png){width=100% height=100% alt="."}
 
-![Length composition data from the recreational PC discard fishery.\label{fig:len-data-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lendat_bubflt5mkt0.png){width=100% height=100% alt="."}
+![Length composition data from the recreational PC discard fishery.\label{fig:len-data-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lendat_bubflt5mkt0.png){width=100% height=100% alt="."}
 
-![Length composition data from the recreational PR retained fishery.\label{fig:len-data-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lendat_bubflt6mkt0_page3.png){width=100% height=100% alt="."}
+![Length composition data from the recreational PR retained fishery.\label{fig:len-data-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lendat_bubflt6mkt0_page3.png){width=100% height=100% alt="."}
 
-![Length composition data from the Deb Wilson-Vandenberg onboard survey.\label{fig:len-data-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lendat_bubflt8mkt0.png){width=100% height=100% alt="."}
+![Length composition data from the Deb Wilson-Vandenberg onboard survey.\label{fig:len-data-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lendat_bubflt8mkt0.png){width=100% height=100% alt="."}
 
-![Standardized indices overlaid. Each index is rescaled to have mean observation = 1.0.\label{fig:cpueall}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/index9_standcpueall.png){width=100% height=100% alt="."}
+![Standardized indices overlaid. Each index is rescaled to have mean observation = 1.0.\label{fig:cpueall}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/index9_standcpueall.png){width=100% height=100% alt="."}
 
-![Length composition data from the West coast groundfish bottomfish trawl survey.\label{fig:len-data-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lendat_bubflt9mkt0_page2.png){width=100% height=100% alt="."}
+![Length composition data from the West coast groundfish bottomfish trawl survey.\label{fig:len-data-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lendat_bubflt9mkt0_page2.png){width=100% height=100% alt="."}
 
-![Length composition data from the Abrams thesis research survey.\label{fig:len-data-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lendat_bubflt11mkt0.png){width=100% height=100% alt="."}
+![Length composition data from the Abrams thesis research survey.\label{fig:len-data-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lendat_bubflt11mkt0.png){width=100% height=100% alt="."}
 
-![Length composition data from the SWFSC groundfish ecology survey.\label{fig:len-data-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lendat_bubflt12mkt0.png){width=100% height=100% alt="."}
+![Length composition data from the SWFSC groundfish ecology survey.\label{fig:len-data-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lendat_bubflt12mkt0.png){width=100% height=100% alt="."}
 
-![Length composition data from the California Collaborative Fisheries Research Program survey.\label{fig:len-data-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lendat_bubflt13mkt0.png){width=100% height=100% alt="."}
+![Length composition data from the California Collaborative Fisheries Research Program survey.\label{fig:len-data-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lendat_bubflt13mkt0.png){width=100% height=100% alt="."}
 
 
 
@@ -3905,7 +3862,7 @@ bias for reader 1 and curvilinear standard deviation for both readers.\label{fig
 
 
 
-![Distribution of observed age at true age for ageing error type 1.\label{fig:ageerror}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/numbers10_ageerror_matrix_1.png){width=100% height=100% alt="."}
+![Distribution of observed age at true age for ageing error type 1.\label{fig:ageerror}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/numbers10_ageerror_matrix_1.png){width=100% height=100% alt="."}
 
 
 
@@ -3915,7 +3872,7 @@ bias for reader 1 and curvilinear standard deviation for both readers.\label{fig
 
 
 
-![Maturity at length.\label{fig:maturity}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/bio6_maturity.png){width=100% height=100% alt="."}
+![Maturity at length.\label{fig:maturity}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/bio6_maturity.png){width=100% height=100% alt="."}
 
 
 
@@ -3927,12 +3884,12 @@ bias for reader 1 and curvilinear standard deviation for both readers.\label{fig
 
 
 
-![Fecundity as a function of weight.\label{fig:fecundity}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/bio8_fecundity_wt.png){width=100% height=100% alt="."}
+![Fecundity as a function of weight.\label{fig:fecundity}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/bio8_fecundity_wt.png){width=100% height=100% alt="."}
 
 
 
 
-![Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age.\label{fig:spawnage}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/bio11_spawningoutput_age.png){width=100% height=100% alt="."}
+![Spawning output at age. This is the product of maturity and fecundity. When these processes are length-based they are converted into the age dimension using the matrix of length at age.\label{fig:spawnage}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/bio11_spawningoutput_age.png){width=100% height=100% alt="."}
 
 \FloatBarrier
 
@@ -3941,20 +3898,20 @@ bias for reader 1 and curvilinear standard deviation for both readers.\label{fig
 <!-- ======================================================================= -->
 
 
-![Sex ratios for length comps, whole catch, Abrams thesis research survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-ABRAMS-RESEARCH-1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sexratio_len_flt11mkt0.png){width=100% height=100% alt="."}
+![Sex ratios for length comps, whole catch, Abrams thesis research survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-ABRAMS-RESEARCH-1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sexratio_len_flt11mkt0.png){width=100% height=100% alt="."}
 
-![Sex ratios for length comps, whole catch, SWFSC groundfish ecology survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-SWFSC-GF-ECOL-2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sexratio_len_flt12mkt0.png){width=100% height=100% alt="."}
+![Sex ratios for length comps, whole catch, SWFSC groundfish ecology survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-SWFSC-GF-ECOL-2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sexratio_len_flt12mkt0.png){width=100% height=100% alt="."}
 
-![Sex ratios for length comps, whole catch, West coast groundfish bottomfish trawl survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-NWFSC-TWL-3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sexratio_len_flt9mkt0_page1.png){width=100% height=100% alt="."}
+![Sex ratios for length comps, whole catch, West coast groundfish bottomfish trawl survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-NWFSC-TWL-3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sexratio_len_flt9mkt0_page1.png){width=100% height=100% alt="."}
 
-![Sex ratios for length comps, whole catch, West coast groundfish bottomfish trawl survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-NWFSC-TWL-4}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sexratio_len_flt9mkt0_page2.png){width=100% height=100% alt="."}
+![Sex ratios for length comps, whole catch, West coast groundfish bottomfish trawl survey. Observed sex ratios (points) with 75% intervals (vertical lines) calculated as a Jeffreys interval based on the adjusted input sample size. The model expectation is shown in the purple line.\label{fig:sexratio-NWFSC-TWL-4}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sexratio_len_flt9mkt0_page2.png){width=100% height=100% alt="."}
 
 \FloatBarrier
 
 <!--weight-length-->
 
 
-![Weight-length relationship.\label{fig:weightlength}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/bio5_weightatsize.png){width=100% height=100% alt="."}
+![Weight-length relationship.\label{fig:weightlength}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/bio5_weightatsize.png){width=100% height=100% alt="."}
 
 <!-- ======================================================================= -->
 <!-- ************************    Model parameters ********************************** --> 
@@ -3973,7 +3930,7 @@ bias for reader 1 and curvilinear standard deviation for both readers.\label{fig
 <!-- ======================================================================= -->
 
 
-![Length at age in the beginning of the year (or season) in the ending year of the model. Shaded area indicates 95% distribution of length at age around estimated growth curve.\label{fig:fittedgrowth}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/bio1_sizeatage.png){width=100% height=100% alt="."}
+![Length at age in the beginning of the year (or season) in the ending year of the model. Shaded area indicates 95% distribution of length at age around estimated growth curve.\label{fig:fittedgrowth}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/bio1_sizeatage.png){width=100% height=100% alt="."}
 
 
 \FloatBarrier 
@@ -3985,36 +3942,36 @@ bias for reader 1 and curvilinear standard deviation for both readers.\label{fig
 <!-- **********************  Age @ Length Comps **************************** --> 
 <!-- ======================================================================= -->
 
-![Pearson residuals, whole catch, ABRAMS_RESEARCH (max=11.91).\label{fig:comp_condAALfit_residsflt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_condAALfit_residsflt11mkt0.png){width=100% height=100% alt="."}
+![Pearson residuals, whole catch, ABRAMS_RESEARCH (max=11.91).\label{fig:comp_condAALfit_residsflt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_condAALfit_residsflt11mkt0.png){width=100% height=100% alt="."}
 
-![Mean age from conditional data (aggregated across length bins) for ABRAMS_RESEARCH with 95% confidence intervals  based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from ABRAMS_RESEARCH: 0.9942 (0.9942-Inf).\label{fig:comp_condAALfit_data_weighting_TA1.8_condAgeABRAMS_RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_condAALfit_data_weighting_TA1.8_condAgeABRAMS_RESEARCH.png){width=100% height=100% alt="."}
+![Mean age from conditional data (aggregated across length bins) for ABRAMS_RESEARCH with 95% confidence intervals  based on current samples sizes.<br>Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from ABRAMS_RESEARCH:<br>0.9942 (0.9942-Inf) <br><br>For more info, see<br> <blockquote>Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock assessment models. <i>Can. J. Fish. Aquat. Sci.</i> 68: 1124-1138.</blockquote>.\label{fig:comp_condAALfit_data_weighting_TA1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_condAALfit_data_weighting_TA1.8_condAgeABRAMS_RESEARCH.png){width=100% height=100% alt="."}
 
 ![Conditional AAL plot, whole catch, ABRAMS_RESEARCH
-These plots show mean age and std. dev. in conditional A@L. Left plots are mean A@L by size-class (obs. and exp.) with 90% CIs based on adding 1.64 SE of mean to the data. Right plots in each pair are SE of mean A@L (obs. and exp.) with 90% CIs based on the chi-square distribution.\label{fig:comp_condAALfit_Andre_plotsflt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_condAALfit_Andre_plotsflt11mkt0.png){width=100% height=100% alt="."}
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and exp.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and exp.) with 90% CIs based on the chi-square distribution.\label{fig:comp_condAALfit_Andre_plotsflt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_condAALfit_Andre_plotsflt11mkt0.png){width=100% height=100% alt="."}
 
-![Pearson residuals, whole catch, NWFSC_TWL (max=43.61) (plot 1 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_condAALfit_residsflt9mkt0_page1.png){width=100% height=100% alt="."}
+![Pearson residuals, whole catch, NWFSC_TWL (max=43.61) (plot 1 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_condAALfit_residsflt9mkt0_page1.png){width=100% height=100% alt="."}
 
-![Pearson residuals, whole catch, NWFSC_TWL (max=43.61) (plot 2 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_condAALfit_residsflt9mkt0_page2.png){width=100% height=100% alt="."}
+![Pearson residuals, whole catch, NWFSC_TWL (max=43.61) (plot 2 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_condAALfit_residsflt9mkt0_page2.png){width=100% height=100% alt="."}
 
-![Pearson residuals, whole catch, NWFSC_TWL (max=43.61) (plot 3 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_condAALfit_residsflt9mkt0_page3.png){width=100% height=100% alt="."}
+![Pearson residuals, whole catch, NWFSC_TWL (max=43.61) (plot 3 of 3).\label{fig:comp_condAALfit_residsflt9mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_condAALfit_residsflt9mkt0_page3.png){width=100% height=100% alt="."}
 
-![Mean age from conditional data (aggregated across length bins) for NWFSC_TWL with 95% confidence intervals  based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from NWFSC_TWL: 0.9764 (0.542-3.5311).\label{fig:comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_TWL.png){width=100% height=100% alt="."}
+![Mean age from conditional data (aggregated across length bins) for NWFSC_TWL with 95% confidence intervals  based on current samples sizes.<br>Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from NWFSC_TWL:<br>0.9764 (0.5421-3.1871) <br><br>For more info, see<br> <blockquote>Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock assessment models. <i>Can. J. Fish. Aquat. Sci.</i> 68: 1124-1138.</blockquote>.\label{fig:comp_condAALfit_data_weighting_TA1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_condAALfit_data_weighting_TA1.8_condAgeNWFSC_TWL.png){width=100% height=100% alt="."}
 
 ![Conditional AAL plot, whole catch, NWFSC_TWL (plot 1 of 4)
-These plots show mean age and std. dev. in conditional A@L. Left plots are mean A@L by size-class (obs. and exp.) with 90% CIs based on adding 1.64 SE of mean to the data. Right plots in each pair are SE of mean A@L (obs. and exp.) with 90% CIs based on the chi-square distribution.\label{fig:comp_condAALfit_Andre_plotsflt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_condAALfit_Andre_plotsflt9mkt0_page1.png){width=100% height=100% alt="."}
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and exp.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and exp.) with 90% CIs based on the chi-square distribution.\label{fig:comp_condAALfit_Andre_plotsflt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_condAALfit_Andre_plotsflt9mkt0_page1.png){width=100% height=100% alt="."}
 
-![Conditional AAL plot, whole catch, NWFSC_TWL (plot 2 of 4).\label{fig:comp_condAALfit_Andre_plotsflt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_condAALfit_Andre_plotsflt9mkt0_page2.png){width=100% height=100% alt="."}
+![Conditional AAL plot, whole catch, NWFSC_TWL (plot 2 of 4).\label{fig:comp_condAALfit_Andre_plotsflt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_condAALfit_Andre_plotsflt9mkt0_page2.png){width=100% height=100% alt="."}
 
-![Conditional AAL plot, whole catch, NWFSC_TWL (plot 3 of 4).\label{fig:comp_condAALfit_Andre_plotsflt9mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_condAALfit_Andre_plotsflt9mkt0_page3.png){width=100% height=100% alt="."}
+![Conditional AAL plot, whole catch, NWFSC_TWL (plot 3 of 4).\label{fig:comp_condAALfit_Andre_plotsflt9mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_condAALfit_Andre_plotsflt9mkt0_page3.png){width=100% height=100% alt="."}
 
-![Conditional AAL plot, whole catch, NWFSC_TWL (plot 4 of 4).\label{fig:comp_condAALfit_Andre_plotsflt9mkt0_page4}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_condAALfit_Andre_plotsflt9mkt0_page4.png){width=100% height=100% alt="."}
+![Conditional AAL plot, whole catch, NWFSC_TWL (plot 4 of 4).\label{fig:comp_condAALfit_Andre_plotsflt9mkt0_page4}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_condAALfit_Andre_plotsflt9mkt0_page4.png){width=100% height=100% alt="."}
 
-![Pearson residuals, whole catch, SWFSC_GF_ECOL (max=25.1).\label{fig:comp_condAALfit_residsflt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_condAALfit_residsflt12mkt0.png){width=100% height=100% alt="."}
+![Pearson residuals, whole catch, SWFSC_GF_ECOL (max=25.1).\label{fig:comp_condAALfit_residsflt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_condAALfit_residsflt12mkt0.png){width=100% height=100% alt="."}
 
-![Mean age from conditional data (aggregated across length bins) for SWFSC_GF_ECOL with 95% confidence intervals  based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from SWFSC_GF_ECOL: 0.9874 (0.6839-10.5598).\label{fig:comp_condAALfit_data_weighting_TA1.8_condAgeSWFSC_GF_ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_condAALfit_data_weighting_TA1.8_condAgeSWFSC_GF_ECOL.png){width=100% height=100% alt="."}
+![Mean age from conditional data (aggregated across length bins) for SWFSC_GF_ECOL with 95% confidence intervals  based on current samples sizes.<br>Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for conditional age-at-length data from SWFSC_GF_ECOL:<br>0.9874 (0.6839-10.5598) <br><br>For more info, see<br> <blockquote>Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock assessment models. <i>Can. J. Fish. Aquat. Sci.</i> 68: 1124-1138.</blockquote>.\label{fig:comp_condAALfit_data_weighting_TA1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_condAALfit_data_weighting_TA1.8_condAgeSWFSC_GF_ECOL.png){width=100% height=100% alt="."}
 
 ![Conditional AAL plot, whole catch, SWFSC_GF_ECOL
-These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and exp.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and exp.) with 90% CIs based on the chi-square distribution.\label{fig:comp_condAALfit_Andre_plotsflt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_condAALfit_Andre_plotsflt12mkt0.png){width=100% height=100% alt="."}
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and exp.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and exp.) with 90% CIs based on the chi-square distribution.\label{fig:comp_condAALfit_Andre_plotsflt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_condAALfit_Andre_plotsflt12mkt0.png){width=100% height=100% alt="."}
 
 
 \clearpage
@@ -4029,21 +3986,21 @@ These plots show mean age and std. dev. in conditional A@L.<br>Left plots are me
 \FloatBarrier
 
 
-![Selectivity at age derived from selectivity at length for multiple fleets.\label{fig:selex-age-all}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sel02_multiple_fleets_age1.png){width=100% height=100% alt="."}
+![Selectivity at age derived from selectivity at length for multiple fleets.\label{fig:selex-age-all}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sel02_multiple_fleets_age1.png){width=100% height=100% alt="."}
 
 \FloatBarrier
 
 
-![End year selectivity at length by fleet/survey.\label{fig:selex-length-all}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sel01_multiple_fleets_length1.png){width=100% height=100% alt="."}
+![End year selectivity at length by fleet/survey.\label{fig:selex-length-all}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sel01_multiple_fleets_length1.png){width=100% height=100% alt="."}
 
 \FloatBarrier 
 
 
 <!--time varying selectivity-->
 
-![Surface plot of Female time-varying selectivity for REC_PC.\label{fig:sel03_len_timevary_surf_flt4sex1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sel03_len_timevary_surf_flt4sex1.png){width=100% height=100% alt="."}
+![Surface plot of Female time-varying selectivity for REC_PC.\label{fig:sel03_len_timevary_surf_flt4sex1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sel03_len_timevary_surf_flt4sex1.png){width=100% height=100% alt="."}
 
-![Surface plot of Female time-varying selectivity for REC_PR.\label{fig:sel03_len_timevary_surf_flt6sex1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sel03_len_timevary_surf_flt6sex1.png){width=100% height=100% alt="."}
+![Surface plot of Female time-varying selectivity for REC_PR.\label{fig:sel03_len_timevary_surf_flt6sex1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sel03_len_timevary_surf_flt6sex1.png){width=100% height=100% alt="."}
 
 \FloatBarrier 
 <!--selectivity for fleets that are not mirrored-->
@@ -4054,21 +4011,21 @@ These plots show mean age and std. dev. in conditional A@L.<br>Left plots are me
 \FloatBarrier 
 
 
-![Female ending year selectivity for the commercial hook-and-line fishery.\label{fig:endyr-selex-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sel09_len_flt1sex1.png){width=100% height=100% alt="."}
+![Female ending year selectivity for the commercial hook-and-line fishery.\label{fig:endyr-selex-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sel09_len_flt1sex1.png){width=100% height=100% alt="."}
 
-![Female ending year selectivity for the commercial trawl fishery.\label{fig:endyr-selex-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sel09_len_flt2sex1.png){width=100% height=100% alt="."}
+![Female ending year selectivity for the commercial trawl fishery.\label{fig:endyr-selex-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sel09_len_flt2sex1.png){width=100% height=100% alt="."}
 
-![Female ending year selectivity for the commercial net fishery.\label{fig:endyr-selex-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sel09_len_flt3sex1.png){width=100% height=100% alt="."}
+![Female ending year selectivity for the commercial net fishery.\label{fig:endyr-selex-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sel09_len_flt3sex1.png){width=100% height=100% alt="."}
 
-![Female ending year selectivity for the recreational PC retained fishery.\label{fig:endyr-selex-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sel09_len_flt4sex1.png){width=100% height=100% alt="."}
+![Female ending year selectivity for the recreational PC retained fishery.\label{fig:endyr-selex-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sel09_len_flt4sex1.png){width=100% height=100% alt="."}
 
-![Female ending year selectivity for the recreational PC discard fishery.\label{fig:endyr-selex-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sel09_len_flt5sex1.png){width=100% height=100% alt="."}
+![Female ending year selectivity for the recreational PC discard fishery.\label{fig:endyr-selex-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sel09_len_flt5sex1.png){width=100% height=100% alt="."}
 
-![Female ending year selectivity for the recreational PR retained fishery.\label{fig:endyr-selex-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sel09_len_flt6sex1.png){width=100% height=100% alt="."}
+![Female ending year selectivity for the recreational PR retained fishery.\label{fig:endyr-selex-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sel09_len_flt6sex1.png){width=100% height=100% alt="."}
 
-![Female ending year selectivity for the West coast groundfish bottomfish trawl survey.\label{fig:endyr-selex-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sel09_len_flt9sex1.png){width=100% height=100% alt="."}
+![Female ending year selectivity for the West coast groundfish bottomfish trawl survey.\label{fig:endyr-selex-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sel09_len_flt9sex1.png){width=100% height=100% alt="."}
 
-![Female ending year selectivity for the California Collaborative Fisheries Research Program survey.\label{fig:endyr-selex-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/sel09_len_flt13sex1.png){width=100% height=100% alt="."}
+![Female ending year selectivity for the California Collaborative Fisheries Research Program survey.\label{fig:endyr-selex-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/sel09_len_flt13sex1.png){width=100% height=100% alt="."}
 
 
 \FloatBarrier 
@@ -4083,56 +4040,56 @@ These plots show mean age and std. dev. in conditional A@L.<br>Left plots are me
 
 
 ![Length comps, aggregated across time by fleet.
-Labels 'retained' and 'discard' indicate discarded or retained sampled for each fleet. Panels without this designation represent the whole catch.\label{fig:lenfits-all}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit__aggregated_across_time.png){width=100% height=100% alt="."}
+Labels 'retained' and 'discard' indicate discarded or retained sampled for each fleet. Panels without this designation represent the whole catch.\label{fig:lenfits-all}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit__aggregated_across_time.png){width=100% height=100% alt="."}
 
 \FloatBarrier
 
 
 
 
-![Pearson residuals for the commercial hook-and-line fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_residsflt1mkt0_page2.png){width=100% height=100% alt="."}
+![Pearson residuals for the commercial hook-and-line fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_residsflt1mkt0_page2.png){width=100% height=100% alt="."}
 
-![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial hook-and-line fishery.\label{fig:mean-len-fit-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_data_weighting_TA1.8_COM_HKL.png){width=100% height=100% alt="."}
+![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial hook-and-line fishery.\label{fig:mean-len-fit-COM-HKL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_data_weighting_TA1.8_COM_HKL.png){width=100% height=100% alt="."}
 
-![Pearson residuals for the commercial trawl fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_residsflt2mkt0.png){width=100% height=100% alt="."}
+![Pearson residuals for the commercial trawl fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_residsflt2mkt0.png){width=100% height=100% alt="."}
 
-![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial trawl fishery.\label{fig:mean-len-fit-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_data_weighting_TA1.8_COM_TWL.png){width=100% height=100% alt="."}
+![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial trawl fishery.\label{fig:mean-len-fit-COM-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_data_weighting_TA1.8_COM_TWL.png){width=100% height=100% alt="."}
 
-![Pearson residuals for the commercial net fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_residsflt3mkt0.png){width=100% height=100% alt="."}
+![Pearson residuals for the commercial net fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_residsflt3mkt0.png){width=100% height=100% alt="."}
 
-![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial net fishery.\label{fig:mean-len-fit-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_data_weighting_TA1.8_COM_NET.png){width=100% height=100% alt="."}
+![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the commercial net fishery.\label{fig:mean-len-fit-COM-NET}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_data_weighting_TA1.8_COM_NET.png){width=100% height=100% alt="."}
 
-![Pearson residuals for the recreational PC retained fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_residsflt4mkt0_page3.png){width=100% height=100% alt="."}
+![Pearson residuals for the recreational PC retained fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_residsflt4mkt0_page3.png){width=100% height=100% alt="."}
 
-![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PC retained fishery.\label{fig:mean-len-fit-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_data_weighting_TA1.8_REC_PC.png){width=100% height=100% alt="."}
+![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PC retained fishery.\label{fig:mean-len-fit-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_data_weighting_TA1.8_REC_PC.png){width=100% height=100% alt="."}
 
-![Pearson residuals for the recreational PC discard fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_residsflt5mkt0.png){width=100% height=100% alt="."}
+![Pearson residuals for the recreational PC discard fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_residsflt5mkt0.png){width=100% height=100% alt="."}
 
-![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PC discard fishery.\label{fig:mean-len-fit-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_data_weighting_TA1.8_REC_PC_DIS.png){width=100% height=100% alt="."}
+![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PC discard fishery.\label{fig:mean-len-fit-REC-PC-DIS}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_data_weighting_TA1.8_REC_PC_DIS.png){width=100% height=100% alt="."}
 
-![Pearson residuals for the recreational PR retained fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_residsflt6mkt0_page3.png){width=100% height=100% alt="."}
+![Pearson residuals for the recreational PR retained fishery. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_residsflt6mkt0_page3.png){width=100% height=100% alt="."}
 
-![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PR retained fishery.\label{fig:mean-len-fit-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_data_weighting_TA1.8_REC_PR.png){width=100% height=100% alt="."}
+![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the recreational PR retained fishery.\label{fig:mean-len-fit-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_data_weighting_TA1.8_REC_PR.png){width=100% height=100% alt="."}
 
-![Pearson residuals for the Deb Wilson-Vandenberg onboard survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_residsflt8mkt0.png){width=100% height=100% alt="."}
+![Pearson residuals for the Deb Wilson-Vandenberg onboard survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_residsflt8mkt0.png){width=100% height=100% alt="."}
 
-![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the Deb Wilson-Vandenberg onboard survey.\label{fig:mean-len-fit-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_data_weighting_TA1.8_DWV_ONBOARD.png){width=100% height=100% alt="."}
+![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the Deb Wilson-Vandenberg onboard survey.\label{fig:mean-len-fit-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_data_weighting_TA1.8_DWV_ONBOARD.png){width=100% height=100% alt="."}
 
-![Pearson residuals for the West coast groundfish bottomfish trawl survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_residsflt9mkt0_page2.png){width=100% height=100% alt="."}
+![Pearson residuals for the West coast groundfish bottomfish trawl survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_residsflt9mkt0_page2.png){width=100% height=100% alt="."}
 
-![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the West coast groundfish bottomfish trawl survey.\label{fig:mean-len-fit-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_data_weighting_TA1.8_NWFSC_TWL.png){width=100% height=100% alt="."}
+![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the West coast groundfish bottomfish trawl survey.\label{fig:mean-len-fit-NWFSC-TWL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_data_weighting_TA1.8_NWFSC_TWL.png){width=100% height=100% alt="."}
 
-![Pearson residuals for the Abrams thesis research survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_residsflt11mkt0.png){width=100% height=100% alt="."}
+![Pearson residuals for the Abrams thesis research survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_residsflt11mkt0.png){width=100% height=100% alt="."}
 
-![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the Abrams thesis research survey.\label{fig:mean-len-fit-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_data_weighting_TA1.8_ABRAMS_RESEARCH.png){width=100% height=100% alt="."}
+![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the Abrams thesis research survey.\label{fig:mean-len-fit-ABRAMS-RESEARCH}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_data_weighting_TA1.8_ABRAMS_RESEARCH.png){width=100% height=100% alt="."}
 
-![Pearson residuals for the SWFSC groundfish ecology survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_residsflt12mkt0.png){width=100% height=100% alt="."}
+![Pearson residuals for the SWFSC groundfish ecology survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_residsflt12mkt0.png){width=100% height=100% alt="."}
 
-![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the SWFSC groundfish ecology survey.\label{fig:mean-len-fit-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_data_weighting_TA1.8_SWFSC_GF_ECOL.png){width=100% height=100% alt="."}
+![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the SWFSC groundfish ecology survey.\label{fig:mean-len-fit-SWFSC-GF-ECOL}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_data_weighting_TA1.8_SWFSC_GF_ECOL.png){width=100% height=100% alt="."}
 
-![Pearson residuals for the California Collaborative Fisheries Research Program survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_residsflt13mkt0.png){width=100% height=100% alt="."}
+![Pearson residuals for the California Collaborative Fisheries Research Program survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).\label{fig:len-pearson-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_residsflt13mkt0.png){width=100% height=100% alt="."}
 
-![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the California Collaborative Fisheries Research Program survey.\label{fig:mean-len-fit-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/comp_lenfit_data_weighting_TA1.8_CCFRP.png){width=100% height=100% alt="."}
+![Mean length (cm) for REC_PR with 95% confidence intervals based on current samples sizes. Francis data weighting method TA1.8: thinner intervals (with capped ends) show result of further adjusting sample sizes based on suggested multiplier (with 95% interval) for length data from the California Collaborative Fisheries Research Program survey.\label{fig:mean-len-fit-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/comp_lenfit_data_weighting_TA1.8_CCFRP.png){width=100% height=100% alt="."}
 
 
 
@@ -4149,25 +4106,25 @@ Labels 'retained' and 'discard' indicate discarded or retained sampled for each 
 
 
 
-![Fit to log index data on log scale for the recreational PC retained fishery. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/index5_logcpuefit_REC_PC.png){width=100% height=100% alt="."}
+![Fit to log index data on log scale for the recreational PC retained fishery. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/index5_logcpuefit_REC_PC.png){width=100% height=100% alt="."}
 
-![Residuals of fit to index for the REC_PC. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/index10_resids_SE_total_REC_PC.png){width=100% height=100% alt="."}
+![Residuals of fit to index for the REC_PC. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-REC-PC}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/index10_resids_SE_total_REC_PC.png){width=100% height=100% alt="."}
 
-![Fit to log index data on log scale for the recreational PR retained fishery. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/index5_logcpuefit_REC_PR.png){width=100% height=100% alt="."}
+![Fit to log index data on log scale for the recreational PR retained fishery. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/index5_logcpuefit_REC_PR.png){width=100% height=100% alt="."}
 
-![Residuals of fit to index for the REC_PR. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/index10_resids_SE_total_REC_PR.png){width=100% height=100% alt="."}
+![Residuals of fit to index for the REC_PR. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-REC-PR}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/index10_resids_SE_total_REC_PR.png){width=100% height=100% alt="."}
 
-![Fit to log index data on log scale for the Deb Wilson-Vandenberg onboard survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/index5_logcpuefit_DWV_ONBOARD.png){width=100% height=100% alt="."}
+![Fit to log index data on log scale for the Deb Wilson-Vandenberg onboard survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/index5_logcpuefit_DWV_ONBOARD.png){width=100% height=100% alt="."}
 
-![Residuals of fit to index for the DWV_ONBOARD. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/index10_resids_SE_total_DWV_ONBOARD.png){width=100% height=100% alt="."}
+![Residuals of fit to index for the DWV_ONBOARD. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-DWV-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/index10_resids_SE_total_DWV_ONBOARD.png){width=100% height=100% alt="."}
 
-![Fit to log index data on log scale for the recreational PC onboard survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-REC-PC-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/index5_logcpuefit_REC_PC_ONBOARD.png){width=100% height=100% alt="."}
+![Fit to log index data on log scale for the recreational PC onboard survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-REC-PC-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/index5_logcpuefit_REC_PC_ONBOARD.png){width=100% height=100% alt="."}
 
-![Residuals of fit to index for the REC_PC_ONBOARD. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-REC-PC-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/index10_resids_SE_total_REC_PC_ONBOARD.png){width=100% height=100% alt="."}
+![Residuals of fit to index for the REC_PC_ONBOARD. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-REC-PC-ONBOARD}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/index10_resids_SE_total_REC_PC_ONBOARD.png){width=100% height=100% alt="."}
 
-![Fit to log index data on log scale for the California Collaborative Fisheries Research Program survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/index5_logcpuefit_CCFRP.png){width=100% height=100% alt="."}
+![Fit to log index data on log scale for the California Collaborative Fisheries Research Program survey. Lines indicate 95% uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines (if present) indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:log-cpue-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/index5_logcpuefit_CCFRP.png){width=100% height=100% alt="."}
 
-![Residuals of fit to index for the CCFRP. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/index10_resids_SE_total_CCFRP.png){width=100% height=100% alt="."}
+![Residuals of fit to index for the CCFRP. Values are (log(Obs) - log(Exp))/SE where SE is the total standard error including any estimated additional uncertainty.\label{fig:cpue-resid-CCFRP}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/index10_resids_SE_total_CCFRP.png){width=100% height=100% alt="."}
 
 
 \FloatBarrier
@@ -4179,39 +4136,39 @@ Labels 'retained' and 'discard' indicate discarded or retained sampled for each 
 <!-- ======================================================================= -->
 
 
-![Estimated time series of spawning output.\label{fig:spawnout}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png){width=100% height=100% alt="."}
+![Estimated time series of spawning output.\label{fig:spawnout}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png){width=100% height=100% alt="."}
 
 
 
 \FloatBarrier
 
 
-![Estimated time series of relative spawning output.\label{fig:depl}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/ts9_Relative_spawning_output_intervals.png){width=100% height=100% alt="."}
+![Estimated time series of relative spawning output.\label{fig:depl}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/ts9_Relative_spawning_output_intervals.png){width=100% height=100% alt="."}
 
 \FloatBarrier
 
 
-![Timeseries of SPR ratio: (1-SPR)/(1-SPR_50%).\label{fig:1-spr}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/SPR3_ratiointerval.png){width=100% height=100% alt="."}
+![Timeseries of SPR ratio: (1-SPR)/(1-SPR_50%).\label{fig:1-spr}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/SPR3_ratiointerval.png){width=100% height=100% alt="."}
 
 
 ![Equilibrium yield curve for the base case model. Values are based on the 2020
-fishery selectivity and with steepness fixed at 0.72.\label{fig:yield2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/yield2_yield_curve_with_refpoints.png){width=100% height=100% alt="."}
+fishery selectivity and with steepness fixed at 0.72.\label{fig:yield2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/yield2_yield_curve_with_refpoints.png){width=100% height=100% alt="."}
 
 
 
-![Surplus production vs. biomass plot.\label{fig:yield3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/yield3_surplus_production.png){width=100% height=100% alt="."}
+![Surplus production vs. biomass plot.\label{fig:yield3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/yield3_surplus_production.png){width=100% height=100% alt="."}
 
 \FloatBarrier 
 
 
-![Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point show the 95 percent intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95 percent region which accounts for the estimated correlations between the biomass ratio and SPR ratio.\label{fig:phase}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/SPR4_phase.png){width=100% height=100% alt="."}
+![Phase plot of the relative biomass (also referred to as fraction unfished) versus the SPR ratio where each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Lines through the final point show the 95 percent intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95 percent region which accounts for the estimated correlations between the biomass ratio and SPR ratio.\label{fig:phase}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/SPR4_phase.png){width=100% height=100% alt="."}
 
 
-![Stock-recruit curve with labels on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years.\label{fig:bh-curve}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/SR_curve2.png){width=100% height=100% alt="."}
+![Stock-recruit curve with labels on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years.\label{fig:bh-curve}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/SR_curve2.png){width=100% height=100% alt="."}
 
 
 
-![Deviations around the stock-recruit curve. Labels are on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years.\label{fig:bh-resids}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/SR_resids.png){width=100% height=100% alt="."}
+![Deviations around the stock-recruit curve. Labels are on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years.\label{fig:bh-resids}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/SR_resids.png){width=100% height=100% alt="."}
 
 
 
@@ -4224,11 +4181,11 @@ fishery selectivity and with steepness fixed at 0.72.\label{fig:yield2}](C:/Stoc
 
 
 
-![Age-0 recruits (1,000s) with ~95% asymptotic intervals.\label{fig:recruits}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png){width=100% height=100% alt="."}
+![Age-0 recruits (1,000s) with ~95% asymptotic intervals.\label{fig:recruits}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png){width=100% height=100% alt="."}
 
 
 
-![Estimated time series of recruitment deviations.\label{fig:recdevs}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy//plots/recdevs2_withbars.png){width=100% height=100% alt="."}
+![Estimated time series of recruitment deviations.\label{fig:recdevs}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian//plots/recdevs2_withbars.png){width=100% height=100% alt="."}
 
 \FloatBarrier
 
@@ -4378,39 +4335,39 @@ fishery selectivity and with steepness fixed at 0.72.\label{fig:yield2}](C:/Stoc
 
 
 
-![Length comps, whole catch, COM_HKL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt1mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt1mkt0_page1.png){width=90% height=90% alt="."}
+![Length comps, whole catch, COM_HKL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt1mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt1mkt0_page1.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, COM_HKL (plot 2 of 2).\label{fig:comp_lenfit_flt1mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt1mkt0_page2.png){width=90% height=90% alt="."}
+![Length comps, whole catch, COM_HKL (plot 2 of 2).\label{fig:comp_lenfit_flt1mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt1mkt0_page2.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, COM_TWL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt2mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt2mkt0.png){width=90% height=90% alt="."}
+![Length comps, whole catch, COM_TWL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt2mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt2mkt0.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, COM_NET.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt3mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt3mkt0.png){width=90% height=90% alt="."}
+![Length comps, whole catch, COM_NET.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt3mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt3mkt0.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, REC_PC (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt4mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt4mkt0_page1.png){width=90% height=90% alt="."}
+![Length comps, whole catch, REC_PC (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt4mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt4mkt0_page1.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, REC_PC (plot 2 of 3).\label{fig:comp_lenfit_flt4mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt4mkt0_page2.png){width=90% height=90% alt="."}
+![Length comps, whole catch, REC_PC (plot 2 of 3).\label{fig:comp_lenfit_flt4mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt4mkt0_page2.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, REC_PC (plot 3 of 3).\label{fig:comp_lenfit_flt4mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt4mkt0_page3.png){width=90% height=90% alt="."}
+![Length comps, whole catch, REC_PC (plot 3 of 3).\label{fig:comp_lenfit_flt4mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt4mkt0_page3.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, REC_PC_DIS.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt5mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt5mkt0.png){width=90% height=90% alt="."}
+![Length comps, whole catch, REC_PC_DIS.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt5mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt5mkt0.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, REC_PR (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt6mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt6mkt0_page1.png){width=90% height=90% alt="."}
+![Length comps, whole catch, REC_PR (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt6mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt6mkt0_page1.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, REC_PR (plot 2 of 3).\label{fig:comp_lenfit_flt6mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt6mkt0_page2.png){width=90% height=90% alt="."}
+![Length comps, whole catch, REC_PR (plot 2 of 3).\label{fig:comp_lenfit_flt6mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt6mkt0_page2.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, REC_PR (plot 3 of 3).\label{fig:comp_lenfit_flt6mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt6mkt0_page3.png){width=90% height=90% alt="."}
+![Length comps, whole catch, REC_PR (plot 3 of 3).\label{fig:comp_lenfit_flt6mkt0_page3}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt6mkt0_page3.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, DWV_ONBOARD.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt8mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt8mkt0.png){width=90% height=90% alt="."}
+![Length comps, whole catch, DWV_ONBOARD.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt8mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt8mkt0.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, NWFSC_TWL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt9mkt0_page1.png){width=90% height=90% alt="."}
+![Length comps, whole catch, NWFSC_TWL (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt9mkt0_page1}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt9mkt0_page1.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, NWFSC_TWL (plot 2 of 2).\label{fig:comp_lenfit_flt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt9mkt0_page2.png){width=90% height=90% alt="."}
+![Length comps, whole catch, NWFSC_TWL (plot 2 of 2).\label{fig:comp_lenfit_flt9mkt0_page2}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt9mkt0_page2.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, ABRAMS_RESEARCH.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt11mkt0.png){width=90% height=90% alt="."}
+![Length comps, whole catch, ABRAMS_RESEARCH.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt11mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt11mkt0.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, SWFSC_GF_ECOL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt12mkt0.png){width=90% height=90% alt="."}
+![Length comps, whole catch, SWFSC_GF_ECOL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt12mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt12mkt0.png){width=90% height=90% alt="."}
 
-![Length comps, whole catch, CCFRP.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt13mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian - Copy/plots/comp_lenfit_flt13mkt0.png){width=90% height=90% alt="."}
+![Length comps, whole catch, CCFRP.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method.\label{fig:comp_lenfit_flt13mkt0}](C:/Stock_Assessments/VRML_Assessment_2021/Model_files/NCA/FINAL_base/Verm_NoCA_base_files_Day1_Request1_drop2020PR_weight_CCFRP_lengths_hessian/plots/comp_lenfit_flt13mkt0.png){width=90% height=90% alt="."}
 
 \FloatBarrier
 
@@ -6200,6 +6157,179 @@ Redwood & 0.122 & 164.193 & 18.48\% & 0.022 & 4.41\%\\
 \end{tabular}
 \end{table}
 <!--figures-->
+
+\newpage 
+
+# Appendix J. Decision Table Assuming Category 2{-}
+\renewcommand{\thepage}{J\arabic{page}}
+\renewcommand{\thefigure}{J\arabic{figure}}
+\renewcommand{\thetable}{J\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
+Uncertainty in the forecasts is based upon the three states of nature agreed upon 
+at the STAR panel, reflecting three different natural mortality rates. The steepness 
+parameter of the Beverton-Holt stock-recruit curve was fixed in the base model
+and in all of the forecasts.  The northern California model is not data rich and 
+while there is uncertainty in steepness, it was not well estimated in the base 
+model when natural mortality was also estimated. The alternative states of nature 
+maintain the 
+female to male natural mortality rate ratio from  the base model. To capture the 
+$75\%$ interval around the negative log-likelihood, alternate states were identified 
+within 0.66 negative log-likelihood points from the base model where female 
+$M$ = 0.0856 and male $M$ = 0.0805.
+The high state of nature fixes female $M$ = 0.0956 and male $M$ = 0.08989. 
+For the low state of nature, female $M$ = 0.0769 and male $M$ = 0.07231.
+
+For reference, the base model predicted $\sigma$ = 0.246. The buffers between the 
+OFL and ABC  were calculated assuming a category 2 stock, with  $\sigma$ = 1.0 
+and a $p^*$ = 0.45. The alternative catch stream (rows in the table) include $\sigma$ = 1.0
+with a $p^*$ = 0.4 for a category 2 stock.  
+
+Current forecasts based on the alternative states of nature and requested catch 
+streams project that the stock will remain above the target threshold of 40% in 
+2032 (Table \@ref(tab:DecisionEScat2)).  In all of the scenarios of the low state 
+of nature, the stock remains below the 
+target threshold of $40\%$ until 2026 or 2027.
+The base model with the base catches results in an increasing stock over the period 
+from 
+2023-2032. In all scenarios the catch significantly decreases from 2022 to 2023; 
+projected catch in 2022 is 227 mt, and 2023 catches from the base 
+model range from 118-139 mt.  The base model includes a portion of the stock within 
+the northern management unit (north of \CapeM).  An analysis based on the private/rental 
+mode index through 2019 suggests 
+that $4.44\%$ of the catches from this model should be apportioned to the northern 
+management unit for vermilion rockfish.
+
+
+
+
+
+
+\begin{table}
+
+\caption{(\#tab:DecisionEScat2)Decision table summarizing 12-year projections 
+                (2021 to 2032) for vermilion rockfish based on three alternative 
+                states of nature spanning quantiles of spawning output in 
+                2021.  Columns range over low, medium, and high state of 
+                nature, and rows range over different assumptions of total 
+                catch levels corresponding to the forecast catches from 
+                each state of nature.  Catches in 2021 and 2022 are fixed 
+                at catches provided by the CDFW.}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{>{\centering\arraybackslash}p{1in}|>{}c|>{}c|>{}c|>{\centering\arraybackslash}p{.8in}>{\centering\arraybackslash}p{.8in}|>{\centering\arraybackslash}p{.8in}>{\centering\arraybackslash}p{.8in}|>{\centering\arraybackslash}p{.8in}>{\centering\arraybackslash}p{.8in}}
+\toprule
+\multicolumn{4}{c}{ } & \multicolumn{2}{c}{Low Productivity} & \multicolumn{2}{c}{Base Model} & \multicolumn{2}{c}{High Productivity} \\
+\cmidrule(l{3pt}r{3pt}){5-6} \cmidrule(l{3pt}r{3pt}){7-8} \cmidrule(l{3pt}r{3pt}){9-10}
+\multicolumn{4}{c}{ } & \multicolumn{2}{c}{Female M = 0.0769} & \multicolumn{2}{c}{Female M = 0.0856} & \multicolumn{2}{c}{Female M = 0.0956} \\
+\multicolumn{4}{c}{ } & \multicolumn{2}{c}{Male M = 0.0723} & \multicolumn{2}{c}{Male M = 0.0805} & \multicolumn{2}{c}{Male M = 0.0899} \\
+\multicolumn{4}{c}{ } & \multicolumn{2}{c}{NLL = 1031.36} & \multicolumn{2}{c}{NLL = 1030.7} & \multicolumn{2}{c}{NLL = 1031.36} \\
+\cmidrule(l{3pt}r{3pt}){5-6} \cmidrule(l{3pt}r{3pt}){7-8} \cmidrule(l{3pt}r{3pt}){9-10}
+  & Year & Buffer & Catch (mt) & Spawning Output & Fraction Unfished & Spawning Output & Fraction Unfished & Spawning Output & Fraction Unfished\\
+\midrule
+ & 2021 & 1.000 & 227 & 437 & 0.362 & 489 & 0.427 & 554 & 0.506\\
+
+ & 2022 & 1.000 & 227 & 435 & 0.361 & 491 & 0.429 & 558 & 0.510\\
+
+ & 2023 & 0.874 & 135 & 438 & 0.363 & 497 & 0.434 & 568 & 0.519\\
+
+ & 2024 & 0.865 & 136 & 453 & 0.376 & 516 & 0.451 & 591 & 0.540\\
+
+ & 2025 & 0.857 & 137 & 467 & 0.387 & 533 & 0.466 & 612 & 0.559\\
+
+ & 2026 & 0.849 & 136 & 477 & 0.396 & 547 & 0.478 & 629 & 0.575\\
+
+ & 2027 & 0.841 & 134 & 485 & 0.402 & 558 & 0.487 & 642 & 0.587\\
+
+ & 2028 & 0.833 & 132 & 491 & 0.407 & 566 & 0.494 & 652 & 0.595\\
+
+ & 2029 & 0.826 & 130 & 496 & 0.411 & 572 & 0.500 & 658 & 0.602\\
+
+ & 2030 & 0.818 & 128 & 499 & 0.414 & 577 & 0.504 & 663 & 0.606\\
+
+ & 2031 & 0.810 & 127 & 502 & 0.416 & 580 & 0.507 & 666 & 0.608\\
+
+\multirow{-12}{1in}{\centering\arraybackslash $p^\ast = 0.45,  \sigma = 1$} & 2032 & 0.803 & 125 & 505 & 0.418 & 583 & 0.509 & 667 & 0.610\\
+\cmidrule{1-10}
+ & 2021 & 1.000 & 227 & 437 & 0.362 & 489 & 0.427 & 554 & 0.506\\
+
+ & 2022 & 1.000 & 227 & 435 & 0.361 & 491 & 0.429 & 558 & 0.510\\
+
+ & 2023 & 0.762 & 118 & 438 & 0.363 & 497 & 0.434 & 568 & 0.519\\
+
+ & 2024 & 0.747 & 118 & 456 & 0.378 & 519 & 0.453 & 593 & 0.542\\
+
+ & 2025 & 0.733 & 118 & 472 & 0.392 & 539 & 0.470 & 616 & 0.563\\
+
+ & 2026 & 0.719 & 117 & 487 & 0.404 & 556 & 0.485 & 636 & 0.581\\
+
+ & 2027 & 0.706 & 115 & 499 & 0.414 & 570 & 0.498 & 652 & 0.595\\
+
+ & 2028 & 0.693 & 113 & 509 & 0.422 & 581 & 0.508 & 664 & 0.607\\
+
+ & 2029 & 0.680 & 111 & 518 & 0.429 & 591 & 0.516 & 674 & 0.615\\
+
+ & 2030 & 0.667 & 108 & 525 & 0.436 & 599 & 0.523 & 681 & 0.622\\
+
+ & 2031 & 0.654 & 106 & 533 & 0.442 & 606 & 0.529 & 686 & 0.627\\
+
+\multirow{-12}{1in}{\centering\arraybackslash $p^\ast = 0.40,  \sigma = 1$} & 2032 & 0.642 & 105 & 539 & 0.447 & 612 & 0.534 & 691 & 0.631\\
+\cmidrule{1-10}
+ & 2021 & 1.000 & 227 & 437 & 0.362 & 489 & 0.427 & 554 & 0.506\\
+
+ & 2022 & 1.000 & 227 & 435 & 0.361 & 491 & 0.429 & 558 & 0.510\\
+
+ & 2023 & 1.000 & 139 & 438 & 0.363 & 497 & 0.434 & 568 & 0.519\\
+
+ & 2024 & 1.000 & 139 & 453 & 0.376 & 516 & 0.451 & 590 & 0.539\\
+
+ & 2025 & 1.000 & 139 & 467 & 0.387 & 533 & 0.465 & 610 & 0.558\\
+
+ & 2026 & 1.000 & 139 & 477 & 0.396 & 546 & 0.477 & 627 & 0.573\\
+
+ & 2027 & 1.000 & 139 & 485 & 0.402 & 557 & 0.486 & 639 & 0.584\\
+
+ & 2028 & 1.000 & 139 & 491 & 0.407 & 564 & 0.493 & 647 & 0.591\\
+
+ & 2029 & 1.000 & 139 & 495 & 0.410 & 569 & 0.497 & 652 & 0.596\\
+
+ & 2030 & 1.000 & 139 & 497 & 0.412 & 572 & 0.499 & 654 & 0.598\\
+
+ & 2031 & 1.000 & 139 & 98 & 0.413 & 573 & 0.500 & 655 & 0.598\\
+
+\multirow{-12}{1in}{\centering\arraybackslash Long-term Equil. Yield (MSY proxy, $SPR_{50\%}$), no buffer} & 2032 & 1.000 & 139 & 499 & 0.414 & 573 & 0.501 & 654 & 0.597\\
+\cmidrule{1-10}
+ & 2021 & 1.000 & 227 & 437 & 0.362 & 489 & 0.427 & 554 & 0.506\\
+
+ & 2022 & 1.000 & 227 & 435 & 0.361 & 491 & 0.429 & 558 & 0.510\\
+
+ & 2023 & 0.874 & 122 & 438 & 0.363 & 497 & 0.434 & 568 & 0.519\\
+
+ & 2024 & 0.865 & 120 & 456 & 0.378 & 518 & 0.453 & 593 & 0.542\\
+
+ & 2025 & 0.857 & 119 & 472 & 0.392 & 538 & 0.470 & 616 & 0.563\\
+
+ & 2026 & 0.849 & 118 & 486 & 0.403 & 555 & 0.485 & 635 & 0.580\\
+
+ & 2027 & 0.841 & 117 & 498 & 0.413 & 569 & 0.497 & 651 & 0.595\\
+
+ & 2028 & 0.833 & 116 & 508 & 0.421 & 580 & 0.507 & 663 & 0.606\\
+
+ & 2029 & 0.826 & 116 & 516 & 0.428 & 589 & 0.515 & 672 & 0.614\\
+
+ & 2030 & 0.818 & 115 & 522 & 0.433 & 596 & 0.521 & 678 & 0.620\\
+
+ & 2031 & 0.810 & 114 & 528 & 0.438 & 602 & 0.526 & 682 & 0.624\\
+
+\multirow{-12}{1in}{\centering\arraybackslash Long-term Equil. Yield (MSY proxy, $SPR_{50\%}$), with buffer} & 2032 & 0.803 & 113 & 533 & 0.442 & 606 & 0.529 & 685 & 0.626\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+
 
 \clearpage
 # References{-}
